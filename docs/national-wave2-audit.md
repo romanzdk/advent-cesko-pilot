@@ -2,7 +2,7 @@
 
 Navazuje na první dávku PR #1, nikoli na nový projekt. Výchozí registr programově spočítán: **17 zdrojů / 11 krajů**; baseline akcí jsou skutečné `final-4` výsledky **107**, nikoli veřejný historický snapshot 78. Prvních 17 definic i všech 107 věcných záznamů zachováno. Větev byla z čistého stavu rebased na `origin/main` `a3d320f`, včetně souběžných vlastních datumů, clear buttonu a příběhu v patičce. Otevřené visitor issues byly před průzkumem znovu načteny: žádné.
 
-Nový registr má **20 zdrojů / zastoupení všech 14 krajů**, stále `complete:false`, jen sezonu **20. 11.–24. 12. 2026**. Nejde o úplné pokrytí ČR, krajů ani obcí. Offline replay dává **113 akcí, čistý přírůstek této dávky 6**; celý PR proti původním 78 přidává 35. Výsledky nejsou nasazené.
+Nový registr má **20 zdrojů / zastoupení všech 14 krajů**, stále `complete:false`, jen sezonu **20. 11.–24. 12. 2026**. Nejde o úplné pokrytí ČR, krajů ani obcí. Offline replay i oba finální živé sběry dávají **113 akcí, čistý přírůstek této dávky 6**; celý PR proti původním 78 přidává 35. Výsledky nejsou nasazené.
 
 ## Primární zdroje a skutečná discovery
 
@@ -51,16 +51,27 @@ Nominatim dotazy byly provedeny sériově s cache a odstupem alespoň 1,1 s, s k
 
 - Portable fixture testy byly doplněny před implementací: pozorováno nepodporované nové schema i chybějící registrace, následně GREEN. Lanškroun drží chybějící/obrácený/neplatný rok/interval, duplicity, přidaný JSON-LD, neznámé místo a nové cenové podmínky.
 - Nezávislá Codex CLI statická review (bez dalšího Hermes agenta) odhalila dvě P2: dobrovolné/heading ceny obcházely guard a další numerický termín v označeném popisu se ignoroval. Všechny tři konkrétní mutace měly pozorovaný RED, opravy následně GREEN. Závěrečná re-review **PASSED**, exekuční testy jsou samostatný důkaz.
-- **87 Python, 21 čistých JS a 32 Playwright testů prošlo** po rebase na aktuální main. Nové custom-date-range, clear button a osobní footer testy zachovány. Stejných 87 Python + 21 JS + public validace prošlo v čisté přenosné kopii bez `private/`.
+- Před pushem se main posunul na `2ce7937` (barevné mapové markery a legenda). Vlastní čistá větev byla znovu rebased, souběžné změny zachovány bez změny hashů zmrazeného collectoru/registru/geodat/testů/CI. Na této čerstvé základně prošlo **87 Python, 22 čistých JS a 33 Playwright testů**; custom-date-range, clear button, footer i barvy markerů zůstávají testované. Stejných 87 Python + 22 JS + public validace prošlo znovu v čisté přenosné kopii bez `private/`.
+- Navíc skutečný historický snapshot (78) i rozšířená izolovaná projekce (113) vykresleny v desktopu 1440 px a mobilu 393 px: všechny čtyři kontroly ukázaly 14 krajů / 20 zdrojů bez JS výjimky. Nové obecní filtry vracejí 4 / 1 / 1 akcí. Vlastní datumy správně překrývají lanškrounský interval a za jeho koncem neukazují akci. Externí API a tiles blokované, není to test dostupnosti OSM.
 - Stabilní offline replay po všech opravách: **113 akcí / 14 review / 22 vyřazení**, 0 HTTP, 0 AI, žádná chyba zdroje. Všech 107 baseline akcí shodných ve všech věcných polích mimo `verifiedAt`. Původních 78 se tím také zachovává.
 - Read-only PR CI již obsahuje všechny aktuální main JS testovací soubory i čtyři browserové syntax checks; nebylo potřeba oslabovat nebo přepisovat workflow.
 - Veřejné `events.json` a `review.json` jsou byte-for-byte beze změny. Jediný dodatek do coverage: 3 další explicitně nepublikované pending zdroje s 0 počty / null ověřením a regiony, původních 17 stavů i metriky zachovány. Safe public allowlist a validator nezměněny.
 - Staré `final.sqlite` a výstupy `final-3` / `final-4` nebyly přepsány. Nové běhy používají samostatnou `wave2.sqlite`, kopii cache `wave2-http-cache` a vlastní výstupy. Žádný publisher, cron, konfigurace, infrastruktura, kalendář, produkční DB/cache ani UI se touto úlohou nemění. Žádní organizátoři nebyli kontaktováni.
 - Po případném uživatelském merge je nutná bezpečná regenerace public trojice pod publisher lockem. Konflikty snapshotů řešit od aktuálního main, přidat jen chybějící pending položky, nikdy staré metriky nebo výzkumnou DB přes produkci. Tato úloha merge ani regeneraci/deploy neprovádí.
+- Runtime odmítl i force push s přesným lease. Nebyla měněna konfigurace ani obcházeno schvalování. Po ověření, že vzdálený tip `a9e4737` obsahuje výhradně již rebasovanou vlastní práci, byl jen uvnitř vlastní feature větve přidán synchronizační ancestry merge commit se stejným tree SHA před/po; následoval běžný fast-forward push. Žádná změna souborů tímto krokem, žádný přepis vzdálené historie a žádné sloučení PR/main.
 
 ## Finální síťová měření
 
-Dvě finální kontroly po opravách a stabilním offline replay právě běží; přesné výsledky se doplní až po jejich úspěšném dokončení. Timeout collectoru zůstává **600 s**, aktuálně read-only ověřený efektivní scheduler timeout **3600 s**. Předchozích ~404 s není garance rozšířeného běhu. Pokud skutečné měření gate nesplní, PR zůstane draft a blocker bude uveden.
+Dvě skutečné finální kontroly po všech opravách, statické re-review a stabilním offline replay úspěšně dokončeny 12. 11. 2026. Jediný runner `proc_f95abe4769b2` / PID 1294084 skončil kódem 0; nebyl spuštěn duplicitní sběr. Výstupy byly samostatně znovu validovány.
+
+| Kontrola | Začátek CET | Celkový čas včetně validace | Vnitřní čas collectoru | HTTP / 304 | Nové / změněné / nezměněné | Akce / review / vyřazení | Chyby zdrojů |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| A | 19:18:49 | **7 min 27 s** (446,603 s) | 443,103 s | 205 / 12 | 6 / 0 / 107 | 113 / 14 / 22 | 0 |
+| B | 19:26:16 | **7 min 18 s** (437,825 s) | 431,769 s | 205 / 13 | 0 / 0 / 113 | 113 / 14 / 22 | 0 |
+
+Oba běhy mají 0 AI volání a skutečnou síť s robots/per-host limity a podmíněnou cache, nikoli fixtures. Všech 107 předchozích akcí i původních 78 porovnáno po všech věcných polích, mimo pouze `verifiedAt`; nic se nezměnilo. Všech 113 věcných záznamů je shodných mezi finálními běhy. Čistý přírůstek **6 této dávky / 35 celého PR** je programový rozdíl ID, nikoli domněnka z počtu insertů opakovaného běhu. Všech šest nových detailů má řádky provenance pro všech devět evidovaných věcných polí, přesnou primární URL a hash zachyceného obsahu; auditní tabulka obsahuje přesně jejich URL množinu.
+
+Timeout collectoru zůstává **600 s**, read-only ověřený efektivní scheduler timeout **3600 s**. Oba skutečné běhy prošly nezměněným limitem, není tedy runtime blocker pro tuto dávku; nejde o garanci pro další zdroje nebo budoucí výpadky. Zmrazené hashe implementace, registru, geodat, nových testů a PR CI po obou bězích souhlasí. Rebase na čerstvý main a synchronizace historie je nezměnily. Po této dvojici se doplňuje pouze dokumentace a PR, žádná další implementace ani sběr.
 
 ## Zbývající mezery
 
