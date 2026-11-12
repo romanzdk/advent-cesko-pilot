@@ -10,7 +10,7 @@ Sezonní projekt pro Vánoce 2026. Sbírá rozsvěcení stromků, mikulášské 
 
 ![Skutečná desktopová verze Adventu v Česku: filtry, chronologický seznam a mapa vybraných míst](docs/assets/desktop.png)
 
-*Screenshot nasazeného webu z 12. listopadu 2026. Nejde o návrh rozhraní ani ukázková data.*
+*Screenshot nasazeného webu z 12. listopadu 2026 před rozšířením na šest krajů. Nejde o návrh rozhraní ani ukázková data.*
 
 ## Proč projekt vznikl
 
@@ -44,8 +44,11 @@ Sledované akce spadají do období **20. listopadu až 24. prosince 2026**.
 - **Plzeňský kraj:** Plasy, Černošín a ověřené místní části Plas: Babina, Horní Hradiště, Žebnice a Nebřeziny.
 - **Liberecký kraj:** Jilemnice a pořadatelský výběr z Kulturního centra Semily / KC Golf.
 - **Jihomoravský kraj:** Rajhrad a Kuřim.
+- **Středočeský kraj:** Beroun a Hořovice.
+- **Jihočeský kraj:** Soběslav a pořadatelský kalendář IKS Třeboň.
+- **Kraj Vysočina:** Telč a Humpolec.
 
-**Stav k 12. listopadu 2026: 37 publikovaných akcí, 6 zdrojů, 3 kraje.** Je to datovaný snímek pilotu, ne trvale aktuální počítadlo. Poslední výsledky a rozsah kontrol najdete přímo na webu v sekci *Zdroje a pokrytí*.
+**Stav k 12. listopadu 2026 po rozšíření: 57 publikovaných akcí, 12 zdrojů, 6 krajů.** Dalších 37 kandidátů zůstává k ověření, zejména kvůli dosud neověřenému místu nebo více termínům. Všech 12 zdrojů se podařilo načíst; stav „částečně“ u nových zdrojů přiznává tuto kontrolní frontu, nikoli kompletní pokrytí. Je to datovaný snímek pilotu, ne trvale aktuální počítadlo. Poslední výsledky a rozsah kontrol najdete přímo na webu v sekci *Zdroje a pokrytí*.
 
 Výběr několika měst neznamená pokrytí celého kraje. Původní [mapa Mnichovic a okolí](https://romanzdk.github.io/advent-mnichovice/) má vlastní repozitář i hlídání a zůstává oddělená.
 
@@ -96,21 +99,23 @@ Denní aktualizace je nastavena na **08:30 Europe/Prague od 13. listopadu do 24.
 
 Celý průchod sběrem, publikací a ověřením skutečného webu byl spuštěn přes stejný skriptový launcher jako v plánovači. K datu uvedeného snímku byly naplánované pravidelné běhy teprve před prvním ranním spuštěním; ruční ověření není vydáváno za několikadenní provoz.
 
-Při ověřovacím živém běhu z 12. listopadu 2026 sběrač provedl **64 HTTP požadavků za přibližně 2 min 15 s**. Výsledkem bylo 37 nezměněných akcí a žádné nové položky. Sběrač vykázal **0 AI volání**; tento údaj se nevztahuje k úvodní rešerši a vývoji.
+Po zdrojové kontrole a dvou závěrečných živých sběrech z 12. listopadu 2026 pilot obsahuje **20 nových akcí**, původních 37 zůstalo věcně beze změny. Opakovaný průchod potvrdil **57 nezměněných akcí**, bez nových položek či duplicit. Sběrač vykázal **0 AI volání**; tento údaj se nevztahuje k úvodní rešerši a vývoji. Skutečnou délku běhu a počty HTTP požadavků ukazuje sekce *Zdroje a pokrytí*.
 
 Ověření zahrnuje:
 
-- **46 Python testů:** parsování podkladů, práce s daty, výpadky, geografická přiřazení a bezpečné publikování v dočasných Git repozitářích.
-- **22 JavaScriptových a prohlížečových testů:** filtry, kalendář, mobilní rozhraní, chybové stavy a bezpečné vykreslení.
+- **58 Python testů:** parsování podkladů včetně tří nových HTML šablon, registr zdrojů, práce s daty, výpadky, geografická přiřazení a bezpečné publikování v dočasných Git repozitářích.
+- **28 JavaScriptových a prohlížečových testů:** šestikrajové filtry, kalendář, mobilní rozhraní, chybové stavy a bezpečné vykreslení.
 - Kontrolu skutečně nasazené desktopové i mobilní verze, mapových dlaždic a stažení ICS.
 
 CI provádí offline Python testy, čisté JS testy, validaci veřejných dat a kontrolu syntaxe. Úplná sada Chromium testů se spouští lokálně. Počty testů popisují ověřený stav k 12. listopadu 2026.
 
 ## Co je hotové a co následuje
 
-Pilot má funkční sběr z uvedených šesti zdrojů, oddělenou interní evidenci, veřejný web a sezonní publikační úlohu. Nečte Facebook, nezpracovává obecně všechny plakáty a PDF a nevytváří automatické pozvánky do osobního kalendáře.
+Pilot má funkční sběr z uvedených dvanácti zdrojů, oddělenou interní evidenci, veřejný web a sezonní publikační úlohu. Nečte Facebook, nezpracovává obecně všechny plakáty a PDF a nevytváří automatické pozvánky do osobního kalendáře.
 
-Další etapa má zobecnit pilotní omezení a přidávat ověřené zdroje v dalších krajích. **Další kraje zatím nejsou součástí tohoto nasazení.** Rozšíření vyžaduje zdrojovou a geografickou kontrolu, nestačí přidat název kraje do filtru.
+Validátor odvozuje zdroje, kraje a přiřazení událostí z registru; rozhraní ukazuje skutečný rozsah z dat. U šesti nových zdrojů se automaticky přijímají pouze ověřené názvy míst v příslušné obci. Nové místo čeká na kontrolu, aby se například program v Berouně nezobrazil jako akce v Hořovicích.
+
+Další krok je ověřovat zadržené kandidáty a doplňovat místa ve stávajících krajích; ostatní kraje ČR zatím nejsou zahrnuté. Rozšíření vždy vyžaduje zdrojovou a geografickou kontrolu, nestačí přidat název kraje do filtru.
 
 ## Orientace v repozitáři
 

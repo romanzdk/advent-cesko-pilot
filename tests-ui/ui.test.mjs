@@ -91,6 +91,71 @@ async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile 
   } finally { await context.close(); }
 }
 
+test('scope summary counts six coverage regions and twelve sources, not event towns', async () => {
+  const regions = [...coverageFixture.regions, 'Středočeský kraj', 'Jihočeský kraj', 'Kraj Vysočina'];
+  const data = { ...fixture, events: regions.map((region, i) => ({ ...regionalFixture.events[i % 3],
+    id: `six-${i}`, region, town: `Obec ${i}`, sourceUrl: `https://example.cz/event-${i}`,
+    location: { ...regionalFixture.events[i % 3].location, lat: [49.935, 50.587, 49.299, 49.91, 48.97, 49.39][i], lon: [13.39, 15.157, 16.531, 14.71, 14.47, 15.59][i] }
+  })) };
+  const coverage = { ...coverageFixture, regions, sources: Array.from({ length: 12 }, (_, i) => ({
+    ...coverageFixture.sources[0], id: `source-${i}`, region: regions[i % 6], town: `Zdroj ${i}`
+  })) };
+  await app(async page => {
+    await page.waitForSelector('.event-card');
+    assert.equal(await page.locator('#scope-summary').count(), 1);
+    await page.waitForFunction(() => document.getElementById('scope-summary').textContent === '6 krajů · 12 zdrojů');
+    assert.equal(await page.locator('#region option').count(), 7);
+    await page.waitForSelector('#map .leaflet-interactive');
+    assert.equal(await page.locator('#map .leaflet-interactive').count(), 6);
+    for (const region of regions) {
+      await page.locator('#region').selectOption(region);
+      assert.equal(await page.locator('.event-card').count(), 1);
+      assert.equal(await page.locator('#town option').count(), 2);
+      assert.equal(await page.locator('#scope-summary').innerText(), '6 krajů · 12 zdrojů');
+    }
+  }, { data, coverage });
+  for (const change of ['duplicate-id', 'wrong-region']) {
+    const malformed = structuredClone(coverage);
+    if (change === 'duplicate-id') malformed.sources[0].id = malformed.sources[1].id;
+    else malformed.sources[0].region = 'Neznámý kraj';
+    await app(async page => {
+      await page.waitForSelector('.event-card');
+      await page.waitForFunction(() => document.getElementById('coverage-content').textContent.includes('Pokrytí zdrojů se nepodařilo'));
+      assert.equal(await page.locator('#scope-summary').innerText(), '');
+    }, { data, coverage: malformed, mobile: true });
+  }
+  await app(async page => {
+    await page.waitForSelector('.event-card');
+    await page.waitForFunction(() => document.getElementById('coverage-content').textContent.includes('Pokrytí zdrojů se nepodařilo'));
+    assert.equal(await page.locator('#scope-summary').innerText(), '');
+    assert.match(await page.locator('.scope-note:not(#scope-summary)').innerText(), /Výběr veřejných zdrojů/);
+  }, { data, coverageStatus: 503, mobile: true });
+});
+
+for (const [label, window] of [
+  ['invalid start month', { from: '2026-99-20', through: '2026-12-24' }],
+  ['invalid end month', { from: '2026-11-20', through: '2026-99-24' }],
+  ['invalid start calendar day', { from: '2026-02-30', through: '2026-12-24' }],
+  ['invalid end calendar day', { from: '2026-11-20', through: '2026-11-31' }],
+  ['reversed dates', { from: '2026-12-24', through: '2026-11-20' }]
+]) {
+  test(`coverage rejects ${label} without scope summary or broken event filters`, async () => {
+    await app(async (page, errors) => {
+      await page.waitForSelector('.event-card');
+      await page.waitForFunction(() => {
+        const panel = document.getElementById('coverage-content');
+        return panel.querySelector('.coverage-source') || panel.textContent.includes('Pokrytí zdrojů se nepodařilo');
+      });
+      assert.equal(await page.locator('#scope-summary').innerText(), '');
+      assert.match(await page.locator('#coverage-content').textContent(), /Pokrytí zdrojů se nepodařilo načíst/);
+      assert.equal(await page.locator('.event-card').count(), 3);
+      await page.locator('#category').selectOption('strom');
+      assert.equal(await page.locator('.event-card').count(), 1);
+      assert.deepEqual(errors, []);
+    }, { coverage: { ...coverageFixture, window }, mobile: true });
+  });
+}
+
 test('region scope limits towns, combines with other filters and resets cleanly', async () => {
   await app(async (page, errors) => {
     await page.waitForSelector('.event-card');
@@ -123,8 +188,9 @@ test('pilot names its bounded Christmas 2026 scope and excludes out-of-window ev
     await page.waitForSelector('.event-card');
     assert.equal(await page.locator('h1').innerText(), 'Advent v Česku 2026');
     assert.equal(await page.title(), 'Advent v Česku 2026');
-    assert.match(await page.locator('.intro').innerText(), /Pilot: Plzeňský, Liberecký a Jihomoravský kraj/);
-    assert.match(await page.locator('.intro').innerText(), /Výběr šesti měst a místních částí Plas, nikoli úplný přehled krajů ani celé ČR\./);
+    assert.match(await page.locator('.intro').innerText(), /Sezonní výběr veřejných akcí 2026/);
+    assert.match(await page.locator('.intro').innerText(), /Výběr veřejných zdrojů, nikoli úplný přehled krajů ani celé ČR\./);
+    assert.doesNotMatch(await page.locator('.edition').innerText(), /3 KRAJE/);
     assert.match(await page.locator('.intro').innerText(), /20\. 11\. – 24\. 12\. 2026/);
     assert.equal(await page.getByRole('link', { name: 'Mnichovice a okolí', exact: true }).getAttribute('href'), 'https://romanzdk.github.io/advent-mnichovice/');
     assert.deepEqual(await page.locator('.event-card').evaluateAll(cards => cards.map(card => card.dataset.id)), ['fixture-a', 'fixture-b', 'fixture-c', 'boundary-2']);

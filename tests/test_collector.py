@@ -139,6 +139,7 @@ class CollectionTests(unittest.TestCase):
             self.assertNotIn('secret', json.dumps(r))
             public = json.loads((output/'events.json').read_text())
             self.assertEqual(public['schemaVersion'], 1)
+            self.assertEqual(public['region'], 'Česko – sezonní výběr')
             self.assertEqual(len(public['events']), 2)
             import sqlite3
             con = sqlite3.connect(db)

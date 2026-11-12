@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T13:10:01+00:00",
+  "generatedAt": "2026-11-12T15:10:55+00:00",
   "season": 2026,
-  "region": "Česko – pilot tří krajů",
+  "region": "Česko – sezonní výběr",
   "events": [
     {
       "id": "e-8531a835ba7e1a413705",
@@ -24,7 +24,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:10:12+00:00",
+      "verifiedAt": "2026-11-12T15:11:05+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-vystava-3894_1381cs.html",
       "location": {
         "lat": 49.9341107,
@@ -52,7 +52,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:10:15+00:00",
+      "verifiedAt": "2026-11-12T15:11:08+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-dilnicky-pro-deti-3897_1386cs.html",
       "location": {
         "lat": 49.9341107,
@@ -60,6 +60,34 @@
         "precision": "town",
         "label": "Plasy — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439746"
+      }
+    },
+    {
+      "id": "e-c484da8cc4dd48c7bb5b",
+      "title": "Adventní trhy na Panském dvoře Telč",
+      "town": "Telč",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-21",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": "17:00",
+      "venue": "Panský dvůr Telč",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní trhy na Panském dvoře Telč. Panský dvůr Telč",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:15:33+00:00",
+      "sourceUrl": "https://www.telc.eu/kalendar/4232",
+      "location": {
+        "lat": 49.1847652,
+        "lon": 15.4524773,
+        "precision": "town",
+        "label": "Telč — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441173"
       }
     },
     {
@@ -82,7 +110,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:10:18+00:00",
+      "verifiedAt": "2026-11-12T15:11:12+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-dilnicky-3681_1320cs.html",
       "location": {
         "lat": 49.9205793,
@@ -90,6 +118,34 @@
         "precision": "town",
         "label": "Nebřeziny — část Plas — orientační střed místní části; nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/20736709"
+      }
+    },
+    {
+      "id": "e-7b6f5d452bd8d1bb831d",
+      "title": "Předadventní vyrábění",
+      "town": "Beroun",
+      "region": "Středočeský kraj",
+      "date": "2026-11-22",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "venue": "Muzeum Českého krasu v Berouně",
+      "category": "setkani",
+      "price": null,
+      "registration": "Pořadatel uvádí rezervace / přihlášení; podmínky ověřte přímo u něj.",
+      "registrationUrl": null,
+      "description": "Předadventní vyrábění. Muzeum Českého krasu v Berouně",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:13:29+00:00",
+      "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/predadventni-vyrabeni-13097_7099cs.html",
+      "location": {
+        "lat": 49.9640292,
+        "lon": 14.0733907,
+        "precision": "town",
+        "label": "Beroun — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442333"
       }
     },
     {
@@ -110,7 +166,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:11:48+00:00",
+      "verifiedAt": "2026-11-12T15:12:42+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/vaclav-noid-barta-vanocni-koncert-3523_2442cs.html",
       "location": {
         "lat": 50.6091761,
@@ -138,7 +194,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:12:05+00:00",
+      "verifiedAt": "2026-11-12T15:12:59+00:00",
       "sourceUrl": "https://www.rajhrad.cz/2026/11/vanocni-jarmark-zs-rajhrad-27-11-2026/",
       "location": {
         "lat": 49.0890629,
@@ -168,7 +224,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:10:25+00:00",
+      "verifiedAt": "2026-11-12T15:11:18+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-babine-3944_1398cs.html",
       "location": {
         "lat": 49.9362949,
@@ -198,7 +254,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:10:21+00:00",
+      "verifiedAt": "2026-11-12T15:11:15+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-hornim-hradisti-3901_1390cs.html",
       "location": {
         "lat": 49.9557458,
@@ -206,6 +262,62 @@
         "precision": "town",
         "label": "Horní Hradiště — část Plas — orientační střed místní části; nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/20736712"
+      }
+    },
+    {
+      "id": "e-e2b846b94f0e04ddfaf0",
+      "title": "Adventní jarmark",
+      "town": "Beroun",
+      "region": "Středočeský kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": null,
+      "venue": "Muzeum Českého krasu v Berouně",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní jarmark. Muzeum Českého krasu v Berouně",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:13:35+00:00",
+      "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/adventni-jarmark-13109_7111cs.html",
+      "location": {
+        "lat": 49.9640292,
+        "lon": 14.0733907,
+        "precision": "town",
+        "label": "Beroun — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442333"
+      }
+    },
+    {
+      "id": "e-750fedc4544f641a3161",
+      "title": "Adventní víkend s DDM - Výroba věnců a svícnů",
+      "town": "Soběslav",
+      "region": "Jihočeský kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "venue": "Dům dětí a mládeže",
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní víkend s DDM - Výroba věnců a svícnů. Dům dětí a mládeže",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:15:05+00:00",
+      "sourceUrl": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/adventni-vikend-s-ddm-vyroba-vencu-a-svicnu-5462_1540cs.html",
+      "location": {
+        "lat": 49.259407,
+        "lon": 14.7193304,
+        "precision": "town",
+        "label": "Soběslav — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438740"
       }
     },
     {
@@ -228,7 +340,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:10:28+00:00",
+      "verifiedAt": "2026-11-12T15:11:22+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-vystava-3894_1382cs.html",
       "location": {
         "lat": 49.9341107,
@@ -258,7 +370,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:12:06+00:00",
+      "verifiedAt": "2026-11-12T15:13:00+00:00",
       "sourceUrl": "https://www.rajhrad.cz/2026/10/mikulasska-nadilka/",
       "location": {
         "lat": 49.0890629,
@@ -266,6 +378,62 @@
         "precision": "town",
         "label": "Rajhrad — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442073"
+      }
+    },
+    {
+      "id": "e-cfdf622e2c6c29d93828",
+      "title": "TŘEBOŇ PLNÁ ANDĚLŮ",
+      "town": "Třeboň",
+      "region": "Jihočeský kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "19:00",
+      "venue": "Centrum města",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "TŘEBOŇ PLNÁ ANDĚLŮ. Centrum města",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:15:29+00:00",
+      "sourceUrl": "https://www.itrebon.cz/kalendar/-trebon-plna-andelu_20849.html",
+      "location": {
+        "lat": 49.0040317,
+        "lon": 14.7714476,
+        "precision": "town",
+        "label": "Třeboň — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437495"
+      }
+    },
+    {
+      "id": "e-8323eb9da70c8c4a2931",
+      "title": "Výroba vánoční hostiny pro ptáčky – kreativní dílny",
+      "town": "Třeboň",
+      "region": "Jihočeský kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "venue": "Dům přírody Třeboňska",
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Výroba vánoční hostiny pro ptáčky – kreativní dílny. Dům přírody Třeboňska",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:15:24+00:00",
+      "sourceUrl": "https://www.itrebon.cz/kalendar/-vyroba-vanocni-hostiny-pro-ptacky-kreativni-dilny_20915.html",
+      "location": {
+        "lat": 49.0040317,
+        "lon": 14.7714476,
+        "precision": "town",
+        "label": "Třeboň — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437495"
       }
     },
     {
@@ -286,7 +454,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:10:31+00:00",
+      "verifiedAt": "2026-11-12T15:11:25+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromecku-v-plasich-3900_1389cs.html",
       "location": {
         "lat": 49.9341107,
@@ -294,6 +462,146 @@
         "precision": "town",
         "label": "Plasy — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439746"
+      }
+    },
+    {
+      "id": "e-ad171fdef33cef08b105",
+      "title": "ZAHÁJENÍ ADVENTU",
+      "town": "Hořovice",
+      "region": "Středočeský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "venue": "Hořovice, Palackého náměstí",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "ZAHÁJENÍ ADVENTU. Hořovice, Palackého náměstí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:14:35+00:00",
+      "sourceUrl": "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/zahajeni-adventu-3362_1907cs.html",
+      "location": {
+        "lat": 49.8363239,
+        "lon": 13.902867,
+        "precision": "town",
+        "label": "Hořovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442329"
+      }
+    },
+    {
+      "id": "e-bcdd4593263a276f2e41",
+      "title": "Adventní víkend s DDM - Vánoční tvoření pro děti",
+      "town": "Soběslav",
+      "region": "Jihočeský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "venue": "Infocentrum města Soběslavi",
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní víkend s DDM - Vánoční tvoření pro děti. Infocentrum města Soběslavi",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:15:11+00:00",
+      "sourceUrl": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/adventni-vikend-s-ddm-vanocni-tvoreni-pro-deti-5463_1542cs.html",
+      "location": {
+        "lat": 49.259407,
+        "lon": 14.7193304,
+        "precision": "town",
+        "label": "Soběslav — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438740"
+      }
+    },
+    {
+      "id": "e-87f31d1b33afe7aa74dc",
+      "title": "Rozsvícení vánočního stromu a adventní trh",
+      "town": "Soběslav",
+      "region": "Jihočeský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": "18:00",
+      "venue": "náměstí Republiky",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu a adventní trh. náměstí Republiky",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:15:08+00:00",
+      "sourceUrl": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/rozsviceni-vanocniho-stromu-a-adventni-trh-5464_1543cs.html",
+      "location": {
+        "lat": 49.259407,
+        "lon": 14.7193304,
+        "precision": "town",
+        "label": "Soběslav — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438740"
+      }
+    },
+    {
+      "id": "e-62fc33b777775c907480",
+      "title": "Zahájení Berounského adventu",
+      "town": "Beroun",
+      "region": "Středočeský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Husovo náměstí",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Zahájení Berounského adventu. Husovo náměstí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:14:15+00:00",
+      "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/zahajeni-berounskeho-adventu-13113_7115cs.html",
+      "location": {
+        "lat": 49.9640292,
+        "lon": 14.0733907,
+        "precision": "town",
+        "label": "Beroun — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442333"
+      }
+    },
+    {
+      "id": "e-c6765b27e7d187e49aba",
+      "title": "Vánoční putování s anděly",
+      "town": "Humpolec",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Divadlo Za komínem z. s., Kamarytova, Humpolec, Česko",
+      "category": "setkani",
+      "price": "200 Kč v předprodeji, 250 Kč na místě",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční putování s anděly. Divadlo Za komínem z. s., Kamarytova, Humpolec, Česko",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:16:03+00:00",
+      "sourceUrl": "https://humpolec.cz/akce/vanocni-putovani-s-andely/",
+      "location": {
+        "lat": 49.5418861,
+        "lon": 15.3586709,
+        "precision": "town",
+        "label": "Humpolec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441024"
       }
     },
     {
@@ -316,7 +624,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:11:51+00:00",
+      "verifiedAt": "2026-11-12T15:12:45+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/rozsviceni-vanocniho-stromecku-v-jilemnici-4001_2935cs.html",
       "location": {
         "lat": 50.6091761,
@@ -346,7 +654,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:10:35+00:00",
+      "verifiedAt": "2026-11-12T15:11:28+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromu-v-nebrezinech-3682_1321cs.html",
       "location": {
         "lat": 49.9205793,
@@ -354,6 +662,34 @@
         "precision": "town",
         "label": "Nebřeziny — část Plas — orientační střed místní části; nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/20736709"
+      }
+    },
+    {
+      "id": "e-138f729354d3ea7e23c6",
+      "title": "1. adventní koncert - PS Santini - Adventus Domini",
+      "town": "Telč",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "kostel Jména Ježíš",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "1. adventní koncert - PS Santini - Adventus Domini. kostel Jména Ježíš",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:15:38+00:00",
+      "sourceUrl": "https://www.telc.eu/kalendar/4234",
+      "location": {
+        "lat": 49.1847652,
+        "lon": 15.4524773,
+        "precision": "town",
+        "label": "Telč — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441173"
       }
     },
     {
@@ -374,7 +710,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:10:55+00:00",
+      "verifiedAt": "2026-11-12T15:11:49+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/rozsviceni-vanocniho-stromu-1885_323cs.html",
       "location": {
         "lat": 49.8162537,
@@ -404,7 +740,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:10:38+00:00",
+      "verifiedAt": "2026-11-12T15:11:32+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-zebnici-3902_1391cs.html",
       "location": {
         "lat": 49.9559675,
@@ -434,7 +770,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:12:10+00:00",
+      "verifiedAt": "2026-11-12T15:13:04+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-adventni-stezka-v-knihovne-kouzlo-ceskych-vanoc",
       "location": {
         "lat": 49.2987857,
@@ -462,7 +798,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:11:17+00:00",
+      "verifiedAt": "2026-11-12T15:12:11+00:00",
       "sourceUrl": "https://kcgolf.cz/program/udalosti/vanocni-raketa",
       "location": {
         "lat": 50.602249,
@@ -490,7 +826,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:12:07+00:00",
+      "verifiedAt": "2026-11-12T15:13:01+00:00",
       "sourceUrl": "https://www.rajhrad.cz/2026/10/setkani-u-vanocniho-stromu-1-12-2026/",
       "location": {
         "lat": 49.0890629,
@@ -498,6 +834,34 @@
         "precision": "town",
         "label": "Rajhrad — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442073"
+      }
+    },
+    {
+      "id": "e-44e99e0bffaeee445673",
+      "title": "Vánoční koncert Josefa Vágnera a ZUŠ Gustava Mahlera Humpolec",
+      "town": "Humpolec",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-01",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Divadlo Za komínem z. s., Kamarytova, Humpolec, Česko",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert Josefa Vágnera a ZUŠ Gustava Mahlera Humpolec. Divadlo Za komínem z. s., Kamarytova, Humpolec, Česko",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:16:13+00:00",
+      "sourceUrl": "https://humpolec.cz/akce/vanocni-koncert-josefa-vagnera-a-zus-gustava-mahlera-humpolec/",
+      "location": {
+        "lat": 49.5418861,
+        "lon": 15.3586709,
+        "precision": "town",
+        "label": "Humpolec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441024"
       }
     },
     {
@@ -520,7 +884,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:12:11+00:00",
+      "verifiedAt": "2026-11-12T15:13:05+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-vanocni-vystava-palickovane-krajky-1",
       "location": {
         "lat": 49.2987857,
@@ -548,7 +912,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:11:55+00:00",
+      "verifiedAt": "2026-11-12T15:12:49+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/vanocni-vystava-praci-zaku-vo-4022_2951cs.html",
       "location": {
         "lat": 50.6091761,
@@ -576,7 +940,7 @@
       "notes": [],
       "audience": "dospělí",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:11:58+00:00",
+      "verifiedAt": "2026-11-12T15:12:52+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/vanocni-tvoreni-pro-dospele-4018_2947cs.html",
       "location": {
         "lat": 50.6091761,
@@ -604,7 +968,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:11:12+00:00",
+      "verifiedAt": "2026-11-12T15:12:06+00:00",
       "sourceUrl": "https://kcgolf.cz/program/udalosti/richard-muller-vanoce-2026",
       "location": {
         "lat": 50.602249,
@@ -632,7 +996,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:11:20+00:00",
+      "verifiedAt": "2026-11-12T15:12:14+00:00",
       "sourceUrl": "https://kcgolf.cz/program/udalosti/mikulasske-caje-aneb-mozna-prijde-i-mikulas",
       "location": {
         "lat": 50.602249,
@@ -640,6 +1004,34 @@
         "precision": "town",
         "label": "Semily — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438971"
+      }
+    },
+    {
+      "id": "e-50ceb9cbf46c138da34d",
+      "title": "Vánoční benefiční koncert",
+      "town": "Hořovice",
+      "region": "Středočeský kraj",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "SÁL RADNICE HOŘOVICE",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční benefiční koncert. SÁL RADNICE HOŘOVICE",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:14:38+00:00",
+      "sourceUrl": "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/vanocni-beneficni-koncert-3372_1914cs.html",
+      "location": {
+        "lat": 49.8363239,
+        "lon": 13.902867,
+        "precision": "town",
+        "label": "Hořovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442329"
       }
     },
     {
@@ -662,7 +1054,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:10:41+00:00",
+      "verifiedAt": "2026-11-12T15:11:35+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/mikulasska-besidka-pro-deti-3683_1322cs.html",
       "location": {
         "lat": 49.9205793,
@@ -670,6 +1062,34 @@
         "precision": "town",
         "label": "Nebřeziny — část Plas — orientační střed místní části; nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/20736709"
+      }
+    },
+    {
+      "id": "e-6a3328bc745ba18d4c45",
+      "title": "2. adventní koncert",
+      "town": "Telč",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "kostel Jména Ježíš",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "2. adventní koncert. kostel Jména Ježíš",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:15:40+00:00",
+      "sourceUrl": "https://www.telc.eu/kalendar/4235",
+      "location": {
+        "lat": 49.1847652,
+        "lon": 15.4524773,
+        "precision": "town",
+        "label": "Telč — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441173"
       }
     },
     {
@@ -690,7 +1110,7 @@
       "notes": [],
       "audience": "senioři / omezené zaměření",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:11:22+00:00",
+      "verifiedAt": "2026-11-12T15:12:16+00:00",
       "sourceUrl": "https://kcgolf.cz/program/udalosti/predvanocni-odpoledne-pro-seniory-2025",
       "location": {
         "lat": 50.602249,
@@ -718,7 +1138,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:10:45+00:00",
+      "verifiedAt": "2026-11-12T15:11:38+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/adventni-koncert-3926_1394cs.html",
       "location": {
         "lat": 49.9341107,
@@ -746,7 +1166,7 @@
       "notes": [],
       "audience": "senioři / omezené zaměření",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:10:58+00:00",
+      "verifiedAt": "2026-11-12T15:11:52+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/predvanocni-posezeni-se-seniory-1886_324cs.html",
       "location": {
         "lat": 49.8162537,
@@ -774,7 +1194,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:12:12+00:00",
+      "verifiedAt": "2026-11-12T15:13:06+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-vanocni-tvoreni-vanocni-svitici-pranicka",
       "location": {
         "lat": 49.2987857,
@@ -782,6 +1202,34 @@
         "precision": "town",
         "label": "Kuřim — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442051"
+      }
+    },
+    {
+      "id": "e-b8f914950e574a0fd0bd",
+      "title": "Vánoční komorní recitál Báry Basikové za klavírního doprovodu prof. Luboše Přibyla",
+      "town": "Humpolec",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Divadlo Za komínem z. s., Kamarytova, Humpolec, Česko",
+      "category": "setkani",
+      "price": "780 Kč v předprodeji, 880 Kč na místě",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční komorní recitál Báry Basikové za klavírního doprovodu prof. Luboše Přibyla. Divadlo Za komínem z. s., Kamarytova, Humpolec, Česko",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:16:05+00:00",
+      "sourceUrl": "https://humpolec.cz/akce/vanocni-komorni-recital-bary-basikove-za-klavirniho-doprovodu-prof-lubose-pribyla/",
+      "location": {
+        "lat": 49.5418861,
+        "lon": 15.3586709,
+        "precision": "town",
+        "label": "Humpolec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441024"
       }
     },
     {
@@ -802,7 +1250,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:11:25+00:00",
+      "verifiedAt": "2026-11-12T15:12:19+00:00",
       "sourceUrl": "https://kcgolf.cz/program/udalosti/vanoce-s-musicou-bohemicou",
       "location": {
         "lat": 50.602249,
@@ -810,6 +1258,34 @@
         "precision": "town",
         "label": "Semily — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438971"
+      }
+    },
+    {
+      "id": "e-b5ee9673bbe4218da0d4",
+      "title": "Vánoční dílna #TRADIČNÍ OZDOBY",
+      "town": "Humpolec",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": "15:30",
+      "venue": "8SMIČKA - zóna pro umění, Kamarytova, Humpolec, Česko",
+      "category": "tvoreni",
+      "price": "88 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční dílna #TRADIČNÍ OZDOBY. 8SMIČKA - zóna pro umění, Kamarytova, Humpolec, Česko",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:16:11+00:00",
+      "sourceUrl": "https://humpolec.cz/akce/vanocni-dilna-tradicni-ozdoby/",
+      "location": {
+        "lat": 49.5418861,
+        "lon": 15.3586709,
+        "precision": "town",
+        "label": "Humpolec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441024"
       }
     },
     {
@@ -830,7 +1306,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:11:27+00:00",
+      "verifiedAt": "2026-11-12T15:12:21+00:00",
       "sourceUrl": "https://kcgolf.cz/program/udalosti/vanocni-dar",
       "location": {
         "lat": 50.602249,
@@ -858,7 +1334,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:11:02+00:00",
+      "verifiedAt": "2026-11-12T15:11:56+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/mikulasska-besidka-1887_325cs.html",
       "location": {
         "lat": 49.8162537,
@@ -866,6 +1342,64 @@
         "precision": "town",
         "label": "Černošín — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438873"
+      }
+    },
+    {
+      "id": "e-e0334b39fad8a3cf1d54",
+      "title": "Adventní trh",
+      "town": "Třeboň",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "venue": "Masarykovo náměstí",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní trh. Masarykovo náměstí",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-12T15:15:28+00:00",
+      "sourceUrl": "https://www.itrebon.cz/kalendar/-adventni-trh_20922.html",
+      "location": {
+        "lat": 49.0040317,
+        "lon": 14.7714476,
+        "precision": "town",
+        "label": "Třeboň — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437495"
+      }
+    },
+    {
+      "id": "e-338f48e1a6330e1f9c3b",
+      "title": "3. adventní koncert - PS Smetana",
+      "town": "Telč",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "kostel Jména Ježíš",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "3. adventní koncert - PS Smetana. kostel Jména Ježíš",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:15:50+00:00",
+      "sourceUrl": "https://www.telc.eu/kalendar/4236",
+      "location": {
+        "lat": 49.1847652,
+        "lon": 15.4524773,
+        "precision": "town",
+        "label": "Telč — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441173"
       }
     },
     {
@@ -886,7 +1420,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:12:14+00:00",
+      "verifiedAt": "2026-11-12T15:13:08+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-vanocni-koncert-ondreje-rumla",
       "location": {
         "lat": 49.2987857,
@@ -914,7 +1448,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:12:15+00:00",
+      "verifiedAt": "2026-11-12T15:13:14+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-adventni-zastaveni-tvorime-vanocni-svicny",
       "location": {
         "lat": 49.2987857,
@@ -942,7 +1476,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:12:16+00:00",
+      "verifiedAt": "2026-11-12T15:13:16+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-vanocni-klubik-pohadkove-hnizdecko",
       "location": {
         "lat": 49.2987857,
@@ -970,7 +1504,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:10:48+00:00",
+      "verifiedAt": "2026-11-12T15:11:42+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/kolednici-z-mladotic-3903_1392cs.html",
       "location": {
         "lat": 49.9341107,
@@ -998,7 +1532,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:11:05+00:00",
+      "verifiedAt": "2026-11-12T15:11:59+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/adventni-koncert-1888_326cs.html",
       "location": {
         "lat": 49.8162537,
@@ -1026,7 +1560,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T13:12:02+00:00",
+      "verifiedAt": "2026-11-12T15:12:55+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/beckove-kvarteto-vanocni-klarinetove-dostavenicko-4031_2961cs.html",
       "location": {
         "lat": 50.6091761,
@@ -1034,6 +1568,34 @@
         "precision": "town",
         "label": "Jilemnice — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439145"
+      }
+    },
+    {
+      "id": "e-225ce6e4c33162010383",
+      "title": "Vánoční koncert pěvecké třídy Lucie Honzlové",
+      "town": "Humpolec",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-22",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Evangelický kostel, Husova, Humpolec, Česko",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert pěvecké třídy Lucie Honzlové. Evangelický kostel, Husova, Humpolec, Česko",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T15:16:01+00:00",
+      "sourceUrl": "https://humpolec.cz/akce/vanocni-koncert-pevecke-tridy-lucie-honzlove/",
+      "location": {
+        "lat": 49.5418861,
+        "lon": 15.3586709,
+        "precision": "town",
+        "label": "Humpolec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441024"
       }
     },
     {
@@ -1056,7 +1618,7 @@
       ],
       "audience": "všichni",
       "status": "time-unconfirmed",
-      "verifiedAt": "2026-11-12T13:11:08+00:00",
+      "verifiedAt": "2026-11-12T15:12:02+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/betlem-v-kostele-1889_327cs.html",
       "location": {
         "lat": 49.8162537,

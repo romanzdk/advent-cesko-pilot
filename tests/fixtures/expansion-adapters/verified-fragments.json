@@ -1,0 +1,419 @@
+[
+  {
+    "source": {
+      "id": "sobeslav",
+      "adapter": "galileo",
+      "town": "Soběslav",
+      "region": "Jihočeský kraj",
+      "allowed_venues": [
+        "Dům dětí a mládeže",
+        "Infocentrum města Soběslavi",
+        "náměstí Republiky"
+      ]
+    },
+    "url": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/adventni-vikend-s-ddm-vyroba-vencu-a-svicnu-5462_1540cs.html",
+    "expected": {
+      "title": "Adventní víkend s DDM - Výroba věnců a svícnů",
+      "date": "2026-11-28",
+      "startTime": "09:00",
+      "endDate": null,
+      "endTime": "12:00",
+      "venue": "Dům dětí a mládeže",
+      "town": "Soběslav",
+      "region": "Jihočeský kraj"
+    },
+    "html": "<h1>Adventní víkend s DDM - Výroba věnců a svícnů</h1><div class=\"event-detail\"><h2 class=\"action-date\">\n            <i class=\"fa fa-calendar-alt\"></i><span class=\"sr-only\">Kdy:</span> 28. 11. 2026 9:00 - 12:00\n        </h2><h2 class=\"venue\"><i class=\"fa fa-map-marker-alt\"></i><span class=\"sr-only\">Kde:</span> Dům dětí a mládeže</h2></div>"
+  },
+  {
+    "source": {
+      "id": "sobeslav",
+      "adapter": "galileo",
+      "town": "Soběslav",
+      "region": "Jihočeský kraj",
+      "allowed_venues": [
+        "Dům dětí a mládeže",
+        "Infocentrum města Soběslavi",
+        "náměstí Republiky"
+      ]
+    },
+    "url": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/rozsviceni-vanocniho-stromu-a-adventni-trh-5464_1543cs.html",
+    "expected": {
+      "title": "Rozsvícení vánočního stromu a adventní trh",
+      "date": "2026-11-29",
+      "startTime": "14:00",
+      "endDate": null,
+      "endTime": "18:00",
+      "venue": "náměstí Republiky",
+      "town": "Soběslav",
+      "region": "Jihočeský kraj"
+    },
+    "html": "<h1>Rozsvícení vánočního stromu a adventní trh</h1><div class=\"event-detail\"><h2 class=\"action-date\">\n            <i class=\"fa fa-calendar-alt\"></i><span class=\"sr-only\">Kdy:</span> 29. 11. 2026 14:00 - 18:00\n        </h2><h2 class=\"venue\"><i class=\"fa fa-map-marker-alt\"></i><span class=\"sr-only\">Kde:</span> náměstí Republiky</h2></div>"
+  },
+  {
+    "source": {
+      "id": "sobeslav",
+      "adapter": "galileo",
+      "town": "Soběslav",
+      "region": "Jihočeský kraj",
+      "allowed_venues": [
+        "Dům dětí a mládeže",
+        "Infocentrum města Soběslavi",
+        "náměstí Republiky"
+      ]
+    },
+    "url": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/adventni-vikend-s-ddm-vanocni-tvoreni-pro-deti-5463_1542cs.html",
+    "expected": {
+      "title": "Adventní víkend s DDM - Vánoční tvoření pro děti",
+      "date": "2026-11-29",
+      "startTime": "14:00",
+      "endDate": null,
+      "endTime": "17:00",
+      "venue": "Infocentrum města Soběslavi",
+      "town": "Soběslav",
+      "region": "Jihočeský kraj"
+    },
+    "html": "<h1>Adventní víkend s DDM - Vánoční tvoření pro děti</h1><div class=\"event-detail\"><h2 class=\"action-date\">\n            <i class=\"fa fa-calendar-alt\"></i><span class=\"sr-only\">Kdy:</span> 29. 11. 2026 14:00 - 17:00\n        </h2><h2 class=\"venue\"><i class=\"fa fa-map-marker-alt\"></i><span class=\"sr-only\">Kde:</span> Infocentrum města Soběslavi</h2></div>"
+  },
+  {
+    "source": {
+      "id": "trebon-iks",
+      "adapter": "itrebon",
+      "town": "Třeboň",
+      "region": "Jihočeský kraj",
+      "allowed_venues": [
+        "Centrum města",
+        "Dům přírody Třeboňska",
+        "Masarykovo náměstí"
+      ]
+    },
+    "url": "https://www.itrebon.cz/kalendar/-trebon-plna-andelu_20849.html",
+    "expected": {
+      "title": "TŘEBOŇ PLNÁ ANDĚLŮ",
+      "date": "2026-11-28",
+      "startTime": "10:00",
+      "endDate": null,
+      "endTime": "19:00",
+      "venue": "Centrum města",
+      "town": "Třeboň",
+      "region": "Jihočeský kraj"
+    },
+    "html": "<h1>TŘEBOŇ PLNÁ ANDĚLŮ</h1><div class=\"kalendarDetail\"><table class=\"kal-info-detail cenik\"><tr><td>Datum konání akce:</td><td><strong>28.11.2026</strong></td></tr><tr><td>Čas konání:</td><td>10:00 - 19:00</td></tr><tr><td>Místo:</td><td>Centrum města</td><tr><td>Organizátor:</td><td>Odbor kultury a cestovního ruchu města Třeboně</td></tr></tr></table></div>"
+  },
+  {
+    "source": {
+      "id": "trebon-iks",
+      "adapter": "itrebon",
+      "town": "Třeboň",
+      "region": "Jihočeský kraj",
+      "allowed_venues": [
+        "Centrum města",
+        "Dům přírody Třeboňska",
+        "Masarykovo náměstí"
+      ]
+    },
+    "url": "https://www.itrebon.cz/kalendar/-vyroba-vanocni-hostiny-pro-ptacky-kreativni-dilny_20915.html",
+    "expected": {
+      "title": "Výroba vánoční hostiny pro ptáčky – kreativní dílny",
+      "date": "2026-11-28",
+      "startTime": "10:00",
+      "endDate": null,
+      "endTime": "16:00",
+      "venue": "Dům přírody Třeboňska",
+      "town": "Třeboň",
+      "region": "Jihočeský kraj"
+    },
+    "html": "<h1>Výroba vánoční hostiny pro ptáčky – kreativní dílny</h1><div class=\"kalendarDetail\"><table class=\"kal-info-detail cenik\"><tr><td>Datum konání akce:</td><td><strong>28.11.2026</strong></td></tr><tr><td>Čas konání:</td><td>10:00 - 16:00</td></tr><tr><td>Místo:</td><td>Dům přírody Třeboňska</td><tr><td>Organizátor:</td><td>Dům přírody Třeboňska</td></tr><tr><td>Více informací:</td><td><a>další info</a></td></tr></tr></table></div>"
+  },
+  {
+    "source": {
+      "id": "trebon-iks",
+      "adapter": "itrebon",
+      "town": "Třeboň",
+      "region": "Jihočeský kraj",
+      "allowed_venues": [
+        "Centrum města",
+        "Dům přírody Třeboňska",
+        "Masarykovo náměstí"
+      ]
+    },
+    "url": "https://www.itrebon.cz/kalendar/-adventni-trh_20922.html",
+    "expected": {
+      "title": "Adventní trh",
+      "date": "2026-12-12",
+      "startTime": null,
+      "endDate": null,
+      "endTime": null,
+      "venue": "Masarykovo náměstí",
+      "town": "Třeboň",
+      "region": "Jihočeský kraj"
+    },
+    "html": "<h1>Adventní trh</h1><div class=\"kalendarDetail\"><table class=\"kal-info-detail cenik\"><tr><td>Datum konání akce:</td><td><strong>12.12.2026</strong></td></tr><tr><td>Čas konání:</td><td>00:00</td></tr><tr><td>Místo:</td><td>Masarykovo náměstí</td><tr><td>Organizátor:</td><td>Odbor kultury a cestovního ruchu</td></tr></tr></table></div>"
+  },
+  {
+    "source": {
+      "id": "beroun-mesto",
+      "adapter": "galileo",
+      "town": "Beroun",
+      "region": "Středočeský kraj",
+      "allowed_venues": [
+        "Husovo náměstí",
+        "Muzeum Českého krasu v Berouně"
+      ]
+    },
+    "url": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/predadventni-vyrabeni-13097_7099cs.html",
+    "expected": {
+      "title": "Předadventní vyrábění",
+      "date": "2026-11-22",
+      "startTime": "14:00",
+      "endDate": null,
+      "endTime": null,
+      "venue": "Muzeum Českého krasu v Berouně",
+      "town": "Beroun",
+      "region": "Středočeský kraj"
+    },
+    "html": "<h1>Předadventní vyrábění</h1><div class=\"event-detail\"><h2 class=\"action-date\">\n            <i class=\"fa fa-calendar-alt\"></i><span class=\"sr-only\">Kdy:</span> 22. 11. 2026 14:00\n        </h2><h2 class=\"venue\"><i class=\"fa fa-map-marker-alt\"></i><span class=\"sr-only\">Kde:</span> Muzeum Českého krasu v Berouně</h2></div>"
+  },
+  {
+    "source": {
+      "id": "beroun-mesto",
+      "adapter": "galileo",
+      "town": "Beroun",
+      "region": "Středočeský kraj",
+      "allowed_venues": [
+        "Husovo náměstí",
+        "Muzeum Českého krasu v Berouně"
+      ]
+    },
+    "url": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/adventni-jarmark-13109_7111cs.html",
+    "expected": {
+      "title": "Adventní jarmark",
+      "date": "2026-11-28",
+      "startTime": "09:00",
+      "endDate": null,
+      "endTime": null,
+      "venue": "Muzeum Českého krasu v Berouně",
+      "town": "Beroun",
+      "region": "Středočeský kraj"
+    },
+    "html": "<h1>Adventní jarmark</h1><div class=\"event-detail\"><h2 class=\"action-date\">\n            <i class=\"fa fa-calendar-alt\"></i><span class=\"sr-only\">Kdy:</span> 28. 11. 2026 9:00\n        </h2><h2 class=\"venue\"><i class=\"fa fa-map-marker-alt\"></i><span class=\"sr-only\">Kde:</span> Muzeum Českého krasu v Berouně</h2></div>"
+  },
+  {
+    "source": {
+      "id": "beroun-mesto",
+      "adapter": "galileo",
+      "town": "Beroun",
+      "region": "Středočeský kraj",
+      "allowed_venues": [
+        "Husovo náměstí",
+        "Muzeum Českého krasu v Berouně"
+      ]
+    },
+    "url": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/zahajeni-berounskeho-adventu-13113_7115cs.html",
+    "expected": {
+      "title": "Zahájení Berounského adventu",
+      "date": "2026-11-29",
+      "startTime": "16:00",
+      "endDate": null,
+      "endTime": null,
+      "venue": "Husovo náměstí",
+      "town": "Beroun",
+      "region": "Středočeský kraj"
+    },
+    "html": "<h1>Zahájení Berounského adventu</h1><div class=\"event-detail\"><h2 class=\"action-date\">\n            <i class=\"fa fa-calendar-alt\"></i><span class=\"sr-only\">Kdy:</span> 29. 11. 2026 16:00\n        </h2><h2 class=\"venue\"><i class=\"fa fa-map-marker-alt\"></i><span class=\"sr-only\">Kde:</span> Husovo náměstí</h2></div>"
+  },
+  {
+    "source": {
+      "id": "horovice-mesto",
+      "adapter": "galileo",
+      "town": "Hořovice",
+      "region": "Středočeský kraj",
+      "allowed_venues": [
+        "Hořovice, Palackého náměstí",
+        "SÁL RADNICE HOŘOVICE"
+      ]
+    },
+    "url": "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/zahajeni-adventu-3362_1907cs.html",
+    "expected": {
+      "title": "ZAHÁJENÍ ADVENTU",
+      "date": "2026-11-29",
+      "startTime": "10:00",
+      "endDate": null,
+      "endTime": null,
+      "venue": "Hořovice, Palackého náměstí",
+      "town": "Hořovice",
+      "region": "Středočeský kraj"
+    },
+    "html": "<h1>ZAHÁJENÍ ADVENTU</h1><div class=\"event-detail\"><h2 class=\"action-date\">\n            <i class=\"fa fa-calendar-alt\"></i><span class=\"sr-only\">Kdy:</span> 29. 11. 2026 10:00\n        </h2><h2 class=\"venue\"><i class=\"fa fa-map-marker-alt\"></i><span class=\"sr-only\">Kde:</span> Hořovice, Palackého náměstí</h2></div>"
+  },
+  {
+    "source": {
+      "id": "horovice-mesto",
+      "adapter": "galileo",
+      "town": "Hořovice",
+      "region": "Středočeský kraj",
+      "allowed_venues": [
+        "Hořovice, Palackého náměstí",
+        "SÁL RADNICE HOŘOVICE"
+      ]
+    },
+    "url": "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/vanocni-beneficni-koncert-3372_1914cs.html",
+    "expected": {
+      "title": "Vánoční benefiční koncert",
+      "date": "2026-12-04",
+      "startTime": "18:00",
+      "endDate": null,
+      "endTime": null,
+      "venue": "SÁL RADNICE HOŘOVICE",
+      "town": "Hořovice",
+      "region": "Středočeský kraj"
+    },
+    "html": "<h1>Vánoční benefiční koncert</h1><div class=\"event-detail\"><h2 class=\"action-date\">\n            <i class=\"fa fa-calendar-alt\"></i><span class=\"sr-only\">Kdy:</span> 4. 12. 2026 18:00\n        </h2><h2 class=\"venue\"><i class=\"fa fa-map-marker-alt\"></i><span class=\"sr-only\">Kde:</span> SÁL RADNICE HOŘOVICE</h2></div>"
+  },
+  {
+    "source": {
+      "id": "telc-mesto",
+      "adapter": "telc",
+      "town": "Telč",
+      "region": "Kraj Vysočina",
+      "allowed_venues": [
+        "Panský dvůr Telč",
+        "kostel Jména Ježíš"
+      ]
+    },
+    "url": "https://www.telc.eu/kalendar/4232",
+    "expected": {
+      "title": "Adventní trhy na Panském dvoře Telč",
+      "date": "2026-11-21",
+      "startTime": "09:00",
+      "endDate": null,
+      "endTime": "17:00",
+      "venue": "Panský dvůr Telč",
+      "town": "Telč",
+      "region": "Kraj Vysočina"
+    },
+    "html": "<div class=\"clanek_levy_sloupec\">\n21.11.2026 - 21.11.2026<br>\n<h2>Adventní trhy na Panském dvoře Telč</h2>\nTyp akce: trhy / jarmark<br>\n\n<br><br>\n<strong>Sobota 21. listopadu 2026, 9.00 – 17.00 hod.</strong><br>\r\n<br>\r\nUžijte si kouzelnou předvánoční atmosféru na nádvoří Panského dvora!<br>\r\nTěšit se můžete na dobré občerstvení, teplé i studené nápoje, voňavý trdelník, výběrovou kávu a stánky s handmade vánočním zbožím, dekoracemi a řemeslnými výrobky.<br>\r\n <br>\n<div></div>\n<br>\n<strong>Místo konání: </strong>Panský dvůr Telč<br></div>"
+  },
+  {
+    "source": {
+      "id": "telc-mesto",
+      "adapter": "telc",
+      "town": "Telč",
+      "region": "Kraj Vysočina",
+      "allowed_venues": [
+        "Panský dvůr Telč",
+        "kostel Jména Ježíš"
+      ]
+    },
+    "url": "https://www.telc.eu/kalendar/4234",
+    "expected": {
+      "title": "1. adventní koncert - PS Santini - Adventus Domini",
+      "date": "2026-11-29",
+      "startTime": "17:00",
+      "endDate": null,
+      "endTime": null,
+      "venue": "kostel Jména Ježíš",
+      "town": "Telč",
+      "region": "Kraj Vysočina"
+    },
+    "html": "<div class=\"clanek_levy_sloupec\">\n29.11.2026 - 29.11.2026<br>\n<h2>1. adventní koncert - PS Santini - Adventus Domini</h2>\nTyp akce: koncert<br>\n\n<br><br>\n<a id=\"calendarImage\" class=\"swipebox\">\n<img>\n</a>\nPěvecký sbor Santini ve spolupráci s městem Telč si Vás dovolují pozvat na 1. adventní koncert<br>\r\n<br>\r\n<strong>v neděli 29. listopadu 2026 v 17.00 hodin</strong><br>\r\nv kostele Jména Ježíš v Telči<br>\r\n<br>\r\nÚčinkují: pěvecký sbor Santini (sbormistr Anežka Ruschková), jako host pěvecký sbor Differo, sbormistryně Anna Velebová Kolaříková, a Orchestr, dirigent Anežka Ruschková<br>\n<div></div>\n<br>\n<strong>Místo konání: </strong>kostel Jména Ježíš<br></div>"
+  },
+  {
+    "source": {
+      "id": "telc-mesto",
+      "adapter": "telc",
+      "town": "Telč",
+      "region": "Kraj Vysočina",
+      "allowed_venues": [
+        "Panský dvůr Telč",
+        "kostel Jména Ježíš"
+      ]
+    },
+    "url": "https://www.telc.eu/kalendar/4235",
+    "expected": {
+      "title": "2. adventní koncert",
+      "date": "2026-12-06",
+      "startTime": "17:00",
+      "endDate": null,
+      "endTime": null,
+      "venue": "kostel Jména Ježíš",
+      "town": "Telč",
+      "region": "Kraj Vysočina"
+    },
+    "html": "<div class=\"clanek_levy_sloupec\">\n06.12.2026 - 06.12.2026<br>\n<h2>2. adventní koncert</h2>\nTyp akce: koncert<br>\n\n<br><br>\n<strong>v neděli 6. prosince 2026 v 17.00 hodin</strong><br>\r\nv kostele Jména Ježíš v Telči<br>\r\n<br>\r\nBližší informace doplníme<br>\n<div></div>\n<br>\n<strong>Místo konání: </strong>kostel Jména Ježíš<br></div>"
+  },
+  {
+    "source": {
+      "id": "humpolec-mesto",
+      "adapter": "humpolec",
+      "town": "Humpolec",
+      "region": "Kraj Vysočina",
+      "allowed_venues": [
+        "8SMIČKA - zóna pro umění, Kamarytova, Humpolec, Česko",
+        "Divadlo Za komínem z. s., Kamarytova, Humpolec, Česko",
+        "Evangelický kostel, Husova, Humpolec, Česko"
+      ]
+    },
+    "url": "https://humpolec.cz/akce/vanocni-koncert-pevecke-tridy-lucie-honzlove/",
+    "expected": {
+      "title": "Vánoční koncert pěvecké třídy Lucie Honzlové",
+      "date": "2026-12-22",
+      "startTime": "17:00",
+      "endDate": null,
+      "endTime": null,
+      "venue": "Evangelický kostel, Husova, Humpolec, Česko",
+      "town": "Humpolec",
+      "region": "Kraj Vysočina"
+    },
+    "html": "<main class=\"single event\"><h1>Vánoční koncert pěvecké třídy Lucie Honzlové</h1><section id=\"content\"><div class=\"container\"><aside id=\"meta\">\n                        <div class=\"meta-items\">\n                                                                                                                <span class=\"fa-regular fa-calendar\" aria-label=\"Kdy\">\n                                                                                                <span class=\"value\">22. 12. 2026</span>\n                                            </span>\n                                                                                                                            <span class=\"fa-regular fa-clock\" aria-label=\"V kolik\">\n                                                <span class=\"value\">od 17:00</span>\n                                            </span>\n                                                                                                                                                                                                                                                                                                        <span class=\"fa-regular fa-map-location\" aria-label=\"Místo\">\n                                                <span class=\"value\">\n                                                    <a>Evangelický kostel, Husova, Humpolec, Česko</a>\n                                                </span>\n                                            </span>\n                                                                                    </div>\n                        <div class=\"categories-types-wrap\">\n                                                            <div class=\"categories\">\n                                                                            <a class=\"category\">\n                                                                                            <i class=\"hp-custom hp-koncerty\"></i>\n                                                                                        Koncert</a>\n                                                                    </div>\n                                                                                        <div class=\"types\">\n                                                                            <a class=\"type\">Humpolec</a>\n                                                                    </div>\n                                                                                                            </div>\n                                                    <nav class=\"buttons\">\n                                                                                                            <a class=\"button yellow\">\n                                            <i class=\"fa-classic fa-regular fa-circle-info\"></i>                                            Další informace                                        </a>\n                                                                                                </nav>\n                                            </aside></div></section></main>"
+  },
+  {
+    "source": {
+      "id": "humpolec-mesto",
+      "adapter": "humpolec",
+      "town": "Humpolec",
+      "region": "Kraj Vysočina",
+      "allowed_venues": [
+        "8SMIČKA - zóna pro umění, Kamarytova, Humpolec, Česko",
+        "Divadlo Za komínem z. s., Kamarytova, Humpolec, Česko",
+        "Evangelický kostel, Husova, Humpolec, Česko"
+      ]
+    },
+    "url": "https://humpolec.cz/akce/vanocni-koncert-josefa-vagnera-a-zus-gustava-mahlera-humpolec/",
+    "expected": {
+      "title": "Vánoční koncert Josefa Vágnera a ZUŠ Gustava Mahlera Humpolec",
+      "date": "2026-12-01",
+      "startTime": "18:00",
+      "endDate": null,
+      "endTime": null,
+      "venue": "Divadlo Za komínem z. s., Kamarytova, Humpolec, Česko",
+      "town": "Humpolec",
+      "region": "Kraj Vysočina"
+    },
+    "html": "<main class=\"single event\"><h1>Vánoční koncert Josefa Vágnera a ZUŠ Gustava Mahlera Humpolec</h1><section id=\"content\"><div class=\"container\"><aside id=\"meta\">\n                        <div class=\"meta-items\">\n                                                                                                                <span class=\"fa-regular fa-calendar\" aria-label=\"Kdy\">\n                                                                                                <span class=\"value\">1. 12. 2026</span>\n                                            </span>\n                                                                                                                            <span class=\"fa-regular fa-clock\" aria-label=\"V kolik\">\n                                                <span class=\"value\">od 18:00</span>\n                                            </span>\n                                                                                                                                                                                                                                                                                                        <span class=\"fa-regular fa-map-location\" aria-label=\"Místo\">\n                                                <span class=\"value\">\n                                                    <a>Divadlo Za komínem z. s., Kamarytova, Humpolec, Česko</a>\n                                                </span>\n                                            </span>\n                                                                                    </div>\n                        <div class=\"categories-types-wrap\">\n                                                            <div class=\"categories\">\n                                                                            <a class=\"category\">\n                                                                                            <i class=\"hp-custom hp-koncerty\"></i>\n                                                                                        Koncert</a>\n                                                                    </div>\n                                                                                        <div class=\"types\">\n                                                                            <a class=\"type\">Humpolec</a>\n                                                                    </div>\n                                                                                                            </div>\n                                                    <nav class=\"buttons\">\n                                                                                                            <a class=\"button yellow\">\n                                            <i class=\"fa-classic fa-regular fa-circle-info\"></i>                                            Další informace                                        </a>\n                                                                                                                                                <a class=\"button blue\">\n                                            <i class=\"fa-classic fa-regular fa-tickets\"></i>                                            Koupit vstupenku                                        </a>\n                                                                                                </nav>\n                                            </aside></div></section></main>"
+  },
+  {
+    "source": {
+      "id": "humpolec-mesto",
+      "adapter": "humpolec",
+      "town": "Humpolec",
+      "region": "Kraj Vysočina",
+      "allowed_venues": [
+        "8SMIČKA - zóna pro umění, Kamarytova, Humpolec, Česko",
+        "Divadlo Za komínem z. s., Kamarytova, Humpolec, Česko",
+        "Evangelický kostel, Husova, Humpolec, Česko"
+      ]
+    },
+    "url": "https://humpolec.cz/akce/vanocni-dilna-tradicni-ozdoby/",
+    "expected": {
+      "title": "Vánoční dílna #TRADIČNÍ OZDOBY",
+      "date": "2026-12-12",
+      "startTime": "14:00",
+      "endDate": null,
+      "endTime": "15:30",
+      "venue": "8SMIČKA - zóna pro umění, Kamarytova, Humpolec, Česko",
+      "town": "Humpolec",
+      "region": "Kraj Vysočina"
+    },
+    "html": "<main class=\"single event\"><h1>Vánoční dílna #TRADIČNÍ OZDOBY</h1><section id=\"content\"><div class=\"container\"><aside id=\"meta\">\n                        <div class=\"meta-items\">\n                                                                                                                <span class=\"fa-regular fa-calendar\" aria-label=\"Kdy\">\n                                                                                                <span class=\"value\">12. 12. 2026</span>\n                                            </span>\n                                                                                                                            <span class=\"fa-regular fa-clock\" aria-label=\"V kolik\">\n                                                <span class=\"value\">od 14:00 do 15:30</span>\n                                            </span>\n                                                                                                                                                                                                <span class=\"fa-regular fa-money-bill\" aria-label=\"Cena\">\n                                        <span class=\"value\">88 Kč</span>\n                                    </span>\n                                                                                                                                                                            <span class=\"fa-regular fa-map-location\" aria-label=\"Místo\">\n                                                <span class=\"value\">\n                                                    <a>8SMIČKA - zóna pro umění, Kamarytova, Humpolec, Česko</a>\n                                                </span>\n                                            </span>\n                                                                                    </div>\n                        <div class=\"categories-types-wrap\">\n                                                            <div class=\"categories\">\n                                                                            <a class=\"category\">\n                                                                                            <i class=\"hp-custom hp-pro-deti\"></i>\n                                                                                        Pro děti</a>\n                                                                    </div>\n                                                                                        <div class=\"types\">\n                                                                            <a class=\"type\">Humpolec</a>\n                                                                    </div>\n                                                                                                            </div>\n                                                    <nav class=\"buttons\">\n                                                                                                            <a class=\"button yellow\">\n                                            <i class=\"fa-classic fa-regular fa-circle-info\"></i>                                            Další informace                                        </a>\n                                                                                                </nav>\n                                            </aside></div></section></main>"
+  }
+]

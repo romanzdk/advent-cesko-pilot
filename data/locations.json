@@ -68,5 +68,47 @@
     "precision": "town",
     "label": "Žebnice — část Plas — orientační střed místní části; nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/20736711"
+  },
+  "Beroun": {
+    "lat": 49.9640292,
+    "lon": 14.0733907,
+    "precision": "town",
+    "label": "Beroun — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442333"
+  },
+  "Hořovice": {
+    "lat": 49.8363239,
+    "lon": 13.902867,
+    "precision": "town",
+    "label": "Hořovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442329"
+  },
+  "Soběslav": {
+    "lat": 49.259407,
+    "lon": 14.7193304,
+    "precision": "town",
+    "label": "Soběslav — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438740"
+  },
+  "Třeboň": {
+    "lat": 49.0040317,
+    "lon": 14.7714476,
+    "precision": "town",
+    "label": "Třeboň — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437495"
+  },
+  "Telč": {
+    "lat": 49.1847652,
+    "lon": 15.4524773,
+    "precision": "town",
+    "label": "Telč — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441173"
+  },
+  "Humpolec": {
+    "lat": 49.5418861,
+    "lon": 15.3586709,
+    "precision": "town",
+    "label": "Humpolec — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441024"
   }
 }

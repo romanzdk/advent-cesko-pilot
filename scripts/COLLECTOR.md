@@ -28,10 +28,15 @@ HTML adaptéry čtou pouze vymezené části:
 - Vismo: `#akce` a `#zahlavi`; adaptér zůstává testovaný na starších podkladech, ale městské Semily se jím živě nečtou.
 - Drupal: tělo `main`, explicitní pole krajních termínů a místo konání.
 - WordPress: obsah článku; u rajhradské šablony oddělený od publikačních metadat.
+- IKS Třeboň (`itrebon`): `table.kal-info-detail`, explicitní pole termínu a místa; výchozí půlnoc není potvrzená hodina.
+- Telč (`telc`): detail v `.clanek_levy_sloupec`, úvodní úplná data, označené místo a hodiny v programu; boční kalendář se nepoužívá.
+- Humpolec (`humpolec`): `main.single.event`, metadata `aside#meta .meta-items` a vlastní tělo bez souvisejících akcí. Více termínů či začátků se podrží k ověření.
 
 Rok se neodvozuje z URL, patičky ani data publikace článku. Chybějící či rozporný údaj znamená ruční kontrolu, datum mimo sledované období známé vyřazení. Půlnoc používaná CMS jako výchozí hodina zůstává neznámým časem. Krajní termíny vícedenních akcí nenahrazují otevírací dobu.
 
 Přesné geografické přiřazení URL je podmíněné shodou zdroje, normalizovaného pole místa a ověřeného data. Místní části Plas proto používají vlastní orientační polohy. Změna podkladů přiřazení zneplatní a položka se vrátí do kontroly; nejde o obecný automatický geokodér.
+
+Nových šest zdrojů v Berouně, Hořovicích, Soběslavi, Třeboni, Telči a Humpolci má navíc `allowed_venues`: přesně ověřené názvy míst v obci. Porovnání normalizuje NFKC, mezery a velikost písmen, nikoli význam nebo adresu. Neznámé místo zůstává k ověření, aby regionální kalendář nevydával akce sousedních obcí za místní. Toto omezení nebrání objevování nových akcí na již ověřeném místě.
 
 ## Identita, změny a selhání
 

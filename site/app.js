@@ -268,12 +268,14 @@ const checkedFormat = new Intl.DateTimeFormat('cs-CZ', { day: 'numeric', month: 
 const checkedLabel = value => value && Number.isFinite(Date.parse(value)) ? checkedFormat.format(new Date(value)) : 'neuvedeno';
 const countValue = value => Number.isInteger(value) && value >= 0;
 function validCoverage(data) {
+  const date = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && Number.isFinite(Date.parse(`${value}T12:00:00Z`)) && new Date(`${value}T12:00:00Z`).toISOString().slice(0, 10) === value;
   return data && Number.isFinite(Date.parse(data.generatedAt)) &&
-    /^\d{4}-\d{2}-\d{2}$/.test(data.window?.from) && /^\d{4}-\d{2}-\d{2}$/.test(data.window?.through) &&
-    Array.isArray(data.regions) && data.regions.every(region => typeof region === 'string') &&
+    date(data.window?.from) && date(data.window?.through) && data.window.through >= data.window.from &&
+    Array.isArray(data.regions) && data.regions.every(region => typeof region === 'string') && new Set(data.regions).size === data.regions.length &&
     typeof data.coverageNote === 'string' && typeof data.complete === 'boolean' &&
     Number.isFinite(data.metrics?.durationSeconds) && data.metrics.durationSeconds >= 0 && countValue(data.metrics.requestCount) && countValue(data.metrics.aiCalls) &&
-    Array.isArray(data.sources) && data.sources.every(source => source && typeof source.town === 'string' && typeof source.region === 'string' &&
+    Array.isArray(data.sources) && new Set(data.sources.map(source => source?.id)).size === data.sources.length &&
+    data.sources.every(source => source && typeof source.id === 'string' && source.id && typeof source.town === 'string' && data.regions.includes(source.region) &&
       ['ok', 'partial', 'error'].includes(source.status) && countValue(source.eventCount) && countValue(source.reviewCount));
 }
 async function loadCoverage() {
@@ -282,6 +284,9 @@ async function loadCoverage() {
     if (!response.ok) throw new Error('Pokrytí není dostupné');
     const data = await response.json();
     if (!validCoverage(data)) throw new Error('Neplatný formát pokrytí');
+    const regions = new Set(data.regions).size;
+    const sourceCount = new Set(data.sources.map(source => source.id)).size;
+    $('scope-summary').textContent = `${regions} ${regions === 1 ? 'kraj' : regions < 5 ? 'kraje' : 'krajů'} · ${sourceCount} ${sourceCount === 1 ? 'zdroj' : sourceCount < 5 ? 'zdroje' : 'zdrojů'}`;
     const fragment = document.createDocumentFragment();
     fragment.append(el('p', data.coverageNote));
     fragment.append(el('p', `Sledované období: ${dateFormat.format(dateValue(data.window.from))}–${dateFormat.format(dateValue(data.window.through))}. Kraje: ${data.regions.join(', ')}.`));
@@ -308,6 +313,7 @@ async function loadCoverage() {
     fragment.append(sources);
     $('coverage-content').replaceChildren(fragment);
   } catch {
+    $('scope-summary').textContent = '';
     $('coverage-content').replaceChildren(el('p', 'Pokrytí zdrojů se nepodařilo načíst. To nebrání prohlížení akcí; zdroj najdete u každé z nich.'));
   }
 }

@@ -202,6 +202,81 @@ def parse_event(body, source, url, window):
         date_node = scope.find(cls='event-action__date-start-text') or scope.find(cls='action-date')
         date_text = txt(date_node)
         venue = txt(scope.find(cls='event-action__venue-text') or scope.find(cls='venue'))
+    elif adapter == 'itrebon':
+        scope = root.find(cls='kalendarDetail')
+        table = scope.find('table', cls='kal-info-detail') if scope else None
+        fields = {}
+        if table:
+            for row in table.all('tr'):
+                # The live CMS omits some closing tr tags: only direct cells belong to this row.
+                cells = [n for n in row.children if isinstance(n, Node) and n.tag == 'td']
+                if len(cells) == 2:
+                    fields[txt(cells[0]).rstrip(':')] = txt(cells[1])
+        date_text = fields.get('Datum konání akce', '') + ' ' + fields.get('Čas konání', '')
+        venue = fields.get('Místo', '')
+    elif adapter == 'telc':
+        detail = root.find(cls='clanek_levy_sloupec')
+        if detail is None:
+            raise Review('Chybí tělo detailu události.')
+        title = txt(detail.find('h2'))
+        leading = norm(' '.join(n for n in detail.children[:next((i for i,n in enumerate(detail.children) if isinstance(n, Node)), len(detail.children))] if isinstance(n, str)))
+        if not re.fullmatch(r'\d{1,2}\.\d{1,2}\.20\d{2}\s*-\s*\d{1,2}\.\d{1,2}\.20\d{2}', leading):
+            raise Review('Chybí úplný úvodní termín události.')
+        scope = Node('article')
+        for child in detail.children:
+            if isinstance(child, Node) and child.tag == 'strong' and exact_label(txt(child)) == 'organizátor akce':
+                break
+            scope.children.append(child)
+        # Venue is below organizer contacts, outside the narrative scope.
+        for i, child in enumerate(detail.children):
+            if isinstance(child, Node) and child.tag == 'strong' and exact_label(txt(child)).rstrip(':') == 'místo konání':
+                parts = []
+                for sibling in detail.children[i+1:]:
+                    if isinstance(sibling, Node) and sibling.tag in ('br', 'div', 'strong'):
+                        break
+                    parts.append(txt(sibling) if isinstance(sibling, Node) else sibling)
+                venue = norm(' '.join(parts))
+        expected_dates = {d for d, pos in parse_dates(leading)}
+        for m in re.finditer(r'(\d{1,2})\.\s*(listopadu|prosince)\s+(20\d{2})', txt(scope), re.I):
+            try:
+                narrative_date = date(int(m[3]), 11 if m[2].lower() == 'listopadu' else 12, int(m[1])).isoformat()
+            except ValueError:
+                raise Review('Neplatné datum v detailu.')
+            if narrative_date not in expected_dates:
+                raise Review('Rozporná data v těle události vyžadují ověření.')
+        clock = re.search(r'(?<!\d)(\d{1,2})[.:]([0-5]\d)(?:\s*[-–]\s*(\d{1,2})[.:]([0-5]\d))?\s*hod(?:in)?\b', txt(scope), re.I)
+        date_text = leading
+        if clock:
+            date_text += f' {clock[1]}:{clock[2]}' + (f' – {clock[3]}:{clock[4]}' if clock[3] else '')
+    elif adapter == 'humpolec':
+        detail = next((n for n in root.all('main', cls='event') if 'single' in n.attrs.get('class', '').split()), None)
+        content = detail.find('section', id='content') if detail else None
+        meta = content.find('aside', id='meta') if content else None
+        items = meta.find(cls='meta-items') if meta else None
+        if items is None:
+            raise Review('Chybí časová a místní metadata události.')
+        title = txt(detail.find('h1'))
+        fields = {}
+        for item in items.all('span'):
+            label = item.attrs.get('aria-label')
+            if label:
+                if label in fields:
+                    raise Review('Více výskytů časového nebo místního pole.')
+                fields[label] = txt(item.find(cls='value'))
+        day = fields.get('Kdy', '')
+        if len(parse_dates(day)) != 1:
+            raise Review('Více termínů nebo chybějící úplné datum události.')
+        clock = fields.get('V kolik', '')
+        if clock and not re.fullmatch(r'(?:od\s+)?\d{1,2}:[0-5]\d(?:\s+do\s+\d{1,2}:[0-5]\d)?', clock):
+            raise Review('Více začátků nebo nejednoznačné hodiny události.')
+        clock = re.sub(r'\s+do\s+00:00$', '', clock)
+        date_text = day + ' ' + clock
+        venue = fields.get('Místo', '')
+        scope = Node('article')
+        container = content.find(cls='container')
+        if container is None:
+            raise Review('Chybí tělo detailu události.')
+        scope.children = [n for n in container.children if not isinstance(n, Node) or n.attrs.get('id') != 'related']
     elif adapter == 'vismo':
         scope = root.find(id='akce')
         title = txt(root.find(id='zahlavi'))
@@ -257,6 +332,8 @@ def parse_event(body, source, url, window):
     narrative_nodes = [scope.find(cls=cls) for cls in ('lead','event-action-lead__body','event-text')]
     narrative_nodes.extend(n for n in scope.children if isinstance(n,Node) and n.tag == 'p')
     narrative = ' '.join(txt(n) for n in narrative_nodes if n)
+    if adapter == 'galileo' and re.search(r'\bpotrva\s+do\s+\d{1,2}\.\s*\d{1,2}\.', fold(narrative)):
+        raise Review('Popis uvádí další konec programu; ověřte úplný interval místo jediného dne.')
     if adapter == 'galileo' and any(d not in {x[0] for x in dates} for d,pos in parse_dates(narrative)):
         raise Review('Rozporná data v těle události vyžadují ověření.')
     if not dates:
@@ -274,6 +351,8 @@ def parse_event(body, source, url, window):
     times = [f'{int(h):02d}:{m}' for h, m in times]
     start = times[0] if times and times[0] != '00:00' else None
     venue = re.sub(r'^Kde:\s*', '', venue)
+    if 'allowed_venues' in source and exact_label(venue) not in {exact_label(v) for v in source['allowed_venues']}:
+        raise Review('Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu.')
     mapping = source.get('event_locations', {}).get(url)
     town = source['town']
     if mapping:
@@ -297,6 +376,8 @@ def parse_event(body, source, url, window):
     registration = 'Pořadatel uvádí rezervace / přihlášení; podmínky ověřte přímo u něj.' if booking_mentioned else None
     price_match = re.search(r'\b\d+(?:\s*[-–]\s*\d+)?\s*Kč\b', txt(scope))
     price = price_match[0] if price_match else ('dobrovolné' if 'dobrovolne' in text else None)
+    if adapter == 'humpolec':
+        price = clean_public(fields.get('Cena', ''))[:180] or None
     if structured:
         price = structured_price(structured)
     notes = []
@@ -493,7 +574,7 @@ def collect(registry, db, output, locations, fetcher, source_id=None):
                     sources=[states.get(s['id'], dict(id=s['id'],town=s['town'],region=s['region'],url=s['index_urls'][0],adapter=s['adapter'],status='partial',lastChecked=checked,lastSuccess=None,eventCount=0,reviewCount=0,lastError='Zdroj nebyl v tomto běhu kontrolován.')) for s in registry['sources']],
                     metrics=metrics, complete=False, coverageNote='Neúplný pilot: výběr obcí, nejvýše dvě stránky a 14 detailů na zdroj. Nejde o úplný soupis krajů.')
     output = Path(output)
-    json_write(output/'events.json', dict(schemaVersion=1,generatedAt=checked,season=registry['season'],region='Česko – pilot tří krajů',events=events))
+    json_write(output/'events.json', dict(schemaVersion=1,generatedAt=checked,season=registry['season'],region='Česko – sezonní výběr',events=events))
     json_write(output/'coverage.json', coverage)
     json_write(output/'review.json', dict(generatedAt=checked,candidates=review))
     con.close()

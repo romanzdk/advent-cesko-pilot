@@ -208,6 +208,134 @@
       "feed_url": null,
       "coverage_note": "Pilotní výběr měst a omezený počet stránek, nikoli úplný soupis kraje.",
       "max_details": 14
+    },
+    {
+      "id": "beroun-mesto",
+      "town": "Beroun",
+      "region": "Středočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/?page=all"
+      ],
+      "url_regex": "^https://www\\.mesto-beroun\\.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/[^/?]+_\\d+cs\\.html$",
+      "seed_urls": [
+        "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/predadventni-vyrabeni-13097_7099cs.html",
+        "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/adventni-jarmark-13109_7111cs.html",
+        "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/zahajeni-berounskeho-adventu-13113_7115cs.html"
+      ],
+      "coverage_note": "Neúplný výběr z primárního městského / pořadatelského kalendáře; nejvýše dvě stránky a 14 detailů. Automaticky se zařazují pouze ověřená místa v uvedené obci, ostatní čekají na kontrolu.",
+      "max_details": 14,
+      "allowed_venues": [
+        "Muzeum Českého krasu v Berouně",
+        "Husovo náměstí"
+      ]
+    },
+    {
+      "id": "horovice-mesto",
+      "town": "Hořovice",
+      "region": "Středočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/"
+      ],
+      "url_regex": "^https://www\\.mesto-horovice\\.eu/volny-cas/kam-za-kulturou-a-kdy/(?!adventni-koncert-3352_1899cs\\.html$)[^/?]+_\\d+cs\\.html$",
+      "seed_urls": [
+        "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/zahajeni-adventu-3362_1907cs.html",
+        "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/vanocni-beneficni-koncert-3372_1914cs.html"
+      ],
+      "coverage_note": "Neúplný výběr z primárního městského / pořadatelského kalendáře; nejvýše dvě stránky a 14 detailů. Automaticky se zařazují pouze ověřená místa v uvedené obci, ostatní čekají na kontrolu. Samostatný Adventní koncert 3352 v Berouně je z tohoto zdroje vyřazen. U Zahájení adventu kalendář uvádí 10:00, doprovodný kulturní program od 14:00; hodina rozsvícení není potvrzena.",
+      "max_details": 14,
+      "allowed_venues": [
+        "Hořovice, Palackého náměstí",
+        "SÁL RADNICE HOŘOVICE"
+      ]
+    },
+    {
+      "id": "sobeslav",
+      "town": "Soběslav",
+      "region": "Jihočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/"
+      ],
+      "url_regex": "^https://www\\.musobeslav\\.cz/infocentrum/kalendar-akci/kulturni-akce/[^/?]+_\\d+cs\\.html$",
+      "seed_urls": [
+        "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/adventni-vikend-s-ddm-vyroba-vencu-a-svicnu-5462_1540cs.html",
+        "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/rozsviceni-vanocniho-stromu-a-adventni-trh-5464_1543cs.html",
+        "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/adventni-vikend-s-ddm-vanocni-tvoreni-pro-deti-5463_1542cs.html"
+      ],
+      "coverage_note": "Neúplný výběr z primárního městského / pořadatelského kalendáře; nejvýše dvě stránky a 14 detailů. Automaticky se zařazují pouze ověřená místa v uvedené obci, ostatní čekají na kontrolu.",
+      "max_details": 14,
+      "allowed_venues": [
+        "Dům dětí a mládeže",
+        "náměstí Republiky",
+        "Infocentrum města Soběslavi"
+      ]
+    },
+    {
+      "id": "trebon-iks",
+      "town": "Třeboň",
+      "region": "Jihočeský kraj",
+      "adapter": "itrebon",
+      "index_urls": [
+        "https://www.itrebon.cz/kalendar.html?page=2"
+      ],
+      "url_regex": "^https://www\\.itrebon\\.cz/kalendar/[^/?]+_\\d+\\.html$",
+      "seed_urls": [
+        "https://www.itrebon.cz/kalendar/-trebon-plna-andelu_20849.html",
+        "https://www.itrebon.cz/kalendar/-vyroba-vanocni-hostiny-pro-ptacky-kreativni-dilny_20915.html",
+        "https://www.itrebon.cz/kalendar/-adventni-trh_20922.html"
+      ],
+      "coverage_note": "Neúplný výběr z primárního městského / pořadatelského kalendáře; nejvýše dvě stránky a 14 detailů. Automaticky se zařazují pouze ověřená místa v uvedené obci, ostatní čekají na kontrolu.",
+      "max_details": 14,
+      "allowed_venues": [
+        "Centrum města",
+        "Dům přírody Třeboňska",
+        "Masarykovo náměstí"
+      ]
+    },
+    {
+      "id": "telc-mesto",
+      "town": "Telč",
+      "region": "Kraj Vysočina",
+      "adapter": "telc",
+      "index_urls": [
+        "https://www.telc.eu/turista_a_volny_cas/kalendar_akci/"
+      ],
+      "url_regex": "^https://www\\.telc\\.eu/kalendar/\\d+$",
+      "seed_urls": [
+        "https://www.telc.eu/kalendar/4232",
+        "https://www.telc.eu/kalendar/4234",
+        "https://www.telc.eu/kalendar/4235"
+      ],
+      "coverage_note": "Neúplný výběr z primárního městského / pořadatelského kalendáře; nejvýše dvě stránky a 14 detailů. Automaticky se zařazují pouze ověřená místa v uvedené obci, ostatní čekají na kontrolu.",
+      "max_details": 14,
+      "allowed_venues": [
+        "Panský dvůr Telč",
+        "kostel Jména Ježíš"
+      ]
+    },
+    {
+      "id": "humpolec-mesto",
+      "town": "Humpolec",
+      "region": "Kraj Vysočina",
+      "adapter": "humpolec",
+      "index_urls": [
+        "https://humpolec.cz/akce/?_hledani=v%C3%A1no%C4%8Dn%C3%AD"
+      ],
+      "url_regex": "^https://humpolec\\.cz/akce/[a-z0-9-]+/$",
+      "seed_urls": [
+        "https://humpolec.cz/akce/vanocni-koncert-pevecke-tridy-lucie-honzlove/",
+        "https://humpolec.cz/akce/vanocni-koncert-josefa-vagnera-a-zus-gustava-mahlera-humpolec/",
+        "https://humpolec.cz/akce/vanocni-dilna-tradicni-ozdoby/"
+      ],
+      "coverage_note": "Neúplný výběr z primárního městského / pořadatelského kalendáře; nejvýše dvě stránky a 14 detailů. Automaticky se zařazují pouze ověřená místa v uvedené obci, ostatní čekají na kontrolu.",
+      "max_details": 14,
+      "allowed_venues": [
+        "Evangelický kostel, Husova, Humpolec, Česko",
+        "Divadlo Za komínem z. s., Kamarytova, Humpolec, Česko",
+        "8SMIČKA - zóna pro umění, Kamarytova, Humpolec, Česko"
+      ]
     }
   ]
 }

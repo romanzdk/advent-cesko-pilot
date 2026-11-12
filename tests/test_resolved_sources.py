@@ -92,8 +92,12 @@ class ResolvedSourcesTests(unittest.TestCase):
             self.c.parse_event('<h1>Vánoce</h1><main>Detail jen na plakátu</main>',source,source['seed_urls'][0],self.registry['window'])
 
     def test_kc_source_replaces_blocked_municipal_source_without_shrinking_budget(self):
-        self.assertEqual(len(self.registry['sources']),6)
-        self.assertEqual(len({s['region'] for s in self.registry['sources']}),3)
+        original_ids = {'christmas2026-plzensky-plasy', 'christmas2026-plzensky-cernosin',
+                        'cz-semily-kcgolf', 'cz-jilemnice-calendar',
+                        'christmas2026-jihomoravsky-rajhrad', 'christmas2026-jihomoravsky-kurim'}
+        self.assertTrue(original_ids <= {s['id'] for s in self.registry['sources']})
+        self.assertTrue({'Plzeňský kraj', 'Liberecký kraj', 'Jihomoravský kraj'} <=
+                        {s['region'] for s in self.registry['sources']})
         s = self.registry['sources'][2]
         self.assertEqual(s['id'],'cz-semily-kcgolf')
         self.assertEqual((s['adapter'],s['max_details']),('structured',14))

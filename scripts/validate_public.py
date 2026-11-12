@@ -8,7 +8,10 @@ import sys
 from urllib.parse import urlsplit
 
 FIELDS=set('id title town region venue date endDate startTime endTime category price registration registrationUrl description notes audience status verifiedAt sourceUrl location'.split())
-REGIONS={'Plzeňský kraj','Liberecký kraj','Jihomoravský kraj'}
+REGIONS={'Hlavní město Praha','Středočeský kraj','Jihočeský kraj','Plzeňský kraj',
+         'Karlovarský kraj','Ústecký kraj','Liberecký kraj','Královéhradecký kraj',
+         'Pardubický kraj','Kraj Vysočina','Jihomoravský kraj','Olomoucký kraj',
+         'Zlínský kraj','Moravskoslezský kraj'}
 PRIVATE=re.compile(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|/(?:home|private|tmp|workspace)/|calendar_id|event_id|responseStatus|sendUpdates|attendees|\.hermes/')
 
 def require(ok,message):
@@ -55,16 +58,43 @@ def validate(data):
             require(loc['precision'] in ['town','venue'] and isinstance(loc['label'],str) and https(loc['sourceUrl']),'Location provenance missing')
     return True
 
-def validate_directory(path):
+def validate_directory(path, registry=None):
+    if registry is None:registry=Path(__file__).resolve().parents[1]/'data/sources.json'
+    if isinstance(registry,(str,Path)):registry=json.loads(Path(registry).read_text())
+    sources=registry['sources'];regions={s['region'] for s in sources}
+    by_id={s['id']:s for s in sources}
+    require(bool(sources) and len(by_id)==len(sources) and regions<=REGIONS,'Invalid registry scope')
     path=Path(path);data=json.loads((path/'events.json').read_text());validate(data)
     coverage=json.loads((path/'coverage.json').read_text());review=json.loads((path/'review.json').read_text())
+    window=registry['window'];start=date.fromisoformat(window['from']);end=date.fromisoformat(window['through'])
+    require(registry['season']==data['season']==2026 and date(2026,11,20)<=start<=end<=date(2026,12,24),'Invalid registry season/window')
+    require(coverage['window']==window,'Coverage window disagrees with registry')
+    require(all(start<=date.fromisoformat(e['date'])<=date.fromisoformat(e['endDate'] or e['date'])<=end
+                for e in data['events']),'Event outside registry window')
     for document in [coverage,review]:require(not PRIVATE.search(json.dumps(document,ensure_ascii=False)),'Private metadata detected')
     require(coverage['complete'] is False,'Pilot must not claim complete coverage')
     require(coverage['metrics']['eventsPublished']==len(data['events']),'Inconsistent published count')
     require(coverage['metrics']['reviewCount']==len(review['candidates']),'Inconsistent review count')
-    require(len(coverage['sources'])==6 and set(coverage['regions'])==REGIONS,'Inconsistent source scope')
+    require(len(coverage['sources'])==len(sources) and {s['id'] for s in coverage['sources']}==set(by_id)
+            and len(coverage['regions'])==len(regions) and set(coverage['regions'])==regions,'Inconsistent source scope')
     for source in coverage['sources']:
+        expected=by_id[source['id']]
+        require(source['region']==expected['region'] and source['town']==expected['town']
+                and source['url']==expected['index_urls'][0],'Source identity disagrees with registry')
         require(source['status'] in ['ok','partial','error'] and https(source['url']),'Invalid source status/URL')
+    for event in data['events']:
+        matches=[s for s in sources if re.fullmatch(s['url_regex'],event['sourceUrl'])]
+        require(len(matches)==1,'Event URL must identify one registered source')
+        source=matches[0]
+        require(event['region']==source['region'],'Event region disagrees with source')
+        mapping=source.get('event_locations',{}).get(event['sourceUrl'])
+        town=source['town']
+        if mapping:
+            require(mapping['sourceId']==source['id'] and mapping['sourceTown']==source['town']
+                    and mapping['sourceUrl']==event['sourceUrl'] and mapping['expectedDate']==event['date']
+                    and mapping['expectedVenue']==event['venue'],'Invalid event location override')
+            town=mapping['town']
+        require(event['town']==town,'Event town disagrees with source')
     for candidate in review['candidates']:
         require(set(candidate)=={'title','url','reason'} and https(candidate['url']),'Invalid review projection')
     return len(data['events'])

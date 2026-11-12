@@ -99,7 +99,9 @@ Po 24. prosinci 2026 publisher neprovede sběr ani publikaci, i kdyby se spustil
 
 ## Přidávání zdrojů
 
-Aktuální validátor i části rozhraní stále obsahují pilotní omezení na šest zdrojů a tři kraje. Před rozšířením je potřeba je vědomě zobecnit a doplnit testy; úprava registru sama o sobě nestačí.
+Po rozšíření z 12. listopadu 2026 registr zahrnuje 12 zdrojů v šesti krajích. Validátor odvozuje přesná ID a počet zdrojů, jejich kraje, obce i přiřazení zdrojových URL z `data/sources.json`; pro izolované testy lze `validate_directory(path, registry=...)` předat jiný registr. Rozhraní odvozuje souhrn pokrytí z veřejných dat. Přidání kraje proto nevyžaduje přepsat pevný počet, ale stále vyžaduje zdrojové a geografické ověření.
+
+Šest nových zdrojů používá `allowed_venues`: seznam přesně ověřených míst v obci, porovnávaný po normalizaci NFKC, mezer a velikosti písmen. Nové či změněné místo čeká na kontrolu; seznam není obecný geokodér ani oprávnění přiřadit sousední obec ke zdroji. Podklady pro přidání místa nejprve ověřte u pořadatele. Automatické objevování nových akcí na již ověřených místech zůstává funkční.
 
 Nový zdroj musí mít ověřenou lokalitu, současný rok v obsahu, povolené automatické načítání a regresní podklad pro jeho formát. Každé rozšíření projde skutečným sběrem a opakovaným průchodem bez nových duplicit. Rozsah se na webu označuje jako výběr, nikoli úplný krajský katalog.
 
