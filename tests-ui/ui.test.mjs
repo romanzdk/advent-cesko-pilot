@@ -179,6 +179,13 @@ test('region scope limits towns, combines with other filters and resets cleanly'
   }, { data: regionalFixture, mobile: true });
 });
 
+test('restricted audience is not labelled as seniors', async () => {
+  await app(async page => {
+    await page.waitForSelector('.event-card');
+    assert.equal(await page.locator('.audience-badge').innerText(), 'Omezené zaměření');
+  }, {data: {...fixture, events: [{...fixture.events[0], audience: 'omezené zaměření'}]}});
+});
+
 test('map names its bounded Christmas 2026 scope and excludes out-of-window events', async () => {
   const data = { ...regionalFixture, events: [
     ...regionalFixture.events,

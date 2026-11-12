@@ -45,7 +45,7 @@ def validate(data):
         for field in ['venue','price','registration','registrationUrl']:
             require(e[field] is None or isinstance(e[field],str),'Invalid optional text')
         require(e['category'] in ['strom','mikulas','trhy','tvoreni','setkani','betlem'],'Bad category')
-        require(e['audience'] in ['všichni','dospělí','senioři / omezené zaměření'],'Bad audience')
+        require(e['audience'] in ['všichni','dospělí','senioři / omezené zaměření','omezené zaměření'],'Bad audience')
         require(e['status'] in ['confirmed','time-unconfirmed','cancelled'],'Bad status')
         require(https(e['sourceUrl']) and (e['registrationUrl'] is None or https(e['registrationUrl'])),'Unsafe public URL')
         require(isinstance(e['description'],str) and len(e['description'])<=200,'Invalid/overlong description')

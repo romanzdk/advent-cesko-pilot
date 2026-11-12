@@ -105,6 +105,14 @@ Po rozšíření z 12. listopadu 2026 registr zahrnuje 12 zdrojů v šesti kraj�
 
 Nový zdroj musí mít ověřenou lokalitu, současný rok v obsahu, povolené automatické načítání a regresní podklad pro jeho formát. Každé rozšíření projde skutečným sběrem a opakovaným průchodem bez nových duplicit. Rozsah se na webu označuje jako výběr, nikoli úplný krajský katalog.
 
+## Ruční kontrola kandidátů
+
+Celá fronta 37 položek byla zkontrolována 12. listopadu 2026. Výsledek: 21 přijatých, 14 vyřazených a dvě zadržené akce. Rozhodnutí a opravy jsou v `event_reviews` příslušných zdrojů, nikoli v ručně přepsaném veřejném JSON.
+
+Před novým rozhodnutím načtěte aktuální primární detail, ověřte rok, celý interval a skutečnou obec a případně plakát. Pro výpočet `contentHash` použijte exportovanou funkci `review_fingerprint(body, adapter)` nad týmiž původními bajty. Zachovejte původní hodnoty v `expected*`, přesnou URL a ID zdroje; `overrides` slouží jen doloženým opravám. `verifiedTown` přidávejte pouze po ověření obce, ne podle sídla vydavatele. U polí z plakátu připojte zdrojový odkaz a datum ověření do poznámky.
+
+Nejdřív přehrajte zachycené detaily bez sítě v oddělené kopii a porovnejte všechny původní veřejné záznamy. Teprve potom proveďte závěrečné živé sběry a přeneste schválené soubory i odpovídající interní evidenci do produkce. Zamítnutí neplatného rozhodnutí musí stáhnout dříve publikovanou akci do kontroly; nesmí předstírat běžný výpadek zdroje.
+
 ## Dokumentační obrázky
 
 `docs/assets/desktop.png` a `mobile.png` jsou skutečné screenshoty veřejného webu z 12. listopadu 2026. Desktop ukazuje výchozí přehled, mobil filtr rozsvícení stromů. Nejde o fixture server ani upravená ukázková data.

@@ -61,7 +61,7 @@ class ExpansionAdapterTests(unittest.TestCase):
         self.assertEqual(parse(concert, s)['startTime'], '17:00')
         self.assertIsNone(parse(concert, s)['endTime'])
         self.assertIsNone(parse(html.replace('9.00 – 17.00 hod.', ''), s)['startTime'])
-        for replacement in ['21.11. - 21.11.', '21.11.2026 - 22.11.2026']:
+        for replacement in ['21.11. - 21.11.']:
             with self.subTest(date=replacement), self.assertRaises(c.Review):
                 parse(html.replace('21.11.2026 - 21.11.2026', replacement), s)
         with self.assertRaises(c.Review):

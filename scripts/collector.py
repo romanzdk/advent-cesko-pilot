@@ -163,6 +163,29 @@ def structured_price(event):
     return '; '.join(prices) or None
 
 
+def review_fingerprint(body, adapter):
+    """SHA256 of whitespace-normalized semantic event text, never page chrome."""
+    root = DOM(body).root
+    scope = root.find(cls={'galileo': 'event-detail', 'itrebon': 'kalendarDetail', 'telc': 'clanek_levy_sloupec'}.get(adapter, '__unsupported__'))
+    if adapter == 'humpolec':
+        content = root.find('section', id='content')
+        scope = content.find(cls='container') if content else None
+    if scope is None:
+        raise Review('Chybí sémantický rozsah ověřovaného detailu.')
+    def semantic(node):
+        if node.attrs.get('id') == 'related' and adapter == 'humpolec':
+            return ''
+        if node.tag in ('script', 'style', 'noscript'):
+            return ''
+        parts = []
+        for child in node.children:
+            if adapter == 'telc' and isinstance(child, Node) and child.tag == 'strong' and exact_label(txt(child)).rstrip(':') == 'organizátor akce':
+                break
+            parts.append(semantic(child) if isinstance(child, Node) else child)
+        return norm(' '.join(parts))
+    return digest(semantic(scope))
+
+
 def parse_event(body, source, url, window):
     if not safe_url(url):
         raise Review('Neplatný odkaz zdroje.')
@@ -220,7 +243,7 @@ def parse_event(body, source, url, window):
             raise Review('Chybí tělo detailu události.')
         title = txt(detail.find('h2'))
         leading = norm(' '.join(n for n in detail.children[:next((i for i,n in enumerate(detail.children) if isinstance(n, Node)), len(detail.children))] if isinstance(n, str)))
-        if not re.fullmatch(r'\d{1,2}\.\d{1,2}\.20\d{2}\s*-\s*\d{1,2}\.\d{1,2}\.20\d{2}', leading):
+        if not re.fullmatch(r'\d{1,2}\.\d{1,2}\.20\d{2}\s*[-–]\s*\d{1,2}\.\d{1,2}\.20\d{2}', leading):
             raise Review('Chybí úplný úvodní termín události.')
         scope = Node('article')
         for child in detail.children:
@@ -326,8 +349,13 @@ def parse_event(body, source, url, window):
             dates.append((date(int(m[3]), months[m[2].lower()], int(m[1])).isoformat(), m.end()))
     # Repeated date in article heading and paragraph is not a multi-day range.
     dates = list({d: (d, pos) for d,pos in dates}.values())
+    if dates and not all(window['from'] <= d <= window['through'] for d, pos in dates):
+        raise Excluded('Datum je mimo sledované období.')
+    if adapter == 'itrebon' and re.search(r'[-–,]', fields.get('Datum konání akce', '')) and not re.fullmatch(r'\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}\s*[-–]\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}', fields['Datum konání akce']):
+        raise Review('Neúplný nebo nejednoznačný interval události.')
     if len(dates) > 1:
-        if adapter not in ('galileo', 'structured', 'drupal') or not re.search(r'\s[-–]\s', date_text) or len(dates) > 2 or dates[1][0] < dates[0][0]:
+        explicit_range = adapter in ('itrebon', 'telc') and re.match(r'^\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}\s*[-–]\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}(?!\d)', date_text)
+        if (not explicit_range and (adapter not in ('galileo', 'structured', 'drupal') or not re.search(r'\s[-–]\s', date_text))) or len(dates) > 2 or dates[1][0] < dates[0][0]:
             raise Review('Více různých dat vyžaduje ruční kontrolu.')
     narrative_nodes = [scope.find(cls=cls) for cls in ('lead','event-action-lead__body','event-text')]
     narrative_nodes.extend(n for n in scope.children if isinstance(n,Node) and n.tag == 'p')
@@ -349,9 +377,27 @@ def parse_event(body, source, url, window):
     if any(int(h) >= 24 for h, m in times):
         raise Review('Neplatná hodina v detailu události.')
     times = [f'{int(h):02d}:{m}' for h, m in times]
+    if adapter == 'telc' and len(dates) > 1:
+        times = []
     start = times[0] if times and times[0] != '00:00' else None
     venue = re.sub(r'^Kde:\s*', '', venue)
-    if 'allowed_venues' in source and exact_label(venue) not in {exact_label(v) for v in source['allowed_venues']}:
+    reviews = source.get('event_reviews', {})
+    if not isinstance(reviews, dict):
+        raise Review('Neplatný seznam ověřených rozhodnutí; ověřte znovu.')
+    review = reviews.get(url)
+    if url in reviews:
+        identities = dict(sourceId=source.get('id'), sourceUrl=url, sourceTown=source['town'],
+                          expectedTitle=clean_public(title)[:180], expectedDate=dates[0][0],
+                          expectedEndDate=dates[-1][0] if len(dates) > 1 else None,
+                          expectedVenue=clean_public(venue)[:180], contentHash=review_fingerprint(body, source['adapter']))
+        if not isinstance(review, dict) or any(k not in review or review[k] != v for k, v in identities.items()) or review.get('decision') not in ('accept', 'exclude', 'hold') or not isinstance(review.get('reason'), str):
+            raise Review('Ověřené rozhodnutí již neodpovídá detailu; ověřte znovu.')
+        if review['decision'] == 'exclude':
+            raise Excluded(clean_public(review['reason']))
+        if review['decision'] == 'hold':
+            raise Review(clean_public(review['reason']))
+    verified_town = review is not None and review['decision'] == 'accept' and review.get('verifiedTown') == source['town']
+    if 'allowed_venues' in source and exact_label(venue) not in {exact_label(v) for v in source['allowed_venues']} and not verified_town:
         raise Review('Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu.')
     mapping = source.get('event_locations', {}).get(url)
     town = source['town']
@@ -364,8 +410,7 @@ def parse_event(body, source, url, window):
     towns = ['Plasy', 'Černošín', 'Semily', 'Jilemnice', 'Rajhrad', 'Kuřim', 'Babina', 'Žebnice', 'Horní Hradiště', 'Nebřeziny']
     if not mapping and any(fold(t) in fold(venue) for t in towns if t != source['town']):
         raise Review('Místo konání neodpovídá obci zdroje; ověřte lokalitu.')
-    if not all(window['from'] <= d <= window['through'] for d, pos in dates):
-        raise Excluded('Datum je mimo sledované období.')
+
     text = fold(title + ' ' + txt(scope))
     title_key = fold(title)
     if re.search(r'\bzajezd\b|\bexkurze\b', title_key):
@@ -407,13 +452,46 @@ def parse_event(body, source, url, window):
     venue = clean_public(venue)[:180]
     if not title:
         raise Review('Chybí název události.')
-    return {'id': 'e-' + digest(url)[:20], 'title': title, 'town': town, 'region': source['region'],
+    event = {'id': 'e-' + digest(url)[:20], 'title': title, 'town': town, 'region': source['region'],
             'date': dates[0][0], 'endDate': dates[-1][0] if len(dates) > 1 else None,
             'startTime': start, 'endTime': times[1] if len(times) > 1 else None,
             'venue': venue or None, 'category': category, 'price': price, 'registration': registration,
             'registrationUrl': registration_url, 'description': f"{title}. {venue}"[:200], 'notes': notes,
             'audience': audience, 'status': 'cancelled' if (structured and str(structured.get('eventStatus','')).rstrip('/').split('/')[-1] == 'EventCancelled') or re.search(r'\bzrusen', text) else ('confirmed' if start else 'time-unconfirmed'),
             'verifiedAt': now(), 'sourceUrl': url, 'location': None}
+    if review:
+        overrides = review.get('overrides')
+        if not isinstance(overrides, dict) or set(overrides) - {'startTime', 'endTime', 'price', 'audience', 'notes', 'venue', 'category', 'registration'}:
+            raise Review('Neplatná pole ověřených úprav.')
+        for key, value in overrides.items():
+            if key in ('startTime', 'endTime'):
+                valid = value is None or isinstance(value, str) and re.fullmatch(r'(?:[01]\d|2[0-3]):[0-5]\d', value)
+            elif key == 'venue':
+                valid = isinstance(value, str) and 0 < len(value) <= 180 and bool(clean_public(value))
+            elif key == 'audience':
+                valid = value in ('všichni', 'dospělí', 'senioři / omezené zaměření', 'omezené zaměření')
+            elif key == 'category':
+                valid = value in ('strom', 'mikulas', 'trhy', 'tvoreni', 'setkani', 'betlem')
+            elif key == 'notes':
+                valid = isinstance(value, list) and all(isinstance(n, str) for n in value)
+            else:
+                valid = value is None or isinstance(value, str)
+            if not valid or (adapter == 'telc' and len(dates) > 1 and key in ('startTime', 'endTime') and value is not None):
+                raise Review('Neplatný typ nebo hodnota ověřené úpravy.')
+            if key == 'notes':
+                event['notes'].extend(clean_public(n) for n in value)
+            else:
+                event[key] = clean_public(value) if key in ('price', 'venue', 'registration') and value is not None else value
+        if 'venue' in overrides:
+            event['description'] = f"{event['title']}. {event['venue']}"[:200]
+        if 'startTime' in overrides:
+            uncertainty = 'Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek.'
+            event['notes'] = [n for n in event['notes'] if n != uncertainty]
+            if not event['startTime']:
+                event['notes'].insert(0, uncertainty)
+        if event['status'] != 'cancelled':
+            event['status'] = 'confirmed' if event['startTime'] else 'time-unconfirmed'
+    return event
 
 
 KEYWORDS = re.compile(r'vanoc|vanoce|advent|mikulas|rozsvic|koled|betlem|jarmark', re.I)
@@ -501,7 +579,12 @@ def collect(registry, db, output, locations, fetcher, source_id=None):
                 successful += 1
                 body_hash = digest(body)
                 con.execute('INSERT INTO observations(source_id,url,body_hash,observed_at) VALUES (?,?,?,?)', (sid,url,body_hash,checked))
-                title = clean_public(txt(DOM(body).root.find('h1')))[:180] or title
+                detail_root = DOM(body).root
+                title_node = detail_root.find('h1')
+                if source['adapter'] == 'telc':
+                    detail = detail_root.find(cls='clanek_levy_sloupec')
+                    title_node = detail.find('h2') if detail else None
+                title = clean_public(txt(title_node))[:180] or title
                 event = parse_event(body, source, url, registry['window'])
                 mapping = source.get('event_locations', {}).get(url)
                 location_key = mapping['locationKey'] if mapping else event['town']

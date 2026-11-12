@@ -227,8 +227,151 @@
       "max_details": 14,
       "allowed_venues": [
         "Muzeum Českého krasu v Berouně",
-        "Husovo náměstí"
-      ]
+        "Husovo náměstí",
+        "Kostel sv. Jakuba",
+        "Tyršův stadion",
+        "Kino Beroun"
+      ],
+      "event_reviews": {
+        "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/adventni-koncert-13112_7114cs.html": {
+          "sourceId": "beroun-mesto",
+          "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/adventni-koncert-13112_7114cs.html",
+          "sourceTown": "Beroun",
+          "expectedTitle": "Adventní koncert",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Kostel sv. Jakuba",
+          "contentHash": "92eea69192b383bc23501e534a4014d5dc2b8b2aa1019b42d9960584a80cbf07",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/adventni-koncert-13112_7114cs.html",
+            "https://www.mesto-beroun.cz/o-beroune/pamatky/13-kostel-sv-jakuba-0_676.html"
+          ],
+          "verifiedTown": "Beroun"
+        },
+        "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/adventni-vyslap-na-lisek-13020_6992cs.html": {
+          "sourceId": "beroun-mesto",
+          "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/adventni-vyslap-na-lisek-13020_6992cs.html",
+          "sourceTown": "Beroun",
+          "expectedTitle": "Adventní výšlap na Lísek",
+          "expectedDate": "2026-11-28",
+          "expectedEndDate": null,
+          "expectedVenue": "Tyršův stadion",
+          "contentHash": "a8da73481f78a682ea15b540de6df4dfc8baece11e6d9efb56c30e33c559aaa5",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "notes": [
+              "Start účastníků je možný od 09:00 do 11:00 u Tyršova stadionu v Berouně; jde o turistický výšlap s cílem na Lísku, nikoli program po celou dobu na stadionu. Cíl je pro účastníky otevřen 12:00–18:00."
+            ]
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/adventni-vyslap-na-lisek-13020_6992cs.html"
+          ],
+          "verifiedTown": "Beroun"
+        },
+        "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/ebenezer-vanocni-koleda-13035_7024cs.html": {
+          "sourceId": "beroun-mesto",
+          "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/ebenezer-vanocni-koleda-13035_7024cs.html",
+          "sourceTown": "Beroun",
+          "expectedTitle": "Ebenezer: Vánoční koleda",
+          "expectedDate": "2026-11-13",
+          "expectedEndDate": null,
+          "expectedVenue": "Kino Beroun",
+          "contentHash": "f78b54f0f0d5586953a45b0bd89e3c3b6889b8f8936b0f3c103f7892bda0ad65",
+          "decision": "exclude",
+          "reason": "Datum nebo interval je mimo sledované období.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/ebenezer-vanocni-koleda-13035_7024cs.html"
+          ]
+        },
+        "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/ebenezer-vanocni-koleda-13035_7025cs.html": {
+          "sourceId": "beroun-mesto",
+          "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/ebenezer-vanocni-koleda-13035_7025cs.html",
+          "sourceTown": "Beroun",
+          "expectedTitle": "Ebenezer: Vánoční koleda",
+          "expectedDate": "2026-11-18",
+          "expectedEndDate": null,
+          "expectedVenue": "Kino Beroun",
+          "contentHash": "f09ee0f25c87a7ab004ca3bfe4b06bad23da7f624bbfd82e97220f8e6c7e997e",
+          "decision": "exclude",
+          "reason": "Datum nebo interval je mimo sledované období.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/ebenezer-vanocni-koleda-13035_7025cs.html"
+          ]
+        },
+        "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/ebenezer-vanocni-koleda-13035_7026cs.html": {
+          "sourceId": "beroun-mesto",
+          "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/ebenezer-vanocni-koleda-13035_7026cs.html",
+          "sourceTown": "Beroun",
+          "expectedTitle": "Ebenezer: Vánoční koleda",
+          "expectedDate": "2026-11-27",
+          "expectedEndDate": null,
+          "expectedVenue": "Kino Beroun",
+          "contentHash": "d6ac496b122b49ede1c9328905ccbd1881bb7bb22658390377fedb17d1331f1b",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "audience": "omezené zaměření",
+            "notes": [
+              "Filmové promítání; podle pořadatele přístupné od 12 let."
+            ]
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/ebenezer-vanocni-koleda-13035_7026cs.html"
+          ],
+          "verifiedTown": "Beroun"
+        },
+        "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/santova-kouzelna-dilna-13049_7050cs.html": {
+          "sourceId": "beroun-mesto",
+          "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/santova-kouzelna-dilna-13049_7050cs.html",
+          "sourceTown": "Beroun",
+          "expectedTitle": "Santova kouzelná dílna",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Kino Beroun",
+          "contentHash": "565fcda259eaed6ab35aeb193e89e123e63ce22365ce43f2ab734ffb7151e21a",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "category": "setkani",
+            "notes": [
+              "Jde o rodinný animovaný film v kině, nikoli tvořivou dílnu."
+            ]
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/santova-kouzelna-dilna-13049_7050cs.html"
+          ],
+          "verifiedTown": "Beroun"
+        },
+        "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/sklenene-vanoce-aneb-13111_7113cs.html": {
+          "sourceId": "beroun-mesto",
+          "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/sklenene-vanoce-aneb-13111_7113cs.html",
+          "sourceTown": "Beroun",
+          "expectedTitle": "Skleněné Vánoce aneb…",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Muzeum Českého krasu v Berouně",
+          "contentHash": "53e2ef88da82c35137d2f0e718a9d70223a71386e0b1a5b64454f3965ee87baf",
+          "decision": "hold",
+          "reason": "Nejednoznačný časový rozsah vyžaduje další ověření.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/sklenene-vanoce-aneb-13111_7113cs.html"
+          ]
+        }
+      }
     },
     {
       "id": "horovice-mesto",
@@ -248,7 +391,60 @@
       "allowed_venues": [
         "Hořovice, Palackého náměstí",
         "SÁL RADNICE HOŘOVICE"
-      ]
+      ],
+      "event_reviews": {
+        "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/ja-bych-rad-k-betlemu-3386_1928cs.html": {
+          "sourceId": "horovice-mesto",
+          "sourceUrl": "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/ja-bych-rad-k-betlemu-3386_1928cs.html",
+          "sourceTown": "Hořovice",
+          "expectedTitle": "Já bych rád k Betlému",
+          "expectedDate": "2026-11-24",
+          "expectedEndDate": "2027-01-06",
+          "expectedVenue": "Muzeum Zbiroh",
+          "contentHash": "896495821e852d00c4b51e1f110647c9026dc3a1d6b5ff17e209ce019aa5c0b7",
+          "decision": "exclude",
+          "reason": "Program ve Zbiroze, nikoli v Hořovicích; navíc interval přesahuje konec sezony.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/ja-bych-rad-k-betlemu-3386_1928cs.html"
+          ]
+        },
+        "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/prohlidka-kostela-sv-mikulase-ve-zbiroze-3385_1927cs.html": {
+          "sourceId": "horovice-mesto",
+          "sourceUrl": "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/prohlidka-kostela-sv-mikulase-ve-zbiroze-3385_1927cs.html",
+          "sourceTown": "Hořovice",
+          "expectedTitle": "Prohlídka kostela sv. Mikuláše ve Zbiroze",
+          "expectedDate": "2026-11-14",
+          "expectedEndDate": null,
+          "expectedVenue": "Zbiroh",
+          "contentHash": "f344739c040d76dc05abef2b4adc46b35ef60de89e539fcb81d2011c8ea0623a",
+          "decision": "exclude",
+          "reason": "Program ve Zbiroze, nikoli v Hořovicích.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/prohlidka-kostela-sv-mikulase-ve-zbiroze-3385_1927cs.html"
+          ]
+        },
+        "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/vanoce-v-casech-davnych-i-nedavnych-3361_1906cs.html": {
+          "sourceId": "horovice-mesto",
+          "sourceUrl": "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/vanoce-v-casech-davnych-i-nedavnych-3361_1906cs.html",
+          "sourceTown": "Hořovice",
+          "expectedTitle": "Vánoce v časech dávných i nedávných",
+          "expectedDate": "2026-11-05",
+          "expectedEndDate": "2026-12-20",
+          "expectedVenue": "Galerie Starý zámek",
+          "contentHash": "396903d1426390bbb8312822f200d07c866615f6fca01a7d0484712d33bf825b",
+          "decision": "exclude",
+          "reason": "Datum nebo interval je mimo sledované období.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/vanoce-v-casech-davnych-i-nedavnych-3361_1906cs.html"
+          ]
+        }
+      }
     },
     {
       "id": "sobeslav",
@@ -269,8 +465,80 @@
       "allowed_venues": [
         "Dům dětí a mládeže",
         "náměstí Republiky",
-        "Infocentrum města Soběslavi"
-      ]
+        "Infocentrum města Soběslavi",
+        "Kulturní dům města Soběslavi"
+      ],
+      "event_reviews": {
+        "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/kreativ-vanoce-a-zima-sobeslav-2026-5452_1535cs.html": {
+          "sourceId": "sobeslav",
+          "sourceUrl": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/kreativ-vanoce-a-zima-sobeslav-2026-5452_1535cs.html",
+          "sourceTown": "Soběslav",
+          "expectedTitle": "Kreativ Vánoce a zima - Soběslav 2026",
+          "expectedDate": "2026-11-20",
+          "expectedEndDate": null,
+          "expectedVenue": "Kulturní dům města Soběslavi",
+          "contentHash": "64f795b4a08d160f1d60127d221e3c41794f570c34082052f6a86d4439c4aa05",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "price": "Plné vstupné: 50 Kč; snížené vstupné: 20 Kč",
+            "audience": "všichni"
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/kreativ-vanoce-a-zima-sobeslav-2026-5452_1535cs.html"
+          ],
+          "verifiedTown": "Soběslav"
+        },
+        "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/kreativ-vanoce-a-zima-sobeslav-2026-5452_1536cs.html": {
+          "sourceId": "sobeslav",
+          "sourceUrl": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/kreativ-vanoce-a-zima-sobeslav-2026-5452_1536cs.html",
+          "sourceTown": "Soběslav",
+          "expectedTitle": "Kreativ Vánoce a zima - Soběslav 2026",
+          "expectedDate": "2026-11-21",
+          "expectedEndDate": null,
+          "expectedVenue": "Kulturní dům města Soběslavi",
+          "contentHash": "21b6894c95b39d26c5e9a1196daa0569a2fe998bb1bff01c34219427efa50234",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "price": "Plné vstupné: 50 Kč; snížené vstupné: 20 Kč",
+            "audience": "všichni"
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/kreativ-vanoce-a-zima-sobeslav-2026-5452_1536cs.html"
+          ],
+          "verifiedTown": "Soběslav"
+        },
+        "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/mikulasska-stezka-v-parku-u-altanu-5487_1548cs.html": {
+          "sourceId": "sobeslav",
+          "sourceUrl": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/mikulasska-stezka-v-parku-u-altanu-5487_1548cs.html",
+          "sourceTown": "Soběslav",
+          "expectedTitle": "Mikulášská stezka - v parku u altánu",
+          "expectedDate": "2026-12-05",
+          "expectedEndDate": null,
+          "expectedVenue": "jiné",
+          "contentHash": "aafcb1bd192f7236d0aa0013f52ee8c6301c83b053abaa089b69bfb1c2ad7310",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "venue": "Park u altánu, ulice Na Vyhlídce, Soběslav",
+            "endTime": "17:00",
+            "price": "100 Kč za dítě",
+            "registration": "Nutná registrace předem; kontakt a podmínky v pozvánce pořadatele.",
+            "notes": [
+              "Park u altánu, ulice Na Vyhlídce, Soběslav. Akce je podle plakátu vhodná pro děti do 7 let; kapacita je omezená a registrace předem nutná. Podrobnosti plakátu ověřeny 12. 11. 2026."
+            ]
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/mikulasska-stezka-v-parku-u-altanu-5487_1548cs.html",
+            "https://www.musobeslav.cz/evt_image.php?img=14107&v=1793776824"
+          ],
+          "verifiedTown": "Soběslav"
+        }
+      }
     },
     {
       "id": "trebon-iks",
@@ -291,8 +559,114 @@
       "allowed_venues": [
         "Centrum města",
         "Dům přírody Třeboňska",
-        "Masarykovo náměstí"
-      ]
+        "Masarykovo náměstí",
+        "Bejkárna Žije",
+        "Zámecká lékárna",
+        "Kino Světozor"
+      ],
+      "event_reviews": {
+        "https://www.itrebon.cz/kalendar/-advent-na-bejkarne_20916.html": {
+          "sourceId": "trebon-iks",
+          "sourceUrl": "https://www.itrebon.cz/kalendar/-advent-na-bejkarne_20916.html",
+          "sourceTown": "Třeboň",
+          "expectedTitle": "Advent na Bejkárně",
+          "expectedDate": "2026-11-27",
+          "expectedEndDate": null,
+          "expectedVenue": "Bejkárna Žije",
+          "contentHash": "3463e5b9b86cfbfaec5c82b9e01add44bacc98b80ef89794fe317ad80dd37268",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "notes": [
+              "Pletení věnců od 15:30, rozsvícení stromku v 17:00. Plakát uvádí Sídliště 708, Třeboň; podrobnosti ověřeny 12. 11. 2026."
+            ]
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.itrebon.cz/kalendar/-advent-na-bejkarne_20916.html",
+            "https://www.itrebon.cz/images/preview/1794320632.jpg",
+            "https://www.bejkarnatrebon.cz/"
+          ],
+          "verifiedTown": "Třeboň"
+        },
+        "https://www.itrebon.cz/kalendar/-sklenene-vanoce_20903.html": {
+          "sourceId": "trebon-iks",
+          "sourceUrl": "https://www.itrebon.cz/kalendar/-sklenene-vanoce_20903.html",
+          "sourceTown": "Třeboň",
+          "expectedTitle": "Skleněné Vánoce",
+          "expectedDate": "2026-12-03",
+          "expectedEndDate": "2026-12-13",
+          "expectedVenue": "Zámecká lékárna",
+          "contentHash": "242f63fbe2aefaa6a03144d09b892ce8066e680ebeb835fad436cc9d9efc9efa",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "notes": [
+              "Rozsah výstavy 3.–13. 12. 2026; pořadatel v kalendáři uvádí 10:00–18:00, před návštěvou ověřte otevření konkrétního dne."
+            ]
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.itrebon.cz/kalendar/-sklenene-vanoce_20903.html"
+          ],
+          "verifiedTown": "Třeboň"
+        },
+        "https://www.itrebon.cz/kalendar/ebenezer-vanocni-koleda_20866.html": {
+          "sourceId": "trebon-iks",
+          "sourceUrl": "https://www.itrebon.cz/kalendar/ebenezer-vanocni-koleda_20866.html",
+          "sourceTown": "Třeboň",
+          "expectedTitle": "Ebenezer: Vánoční koleda",
+          "expectedDate": "2026-11-14",
+          "expectedEndDate": null,
+          "expectedVenue": "Kino Světozor",
+          "contentHash": "8b41484f3b9ff112288eaac7b943a11d13e4abb3f31ffe90cee5488e018cbad8",
+          "decision": "exclude",
+          "reason": "Datum nebo interval je mimo sledované období.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.itrebon.cz/kalendar/ebenezer-vanocni-koleda_20866.html",
+            "https://www.itrebon.cz/kino-svetozor_300.html"
+          ]
+        },
+        "https://www.itrebon.cz/kalendar/ebenezer-vanocni-koleda_20867.html": {
+          "sourceId": "trebon-iks",
+          "sourceUrl": "https://www.itrebon.cz/kalendar/ebenezer-vanocni-koleda_20867.html",
+          "sourceTown": "Třeboň",
+          "expectedTitle": "Ebenezer: Vánoční koleda",
+          "expectedDate": "2026-11-18",
+          "expectedEndDate": null,
+          "expectedVenue": "Kino Světozor",
+          "contentHash": "c89151634a96aa0f835d6fab0149e1c5d3e48fb0edc9360f8b0683a967ffaf43",
+          "decision": "exclude",
+          "reason": "Datum nebo interval je mimo sledované období.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.itrebon.cz/kalendar/ebenezer-vanocni-koleda_20867.html",
+            "https://www.itrebon.cz/kino-svetozor_300.html"
+          ]
+        },
+        "https://www.itrebon.cz/kalendar/ebenezer-vanocni-koleda_20868.html": {
+          "sourceId": "trebon-iks",
+          "sourceUrl": "https://www.itrebon.cz/kalendar/ebenezer-vanocni-koleda_20868.html",
+          "sourceTown": "Třeboň",
+          "expectedTitle": "Ebenezer: Vánoční koleda",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Kino Světozor",
+          "contentHash": "2bbbe6910b1a3340452702cdcca68895c232e0935b2f1e31bf56b53dd3afd303",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.itrebon.cz/kalendar/ebenezer-vanocni-koleda_20868.html",
+            "https://www.itrebon.cz/kino-svetozor_300.html"
+          ],
+          "verifiedTown": "Třeboň"
+        }
+      }
     },
     {
       "id": "telc-mesto",
@@ -312,8 +686,228 @@
       "max_details": 14,
       "allowed_venues": [
         "Panský dvůr Telč",
-        "kostel Jména Ježíš"
-      ]
+        "kostel Jména Ježíš",
+        "dům zahrádkářů",
+        "náměstí Zachariáše z Hradce",
+        "Sál ZUŠ",
+        "Dům u Michala",
+        "herna stolního tenisu",
+        "klubovna na poliklinice"
+      ],
+      "event_reviews": {
+        "https://www.telc.eu/kalendar/3766": {
+          "sourceId": "telc-mesto",
+          "sourceUrl": "https://www.telc.eu/kalendar/3766",
+          "sourceTown": "Telč",
+          "expectedTitle": "Vánoční výstava zahrádkářů",
+          "expectedDate": "2026-12-11",
+          "expectedEndDate": "2026-12-12",
+          "expectedVenue": "dům zahrádkářů",
+          "contentHash": "35bee1a7e002f68329263ef771467a0668ee0c51ac2eedbbb302bfb56b223b1e",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "notes": [
+              "Výstava: 11. 12. 14:00–17:00 a 12. 12. 08:00–17:00; jednotlivé dny mají různé otevírací hodiny."
+            ]
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.telc.eu/kalendar/3766"
+          ],
+          "verifiedTown": "Telč"
+        },
+        "https://www.telc.eu/kalendar/3841": {
+          "sourceId": "telc-mesto",
+          "sourceUrl": "https://www.telc.eu/kalendar/3841",
+          "sourceTown": "Telč",
+          "expectedTitle": "Mikulášské setkání a rozsvícení vánočního stromu",
+          "expectedDate": "2026-11-27",
+          "expectedEndDate": null,
+          "expectedVenue": "náměstí Zachariáše z Hradce",
+          "contentHash": "071bdd5107e9bd24cf342b9c07d3c8a024e2d03fef09d128d8f60f815f893936",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "startTime": "15:00",
+            "endTime": null,
+            "notes": [
+              "Veřejný program začíná v 15:00, Mikuláš a rozsvícení stromu jsou uvedeny na 16:30. Údaj 14:30 patří příjezdu prodejců, nikoli začátku veřejného programu."
+            ]
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.telc.eu/kalendar/3841",
+            "https://www.telc.eu/kalendar/3841"
+          ],
+          "verifiedTown": "Telč"
+        },
+        "https://www.telc.eu/kalendar/3980": {
+          "sourceId": "telc-mesto",
+          "sourceUrl": "https://www.telc.eu/kalendar/3980",
+          "sourceTown": "Telč",
+          "expectedTitle": "Výměnné trhy drobného zvířectva",
+          "expectedDate": "2026-12-13",
+          "expectedEndDate": null,
+          "expectedVenue": "areál Na Kopečku",
+          "contentHash": "e1f81304cc0911eaebec2ba87144ee5aa5912f98e5d04ca9f689748111c78bc3",
+          "decision": "exclude",
+          "reason": "Pravidelné trhy drobného zvířectva bez adventního nebo vánočního programu nejsou součástí sezonního výběru.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.telc.eu/kalendar/3980"
+          ]
+        },
+        "https://www.telc.eu/kalendar/4229": {
+          "sourceId": "telc-mesto",
+          "sourceUrl": "https://www.telc.eu/kalendar/4229",
+          "sourceTown": "Telč",
+          "expectedTitle": "Vánoční koncerty ZUŠ",
+          "expectedDate": "2026-12-14",
+          "expectedEndDate": null,
+          "expectedVenue": "Sál ZUŠ",
+          "contentHash": "5533b54b54d2be695f45b925484783066d24d7ccff02a4afac9c0bbe89a2e5bf",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.telc.eu/kalendar/4229"
+          ],
+          "verifiedTown": "Telč"
+        },
+        "https://www.telc.eu/kalendar/4245": {
+          "sourceId": "telc-mesto",
+          "sourceUrl": "https://www.telc.eu/kalendar/4245",
+          "sourceTown": "Telč",
+          "expectedTitle": "Trio Spolektiv - Adventní koncert Dům u Michala",
+          "expectedDate": "2026-12-12",
+          "expectedEndDate": null,
+          "expectedVenue": "Dům u Michala",
+          "contentHash": "914d25fc6c74bb5af0a99511ad656f46207118e4849be0bd64db9931cbeb0090",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "startTime": "19:00"
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.telc.eu/kalendar/4245"
+          ],
+          "verifiedTown": "Telč"
+        },
+        "https://www.telc.eu/kalendar/4254": {
+          "sourceId": "telc-mesto",
+          "sourceUrl": "https://www.telc.eu/kalendar/4254",
+          "sourceTown": "Telč",
+          "expectedTitle": "Vánoční turnaj žáků ve stolním tenise",
+          "expectedDate": "2026-12-15",
+          "expectedEndDate": null,
+          "expectedVenue": "herna stolního tenisu",
+          "contentHash": "5521818700bd2cde7f528c537e823e9f8855fce8a187f22184d35bc3012bf18f",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "audience": "omezené zaměření",
+            "notes": [
+              "Vánoční turnaj je zaměřený na žáky; podmínky aktivní účasti ověřte u pořadatele."
+            ]
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.telc.eu/kalendar/4254",
+            "https://www.telc.eu/kalendar/3804"
+          ],
+          "verifiedTown": "Telč"
+        },
+        "https://www.telc.eu/kalendar/4262": {
+          "sourceId": "telc-mesto",
+          "sourceUrl": "https://www.telc.eu/kalendar/4262",
+          "sourceTown": "Telč",
+          "expectedTitle": "Zabijačkové hody aneb Vánoce podle Lady",
+          "expectedDate": "2026-12-12",
+          "expectedEndDate": null,
+          "expectedVenue": "náměstí Zachariáše z Hradce",
+          "contentHash": "5f678ecc3cb56f6134e71398a3810932d68f0dc88aec0485e3e1b3ca185b76f3",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "notes": [
+              "Koncert od 17:00 je součást dalšího programu, nikoli uvedený konec trhů."
+            ]
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.telc.eu/kalendar/4262",
+            "https://www.telc.eu/kalendar/3841"
+          ],
+          "verifiedTown": "Telč"
+        },
+        "https://www.telc.eu/kalendar/4264": {
+          "sourceId": "telc-mesto",
+          "sourceUrl": "https://www.telc.eu/kalendar/4264",
+          "sourceTown": "Telč",
+          "expectedTitle": "Vánoční chaloupky",
+          "expectedDate": "2026-11-27",
+          "expectedEndDate": "2027-01-06",
+          "expectedVenue": "náměstí Zachariáše z Hradce",
+          "contentHash": "b946107f860d24a209d13a0677c34fdbc5e90e9d23582c3505ba95cd04594af4",
+          "decision": "exclude",
+          "reason": "Datum nebo interval je mimo sledované období.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.telc.eu/kalendar/4264",
+            "https://www.telc.eu/kalendar/3841"
+          ]
+        },
+        "https://www.telc.eu/kalendar/4265": {
+          "sourceId": "telc-mesto",
+          "sourceUrl": "https://www.telc.eu/kalendar/4265",
+          "sourceTown": "Telč",
+          "expectedTitle": "Setkání u adventního stolu v Klubu důchodců",
+          "expectedDate": "2026-12-13",
+          "expectedEndDate": null,
+          "expectedVenue": "klubovna na poliklinice",
+          "contentHash": "5c98894d6cf1f9049d3585d6160af632bdf57cac1c2a8ebdc8b6438a9351bbac",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "audience": "senioři / omezené zaměření",
+            "notes": [
+              "Adventní setkání Klubu důchodců; podmínky účasti pro nečleny nejsou ověřené."
+            ]
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.telc.eu/kalendar/4265",
+            "https://www.telc.eu/obcan/zdravotnictvi/poliklinika_telc_spol_s_r_o"
+          ],
+          "verifiedTown": "Telč"
+        },
+        "https://www.telc.eu/kalendar/4266": {
+          "sourceId": "telc-mesto",
+          "sourceUrl": "https://www.telc.eu/kalendar/4266",
+          "sourceTown": "Telč",
+          "expectedTitle": "Česko zpívá koledy",
+          "expectedDate": "2026-12-09",
+          "expectedEndDate": null,
+          "expectedVenue": "náměstí Zachariáše z Hradce",
+          "contentHash": "a41674207653f02f3f768d09f98c2e9ef71f1c4169f07dce90475f9264dec8c2",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "startTime": "18:00"
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.telc.eu/kalendar/4266",
+            "https://www.telc.eu/kalendar/3841"
+          ],
+          "verifiedTown": "Telč"
+        }
+      }
     },
     {
       "id": "humpolec-mesto",
@@ -334,8 +928,162 @@
       "allowed_venues": [
         "Evangelický kostel, Husova, Humpolec, Česko",
         "Divadlo Za komínem z. s., Kamarytova, Humpolec, Česko",
-        "8SMIČKA - zóna pro umění, Kamarytova, Humpolec, Česko"
-      ]
+        "8SMIČKA - zóna pro umění, Kamarytova, Humpolec, Česko",
+        "Návštěvnické centrum Bernard, Jihlavská, Humpolec, Česko",
+        "Kino Humpolec, Havlíčkovo náměstí, Humpolec, Česko"
+      ],
+      "event_reviews": {
+        "https://humpolec.cz/akce/ceska-mse-vanocni-jakuba-jana-ryby/": {
+          "sourceId": "humpolec-mesto",
+          "sourceUrl": "https://humpolec.cz/akce/ceska-mse-vanocni-jakuba-jana-ryby/",
+          "sourceTown": "Humpolec",
+          "expectedTitle": "Česká mše vánoční Jakuba Jana Ryby",
+          "expectedDate": "2026-12-17",
+          "expectedEndDate": null,
+          "expectedVenue": "Evangelický kostel, Husova, Humpolec, Česko",
+          "contentHash": "1ccf8fa31828411d221aecaa86e022d922ee7c948b9ff900509a02f1300f982e",
+          "decision": "hold",
+          "reason": "Nejednoznačný časový rozsah vyžaduje další ověření.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": []
+        },
+        "https://humpolec.cz/akce/mgr-petr-bjacek-vanoce-v-poli-1914-1918/": {
+          "sourceId": "humpolec-mesto",
+          "sourceUrl": "https://humpolec.cz/akce/mgr-petr-bjacek-vanoce-v-poli-1914-1918/",
+          "sourceTown": "Humpolec",
+          "expectedTitle": "Mgr. Petr Bjaček – Vánoce v poli 1914–1918",
+          "expectedDate": "2026-11-19",
+          "expectedEndDate": null,
+          "expectedVenue": "Dolní náměstí 253, Humpolec, Česko",
+          "contentHash": "aa115cbfab112a20dea35267265cd904e3d1eb1319de5c5a934de1cee315c2a5",
+          "decision": "exclude",
+          "reason": "Datum nebo interval je mimo sledované období.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://humpolec.cz/kontakty/"
+          ]
+        },
+        "https://humpolec.cz/akce/rozsviceni-vanocniho-stromecku-v-klastere-zeliv/": {
+          "sourceId": "humpolec-mesto",
+          "sourceUrl": "https://humpolec.cz/akce/rozsviceni-vanocniho-stromecku-v-klastere-zeliv/",
+          "sourceTown": "Humpolec",
+          "expectedTitle": "Rozsvícení vánočního stromečku a čerti v Klášteře Želiv",
+          "expectedDate": "2026-12-05",
+          "expectedEndDate": null,
+          "expectedVenue": "Želivský Klášter, Želiv, Česko",
+          "contentHash": "82b8928ea2c3a8490be04e4c6f7fccafa2413b73870941d10a26e00ce2100e77",
+          "decision": "exclude",
+          "reason": "Akce se koná v Želivi, mimo tento výběr obcí; nejde o akci v Humpolci.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": []
+        },
+        "https://humpolec.cz/akce/rozsviceni-vanocniho-stromu-v-lipnici-nad-sazavou/": {
+          "sourceId": "humpolec-mesto",
+          "sourceUrl": "https://humpolec.cz/akce/rozsviceni-vanocniho-stromu-v-lipnici-nad-sazavou/",
+          "sourceTown": "Humpolec",
+          "expectedTitle": "Rozsvícení vánočního stromu v Lipnici nad Sázavou",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Lipnice nad Sázavou, Česko",
+          "contentHash": "08df5b6d6d68e0972468cc81d4ca12cf163a577d892e8d59b6f692bf5f285627",
+          "decision": "exclude",
+          "reason": "Akce se koná v Lipnici nad Sázavou, mimo tento výběr obcí; nejde o akci v Humpolci.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": []
+        },
+        "https://humpolec.cz/akce/slavnostni-rozsviceni-vanocniho-stromu/": {
+          "sourceId": "humpolec-mesto",
+          "sourceUrl": "https://humpolec.cz/akce/slavnostni-rozsviceni-vanocniho-stromu/",
+          "sourceTown": "Humpolec",
+          "expectedTitle": "Slavnostní rozsvícení vánočního stromu v Čejově",
+          "expectedDate": "2026-11-28",
+          "expectedEndDate": null,
+          "expectedVenue": "Čejov, Česko",
+          "contentHash": "41f294254017fd91dfa38b09903fd7d47bcc6f0026c631ce1b3aacb6463aacb2",
+          "decision": "exclude",
+          "reason": "Akce se koná v Čejově, mimo tento výběr obcí; nejde o akci v Humpolci.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": []
+        },
+        "https://humpolec.cz/akce/slavnostni-vanocni-mse-s-ceskou-msi-vanocni-j-j-ryby/": {
+          "sourceId": "humpolec-mesto",
+          "sourceUrl": "https://humpolec.cz/akce/slavnostni-vanocni-mse-s-ceskou-msi-vanocni-j-j-ryby/",
+          "sourceTown": "Humpolec",
+          "expectedTitle": "Slavnostní vánoční mše s Českou mší vánoční J. J. Ryby",
+          "expectedDate": "2026-12-25",
+          "expectedEndDate": null,
+          "expectedVenue": "Želivský Klášter, Želiv, Česko",
+          "contentHash": "94eab4addcea1eb2a34e27e1045cd9f8bdb03e90b6a1abd3389eed0995325c46",
+          "decision": "exclude",
+          "reason": "Akce se koná v Želivi a 25. 12. 2026 je mimo sledované období.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": []
+        },
+        "https://humpolec.cz/akce/talkshow-na-tri-s-mirkou-vanocni-dil/": {
+          "sourceId": "humpolec-mesto",
+          "sourceUrl": "https://humpolec.cz/akce/talkshow-na-tri-s-mirkou-vanocni-dil/",
+          "sourceTown": "Humpolec",
+          "expectedTitle": "talkshow: Na tři s Mirkou – vánoční díl",
+          "expectedDate": "2026-12-15",
+          "expectedEndDate": null,
+          "expectedVenue": "Návštěvnické centrum Bernard, Jihlavská, Humpolec, Česko",
+          "contentHash": "19fdca1122bddfd7f3c9a7d36368264dd3d1576207e7a8129d6038db5ed5d65b",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://humpolec.cz/misto/navstevnicke-centrum-bernard/"
+          ],
+          "verifiedTown": "Humpolec"
+        },
+        "https://humpolec.cz/akce/vanocni-recital-jitky-cvancarove-kapely-blue-cimbal/": {
+          "sourceId": "humpolec-mesto",
+          "sourceUrl": "https://humpolec.cz/akce/vanocni-recital-jitky-cvancarove-kapely-blue-cimbal/",
+          "sourceTown": "Humpolec",
+          "expectedTitle": "Vánoční recitál Jitky Čvančarové & kapely Blue Cimbal",
+          "expectedDate": "2026-12-18",
+          "expectedEndDate": null,
+          "expectedVenue": "Kino Humpolec, Havlíčkovo náměstí, Humpolec, Česko",
+          "contentHash": "9dfabdbd17e73c80905d67ad29ce85dc5c04d777bb59c1664b7e19a826f99ba9",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://humpolec.cz/misto/kino/"
+          ],
+          "verifiedTown": "Humpolec"
+        },
+        "https://humpolec.cz/akce/zimni-kino-mysi-v-akci-vanocni-past/": {
+          "sourceId": "humpolec-mesto",
+          "sourceUrl": "https://humpolec.cz/akce/zimni-kino-mysi-v-akci-vanocni-past/",
+          "sourceTown": "Humpolec",
+          "expectedTitle": "ZIMNÍ KINO – Myši v akci: Vánoční past",
+          "expectedDate": "2026-12-17",
+          "expectedEndDate": null,
+          "expectedVenue": "Kino Humpolec, Havlíčkovo náměstí, Humpolec, Česko",
+          "contentHash": "fe28d890552f5c1f4b04f1d5ede0bb1b10b6e3b9c1af9b770af51ee16150e7cf",
+          "decision": "accept",
+          "reason": "Ověřená lokalita a program z primárního zdroje.",
+          "overrides": {
+            "notes": [
+              "Venkovní promítání před Mikádem na Havlíčkově náměstí; při nepříznivém počasí se přesouvá do kina."
+            ]
+          },
+          "verifiedAt": "2026-11-12T16:00:23+00:00",
+          "supportingSourceUrls": [
+            "https://humpolec.cz/misto/kino/"
+          ],
+          "verifiedTown": "Humpolec"
+        }
+      }
     }
   ]
 }

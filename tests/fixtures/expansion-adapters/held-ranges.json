@@ -1,0 +1,18 @@
+[
+  {
+    "adapter": "telc",
+    "title": "Vánoční výstava zahrádkářů",
+    "venue": "dům zahrádkářů",
+    "html": "<h1>Kalendář akcí</h1><div class=\"clanek_levy_sloupec\">11.12.2026 - 12.12.2026<h2>Vánoční výstava zahrádkářů</h2><p>Výstava je otevřena v pátek 14.00 - 17.00 hod., v sobotu 8.00 - 17.00 hod.</p><strong>Organizátor akce</strong><br><strong>Místo konání:</strong>dům zahrádkářů<br></div>",
+    "date": "2026-12-11",
+    "endDate": "2026-12-12"
+  },
+  {
+    "adapter": "itrebon",
+    "title": "Skleněné Vánoce",
+    "venue": "Zámecká lékárna",
+    "html": "<h1>Skleněné Vánoce</h1><div class=\"kalendarDetail\"><table class=\"kal-info-detail\"><tr><td>Datum konání akce:</td><td>3.12.2026 - 13.12.2026</td></tr><tr><td>Čas konání:</td><td>10:00 - 18:00</td></tr><tr><td>Místo:</td><td>Zámecká lékárna</td></tr></table></div>",
+    "date": "2026-12-03",
+    "endDate": "2026-12-13"
+  }
+]

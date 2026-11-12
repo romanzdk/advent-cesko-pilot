@@ -111,7 +111,7 @@ function card(event) {
   const body = el('div', null, 'event-body');
   const badges = el('div', null, 'badges');
   badges.append(el('span', categories[event.category] || 'Akce', 'category-badge'));
-  if (event.audience !== 'všichni') badges.append(el('span', event.audience === 'dospělí' ? 'Dospělí' : 'Senioři / omezené zaměření', 'audience-badge'));
+  if (event.audience !== 'všichni') badges.append(el('span', event.audience === 'dospělí' ? 'Dospělí' : event.audience === 'omezené zaměření' ? 'Omezené zaměření' : 'Senioři / omezené zaměření', 'audience-badge'));
   if (event.status === 'cancelled') badges.append(el('span', 'Zrušeno', 'warning-badge'));
   body.append(badges, el('h3', event.title), el('p', [event.town, event.venue].filter(Boolean).join(' · '), 'event-place'));
   const timing = el('p', timeLabel(event), event.startTime ? 'event-time' : 'event-time uncertain');
@@ -230,7 +230,7 @@ function validData(data) {
     typeof event.title === 'string' && typeof event.town === 'string' && date(event.date) &&
     (event.endDate === null || date(event.endDate) && event.endDate >= event.date) && time(event.startTime) && time(event.endTime) &&
     typeof event.description === 'string' && Array.isArray(event.notes) && event.notes.every(note => typeof note === 'string') &&
-    Object.hasOwn(categories, event.category) && ['všichni', 'dospělí', 'senioři / omezené zaměření'].includes(event.audience) &&
+    Object.hasOwn(categories, event.category) && ['všichni', 'dospělí', 'senioři / omezené zaměření', 'omezené zaměření'].includes(event.audience) &&
     ['confirmed', 'time-unconfirmed', 'cancelled'].includes(event.status) && Number.isFinite(Date.parse(event.verifiedAt))
   ) && new Set(data.events.map(event => event.id)).size === data.events.length;
 }

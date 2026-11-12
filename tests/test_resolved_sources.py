@@ -124,14 +124,13 @@ class ResolvedSourcesTests(unittest.TestCase):
         with self.assertRaises(self.c.Review):
             self.c.parse_event(body,source,f['url'],self.registry['window'])
 
-    def test_changed_mapping_and_unknown_geography_are_not_policy_exclusions(self):
+    def test_outside_season_precedes_mapping_and_unknown_geography(self):
         f = load('plasy-facts.json')[1]
         source = self.registry['sources'][0]
         body = (FIX/f['file']).read_text().replace('27. 11. 2026','27. 11. 2025')
         for url in [f['url'],source['seed_urls'][0]]:
-            with self.assertRaises(self.c.Review) as caught:
+            with self.assertRaises(self.c.Excluded):
                 self.c.parse_event(body,source,url,self.registry['window'])
-            self.assertNotIsInstance(caught.exception,self.c.Excluded)
 
     def test_mapping_accepts_only_nfkc_whitespace_casefold_equivalence(self):
         f = load('plasy-facts.json')[2]

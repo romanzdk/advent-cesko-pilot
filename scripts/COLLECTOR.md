@@ -38,6 +38,14 @@ Přesné geografické přiřazení URL je podmíněné shodou zdroje, normalizov
 
 Nových šest zdrojů v Berouně, Hořovicích, Soběslavi, Třeboni, Telči a Humpolci má navíc `allowed_venues`: přesně ověřené názvy míst v obci. Porovnání normalizuje NFKC, mezery a velikost písmen, nikoli význam nebo adresu. Neznámé místo zůstává k ověření, aby regionální kalendář nevydával akce sousedních obcí za místní. Toto omezení nebrání objevování nových akcí na již ověřeném místě.
 
+## Ověřená rozhodnutí a opravy jednotlivých akcí
+
+Registr může u zdroje obsahovat `event_reviews` podle přesné zdrojové URL. Rozhodnutí `accept`, `exclude` nebo `hold` je podmíněné shodou zdroje, jeho obce, názvu akce, obou termínů, původního místa a otisku sémantického textu. `review_fingerprint` nečte navigaci, související programy ani kontakty pořadatele v telčské šabloně. Otisk zachovává velikost písmen a diakritiku, sjednocuje pouze bílé znaky. Změna ověřovaného obsahu uvnitř sezonního okna vrací položku do kontroly; nejde o trvalé vynucení starých údajů.
+
+Přijaté rozhodnutí může upravit jen uzavřenou množinu polí: začátek, konec, místo, kategorii, cenu, podmínku registrace, zaměření a poznámky. Samostatně ověřené město dovoluje výjimku pro jedinou akci s obecným zdrojovým místem `jiné`; tento řetězec se nikdy nepřidává do obecného seznamu míst. Soukromé cesty ani e-maily se do veřejných polí nepřenášejí. Doplňky převzaté z plakátů mají v poznámce uvedené datum ověření.
+
+Chybný typ seznamu rozhodnutí nebo prázdný záznam znamená ruční kontrolu, nikoli síťový výpadek zachovávající starou veřejnou položku. Jednoznačné datum mimo okno se vyřazuje před kontrolou lokality, takže známé vyřazení nezůstává zbytečně ve frontě. Třeboň a Telč podporují výslovný interval dvou úplných dat; různé telčské denní hodiny se nepřevádějí na jediný společný čas. Více samostatných představení na jedné URL se nadále podrží k rozdělení.
+
 ## Identita, změny a selhání
 
 SQLite uchovává stabilní identifikátor odvozený z přesné zdrojové URL a otisk věcného obsahu bez času kontroly. Rozlišuje nové, změněné a nezměněné položky. Původ důležitých polí se zapisuje se zdrojem a pozorováním; pro dodatečný podpůrný zdroj se nevymýšlí hash nezachycené stránky.

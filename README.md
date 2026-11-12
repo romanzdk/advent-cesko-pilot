@@ -48,7 +48,7 @@ Sledované akce spadají do období **20. listopadu až 24. prosince 2026**.
 - **Jihočeský kraj:** Soběslav a pořadatelský kalendář IKS Třeboň.
 - **Kraj Vysočina:** Telč a Humpolec.
 
-**Stav k 12. listopadu 2026 po rozšíření: 57 publikovaných akcí, 12 zdrojů, 6 krajů.** Dalších 37 kandidátů zůstává k ověření, zejména kvůli dosud neověřenému místu nebo více termínům. Všech 12 zdrojů se podařilo načíst; stav „částečně“ u nových zdrojů přiznává tuto kontrolní frontu, nikoli kompletní pokrytí. Je to datovaný snímek pokrytí, ne trvale aktuální počítadlo. Poslední výsledky a rozsah kontrol najdete přímo na webu v sekci *Zdroje a pokrytí*.
+**Stav k 12. listopadu 2026 po kontrole zadržených kandidátů: 78 publikovaných akcí, 12 zdrojů, 6 krajů.** Z původní fronty 37 kandidátů bylo 21 přijato a 14 vyřazeno podle sezonního nebo místního rozsahu; dvě položky zůstávají k dořešení. Všech 12 zdrojů se podařilo načíst; stav „částečně“ přiznává nevyřešené položky, nikoli kompletní pokrytí. Je to datovaný snímek pokrytí, ne trvale aktuální počítadlo. Poslední výsledky a rozsah kontrol najdete přímo na webu v sekci *Zdroje a pokrytí*.
 
 Výběr několika měst neznamená pokrytí celého kraje. Původní [mapa Mnichovic a okolí](https://romanzdk.github.io/advent-mnichovice/) má vlastní repozitář i hlídání a zůstává oddělená.
 
@@ -99,12 +99,12 @@ Denní aktualizace je nastavena na **08:30 Europe/Prague od 13. listopadu do 24.
 
 Celý průchod sběrem, publikací a ověřením skutečného webu byl spuštěn přes stejný skriptový launcher jako v plánovači. K datu uvedeného snímku byly naplánované pravidelné běhy teprve před prvním ranním spuštěním; ruční ověření není vydáváno za několikadenní provoz.
 
-Po zdrojové kontrole a dvou závěrečných živých sběrech z 12. listopadu 2026 mapa obsahuje **20 nových akcí**, původních 37 zůstalo věcně beze změny. Opakovaný průchod potvrdil **57 nezměněných akcí**, bez nových položek či duplicit. Sběrač vykázal **0 AI volání**; tento údaj se nevztahuje k úvodní rešerši a vývoji. Skutečnou délku běhu a počty HTTP požadavků ukazuje sekce *Zdroje a pokrytí*.
+Po kontrole celé fronty 37 kandidátů z 12. listopadu 2026 přibylo **21 ověřených akcí**, původních 57 zůstalo věcně beze změny. Dva závěrečné živé průchody potvrdily **78 nezměněných akcí**, bez nových položek či duplicit. Sběrač vykázal **0 AI volání**; tento údaj se nevztahuje k úvodní rešerši a vývoji. Skutečnou délku běhu a počty HTTP požadavků ukazuje sekce *Zdroje a pokrytí*.
 
 Ověření zahrnuje:
 
-- **58 Python testů:** parsování podkladů včetně tří nových HTML šablon, registr zdrojů, práce s daty, výpadky, geografická přiřazení a bezpečné publikování v dočasných Git repozitářích.
-- **28 JavaScriptových a prohlížečových testů:** šestikrajové filtry, kalendář, mobilní rozhraní, chybové stavy a bezpečné vykreslení.
+- **75 Python testů:** parsování podkladů včetně tří nových HTML šablon, registr zdrojů, práce s daty, výpadky, geografická přiřazení a bezpečné publikování v dočasných Git repozitářích.
+- **29 JavaScriptových a prohlížečových testů:** šestikrajové filtry, kalendář, mobilní rozhraní, chybové stavy a bezpečné vykreslení.
 - Kontrolu skutečně nasazené desktopové i mobilní verze, mapových dlaždic a stažení ICS.
 
 CI provádí offline Python testy, čisté JS testy, validaci veřejných dat a kontrolu syntaxe. Úplná sada Chromium testů se spouští lokálně. Počty testů popisují ověřený stav k 12. listopadu 2026.
@@ -115,7 +115,9 @@ Projekt má funkční sběr z uvedených dvanácti zdrojů, oddělenou interní 
 
 Validátor odvozuje zdroje, kraje a přiřazení událostí z registru; rozhraní ukazuje skutečný rozsah z dat. U šesti nových zdrojů se automaticky přijímají pouze ověřené názvy míst v příslušné obci. Nové místo čeká na kontrolu, aby se například program v Berouně nezobrazil jako akce v Hořovicích.
 
-Další krok je ověřovat zadržené kandidáty a doplňovat místa ve stávajících krajích; ostatní kraje ČR zatím nejsou zahrnuté. Rozšíření vždy vyžaduje zdrojovou a geografickou kontrolu, nestačí přidat název kraje do filtru.
+Zadrženy zůstávají dvě položky: berounské **Skleněné Vánoce aneb…** nemají u konce výstavy uvedený rok; humpolecká **Česká mše vánoční Jakuba Jana Ryby** má dvě samostatná představení 17. prosince v 17:00 a 19:00, nikoli jeden interval. První potřebuje úplný termín, druhá podporu více časových výskytů na jedné zdrojové URL.
+
+Další krok je doplňovat ověřené zdroje a místa; ostatní kraje ČR zatím nejsou zahrnuté. Rozšíření vždy vyžaduje zdrojovou a geografickou kontrolu, nestačí přidat název kraje do filtru.
 
 ## Orientace v repozitáři
 
