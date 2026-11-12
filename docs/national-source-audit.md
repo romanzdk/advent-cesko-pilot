@@ -81,7 +81,7 @@ Offline replay skutečných zachycených bajtů po opravách: **107 akcí, 11 re
 
 Dvě **skutečná finální živá měření** po všech opravách a stabilním offline replay, 12. 11. 2026; předchozí vývojové sběry se za tuto dvojici nevydávají:
 
-| Finální kontrola | Začátek (CET) | Wall runtime subprocessu | Vnitřní runtime collectoru | HTTP / 304 | Akce / review / vyřazení | Chyby zdrojů |
+| Finální kontrola | Začátek (CET) | Celkový runtime včetně validace | Vnitřní runtime collectoru | HTTP / 304 | Akce / review / vyřazení | Chyby zdrojů |
 | --- | --- | --- | --- | --- | --- | --- |
 | A (izolovaný běh 3) | 18:24:41 | **6 min 44 s** (404,441 s) | 404,004 s | 189 / 13 | 107 / 11 / 21 | 0 |
 | B (izolovaný běh 4) | 18:31:25 | **6 min 27 s** (386,681 s) | 385,865 s | 188 / 12 | 107 / 11 / 21 | 0 |
@@ -93,3 +93,5 @@ Programově porovnána všechna věcná pole všech 78 původních akcí i všec
 Závěrečná čistá kopie trackovaných/neignorovaných podkladů bez `private/`: znovu 85 Python + 18 JS + public validace (78), bez sítě a bez výzkumné cache. Navíc se beze změny UI vykreslil skutečný historický snapshot (78) i skutečná rozšířená izolovaná projekce (107) v desktopu 1440 px a mobilu 393 px. Všechny čtyři kontroly zobrazily 11 krajů / 17 zdrojů bez JS výjimky, pending text u historického snapshotu byl viditelný a nový filtr Hranic vracel 13 akcí. Externí API a mapové tiles byly v této kontrole blokované.
 
 Nejdelší finální sběr se vešel do stávajícího 600s timeoutu. Naměřený čas není záruka pro další rozšiřování nebo výpadky cizích serverů; další dávka musí rozpočet znovu změřit. Implementace, registry, geodata, testy i read-only PR workflow po zmrazení před finální dvojicí nebyly měněny, doplňuje se jen tento protokol.
+
+Při obnovení CLI byl existující proces `proc_7bf993a3edc2` potvrzen jako dokončený s kódem 0. Uložené výstupy obou běhů byly znovu validovány a porovnány se základními 78 akcemi i vzájemně, včetně shody zmrazených hashů zdrojových souborů a kontroly izolovaných cest. Žádný další sběr ani nová implementace nebyly spuštěny. Celkový čas v tabulce podle runneru zahrnuje subprocess i následnou public validaci; vnitřní čas collectoru je uveden samostatně.
