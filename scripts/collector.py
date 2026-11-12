@@ -572,7 +572,7 @@ def collect(registry, db, output, locations, fetcher, source_id=None):
     metrics.update(eventsPublished=len(events), reviewCount=len(review), durationSeconds=round(time.monotonic()-started,3))
     coverage = dict(generatedAt=checked, window=registry['window'], regions=list(dict.fromkeys(s['region'] for s in registry['sources'])),
                     sources=[states.get(s['id'], dict(id=s['id'],town=s['town'],region=s['region'],url=s['index_urls'][0],adapter=s['adapter'],status='partial',lastChecked=checked,lastSuccess=None,eventCount=0,reviewCount=0,lastError='Zdroj nebyl v tomto běhu kontrolován.')) for s in registry['sources']],
-                    metrics=metrics, complete=False, coverageNote='Neúplný pilot: výběr obcí, nejvýše dvě stránky a 14 detailů na zdroj. Nejde o úplný soupis krajů.')
+                    metrics=metrics, complete=False, coverageNote='Neúplný výběr obcí, nejvýše dvě stránky a 14 detailů na zdroj. Nejde o úplný soupis krajů.')
     output = Path(output)
     json_write(output/'events.json', dict(schemaVersion=1,generatedAt=checked,season=registry['season'],region='Česko – sezonní výběr',events=events))
     json_write(output/'coverage.json', coverage)

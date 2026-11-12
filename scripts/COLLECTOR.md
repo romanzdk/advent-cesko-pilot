@@ -50,4 +50,4 @@ Deduplikace porovnává obec, místo, datum, název a začátek. Záznamy bez uv
 
 `--offline-fixtures MANIFEST.json` mapuje přesné URL na soubory relativně k manifestu. Při chybějícím podkladu nevzniká síťový fallback. Čistý checkout obsahuje malé faktické fragmenty; původní úplné zachycené stránky zůstávají soukromé. Testy a jejich podklady nejsou vydávané za úspěšný živý sběr.
 
-Pilot nemá obecné OCR plakátů, import libovolných PDF, Facebook, přihlašování, odvozování termínů z RSS publikačních dat ani AI fallback. Omezené procházení nikdy neopravňuje tvrdit úplnost regionu; `coverage.json` výslovně uvádí `complete: false`.
+Projekt nemá obecné OCR plakátů, import libovolných PDF, Facebook, přihlašování, odvozování termínů z RSS publikačních dat ani AI fallback. Omezené procházení nikdy neopravňuje tvrdit úplnost regionu; `coverage.json` výslovně uvádí `complete: false`.

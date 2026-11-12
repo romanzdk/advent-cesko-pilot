@@ -16,7 +16,7 @@ Sezonní projekt pro Vánoce 2026. Sbírá rozsvěcení stromků, mikulášské 
 
 Termíny adventních akcí bývají rozptýlené mezi obecními kalendáři, kulturními centry a samostatnými pozvánkami. Každý web zapisuje čas a místo jinak. Někde chybí hodina, jinde je důležitý údaj jen v textu nebo se liší místo akce od sídla pořadatele.
 
-Projekt začal hledáním rozsvícení stromků a mikulášských akcí v okolí Mnichovic. Tento samostatný pilot ověřuje, zda lze stejný typ informací opakovaně sbírat i v dalších krajích, aniž by každá aktualizace potřebovala nový ruční průzkum nebo AI.
+Projekt začal hledáním rozsvícení stromků a mikulášských akcí v okolí Mnichovic. Samostatná mapa Advent v Česku na něj navazuje sběrem ve více krajích. Běžné aktualizace využívají ověřené adaptéry, bez nového ručního průzkumu nebo AI.
 
 Cílem je usnadnit výběr akce a zachovat možnost ověřit si ji u pořadatele. Projekt zatím neslibuje úplný kalendář České republiky.
 
@@ -37,7 +37,7 @@ Seznam je výchozí mobilní zobrazení; mapu lze otevřít samostatně. Na sní
 
 *Mobilní screenshot z 12. listopadu 2026. Rozhraní používá stejná veřejná data jako desktop.*
 
-## Rozsah současného pilotu
+## Aktuální pokrytí
 
 Sledované akce spadají do období **20. listopadu až 24. prosince 2026**.
 
@@ -48,7 +48,7 @@ Sledované akce spadají do období **20. listopadu až 24. prosince 2026**.
 - **Jihočeský kraj:** Soběslav a pořadatelský kalendář IKS Třeboň.
 - **Kraj Vysočina:** Telč a Humpolec.
 
-**Stav k 12. listopadu 2026 po rozšíření: 57 publikovaných akcí, 12 zdrojů, 6 krajů.** Dalších 37 kandidátů zůstává k ověření, zejména kvůli dosud neověřenému místu nebo více termínům. Všech 12 zdrojů se podařilo načíst; stav „částečně“ u nových zdrojů přiznává tuto kontrolní frontu, nikoli kompletní pokrytí. Je to datovaný snímek pilotu, ne trvale aktuální počítadlo. Poslední výsledky a rozsah kontrol najdete přímo na webu v sekci *Zdroje a pokrytí*.
+**Stav k 12. listopadu 2026 po rozšíření: 57 publikovaných akcí, 12 zdrojů, 6 krajů.** Dalších 37 kandidátů zůstává k ověření, zejména kvůli dosud neověřenému místu nebo více termínům. Všech 12 zdrojů se podařilo načíst; stav „částečně“ u nových zdrojů přiznává tuto kontrolní frontu, nikoli kompletní pokrytí. Je to datovaný snímek pokrytí, ne trvale aktuální počítadlo. Poslední výsledky a rozsah kontrol najdete přímo na webu v sekci *Zdroje a pokrytí*.
 
 Výběr několika měst neznamená pokrytí celého kraje. Původní [mapa Mnichovic a okolí](https://romanzdk.github.io/advent-mnichovice/) má vlastní repozitář i hlídání a zůstává oddělená.
 
@@ -88,7 +88,7 @@ Důležitější než počet bodů na mapě je to, co zdroj skutečně potvrzuje
 - **Mapa nepředstírá přesný vstup.** Současné body představují orientační středy obcí či místních částí. Lokalita akce se neodvozuje jen ze sídla pořadatele.
 - **Vícedenní interval není otevírací doba.** Krajní data neznamenají nepřetržité ani každodenní otevření.
 - **Nedostupnost není zrušení akce.** Při chybě načtení zůstávají poslední dobrá data a zdroj dostane chybový stav. Nově načtený rozporný obsah naopak stáhne položku do kontroly.
-- **Rozsah zdrojů je viditelný.** Městský kalendář Semil automatické načítání sledovaných adres nepovoluje. Pilot místo jeho obcházení čte přímo povolený web KC Golf a tento rozdíl uvádí v pokrytí.
+- **Rozsah zdrojů je viditelný.** Městský kalendář Semil automatické načítání sledovaných adres nepovoluje. Sběrač místo jeho obcházení čte přímo povolený web KC Golf a tento rozdíl uvádí v pokrytí.
 - **Známé vyřazení není nevyřešený problém.** Programy mimo období a zájezdy se evidují zvlášť; místo odjezdu se nezaměňuje za místo vánočního programu.
 
 Zveřejněná cena ani odkaz na rezervaci nepotvrzují volná místa. Před cestou je rozhodující aktuální informace pořadatele.
@@ -99,7 +99,7 @@ Denní aktualizace je nastavena na **08:30 Europe/Prague od 13. listopadu do 24.
 
 Celý průchod sběrem, publikací a ověřením skutečného webu byl spuštěn přes stejný skriptový launcher jako v plánovači. K datu uvedeného snímku byly naplánované pravidelné běhy teprve před prvním ranním spuštěním; ruční ověření není vydáváno za několikadenní provoz.
 
-Po zdrojové kontrole a dvou závěrečných živých sběrech z 12. listopadu 2026 pilot obsahuje **20 nových akcí**, původních 37 zůstalo věcně beze změny. Opakovaný průchod potvrdil **57 nezměněných akcí**, bez nových položek či duplicit. Sběrač vykázal **0 AI volání**; tento údaj se nevztahuje k úvodní rešerši a vývoji. Skutečnou délku běhu a počty HTTP požadavků ukazuje sekce *Zdroje a pokrytí*.
+Po zdrojové kontrole a dvou závěrečných živých sběrech z 12. listopadu 2026 mapa obsahuje **20 nových akcí**, původních 37 zůstalo věcně beze změny. Opakovaný průchod potvrdil **57 nezměněných akcí**, bez nových položek či duplicit. Sběrač vykázal **0 AI volání**; tento údaj se nevztahuje k úvodní rešerši a vývoji. Skutečnou délku běhu a počty HTTP požadavků ukazuje sekce *Zdroje a pokrytí*.
 
 Ověření zahrnuje:
 
@@ -111,7 +111,7 @@ CI provádí offline Python testy, čisté JS testy, validaci veřejných dat a 
 
 ## Co je hotové a co následuje
 
-Pilot má funkční sběr z uvedených dvanácti zdrojů, oddělenou interní evidenci, veřejný web a sezonní publikační úlohu. Nečte Facebook, nezpracovává obecně všechny plakáty a PDF a nevytváří automatické pozvánky do osobního kalendáře.
+Projekt má funkční sběr z uvedených dvanácti zdrojů, oddělenou interní evidenci, veřejný web a sezonní publikační úlohu. Nečte Facebook, nezpracovává obecně všechny plakáty a PDF a nevytváří automatické pozvánky do osobního kalendáře.
 
 Validátor odvozuje zdroje, kraje a přiřazení událostí z registru; rozhraní ukazuje skutečný rozsah z dat. U šesti nových zdrojů se automaticky přijímají pouze ověřené názvy míst v příslušné obci. Nové místo čeká na kontrolu, aby se například program v Berouně nezobrazil jako akce v Hořovicích.
 

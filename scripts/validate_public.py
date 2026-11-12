@@ -1,4 +1,4 @@
-"""Fail-closed validation of the public seasonal pilot projection."""
+"""Fail-closed validation of the public seasonal event projection."""
 from datetime import date, datetime, time
 import ipaddress
 import json
@@ -36,9 +36,9 @@ def validate(data):
         require(isinstance(e,dict) and set(e)==FIELDS,'Unexpected public event fields')
         require(isinstance(e['id'],str) and re.fullmatch(r'e-[a-zA-Z0-9_-]+',e['id']) and e['id'] not in ids,'Invalid/duplicate public ID');ids.add(e['id'])
         require(isinstance(e['title'],str) and bool(e['title']) and isinstance(e['town'],str) and bool(e['town']),'Missing title/town')
-        require(e['region'] in REGIONS,'Unknown pilot region')
-        start=date.fromisoformat(e['date']);require(date(2026,11,20)<=start<=date(2026,12,24),'Date outside pilot window')
-        if e['endDate']:require(start<=date.fromisoformat(e['endDate'])<=date(2026,12,24),'End outside pilot window or before start')
+        require(e['region'] in REGIONS,'Unknown region')
+        start=date.fromisoformat(e['date']);require(date(2026,11,20)<=start<=date(2026,12,24),'Date outside seasonal window')
+        if e['endDate']:require(start<=date.fromisoformat(e['endDate'])<=date(2026,12,24),'End outside seasonal window or before start')
         for field in ['startTime','endTime']:
             if e[field]:
                 require(isinstance(e[field],str) and re.fullmatch(r'(?:[01]\d|2[0-3]):[0-5]\d',e[field]),'Invalid published time');time.fromisoformat(e[field])
@@ -72,7 +72,7 @@ def validate_directory(path, registry=None):
     require(all(start<=date.fromisoformat(e['date'])<=date.fromisoformat(e['endDate'] or e['date'])<=end
                 for e in data['events']),'Event outside registry window')
     for document in [coverage,review]:require(not PRIVATE.search(json.dumps(document,ensure_ascii=False)),'Private metadata detected')
-    require(coverage['complete'] is False,'Pilot must not claim complete coverage')
+    require(coverage['complete'] is False,'Selection must not claim complete coverage')
     require(coverage['metrics']['eventsPublished']==len(data['events']),'Inconsistent published count')
     require(coverage['metrics']['reviewCount']==len(review['candidates']),'Inconsistent review count')
     require(len(coverage['sources'])==len(sources) and {s['id'] for s in coverage['sources']}==set(by_id)

@@ -125,6 +125,8 @@ class CollectionTests(unittest.TestCase):
             self.assertEqual(r['metrics']['eventsNew'], 2)
             self.assertEqual(r['metrics']['eventsPublished'], 1) # exact title/date/venue/town duplicate
             self.assertFalse(r['complete'])
+            self.assertNotIn('pilot', r['coverageNote'].lower())
+            self.assertTrue(all('pilot' not in s.get('coverageNote', '').lower() for s in r['sources']))
             r = c.collect(registry, db, output, {}, Fetcher())
             self.assertEqual(r['metrics']['eventsUnchanged'], 2)
             pages[u] = fixture.replace(b'16:30', b'18:30')

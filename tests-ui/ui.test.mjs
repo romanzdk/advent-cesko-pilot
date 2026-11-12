@@ -179,7 +179,7 @@ test('region scope limits towns, combines with other filters and resets cleanly'
   }, { data: regionalFixture, mobile: true });
 });
 
-test('pilot names its bounded Christmas 2026 scope and excludes out-of-window events', async () => {
+test('map names its bounded Christmas 2026 scope and excludes out-of-window events', async () => {
   const data = { ...regionalFixture, events: [
     ...regionalFixture.events,
     ...['2025-11-28', '2026-11-19', '2026-12-24', '2026-12-25', '2027-11-28'].map((date, index) => ({ ...regionalFixture.events[0], id: `boundary-${index}`, date }))
@@ -190,6 +190,7 @@ test('pilot names its bounded Christmas 2026 scope and excludes out-of-window ev
     assert.equal(await page.title(), 'Advent v Česku 2026');
     assert.match(await page.locator('.intro').innerText(), /Sezonní výběr veřejných akcí 2026/);
     assert.match(await page.locator('.intro').innerText(), /Výběr veřejných zdrojů, nikoli úplný přehled krajů ani celé ČR\./);
+    assert.doesNotMatch(await page.locator('.footer').innerText(), /pilot/i);
     assert.doesNotMatch(await page.locator('.edition').innerText(), /3 KRAJE/);
     assert.match(await page.locator('.intro').innerText(), /20\. 11\. – 24\. 12\. 2026/);
     assert.equal(await page.getByRole('link', { name: 'Mnichovice a okolí', exact: true }).getAttribute('href'), 'https://romanzdk.github.io/advent-mnichovice/');
