@@ -593,12 +593,20 @@ test('personal origin story replaces the edition with a compact header question 
     assert.equal(await summary.getAttribute('aria-label'), 'Proč tahle mapa vznikla');
     assert.equal(await page.locator('.edition, footer .origin-story').count(), 0);
     assert.equal(await story.locator('.origin-story-panel').isVisible(), false);
+    const bareQuestion = async () => assert.deepEqual(await summary.evaluate(n => {
+      const s = getComputedStyle(n);
+      return { background:s.backgroundColor, border:s.borderTopWidth, radius:s.borderRadius, size:s.fontSize, weight:s.fontWeight };
+    }), { background:'rgba(0, 0, 0, 0)', border:'0px', radius:'0px', size:'14px', weight:'400' });
+    await bareQuestion();
+    await summary.hover();
+    await bareQuestion();
     const triggerBox = await summary.boundingBox();
     assert(triggerBox.width >= 44 && triggerBox.height >= 44);
     const wordmarkBox = await page.locator('.wordmark').boundingBox();
     assert(wordmarkBox.x + wordmarkBox.width <= triggerBox.x);
     await summary.click({ timeout: 3000 });
     assert.equal(await story.locator('.origin-story-panel').isVisible(), true);
+    await bareQuestion();
     assert.equal(await story.locator('h2').innerText(), 'Proč tahle mapa vznikla');
     assert.equal(await story.locator('p').innerText(), 'Moje žena má ráda vánoční atmosféru a trhy. Tahle mapa vznikla, abychom měli po ruce tipy, kam spolu vyrazit.');
     const panelBox = await story.locator('.origin-story-panel').boundingBox();
