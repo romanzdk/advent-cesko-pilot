@@ -60,3 +60,9 @@
 .origin-story{flex:0 0 100%;font-size:.8rem;color:var(--muted)}
 .origin-story summary{width:fit-content;min-height:44px;padding-block:11px;cursor:pointer}
 .origin-story p{max-width:640px;margin:0 0 8px;line-height:1.7}
+.filters .search-field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.search-control{position:relative;min-width:0}
+#search{padding-inline-end:50px}
+#search::-webkit-search-cancel-button{-webkit-appearance:none}
+.clear-search{position:absolute;inset-block:0;right:0;display:grid;place-items:center;min-width:44px;min-height:44px;padding:0;border:0;background:transparent;font-size:1.4rem;line-height:1}
+.clear-search[hidden]{display:none}

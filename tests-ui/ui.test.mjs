@@ -174,6 +174,39 @@ test('custom date inputs remain usable on narrow screens and with enlarged text'
   });
 });
 
+test('search clear button removes the entire query, preserves other filters and restores input focus', async () => {
+  for (const mobile of [false, true]) await app(async page => {
+    await page.waitForSelector('.event-card');
+    const clear = page.locator('#clear-search');
+    assert.equal(await clear.count(), 1);
+    assert.equal(await clear.getAttribute('aria-label'), 'Vymazat hledání');
+    assert.equal(await clear.isVisible(), false);
+    await page.locator('#region').selectOption('Plzeňský kraj');
+    await page.locator('#town').selectOption('Plasy');
+    await page.locator('#category').selectOption('tvoreni');
+    await page.locator('#period').selectOption('custom');
+    await page.locator('#date-from').fill('2026-11-27');
+    await page.locator('#date-to').fill('2026-11-29');
+    await page.locator('#search').fill('celý neexistující dotaz');
+    assert.equal(await page.locator('.event-card').count(), 0);
+    assert.equal(await clear.isVisible(), true);
+    const box = await clear.boundingBox();
+    assert(box.width >= 44 && box.height >= 44);
+    await clear.click();
+    assert.equal(await page.locator('#search').inputValue(), '');
+    assert.equal(await clear.isVisible(), false);
+    assert.equal(await page.locator('#search').evaluate(n => n === document.activeElement), true);
+    assert.equal(await page.locator('.event-card').count(), 1);
+    for (const [id, value] of Object.entries({ region:'Plzeňský kraj', town:'Plasy', category:'tvoreni', period:'custom', 'date-from':'2026-11-27', 'date-to':'2026-11-29' })) assert.equal(await page.locator(`#${id}`).inputValue(), value);
+    await page.locator('#search').fill('další dotaz');
+    await clear.focus();
+    await clear.press('Enter');
+    assert.equal(await page.locator('#search').inputValue(), '');
+    assert.equal(await page.locator('#search').evaluate(n => n === document.activeElement), true);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  }, { data:regionalFixture, mobile });
+});
+
 test('personal origin story stays subtle in the footer and expands on desktop and mobile', async () => {
   for (const mobile of [false, true]) await app(async page => {
     const story = page.locator('footer details.origin-story');

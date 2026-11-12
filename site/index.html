@@ -40,7 +40,7 @@
       <p class="editor-note">U každé akce najdete veřejný zdroj i to, co ještě není jisté.</p>
     </section>
     <form class="filters" id="filters" aria-label="Filtrovat akce">
-      <label class="search-field">Hledat<input type="search" id="search" name="query" placeholder="Název, místo nebo obec…" autocomplete="off"></label>
+      <div class="search-field"><label for="search">Hledat</label><div class="search-control"><input type="search" id="search" name="query" placeholder="Název, místo nebo obec…" autocomplete="off"><button type="button" id="clear-search" class="clear-search" aria-label="Vymazat hledání" title="Vymazat hledání" hidden><span aria-hidden="true">×</span></button></div></div>
       <label>Termín<select id="period" name="period" aria-controls="date-range"><option value="all">Všechny termíny</option><option value="today">Dnes</option><option value="weekend">Tento víkend</option><option value="custom">Vlastní rozsah</option></select></label>
       <label>Co vás láká<select id="category" name="category"><option value="">Všechny typy</option><option value="strom">Rozsvícení stromu</option><option value="mikulas">Mikuláš</option><option value="trhy">Trhy a jarmarky</option><option value="tvoreni">Tvoření</option><option value="setkani">Setkání</option><option value="betlem">Betlémy</option></select></label>
       <label>Kraj<select id="region" name="region"><option value="">Všechny kraje</option></select></label>

@@ -176,6 +176,7 @@ function updateTowns() {
   populateOptions('town', events.filter(event => !$('region').value || event.region === $('region').value).map(event => event.town), 'Všechny obce');
 }
 function render() {
+  $('clear-search').hidden = !$('search').value;
   const customDates = $('period').value === 'custom';
   $('date-range').hidden = !customDates;
   for (const id of ['date-from', 'date-to']) $(id).disabled = !customDates;
@@ -226,6 +227,11 @@ desktop.addEventListener('change', () => { if (desktop.matches) ensureMap(); });
 $('show-list').addEventListener('click', () => setView('list'));
 $('show-map').addEventListener('click', () => setView('map'));
 $('filters').addEventListener('submit', event => event.preventDefault());
+$('clear-search').addEventListener('click', () => {
+  $('search').value = '';
+  render();
+  $('search').focus({ preventScroll: true });
+});
 $('filters').addEventListener('input', render);
 $('filters').addEventListener('change', render);
 $('filters').addEventListener('reset', event => {
