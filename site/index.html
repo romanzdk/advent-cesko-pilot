@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./vendor/leaflet.css">
   <link rel="stylesheet" href="./styles.css">
   <script type="module" src="./app.js"></script>
+  <script type="module" src="./feedback.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#results">Přejít na akce</a>
@@ -33,6 +34,30 @@
     <details id="coverage" class="coverage">
       <summary>Zdroje a pokrytí</summary>
       <div class="coverage-content" id="coverage-content" role="status" aria-live="polite"><p>Načítáme pokrytí zdrojů…</p></div>
+    </details>
+    <details id="feedback" class="feedback">
+      <summary>Chybí vám akce nebo obec?</summary>
+      <div class="feedback-content">
+        <p>Pošlete tip na veřejnou akci od 20. 11. do 24. 12. 2026. Stačí obec, odkaz nebo krátký popis.</p>
+        <p>Potřebujete účet GitHub. Zde připravíte pouze návrh; přihlášení a konečné odeslání dokončíte na GitHubu. Tipy jsou veřejné: neuvádějte osobní údaje. Zařazení do mapy není automatické.</p>
+        <h3>Poslední tipy a hlášení</h3>
+        <p>Nejvýše 10 nedávno aktualizovaných hlášení, ne úplný seznam. Najdete-li podobný tip, doplňte raději komentář k němu.</p>
+        <p id="feedback-list-status" role="status">Seznam se načte po otevření panelu.</p>
+        <ul id="feedback-issues"></ul>
+        <a href="https://github.com/romanzdk/advent-cesko-pilot/issues?q=is%3Aissue">Všechny tipy a hlášení na GitHubu</a>
+        <label>Hledat existující tip (obec nebo konkrétní fráze)<input id="feedback-search" type="search" maxlength="100" placeholder="Např. Říčany nebo vánoční dílna"></label>
+        <a id="feedback-search-link" href="https://github.com/romanzdk/advent-cesko-pilot/issues?q=is%3Aissue">Hledat na GitHubu</a>
+        <form id="feedback-form" hidden>
+          <label>Obec (nepovinné, max. 100 znaků)<input id="feedback-town" name="town" maxlength="100" autocomplete="address-level2"></label>
+          <label>Veřejný odkaz na akci (nepovinné, max. 800 znaků)<input id="feedback-source" name="sourceURL" type="url" maxlength="800" placeholder="https://…"></label>
+          <label>Popis (nepovinné, max. 1000 znaků)<textarea id="feedback-description" name="description" maxlength="1000" rows="3"></textarea></label>
+          <label class="feedback-consent"><input id="feedback-consent" type="checkbox" required>Rozumím, že návrh bude veřejný</label>
+          <button type="submit">Pokračovat na GitHub</button>
+        </form>
+        <p id="feedback-message" role="status" aria-live="polite"></p>
+        <a id="feedback-draft" hidden target="_blank" rel="noopener noreferrer">Otevřít připravený návrh na GitHubu</a>
+        <a href="https://github.com/romanzdk/advent-cesko-pilot/issues/new?template=tip.md" target="_blank" rel="noopener noreferrer">Napsat tip přímo na GitHubu (i bez JavaScriptu)</a>
+      </div>
     </details>
     <div class="results-toolbar"><div><h2 id="results-heading">Kam vyrazit</h2><p id="result-count" role="status" aria-live="polite">Načítáme přehled…</p></div><div class="view-switch" aria-label="Zobrazení"><button id="show-list" type="button" aria-pressed="true" aria-controls="results">Seznam</button><button id="show-map" type="button" aria-pressed="false" aria-controls="map-panel">Mapa</button></div></div>
     <div class="explore-layout" id="explore" data-view="list">

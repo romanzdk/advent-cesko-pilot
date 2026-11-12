@@ -53,12 +53,12 @@ before(async () => {
     let path = new URL(req.url, 'http://local').pathname.replace(/^\/(?:advent-mnichovice|advent-cesko-pilot)\//, '/');
     if (path === '/') path = '/index.html';
     // An explicit asset allowlist prevents accidentally reading live data.
-    if (!/^\/(index\.html|app\.js|helpers\.js|styles\.css|favicon\.svg|vendor\/leaflet\.(js|css))$/.test(path)) { res.writeHead(404).end(); return; }
+    if (!/^\/(index\.html|app\.js|helpers\.js|feedback\.js|feedback-helpers\.js|styles\.css|favicon\.svg|vendor\/leaflet\.(js|css))$/.test(path)) { res.writeHead(404).end(); return; }
     try {
       const data = await readFile(new URL(`../site${path}`, import.meta.url));
       res.setHeader('Content-Type', path.endsWith('.js') ? 'text/javascript' : path.endsWith('.css') ? 'text/css' : path.endsWith('.svg') ? 'image/svg+xml' : 'text/html; charset=utf-8');
       res.setHeader('X-Content-Type-Options', 'nosniff');
-      res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; object-src 'none'; base-uri 'self'");
+      res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'");
       res.end(data);
     } catch { res.setHeader('Content-Type', 'text/html'); res.end('<!doctype html><html lang="cs"><title>Missing frontend</title><body>Frontend not implemented</body></html>'); }
   });
@@ -69,10 +69,12 @@ after(async () => {
   await browser?.close();
   if (server) await new Promise(resolve => server.close(resolve));
 });
-async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile = false, responseStatus = 200, delay = 0, libraryFail = false, coverage = coverageFixture, coverageStatus = 200, coveragePending = false } = {}) {
-  const context = await browser.newContext({ viewport: mobile ? { width: 393, height: 852 } : { width: 1440, height: 1000 }, timezoneId: 'America/Los_Angeles' });
+async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile = false, responseStatus = 200, delay = 0, libraryFail = false, coverage = coverageFixture, coverageStatus = 200, coveragePending = false, javaScriptEnabled = true } = {}) {
+  const context = await browser.newContext({ viewport: mobile ? { width: 393, height: 852 } : { width: 1440, height: 1000 }, timezoneId: 'America/Los_Angeles', javaScriptEnabled });
   try {
     const page = await context.newPage();
+    await context.route('https://api.github.com/**', route => route.fulfill({ status: 200, contentType: 'application/json', body: '[]', headers: { 'access-control-allow-origin': '*' } }));
+    await context.route('https://github.com/**', route => route.fulfill({ status: 200, contentType: 'text/html', body: '<title>Draft interception fixture</title>' }));
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     await page.clock.install({ time: new Date('2026-11-12T12:00:00Z') });
@@ -90,6 +92,139 @@ async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile 
     await run(page, errors);
   } finally { await context.close(); }
 }
+
+test('feedback API failures are not empty results and never block drafts or map', async () => {
+  for (const failure of ['429', 'network', 'timeout']) await app(async (page, errors) => {
+    await page.route('https://api.github.com/**', route => failure === '429' ? route.fulfill({ status: 429, body: '{}', headers: { 'access-control-allow-origin': '*' } }) : failure === 'network' ? route.abort() : undefined);
+    await page.locator('#feedback summary').click();
+    await page.waitForFunction(() => document.getElementById('feedback-list-status').textContent.includes('nepodařilo'), { timeout: 8000 });
+    assert.doesNotMatch(await page.locator('#feedback-list-status').innerText(), /žádná hlášení/);
+    assert.equal(await page.locator('#feedback-form').isVisible(), true);
+    await page.locator('#feedback-town').fill('Brno');
+    await page.locator('#feedback-consent').check();
+    await page.evaluate(() => { window.open = () => null; });
+    await page.locator('#feedback-form button').click();
+    assert.equal(await page.locator('#feedback-draft').isVisible(), true);
+    const target = new URL(await page.locator('#feedback-draft').getAttribute('href'));
+    assert.equal(target.searchParams.get('title'), '[Tip] Brno');
+    assert.equal(await page.locator('#feedback-town').inputValue(), 'Brno');
+    await page.locator('#show-map').click();
+    await page.waitForSelector('#map .leaflet-interactive');
+    assert.equal(await page.locator('.event-card').count(), 3);
+    assert.deepEqual(errors, []);
+  }, { mobile: true });
+});
+
+test('feedback fallback template anchor works without JavaScript', async () => {
+  await app(async page => {
+    await page.locator('#feedback summary').click();
+    const link = page.getByRole('link', { name: 'Napsat tip přímo na GitHubu (i bez JavaScriptu)' });
+    assert.equal(await link.isVisible(), true);
+    assert.equal(await link.getAttribute('href'), 'https://github.com/romanzdk/advent-cesko-pilot/issues/new?template=tip.md');
+    assert.equal(await page.locator('#feedback-form').isVisible(), false);
+  }, { javaScriptEnabled: false, mobile: true });
+});
+
+test('feedback module failure retains a direct template link and working event filters', async () => {
+  await app(async page => {
+    await page.route('**/feedback.js', route => route.abort());
+    await page.reload();
+    await page.waitForSelector('.event-card');
+    await page.locator('#feedback summary').click();
+    assert.equal(await page.getByRole('link', { name: 'Napsat tip přímo na GitHubu (i bez JavaScriptu)' }).isVisible(), true);
+    assert.equal(await page.locator('#feedback-form').isVisible(), false);
+    await page.locator('#category').selectOption('strom');
+    assert.equal(await page.locator('.event-card').count(), 1);
+  }, { mobile: true });
+});
+
+test('feedback lazily fetches once, renders safe open/closed fixture issues and searches existing phrases', async () => {
+  for (const mobile of [false, true]) await app(async (page, errors) => {
+    let calls = 0;
+    await page.route('https://api.github.com/**', async route => {
+      calls++;
+      assert.equal(route.request().url(), 'https://api.github.com/repos/romanzdk/advent-cesko-pilot/issues?state=all&sort=updated&direction=desc&per_page=10');
+      assert.equal(route.request().method(), 'GET');
+      await route.fulfill({ contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify([
+        { number: 42, title: '<img src=x onerror="window.injected=true"> Říčany', state: 'open', html_url: 'https://github.com/romanzdk/advent-cesko-pilot/issues/42' },
+        { number: 43, title: 'Vyřešený testovací tip', state: 'closed', html_url: 'https://github.com/romanzdk/advent-cesko-pilot/issues/43' },
+        { number: 44, title: 'Unsafe', state: 'open', html_url: 'javascript:alert(1)' }
+      ]) });
+    });
+    await page.waitForSelector('.event-card');
+    assert.equal(calls, 0);
+    await page.evaluate(() => {
+      const nativeFetch = window.fetch;
+      window.fetch = (url, options) => {
+        if (String(url).startsWith('https://api.github.com/')) window.feedbackFetch = { credentials: options.credentials, signal: options.signal instanceof AbortSignal };
+        return nativeFetch(url, options);
+      };
+    });
+    await page.locator('#feedback summary').click();
+    await page.waitForSelector('#feedback-issues li');
+    assert.deepEqual(await page.evaluate(() => window.feedbackFetch), { credentials: 'omit', signal: true });
+    assert.equal(await page.locator('#feedback-issues li').count(), 2);
+    assert.match(await page.locator('#feedback-issues').innerText(), /Otevřeno/);
+    assert.match(await page.locator('#feedback-issues').innerText(), /Uzavřeno/);
+    assert.equal(await page.locator('#feedback-issues img').count(), 0);
+    assert.equal(await page.evaluate(() => window.injected), undefined);
+    await page.locator('#feedback summary').click();
+    await page.locator('#feedback summary').click();
+    assert.equal(calls, 1);
+    await page.locator('#feedback-search').fill('Říčany & dílna? #1');
+    const search = new URL(await page.locator('#feedback-search-link').getAttribute('href'));
+    assert.equal(search.origin, 'https://github.com');
+    assert.equal(search.searchParams.get('q'), 'is:issue Říčany & dílna? #1');
+    assert.equal(await page.getByRole('link', { name: 'Všechny tipy a hlášení na GitHubu' }).getAttribute('href'), 'https://github.com/romanzdk/advent-cesko-pilot/issues?q=is%3Aissue');
+    assert.deepEqual(errors, []);
+  }, { mobile });
+});
+
+test('feedback draft requires input and consent, preserves fields and only GETs GitHub on visitor action', async () => {
+  for (const mobile of [false, true]) await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    assert.equal(await page.locator('#feedback').count(), 1);
+    await page.locator('#feedback summary').click();
+    const form = page.locator('#feedback-form');
+    await page.locator('#feedback-consent').check();
+    await form.getByRole('button', { name: 'Pokračovat na GitHub' }).click();
+    assert.match(await page.locator('#feedback-message').innerText(), /obec, odkaz nebo popis/);
+    await page.locator('#feedback-town').fill('Říčany & okolí? #1');
+    await page.locator('#feedback-description').fill('<img src=x onerror=alert(1)> & text');
+    await page.locator('#feedback-consent').uncheck();
+    assert.equal(await form.evaluate(f => f.checkValidity()), false);
+    await page.locator('#feedback-consent').check();
+    const requests = [];
+    page.context().on('request', r => { if (r.url().startsWith('https://github.com/')) requests.push([r.method(), r.url()]); });
+    const popupPromise = page.context().waitForEvent('page');
+    await form.getByRole('button', { name: 'Pokračovat na GitHub' }).click();
+    const popup = await popupPromise;
+    await popup.waitForLoadState();
+    const target = new URL(popup.url());
+    assert.equal(target.origin, 'https://github.com');
+    assert.equal(target.pathname, '/romanzdk/advent-cesko-pilot/issues/new');
+    assert.deepEqual([...target.searchParams.keys()].sort(), ['body', 'template', 'title']);
+    assert.equal(target.searchParams.get('title'), '[Tip] Říčany & okolí? #1');
+    assert(target.searchParams.get('body').includes('<img src=x onerror=alert(1)> & text'));
+    assert(requests.length && requests.every(([method]) => method === 'GET'));
+    assert.equal(await popup.evaluate(() => window.opener), null);
+    assert.equal(await page.locator('#feedback-town').inputValue(), 'Říčany & okolí? #1');
+    assert.match(await page.locator('#feedback-message').innerText(), /dokončíte na GitHubu/);
+    for (const locator of ['#feedback summary', '#feedback-form button', '#feedback-town', '#feedback-source', '#feedback-description', '#feedback-consent', '#feedback a']) {
+      for (const box of await page.locator(locator).evaluateAll(nodes => nodes.filter(n => n.getClientRects().length).map(n => ({ height: n.getBoundingClientRect().height })))) assert(box.height >= 44, locator);
+    }
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    assert.match(await page.locator('#feedback').innerText(), /účet GitHub/);
+    assert.match(await page.locator('#feedback').innerText(), /osobní údaje/);
+    assert.match(await page.locator('#feedback').innerText(), /není automatické/);
+    await page.locator('#category').selectOption('strom');
+    assert.equal(await page.locator('.event-card').count(), 1);
+    if (mobile) await page.locator('#show-map').click();
+    await page.waitForSelector('#map .leaflet-interactive');
+    assert.equal(await page.locator('#map .leaflet-interactive').count(), 1);
+    assert.deepEqual(errors, []);
+  }, { mobile });
+});
 
 test('scope summary counts six coverage regions and twelve sources, not event towns', async () => {
   const regions = [...coverageFixture.regions, 'Středočeský kraj', 'Jihočeský kraj', 'Kraj Vysočina'];

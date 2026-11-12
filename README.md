@@ -28,6 +28,8 @@ Cílem je usnadnit výběr akce a zachovat možnost ověřit si ji u pořadatele
 - Viditelné upozornění na neznámý čas, omezené zaměření programu nebo pouze orientační polohu.
 - Navigaci do obce a export jednotlivé akce do kalendáře ve formátu ICS.
 - Rozbalovací přehled sledovaných zdrojů, jejich dostupnosti, posledních kontrol a položek ke kontrole či mimo rozsah.
+- Formulář pro chybějící obec, odkaz na akci nebo opravu údajů. Připraví veřejné GitHub hlášení, které návštěvník po přihlášení potvrdí; bez účtu GitHub ho odeslat nelze.
+- Přehled posledních otevřených i uzavřených hlášení a hledání na GitHubu, aby se stejné tipy zbytečně neopakovaly. Návrh není automaticky zařazená akce.
 
 ### Na telefonu
 
@@ -104,7 +106,7 @@ Po kontrole celé fronty 37 kandidátů z 12. listopadu 2026 přibylo **21 ově�
 Ověření zahrnuje:
 
 - **75 Python testů:** parsování podkladů včetně tří nových HTML šablon, registr zdrojů, práce s daty, výpadky, geografická přiřazení a bezpečné publikování v dočasných Git repozitářích.
-- **30 JavaScriptových a prohlížečových testů:** šestikrajové filtry, kalendář, mobilní rozhraní, chybové stavy a bezpečné vykreslení.
+- **42 JavaScriptových a prohlížečových testů:** šestikrajové filtry, kalendář, mobilní rozhraní, formulář tipů, veřejná hlášení, chybové stavy a bezpečné vykreslení.
 - Kontrolu skutečně nasazené desktopové i mobilní verze, mapových dlaždic a stažení ICS.
 
 CI provádí offline Python testy, čisté JS testy, validaci veřejných dat a kontrolu syntaxe. Úplná sada Chromium testů se spouští lokálně. Počty testů popisují ověřený stav k 12. listopadu 2026.

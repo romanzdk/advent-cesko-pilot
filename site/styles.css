@@ -35,3 +35,15 @@
 .load-error button{margin-top:16px}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media print{.filters,.view-switch,.map-panel,.event-actions button,.skip-link{display:none!important}.explore-layout{display:block}.wrap{max-width:none;padding-inline:0}.event-card{break-inside:avoid}.event-card,.about{font-size:12pt}.event-description,.event-facts,.event-place,.event-time,.verified{font-size:12pt}.intro{padding-block:15px}.masthead{min-height:55px}}
+/* Secondary public feedback, independent of the event/map module. */
+.feedback{border-bottom:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+.feedback summary{min-height:44px;padding-block:11px;cursor:pointer;color:var(--forest)}
+.feedback-content{max-width:760px;padding-bottom:18px;overflow-wrap:anywhere}
+.feedback h3{font-size:1rem;margin-bottom:0}
+.feedback label{display:block;margin-block:12px 4px}
+.feedback input:not([type=checkbox]),.feedback textarea{display:block;width:100%;min-width:0;min-height:44px;font:inherit;font-size:1rem;color:var(--ink);border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:8px}
+.feedback textarea{resize:vertical}
+.feedback a:not([hidden]){display:flex;align-items:center;min-height:44px;width:fit-content;max-width:100%}
+.feedback .feedback-consent{display:flex;align-items:center;gap:10px;min-height:44px}
+.feedback-consent input{width:44px;height:44px;flex-shrink:0;margin:0}
+#feedback-message{color:var(--warning)}

@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test helpers.test.mjs pilot.test.mjs ui.test.mjs"
+    "test": "node --test helpers.test.mjs pilot.test.mjs feedback.test.mjs ui.test.mjs",
+    "test:unit": "node --test helpers.test.mjs pilot.test.mjs feedback.test.mjs"
   },
   "devDependencies": {
     "playwright": "1.58.2"
