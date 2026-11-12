@@ -10,7 +10,12 @@
     "Jihomoravský kraj",
     "Středočeský kraj",
     "Jihočeský kraj",
-    "Kraj Vysočina"
+    "Kraj Vysočina",
+    "Karlovarský kraj",
+    "Královéhradecký kraj",
+    "Olomoucký kraj",
+    "Ústecký kraj",
+    "Zlínský kraj"
   ],
   "sources": [
     {
@@ -204,6 +209,76 @@
       "eventCount": 8,
       "reviewCount": 1,
       "lastError": null
+    },
+    {
+      "id": "nejdek-mesto",
+      "town": "Nejdek",
+      "region": "Karlovarský kraj",
+      "url": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/",
+      "adapter": "galileo",
+      "coverageNote": "Nový zdroj byl ověřen v izolovaném sběru; tento historický snapshot ještě neobsahuje jeho akce. Vyžaduje bezpečnou regeneraci po merge. Nejde o úplné městské ani krajské pokrytí.",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "lastError": "Výsledky izolovaného sběru dosud nebyly publikovány."
+    },
+    {
+      "id": "dobruska-kultura",
+      "town": "Dobruška",
+      "region": "Královéhradecký kraj",
+      "url": "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/",
+      "adapter": "galileo",
+      "coverageNote": "Nový zdroj byl ověřen v izolovaném sběru; tento historický snapshot ještě neobsahuje jeho akce. Vyžaduje bezpečnou regeneraci po merge. Nejde o úplné městské ani krajské pokrytí.",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "lastError": "Výsledky izolovaného sběru dosud nebyly publikovány."
+    },
+    {
+      "id": "hranice-kultura",
+      "town": "Hranice",
+      "region": "Olomoucký kraj",
+      "url": "https://kultura-hranice.cz/mista/masarykovo-namesti/",
+      "adapter": "hranice",
+      "coverageNote": "Nový zdroj byl ověřen v izolovaném sběru; tento historický snapshot ještě neobsahuje jeho akce. Vyžaduje bezpečnou regeneraci po merge. Jde o Hranice v okrese Přerov, nikoli stejnojmenné město u Aše; neúplný výběr.",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "lastError": "Výsledky izolovaného sběru dosud nebyly publikovány."
+    },
+    {
+      "id": "usti-muzeum",
+      "town": "Ústí nad Labem",
+      "region": "Ústecký kraj",
+      "url": "https://www.muzeumusti.cz/kalendar-akci/",
+      "adapter": "wpem",
+      "coverageNote": "Nový zdroj byl ověřen v izolovaném sběru; tento historický snapshot ještě neobsahuje jeho akce. Vyžaduje bezpečnou regeneraci po merge. Pouze výběr z programu Oblastního muzea, nikoli celý městský kalendář.",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "lastError": "Výsledky izolovaného sběru dosud nebyly publikovány."
+    },
+    {
+      "id": "zlin-tic",
+      "town": "Zlín",
+      "region": "Zlínský kraj",
+      "url": "https://visitzlin.eu/kalendar-akci?search=advent",
+      "adapter": "visitzlin",
+      "coverageNote": "Nový zdroj byl ověřen v izolovaném sběru; tento historický snapshot ještě neobsahuje jeho akce. Vyžaduje bezpečnou regeneraci po merge. Vyhledávání advent, pouze ověřená místa; neúplný výběr.",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "lastError": "Výsledky izolovaného sběru dosud nebyly publikovány."
     }
   ],
   "metrics": {

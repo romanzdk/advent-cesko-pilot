@@ -1,0 +1,22 @@
+name: Verify source coverage PR
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Test portable collector and publication safety
+        run: python3 -m unittest discover -s tests -v
+      - name: Test pure JavaScript calendar and region filtering
+        run: node --test tests-ui/helpers.test.mjs tests-ui/pilot.test.mjs
+      - name: Validate historical public projection against registry
+        run: python3 scripts/validate_public.py site
+      - name: Check browser module syntax
+        run: |
+          node --check site/app.js
+          node --check site/helpers.js
