@@ -4,6 +4,14 @@ Samostatný sezonní pilot, ne úplný katalog republiky. Období **20. 11.–24
 
 Původní [Mnichovice a okolí](https://romanzdk.github.io/advent-mnichovice/) jsou samostatný projekt. Tento repozitář nemění jejich web, plánovač, osobní kalendář ani pozvánky.
 
+## Licence a použití
+
+**Vlastní kód projektu není open source. Všechna práva vyhrazena — Roman Žydyk, 2026**, v rozsahu práv chráněných zákonem a náležejících tomuto nositeli práv. Veřejné zpřístupnění repozitáře není obecným svolením k provozování vlastní kopie, používání sběrače, úpravám ani dalšímu šíření; pro takové využití je nutný předchozí písemný souhlas, pokud je již neopravňuje zákon nebo podmínky GitHubu. Úplné vymezení je v souboru [LICENSE](LICENSE).
+
+Běžné používání veřejně nasazené mapy, včetně jejího zobrazení v prohlížeči, navigace a jednotlivého exportu do kalendáře, je výslovně dovolené. Zachována zůstávají práva k prohlížení a forkování veřejného repozitáře podle podmínek GitHubu i zákonné výjimky. Nejde o technickou ochranu proti stažení kódu.
+
+Omezení se nevztahuje na cizí komponenty a jejich licence ani nepřisvojuje práva k veřejným faktům či podkladům pořadatelů. **Leaflet zůstává pod BSD 2-Clause**; původní znění je v [site/vendor/LEAFLET-LICENSE.txt](site/vendor/LEAFLET-LICENSE.txt). Data a mapové podklady [OpenStreetMap](https://www.openstreetmap.org/copyright) a další cizí materiály si ponechávají své vlastní podmínky.
+
 ## Co je funkční
 
 - Mobilní seznam a mapa Leaflet/OpenStreetMap, filtry podle kraje, města, termínu a typu; detail a jednotlivý ICS export.

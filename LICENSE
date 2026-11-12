@@ -1,0 +1,60 @@
+PROPRIETARY RIGHTS NOTICE AND LIMITED WEBSITE-ACCESS PERMISSION
+
+Copyright (c) 2026 Roman Žydyk. All rights reserved.
+
+1. Scope and reservation of rights
+
+To the extent that the material is protected by applicable copyright law and
+Roman Žydyk holds the relevant rights, the original project-specific source
+code, collection and publication scripts, tests, website implementation and
+documentation in this repository are proprietary. This project is not offered
+under an open-source license.
+
+Except for the limited permission in section 2, rights under the applicable
+GitHub Terms of Service, applicable statutory exceptions, or separate prior
+written permission from the relevant rights holder, no permission is granted
+to use or execute this material, modify it, create derivative works, reproduce,
+redistribute, sublicense, sell it, or operate a separate copy of the software
+or service. This reservation applies to both commercial and non-commercial
+reuse. Public availability of the repository does not grant additional rights.
+
+2. Limited permission to use the publicly deployed website
+
+Visitors may access and use the publicly deployed Advent v Česku website for
+its intended event-browsing functionality, including executing client-side
+assets as necessary for normal browsing and using the navigation and individual
+calendar-export features. This limited permission does not authorize operating
+a separate copy of the website or running or reusing its collection and
+publication software.
+
+3. GitHub platform rights and applicable law
+
+This notice does not override rights expressly granted under the applicable
+GitHub Terms of Service, including viewing and forking a public repository on
+GitHub. It does not restrict uses permitted by applicable law, including any
+mandatory copyright limitations and exceptions. No additional reuse rights
+are granted by this notice.
+
+4. Third-party software, data and other excluded material
+
+This notice applies only to rights held by Roman Žydyk. It does not replace,
+revoke or restrict the licenses or rights applicable to third-party material.
+In particular:
+
+- Leaflet and its bundled assets remain subject to their BSD 2-Clause License.
+  The original copyright notices and license are retained in
+  site/vendor/LEAFLET-LICENSE.txt.
+- OpenStreetMap data and map tiles remain subject to their respective licenses,
+  attribution requirements and service terms. See
+  https://www.openstreetmap.org/copyright and
+  https://operations.osmfoundation.org/policies/tiles/.
+- Organizer-provided material, externally sourced event information and factual
+  data are not claimed as exclusive project-owned material by this notice.
+  Any applicable third-party rights remain with their respective holders.
+- Other dependencies and development tools retain their own licenses.
+
+5. Separate permission
+
+For permission beyond the rights described above, contact the repository owner
+at https://github.com/romanzdk before using or redistributing the relevant
+project-owned material.
