@@ -20,6 +20,7 @@ Sezonní mapa adventních a vánočních akcí pro **20. listopadu – 24. prosi
 
 - **Výběr podle vás.** Kombinace kraje, obce, typu akce a termínu, textové hledání, dnešek, víkend i vlastní rozsah dat Od–Do. Rozsah zahrnuje oba krajní dny a překrývající se vícedenní akce; lze zadat i pouze jednu hranici v rámci sezóny.
 - **Seznam i mapa.** Chronologický přehled na telefonu, prostorové zobrazení na větší obrazovce.
+- **Akce v mém okolí.** Po kliknutí a povolení polohy se zobrazí orientační poloha a výběr do 25, 50 nebo 100 km vzdušnou čarou. Ostatní filtry platí dál, polohu neukládáme. Mapový podklad od OpenStreetMap může odhalit prohlíženou oblast. Bez povolení funguje běžný přehled.
 - **Údaje se zdrojem.** Datum, zveřejněný čas, místo, známé vstupné, rezervace a přímý odkaz na pořadatele.
 - **Kalendář a navigace.** Samostatný ICS export každé akce a trasa v Google Maps; orientační polohy jsou výslovně označené. Mapový podklad na webu zůstává OpenStreetMap.
 - **Viditelné pokrytí.** Sledované zdroje, poslední kontroly a položky čekající na ověření nejsou skryté.
@@ -79,7 +80,7 @@ Projekt neobchází blokované kalendáře a neslibuje obecné zpracování vše
 
 ## Kvalita a orientace v kódu
 
-**75 Python testů a 53 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřovaný stav k 12. listopadu 2026. CI běží offline; úplné Chromium testy se spouštějí lokálně.
+**75 Python testů a 60 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřovaný stav k 12. listopadu 2026. CI běží offline; úplné Chromium testy se spouštějí lokálně.
 
 ```text
 scripts/     sběr, adaptéry, validace a publisher

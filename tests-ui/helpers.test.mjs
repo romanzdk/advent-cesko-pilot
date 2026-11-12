@@ -4,6 +4,19 @@ import { readFile } from 'node:fs/promises';
 let helpers = {};
 try { helpers = await import('../site/helpers.js'); } catch (error) { if (error.code !== 'ERR_MODULE_NOT_FOUND') throw error; }
 const event = (id, date, startTime = null, extra = {}) => ({ id, title: id, date, startTime, town: 'Beroun', category: 'strom', status: 'confirmed', ...extra });
+test('crow-flies distance validates coordinates and nearby filtering is inclusive without reordering', () => {
+  assert.equal(typeof helpers.distanceKm, 'function');
+  const zero = { lat: 0, lon: 0 }, east = { lat: 0, lon: 1 };
+  assert(Math.abs(helpers.distanceKm(zero, east) - 111.1950802335329) < 0.000001);
+  assert.equal(helpers.distanceKm(zero, zero), 0);
+  for (const invalid of [null, {}, { lat: null, lon: 0 }, { lat: NaN, lon: 0 }, { lat: 91, lon: 0 }, { lat: 0, lon: 181 }]) assert.equal(helpers.distanceKm(zero, invalid), Infinity);
+  const events = [{ id: 'east', location: east }, { id: 'zero', location: zero }, { id: 'unmapped' }, { id: 'invalid', location: { lat: null, lon: 0 } }];
+  assert.deepEqual(helpers.nearbyEvents(events, zero, helpers.distanceKm(zero, east)).map(e => e.id), ['east', 'zero']);
+  assert.deepEqual(helpers.nearbyEvents(events, zero, 25).map(e => e.id), ['zero']);
+  assert.deepEqual(helpers.nearbyEvents(events, null, 50), []);
+  assert.deepEqual(helpers.nearbyEvents(events, zero, -1), []);
+  assert.equal(events.length, 4);
+});
 test('social metadata describes the current project with a full-size local PNG preview', async () => {
   const html = await readFile(new URL('../site/index.html', import.meta.url), 'utf8');
   const metadata = new Map([...html.matchAll(/<meta\b[^>]*>/gi)].map(([tag]) => {

@@ -42,6 +42,18 @@ export function safeHttps(value) {
   } catch { return null; }
 }
 
+export function distanceKm(from, to) {
+  const valid = point => point && Number.isFinite(point.lat) && Number.isFinite(point.lon) && Math.abs(point.lat) <= 90 && Math.abs(point.lon) <= 180;
+  if (!valid(from) || !valid(to)) return Infinity;
+  const rad = value => value * Math.PI / 180;
+  const a = Math.sin(rad(to.lat - from.lat) / 2) ** 2 + Math.cos(rad(from.lat)) * Math.cos(rad(to.lat)) * Math.sin(rad(to.lon - from.lon) / 2) ** 2;
+  return 6371.0088 * 2 * Math.asin(Math.sqrt(Math.min(1, a)));
+}
+export function nearbyEvents(events, position, radiusKm) {
+  if (!Number.isFinite(radiusKm) || radiusKm < 0) return [];
+  return events.filter(event => distanceKm(position, event.location) <= radiusKm + 1e-9);
+}
+
 export function groupLocations(events) {
   const groups = new Map();
   for (const event of events) {

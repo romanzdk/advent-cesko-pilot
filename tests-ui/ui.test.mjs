@@ -69,9 +69,10 @@ after(async () => {
   await browser?.close();
   if (server) await new Promise(resolve => server.close(resolve));
 });
-async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile = false, responseStatus = 200, delay = 0, libraryFail = false, coverage = coverageFixture, coverageStatus = 200, coveragePending = false, javaScriptEnabled = true } = {}) {
+async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile = false, responseStatus = 200, delay = 0, libraryFail = false, coverage = coverageFixture, coverageStatus = 200, coveragePending = false, javaScriptEnabled = true, geoMock = false } = {}) {
   const context = await browser.newContext({ viewport: mobile ? { width: 393, height: 852 } : { width: 1440, height: 1000 }, timezoneId: 'America/Los_Angeles', javaScriptEnabled });
   try {
+    if (geoMock) await context.addInitScript(installGeoMock);
     const page = await context.newPage();
     await context.route('https://api.github.com/**', route => route.fulfill({ status: 200, contentType: 'application/json', body: '[]', headers: { 'access-control-allow-origin': '*' } }));
     await context.route('https://github.com/**', route => route.fulfill({ status: 200, contentType: 'text/html', body: '<title>Draft interception fixture</title>' }));
@@ -92,6 +93,172 @@ async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile 
     await run(page, errors);
   } finally { await context.close(); }
 }
+
+// Mocked GPS only; no hardware permission or real location is used.
+function installGeoMock() {
+    window.geoCalls = [];
+    Object.defineProperty(navigator, 'geolocation', { configurable: true, value: { getCurrentPosition(success, failure, options) { window.geoCalls.push({ success, failure, options }); } } });
+    window.storageWrites = [];
+    Storage.prototype.setItem = (...args) => window.storageWrites.push(args);
+}
+async function mockLocation(page) { await page.evaluate(installGeoMock); }
+async function geoSuccess(page, index = 0) {
+  await page.evaluate(index => window.geoCalls[index].success({ coords: { latitude: 49.964, longitude: 14.073, accuracy: 30 } }), index);
+}
+test('location is gated by loaded events and trusted clicks without erasing fetch recovery', async () => {
+  await app(async page => {
+    await page.waitForSelector('.load-error');
+    await mockLocation(page);
+    assert.equal(await page.locator('#locate-user').isDisabled(), true);
+    await page.locator('#locate-user').evaluate(n => n.dispatchEvent(new MouseEvent('click', { bubbles:true })));
+    assert.equal(await page.locator('.load-error button').count(), 1);
+    assert.equal(await page.evaluate(() => window.geoCalls.length), 0);
+  }, { responseStatus:503 });
+  await app(async page => {
+    await page.waitForSelector('.event-card');
+    await mockLocation(page);
+    await page.locator('#locate-user').evaluate(n => n.click());
+    assert.equal(await page.evaluate(() => window.geoCalls.length), 0);
+    await page.locator('#locate-user').click();
+    assert.equal(await page.evaluate(() => window.geoCalls.length), 1);
+  });
+});
+
+test('nearby is opt-in, filters chronologically, keeps other filters and clears the separate user marker', async () => {
+  for (const mobile of [false, true]) await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    const originalURL = page.url();
+    assert.equal(await page.locator('#locate-user').count(), 1);
+    assert.equal(await page.locator('#nearby-radius').isVisible(), false);
+    assert.equal(await page.evaluate(() => window.geoCalls.length), 0);
+    await page.locator('#locate-user').click();
+    assert.equal(await page.locator('#locate-user').isDisabled(), true);
+    assert.equal(await page.locator('#clear-location').isVisible(), true);
+    assert.deepEqual(await page.evaluate(() => window.geoCalls[0].options), { timeout: 10000, maximumAge: 60000, enableHighAccuracy: false });
+    await geoSuccess(page);
+    await page.waitForSelector('.user-location-marker');
+    assert.equal(await page.locator('#nearby-radius').inputValue(), '50');
+    assert.deepEqual(await page.locator('.event-card').evaluateAll(nodes => nodes.map(n => n.dataset.id)), ['fixture-a', 'fixture-b', 'fixture-c']);
+    assert.equal(await page.locator('#map-count').innerText(), '2 místa');
+    if (mobile) assert.equal(await page.locator('#map-panel').isVisible(), true);
+    await page.locator('#nearby-radius').selectOption('25');
+    assert.equal(await page.locator('.event-card').count(), 2);
+    assert.equal(await page.locator('.map-marker').count(), 1);
+    assert.equal(await page.locator('.user-location-marker').count(), 1);
+    assert.equal(await page.locator('#map .leaflet-overlay-pane svg g path').last().getAttribute('class'), 'user-location-marker');
+    await page.locator('#category').selectOption('tvoreni');
+    assert.equal(await page.locator('.event-card').count(), 1);
+    await page.locator('#clear-location').click();
+    assert.equal(await page.locator('.user-location-marker').count(), 0);
+    assert.equal(await page.locator('#category').inputValue(), 'tvoreni');
+    assert.equal(await page.locator('#nearby-radius').isVisible(), false);
+    assert.equal(page.url(), originalURL);
+    assert.deepEqual(await page.evaluate(() => window.storageWrites), []);
+    assert.deepEqual(errors, []);
+  }, { mobile, geoMock: true });
+});
+
+test('nearby failures are inline and retryable, invalid coordinates never filter and low accuracy is disclosed', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await mockLocation(page);
+    for (const [code, text] of [[1, /nebylo povoleno/], [2, /není dostupná/], [3, /časový limit/]]) {
+      await page.locator('#locate-user').click();
+      await page.evaluate(code => window.geoCalls.at(-1).failure({ code }), code);
+      assert.match(await page.locator('#location-status').innerText(), text);
+      assert.equal(await page.locator('#locate-user').isEnabled(), true);
+      assert.equal(await page.locator('.event-card').count(), 3);
+    }
+    for (const coords of [null, { latitude: null, longitude: 14, accuracy: 1 }, { latitude: 91, longitude: 14, accuracy: 1 }, { latitude: 49, longitude: 181, accuracy: 1 }, { latitude: 49, longitude: 14, accuracy: -1 }]) {
+      await page.locator('#locate-user').click();
+      await page.evaluate(coords => window.geoCalls.at(-1).success({ coords }), coords);
+      assert.match(await page.locator('#location-status').innerText(), /není dostupná/);
+      assert.equal(await page.locator('#nearby-radius').isVisible(), false);
+    }
+    await page.locator('#locate-user').click();
+    await page.evaluate(() => window.geoCalls.at(-1).success({ coords: { latitude: NaN, longitude: 14, accuracy: 1 } }));
+    assert.equal(await page.locator('#locate-user').isEnabled(), true);
+    await page.locator('#locate-user').click();
+    await page.evaluate(() => window.geoCalls.at(-1).success({ coords: { latitude: 49.964, longitude: 14.073, accuracy: 20000 } }));
+    assert.match(await page.locator('#location-status').innerText(), /Nízká přesnost/);
+    await page.locator('#clear-location').click();
+    await page.evaluate(() => Object.defineProperty(navigator, 'geolocation', { configurable: true, value: undefined }));
+    await page.locator('#locate-user').click();
+    assert.match(await page.locator('#location-status').innerText(), /nepodporuje/);
+    await page.evaluate(() => Object.defineProperty(window, 'isSecureContext', { configurable: true, value: false }));
+    await page.locator('#locate-user').click();
+    assert.match(await page.locator('#location-status').innerText(), /HTTPS/);
+    assert.deepEqual(errors, []);
+  });
+});
+
+test('nearby cancellation and global reset ignore late callbacks and bound a pending request', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await mockLocation(page);
+    for (const selector of ['#clear-location', '#filters button[type=reset]']) {
+      await page.locator('#locate-user').click();
+      const index = await page.evaluate(() => window.geoCalls.length - 1);
+      await page.locator(selector).click();
+      await geoSuccess(page, index);
+      assert.equal(await page.locator('#nearby-radius').isVisible(), false);
+      assert.equal(await page.locator('.user-location-marker').count(), 0);
+      assert.equal(await page.locator('#locate-user').isEnabled(), true);
+    }
+    await page.locator('#locate-user').click();
+    await page.clock.runFor(10500);
+    assert.equal(await page.locator('#locate-user').isEnabled(), true);
+    assert.match(await page.locator('#location-status').innerText(), /časový limit/);
+    await geoSuccess(page, 2);
+    assert.equal(await page.locator('#nearby-radius').isVisible(), false);
+    await page.locator('#locate-user').click();
+    await geoSuccess(page, 3);
+    await page.locator('#filters button[type=reset]').click();
+    assert.equal(await page.locator('#nearby-radius').isVisible(), false);
+    assert.equal(await page.locator('.user-location-marker').count(), 0);
+    assert.deepEqual(errors, []);
+  });
+});
+
+test('nearby list survives map failure and empty radius explains limited coverage', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await mockLocation(page);
+    await page.locator('#locate-user').click();
+    await geoSuccess(page);
+    await page.waitForFunction(() => document.getElementById('location-status').textContent.includes('Mapu se nepodařilo'));
+    assert.equal(await page.locator('#results').isVisible(), true);
+    await page.locator('#nearby-radius').selectOption('25');
+    assert.equal(await page.locator('.event-card').count(), 2);
+    await page.locator('#category').selectOption('strom');
+    assert.match(await page.locator('.empty-state').innerText(), /ve zvoleném okruhu a filtrech/);
+    assert.match(await page.locator('.empty-state').innerText(), /neúplné pokrytí/);
+    assert.deepEqual(errors, []);
+  }, { mobile: true, libraryFail: true });
+});
+
+test('nearby secondary controls fit touch targets on narrow screens without changing the primary row', async () => {
+  await app(async page => {
+    await page.waitForSelector('.event-card');
+    await mockLocation(page);
+    assert.equal(await page.locator('#filters #locate-user').count(), 0);
+    assert.equal(await page.locator('.geo-controls').evaluate(n => getComputedStyle(n).display), 'flex');
+    await page.locator('#locate-user').click();
+    await geoSuccess(page);
+    for (const width of [393, 320]) {
+      await page.setViewportSize({ width, height: 852 });
+      for (const selector of ['#locate-user', '#nearby-radius', '#clear-location']) {
+        const box = await page.locator(selector).boundingBox();
+        assert(box && box.height >= 44 && box.x >= 0 && box.x + box.width <= width, selector);
+      }
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    }
+    assert.match(await page.locator('#location-hint').innerText(), /vzdušnou čarou.*střed obce.*Poloha se neukládá\. OpenStreetMap.*prohlížené oblasti\./);
+    await page.setViewportSize({ width:393, height:1000 });
+    await page.locator('.geo-controls').scrollIntoViewIfNeeded();
+    await page.screenshot({ path:new URL('./nearby-mobile-fixture.png', import.meta.url).pathname });
+  }, { mobile: true });
+});
 
 test('custom date range filters list and map inclusively and composes with other filters on desktop and mobile', async () => {
   const data = { ...fixture, events: [...fixture.events, { ...fixture.events[0], id: 'fixture-span', title: 'Vícedenní trhy', date: '2026-11-25', endDate: '2026-11-30', category: 'trhy' }] };
@@ -582,7 +749,7 @@ test('default mobile date and type labels have room for native select arrows', a
     await page.waitForSelector('.event-card');
     for (const width of [393, 320]) {
       await page.setViewportSize({ width, height: 852 });
-      const clipped = await page.locator('select').evaluateAll(nodes => nodes.filter(node => {
+      const clipped = await page.locator('select').evaluateAll(nodes => nodes.filter(node => node.getClientRects().length).filter(node => {
         const style = getComputedStyle(node);
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
