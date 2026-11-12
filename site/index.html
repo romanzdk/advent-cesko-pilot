@@ -83,6 +83,13 @@
       </div>
     </details>
     <div class="results-toolbar"><div><h2 id="results-heading">Kam vyrazit</h2><p id="result-count" role="status" aria-live="polite">Načítáme přehled…</p></div><div class="view-switch" aria-label="Zobrazení"><button id="show-list" type="button" aria-pressed="true" aria-controls="results">Seznam</button><button id="show-map" type="button" aria-pressed="false" aria-controls="map-panel">Mapa</button></div></div>
+    <div class="geo-controls" aria-label="Akce v okolí">
+      <button id="locate-user" type="button" aria-describedby="location-hint" disabled>Akce v mém okolí</button>
+      <label id="nearby-options" hidden>Okruh <select id="nearby-radius"><option value="25">25 km</option><option value="50" selected>50 km</option><option value="100">100 km</option></select></label>
+      <button id="clear-location" type="button" hidden>Zrušit okolí</button>
+      <p id="location-status" role="status"></p>
+      <p id="location-hint">Orientační okruh vzdušnou čarou; některé akce mají jen střed obce. Poloha se neukládá. OpenStreetMap při načítání mapy získá informaci o prohlížené oblasti.</p>
+    </div>
     <div class="explore-layout" id="explore" data-view="list">
       <section class="results" id="results" aria-labelledby="results-heading" tabindex="-1" aria-busy="true"><p class="state-message">Načítáme adventní akce…</p></section>
       <aside class="map-panel" id="map-panel" aria-label="Mapa akcí"><div class="map-heading"><h2>Mapa výběru</h2><span id="map-count"></span></div><ul id="map-legend" class="map-legend" aria-label="Barvy podle typu akce"></ul><div id="map" aria-label="Interaktivní mapa míst konání"></div><p id="map-notice" class="map-notice" role="status">Mapa se načítá. Všechny akce najdete i v seznamu.</p><p class="map-caption">Body ve středu obce jsou pouze orientační. Přesné místo ověřte u pořadatele.</p></aside>

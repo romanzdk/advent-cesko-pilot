@@ -1,4 +1,4 @@
-import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs, MAP_COLORS, markerCategory } from './helpers.js';
+import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs, distanceKm, nearbyEvents, MAP_COLORS, markerCategory } from './helpers.js';
 import { dayHighlight } from './helpers.js';
 
 const $ = id => document.getElementById(id);
@@ -7,9 +7,12 @@ const dateFormat = new Intl.DateTimeFormat('cs-CZ', { day: 'numeric', month: 'nu
 const dayFormat = new Intl.DateTimeFormat('cs-CZ', { weekday: 'short', timeZone: 'Europe/Prague' });
 const monthFormat = new Intl.DateTimeFormat('cs-CZ', { month: 'long', year: 'numeric', timeZone: 'Europe/Prague' });
 let events = [];
+let eventsLoaded = false;
 let visibleEvents = [];
 let map, markerLayer, mapPromise;
 let tileFailed = false;
+let userPosition = null, userMarker, locationTimer;
+let locationGeneration = 0;
 const desktop = matchMedia('(min-width: 821px)');
 
 function selectEvent(id) {
@@ -37,7 +40,10 @@ function updateMap() {
   $('map-count').textContent = `${groups.length} ${groups.length === 1 ? 'místo' : groups.length < 5 ? 'místa' : 'míst'}`;
   if (!map) return;
   markerLayer.clearLayers();
-  const bounds = [];
+  userMarker?.remove();
+  userMarker = null;
+  const bounds = userPosition ? [[userPosition.lat, userPosition.lon]] : [];
+  if (userPosition) userMarker = globalThis.L.circleMarker(bounds[0], { radius: 9, color: '#fff', weight: 3, fillColor: '#2265b0', fillOpacity: 1, interactive: false, className: 'user-location-marker' }).addTo(map);
   for (const group of groups) {
     const category = markerCategory(group.events);
     const categoryLabel = categories[category] || 'Více typů akcí';
@@ -62,7 +68,9 @@ function updateMap() {
     });
     bounds.push([group.lat, group.lon]);
   }
-  if (bounds.length) map.fitBounds(bounds, { padding: [48, 48], maxZoom: 13, animate: false });
+  userMarker?.bringToFront();
+  if (userPosition && !groups.length) map.setView(bounds[0], 10, { animate: false });
+  else if (bounds.length) map.fitBounds(bounds, { padding: [48, 48], maxZoom: 13, animate: false });
   const unmapped = visibleEvents.length - mappedCount;
   $('map-notice').textContent = tileFailed ? 'Mapový podklad se nepodařilo načíst. Body a seznam akcí zůstávají dostupné.' : unmapped ? `${unmapped} akcí nemá polohu; najdete je v seznamu.` : 'Vyberte bod pro akce v daném místě.';
 }
@@ -195,6 +203,7 @@ function updateTowns() {
   populateOptions('town', events.filter(event => !$('region').value || event.region === $('region').value).map(event => event.town), 'Všechny obce');
 }
 function render() {
+  if (!eventsLoaded) return;
   $('clear-search').hidden = !$('search').value;
   const customDates = $('period').value === 'custom';
   $('date-range').hidden = !customDates;
@@ -207,6 +216,7 @@ function render() {
     const now = new Date();
     bounds = filterBounds(filters, now);
     visible = filterEvents(events, filters, now);
+    if (userPosition) visible = nearbyEvents(visible, userPosition, Number($('nearby-radius').value));
   } catch (error) {
     if (!(error instanceof RangeError)) throw error;
     rangeError = error.message;
@@ -217,7 +227,7 @@ function render() {
   const fragment = document.createDocumentFragment();
   if (!visible.length) {
     const empty = el('div', null, 'empty-state state-message');
-    empty.append(el('h3', rangeError ? 'Zkontrolujte rozsah dat' : 'Žádná akce pro tento výběr'), el('p', rangeError || 'Zkuste jiný termín, obec nebo zrušte filtry.'));
+    empty.append(el('h3', rangeError ? 'Zkontrolujte rozsah dat' : 'Žádná akce pro tento výběr'), el('p', rangeError || (userPosition ? 'Žádné akce ve zvoleném okruhu a filtrech; přehled má neúplné pokrytí. Zkuste větší okruh nebo jiné filtry.' : 'Zkuste jiný termín, obec nebo zrušte filtry.')));
     fragment.append(empty);
   }
   let month;
@@ -243,6 +253,48 @@ function setView(view) {
   if (view === 'map' || desktop.matches) ensureMap();
 }
 desktop.addEventListener('change', () => { if (desktop.matches) ensureMap(); });
+function clearLocation() {
+  locationGeneration++;
+  clearTimeout(locationTimer);
+  userPosition = null;
+  $('nearby-options').hidden = true;
+  $('nearby-radius').value = '50';
+  $('clear-location').hidden = true;
+  $('locate-user').disabled = !eventsLoaded;
+  $('location-status').textContent = '';
+}
+$('clear-location').addEventListener('click', () => { clearLocation(); render(); });
+$('nearby-radius').addEventListener('change', render);
+$('locate-user').addEventListener('click', event => {
+  if (!event.isTrusted || !eventsLoaded) return;
+  const generation = ++locationGeneration;
+  const fail = message => { if (generation !== locationGeneration) return; clearLocation(); $('location-status').textContent = message; render(); };
+  if (!isSecureContext) return fail('Poloha vyžaduje zabezpečené připojení HTTPS.');
+  if (!navigator.geolocation) return fail('Tento prohlížeč zjištění polohy nepodporuje.');
+  $('locate-user').disabled = true;
+  $('clear-location').hidden = false;
+  $('location-status').textContent = 'Zjišťujeme orientační polohu…';
+  locationTimer = setTimeout(() => fail('Vypršel časový limit zjišťování polohy. Zkuste to znovu.'), 10000);
+  navigator.geolocation.getCurrentPosition(async result => {
+    if (generation !== locationGeneration) return;
+    clearTimeout(locationTimer);
+    const coords = result?.coords;
+    const position = { lat: coords?.latitude, lon: coords?.longitude, accuracy: coords?.accuracy };
+    if (!Number.isFinite(distanceKm(position, position)) || !Number.isFinite(position.accuracy) || position.accuracy < 0) return fail('Poloha nyní není dostupná. Zkuste to znovu.');
+    userPosition = position;
+    $('locate-user').disabled = false;
+    $('nearby-options').hidden = false;
+    $('location-status').textContent = `${position.accuracy > 5000 ? 'Nízká přesnost. ' : ''}Orientační poloha, přesnost přibližně ${Math.round(position.accuracy)} m.`;
+    render();
+    setView('map');
+    await ensureMap();
+    if (generation !== locationGeneration) return;
+    if (!map) {
+      $('location-status').textContent += ' Mapu se nepodařilo načíst; okolní akce najdete v seznamu.';
+      setView('list');
+    }
+  }, error => fail(error?.code === 1 ? 'Zjištění polohy nebylo povoleno. Přehled funguje i bez ní.' : error?.code === 3 ? 'Vypršel časový limit zjišťování polohy. Zkuste to znovu.' : 'Poloha nyní není dostupná. Zkuste to znovu.'), { timeout: 10000, maximumAge: 60000, enableHighAccuracy: false });
+});
 $('show-list').addEventListener('click', () => setView('list'));
 $('show-map').addEventListener('click', () => setView('map'));
 $('filters').addEventListener('submit', event => event.preventDefault());
@@ -262,6 +314,7 @@ $('filters').addEventListener('reset', event => {
   $('category').value = '';
   $('region').value = '';
   $('town').value = '';
+  clearLocation();
   render();
 });
 function validData(data) {
@@ -277,6 +330,8 @@ function validData(data) {
   ) && new Set(data.events.map(event => event.id)).size === data.events.length;
 }
 async function load() {
+  eventsLoaded = false;
+  $('locate-user').disabled = true;
   for (const control of $('filters').elements) control.disabled = true;
   $('results').setAttribute('aria-busy', 'true');
   $('results').replaceChildren(el('p', 'Načítáme adventní akce…', 'state-message'));
@@ -287,6 +342,8 @@ async function load() {
     const data = await response.json();
     if (!validData(data)) throw new Error('Neplatný formát přehledu');
     events = data.events.filter(event => event.date <= SEASON_END && (event.endDate || event.date) >= SEASON_START);
+    eventsLoaded = true;
+    $('locate-user').disabled = false;
     populateOptions('region', events.map(event => event.region), 'Všechny kraje');
     $('data-updated').textContent = `Přehled aktualizován ${dateFormat.format(dateValue(data.generatedAt))}.`;
     for (const control of $('filters').elements) control.disabled = false;
