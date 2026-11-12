@@ -56,8 +56,8 @@ test('social metadata describes the current project with a full-size local PNG p
     return [attributes.property || attributes.name, attributes.content];
   }));
   for (const [key, value] of Object.entries({
-    'og:title': 'Advent v Česku 2026',
-    'og:site_name': 'Advent v Česku',
+    'og:title': 'Kam na advent — adventní akce v Česku 2026',
+    'og:site_name': 'Kam na advent',
     'og:locale': 'cs_CZ',
     'og:type': 'website',
     'og:image': 'https://raw.githubusercontent.com/romanzdk/advent-cesko-pilot/main/site/social-preview.png',

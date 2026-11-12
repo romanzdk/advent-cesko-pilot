@@ -1280,8 +1280,20 @@ test('map names its bounded Christmas 2026 scope and excludes out-of-window even
   ] };
   await app(async page => {
     await page.waitForSelector('.event-card');
-    assert.equal(await page.locator('h1').innerText(), 'Advent v Česku 2026');
-    assert.equal(await page.title(), 'Advent v Česku 2026');
+    assert.equal(await page.locator('h1').innerText(), 'Adventní akce v Česku 2026');
+    assert.equal(await page.title(), 'Kam na advent — adventní akce v Česku 2026');
+    assert.equal(await page.locator('.wordmark').getAttribute('aria-label'), 'Kam na advent, úvod');
+    assert.match(await page.locator('.wordmark').innerText(), /^kam\s+na advent/);
+    assert.equal(await page.locator('meta[property="og:site_name"]').getAttribute('content'), 'Kam na advent');
+    assert.match(await page.locator('meta[property="og:title"]').getAttribute('content'), /^Kam na advent/);
+    assert.match(await page.locator('meta[name="twitter:title"]').getAttribute('content'), /^Kam na advent/);
+    for (const width of [1440, 393, 320]) {
+      await page.setViewportSize({ width, height: 900 });
+      assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+      const name = await page.locator('.wordmark').boundingBox();
+      const help = await page.locator('.origin-story summary').boundingBox();
+      assert(name.x + name.width <= help.x);
+    }
     assert.match(await page.locator('.intro').innerText(), /Sezonní výběr veřejných akcí 2026/);
     assert.match(await page.locator('.intro').innerText(), /Výběr veřejných zdrojů, nikoli úplný přehled krajů ani celé ČR\./);
     assert.doesNotMatch(await page.locator('.footer').innerText(), /pilot/i);
