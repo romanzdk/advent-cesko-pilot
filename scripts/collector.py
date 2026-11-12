@@ -194,7 +194,34 @@ def parse_event(body, source, url, window):
     title = txt(root.find('h1'))
     adapter = source['adapter']
     structured = structured_event(root)
-    if adapter == 'structured' and not structured:
+    if adapter in ('hranice', 'visitzlin', 'lanskroun') and structured:
+        raise Review('Nová strukturovaná data nesmějí obejít ověření označených polí; ověřte formát znovu.')
+    wpem_price = None
+    if adapter == 'wpem' and structured:
+        # WP Event Manager uses a nonstandard capitalized Location and space-separated timestamps.
+        structured = dict(structured)
+        if not structured.get('startDate'):
+            raise Review('Chybí strukturovaný začátek události.')
+        if 'location' in structured and structured.get('Location') != structured['location']:
+            raise Review('Rozporná strukturovaná místa události.')
+        structured['location'] = structured.get('Location')
+        for field in ('startDate', 'endDate'):
+            value = structured.get(field)
+            if value is not None:
+                if not isinstance(value, str) or not re.fullmatch(r'20\d{2}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}', value):
+                    raise Review('Neplatné datum WP Event Manager.')
+                structured[field] = value.replace(' ', 'T')
+        # These canonical local ISO timestamps include both date and seconds.
+        if structured.get('endDate') and structured['endDate'] < structured['startDate']:
+            raise Review('Konec události předchází začátku; ověřte celý časový interval.')
+        details = root.find(cls='wpem-event-details')
+        prices = [txt(n) for n in details.children if isinstance(n, Node) and n.find(cls='wpem-icon-ticket')] if details else []
+        if len(prices) > 1:
+            raise Review('Nejednoznačné cenové pole události.')
+        wpem_price = clean_public(prices[0]) if prices else None
+        if wpem_price and len(wpem_price) > 180:
+            raise Review('Cenový údaj je příliš dlouhý; ověřte všechny varianty bez zkrácení.')
+    if adapter in ('structured', 'wpem') and not structured:
         raise Review('Chybí strukturovaný detail jedné události.')
     if structured:
         scope = Node('div')
@@ -202,6 +229,7 @@ def parse_event(body, source, url, window):
         scope.children = [title, txt(DOM(str(structured.get('description',''))).root)]
         adapter = 'structured'
     venue = ''
+    fields = {}
     if adapter == 'structured':
         date_text = ''
         for field in ('startDate','endDate'):
@@ -221,6 +249,40 @@ def parse_event(body, source, url, window):
         locality = address.get('addressLocality') if isinstance(address,dict) else None
         if locality and exact_label(str(locality)) != exact_label(source['town']):
             raise Review('Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu.')
+    elif adapter == 'lanskroun':
+        tops = root.all(cls='festival-top__content')
+        if len(tops) != 1:
+            raise Review('Chybí jednoznačný festivalový detail.')
+        top = tops[0]
+        labels = top.all(cls='festival-top__datum-konani')
+        headings = top.all('h1', cls='festival-top__nazev')
+        summaries = top.all(cls='festival-top__kratky-popis')
+        if len(labels) != 1 or len(headings) != 1 or len(summaries) != 1:
+            raise Review('Nejednoznačná označená pole festivalu.')
+        interval = re.fullmatch(r'(\d{1,2})\.\s*(\d{1,2})\.?\s*[-–]\s*(\d{1,2})\.\s*(\d{1,2})\.\s*(20\d{2})', txt(labels[0]))
+        if not interval:
+            raise Review('Festival vyžaduje úplný označený interval s výslovným společným rokem.')
+        try:
+            first = date(int(interval[5]), int(interval[2]), int(interval[1]))
+            last = date(int(interval[5]), int(interval[4]), int(interval[3]))
+        except ValueError:
+            raise Review('Neplatné datum festivalového intervalu.')
+        if last < first:
+            raise Review('Obrácený festivalový interval.')
+        # The year is explicit in this single labelled range, never borrowed from URL or page chrome.
+        date_text = first.strftime('%d. %m. %Y') + ' – ' + last.strftime('%d. %m. %Y')
+        summary = txt(summaries[0])
+        if parse_dates(summary):
+            raise Review('Další termín v označeném popisu festivalu vyžaduje ověření.')
+        place = re.search(r'\bna (náměstí J\. M\. Marků)(?!\w)', summary)
+        if not place:
+            raise Review('Chybí ověřené místní náměstí v popisu festivalu.')
+        if re.search(r'\bkc\b|vstup|zdarma|cen[ay]|dobrovoln|prispevk', fold(txt(headings[0]) + ' ' + summary)):
+            raise Review('Nové cenové podmínky festivalu vyžadují ověření.')
+        venue = place[1]
+        title = txt(headings[0])
+        scope = Node('article')
+        scope.children = [headings[0], summaries[0]]
     elif adapter == 'galileo' and scope:
         date_node = scope.find(cls='event-action__date-start-text') or scope.find(cls='action-date')
         date_text = txt(date_node)
@@ -300,6 +362,60 @@ def parse_event(body, source, url, window):
         if container is None:
             raise Review('Chybí tělo detailu události.')
         scope.children = [n for n in container.children if not isinstance(n, Node) or n.attrs.get('id') != 'related']
+    elif adapter == 'visitzlin':
+        detail = root.find('section', cls='site-event')
+        if detail is None:
+            raise Review('Chybí označený detail události.')
+        scope = detail.find(cls='event')
+        if scope is None:
+            raise Review('Chybí označený detail události.')
+        title = txt(detail.find('h2'))
+        fields = {}
+        for row in scope.all('p'):
+            label = row.find('strong')
+            key = txt(label).rstrip(':')
+            if key in ('Datum', 'Místo', 'Vstupné', 'Čas'):
+                if key in fields:
+                    raise Review('Více výskytů časového nebo místního pole.')
+                fields[key] = norm(' '.join(txt(n) if isinstance(n, Node) else n for n in row.children if n is not label))
+        date_text = re.sub(r'\b(?:Po|Út|St|Čt|Pá|So|Ne)\s+', '', fields.get('Datum', ''))
+        full_date = r'\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}'
+        if not re.fullmatch(full_date + r'(?:\s*[-–]\s*' + full_date + r')?', date_text):
+            raise Review('Neúplný nebo nejednoznačný interval události.')
+        clock = fields.get('Čas', '')
+        if clock and not re.fullmatch(r'(?:[01]?\d|2[0-3])[.:][0-5]\d(?:\s*[-–]\s*(?:[01]?\d|2[0-3])[.:][0-5]\d)?', clock):
+            raise Review('Více začátků nebo neplatné hodiny události.')
+        if len({d for d, pos in parse_dates(date_text)}) == 1:
+            date_text += ' ' + clock.replace('.', ':')
+        venue = fields.get('Místo', '')
+    elif adapter == 'hranice':
+        detail = root.find('article', cls='akce-detail')
+        if detail is None:
+            raise Review('Chybí označený detail události.')
+        title = txt(detail.find('h1'))
+        fields = {}
+        for row in detail.all('p'):
+            label = row.find('span', cls='popisek')
+            if label:
+                key = txt(label)
+                if key in fields:
+                    raise Review('Více výskytů časového nebo místního pole.')
+                fields[key] = norm(' '.join(txt(n) if isinstance(n, Node) else n for n in row.children if n is not label))
+        day = fields.get('Kdy', '')
+        # Occurrence lists and abbreviated ranges must not become a single opening day.
+        if not re.fullmatch(r'(?:(?:Pondělí|Úterý|Středa|Čtvrtek|Pátek|Sobota|Neděle)\s+)?\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}', day, re.I):
+            raise Review('Chybí jediný úplný termín události.')
+        clock = fields.get('Začátek', '')
+        if clock and not re.fullmatch(r'(?:[01]?\d|2[0-3]):[0-5]\d', clock):
+            raise Review('Více začátků nebo neplatné hodiny události.')
+        date_text = day + ' ' + clock
+        venue = fields.get('Kde', '')
+        scope = Node('article')
+        # Inclusive taxonomy tags (e.g. "pro seniory") are not entry restrictions.
+        scope.children = [title]
+        content = root.find(cls='akce-content')
+        if content:
+            scope.children.append(content)
     elif adapter == 'vismo':
         scope = root.find(id='akce')
         title = txt(root.find(id='zahlavi'))
@@ -354,7 +470,7 @@ def parse_event(body, source, url, window):
     if adapter == 'itrebon' and re.search(r'[-–,]', fields.get('Datum konání akce', '')) and not re.fullmatch(r'\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}\s*[-–]\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}', fields['Datum konání akce']):
         raise Review('Neúplný nebo nejednoznačný interval události.')
     if len(dates) > 1:
-        explicit_range = adapter in ('itrebon', 'telc') and re.match(r'^\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}\s*[-–]\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}(?!\d)', date_text)
+        explicit_range = adapter in ('itrebon', 'telc', 'visitzlin', 'lanskroun') and re.match(r'^\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}\s*[-–]\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}(?!\d)', date_text)
         if (not explicit_range and (adapter not in ('galileo', 'structured', 'drupal') or not re.search(r'\s[-–]\s', date_text))) or len(dates) > 2 or dates[1][0] < dates[0][0]:
             raise Review('Více různých dat vyžaduje ruční kontrolu.')
     narrative_nodes = [scope.find(cls=cls) for cls in ('lead','event-action-lead__body','event-text')]
@@ -421,11 +537,19 @@ def parse_event(body, source, url, window):
     registration = 'Pořadatel uvádí rezervace / přihlášení; podmínky ověřte přímo u něj.' if booking_mentioned else None
     price_match = re.search(r'\b\d+(?:\s*[-–]\s*\d+)?\s*Kč\b', txt(scope))
     price = price_match[0] if price_match else ('dobrovolné' if 'dobrovolne' in text else None)
-    if adapter == 'humpolec':
-        price = clean_public(fields.get('Cena', ''))[:180] or None
+    if adapter in ('humpolec', 'hranice', 'visitzlin'):
+        price = clean_public(fields.get('Cena' if adapter == 'humpolec' else 'Vstupné', '')) or None
+        if adapter == 'humpolec' and price:
+            price = price[:180]
+        elif price and len(price) > 180:
+            raise Review('Cenový údaj je příliš dlouhý; ověřte všechny varianty bez zkrácení.')
     if structured:
-        price = structured_price(structured)
+        price = wpem_price if source['adapter'] == 'wpem' else structured_price(structured)
     notes = []
+    if source['adapter'] == 'wpem' and structured:
+        programme = clean_public(txt(DOM(str(structured.get('description', ''))).root))
+        if programme:
+            notes.append(programme[:500])
     if mapping:
         notes.append(f"{town} je část Plas; mapa ukazuje jen orientační střed místní části, nikoli přesné místo akce.")
     if len(dates) > 1:

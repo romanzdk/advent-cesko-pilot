@@ -1084,6 +1084,154 @@
           "verifiedTown": "Humpolec"
         }
       }
+    },
+    {
+      "id": "nejdek-mesto",
+      "town": "Nejdek",
+      "region": "Karlovarský kraj",
+      "adapter": "galileo",
+      "index_urls": ["https://www.nejdek.cz/aktivity/kultura/kalendar-akci/"],
+      "url_regex": "^https://www\\.nejdek\\.cz/aktivity/kultura/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "coverage_note": "Neúplný výběr městského kalendáře Nejdku; nejvýše dvě stránky a 14 detailů. Pouze přesně ověřená místa v Nejdku; Rudné, Nové Hamry a jiné obce nejsou přiřazovány k Nejdku.",
+      "max_details": 14,
+      "allowed_venues": ["náměstí Karla IV.", "Kino Nejdek", "nám. Karla IV. 94", "Městská knihovna Nejdek"],
+      "event_reviews": {
+        "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/zdobeni-pernicku-2424_1231cs.html": {
+          "sourceId": "nejdek-mesto",
+          "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/zdobeni-pernicku-2424_1231cs.html",
+          "sourceTown": "Nejdek",
+          "expectedTitle": "Zdobení perníčků",
+          "expectedDate": "2026-12-10",
+          "expectedEndDate": null,
+          "expectedVenue": "Městská knihovna Nejdek",
+          "contentHash": "84fbdead66dcd39afdd2c1b3eaa136d399669be0ebb34edc415d29d859184274",
+          "decision": "accept",
+          "reason": "Adresa knihovny je v Nejdku; tělo primární pozvánky uvádí 13 až 17 hodin.",
+          "overrides": {"endTime": "17:00", "category": "tvoreni"},
+          "verifiedAt": "2026-11-12T17:01:18+00:00",
+          "supportingSourceUrls": ["https://www.nejdek.cz/aktivity/kultura/kalendar-akci/zdobeni-pernicku-2424_1231cs.html"],
+          "verifiedTown": "Nejdek"
+        }
+      }
+    },
+    {
+      "id": "dobruska-kultura",
+      "town": "Dobruška",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": ["https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/"],
+      "url_regex": "^https://www\\.kulturadobruska\\.cz/kultura-a-sport/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "coverage_note": "Neúplný výběr Kulturních a sportovních zařízení města Dobrušky, nikoli pokrytí celého kraje. Nejvýše dvě stránky a 14 detailů; neověřená místa čekají na kontrolu.",
+      "max_details": 14,
+      "allowed_venues": ["Náměstí F. L. Věka", "Kulturní dům", "Kostel svatého Václava", "Společenské centrum - Kino 70"],
+      "event_reviews": {
+        "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/ceska-mse-vanocni-hej-mistre-4221_2360cs.html": {
+          "sourceId": "dobruska-kultura",
+          "sourceUrl": "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/ceska-mse-vanocni-hej-mistre-4221_2360cs.html",
+          "sourceTown": "Dobruška",
+          "expectedTitle": "ČESKÁ MŠE VÁNOČNÍ \" HEJ MISTŘE \"",
+          "expectedDate": "2026-12-12",
+          "expectedEndDate": null,
+          "expectedVenue": "Kostel svatého Václava",
+          "contentHash": "13db908caac89082b21daa70f558287c09c031806f36c34e5624a4ddcb808618",
+          "decision": "accept",
+          "reason": "Kostelní adresa v Dobrušce a cenová podmínka ověřeny v detailu pořadatele.",
+          "overrides": {"price": "150 Kč; děti do 6 let bez nároku na místo zdarma"},
+          "verifiedAt": "2026-11-12T17:01:18+00:00",
+          "supportingSourceUrls": ["https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/ceska-mse-vanocni-hej-mistre-4221_2360cs.html"],
+          "verifiedTown": "Dobruška"
+        },
+        "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/rozsviceni-vanocniho-stromu-4198_2350cs.html": {
+          "sourceId": "dobruska-kultura",
+          "sourceUrl": "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/rozsviceni-vanocniho-stromu-4198_2350cs.html",
+          "sourceTown": "Dobruška",
+          "expectedTitle": "ROZSVÍCENÍ VÁNOČNÍHO STROMU",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Náměstí F. L. Věka",
+          "contentHash": "aab658d7018ff1771924d3ffde2adc45274d90964f676cd2988db22c22b77cb8",
+          "decision": "accept",
+          "reason": "Rozlišen začátek doprovodného programu a okamžik rozsvícení v primární pozvánce.",
+          "overrides": {"notes": ["Doprovodný program od 16:30; rozsvícení vánočního stromu je uvedeno na 17:00."]},
+          "verifiedAt": "2026-11-12T17:01:18+00:00",
+          "supportingSourceUrls": ["https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/rozsviceni-vanocniho-stromu-4198_2350cs.html"],
+          "verifiedTown": "Dobruška"
+        }
+      }
+    },
+    {
+      "id": "hranice-kultura",
+      "town": "Hranice",
+      "region": "Olomoucký kraj",
+      "adapter": "hranice",
+      "index_urls": ["https://kultura-hranice.cz/mista/masarykovo-namesti/", "https://kultura-hranice.cz/mista/evangelicky-kostel/"],
+      "url_regex": "^https://kultura-hranice\\.cz/akce/[^/?#]+/$",
+      "seed_urls": [],
+      "coverage_note": "Neúplný výběr Městských kulturních zařízení Hranice (okres Přerov), omezený na výpisy Masarykova náměstí a evangelického kostela. Nejvýše dvě stránky a 14 detailů dohromady; druhý výpis se při naplnění limitu detailů neuplatní. Nejednoznačné vícečetné termíny zůstávají k ověření.",
+      "max_details": 14,
+      "allowed_venues": ["Evangelický kostel", "Evangelický kostel, Šromotovo náměstí Hranice", "Masarykovo náměstí"]
+    },
+    {
+      "id": "usti-muzeum",
+      "town": "Ústí nad Labem",
+      "region": "Ústecký kraj",
+      "adapter": "wpem",
+      "index_urls": ["https://www.muzeumusti.cz/kalendar-akci/"],
+      "url_regex": "^https://www\\.muzeumusti\\.cz/kalendar-akci/[^/?#]+/$",
+      "seed_urls": [],
+      "coverage_note": "Pouze sezonní program Oblastního muzea v Ústí nad Labem; nikoli celý městský nebo krajský kalendář. Nejvýše dvě stránky a 14 detailů; přesná adresa muzea ověřena v detailu.",
+      "max_details": 14,
+      "allowed_venues": ["Brněnská 1000/1a, 400 01 Ústí nad Labem"]
+    },
+    {
+      "id": "zlin-tic",
+      "town": "Zlín",
+      "region": "Zlínský kraj",
+      "adapter": "visitzlin",
+      "index_urls": ["https://visitzlin.eu/kalendar-akci?search=advent"],
+      "url_regex": "^https://visitzlin\\.eu/kalendar-akci/[^/?#]+$",
+      "seed_urls": [],
+      "coverage_note": "Neúplný výběr oficiálního turistického portálu města Zlína, vyhledávání advent. Nejvýše dvě stránky a 14 detailů; jen ověřená místa v městě. Datumový interval není denní otevírací doba; hodiny z volného textu nejsou automaticky přejímány.",
+      "max_details": 14,
+      "allowed_venues": ["náměstí Míru, Zlín", "Čiperova vila, Burešov 3675/4, Zlín", "Divadelní 3242, Zlín"]
+    },
+    {
+      "id": "praha16-radotin",
+      "town": "Praha-Radotín",
+      "region": "Hlavní město Praha",
+      "adapter": "galileo",
+      "index_urls": ["https://www.praha16.eu/volny-cas/kalendar-akci/"],
+      "url_regex": "^https://www\\.praha16\\.eu/volny-cas/kalendar-akci/[^/?]+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "coverage_note": "Neúplný sezonní výběr oficiálního kalendáře Prahy 16 v Radotíně, nikoli pokrytí celé Prahy. Nejvýše dvě stránky a 14 detailů; jen ověřená místní místa. Filmové projekce s neověřenými podmínkami a jiná místa zůstávají k revizi.",
+      "max_details": 14,
+      "allowed_venues": ["Kulturně komunitní centrum Koruna", "Římskokatolický kostel sv. Petra a Pavla", "Hasičská zbrojnice"]
+    },
+    {
+      "id": "stitina-obec",
+      "town": "Štítina",
+      "region": "Moravskoslezský kraj",
+      "adapter": "galileo",
+      "index_urls": ["https://www.stitina.cz/aktualne/kalendar-akci/"],
+      "url_regex": "^https://www\\.stitina\\.cz/aktualne/kalendar-akci/[^/?]+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "coverage_note": "Neúplný sezonní výběr oficiálního kalendáře obce Štítina, okres Opava; nikoli Ostrava nebo celý kraj. Nejvýše dvě stránky a 14 detailů. Ověřen park v ulici Hlavní; obecný údaj Štítina bez konkrétního místa zůstává k revizi.",
+      "max_details": 14,
+      "allowed_venues": ["Park"]
+    },
+    {
+      "id": "lanskroun-kultura",
+      "town": "Lanškroun",
+      "region": "Pardubický kraj",
+      "adapter": "lanskroun",
+      "index_urls": ["https://www.kclanskroun.cz/festivaly/"],
+      "url_regex": "^https://www\\.kclanskroun\\.cz/festival/[^/?#]+/$",
+      "seed_urls": [],
+      "coverage_note": "Výběr z festivalů Kulturního centra Lanškroun, nikoli celý městský či krajský program. Nejvýše dvě stránky a 14 detailů. Souhrnný adventní interval má výslovný společný rok v označeném poli; neznamená každodenní otevření ani nepřetržitý program. Jen ověřené náměstí J. M. Marků.",
+      "max_details": 14,
+      "allowed_venues": ["náměstí J. M. Marků"]
     }
   ]
 }

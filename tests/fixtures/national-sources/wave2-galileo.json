@@ -1,0 +1,14 @@
+[
+  {
+    "sourceId": "praha16-radotin",
+    "url": "https://www.praha16.eu/volny-cas/kalendar-akci/i-adventni-koncert-26167_706cs.html",
+    "html": "<h1>I. adventní koncert</h1><div class=\"event-detail\"><div class=\"event-action-lead__body\">Vynikající sopranistka Markéta Fassati zazpívá tradiční sváteční skladby v netradičních aranžích za doprovodu legendárního klavíristy Pavla Větrovce a jeho kapely.</div><span class=\"event-action__date-start-text\">29. 11. 2026 17:00</span><span class=\"event-action__venue-text\">Kulturně komunitní centrum Koruna</span></div>",
+    "expected": {"town": "Praha-Radotín", "region": "Hlavní město Praha", "date": "2026-11-29", "endDate": null, "startTime": "17:00", "endTime": null, "venue": "Kulturně komunitní centrum Koruna", "price": null}
+  },
+  {
+    "sourceId": "stitina-obec",
+    "url": "https://www.stitina.cz/aktualne/kalendar-akci/vitame-advent-1636_167cs.html",
+    "html": "<h1>Vítáme advent</h1><div class=\"event-detail\"><h2 class=\"action-date\">Kdy: 28. 11. 2026 15:00 - 20:00</h2><h2 class=\"venue\">Kde: Park</h2><div class=\"lead\">rozsvěcení vánočního stromu</div><div class=\"address\">Adresa místa konání Park, Hlavní, Štítina, 74791</div></div>",
+    "expected": {"town": "Štítina", "region": "Moravskoslezský kraj", "date": "2026-11-28", "endDate": null, "startTime": "15:00", "endTime": "20:00", "venue": "Park", "price": null}
+  }
+]
