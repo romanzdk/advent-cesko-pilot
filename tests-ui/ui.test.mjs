@@ -174,6 +174,24 @@ test('custom date inputs remain usable on narrow screens and with enlarged text'
   });
 });
 
+test('personal origin story stays subtle in the footer and expands on desktop and mobile', async () => {
+  for (const mobile of [false, true]) await app(async page => {
+    const story = page.locator('footer details.origin-story');
+    const summary = story.locator('summary');
+    assert.equal(await summary.count(), 1);
+    assert.equal(await summary.innerText(), 'Proč tahle mapa vznikla');
+    assert.equal(await story.locator('p').isVisible(), false);
+    await summary.click({ timeout: 3000 });
+    assert.equal(await story.locator('p').isVisible(), true);
+    assert.equal(await story.locator('p').innerText(), 'Moje žena má ráda vánoční atmosféru a trhy. Tahle mapa vznikla, abychom měli po ruce tipy, kam spolu vyrazit.');
+    assert((await summary.boundingBox()).height >= 44);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    if (mobile) await page.locator('footer').screenshot({ path: new URL('./origin-story-mobile-fixture.png', import.meta.url).pathname });
+    await summary.press('Enter');
+    assert.equal(await story.locator('p').isVisible(), false);
+  }, { mobile, javaScriptEnabled: false });
+});
+
 test('feedback API failures are not empty results and never block drafts or map', async () => {
   for (const failure of ['429', 'network', 'timeout']) await app(async (page, errors) => {
     await page.route('https://api.github.com/**', route => failure === '429' ? route.fulfill({ status: 429, body: '{}', headers: { 'access-control-allow-origin': '*' } }) : failure === 'network' ? route.abort() : undefined);
