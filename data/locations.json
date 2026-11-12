@@ -110,5 +110,40 @@
     "precision": "town",
     "label": "Humpolec — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/441024"
+  },
+  "Nejdek": {
+    "lat": 50.3247878,
+    "lon": 12.7332967,
+    "precision": "town",
+    "label": "Nejdek — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439476"
+  },
+  "Dobruška": {
+    "lat": 50.2921062,
+    "lon": 16.1605457,
+    "precision": "town",
+    "label": "Dobruška — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440632"
+  },
+  "Hranice": {
+    "lat": 49.5481764,
+    "lon": 17.7347407,
+    "precision": "town",
+    "label": "Hranice, okres Přerov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438577"
+  },
+  "Ústí nad Labem": {
+    "lat": 50.6603327,
+    "lon": 14.0381357,
+    "precision": "town",
+    "label": "Ústí nad Labem — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440166"
+  },
+  "Zlín": {
+    "lat": 49.2267660,
+    "lon": 17.6667415,
+    "precision": "town",
+    "label": "Zlín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440910"
   }
 }

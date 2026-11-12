@@ -1,0 +1,14 @@
+[
+  {
+    "sourceId": "nejdek-mesto",
+    "url": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/rozsviceni-vanocniho-stromu-v-nejdku-2406_1222cs.html",
+    "html": "<h1>Rozsvícení vánočního stromu v Nejdku</h1><div class=\"event-detail\"><h2 class=\"event-action__date-start-text\">Kdy: 28. 11. 2026 17:00</h2><h2 class=\"event-action__venue-text\">Kde: náměstí Karla IV.</h2><div class=\"event-action-lead__body\">Rozsvícení vánočního stromu v Nejdku 28. listopadu 2026 od 17:00 prostranství před ZŠ Nejdek, náměstí Karla IV.</div></div>",
+    "expected": {"town": "Nejdek", "region": "Karlovarský kraj", "date": "2026-11-28", "endDate": null, "startTime": "17:00", "endTime": null, "venue": "náměstí Karla IV.", "price": null}
+  },
+  {
+    "sourceId": "dobruska-kultura",
+    "url": "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/vanocni-jarmark-4200_2352cs.html",
+    "html": "<h1>VÁNOČNÍ JARMARK</h1><div class=\"event-detail\"><h2 class=\"event-action__date-start-text\">Kdy: 29. 11. 2026 13:00 - 18:00</h2><h2 class=\"event-action__venue-text\">Kde: Náměstí F. L. Věka</h2><div class=\"event-action-lead__body\">Prodej vánočních dekorací, věnců, perníčků, keramiky a jiných rukodělných výrobků... Vánoční koledy, svařené víno, punč, medovina ....</div></div>",
+    "expected": {"town": "Dobruška", "region": "Královéhradecký kraj", "date": "2026-11-29", "endDate": null, "startTime": "13:00", "endTime": "18:00", "venue": "Náměstí F. L. Věka", "price": null}
+  }
+]
