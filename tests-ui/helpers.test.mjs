@@ -4,6 +4,16 @@ import { readFile } from 'node:fs/promises';
 let helpers = {};
 try { helpers = await import('../site/helpers.js'); } catch (error) { if (error.code !== 'ERR_MODULE_NOT_FOUND') throw error; }
 const event = (id, date, startTime = null, extra = {}) => ({ id, title: id, date, startTime, town: 'Beroun', category: 'strom', status: 'confirmed', ...extra });
+test('map categories have distinct colors and shared mixed places stay neutral', () => {
+  assert.equal(typeof helpers.markerCategory, 'function');
+  assert.equal(helpers.markerCategory([{ category:'strom' }, { category:'strom' }]), 'strom');
+  assert.equal(helpers.markerCategory([{ category:'strom' }, { category:'trhy' }]), 'mixed');
+  assert.equal(helpers.markerCategory([{ category:'__proto__' }]), 'mixed');
+  assert.equal(helpers.markerCategory([]), 'mixed');
+  assert.equal(new Set(Object.values(helpers.MAP_COLORS)).size, 7);
+  for (const color of Object.values(helpers.MAP_COLORS)) assert.match(color, /^#[0-9a-f]{6}$/i);
+});
+
 test('social metadata describes the current project with a full-size local PNG preview', async () => {
   const html = await readFile(new URL('../site/index.html', import.meta.url), 'utf8');
   const metadata = new Map([...html.matchAll(/<meta\b[^>]*>/gi)].map(([tag]) => {

@@ -42,6 +42,12 @@ export function safeHttps(value) {
   } catch { return null; }
 }
 
+export const MAP_COLORS = Object.freeze({ strom:'#2f6b45', mikulas:'#b33d42', trhy:'#a36b17', tvoreni:'#8054a3', setkani:'#257b87', betlem:'#79513c', mixed:'#657168' });
+export function markerCategory(events) {
+  const kinds = [...new Set(events.map(event => event.category))];
+  return kinds.length === 1 && Object.hasOwn(MAP_COLORS, kinds[0]) ? kinds[0] : 'mixed';
+}
+
 export function groupLocations(events) {
   const groups = new Map();
   for (const event of events) {
