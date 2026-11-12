@@ -7,6 +7,7 @@ const dateFormat = new Intl.DateTimeFormat('cs-CZ', { day: 'numeric', month: 'nu
 const dayFormat = new Intl.DateTimeFormat('cs-CZ', { weekday: 'short', timeZone: 'Europe/Prague' });
 const monthFormat = new Intl.DateTimeFormat('cs-CZ', { month: 'long', year: 'numeric', timeZone: 'Europe/Prague' });
 let events = [];
+let coverageRegions = [];
 let eventsLoaded = false;
 let visibleEvents = [];
 let map, markerLayer, mapPromise;
@@ -199,6 +200,13 @@ function populateOptions(id, values, label) {
   select.value = selected;
   if (select.selectedIndex < 0) select.value = '';
 }
+function updateRegions() {
+  const published = new Set(events.map(event => event.region));
+  populateOptions('region', [...coverageRegions, ...published], 'Všechny kraje');
+  if (eventsLoaded) for (const option of $('region').options) {
+    if (option.value && !published.has(option.value)) option.textContent = `${option.value} · zatím bez akcí`;
+  }
+}
 function updateTowns() {
   populateOptions('town', events.filter(event => !$('region').value || event.region === $('region').value).map(event => event.town), 'Všechny obce');
 }
@@ -227,7 +235,8 @@ function render() {
   const fragment = document.createDocumentFragment();
   if (!visible.length) {
     const empty = el('div', null, 'empty-state state-message');
-    empty.append(el('h3', rangeError ? 'Zkontrolujte rozsah dat' : 'Žádná akce pro tento výběr'), el('p', rangeError || (userPosition ? 'Žádné akce ve zvoleném okruhu a filtrech; přehled má neúplné pokrytí. Zkuste větší okruh nebo jiné filtry.' : 'Zkuste jiný termín, obec nebo zrušte filtry.')));
+    const emptyRegion = filters.region && !events.some(event => event.region === filters.region);
+    empty.append(el('h3', rangeError ? 'Zkontrolujte rozsah dat' : 'Žádná akce pro tento výběr'), el('p', rangeError || (emptyRegion ? 'Pro tento kraj zatím nemáme publikované akce. Neznamená to, že se zde nic nekoná. Přehled má neúplné pokrytí.' : userPosition ? 'Žádné akce ve zvoleném okruhu a filtrech; přehled má neúplné pokrytí. Zkuste větší okruh nebo jiné filtry.' : 'Zkuste jiný termín, obec nebo zrušte filtry.')));
     fragment.append(empty);
   }
   let month;
@@ -344,7 +353,7 @@ async function load() {
     events = data.events.filter(event => event.date <= SEASON_END && (event.endDate || event.date) >= SEASON_START);
     eventsLoaded = true;
     $('locate-user').disabled = false;
-    populateOptions('region', events.map(event => event.region), 'Všechny kraje');
+    updateRegions();
     $('data-updated').textContent = `Přehled aktualizován ${dateFormat.format(dateValue(data.generatedAt))}.`;
     for (const control of $('filters').elements) control.disabled = false;
     render();
@@ -383,6 +392,8 @@ async function loadCoverage() {
     if (!response.ok) throw new Error('Pokrytí není dostupné');
     const data = await response.json();
     if (!validCoverage(data)) throw new Error('Neplatný formát pokrytí');
+    coverageRegions = data.regions;
+    updateRegions();
     const regions = new Set(data.regions).size;
     const sourceCount = new Set(data.sources.map(source => source.id)).size;
     $('scope-summary').textContent = `${regions} ${regions === 1 ? 'kraj' : regions < 5 ? 'kraje' : 'krajů'} · ${sourceCount} ${sourceCount === 1 ? 'zdroj' : sourceCount < 5 ? 'zdroje' : 'zdrojů'}`;

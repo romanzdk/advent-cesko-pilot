@@ -642,6 +642,67 @@ for (const [label, window] of [
   });
 }
 
+test('region filter includes every covered region even when its events are not published yet', async () => {
+  const regions = ['Hlavní město Praha', 'Jihočeský kraj', 'Jihomoravský kraj', 'Karlovarský kraj', 'Kraj Vysočina', 'Královéhradecký kraj', 'Liberecký kraj', 'Moravskoslezský kraj', 'Olomoucký kraj', 'Pardubický kraj', 'Plzeňský kraj', 'Středočeský kraj', 'Ústecký kraj', 'Zlínský kraj'];
+  for (const mobile of [false, true]) await app(async (page, errors) => {
+    await page.waitForFunction(() => document.getElementById('scope-summary').textContent.startsWith('14 krajů'));
+    await page.waitForSelector('.event-card');
+    const options = await page.locator('#region option').evaluateAll(nodes => nodes.map(n => ({ value: n.value, text: n.textContent, disabled: n.disabled })));
+    assert.deepEqual(options.filter(n => n.value).map(n => n.value), [...regions].sort((a,b) => a.localeCompare(b,'cs')));
+    assert.equal(options.find(n => n.value === 'Zlínský kraj').text, 'Zlínský kraj · zatím bez akcí');
+    assert.equal(options.find(n => n.value === 'Zlínský kraj').disabled, false);
+    assert.equal(options.find(n => n.value === 'Plzeňský kraj').text, 'Plzeňský kraj');
+    await page.locator('#region').selectOption('Zlínský kraj');
+    assert.equal(await page.locator('.event-card').count(), 0);
+    assert.match(await page.locator('.empty-state').innerText(), /Pro tento kraj zatím nemáme publikované akce/);
+    assert.match(await page.locator('.empty-state').innerText(), /Neznamená to, že se zde nic nekoná/);
+    assert.deepEqual(await page.locator('#town option').allTextContents(), ['Všechny obce']);
+    await page.getByRole('button', {name:'Zrušit filtry',exact:true}).click();
+    assert.equal(await page.locator('#region').inputValue(), '');
+    assert.equal(await page.locator('.event-card').count(), 3);
+    assert.equal(await page.locator('#region option').count(), 15);
+    assert.deepEqual(errors, []);
+  }, {data:regionalFixture,coverage:{...coverageFixture,regions},mobile});
+});
+
+test('late coverage expands regions without resetting an active event filter', async () => {
+  await app(async (page, errors) => {
+    let pendingCoverage;
+    await page.route('**/coverage.json', route => { pendingCoverage = route; });
+    await page.reload();
+    await page.waitForSelector('.event-card');
+    await page.locator('#region').selectOption('Liberecký kraj');
+    await page.locator('#town').selectOption('Turnov');
+    await page.locator('#search').fill('strom');
+    assert(pendingCoverage);
+    await pendingCoverage.fulfill({contentType:'application/json',body:JSON.stringify({...coverageFixture,regions:[...coverageFixture.regions,'Zlínský kraj']})});
+    await page.waitForFunction(() => document.getElementById('scope-summary').textContent.startsWith('4 kraje'));
+    assert.equal(await page.locator('#region option').count(), 5);
+    assert.equal(await page.locator('#region').inputValue(), 'Liberecký kraj');
+    assert.equal(await page.locator('#town').inputValue(), 'Turnov');
+    assert.equal(await page.locator('#search').inputValue(), 'strom');
+    assert.equal(await page.locator('.event-card').count(), 1);
+    assert.equal(await page.locator('#region option[value="Zlínský kraj"]').innerText(), 'Zlínský kraj · zatím bez akcí');
+    assert.deepEqual(errors, []);
+  }, {data:regionalFixture,coveragePending:true});
+});
+
+test('regions from early coverage survive delayed events and unavailable coverage falls back to event regions', async () => {
+  for (const coverageStatus of [200,503]) await app(async (page, errors) => {
+    if (coverageStatus === 200) await page.waitForFunction(() => document.getElementById('scope-summary').textContent.startsWith('4 kraje'));
+    await page.waitForSelector('.event-card');
+    assert.equal(await page.locator('#region option').count(), coverageStatus === 200 ? 5 : 4);
+    assert.equal(await page.locator('#region option[value="Plzeňský kraj"]').innerText(), 'Plzeňský kraj');
+    await page.locator('#region').selectOption('Plzeňský kraj');
+    await page.locator('#category').selectOption('tvoreni');
+    assert.equal(await page.locator('.event-card').count(), 1);
+    await page.locator('#category').selectOption('betlem');
+    assert.equal(await page.locator('.event-card').count(), 0);
+    assert.doesNotMatch(await page.locator('.empty-state').innerText(), /Pro tento kraj zatím nemáme publikované akce/);
+    assert.deepEqual(errors, []);
+  }, {data:regionalFixture,delay:400,coverage:{...coverageFixture,regions:[...coverageFixture.regions,'Zlínský kraj']},coverageStatus});
+});
+
 test('region scope limits towns, combines with other filters and resets cleanly', async () => {
   await app(async (page, errors) => {
     await page.waitForSelector('.event-card');
