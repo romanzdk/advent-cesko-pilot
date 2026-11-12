@@ -13,7 +13,7 @@ node --test tests-ui/helpers.test.mjs tests-ui/ui.test.mjs
 
 - Tests create a private browser and ephemeral loopback HTTP server, with contexts closed in `finally` and browser/server closed in the test teardown.
 - The server reads only an explicit static-asset allowlist. It **never reads `site/events.json`**. Event responses are intercepted from synthetic inline fixtures; `example.cz` links are intentionally fictitious test content and are not followed.
-- Tests exercise `/advent-mnichovice/` and `/`, MIME `nosniff`, a same-origin script CSP, keyboard interaction, 393/320/900/1440px widths, enlarged type, local download streams, map/library failures and HTTP/data failures.
+- Tests exercise `/advent-cesko-pilot/` and `/`, MIME `nosniff`, a same-origin script CSP, keyboard interaction, 393/320/900/1440px widths, enlarged type, local download streams, map/library failures and HTTP/data failures.
 - OSM tile requests are deliberately blocked. Leaflet itself, marker grouping, popups, keyboard selection, filtered marker updates and attribution are real browser behavior. This proves graceful degraded mode, **not live map-tile availability**.
 - Browser timezone is deliberately America/Los_Angeles; Prague dates are explicit. No shared CDP, credentials, geocoding or deployment is involved.
 - Screenshots `desktop-fixture.png` and `mobile-fixture.png` contain synthetic display events, not a verified event programme. The final screenshot test regenerates them.

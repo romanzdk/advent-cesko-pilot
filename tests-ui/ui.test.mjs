@@ -10,10 +10,10 @@ import { chromium } from 'playwright';
 
 // Synthetic public fixture only: never load the parent's live events.json.
 export const fixture = {
-  schemaVersion: 1, generatedAt: '2026-11-12T10:00:00Z', season: 2026, region: 'Mnichovice a okolí', events: [
-    { id: 'fixture-b', title: 'Vánoční dílna', town: 'Mnichovice', venue: 'Klub', date: '2026-11-28', endDate: null, startTime: '16:00', endTime: null, category: 'tvoreni', price: '150 Kč', registration: 'Nutná rezervace', registrationUrl: 'https://example.cz/rezervace', description: 'Testovací dílna adventních věnců.', notes: ['Kapacita je omezená.'], audience: 'dospělí', status: 'confirmed', verifiedAt: '2026-11-12T10:00:00Z', sourceUrl: 'https://example.cz/dilna', location: { lat: 49.936, lon: 14.711, precision: 'town', label: 'Mnichovice', sourceUrl: 'https://example.cz/poloha' } },
+  schemaVersion: 1, generatedAt: '2026-11-12T10:00:00Z', season: 2026, region: 'Beroun a okolí', events: [
+    { id: 'fixture-b', title: 'Vánoční dílna', town: 'Beroun', venue: 'Klub', date: '2026-11-28', endDate: null, startTime: '16:00', endTime: null, category: 'tvoreni', price: '150 Kč', registration: 'Nutná rezervace', registrationUrl: 'https://example.cz/rezervace', description: 'Testovací dílna adventních věnců.', notes: ['Kapacita je omezená.'], audience: 'dospělí', status: 'confirmed', verifiedAt: '2026-11-12T10:00:00Z', sourceUrl: 'https://example.cz/dilna', location: { lat: 49.964, lon: 14.073, precision: 'town', label: 'Beroun', sourceUrl: 'https://example.cz/poloha' } },
     { id: 'fixture-a', title: 'Rozsvícení stromu', town: 'Říčany', venue: 'Náměstí', date: '2026-11-20', endDate: null, startTime: null, endTime: null, category: 'strom', price: null, registration: null, registrationUrl: null, description: 'Testovací slavnost.', notes: ['Přesný začátek zatím není uveden.'], audience: 'všichni', status: 'time-unconfirmed', verifiedAt: '2026-11-12T10:00:00Z', sourceUrl: 'https://example.cz/strom', location: { lat: 49.99, lon: 14.655, precision: 'venue', label: 'Náměstí', sourceUrl: 'https://example.cz/poloha' } },
-    { id: 'fixture-c', title: '<img src=x onerror=alert(1)> Adventní setkání', town: 'Mnichovice', venue: 'Klub', date: '2026-12-05', endDate: null, startTime: '14:00', endTime: '17:00', category: 'setkani', price: 'Zdarma', registration: null, registrationUrl: 'javascript:alert(1)', description: '<script>window.injected=true</script>', notes: [], audience: 'senioři / omezené zaměření', status: 'confirmed', verifiedAt: '2026-11-12T10:00:00Z', sourceUrl: 'javascript:alert(1)', location: { lat: 49.936, lon: 14.711, precision: 'town', label: 'Mnichovice', sourceUrl: 'https://example.cz/poloha' } }
+    { id: 'fixture-c', title: '<img src=x onerror=alert(1)> Adventní setkání', town: 'Beroun', venue: 'Klub', date: '2026-12-05', endDate: null, startTime: '14:00', endTime: '17:00', category: 'setkani', price: 'Zdarma', registration: null, registrationUrl: 'javascript:alert(1)', description: '<script>window.injected=true</script>', notes: [], audience: 'senioři / omezené zaměření', status: 'confirmed', verifiedAt: '2026-11-12T10:00:00Z', sourceUrl: 'javascript:alert(1)', location: { lat: 49.964, lon: 14.073, precision: 'town', label: 'Beroun', sourceUrl: 'https://example.cz/poloha' } }
   ]
 };
 const regionalFixture = {
@@ -50,7 +50,7 @@ before(async () => {
   }
   browser = await chromium.launch({ executablePath, headless: true, args: ['--no-sandbox'] });
   server = createServer(async (req, res) => {
-    let path = new URL(req.url, 'http://local').pathname.replace(/^\/(?:advent-mnichovice|advent-cesko-pilot)\//, '/');
+    let path = new URL(req.url, 'http://local').pathname.replace(/^\/advent-cesko-pilot\//, '/');
     if (path === '/') path = '/index.html';
     // An explicit asset allowlist prevents accidentally reading live data.
     if (!/^\/(index\.html|app\.js|helpers\.js|feedback\.js|feedback-helpers\.js|styles\.css|favicon\.svg|vendor\/leaflet\.(js|css))$/.test(path)) { res.writeHead(404).end(); return; }
@@ -328,7 +328,8 @@ test('footer credits Roman and links his website, GitHub and project', async () 
         const box = await link.boundingBox();
         assert(box && box.height >= 44);
       }
-      assert.equal(await footer.getByRole('link', {name: 'Mnichovice a okolí', exact: true}).getAttribute('href'), 'https://romanzdk.github.io/advent-mnichovice/');
+      assert.equal(await footer.getByRole('link').count(), 3);
+      assert.deepEqual(await footer.getByRole('link').evaluateAll(links => links.map(link => link.href)), ['https://romanzdk.com/', 'https://github.com/romanzdk', 'https://github.com/romanzdk/advent-cesko-pilot']);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     }, {mobile});
   }
@@ -355,7 +356,7 @@ test('map names its bounded Christmas 2026 scope and excludes out-of-window even
     assert.doesNotMatch(await page.locator('.footer').innerText(), /pilot/i);
     assert.doesNotMatch(await page.locator('.edition').innerText(), /3 KRAJE/);
     assert.match(await page.locator('.intro').innerText(), /20\. 11\. – 24\. 12\. 2026/);
-    assert.equal(await page.getByRole('link', { name: 'Mnichovice a okolí', exact: true }).getAttribute('href'), 'https://romanzdk.github.io/advent-mnichovice/');
+    assert.equal(await page.locator('.footer-links a').count(), 3);
     assert.deepEqual(await page.locator('.event-card').evaluateAll(cards => cards.map(card => card.dataset.id)), ['fixture-a', 'fixture-b', 'fixture-c', 'boundary-2']);
     await page.locator('#search').fill('dílna');
     await page.getByRole('button', { name: 'Zrušit filtry', exact: true }).click();
@@ -525,7 +526,7 @@ test('individual calendar downloads contain the chosen event and navigation disc
     assert.equal((text.match(/BEGIN:VEVENT/g) || []).length, 1);
     const navigation = card.getByRole('link', { name: /Do obce/ });
     assert.match(await navigation.getAttribute('href'), /^https:\/\/www\.openstreetmap\.org\/directions\?/);
-    assert.match(await navigation.getAttribute('href'), /49.936/);
+    assert.match(await navigation.getAttribute('href'), /49\.964/);
   });
 });
 
@@ -536,7 +537,7 @@ test('map groups shared places, selects a card and follows active filters even w
     assert.equal(await page.locator('#map .leaflet-interactive').count(), 2);
     assert.match(await page.locator('#map-notice').innerText(), /podklad/);
     assert.match(await page.locator('.leaflet-control-attribution').innerText(), /OpenStreetMap/);
-    const marker = page.locator('#map .leaflet-interactive[aria-label*="Mnichovice"]');
+    const marker = page.locator('#map .leaflet-interactive[aria-label*="Beroun"]');
     await marker.focus();
     await marker.press('Enter');
     await page.waitForSelector('.popup-event');
@@ -553,7 +554,7 @@ test('map groups shared places, selects a card and follows active filters even w
     await page.waitForSelector('.event-card');
     await page.locator('#show-map').click();
     await page.waitForSelector('#map .leaflet-interactive');
-    await page.locator('#map .leaflet-interactive[aria-label*="Mnichovice"]').click();
+    await page.locator('#map .leaflet-interactive[aria-label*="Beroun"]').click();
     await page.locator('.popup-event').first().click();
     assert.equal(await page.locator('#results').isVisible(), true);
     assert.equal(await page.locator('.event-card.selected').getAttribute('data-id'), 'fixture-b');

@@ -60,10 +60,10 @@ function foldLine(line) {
 }
 
 export function eventIcs(event, now = new Date()) {
-  const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Advent Mnichovice//CZ', 'CALSCALE:GREGORIAN',
+  const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Advent v Cesku//CZ', 'CALSCALE:GREGORIAN',
     'BEGIN:VTIMEZONE', 'TZID:Europe/Prague', 'BEGIN:STANDARD', 'DTSTART:19701025T030000', 'TZOFFSETFROM:+0200', 'TZOFFSETTO:+0100', 'RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU', 'END:STANDARD',
     'BEGIN:DAYLIGHT', 'DTSTART:19700329T020000', 'TZOFFSETFROM:+0100', 'TZOFFSETTO:+0200', 'RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU', 'END:DAYLIGHT', 'END:VTIMEZONE',
-    'BEGIN:VEVENT', `UID:${String(event.id).replace(/[^a-zA-Z0-9_-]/g, '')}@advent-mnichovice`, `DTSTAMP:${now.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z')}`];
+    'BEGIN:VEVENT', `UID:${String(event.id).replace(/[^a-zA-Z0-9_-]/g, '')}@advent-cesko-2026`, `DTSTAMP:${now.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z')}`];
   const description = [event.description, ...(event.notes || []), event.price && `Vstupné: ${event.price}`, event.registration && `Rezervace: ${event.registration}`].filter(Boolean);
   if (event.startTime) {
     lines.push(`DTSTART;TZID=Europe/Prague:${compact(event.date)}T${compact(event.startTime)}00`);

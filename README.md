@@ -1,146 +1,99 @@
+<p align="center">
+  <img src="site/social-preview.png" alt="Advent v Česku 2026 — sezonní mapa veřejných akcí" width="100%">
+</p>
+
 # Advent v Česku
 
-**Adventní akce na jedné mapě, s odkazem na pořadatele a přiznanými nejistotami.**
+**Najděte svůj adventní program. S odkazem přímo na pořadatele.**
 
-Sezonní projekt pro Vánoce 2026. Sbírá rozsvěcení stromků, mikulášské nadílky, jarmarky, tvoření a další adventní programy z obecních a pořadatelských kalendářů. Z veřejných podkladů vytváří přehled, ve kterém lze vybírat podle místa, termínu a typu akce.
+Sezonní mapa adventních a vánočních akcí pro **20. listopadu – 24. prosince 2026**. Rozsvěcení stromků, mikulášské nadílky, jarmarky, koncerty i tvoření na jednom místě — s přiznanými nejistotami a ověřitelným původem údajů.
 
-**[Otevřít živou mapu](https://romanzdk.github.io/advent-cesko-pilot/)** · [Architektura](#architektura) · [Jak fungují data](#od-oznámení-k-akci-na-mapě) · [Technická dokumentace](docs/operations.md)
+[**Otevřít mapu**](https://kamnaadvent.cz/) · [Poslat tip](https://github.com/romanzdk/advent-cesko-pilot/issues/new?template=tip.md) · [Veřejná hlášení](https://github.com/romanzdk/advent-cesko-pilot/issues?q=is%3Aissue) · [Provozní dokumentace](docs/operations.md)
 
 [![Kontroly a nasazení](https://github.com/romanzdk/advent-cesko-pilot/actions/workflows/deploy.yml/badge.svg)](https://github.com/romanzdk/advent-cesko-pilot/actions/workflows/deploy.yml)
+![Sezóna 2026](https://img.shields.io/badge/sez%C3%B3na-2026-244b3c?style=flat)
+[![Proprietární licence](https://img.shields.io/badge/licence-propriet%C3%A1rn%C3%AD-62695e?style=flat)](LICENSE)
 
-![Skutečná desktopová verze Adventu v Česku: filtry, chronologický seznam a mapa vybraných míst](docs/assets/desktop.png)
+> **Dostupnost webu:** poslední kontrola 12. listopadu 2026 potvrdila nasazení na GitHub Pages, ale DNS vlastní domény `kamnaadvent.cz` ještě nefungovalo. GitHub hlášení jsou dostupná nezávisle na doméně.
 
-*Screenshot nasazeného webu z 12. listopadu 2026 po rozšíření na šest krajů. Nejde o návrh rozhraní ani ukázková data.*
+## Co mapa nabízí
 
-## Proč projekt vznikl
+- **Výběr podle vás.** Kombinace kraje, obce, typu akce a termínu, textové hledání i filtr víkendu.
+- **Seznam i mapa.** Chronologický přehled na telefonu, prostorové zobrazení na větší obrazovce.
+- **Údaje se zdrojem.** Datum, zveřejněný čas, místo, známé vstupné, rezervace a přímý odkaz na pořadatele.
+- **Kalendář a navigace.** Samostatný ICS export každé akce; orientační polohy jsou výslovně označené.
+- **Viditelné pokrytí.** Sledované zdroje, poslední kontroly a položky čekající na ověření nejsou skryté.
+- **Veřejné tipy.** Návrh obce, odkazu nebo opravy přes GitHub; existující hlášení lze prohledat a doplnit komentářem. Odeslání vyžaduje účet GitHub a zařazení do mapy není automatické.
 
-Termíny adventních akcí bývají rozptýlené mezi obecními kalendáři, kulturními centry a samostatnými pozvánkami. Každý web zapisuje čas a místo jinak. Někde chybí hodina, jinde je důležitý údaj jen v textu nebo se liší místo akce od sídla pořadatele.
+## Ukázka rozhraní
 
-Projekt začal hledáním rozsvícení stromků a mikulášských akcí v okolí Mnichovic. Samostatná mapa Advent v Česku na něj navazuje sběrem ve více krajích. Běžné aktualizace využívají ověřené adaptéry, bez nového ručního průzkumu nebo AI.
+![Desktop: filtry, chronologický seznam a mapa vybraných míst](docs/assets/desktop.png)
 
-Cílem je usnadnit výběr akce a zachovat možnost ověřit si ji u pořadatele. Projekt zatím neslibuje úplný kalendář České republiky.
+<details>
+<summary>Zobrazení na telefonu</summary>
 
-## Co na webu najdete
+<img src="docs/assets/mobile.png" alt="Mobilní přehled s filtrem rozsvícení stromů" width="330">
 
-- Chronologický seznam a mapu s přepínáním zobrazení na mobilu.
-- Hledání a kombinovatelné filtry podle kraje, obce, typu akce a termínu, včetně dneška a tohoto víkendu.
-- Datum, zveřejněný čas, místo, známé vstupné, informace o rezervaci a přímý zdroj u každé položky.
-- Viditelné upozornění na neznámý čas, omezené zaměření programu nebo pouze orientační polohu.
-- Navigaci do obce a export jednotlivé akce do kalendáře ve formátu ICS.
-- Rozbalovací přehled sledovaných zdrojů, jejich dostupnosti, posledních kontrol a položek ke kontrole či mimo rozsah.
-- Formulář pro chybějící obec, odkaz na akci nebo opravu údajů. Připraví veřejné GitHub hlášení, které návštěvník po přihlášení potvrdí; bez účtu GitHub ho odeslat nelze.
-- Přehled posledních otevřených i uzavřených hlášení a hledání na GitHubu, aby se stejné tipy zbytečně neopakovaly. Návrh není automaticky zařazená akce.
+</details>
 
-### Na telefonu
+*Skutečné screenshoty veřejného webu z 12. listopadu 2026 po rozšíření na šest krajů. Zachycují tehdejší verzi rozhraní, nikoli aktuální počítadlo akcí. Úvodní sdílecí obrázek je samostatná značková ilustrace.*
 
-Seznam je výchozí mobilní zobrazení; mapu lze otevřít samostatně. Na snímku je použitý filtr rozsvícení stromů.
+## Pokrytí a rozsah
 
-<img src="docs/assets/mobile.png" alt="Skutečná mobilní verze s filtrem rozsvícení stromů a akcí v Babině, místní části Plas" width="330">
+**Datovaný stav k 12. listopadu 2026: 78 akcí · 12 zdrojů · 6 krajů.**
 
-*Mobilní screenshot z 12. listopadu 2026. Rozhraní používá stejná veřejná data jako desktop.*
+| Kraj | Sledované obce a pořadatelé |
+| --- | --- |
+| Plzeňský | Plasy, Černošín a ověřené místní části Plas |
+| Liberecký | Jilemnice, KC Golf Semily |
+| Jihomoravský | Rajhrad, Kuřim |
+| Středočeský | Beroun, Hořovice |
+| Jihočeský | Soběslav, IKS Třeboň |
+| Vysočina | Telč, Humpolec |
 
-## Aktuální pokrytí
+Jde o **výběr zdrojů, ne úplný kalendář krajů nebo celé ČR**. Aktuální stav načítání a rozsah kontrol najdete na webu v panelu *Zdroje a pokrytí*. Dvě položky čekají na dořešení termínu či více samostatných představení; [podrobnosti kontroly](docs/operations.md#ruční-kontrola-kandidátů).
 
-Sledované akce spadají do období **20. listopadu až 24. prosince 2026**.
+## Jak vznikají data
 
-- **Plzeňský kraj:** Plasy, Černošín a ověřené místní části Plas: Babina, Horní Hradiště, Žebnice a Nebřeziny.
-- **Liberecký kraj:** Jilemnice a pořadatelský výběr z Kulturního centra Semily / KC Golf.
-- **Jihomoravský kraj:** Rajhrad a Kuřim.
-- **Středočeský kraj:** Beroun a Hořovice.
-- **Jihočeský kraj:** Soběslav a pořadatelský kalendář IKS Třeboň.
-- **Kraj Vysočina:** Telč a Humpolec.
+![Architektura sběru, validace a statické publikace](docs/assets/architecture.png)
 
-**Stav k 12. listopadu 2026 po kontrole zadržených kandidátů: 78 publikovaných akcí, 12 zdrojů, 6 krajů.** Z původní fronty 37 kandidátů bylo 21 přijato a 14 vyřazeno podle sezonního nebo místního rozsahu; dvě položky zůstávají k dořešení. Všech 12 zdrojů se podařilo načíst; stav „částečně“ přiznává nevyřešené položky, nikoli kompletní pokrytí. Je to datovaný snímek pokrytí, ne trvale aktuální počítadlo. Poslední výsledky a rozsah kontrol najdete přímo na webu v sekci *Zdroje a pokrytí*.
+**Veřejné kalendáře → Python adaptéry → SQLite a cache → validovaná veřejná data → GitHub Pages.**
 
-Výběr několika měst neznamená pokrytí celého kraje. Původní [mapa Mnichovic a okolí](https://romanzdk.github.io/advent-mnichovice/) má vlastní repozitář i hlídání a zůstává oddělená.
+Sběrač respektuje robots.txt, omezuje požadavky, používá HTTP cache a rozpoznává změny obsahu. Nejasné údaje ponechává k ověření. Interní databáze a zachycené podklady se nepublikují; prohlížeč dostává pouze veřejnou projekci.
 
-## Architektura
+Běžná aktualizace je deterministická, **bez LLM volání**. Python běží na serveru, GitHub Actions provádí kontroly a nasazuje statický web. Denní plán je nastavený na **08:30 Europe/Prague, 13. listopadu – 24. prosince 2026**; po konci sezony publisher nic nesbírá ani nepublikuje. Ručně ověřené průchody nejsou vydávány za několikatýdenní provoz.
 
-Projekt odděluje sběr dat od jejich zobrazování. Python běží na serveru; návštěvník dostává hotový statický web z GitHub Pages. Prohlížeč nemá přístup k interní databázi ani ke sběrači.
+**Technologie:** Python · SQLite · HTML/CSS/JavaScript · Leaflet · OpenStreetMap · GitHub Actions / Pages.
 
-![Architektura: veřejné zdroje a konfigurace vstupují do Python sběrače se soukromou SQLite a HTTP cache; validovaná veřejná data se přes GitHub Actions dostávají na GitHub Pages](docs/assets/architecture.png)
+[Architektura ve větším formátu](docs/architecture.html) · [Sběrač a formáty zdrojů](scripts/COLLECTOR.md) · [Provoz, validace a obnova](docs/operations.md)
 
-[Zdroj schématu v samostatném HTML/SVG](docs/architecture.html)
+## Důvěryhodnost před počtem bodů
 
-### Od oznámení k akci na mapě
+- **Neznámý čas se nevymýšlí.** Datum bez hodiny není tvrzení, že program trvá celý den.
+- **Střed obce není přesný vstup.** U orientačních bodů je přesnost přiznaná.
+- **Rozsah dat není otevírací doba.** Vícedenní interval neznamená nepřetržitý program.
+- **Výpadek není zrušení.** Poslední dobrá data lze zachovat při chybě sítě; nový rozporný obsah naopak vede ke kontrole.
+- **Odkaz není rezervace.** Cena ani rezervační stránka nepotvrzují zbývající kapacitu. Před cestou rozhoduje pořadatel.
 
-1. **Registr určí zdroje a rozsah.** `data/sources.json` obsahuje kalendáře, rozpoznávané detailní odkazy, adaptéry a sezonní okno. Samostatná konfigurace drží ověřené mapové polohy.
-2. **Sběrač načte veřejné stránky.** Hledá nové detailní odkazy, respektuje robots.txt, omezuje počet požadavků a používá HTTP cache s ETag, Last-Modified a kontrolou otisků obsahu.
-3. **Adaptéry sjednotí údaje.** Přednost má skutečný JSON-LD `Event`; další adaptéry čtou známé HTML šablony. Datum musí mít doložený rok, místo musí odpovídat lokalitě. Nejasnosti zůstávají k ověření.
-4. **SQLite zachová stav a původ údajů.** Stabilní identifikátory a otisky věcného obsahu rozlišují nové, změněné a nezměněné položky. Záznamy uchovávají zdroj a pozorování důležitých polí.
-5. **Vznikne veřejná projekce.** `events.json` slouží seznamu a mapě, `coverage.json` popisuje pokrytí a poslední běh, `review.json` obsahuje omezený veřejný přehled nejasných kandidátů. Interní databáze a zachycené stránky zůstávají mimo repozitář.
-6. **Publisher zkontroluje a ověří nasazení.** Validuje veřejné soubory a publikuje pouze tři povolené JSON. Push do `main` spustí testy a nasazení adresáře `site/`. Úspěch potvrdí až kontrola vzdáleného commitu, výsledku GitHub Actions a skutečných dat na webu.
+Projekt neobchází blokované kalendáře a neslibuje obecné zpracování všech plakátů, PDF nebo Facebooku.
 
-### Použité technologie
+## Kvalita a orientace v kódu
 
-| Část | Technologie | Důvod |
-| --- | --- | --- |
-| Sběr a zpracování | Python, standardní knihovna | Běžný sběr nevyžaduje AI ani externí Python balíčky. |
-| Evidence | SQLite a lokální HTTP cache | Historie, původ údajů a opakovatelné porovnávání změn. |
-| Web | HTML, CSS, JavaScript | Statický frontend bez build kroku a aplikačního API. |
-| Mapa | Leaflet a OpenStreetMap | Mapový přehled s uvedenou přesností polohy. |
-| Publikace | Git, GitHub Actions, GitHub Pages | Kontroly a samostatné statické nasazení. |
-| Spouštění | Hermes v režimu `no_agent` | Časovač volá Python skript bez LLM. |
-
-## Jak projekt zachází s nejistotou
-
-Důležitější než počet bodů na mapě je to, co zdroj skutečně potvrzuje.
-
-- **Neznámý čas se nedopočítává.** Na webu zůstane neznámý. V ICS je neznámá hodina poznámkou data; pokud je znám začátek, ale ne konec, export výslovně označí orientační hodinovou délku.
-- **Mapa nepředstírá přesný vstup.** Současné body představují orientační středy obcí či místních částí. Lokalita akce se neodvozuje jen ze sídla pořadatele.
-- **Vícedenní interval není otevírací doba.** Krajní data neznamenají nepřetržité ani každodenní otevření.
-- **Nedostupnost není zrušení akce.** Při chybě načtení zůstávají poslední dobrá data a zdroj dostane chybový stav. Nově načtený rozporný obsah naopak stáhne položku do kontroly.
-- **Rozsah zdrojů je viditelný.** Městský kalendář Semil automatické načítání sledovaných adres nepovoluje. Sběrač místo jeho obcházení čte přímo povolený web KC Golf a tento rozdíl uvádí v pokrytí.
-- **Známé vyřazení není nevyřešený problém.** Programy mimo období a zájezdy se evidují zvlášť; místo odjezdu se nezaměňuje za místo vánočního programu.
-
-Zveřejněná cena ani odkaz na rezervaci nepotvrzují volná místa. Před cestou je rozhodující aktuální informace pořadatele.
-
-## Automatizace a ověření
-
-Denní aktualizace je nastavena na **08:30 Europe/Prague od 13. listopadu do 24. prosince 2026**. Publisher má zámek proti souběhu, kontroluje čistotu pracovní kopie a pevný cílový repozitář. Po konci sezony nic nesbírá ani nepublikuje. Běžný úspěch je tichý, chyba se hlásí správci.
-
-Celý průchod sběrem, publikací a ověřením skutečného webu byl spuštěn přes stejný skriptový launcher jako v plánovači. K datu uvedeného snímku byly naplánované pravidelné běhy teprve před prvním ranním spuštěním; ruční ověření není vydáváno za několikadenní provoz.
-
-Po kontrole celé fronty 37 kandidátů z 12. listopadu 2026 přibylo **21 ověřených akcí**, původních 57 zůstalo věcně beze změny. Dva závěrečné živé průchody potvrdily **78 nezměněných akcí**, bez nových položek či duplicit. Sběrač vykázal **0 AI volání**; tento údaj se nevztahuje k úvodní rešerši a vývoji. Skutečnou délku běhu a počty HTTP požadavků ukazuje sekce *Zdroje a pokrytí*.
-
-Ověření zahrnuje:
-
-- **75 Python testů:** parsování podkladů včetně tří nových HTML šablon, registr zdrojů, práce s daty, výpadky, geografická přiřazení a bezpečné publikování v dočasných Git repozitářích.
-- **42 JavaScriptových a prohlížečových testů:** šestikrajové filtry, kalendář, mobilní rozhraní, formulář tipů, veřejná hlášení, chybové stavy a bezpečné vykreslení.
-- Kontrolu skutečně nasazené desktopové i mobilní verze, mapových dlaždic a stažení ICS.
-
-CI provádí offline Python testy, čisté JS testy, validaci veřejných dat a kontrolu syntaxe. Úplná sada Chromium testů se spouští lokálně. Počty testů popisují ověřený stav k 12. listopadu 2026.
-
-## Co je hotové a co následuje
-
-Projekt má funkční sběr z uvedených dvanácti zdrojů, oddělenou interní evidenci, veřejný web a sezonní publikační úlohu. Nečte Facebook, nezpracovává obecně všechny plakáty a PDF a nevytváří automatické pozvánky do osobního kalendáře.
-
-Validátor odvozuje zdroje, kraje a přiřazení událostí z registru; rozhraní ukazuje skutečný rozsah z dat. U šesti nových zdrojů se automaticky přijímají pouze ověřené názvy míst v příslušné obci. Nové místo čeká na kontrolu, aby se například program v Berouně nezobrazil jako akce v Hořovicích.
-
-Zadrženy zůstávají dvě položky: berounské **Skleněné Vánoce aneb…** nemají u konce výstavy uvedený rok; humpolecká **Česká mše vánoční Jakuba Jana Ryby** má dvě samostatná představení 17. prosince v 17:00 a 19:00, nikoli jeden interval. První potřebuje úplný termín, druhá podporu více časových výskytů na jedné zdrojové URL.
-
-Další krok je doplňovat ověřené zdroje a místa; ostatní kraje ČR zatím nejsou zahrnuté. Rozšíření vždy vyžaduje zdrojovou a geografickou kontrolu, nestačí přidat název kraje do filtru.
-
-## Orientace v repozitáři
+**75 Python testů a 45 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, filtry, kalendář, mobilní rozhraní, tipy i sdílecí metadata. Počty popisují ověřovaný stav k 12. listopadu 2026. CI běží offline; úplné Chromium testy se spouštějí lokálně.
 
 ```text
-scripts/collector.py       sběr, adaptéry, evidence a veřejný export
-scripts/publish_daily.py   validovaná publikace a ověření webu
-scripts/validate_public.py kontrola veřejné projekce
-data/                     registr zdrojů a mapové polohy
-site/                     frontend a publikovaná data
-tests/                    Python testy a přenositelné faktické podklady
-tests-ui/                 JS a izolované prohlížečové testy
-docs/                     architektura, screenshoty a provozní dokumentace
-private/                  lokální stav; ignorovaný a nepublikovaný
+scripts/     sběr, adaptéry, validace a publisher
+data/        registr zdrojů a ověřené mapové polohy
+site/        statický frontend, veřejná data a sdílecí obrázek
+tests/       Python testy a přenositelné faktické podklady
+tests-ui/    JS testy a izolované prohlížečové scénáře
+docs/        architektura, screenshoty, vizuální podklady a provoz
 ```
 
-[Provoz a ověřovací příkazy](docs/operations.md) · [Podrobnosti sběrače](scripts/COLLECTOR.md)
+## Autor a licence
 
-## Autor a podmínky použití
+**[Roman Žydyk](https://romanzdk.com/)** · [GitHub](https://github.com/romanzdk)
 
-Projekt připravil **[Roman Žydyk](https://github.com/romanzdk)**.
+Vlastní kód není open source. **Všechna práva vyhrazena** v rozsahu práv chráněných zákonem a náležejících autorovi. Běžné používání veřejné mapy je dovoleno; zachována jsou práva podle podmínek GitHubu a zákonné výjimky. Veřejný repozitář není obecnou licencí k úpravám, šíření nebo vlastnímu provozu — úplné podmínky jsou v [LICENSE](LICENSE).
 
-Vlastní kód projektu není open source. **Všechna práva vyhrazena**, v rozsahu práv chráněných zákonem a náležejících uvedenému nositeli práv. Veřejný repozitář není obecným svolením ke spuštění vlastní kopie, úpravám nebo šíření. Běžné používání veřejné mapy je dovoleno; zachována jsou práva podle podmínek GitHubu a zákonné výjimky. Úplné podmínky jsou v [LICENSE](LICENSE).
-
-Cizí komponenty a data si ponechávají vlastní podmínky. Leaflet zůstává pod [BSD 2-Clause](site/vendor/LEAFLET-LICENSE.txt); práva k podkladům pořadatelů a [OpenStreetMap](https://www.openstreetmap.org/copyright) se tím nemění.
+Cizí komponenty a data mají vlastní podmínky: [Leaflet / BSD 2-Clause](site/vendor/LEAFLET-LICENSE.txt), [OpenStreetMap](https://www.openstreetmap.org/copyright) a podklady jednotlivých pořadatelů. Obrys ČR v propagační ilustraci pochází z [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/) (public domain).

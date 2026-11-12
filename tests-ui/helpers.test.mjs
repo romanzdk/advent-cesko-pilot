@@ -1,8 +1,32 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 let helpers = {};
 try { helpers = await import('../site/helpers.js'); } catch (error) { if (error.code !== 'ERR_MODULE_NOT_FOUND') throw error; }
-const event = (id, date, startTime = null, extra = {}) => ({ id, title: id, date, startTime, town: 'Mnichovice', category: 'strom', status: 'confirmed', ...extra });
+const event = (id, date, startTime = null, extra = {}) => ({ id, title: id, date, startTime, town: 'Beroun', category: 'strom', status: 'confirmed', ...extra });
+test('social metadata describes the current project with a full-size local PNG preview', async () => {
+  const html = await readFile(new URL('../site/index.html', import.meta.url), 'utf8');
+  const metadata = new Map([...html.matchAll(/<meta\b[^>]*>/gi)].map(([tag]) => {
+    const attributes = Object.fromEntries([...tag.matchAll(/([\w:-]+)\s*=\s*["']([^"']*)["']/g)].map(([, key, value]) => [key, value]));
+    return [attributes.property || attributes.name, attributes.content];
+  }));
+  for (const [key, value] of Object.entries({
+    'og:title': 'Advent v Česku 2026',
+    'og:site_name': 'Advent v Česku',
+    'og:locale': 'cs_CZ',
+    'og:type': 'website',
+    'og:image': 'https://raw.githubusercontent.com/romanzdk/advent-cesko-pilot/main/site/social-preview.png',
+    'og:image:width': '1280',
+    'og:image:height': '640',
+    'twitter:card': 'summary_large_image'
+  })) assert.equal(metadata.get(key), value, key);
+  const png = await readFile(new URL('../site/social-preview.png', import.meta.url));
+  assert.deepEqual(png.subarray(0, 8), Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
+  assert.equal(png.toString('ascii', 12, 16), 'IHDR');
+  assert.equal(png.readUInt32BE(16), 1280);
+  assert.equal(png.readUInt32BE(20), 640);
+});
+
 test('default season list is chronological, including dates before today and unknown times last', () => {
   assert.equal(typeof helpers.filterEvents, 'function');
   const events = [event('later', '2026-12-20'), event('unknown', '2026-11-20'), event('early', '2026-11-20', '16:00')];
@@ -11,7 +35,7 @@ test('default season list is chronological, including dates before today and unk
 });
 test('combined filters use accent-insensitive search and overlap multiday events', () => {
   const events = [event('Vánoční dílna', '2026-11-27', '15:00', { category: 'tvoreni', endDate: '2026-11-30' }), event('other', '2026-11-28')];
-  assert.deepEqual(helpers.filterEvents(events, { query: 'vanocni', town: 'Mnichovice', category: 'tvoreni', period: 'weekend' }, new Date('2026-11-25T12:00:00Z')).map(e => e.id), ['Vánoční dílna']);
+  assert.deepEqual(helpers.filterEvents(events, { query: 'vanocni', town: 'Beroun', category: 'tvoreni', period: 'weekend' }, new Date('2026-11-25T12:00:00Z')).map(e => e.id), ['Vánoční dílna']);
   assert.equal(helpers.filterEvents(events, { town: 'Říčany' }).length, 0);
   assert.equal(helpers.filterEvents(events, { category: 'betlem' }).length, 0);
   assert.equal(helpers.filterEvents(events, { query: 'nonsense' }).length, 0);
@@ -28,7 +52,7 @@ test('public links only allow https and co-located events share one marker', () 
   assert.equal(helpers.safeHttps('http://example.cz'), null);
   assert.equal(helpers.safeHttps('https://user:secret@example.cz'), null);
   assert.equal(helpers.safeHttps('https://example.cz/program'), 'https://example.cz/program');
-  const location = { lat: 49.93, lon: 14.71, precision: 'town', label: 'Mnichovice' };
+  const location = { lat: 49.964, lon: 14.073, precision: 'town', label: 'Beroun' };
   const groups = helpers.groupLocations([event('a', '2026-11-28', null, { location }), event('b', '2026-12-05', null, { location }), event('unmapped', '2026-12-06'), event('bad', '2026-12-07', null, { location: { lat: 100, lon: 14 } })]);
   assert.equal(groups.length, 1);
   assert.deepEqual(groups[0].events.map(e => e.id), ['a', 'b']);
@@ -53,6 +77,21 @@ test('individual calendar export distinguishes published time from an estimated 
   assert.match(unknown, /Čas programu není zveřejněn/);
   assert.doesNotMatch(unknown, /DURATION:PT1H/);
   assert(rawIcs.split('\r\n').every(line => Buffer.byteLength(line) <= 75));
+});
+
+test('calendar export identifies the current nationwide project', () => {
+  const ics = helpers.eventIcs(event('brand-check', '2026-11-28'));
+  assert(ics.split('\r\n').includes('PRODID:-//Advent v Cesku//CZ'));
+});
+
+test('calendar UID is stable across edits and export times in the current season namespace', () => {
+  const base = event('public-123', '2026-11-28', '16:00');
+  const first = helpers.eventIcs(base, new Date('2026-11-12T10:00:00Z'));
+  const edited = helpers.eventIcs({ ...base, title: 'Nový název', date: '2026-12-05', town: 'Praha' }, new Date('2026-11-13T12:00:00Z'));
+  const uid = ics => ics.replace(/\r\n /g, '').split('\r\n').find(line => line.startsWith('UID:'));
+  assert.equal(uid(first), 'UID:public-123@advent-cesko-2026');
+  assert.equal(uid(edited), uid(first));
+  assert.notEqual(uid(helpers.eventIcs({ ...base, id: 'public-456' })), uid(first));
 });
 
 test('calendar handles overnight published ends without exporting an end before the start', () => {
