@@ -1,0 +1,44 @@
+{
+  "events": [
+    {
+      "in_scope": true,
+      "source_id": "cz-jilemnice-calendar",
+      "source_url": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/rozsviceni-vanocniho-stromecku-v-jilemnici-4001_2935cs.html",
+      "raw_html": "jilemnice-tree.html",
+      "date": "2026-11-29",
+      "start_time": "16:00"
+    },
+    {
+      "in_scope": true,
+      "source_id": "cz-jilemnice-calendar",
+      "source_url": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/vanocni-tvoreni-pro-dospele-4018_2947cs.html",
+      "raw_html": "jilemnice-workshop.html",
+      "date": "2026-12-02",
+      "start_time": "17:00"
+    },
+    {
+      "in_scope": true,
+      "source_id": "cz-jilemnice-calendar",
+      "source_url": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/beckove-kvarteto-vanocni-klarinetove-dostavenicko-4031_2961cs.html",
+      "raw_html": "jilemnice-carols.html",
+      "date": "2026-12-20",
+      "start_time": "19:00"
+    },
+    {
+      "in_scope": true,
+      "source_id": "cz-semily-calendar",
+      "source_url": "https://www.semily.cz/mikulasske%2Dcaje%2Daneb%2Dmozna%2Dprijde%2Di%2Dmikulas/a-5747",
+      "raw_html": "semily-mikulas.html",
+      "date": "2026-12-03",
+      "start_time": "15:00"
+    },
+    {
+      "in_scope": true,
+      "source_id": "cz-semily-calendar",
+      "source_url": "https://www.semily.cz/vanoce%2Ds%2Dmusicou%2Dbohemicou/a-5837",
+      "raw_html": "semily-carols.html",
+      "date": "2026-12-11",
+      "start_time": "19:00"
+    }
+  ]
+}

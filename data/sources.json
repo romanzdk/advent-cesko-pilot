@@ -1,0 +1,119 @@
+{
+  "season": 2026,
+  "window": {
+    "from": "2026-11-20",
+    "through": "2026-12-24"
+  },
+  "sources": [
+    {
+      "id": "christmas2026-plzensky-plasy",
+      "town": "Plasy",
+      "region": "Plzeňský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.plasy.cz/turista/kalendar-akci-v-plasich/",
+        "https://www.plasy.cz/turista/kalendar-akci-v-plasich/?page=2"
+      ],
+      "url_regex": "^https://www\\.plasy\\.cz/turista/kalendar\\-akci\\-v\\-plasich/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [
+        "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromecku-v-plasich-3900_1389cs.html",
+        "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-dilnicky-pro-deti-3897_1386cs.html",
+        "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-vystava-3894_1381cs.html",
+        "https://www.plasy.cz/turista/kalendar-akci-v-plasich/kolednici-z-mladotic-3903_1392cs.html"
+      ],
+      "feed_url": null,
+      "coverage_note": "Pilotní výběr měst a omezený počet stránek, nikoli úplný soupis kraje.",
+      "max_details": 14
+    },
+    {
+      "id": "christmas2026-plzensky-cernosin",
+      "town": "Černošín",
+      "region": "Plzeňský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/"
+      ],
+      "url_regex": "^https://www\\.cernosin\\.cz/kultura\\-a\\-sport/kam\\-za\\-kulturou\\-a\\-sportem/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [
+        "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/rozsviceni-vanocniho-stromu-1885_323cs.html",
+        "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/mikulasska-besidka-1887_325cs.html",
+        "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/betlem-v-kostele-1889_327cs.html",
+        "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/adventni-koncert-1888_326cs.html"
+      ],
+      "feed_url": null,
+      "coverage_note": "Pilotní výběr měst a omezený počet stránek, nikoli úplný soupis kraje.",
+      "max_details": 14
+    },
+    {
+      "id": "cz-semily-calendar",
+      "town": "Semily",
+      "region": "Liberecký kraj",
+      "adapter": "vismo",
+      "index_urls": [
+        "https://www.semily.cz/vismo/kalendar-akci.asp?hledani=1&id_org=14724&kdy=-1&datum_od=20.11.2026&datum_do=24.12.2026"
+      ],
+      "url_regex": "^https://(?:www\\.)?semily\\.cz/(?:[^/?#]+/a-\\d+(?:[?#].*)?|vismo/akce\\.asp\\?[^#]*\\bid=\\d+(?:[&#].*)?)$",
+      "seed_urls": [
+        "https://www.semily.cz/mikulasske%2Dcaje%2Daneb%2Dmozna%2Dprijde%2Di%2Dmikulas/a-5747",
+        "https://www.semily.cz/vanoce%2Ds%2Dmusicou%2Dbohemicou/a-5837"
+      ],
+      "feed_url": null,
+      "coverage_note": "Pilotní výběr měst a omezený počet stránek, nikoli úplný soupis kraje.",
+      "max_details": 14
+    },
+    {
+      "id": "cz-jilemnice-calendar",
+      "town": "Jilemnice",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/"
+      ],
+      "url_regex": "^https://(?:www\\.)?mestojilemnice\\.cz/zivot-ve-meste/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html(?:[?#].*)?$",
+      "seed_urls": [
+        "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/rozsviceni-vanocniho-stromecku-v-jilemnici-4001_2935cs.html",
+        "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/vanocni-tvoreni-pro-dospele-4018_2947cs.html",
+        "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/beckove-kvarteto-vanocni-klarinetove-dostavenicko-4031_2961cs.html"
+      ],
+      "feed_url": null,
+      "coverage_note": "Pilotní výběr měst a omezený počet stránek, nikoli úplný soupis kraje.",
+      "max_details": 14
+    },
+    {
+      "id": "christmas2026-jihomoravsky-rajhrad",
+      "town": "Rajhrad",
+      "region": "Jihomoravský kraj",
+      "adapter": "wordpress",
+      "index_urls": [
+        "https://www.rajhrad.cz/kategorie/akce-rajhrad/",
+        "https://www.rajhrad.cz/kategorie/akce-rajhrad/page/2/"
+      ],
+      "url_regex": "^https://www\\.rajhrad\\.cz/(?:[0-9]{4}/[0-9]{2}/[^/?#]+/|\\?p=[0-9]+)$",
+      "seed_urls": [
+        "https://www.rajhrad.cz/2026/11/vanocni-jarmark-zs-rajhrad-27-11-2026/",
+        "https://www.rajhrad.cz/2026/10/mikulasska-nadilka/",
+        "https://www.rajhrad.cz/2026/10/setkani-u-vanocniho-stromu-1-12-2026/"
+      ],
+      "feed_url": "https://www.rajhrad.cz/kategorie/akce-rajhrad/feed/",
+      "coverage_note": "Pilotní výběr měst a omezený počet stránek, nikoli úplný soupis kraje.",
+      "max_details": 14
+    },
+    {
+      "id": "christmas2026-jihomoravsky-kurim",
+      "town": "Kuřim",
+      "region": "Jihomoravský kraj",
+      "adapter": "drupal",
+      "index_urls": [
+        "https://www.kulturakurim.cz/"
+      ],
+      "url_regex": "^https://www\\.kulturakurim\\.cz/akce-[a-z0-9-]+/?$",
+      "seed_urls": [
+        "https://www.kulturakurim.cz/akce-vanocni-tvoreni-vanocni-svitici-pranicka",
+        "https://www.kulturakurim.cz/akce-adventni-zastaveni-tvorime-vanocni-svicny"
+      ],
+      "feed_url": null,
+      "coverage_note": "Pilotní výběr měst a omezený počet stránek, nikoli úplný soupis kraje.",
+      "max_details": 14
+    }
+  ]
+}

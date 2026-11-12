@@ -1,0 +1,37 @@
+[
+  {
+    "id": "rajhrad-jarmark",
+    "source_id": "christmas2026-jihomoravsky-rajhrad",
+    "source_url": "https://www.rajhrad.cz/2026/11/vanocni-jarmark-zs-rajhrad-27-11-2026/",
+    "date": "2026-11-27",
+    "start_time": "15:00"
+  },
+  {
+    "id": "rajhrad-mikulas",
+    "source_id": "christmas2026-jihomoravsky-rajhrad",
+    "source_url": "https://www.rajhrad.cz/2026/10/mikulasska-nadilka/",
+    "date": "2026-11-28",
+    "start_time": "10:00"
+  },
+  {
+    "id": "rajhrad-strom",
+    "source_id": "christmas2026-jihomoravsky-rajhrad",
+    "source_url": "https://www.rajhrad.cz/2026/10/setkani-u-vanocniho-stromu-1-12-2026/",
+    "date": "2026-12-01",
+    "start_time": "17:00"
+  },
+  {
+    "id": "skc-pranicka",
+    "source_id": "christmas2026-jihomoravsky-kurim",
+    "source_url": "https://www.kulturakurim.cz/akce-vanocni-tvoreni-vanocni-svitici-pranicka",
+    "date": "2026-12-09",
+    "start_time": "15:30"
+  },
+  {
+    "id": "skc-svicny",
+    "source_id": "christmas2026-jihomoravsky-kurim",
+    "source_url": "https://www.kulturakurim.cz/akce-adventni-zastaveni-tvorime-vanocni-svicny",
+    "date": "2026-12-16",
+    "start_time": "18:00"
+  }
+]

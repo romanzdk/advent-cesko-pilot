@@ -1,0 +1,11 @@
+{
+  "name": "advent-mnichovice-ui-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test helpers.test.mjs pilot.test.mjs ui.test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.58.2"
+  }
+}

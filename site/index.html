@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#244b3c">
+  <meta name="description" content="Advent v Česku 2026: pilotní výběr šesti měst v Plzeňském, Libereckém a Jihomoravském kraji. Akce od 20. listopadu do 24. prosince, mapa a veřejné zdroje.">
+  <title>Advent v Česku 2026</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./vendor/leaflet.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#results">Přejít na akce</a>
+  <header class="masthead wrap">
+    <a class="wordmark" href="./" aria-label="Advent v Česku, úvod">advent <span>v Česku</span><span class="wordmark-star" aria-hidden="true">✳</span></a>
+    <span class="edition">PILOT · 3 KRAJE <b>2026</b></span>
+  </header>
+  <main class="wrap">
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">20. 11. – 24. 12. 2026</p><h1 id="page-title">Advent v Česku 2026</h1><p class="intro-text">Pilot: Plzeňský, Liberecký a Jihomoravský kraj</p><p class="scope-note">Výběr šesti měst, nikoli úplný přehled krajů ani celé ČR.</p></div>
+      <p class="editor-note">U každé akce najdete veřejný zdroj i to, co ještě není jisté.</p>
+    </section>
+    <form class="filters" id="filters" aria-label="Filtrovat akce">
+      <label class="search-field">Hledat<input type="search" id="search" name="query" placeholder="Název, místo nebo obec…" autocomplete="off"></label>
+      <label>Termín<select id="period" name="period"><option value="all">Všechny termíny</option><option value="today">Dnes</option><option value="weekend">Tento víkend</option></select></label>
+      <label>Co vás láká<select id="category" name="category"><option value="">Všechny typy</option><option value="strom">Rozsvícení stromu</option><option value="mikulas">Mikuláš</option><option value="trhy">Trhy a jarmarky</option><option value="tvoreni">Tvoření</option><option value="setkani">Setkání</option><option value="betlem">Betlémy</option></select></label>
+      <label>Kraj<select id="region" name="region"><option value="">Všechny kraje</option></select></label>
+      <label>Obec<select id="town" name="town"><option value="">Všechny obce</option></select></label>
+      <button class="reset-button" type="reset">Zrušit filtry</button>
+    </form>
+    <details id="coverage" class="coverage">
+      <summary>Zdroje a pokrytí</summary>
+      <div class="coverage-content" id="coverage-content" role="status" aria-live="polite"><p>Načítáme pokrytí zdrojů…</p></div>
+    </details>
+    <div class="results-toolbar"><div><h2 id="results-heading">Kam vyrazit</h2><p id="result-count" role="status" aria-live="polite">Načítáme přehled…</p></div><div class="view-switch" aria-label="Zobrazení"><button id="show-list" type="button" aria-pressed="true" aria-controls="results">Seznam</button><button id="show-map" type="button" aria-pressed="false" aria-controls="map-panel">Mapa</button></div></div>
+    <div class="explore-layout" id="explore" data-view="list">
+      <section class="results" id="results" aria-labelledby="results-heading" tabindex="-1" aria-busy="true"><p class="state-message">Načítáme adventní akce…</p></section>
+      <aside class="map-panel" id="map-panel" aria-label="Mapa akcí"><div class="map-heading"><h2>Mapa výběru</h2><span id="map-count"></span></div><div id="map" aria-label="Interaktivní mapa míst konání"></div><p id="map-notice" class="map-notice" role="status">Mapa se načítá. Všechny akce najdete i v seznamu.</p><p class="map-caption">Body ve středu obce jsou pouze orientační. Přesné místo ověřte u pořadatele.</p></aside>
+    </div>
+    <section class="about" aria-label="O přehledu"><h2>Než vyrazíte</h2><p>Program se může změnit. Aktuální čas, podmínky vstupu a volná místa si ověřte v odkazu na pořadatele. Neuvedený čas neznamená celodenní program. Časy jsou místní, pro Česko.</p><p id="data-updated"></p></section>
+  </main>
+  <footer class="wrap footer"><span>Advent v Česku · pilot 2026</span><a href="https://romanzdk.github.io/advent-mnichovice/">Mnichovice a okolí</a></footer>
+  <noscript><p class="wrap state-message">Pro zobrazení a filtrování akcí je potřeba JavaScript. Přehled vychází z veřejných programů pořadatelů.</p></noscript>
+</body>
+</html>

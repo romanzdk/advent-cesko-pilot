@@ -1,0 +1,44 @@
+{
+  "Plasy": {
+    "lat": 49.9341107,
+    "lon": 13.3889549,
+    "precision": "town",
+    "label": "Plasy — orientační poloha obce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439746"
+  },
+  "Černošín": {
+    "lat": 49.8162537,
+    "lon": 12.8838251,
+    "precision": "town",
+    "label": "Černošín — orientační poloha obce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438873"
+  },
+  "Semily": {
+    "lat": 50.602249,
+    "lon": 15.33526,
+    "precision": "town",
+    "label": "Semily — orientační poloha obce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438971"
+  },
+  "Jilemnice": {
+    "lat": 50.6091761,
+    "lon": 15.5064747,
+    "precision": "town",
+    "label": "Jilemnice — orientační poloha obce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439145"
+  },
+  "Rajhrad": {
+    "lat": 49.0890629,
+    "lon": 16.6030548,
+    "precision": "town",
+    "label": "Rajhrad — orientační poloha obce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442073"
+  },
+  "Kuřim": {
+    "lat": 49.2987857,
+    "lon": 16.531396,
+    "precision": "town",
+    "label": "Kuřim — orientační poloha obce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442051"
+  }
+}
