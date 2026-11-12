@@ -10,7 +10,7 @@ Sezonní projekt pro Vánoce 2026. Sbírá rozsvěcení stromků, mikulášské 
 
 ![Skutečná desktopová verze Adventu v Česku: filtry, chronologický seznam a mapa vybraných míst](docs/assets/desktop.png)
 
-*Screenshot nasazeného webu z 12. listopadu 2026 před rozšířením na šest krajů. Nejde o návrh rozhraní ani ukázková data.*
+*Screenshot nasazeného webu z 12. listopadu 2026 po rozšíření na šest krajů. Nejde o návrh rozhraní ani ukázková data.*
 
 ## Proč projekt vznikl
 
