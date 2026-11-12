@@ -1,5 +1,5 @@
 import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs, distanceKm, nearbyEvents, MAP_COLORS, markerCategory } from './helpers.js';
-import { dayHighlight, townSuggestions } from './helpers.js';
+import { dayHighlight, townSuggestions, eventPermalink, eventIdFromHash } from './helpers.js';
 
 const $ = id => document.getElementById(id);
 const categories = { strom: 'Rozsvícení stromu', mikulas: 'Mikuláš', trhy: 'Trhy a jarmarky', tvoreni: 'Tvoření', setkani: 'Setkání', betlem: 'Betlémy' };
@@ -14,7 +14,13 @@ let map, markerLayer, mapPromise;
 let tileFailed = false;
 let userPosition = null, userMarker, locationTimer;
 let locationGeneration = 0;
+let shareGeneration = 0, activeShareStatus;
 const desktop = matchMedia('(min-width: 821px)');
+const permalinkStatus = el('p', null, 'permalink-status');
+permalinkStatus.id = 'permalink-status';
+permalinkStatus.setAttribute('role', 'status');
+permalinkStatus.hidden = true;
+$('explore').before(permalinkStatus);
 
 function selectEvent(id) {
   setView('list');
@@ -28,6 +34,39 @@ function selectEvent(id) {
     }
   }
 }
+function openPermalink() {
+  if (!eventsLoaded) return;
+  const id = eventIdFromHash(location.hash);
+  const target = events.find(event => event.id === id);
+  const message = target || !location.hash.startsWith('#akce') ? '' : id ? 'Tato akce není v aktuálním přehledu. Mohla být odstraněna; ostatní akce můžete dál procházet.' : 'Odkaz na akci není platný. Ostatní akce můžete dál procházet.';
+  permalinkStatus.textContent = message;
+  permalinkStatus.hidden = !message;
+  if (target) {
+    let changed = false;
+    for (const [control, key] of [['search', 'query'], ['region', 'region'], ['town', 'town'], ['category', 'category']]) {
+      if (!filterEvents([target], { [key]: $(control).value }).length) { $(control).value = ''; changed = true; }
+    }
+    let dateMatches = false;
+    try {
+      const badInput = $('period').value === 'custom' && ['date-from', 'date-to'].some(id => $(id).validity.badInput);
+      dateMatches = !badInput && filterEvents([target], { period: $('period').value, dateFrom: $('date-from').value, dateTo: $('date-to').value }).length > 0;
+    } catch (error) { if (!(error instanceof RangeError)) throw error; }
+    if (!dateMatches) {
+      $('period').value = 'all';
+      $('date-from').value = '';
+      $('date-to').value = '';
+      changed = true;
+    }
+    if ($('locate-user').disabled || userPosition && !nearbyEvents([target], userPosition, Number($('nearby-radius').value)).length) {
+      clearLocation();
+      changed = true;
+    } else locationGeneration++; // Invalidate an awaited map continuation, not ordinary map clicks.
+    closeTowns();
+    if (changed) render();
+    selectEvent(id);
+  } else for (const card of document.querySelectorAll('.event-card.selected')) card.classList.remove('selected');
+}
+window.addEventListener('hashchange', openPermalink);
 function updateMap() {
   if (!$('map-legend').children.length) for (const [category, color] of Object.entries(MAP_COLORS)) {
     const item = el('li'), swatch = el('span', null, 'map-legend-swatch');
@@ -141,7 +180,18 @@ function card(event) {
   if (dayLabel) badges.append(el('span', dayLabel, `day-badge ${day.holiday ? 'holiday-badge' : 'weekend-badge'}`));
   if (event.audience !== 'všichni') badges.append(el('span', event.audience === 'dospělí' ? 'Dospělí' : event.audience === 'omezené zaměření' ? 'Omezené zaměření' : 'Senioři / omezené zaměření', 'audience-badge'));
   if (event.status === 'cancelled') badges.append(el('span', 'Zrušeno', 'warning-badge'));
-  body.append(badges, el('h3', event.title), el('p', [event.town, event.venue].filter(Boolean).join(' · '), 'event-place'));
+  const heading = el('h3'), permalink = el('a', event.title, 'event-permalink');
+  permalink.href = eventPermalink(event.id, new URL('./', import.meta.url));
+  const followPermalink = click => {
+    if (click.button !== 0 || click.metaKey || click.ctrlKey || click.shiftKey || click.altKey) return;
+    click.preventDefault();
+    const hash = new URL(permalink.href).hash;
+    if (location.hash === hash) openPermalink();
+    else location.hash = hash;
+  };
+  permalink.addEventListener('click', followPermalink);
+  heading.append(permalink);
+  body.append(badges, heading, el('p', [event.town, event.venue].filter(Boolean).join(' · '), 'event-place'));
   const timing = el('p', timeLabel(event), event.startTime ? 'event-time' : 'event-time uncertain');
   if (event.endDate && event.endDate !== event.date) timing.append(document.createTextNode(` · do ${dateFormat.format(dateValue(event.endDate))}`));
   body.append(timing);
@@ -183,7 +233,39 @@ function card(event) {
     setTimeout(() => URL.revokeObjectURL(url), 10000);
   });
   actions.append(calendar);
-  body.append(actions);
+  const share = el('button', 'Sdílet', 'share-button');
+  share.type = 'button';
+  share.setAttribute('aria-label', `Sdílet: ${event.title}`);
+  const shareStatus = el('p', null, 'share-status');
+  shareStatus.setAttribute('role', 'status');
+  shareStatus.hidden = true;
+  share.addEventListener('click', async click => {
+    if (!click.isTrusted) return;
+    const generation = ++shareGeneration;
+    if (activeShareStatus) { activeShareStatus.replaceChildren(); activeShareStatus.hidden = true; }
+    activeShareStatus = shareStatus;
+    const nativeShare = typeof navigator.share === 'function';
+    try {
+      if (nativeShare) {
+        await navigator.share({ title: event.title, url: permalink.href });
+      } else {
+        await navigator.clipboard.writeText(permalink.href);
+      }
+      if (generation !== shareGeneration || !shareStatus.isConnected) return;
+      shareStatus.textContent = nativeShare ? 'Odkaz předán ke sdílení.' : 'Odkaz zkopírován.';
+      shareStatus.hidden = false;
+    } catch (error) {
+      if (generation !== shareGeneration || !shareStatus.isConnected) return;
+      if (nativeShare && error?.name === 'AbortError') return;
+      const manual = el('a', permalink.href, 'share-url');
+      manual.href = permalink.href;
+      manual.addEventListener('click', followPermalink);
+      shareStatus.append(document.createTextNode('Sdílení není dostupné. Zkopírujte odkaz ručně: '), manual);
+      shareStatus.hidden = false;
+    }
+  });
+  actions.append(share);
+  body.append(actions, shareStatus);
   const verified = dateValue(event.verifiedAt);
   if (!Number.isNaN(verified.getTime())) body.append(el('p', `Ověřeno ${dateFormat.format(verified)}`, 'verified'));
   article.append(rail, body);
@@ -418,6 +500,7 @@ async function load() {
     $('data-updated').textContent = `Přehled aktualizován ${dateFormat.format(dateValue(data.generatedAt))}.`;
     for (const control of $('filters').elements) control.disabled = false;
     render();
+    openPermalink();
     if (desktop.matches || $('explore').dataset.view === 'map') ensureMap();
   } catch {
     $('results').setAttribute('aria-busy', 'false');

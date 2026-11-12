@@ -4,6 +4,19 @@ import { readFile } from 'node:fs/promises';
 let helpers = {};
 try { helpers = await import('../site/helpers.js'); } catch (error) { if (error.code !== 'ERR_MODULE_NOT_FOUND') throw error; }
 const event = (id, date, startTime = null, extra = {}) => ({ id, title: id, date, startTime, town: 'Beroun', category: 'strom', status: 'confirmed', ...extra });
+test('event permalinks preserve literal IDs and only share the current origin and base path', () => {
+  assert.equal(typeof helpers.eventPermalink, 'function');
+  for (const path of ['/', '/advent-cesko-pilot/', '/advent-cesko-pilot/index.html']) {
+    assert.equal(helpers.eventPermalink('e-Ab_19-0', `https://example.cz${path}?query=secret&lat=49.123#other`), `https://example.cz${path}#akce=e-Ab_19-0`);
+  }
+  for (const id of ['', 'e-evil<script>', ' e-123', 'e-123 ', 'e-a/b', 'e-%61', null]) assert.equal(helpers.eventPermalink(id, 'https://example.cz/'), null);
+  assert.equal(helpers.eventPermalink('e-test', 'javascript:alert(1)'), null);
+});
+test('event fragments accept exact IDs without decoding, normalizing or interpreting extra parameters', () => {
+  assert.equal(typeof helpers.eventIdFromHash, 'function');
+  assert.equal(helpers.eventIdFromHash('#akce=e-Ab_19-0'), 'e-Ab_19-0');
+  for (const hash of ['', '#results', '#akce=', '#akce=%65-test', '#akce=e-test&lat=49', '#akce=e-test?query=x', '#akce=e-test%0A', '#akce=<img src=x>', '#akce=e-test/../../', '#akce=e-test#x', '#akce=e-test\n']) assert.equal(helpers.eventIdFromHash(hash), null, hash);
+});
 test('crow-flies distance validates coordinates and nearby filtering is inclusive without reordering', () => {
   assert.equal(typeof helpers.distanceKm, 'function');
   const zero = { lat: 0, lon: 0 }, east = { lat: 0, lon: 1 };

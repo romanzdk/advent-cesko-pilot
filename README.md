@@ -14,8 +14,6 @@ Sezonní mapa adventních a vánočních akcí pro **20. listopadu – 24. prosi
 ![Sezóna 2026](https://img.shields.io/badge/sez%C3%B3na-2026-244b3c?style=flat)
 [![Proprietární licence](https://img.shields.io/badge/licence-propriet%C3%A1rn%C3%AD-62695e?style=flat)](LICENSE)
 
-> **Dostupnost webu:** poslední kontrola 12. listopadu 2026 potvrdila nasazení na GitHub Pages, ale DNS vlastní domény `kamnaadvent.cz` ještě nefungovalo. GitHub hlášení jsou dostupná nezávisle na doméně.
-
 ## Co mapa nabízí
 
 - **Výběr podle vás.** Kombinace kraje, obce, typu akce a termínu, textové hledání, dnešek, víkend i vlastní rozsah dat Od–Do. Rozsah zahrnuje oba krajní dny a překrývající se vícedenní akce; lze zadat i pouze jednu hranici v rámci sezóny.
@@ -24,6 +22,7 @@ Sezonní mapa adventních a vánočních akcí pro **20. listopadu – 24. prosi
 - **Údaje se zdrojem.** Datum, zveřejněný čas, místo, známé vstupné, rezervace a přímý odkaz na pořadatele.
 - **Víkendy a svátky.** Datum začátku je u víkendů zvýrazněné teplou barvou, u svátků červeně. Textové štítky zůstávají srozumitelné i bez rozlišování barev. V aktuálním sezonním období je svátkem Štědrý den.
 - **Kalendář a navigace.** Samostatný ICS export každé akce a trasa v Google Maps; orientační polohy jsou výslovně označené. Mapový podklad na webu zůstává OpenStreetMap.
+- **Sdílení konkrétní akce.** Klikací název má trvalý odkaz podle ID (`#akce=…`). Otevřený odkaz najde a zvýrazní kartu i po načtení dat; neexistující akce zobrazí vysvětlení. Tlačítko Sdílet použije systémové sdílení, nebo kopírování odkazu s ruční zálohou. URL neobsahuje polohu ani aktuální filtry. Náhled při sdílení zůstává společný pro celý web.
 - **Viditelné pokrytí.** Sledované zdroje, poslední kontroly a položky čekající na ověření nejsou skryté.
 - **Veřejné tipy.** Návrh obce, odkazu nebo opravy přes GitHub; existující hlášení lze prohledat a doplnit komentářem. Odeslání vyžaduje účet GitHub a zařazení do mapy není automatické.
 
@@ -91,7 +90,7 @@ Projekt neobchází blokované kalendáře a neslibuje obecné zpracování vše
 
 ## Kvalita a orientace v kódu
 
-**114 Python testů a 74 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, trvalý redakční přenos, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřenou sadu tohoto snapshotu. CI běží offline; úplné Chromium testy se spouštějí lokálně.
+**114 Python testů a 91 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, trvalý redakční přenos, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřenou sadu tohoto snapshotu. CI běží offline; úplné Chromium testy se spouštějí lokálně.
 
 ```text
 scripts/     sběr, adaptéry, validace a publisher

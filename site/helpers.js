@@ -34,6 +34,21 @@ export function filterBounds(filters = {}, now = new Date()) {
   return [from, through];
 }
 
+const validEventId = id => typeof id === 'string' && id.length > 0 && !/[^a-zA-Z0-9_-]/.test(id);
+export function eventIdFromHash(hash) {
+  if (typeof hash !== 'string' || !hash.startsWith('#akce=')) return null;
+  const id = hash.slice(6);
+  return validEventId(id) ? id : null;
+}
+export function eventPermalink(id, pageUrl) {
+  if (!validEventId(id)) return null;
+  try {
+    const url = new URL(pageUrl);
+    if (!['http:', 'https:'].includes(url.protocol)) return null;
+    return `${url.origin}${url.pathname}#akce=${id}`;
+  } catch { return null; }
+}
+
 export function safeHttps(value) {
   if (typeof value !== 'string') return null;
   try {

@@ -105,6 +105,344 @@ async function mockLocation(page) { await page.evaluate(installGeoMock); }
 async function geoSuccess(page, index = 0) {
   await page.evaluate(index => window.geoCalls[index].success({ coords: { latitude: 49.964, longitude: 14.073, accuracy: 30 } }), index);
 }
+const permalinkFixture = { ...fixture, events: fixture.events.map(event => ({ ...event, id: event.id.replace('fixture-', 'e-') })) };
+test('permalink titles are real safe links; initial deep link selects, focuses and scrolls after loading', async () => {
+  for (const mobile of [false, true]) await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    const target = page.locator('[data-id="e-c"]');
+    assert.equal(await target.locator('h3 a').count(), 1);
+    assert.equal(await target.locator('h3 a').getAttribute('href'), `${origin}/advent-cesko-pilot/#akce=e-c`);
+    assert.equal(await target.locator('h3 a').textContent(), permalinkFixture.events[2].title);
+    assert.equal(await target.locator('h3 img').count(), 0);
+    await page.waitForSelector('[data-id="e-c"].selected', { timeout:3000 });
+    assert.equal(await target.evaluate(n => n === document.activeElement), true);
+    assert.equal(await page.locator('#results').isVisible(), true);
+    const box = await target.boundingBox();
+    assert(box.y >= 0 && box.y < (await page.viewportSize()).height - 100, JSON.stringify(box));
+    assert.equal(await page.evaluate(() => window.geoCalls.length), 0);
+    assert.deepEqual(errors, []);
+  }, { data:permalinkFixture, base:'/advent-cesko-pilot/?query=secret&lat=49.123#akce=e-c', delay:300, mobile, geoMock:true });
+});
+
+test('permalink navigation handles title clicks, hash changes and history without reloading or rerendering visible cards', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await page.evaluate(() => { window.sameDocument = true; window.originalCard = document.querySelector('[data-id="e-b"]'); });
+    const requests = [];
+    page.on('request', request => requests.push(request.url()));
+    const target = page.locator('[data-id="e-b"]');
+    await target.locator('h3 a').focus();
+    await target.locator('h3 a').press('Enter');
+    await page.waitForSelector('[data-id="e-b"].selected', {timeout:3000});
+    assert.equal(new URL(page.url()).hash, '#akce=e-b');
+    assert.equal(await target.evaluate(n => n === window.originalCard && n === document.activeElement), true);
+    await page.evaluate(() => { location.hash = 'akce=e-a'; });
+    await page.waitForSelector('[data-id="e-a"].selected', {timeout:3000});
+    await page.goBack();
+    await page.waitForSelector('[data-id="e-b"].selected', {timeout:3000});
+    await page.goBack();
+    await page.waitForFunction(() => document.querySelectorAll('.event-card.selected').length === 0, null, {timeout:3000});
+    await page.goForward();
+    await page.waitForSelector('[data-id="e-b"].selected', {timeout:3000});
+    await target.locator('h3 a').click(); // Same fragment still focuses the card.
+    assert.equal(await target.evaluate(n => n === document.activeElement), true);
+    assert.equal(await page.evaluate(() => window.sameDocument), true);
+    assert.deepEqual(requests, []);
+    assert.deepEqual(errors, []);
+  }, {data:permalinkFixture, mobile:true, base:'/advent-cesko-pilot/?query=private'});
+});
+
+test('permalink reveals a filtered target, clears only incompatible filters and fences pending GPS', async () => {
+  const data = {...regionalFixture,events:regionalFixture.events.map(event => ({...event,id:event.id.replace('fixture-','e-')}))};
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await page.locator('#locate-user').click();
+    await geoSuccess(page);
+    await page.locator('#nearby-radius').selectOption('25');
+    await page.locator('#search').fill('dilna');
+    await page.locator('#region').selectOption('Plzeňský kraj');
+    await page.locator('#town').fill('Plasy');
+    await page.locator('#category').selectOption('tvoreni');
+    await page.locator('#period').selectOption('custom');
+    await page.locator('#date-from').fill('2026-12-05');
+    await page.locator('#date-to').fill('2026-11-20');
+    await page.locator('#show-map').click();
+    await page.evaluate(() => { location.hash = 'akce=e-a'; });
+    await page.waitForSelector('[data-id="e-a"].selected', {timeout:3000});
+    assert.equal(await page.locator('#results').isVisible(), true);
+    for (const id of ['search','region','town','category','date-from','date-to']) assert.equal(await page.locator(`#${id}`).inputValue(), '');
+    assert.equal(await page.locator('#period').inputValue(), 'all');
+    assert.equal(await page.locator('#nearby-options').isVisible(), false);
+    assert.equal(await page.locator('[data-id="e-a"]').evaluate(n => n === document.activeElement), true);
+    await page.locator('#locate-user').click(); // A pending callback must not undo navigation.
+    await page.evaluate(() => { location.hash = 'akce=e-b'; });
+    await page.waitForSelector('[data-id="e-b"].selected', {timeout:3000});
+    await geoSuccess(page, 1);
+    assert.equal(await page.locator('#nearby-options').isVisible(), false);
+    assert.equal(await page.locator('#show-list').getAttribute('aria-pressed'), 'true');
+    await page.locator('#search').fill('dilna');
+    await page.locator('#region').selectOption('Plzeňský kraj');
+    await page.locator('#category').selectOption('tvoreni');
+    await page.locator('#town').fill('pla');
+    await page.locator('[data-id="e-b"] h3 a').click();
+    for (const [id,value] of Object.entries({search:'dilna',region:'Plzeňský kraj',category:'tvoreni',town:'pla'})) assert.equal(await page.locator(`#${id}`).inputValue(), value);
+    assert.deepEqual(errors, []);
+  }, {data,mobile:true,geoMock:true});
+});
+
+test('permalink missing or malformed IDs show an honest non-destructive message and safe usable catalogue', async () => {
+  for (const hash of ['#akce=e-removed', '#akce=%65-a', '#akce=<img src=x onerror=window.injected=true>', '#akce=e-a&lat=49.123']) await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    assert.equal(await page.locator('#permalink-status').count(), 1);
+    assert.match(await page.locator('#permalink-status').innerText(), /není platný|není v aktuálním přehledu/);
+    assert.equal(await page.locator('.event-card').count(), 3);
+    assert.equal(await page.locator('.event-card.selected').count(), 0);
+    await page.locator('#search').fill('dilna');
+    const requests = [];
+    page.on('request', request => requests.push(request.url()));
+    await page.evaluate(() => { location.hash = 'akce=e-unknown'; });
+    await page.waitForFunction(() => document.getElementById('permalink-status').textContent.includes('není v aktuálním'), null, {timeout:3000});
+    assert.equal(await page.locator('#search').inputValue(), 'dilna');
+    assert.equal(await page.locator('#search').evaluate(n => n === document.activeElement), true);
+    assert.equal(await page.locator('.event-card').count(), 1);
+    assert.equal(await page.locator('#permalink-status img, #permalink-status script').count(), 0);
+    assert.equal(await page.evaluate(() => window.injected), undefined);
+    await page.evaluate(() => { location.hash = 'akce=e-a'; });
+    await page.waitForSelector('[data-id="e-a"].selected', {timeout:3000});
+    assert.equal(await page.locator('#permalink-status').isVisible(), false);
+    await page.evaluate(() => { location.hash = 'results'; });
+    await page.waitForFunction(() => !document.querySelector('.event-card.selected'), null, {timeout:3000});
+    assert.equal(await page.locator('#permalink-status').isVisible(), false);
+    assert.deepEqual(requests, []);
+    assert.deepEqual(errors, []);
+  }, {data:permalinkFixture,mobile:true,base:`/${hash}`});
+});
+
+test('sharing copies one canonical own-site link from a trusted click without navigation, filters or source queries', async () => {
+  const data = {...permalinkFixture, events:permalinkFixture.events.map(event => ({...event, title:`Upravený název ${event.id}`,sourceUrl:'https://organizer.example/event?token=source-secret'}))};
+  for (const base of ['/?lat=49.123&lon=14.123', '/advent-cesko-pilot/?query=private']) await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    const target = page.locator('[data-id="e-b"]'), button = target.getByRole('button',{name:'Sdílet: Upravený název e-b',exact:true});
+    assert.equal(await button.count(), 1);
+    assert.equal(await button.innerText(), 'Sdílet');
+    await page.evaluate(() => {
+      window.copies = [];
+      Object.defineProperty(navigator,'share',{configurable:true,value:undefined});
+      Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async value => {window.copies.push(value);}}});
+    });
+    await button.evaluate(n => n.click());
+    assert.deepEqual(await page.evaluate(() => window.copies), []);
+    await page.locator('#category').selectOption('tvoreni');
+    const share = page.locator('[data-id="e-b"] .share-button');
+    await share.scrollIntoViewIfNeeded();
+    const y = await page.evaluate(() => scrollY), url = page.url();
+    const requests = [];
+    page.on('request', request => requests.push(request.url()));
+    await share.click();
+    const expected = `${origin}${new URL(origin + base).pathname}#akce=e-b`;
+    assert.deepEqual(await page.evaluate(() => window.copies), [expected]);
+    assert.match(await target.locator('.share-status').innerText(), /Odkaz zkopírován/);
+    assert.equal(await target.locator('h3 a').getAttribute('href'), expected);
+    assert.equal(page.url(), url);
+    assert.equal(await page.evaluate(() => scrollY), y);
+    assert.equal(await page.locator('#category').inputValue(), 'tvoreni');
+    assert.equal(await share.evaluate(n => n === document.activeElement), true);
+    assert.equal(await page.evaluate(() => window.geoCalls.length), 0);
+    assert.deepEqual(requests, []);
+    assert.deepEqual(errors, []);
+  }, {data,mobile:true,base,geoMock:true});
+});
+
+test('sharing prefers native share in the trusted activation with only the own-site URL and event title', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await page.evaluate(() => {
+      window.shares = []; window.copies = [];
+      Object.defineProperty(navigator,'share',{configurable:true,value:async data => {window.shares.push({data,active:navigator.userActivation.isActive});}});
+      Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async text => window.copies.push(text)}});
+    });
+    const card = page.locator('[data-id="e-c"]'), button = card.locator('.share-button');
+    await button.click();
+    assert.deepEqual(await page.evaluate(() => window.shares), [{data:{title:permalinkFixture.events[2].title,url:`${origin}/advent-cesko-pilot/#akce=e-c`},active:true}]);
+    assert.deepEqual(await page.evaluate(() => window.copies), []);
+    assert.match(await card.locator('.share-status').innerText(), /předán ke sdílení/);
+    assert.equal(new URL(page.url()).hash, '');
+    assert.deepEqual(errors, []);
+  }, {data:permalinkFixture,mobile:true});
+});
+
+test('sharing native cancellation is quiet and never falls through to clipboard or claims a copy', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await page.evaluate(() => {
+      window.copies = [];
+      Object.defineProperty(navigator,'share',{configurable:true,value:undefined});
+      Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async text => window.copies.push(text)}});
+    });
+    const card = page.locator('[data-id="e-b"]');
+    await card.locator('.share-button').click();
+    assert.equal(await card.locator('.share-status').isVisible(), true);
+    await page.evaluate(() => Object.defineProperty(navigator,'share',{configurable:true,value:async () => {throw new DOMException('Cancelled','AbortError');}}));
+    await card.locator('.share-button').click();
+    assert.equal(await card.locator('.share-status').isVisible(), false);
+    assert.equal(await page.evaluate(() => window.copies.length), 1);
+    assert.deepEqual(errors, []);
+  }, {data:permalinkFixture,mobile:true});
+});
+
+test('sharing denied or unavailable APIs expose a real selectable own-site URL, never a false copied result', async () => {
+  for (const failure of ['clipboard-denied','clipboard-missing','clipboard-abort','native-denied','native-sync']) await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await page.evaluate(failure => {
+      window.copies = [];
+      const reject = () => {throw new DOMException('Denied',failure === 'clipboard-abort' ? 'AbortError' : 'NotAllowedError');};
+      Object.defineProperty(navigator,'share',{configurable:true,value:failure === 'native-sync' ? reject : failure === 'native-denied' ? async () => reject() : undefined});
+      Object.defineProperty(navigator,'clipboard',{configurable:true,value:failure === 'clipboard-missing' ? undefined : {writeText:async () => {window.copies.push('attempt');reject();}}});
+    }, failure);
+    const card = page.locator('[data-id="e-b"]');
+    await card.locator('.share-button').click();
+    assert.equal(await card.locator('.share-status a').count(), 1);
+    const link = card.locator('.share-status a'), expected = `${origin}/advent-cesko-pilot/#akce=e-b`;
+    assert.equal(await link.getAttribute('href'), expected);
+    assert.equal(await link.textContent(), expected);
+    assert.match(await card.locator('.share-status').innerText(), /Zkopírujte odkaz ručně/);
+    assert.doesNotMatch(await card.locator('.share-status').innerText(), /zkopírován|předán ke sdílení/);
+    assert.equal(await card.locator('.share-button').isEnabled(), true);
+    if (failure.startsWith('native-')) assert.deepEqual(await page.evaluate(() => window.copies), []);
+    await page.evaluate(() => { window.sameDocument = true; });
+    await link.click();
+    await page.waitForSelector('[data-id="e-b"].selected', {timeout:3000});
+    assert.equal(await page.evaluate(() => window.sameDocument), true);
+    assert.deepEqual(errors, []);
+  }, {data:permalinkFixture,mobile:true,base:'/advent-cesko-pilot/?query=secret&lat=49.123'});
+});
+
+test('sharing keeps only the latest per-card feedback active even when promises finish out of order', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await page.evaluate(() => {
+      window.pendingCopies = [];
+      Object.defineProperty(navigator,'share',{configurable:true,value:undefined});
+      Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:() => new Promise((resolve,reject) => window.pendingCopies.push({resolve,reject}))}});
+    });
+    const a = page.locator('[data-id="e-a"]'), b = page.locator('[data-id="e-b"]');
+    await a.locator('.share-button').click();
+    await b.locator('.share-button').click();
+    await page.evaluate(() => window.pendingCopies[1].resolve());
+    assert.equal(await b.locator('.share-status').isVisible(), true);
+    await page.evaluate(() => window.pendingCopies[0].resolve());
+    assert.equal(await a.locator('.share-status').isVisible(), false);
+    assert.equal(await page.locator('.share-status:not([hidden])').count(), 1);
+    await a.locator('.share-button').click();
+    assert.equal(await b.locator('.share-status').isVisible(), false);
+    await page.evaluate(() => window.pendingCopies[2].reject(new Error('denied')));
+    assert.equal(await a.locator('.share-status a').count(), 1);
+    await page.evaluate(() => Object.defineProperty(navigator,'share',{configurable:true,value:async () => {throw new DOMException('cancel','AbortError');}}));
+    await b.locator('.share-button').click();
+    assert.equal(await page.locator('.share-status:not([hidden])').count(), 0);
+    assert.deepEqual(errors, []);
+  }, {data:permalinkFixture,mobile:true});
+});
+
+test('sharing long links and event titles fit 393px and 320px with touch-sized selectable fallback', async () => {
+  const id = `e-${'a'.repeat(180)}`;
+  const data = {...fixture,events:[{...fixture.events[0],id,title:'Vánoční dílna'}]};
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await page.evaluate(() => {
+      Object.defineProperty(navigator,'share',{configurable:true,value:undefined});
+      Object.defineProperty(navigator,'clipboard',{configurable:true,value:undefined});
+    });
+    await page.locator('.share-button').click();
+    for (const width of [393,320]) {
+      await page.setViewportSize({width,height:852});
+      for (const selector of ['.event-permalink','.share-button','.share-url']) {
+        const node = page.locator(selector), box = await node.boundingBox();
+        assert(box && box.height >= 44 && box.width >= 44 && box.x >= 0 && box.x + box.width <= width, `${selector}: ${JSON.stringify(box)}`);
+      }
+      assert.equal(await page.locator('.share-url').evaluate(n => getComputedStyle(n).userSelect), 'all');
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    }
+    await page.locator('.share-url').focus();
+    assert.equal(await page.locator('.share-url').evaluate(n => n === document.activeElement), true);
+    await page.addStyleTag({content:'html { font-size:125%; }'});
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    await page.locator('.event-card').screenshot({path:screenshotPath('event-permalink-share-mobile-fixture.png')});
+    assert.deepEqual(errors, []);
+  }, {data,mobile:true});
+});
+
+test('permalink uses the latest hash while data is pending and survives an honest load error and retry', async () => {
+  await app(async (page, errors) => {
+    assert.equal(await page.locator('#results').getAttribute('aria-busy'), 'true');
+    await page.evaluate(() => { location.hash = 'akce=e-b'; });
+    await page.waitForSelector('[data-id="e-b"].selected', {timeout:3000});
+    assert.equal(await page.locator('.event-card.selected').count(), 1);
+    assert.deepEqual(errors, []);
+  }, {data:permalinkFixture,mobile:true,base:'/#akce=e-a',delay:700});
+  await app(async (page, errors) => {
+    await page.waitForSelector('.load-error');
+    assert.equal(await page.locator('#permalink-status').isVisible(), false);
+    await page.evaluate(() => { location.hash = 'akce=e-c'; });
+    assert.equal(await page.locator('.load-error button').isEnabled(), true);
+    await page.route('**/events.json', route => route.fulfill({contentType:'application/json',body:JSON.stringify(permalinkFixture)}));
+    await page.locator('.load-error button').click();
+    await page.waitForSelector('[data-id="e-c"].selected', {timeout:3000});
+    assert.equal(await page.locator('[data-id="e-c"]').evaluate(n => n === document.activeElement), true);
+    assert.deepEqual(errors, []);
+  }, {data:permalinkFixture,mobile:true,base:'/#akce=e-a',responseStatus:503});
+});
+
+test('permalink does not revive a removed or out-of-season event and ordinary filtering does not steal focus', async () => {
+  await app(async page => {
+    await page.waitForSelector('.event-card');
+    assert.match(await page.locator('#permalink-status').innerText(), /není v aktuálním přehledu/);
+    assert.equal(await page.locator('[data-id="e-old"]').count(), 0);
+    await page.evaluate(() => { location.hash = 'akce=e-b'; });
+    await page.waitForSelector('[data-id="e-b"].selected', {timeout:3000});
+    await page.locator('#search').fill('strom');
+    assert.equal(await page.locator('#search').evaluate(n => n === document.activeElement), true);
+    assert.equal(await page.locator('.event-card').getAttribute('data-id'), 'e-a');
+  }, {data:{...permalinkFixture,events:[...permalinkFixture.events,{...fixture.events[0],id:'e-old',date:'2025-11-28'}]},mobile:true,base:'/#akce=e-old'});
+});
+
+test('permalink data IDs with trailing newlines are rejected instead of silently repaired into a different link', async () => {
+  await app(async page => {
+    await page.waitForFunction(() => document.querySelector('.event-card, .load-error'), null, {timeout:3000});
+    assert.equal(await page.locator('.load-error').count(), 1);
+    assert.equal(await page.locator('.event-card').count(), 0);
+    assert.equal(await page.locator('.load-error button').isEnabled(), true);
+  }, {data:{...fixture,events:[{...fixture.events[0],id:'e-a\n'}]},mobile:true,base:'/#akce=e-a'});
+});
+
+test('permalink canonical base is the static app directory even when opened through index.html', async () => {
+  await app(async page => {
+    await page.waitForSelector('.event-card');
+    const link = page.locator('[data-id="e-b"] h3 a');
+    assert.equal(await link.getAttribute('href'), `${origin}/advent-cesko-pilot/#akce=e-b`);
+    await page.evaluate(() => { window.sameDocument = true; });
+    await link.click();
+    await page.waitForSelector('[data-id="e-b"].selected', {timeout:3000});
+    assert.equal(await page.evaluate(() => window.sameDocument), true);
+  }, {data:permalinkFixture,mobile:true,base:'/advent-cesko-pilot/index.html?query=private'});
+});
+
+test('permalink recovers a partially entered native date instead of leaving the target hidden', async () => {
+  await app(async page => {
+    await page.waitForSelector('.event-card');
+    await page.locator('#period').selectOption('custom');
+    const from = page.locator('#date-from');
+    await from.fill('2026-11-28');
+    await from.press('Backspace');
+    assert.equal(await from.evaluate(n => n.validity.badInput), true, 'native partially entered date fixture');
+    assert.equal(await page.locator('.event-card').count(), 0);
+    await page.evaluate(() => { location.hash = 'akce=e-b'; });
+    await page.waitForSelector('[data-id="e-b"].selected', {timeout:3000});
+    assert.equal(await page.locator('#period').inputValue(), 'all');
+    assert.equal(await page.locator('#date-range-error').isVisible(), false);
+  }, {data:permalinkFixture,mobile:true});
+});
+
 test('town autocomplete filters partial text without diacritics, survives edits and selects canonical local names', async () => {
   for (const mobile of [false, true]) await app(async (page, errors) => {
     await page.waitForSelector('.event-card');
@@ -1134,6 +1472,7 @@ test('individual calendar downloads contain the chosen event and navigation disc
 
 test('map groups shared places, selects a card and follows active filters even without tiles', async () => {
   await app(async (page, errors) => {
+    const originalURL = page.url();
     await page.waitForSelector('.event-card');
     await page.waitForSelector('#map .leaflet-interactive', { timeout: 3000 });
     assert.equal(await page.locator('#map .leaflet-interactive').count(), 2);
@@ -1147,6 +1486,7 @@ test('map groups shared places, selects a card and follows active filters even w
     await page.locator('.popup-event').last().click();
     assert.equal(await page.locator('.event-card.selected').getAttribute('data-id'), 'fixture-c');
     assert.equal(await page.locator('.event-card.selected').evaluate(node => node === document.activeElement), true);
+    assert.equal(page.url(), originalURL, 'ordinary map selection does not create permalink history');
     await page.locator('#category').selectOption('strom');
     await page.waitForFunction(() => document.querySelectorAll('#map .leaflet-interactive').length === 1);
     assert.deepEqual(errors, []);
@@ -1160,6 +1500,7 @@ test('map groups shared places, selects a card and follows active filters even w
     await page.locator('.popup-event').first().click();
     assert.equal(await page.locator('#results').isVisible(), true);
     assert.equal(await page.locator('.event-card.selected').getAttribute('data-id'), 'fixture-b');
+    assert.equal(new URL(page.url()).hash, '', 'ordinary mobile map selection does not create permalink history');
     await page.screenshot({ path: screenshotPath('mobile-fixture.png'), fullPage: true });
   }, { mobile: true });
 });

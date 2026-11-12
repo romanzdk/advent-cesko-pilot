@@ -98,3 +98,11 @@
 #town-options[hidden]{display:none}
 #town-options li{min-height:44px;padding:10px 12px;overflow-wrap:anywhere;cursor:pointer}
 #town-options li:hover,#town-options [aria-selected=true]{background:var(--wash)}
+/* Event links share only a stable ID; manual copying stays local to its card. */
+.event-permalink{display:inline-flex;align-items:center;min-height:44px;max-width:100%;text-decoration:none;overflow-wrap:anywhere}
+.event-permalink:hover{text-decoration:underline}
+.event-actions .share-button{min-width:44px;justify-content:center}
+.event-card .share-status{font-size:.75rem;color:var(--muted);overflow-wrap:anywhere}
+.share-status[hidden]{display:none}
+.share-url{display:block;min-height:44px;max-width:100%;overflow-wrap:anywhere;user-select:all}
+.permalink-status{font-size:.85rem;color:var(--warning)}
