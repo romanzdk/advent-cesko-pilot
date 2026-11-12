@@ -1,17 +1,50 @@
-import { draftURL, ISSUES, ISSUES_API, issueViews } from './feedback-helpers.js';
+import { draftURL, ISSUES, ISSUES_API, issueViews, REGIONS, CATEGORIES } from './feedback-helpers.js';
 
 const byId = id => document.getElementById(id);
 const form = byId('feedback-form');
+for (const [id, values] of [['feedback-region', REGIONS.map(value => [value, value])], ['feedback-category', Object.entries(CATEGORIES)]]) {
+  for (const [value, label] of values) {
+    const option = document.createElement('option');
+    option.value = value; option.textContent = label;
+    byId(id).append(option);
+  }
+}
+function clearDraft() {
+  byId('feedback-draft').hidden = true;
+  byId('feedback-draft').removeAttribute('href');
+  byId('feedback-message').textContent = '';
+}
+function syncMode() {
+  const full = byId('feedback-mode').value === 'full';
+  for (const section of form.querySelectorAll('[data-full]')) {
+    section.hidden = !full;
+    for (const control of section.querySelectorAll('input, select, textarea')) control.disabled = !full;
+  }
+  for (const id of ['feedback-title', 'feedback-town', 'feedback-source']) byId(id).required = full;
+  const unknown = byId('feedback-date-unknown').checked;
+  for (const id of ['feedback-date', 'feedback-end-date', 'feedback-start-time', 'feedback-end-time']) byId(id).disabled = !full || unknown;
+  byId('feedback-date').required = full && !unknown;
+  byId('feedback-town-label').firstChild.textContent = `Obec (${full ? 'povinné' : 'nepovinné'}, max. 100 znaků)`;
+  byId('feedback-source-label').firstChild.textContent = `Veřejný zdroj akce (${full ? 'povinné' : 'nepovinné'}, max. 800 znaků)`;
+  clearDraft();
+}
+byId('feedback-mode').addEventListener('change', syncMode);
+byId('feedback-date-unknown').addEventListener('change', syncMode);
+form.addEventListener('input', clearDraft);
+syncMode();
 form.addEventListener('submit', event => {
   event.preventDefault();
   const message = byId('feedback-message'), link = byId('feedback-draft');
   link.hidden = true;
   try {
-    const url = draftURL({ town: byId('feedback-town').value, sourceURL: byId('feedback-source').value, description: byId('feedback-description').value, consent: byId('feedback-consent').checked });
+    const data = Object.fromEntries(new FormData(form));
+    data.consent = byId('feedback-consent').checked;
+    data.dateUnknown = !byId('feedback-date-unknown').disabled && byId('feedback-date-unknown').checked;
+    const url = draftURL(data);
     link.href = url;
     link.hidden = false;
-    window.open(url, '_blank', 'noopener,noreferrer');
-    message.textContent = 'Odeslání dokončíte na GitHubu. Pokud se nová karta neotevřela, použijte odkaz na připravený návrh níže.';
+    message.textContent = 'Návrh je připraven; nejde o publikaci ani přidání do mapy. Přihlášení a odeslání dokončíte na GitHubu. Pokud se nová karta neotevřela, použijte odkaz níže.';
+    try { window.open(url, '_blank', 'noopener,noreferrer'); } catch { /* The prepared link remains usable when popups fail. */ }
   } catch (error) { message.textContent = error.message; }
 });
 form.hidden = false;

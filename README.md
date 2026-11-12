@@ -24,7 +24,7 @@ Sezonní mapa adventních a vánočních akcí pro **20. listopadu – 24. prosi
 - **Kalendář a navigace.** Samostatný ICS export každé akce a trasa v Google Maps; orientační polohy jsou výslovně označené. Mapový podklad na webu zůstává OpenStreetMap.
 - **Sdílení konkrétní akce.** Klikací název má trvalý odkaz podle ID (`#akce=…`). Otevřený odkaz najde a zvýrazní kartu i po načtení dat; neexistující akce zobrazí vysvětlení. Tlačítko Sdílet použije systémové sdílení, nebo kopírování odkazu s ruční zálohou. URL neobsahuje polohu ani aktuální filtry. Náhled při sdílení zůstává společný pro celý web.
 - **Viditelné pokrytí.** Sledované zdroje, poslední kontroly a položky čekající na ověření nejsou skryté.
-- **Veřejné tipy.** Návrh obce, odkazu nebo opravy přes GitHub; existující hlášení lze prohledat a doplnit komentářem. Odeslání vyžaduje účet GitHub a zařazení do mapy není automatické.
+- **Veřejné tipy a návrhy akcí.** Strukturovaný formulář nabízí název, obec, místo, datum a časy, kraj, kategorii, cenu, rezervace, publikum, popis, poznámky a zdroj. Neznámé údaje se nedoplňují odhadem; je dostupný i stručný rychlý tip. Výsledkem je návrh GitHub issue, který návštěvník po přihlášení sám odešle. Nejde o anonymní odeslání ani automatické přidání do mapy. Existující hlášení lze prohledat.
 
 ## Ukázka rozhraní
 
@@ -90,7 +90,7 @@ Projekt neobchází blokované kalendáře a neslibuje obecné zpracování vše
 
 ## Kvalita a orientace v kódu
 
-**114 Python testů a 91 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, trvalý redakční přenos, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřenou sadu tohoto snapshotu. CI běží offline; úplné Chromium testy se spouštějí lokálně.
+**114 Python testů a 97 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, trvalý redakční přenos, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřenou sadu tohoto snapshotu. CI běží offline; úplné Chromium testy se spouštějí lokálně.
 
 ```text
 scripts/     sběr, adaptéry, validace a publisher

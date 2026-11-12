@@ -959,10 +959,11 @@ test('personal origin story replaces the edition with a compact header question 
 test('feedback API failures are not empty results and never block drafts or map', async () => {
   for (const failure of ['429', 'network', 'timeout']) await app(async (page, errors) => {
     await page.route('https://api.github.com/**', route => failure === '429' ? route.fulfill({ status: 429, body: '{}', headers: { 'access-control-allow-origin': '*' } }) : failure === 'network' ? route.abort() : undefined);
-    await page.locator('#feedback summary').click();
+    await page.locator('#feedback > summary').click();
     await page.waitForFunction(() => document.getElementById('feedback-list-status').textContent.includes('nepodařilo'), { timeout: 8000 });
     assert.doesNotMatch(await page.locator('#feedback-list-status').innerText(), /žádná hlášení/);
     assert.equal(await page.locator('#feedback-form').isVisible(), true);
+    await page.locator('#feedback-mode').selectOption('quick');
     await page.locator('#feedback-town').fill('Brno');
     await page.locator('#feedback-consent').check();
     await page.evaluate(() => { window.open = () => null; });
@@ -980,7 +981,7 @@ test('feedback API failures are not empty results and never block drafts or map'
 
 test('feedback fallback template anchor works without JavaScript', async () => {
   await app(async page => {
-    await page.locator('#feedback summary').click();
+    await page.locator('#feedback > summary').click();
     const link = page.getByRole('link', { name: 'Napsat tip přímo na GitHubu (i bez JavaScriptu)' });
     assert.equal(await link.isVisible(), true);
     assert.equal(await link.getAttribute('href'), 'https://github.com/romanzdk/advent-cesko-pilot/issues/new?template=tip.md');
@@ -993,7 +994,7 @@ test('feedback module failure retains a direct template link and working event f
     await page.route('**/feedback.js', route => route.abort());
     await page.reload();
     await page.waitForSelector('.event-card');
-    await page.locator('#feedback summary').click();
+    await page.locator('#feedback > summary').click();
     assert.equal(await page.getByRole('link', { name: 'Napsat tip přímo na GitHubu (i bez JavaScriptu)' }).isVisible(), true);
     assert.equal(await page.locator('#feedback-form').isVisible(), false);
     await page.locator('#category').selectOption('strom');
@@ -1023,7 +1024,7 @@ test('feedback lazily fetches once, renders safe open/closed fixture issues and 
         return nativeFetch(url, options);
       };
     });
-    await page.locator('#feedback summary').click();
+    await page.locator('#feedback > summary').click();
     await page.waitForSelector('#feedback-issues li');
     assert.deepEqual(await page.evaluate(() => window.feedbackFetch), { credentials: 'omit', signal: true });
     assert.equal(await page.locator('#feedback-issues li').count(), 2);
@@ -1031,8 +1032,8 @@ test('feedback lazily fetches once, renders safe open/closed fixture issues and 
     assert.match(await page.locator('#feedback-issues').innerText(), /Uzavřeno/);
     assert.equal(await page.locator('#feedback-issues img').count(), 0);
     assert.equal(await page.evaluate(() => window.injected), undefined);
-    await page.locator('#feedback summary').click();
-    await page.locator('#feedback summary').click();
+    await page.locator('#feedback > summary').click();
+    await page.locator('#feedback > summary').click();
     assert.equal(calls, 1);
     await page.locator('#feedback-search').fill('Říčany & dílna? #1');
     const search = new URL(await page.locator('#feedback-search-link').getAttribute('href'));
@@ -1047,10 +1048,11 @@ test('feedback draft requires input and consent, preserves fields and only GETs 
   for (const mobile of [false, true]) await app(async (page, errors) => {
     await page.waitForSelector('.event-card');
     assert.equal(await page.locator('#feedback').count(), 1);
-    await page.locator('#feedback summary').click();
+    await page.locator('#feedback > summary').click();
     const form = page.locator('#feedback-form');
+    await page.locator('#feedback-mode').selectOption('quick');
     await page.locator('#feedback-consent').check();
-    await form.getByRole('button', { name: 'Pokračovat na GitHub' }).click();
+    await form.getByRole('button', { name: 'Připravit návrh na GitHubu' }).click();
     assert.match(await page.locator('#feedback-message').innerText(), /obec, odkaz nebo popis/);
     await page.locator('#feedback-town').fill('Říčany & okolí? #1');
     await page.locator('#feedback-description').fill('<img src=x onerror=alert(1)> & text');
@@ -1060,7 +1062,7 @@ test('feedback draft requires input and consent, preserves fields and only GETs 
     const requests = [];
     page.context().on('request', r => { if (r.url().startsWith('https://github.com/')) requests.push([r.method(), r.url()]); });
     const popupPromise = page.context().waitForEvent('page');
-    await form.getByRole('button', { name: 'Pokračovat na GitHub' }).click();
+    await form.getByRole('button', { name: 'Připravit návrh na GitHubu' }).click();
     const popup = await popupPromise;
     await popup.waitForLoadState();
     const target = new URL(popup.url());
@@ -1073,7 +1075,7 @@ test('feedback draft requires input and consent, preserves fields and only GETs 
     assert.equal(await popup.evaluate(() => window.opener), null);
     assert.equal(await page.locator('#feedback-town').inputValue(), 'Říčany & okolí? #1');
     assert.match(await page.locator('#feedback-message').innerText(), /dokončíte na GitHubu/);
-    for (const locator of ['#feedback summary', '#feedback-form button', '#feedback-town', '#feedback-source', '#feedback-description', '#feedback-consent', '#feedback a']) {
+    for (const locator of ['#feedback > summary', '#feedback-form button', '#feedback-town', '#feedback-source', '#feedback-description', '#feedback-consent', '#feedback a']) {
       for (const box of await page.locator(locator).evaluateAll(nodes => nodes.filter(n => n.getClientRects().length).map(n => ({ height: n.getBoundingClientRect().height })))) assert(box.height >= 44, locator);
     }
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
@@ -1585,4 +1587,65 @@ test('review screenshots use synthetic display content and mobile map stays lazy
       await page.screenshot({ path: screenshotPath(`${mobile ? 'mobile' : 'desktop'}-fixture.png`), fullPage: false });
     }, { data: displayFixture, mobile });
   }
+});
+
+
+test('structured event defaults to full, preserves inactive drafts and prepares honest popup fallback', async () => {
+  await app(async (page, errors) => {
+    await page.locator('#feedback > summary').click();
+    const mode = page.locator('#feedback-mode');
+    assert.equal(await mode.count(), 1);
+    assert.equal(await mode.inputValue(), 'full');
+    assert.equal(await page.locator('#feedback-optional').getAttribute('open'), null);
+    assert.equal(await page.locator('#feedback-region option').count(), 15);
+    assert.equal(await page.locator('#feedback-category option').count(), 7);
+    await page.locator('#feedback-title').fill('<img src=x> Dílna');
+    await page.locator('#feedback-town').fill('Beroun');
+    await page.locator('#feedback-source').fill('https://example.cz/event');
+    await page.locator('#feedback-date').fill('2026-11-28');
+    await page.locator('#feedback-optional > summary').click();
+    await page.locator('#feedback-start-time').fill('16:00');
+    await page.locator('#feedback-end-time').fill('15:00');
+    await page.locator('#feedback-consent').check();
+    await page.evaluate(() => { window.open = () => { throw new Error('Popup denied'); }; });
+    await page.locator('#feedback-form button').click();
+    assert.match(await page.locator('#feedback-message').innerText(), /Konec/);
+    await page.locator('#feedback-date-unknown').check();
+    assert.equal(await page.locator('#feedback-date').isDisabled(), true);
+    await page.locator('#feedback-form button').click();
+    assert.equal(await page.locator('#feedback-draft').isVisible(), true);
+    let body = new URL(await page.locator('#feedback-draft').getAttribute('href')).searchParams.get('body');
+    assert.match(body, /Datum\nNeznámé/);
+    assert.doesNotMatch(body, /16:00|15:00|2026-11-28/);
+    assert.match(await page.locator('#feedback-message').innerText(), /návrh|Návrh/);
+    assert.doesNotMatch(await page.locator('#feedback-message').innerText(), /odesláno/i);
+    await mode.selectOption('quick');
+    assert.equal(await page.locator('#feedback-draft').isVisible(), false);
+    assert.equal(await page.locator('#feedback-title').isDisabled(), true);
+    await page.locator('#feedback-form button').click();
+    body = new URL(await page.locator('#feedback-draft').getAttribute('href')).searchParams.get('body');
+    assert.doesNotMatch(body, /<img src=x>|Datum|Kategorie/);
+    await mode.selectOption('full');
+    await page.locator('#feedback-date-unknown').uncheck();
+    assert.equal(await page.locator('#feedback-title').inputValue(), '<img src=x> Dílna');
+    assert.equal(await page.locator('#feedback-date').inputValue(), '2026-11-28');
+    assert.equal(await page.locator('#feedback-start-time').inputValue(), '16:00');
+    assert.equal(await page.locator('#feedback img').count(), 0);
+    await page.locator('#feedback-end-time').fill('18:00');
+    await page.locator('#feedback-form button').click();
+    assert.equal(await page.locator('#feedback-draft').isVisible(), true);
+    for (const width of [393, 320]) {
+      await page.setViewportSize({width, height:852});
+      for (const selector of ['#feedback-form input:not([type=checkbox])', '#feedback-form select', '#feedback-form textarea', '#feedback-form button', '#feedback-form summary', '#feedback-form .feedback-consent']) {
+        for (const box of await page.locator(selector).evaluateAll(nodes => nodes.filter(n => n.getClientRects().length).map(n => ({x:n.getBoundingClientRect().x,width:n.getBoundingClientRect().width,height:n.getBoundingClientRect().height,font:parseFloat(getComputedStyle(n).fontSize)})))) {
+          assert(box.height >= 44 && box.x >= 0 && box.x + box.width <= width, JSON.stringify(box));
+          assert(box.font >= 16, JSON.stringify(box));
+        }
+      }
+      await page.addStyleTag({content:'html {font-size:125%}'});
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    }
+    await page.locator('#feedback-form').screenshot({path:screenshotPath('structured-event-form-mobile-fixture.png')});
+    assert.deepEqual(errors, []);
+  }, {mobile:true});
 });

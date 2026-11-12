@@ -67,7 +67,8 @@
     <details id="feedback" class="feedback">
       <summary>Chybí vám akce nebo obec?</summary>
       <div class="feedback-content">
-        <p>Pošlete tip na veřejnou akci od 20. 11. do 24. 12. 2026. Stačí obec, odkaz nebo krátký popis.</p>
+        <p>Přidat akci: připravte údaje o veřejné akci od 20. 11. do 24. 12. 2026. Neznáte podrobnosti? Zvolte rychlý tip – stačí obec, odkaz nebo krátký popis.</p>
+        <p>Vyplněné údaje se automaticky nezveřejňují v mapě. Geodata, interní identifikátor, stav a datum ověření doplní správce až po kontrole zdroje. Nežádejte o zveřejnění osobních údajů.</p>
         <p>Potřebujete účet GitHub. Zde připravíte pouze návrh; přihlášení a konečné odeslání dokončíte na GitHubu. Tipy jsou veřejné: neuvádějte osobní údaje. Zařazení do mapy není automatické.</p>
         <h3>Poslední tipy a hlášení</h3>
         <p>Nejvýše 10 nedávno aktualizovaných hlášení, ne úplný seznam. Najdete-li podobný tip, doplňte raději komentář k němu.</p>
@@ -77,11 +78,39 @@
         <label>Hledat existující tip (obec nebo konkrétní fráze)<input id="feedback-search" type="search" maxlength="100" placeholder="Např. Říčany nebo vánoční dílna"></label>
         <a id="feedback-search-link" href="https://github.com/romanzdk/advent-cesko-pilot/issues?q=is%3Aissue">Hledat na GitHubu</a>
         <form id="feedback-form" hidden>
-          <label>Obec (nepovinné, max. 100 znaků)<input id="feedback-town" name="town" maxlength="100" autocomplete="address-level2"></label>
-          <label>Veřejný odkaz na akci (nepovinné, max. 800 znaků)<input id="feedback-source" name="sourceURL" type="url" maxlength="800" placeholder="https://…"></label>
+          <label>Způsob návrhu<select id="feedback-mode" name="mode"><option value="full">Přidat akci</option><option value="quick">Rychlý tip</option></select></label>
+          <fieldset>
+            <legend>Základní údaje</legend>
+            <label data-full>Název akce (povinné, max. 100 znaků)<input id="feedback-title" name="title" maxlength="100" required></label>
+            <label id="feedback-town-label">Obec (povinné, max. 100 znaků)<input id="feedback-town" name="town" maxlength="100" autocomplete="address-level2" required></label>
+            <label data-full class="feedback-consent"><input id="feedback-date-unknown" name="dateUnknown" type="checkbox">Datum zatím neznám</label>
+            <label data-full>Datum začátku (povinné, nebo zvolte neznámé datum)<input id="feedback-date" name="date" type="date" min="2026-11-20" max="2026-12-24" required aria-describedby="feedback-time-help"></label>
+            <label id="feedback-source-label">Veřejný zdroj akce (povinné, max. 800 znaků)<input id="feedback-source" name="sourceURL" type="url" maxlength="800" placeholder="https://…" required></label>
+          </fieldset>
+          <details id="feedback-optional" data-full>
+            <summary>Další údaje (vše nepovinné)</summary>
+            <fieldset>
+              <legend>Místo a program</legend>
+              <label>Kraj<select id="feedback-region" name="region"><option value="">Nevím / neuvedeno</option></select></label>
+              <label>Místo / adresa (max. 200 znaků)<input id="feedback-venue" name="venue" maxlength="200"></label>
+              <label>Kategorie<select id="feedback-category" name="category"><option value="">Nevím / neuvedeno</option></select></label>
+              <label>Konec – datum (max. 31. 12. 2026)<input id="feedback-end-date" name="endDate" type="date" min="2026-11-20" max="2026-12-31" aria-describedby="feedback-time-help"></label>
+              <label>Začátek – čas (HH:MM)<input id="feedback-start-time" name="startTime" type="time" aria-describedby="feedback-time-help"></label>
+              <label>Konec – čas (HH:MM)<input id="feedback-end-time" name="endTime" type="time" aria-describedby="feedback-time-help"></label>
+              <p id="feedback-time-help">Datum i časy opisujte jen ze zdroje, rok 2026 nedoplňujte odhadem. Neznámé časy nechte prázdné: neznamenají celodenní akci. Konec až 31. 12. uvádějte pouze pokud jej zdroj výslovně potvrzuje, například u výstavy. Při neznámém datu se data a časy do návrhu nezahrnou.</p>
+            </fieldset>
+            <fieldset>
+              <legend>Vstup a vhodnost</legend>
+              <label>Cena (max. 200 znaků)<input id="feedback-price" name="price" maxlength="200"></label>
+              <label>Podmínky registrace / vstupu (max. 500 znaků)<textarea id="feedback-registration" name="registration" maxlength="500" rows="2"></textarea></label>
+              <label>Veřejný registrační odkaz (max. 800 znaků)<input id="feedback-registration-url" name="registrationURL" type="url" maxlength="800" placeholder="https://…"></label>
+              <label>Pro koho je akce vhodná (max. 200 znaků)<input id="feedback-audience" name="audience" maxlength="200" placeholder="Např. dospělí, rodiny, bezbariérový vstup"></label>
+              <label>Poznámky (max. 1000 znaků)<textarea id="feedback-notes" name="notes" maxlength="1000" rows="2"></textarea></label>
+            </fieldset>
+          </details>
           <label>Popis (nepovinné, max. 1000 znaků)<textarea id="feedback-description" name="description" maxlength="1000" rows="3"></textarea></label>
-          <label class="feedback-consent"><input id="feedback-consent" type="checkbox" required>Rozumím, že návrh bude veřejný</label>
-          <button type="submit">Pokračovat na GitHub</button>
+          <label class="feedback-consent"><input id="feedback-consent" name="consent" type="checkbox" required>Rozumím, že návrh bude veřejný</label>
+          <button type="submit">Připravit návrh na GitHubu</button>
         </form>
         <p id="feedback-message" role="status" aria-live="polite"></p>
         <a id="feedback-draft" hidden target="_blank" rel="noopener noreferrer">Otevřít připravený návrh na GitHubu</a>

@@ -47,6 +47,15 @@
 .feedback .feedback-consent{display:flex;align-items:center;gap:10px;min-height:44px}
 .feedback-consent input{width:44px;height:44px;flex-shrink:0;margin:0}
 #feedback-message{color:var(--warning)}
+.feedback [hidden]{display:none!important}
+.feedback fieldset{min-width:0;margin:16px 0;padding:10px 14px 16px;border:1px solid var(--line);border-radius:var(--radius)}
+.feedback legend{color:var(--forest);font-size:1rem;padding-inline:6px}
+.feedback select{display:block;width:100%;max-width:100%;min-width:0;min-height:44px;font:inherit;font-size:1rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:8px}
+#feedback-form summary,#feedback-form button,#feedback-form .feedback-consent{font-size:1rem}
+#feedback-form button{max-width:100%;white-space:normal}
+#feedback-form input[type=date],#feedback-form input[type=time]{max-width:100%}
+#feedback-time-help{font-size:.85rem}
+#feedback-optional{border-block:1px solid var(--line)}
 /* Custom dates stay in a secondary row, preserving the compact default filters. */
 .filters .date-range{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:12px 18px;min-width:0;margin:0;padding:12px 0 0;border:0;border-top:1px solid var(--line)}
 .filters .date-range[hidden]{display:none}
