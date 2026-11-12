@@ -79,4 +79,17 @@ Offline replay skutečných zachycených bajtů po opravách: **107 akcí, 11 re
 - Nový PR workflow spouští offline Python, čisté JS, public validaci a syntax. Má jen `contents:read`, bez Pages oprávnění, uploadu nebo deploy jobu. Původní deploy workflow se touto větví nemění.
 - Baseline živý sběr 12 zdrojů: **304,838 s**, 78 akcí. Publisher má beze změny collector timeout **600 s**; skutečná funkce scheduleru `_get_script_timeout()` v aktivním prostředí vrátila **3600 s**. Nastavení scheduleru nebylo měněno.
 
-Dvě finální živá měření po všech opravách a stabilním offline replay se doplní po dokončení; předchozí vývojové sběry se za tuto dvojici nevydávají.
+Dvě **skutečná finální živá měření** po všech opravách a stabilním offline replay, 12. 11. 2026; předchozí vývojové sběry se za tuto dvojici nevydávají:
+
+| Finální kontrola | Začátek (CET) | Wall runtime subprocessu | Vnitřní runtime collectoru | HTTP / 304 | Akce / review / vyřazení | Chyby zdrojů |
+| --- | --- | --- | --- | --- | --- | --- |
+| A (izolovaný běh 3) | 18:24:41 | **6 min 44 s** (404,441 s) | 404,004 s | 189 / 13 | 107 / 11 / 21 | 0 |
+| B (izolovaný běh 4) | 18:31:25 | **6 min 27 s** (386,681 s) | 385,865 s | 188 / 12 | 107 / 11 / 21 | 0 |
+
+Oba sběry úspěšně skončily a jejich veřejné projekce prošly validátorem. Síť nebyla nahrazena fixtures; standardní HTTP klient respektoval robots a použil izolovanou podmíněnou cache. Oba běhy mají 0 AI volání. Jde o opakování nad již naplněnou izolovanou DB: 107 nezměněných akcí, 0 nově vložených a 0 změněných vůči předchozímu sběru. **Čistý přírůstek 29 je rozdíl proti původním 78**, nikoli zavádějící interpretace počítadla `eventsNew` posledního běhu.
+
+Programově porovnána všechna věcná pole všech 78 původních akcí i všech 107 mezi finálními běhy; měnit se smí jen `verifiedAt`. Všech 29 nových akcí má doložené místo a úplné datum / interval v sezoně; všech 13 hranických programů má po odstranění inkluzivních taxonomických štítků z access scope skutečně `audience:všichni`. Mapové body jsou pouze obecní středy, nikdy z nich nevzniká důkaz přesného místa.
+
+Závěrečná čistá kopie trackovaných/neignorovaných podkladů bez `private/`: znovu 85 Python + 18 JS + public validace (78), bez sítě a bez výzkumné cache. Navíc se beze změny UI vykreslil skutečný historický snapshot (78) i skutečná rozšířená izolovaná projekce (107) v desktopu 1440 px a mobilu 393 px. Všechny čtyři kontroly zobrazily 11 krajů / 17 zdrojů bez JS výjimky, pending text u historického snapshotu byl viditelný a nový filtr Hranic vracel 13 akcí. Externí API a mapové tiles byly v této kontrole blokované.
+
+Nejdelší finální sběr se vešel do stávajícího 600s timeoutu. Naměřený čas není záruka pro další rozšiřování nebo výpadky cizích serverů; další dávka musí rozpočet znovu změřit. Implementace, registry, geodata, testy i read-only PR workflow po zmrazení před finální dvojicí nebyly měněny, doplňuje se jen tento protokol.
