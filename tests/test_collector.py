@@ -7,7 +7,8 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = json.loads((ROOT / 'data/sources.json').read_text())
-RESEARCH = ROOT / ('private/research' if (ROOT / 'private/research').exists() else 'tests/fixtures/research')
+RESEARCH = ROOT / 'tests/fixtures/research'
+LEGACY_SEMILY = json.loads((ROOT/'tests/fixtures/legacy-semily-source.json').read_text())
 
 
 def collector():
@@ -84,7 +85,7 @@ class ParserTests(unittest.TestCase):
             cases.append((s, f['url'], research / 'pilot-plzensky/fixtures' / (f['key']+'.html'), f['date'], f.get('time')))
         for f in json.loads((research / 'pilot-liberecky/verified-facts.json').read_text())['events']:
             if not f.get('in_scope'): continue
-            s = next(s for s in REGISTRY['sources'] if s['id'] == f['source_id'])
+            s = LEGACY_SEMILY if f['source_id'] == 'cz-semily-calendar' else next(s for s in REGISTRY['sources'] if s['id'] == f['source_id'])
             cases.append((s, f['source_url'], research / 'pilot-liberecky' / f['raw_html'], f['date'], f['start_time']))
         for f in json.loads((research / 'pilot-jihomoravsky/verified-event-facts.json').read_text()):
             s = next(s for s in REGISTRY['sources'] if s['id'] == f['source_id'])

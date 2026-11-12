@@ -1,0 +1,17 @@
+{
+  "id": "cz-semily-calendar",
+  "town": "Semily",
+  "region": "Liberecký kraj",
+  "adapter": "vismo",
+  "index_urls": [
+    "https://www.semily.cz/vismo/kalendar-akci.asp?hledani=1&id_org=14724&kdy=-1&datum_od=20.11.2026&datum_do=24.12.2026"
+  ],
+  "url_regex": "^https://(?:www\\.)?semily\\.cz/(?:[^/?#]+/a-\\d+(?:[?#].*)?|vismo/akce\\.asp\\?[^#]*\\bid=\\d+(?:[&#].*)?)$",
+  "seed_urls": [
+    "https://www.semily.cz/mikulasske%2Dcaje%2Daneb%2Dmozna%2Dprijde%2Di%2Dmikulas/a-5747",
+    "https://www.semily.cz/vanoce%2Ds%2Dmusicou%2Dbohemicou/a-5837"
+  ],
+  "feed_url": null,
+  "coverage_note": "Pilotní výběr měst a omezený počet stránek, nikoli úplný soupis kraje.",
+  "max_details": 14
+}

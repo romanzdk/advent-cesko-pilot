@@ -1,0 +1,34 @@
+[
+  {
+    "file": "kc-0.html",
+    "url": "https://kcgolf.cz/program/udalosti/richard-muller-vanoce-2026",
+    "title": "Richard Müller – Vánoce 2026",
+    "start": "2026-12-02T19:00:00+01:00",
+    "venue": "KC Semily, Kulturní centrum Semily",
+    "bodySha256": "f5758d5177f1e0f9ada22dee1bd3e5ac35634fc2d4cd352285cade97f094f945"
+  },
+  {
+    "file": "kc-1.html",
+    "url": "https://kcgolf.cz/program/udalosti/mikulasske-caje-aneb-mozna-prijde-i-mikulas",
+    "title": "MIKULÁŠSKÉ ČAJE aneb MOŽNÁ PŘÍJDE I MIKULÁŠ",
+    "start": "2026-12-03T15:00:00+01:00",
+    "venue": "KC Golf, Kulturní centrum Semily",
+    "bodySha256": "e8dbfb2d7efa0742105526be15e41c8b5cfcee060d3c448ba79805cda169fe69"
+  },
+  {
+    "file": "kc-2.html",
+    "url": "https://kcgolf.cz/program/udalosti/vanoce-s-musicou-bohemicou",
+    "title": "VÁNOCE S MUSICOU BOHEMICOU",
+    "start": "2026-12-11T19:00:00+01:00",
+    "venue": "KC Semily, Kulturní centrum Semily",
+    "bodySha256": "432447b1e92f2a24d1f73dd5529c91ee9206b36bc088d999c9424880e3d1681e"
+  },
+  {
+    "file": "kc-3.html",
+    "url": "https://kcgolf.cz/program/udalosti/vanocni-dar",
+    "title": "VÁNOČNÍ DAR",
+    "start": "2026-12-12T15:00:00+01:00",
+    "venue": "malý sál KC Semily, Kulturní centrum Semily",
+    "bodySha256": "6f45765352b88e7f1beb016a1eba25a02330dfcd366c28dd782b7228a2999a28"
+  }
+]

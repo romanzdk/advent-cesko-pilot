@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T12:20:30+00:00",
+  "generatedAt": "2026-11-12T13:03:16+00:00",
   "season": 2026,
   "region": "Česko – pilot tří krajů",
   "events": [
@@ -24,7 +24,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:20:53+00:00",
+      "verifiedAt": "2026-11-12T13:03:26+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-vystava-3894_1381cs.html",
       "location": {
         "lat": 49.9341107,
@@ -52,7 +52,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:20:56+00:00",
+      "verifiedAt": "2026-11-12T13:03:30+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-dilnicky-pro-deti-3897_1386cs.html",
       "location": {
         "lat": 49.9341107,
@@ -60,6 +60,36 @@
         "precision": "town",
         "label": "Plasy — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439746"
+      }
+    },
+    {
+      "id": "e-1aac46ed89817371f0d3",
+      "title": "Vánoční dílničky",
+      "town": "Nebřeziny",
+      "region": "Plzeňský kraj",
+      "date": "2026-11-21",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "Nebřeziny",
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční dílničky. Nebřeziny",
+      "notes": [
+        "Nebřeziny je část Plas; mapa ukazuje jen orientační střed místní části, nikoli přesné místo akce."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T13:03:33+00:00",
+      "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-dilnicky-3681_1320cs.html",
+      "location": {
+        "lat": 49.9205793,
+        "lon": 13.4136535,
+        "precision": "town",
+        "label": "Nebřeziny — část Plas — orientační střed místní části; nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/20736709"
       }
     },
     {
@@ -80,7 +110,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:22:11+00:00",
+      "verifiedAt": "2026-11-12T13:05:26+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/vaclav-noid-barta-vanocni-koncert-3523_2442cs.html",
       "location": {
         "lat": 50.6091761,
@@ -108,7 +138,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:22:28+00:00",
+      "verifiedAt": "2026-11-12T13:05:43+00:00",
       "sourceUrl": "https://www.rajhrad.cz/2026/11/vanocni-jarmark-zs-rajhrad-27-11-2026/",
       "location": {
         "lat": 49.0890629,
@@ -116,6 +146,66 @@
         "precision": "town",
         "label": "Rajhrad — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442073"
+      }
+    },
+    {
+      "id": "e-36868d1f44596624fa75",
+      "title": "Rozsvícení vánočního stromku v Babiné",
+      "town": "Babina",
+      "region": "Plzeňský kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Babina",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromku v Babiné. Babina",
+      "notes": [
+        "Babina je část Plas; mapa ukazuje jen orientační střed místní části, nikoli přesné místo akce."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T13:03:40+00:00",
+      "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-babine-3944_1398cs.html",
+      "location": {
+        "lat": 49.9362949,
+        "lon": 13.4303243,
+        "precision": "town",
+        "label": "Babina — část Plas — orientační střed místní části; nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/20736710"
+      }
+    },
+    {
+      "id": "e-85e0f1eee62f99ce5a73",
+      "title": "Rozsvícení vánočního stromku v Horním Hradišti",
+      "town": "Horní Hradiště",
+      "region": "Plzeňský kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Horní Hradiště",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromku v Horním Hradišti. Horní Hradiště",
+      "notes": [
+        "Horní Hradiště je část Plas; mapa ukazuje jen orientační střed místní části, nikoli přesné místo akce."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T13:03:36+00:00",
+      "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-hornim-hradisti-3901_1390cs.html",
+      "location": {
+        "lat": 49.9557458,
+        "lon": 13.3731211,
+        "precision": "town",
+        "label": "Horní Hradiště — část Plas — orientační střed místní části; nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/20736712"
       }
     },
     {
@@ -138,7 +228,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:21:10+00:00",
+      "verifiedAt": "2026-11-12T13:03:43+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-vystava-3894_1382cs.html",
       "location": {
         "lat": 49.9341107,
@@ -168,7 +258,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:22:29+00:00",
+      "verifiedAt": "2026-11-12T13:05:44+00:00",
       "sourceUrl": "https://www.rajhrad.cz/2026/10/mikulasska-nadilka/",
       "location": {
         "lat": 49.0890629,
@@ -196,7 +286,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:21:13+00:00",
+      "verifiedAt": "2026-11-12T13:03:46+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromecku-v-plasich-3900_1389cs.html",
       "location": {
         "lat": 49.9341107,
@@ -226,7 +316,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:22:14+00:00",
+      "verifiedAt": "2026-11-12T13:05:29+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/rozsviceni-vanocniho-stromecku-v-jilemnici-4001_2935cs.html",
       "location": {
         "lat": 50.6091761,
@@ -234,6 +324,36 @@
         "precision": "town",
         "label": "Jilemnice — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439145"
+      }
+    },
+    {
+      "id": "e-f91aed308150ba0abd06",
+      "title": "Rozsvícení vánočního stromu v Nebřezinech.",
+      "town": "Nebřeziny",
+      "region": "Plzeňský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Nebřeziny",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu v Nebřezinech.. Nebřeziny",
+      "notes": [
+        "Nebřeziny je část Plas; mapa ukazuje jen orientační střed místní části, nikoli přesné místo akce."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T13:04:12+00:00",
+      "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromu-v-nebrezinech-3682_1321cs.html",
+      "location": {
+        "lat": 49.9205793,
+        "lon": 13.4136535,
+        "precision": "town",
+        "label": "Nebřeziny — část Plas — orientační střed místní části; nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/20736709"
       }
     },
     {
@@ -254,7 +374,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:21:37+00:00",
+      "verifiedAt": "2026-11-12T13:04:32+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/rozsviceni-vanocniho-stromu-1885_323cs.html",
       "location": {
         "lat": 49.8162537,
@@ -262,6 +382,36 @@
         "precision": "town",
         "label": "Černošín — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438873"
+      }
+    },
+    {
+      "id": "e-badd2a1ab91d5ac2e433",
+      "title": "Rozsvícení vánočního stromku v Žebnici",
+      "town": "Žebnice",
+      "region": "Plzeňský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Žebnice",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromku v Žebnici. Žebnice",
+      "notes": [
+        "Žebnice je část Plas; mapa ukazuje jen orientační střed místní části, nikoli přesné místo akce."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T13:04:15+00:00",
+      "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-zebnici-3902_1391cs.html",
+      "location": {
+        "lat": 49.9559675,
+        "lon": 13.3931451,
+        "precision": "town",
+        "label": "Žebnice — část Plas — orientační střed místní části; nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/20736711"
       }
     },
     {
@@ -284,7 +434,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:22:33+00:00",
+      "verifiedAt": "2026-11-12T13:05:47+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-adventni-stezka-v-knihovne-kouzlo-ceskych-vanoc",
       "location": {
         "lat": 49.2987857,
@@ -292,6 +442,34 @@
         "precision": "town",
         "label": "Kuřim — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442051"
+      }
+    },
+    {
+      "id": "e-32d5237997b13a735045",
+      "title": "Vánoční raketa",
+      "town": "Semily",
+      "region": "Liberecký kraj",
+      "date": "2026-12-01",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": null,
+      "venue": "KC Semily, Kulturní centrum Semily",
+      "category": "setkani",
+      "price": "Základní vstupné: 70 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční raketa. KC Semily, Kulturní centrum Semily",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T13:04:55+00:00",
+      "sourceUrl": "https://kcgolf.cz/program/udalosti/vanocni-raketa",
+      "location": {
+        "lat": 50.602249,
+        "lon": 15.33526,
+        "precision": "town",
+        "label": "Semily — orientační poloha obce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438971"
       }
     },
     {
@@ -312,7 +490,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:22:30+00:00",
+      "verifiedAt": "2026-11-12T13:05:45+00:00",
       "sourceUrl": "https://www.rajhrad.cz/2026/10/setkani-u-vanocniho-stromu-1-12-2026/",
       "location": {
         "lat": 49.0890629,
@@ -342,7 +520,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:22:34+00:00",
+      "verifiedAt": "2026-11-12T13:05:48+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-vanocni-vystava-palickovane-krajky-1",
       "location": {
         "lat": 49.2987857,
@@ -370,7 +548,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:22:17+00:00",
+      "verifiedAt": "2026-11-12T13:05:32+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/vanocni-vystava-praci-zaku-vo-4022_2951cs.html",
       "location": {
         "lat": 50.6091761,
@@ -398,7 +576,7 @@
       "notes": [],
       "audience": "dospělí",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:22:21+00:00",
+      "verifiedAt": "2026-11-12T13:05:36+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/vanocni-tvoreni-pro-dospele-4018_2947cs.html",
       "location": {
         "lat": 50.6091761,
@@ -406,6 +584,120 @@
         "precision": "town",
         "label": "Jilemnice — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439145"
+      }
+    },
+    {
+      "id": "e-25685b85bbcbea70ba4c",
+      "title": "Richard Müller – Vánoce 2026",
+      "town": "Semily",
+      "region": "Liberecký kraj",
+      "date": "2026-12-02",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "KC Semily, Kulturní centrum Semily",
+      "category": "setkani",
+      "price": "Základní vstupné: 990–1590 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Richard Müller – Vánoce 2026. KC Semily, Kulturní centrum Semily",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T13:04:50+00:00",
+      "sourceUrl": "https://kcgolf.cz/program/udalosti/richard-muller-vanoce-2026",
+      "location": {
+        "lat": 50.602249,
+        "lon": 15.33526,
+        "precision": "town",
+        "label": "Semily — orientační poloha obce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438971"
+      }
+    },
+    {
+      "id": "e-8550e8aafc31ae431565",
+      "title": "MIKULÁŠSKÉ ČAJE aneb MOŽNÁ PŘÍJDE I MIKULÁŠ",
+      "town": "Semily",
+      "region": "Liberecký kraj",
+      "date": "2026-12-03",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "KC Golf, Kulturní centrum Semily",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "MIKULÁŠSKÉ ČAJE aneb MOŽNÁ PŘÍJDE I MIKULÁŠ. KC Golf, Kulturní centrum Semily",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T13:04:57+00:00",
+      "sourceUrl": "https://kcgolf.cz/program/udalosti/mikulasske-caje-aneb-mozna-prijde-i-mikulas",
+      "location": {
+        "lat": 50.602249,
+        "lon": 15.33526,
+        "precision": "town",
+        "label": "Semily — orientační poloha obce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438971"
+      }
+    },
+    {
+      "id": "e-0039969db1b333bb4913",
+      "title": "Mikulášská besídka pro děti.",
+      "town": "Nebřeziny",
+      "region": "Plzeňský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Nebřeziny",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášská besídka pro děti.. Nebřeziny",
+      "notes": [
+        "Nebřeziny je část Plas; mapa ukazuje jen orientační střed místní části, nikoli přesné místo akce."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T13:04:19+00:00",
+      "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/mikulasska-besidka-pro-deti-3683_1322cs.html",
+      "location": {
+        "lat": 49.9205793,
+        "lon": 13.4136535,
+        "precision": "town",
+        "label": "Nebřeziny — část Plas — orientační střed místní části; nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/20736709"
+      }
+    },
+    {
+      "id": "e-d5d2145307127426cf3e",
+      "title": "PŘEDVÁNOČNÍ ODPOLEDNE PRO SENIORY",
+      "town": "Semily",
+      "region": "Liberecký kraj",
+      "date": "2026-12-08",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "venue": "KC Golf, Kulturní centrum Semily",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "PŘEDVÁNOČNÍ ODPOLEDNE PRO SENIORY. KC Golf, Kulturní centrum Semily",
+      "notes": [],
+      "audience": "senioři / omezené zaměření",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T13:05:00+00:00",
+      "sourceUrl": "https://kcgolf.cz/program/udalosti/predvanocni-odpoledne-pro-seniory-2025",
+      "location": {
+        "lat": 50.602249,
+        "lon": 15.33526,
+        "precision": "town",
+        "label": "Semily — orientační poloha obce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438971"
       }
     },
     {
@@ -426,7 +718,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:21:26+00:00",
+      "verifiedAt": "2026-11-12T13:04:22+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/adventni-koncert-3926_1394cs.html",
       "location": {
         "lat": 49.9341107,
@@ -454,7 +746,7 @@
       "notes": [],
       "audience": "senioři / omezené zaměření",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:21:40+00:00",
+      "verifiedAt": "2026-11-12T13:04:36+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/predvanocni-posezeni-se-seniory-1886_324cs.html",
       "location": {
         "lat": 49.8162537,
@@ -482,7 +774,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:22:35+00:00",
+      "verifiedAt": "2026-11-12T13:05:49+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-vanocni-tvoreni-vanocni-svitici-pranicka",
       "location": {
         "lat": 49.2987857,
@@ -490,6 +782,62 @@
         "precision": "town",
         "label": "Kuřim — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442051"
+      }
+    },
+    {
+      "id": "e-ef74f4604f674c036ced",
+      "title": "VÁNOCE S MUSICOU BOHEMICOU",
+      "town": "Semily",
+      "region": "Liberecký kraj",
+      "date": "2026-12-11",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "KC Semily, Kulturní centrum Semily",
+      "category": "setkani",
+      "price": "Vstupné v předpodeji: 300 Kč; Vstupné na místě: 350 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "VÁNOCE S MUSICOU BOHEMICOU. KC Semily, Kulturní centrum Semily",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T13:05:02+00:00",
+      "sourceUrl": "https://kcgolf.cz/program/udalosti/vanoce-s-musicou-bohemicou",
+      "location": {
+        "lat": 50.602249,
+        "lon": 15.33526,
+        "precision": "town",
+        "label": "Semily — orientační poloha obce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438971"
+      }
+    },
+    {
+      "id": "e-a9951a8a48e7e652b647",
+      "title": "VÁNOČNÍ DAR",
+      "town": "Semily",
+      "region": "Liberecký kraj",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "malý sál KC Semily, Kulturní centrum Semily",
+      "category": "setkani",
+      "price": "Základní vstupné: 80 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "VÁNOČNÍ DAR. malý sál KC Semily, Kulturní centrum Semily",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-12T13:05:05+00:00",
+      "sourceUrl": "https://kcgolf.cz/program/udalosti/vanocni-dar",
+      "location": {
+        "lat": 50.602249,
+        "lon": 15.33526,
+        "precision": "town",
+        "label": "Semily — orientační poloha obce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438971"
       }
     },
     {
@@ -510,7 +858,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:21:43+00:00",
+      "verifiedAt": "2026-11-12T13:04:39+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/mikulasska-besidka-1887_325cs.html",
       "location": {
         "lat": 49.8162537,
@@ -538,7 +886,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:22:37+00:00",
+      "verifiedAt": "2026-11-12T13:05:51+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-vanocni-koncert-ondreje-rumla",
       "location": {
         "lat": 49.2987857,
@@ -566,7 +914,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:22:39+00:00",
+      "verifiedAt": "2026-11-12T13:05:53+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-adventni-zastaveni-tvorime-vanocni-svicny",
       "location": {
         "lat": 49.2987857,
@@ -594,7 +942,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:22:40+00:00",
+      "verifiedAt": "2026-11-12T13:05:54+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-vanocni-klubik-pohadkove-hnizdecko",
       "location": {
         "lat": 49.2987857,
@@ -622,7 +970,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:21:30+00:00",
+      "verifiedAt": "2026-11-12T13:04:25+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/kolednici-z-mladotic-3903_1392cs.html",
       "location": {
         "lat": 49.9341107,
@@ -650,7 +998,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:21:47+00:00",
+      "verifiedAt": "2026-11-12T13:04:42+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/adventni-koncert-1888_326cs.html",
       "location": {
         "lat": 49.8162537,
@@ -678,7 +1026,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T12:22:24+00:00",
+      "verifiedAt": "2026-11-12T13:05:39+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/beckove-kvarteto-vanocni-klarinetove-dostavenicko-4031_2961cs.html",
       "location": {
         "lat": 50.6091761,
@@ -708,7 +1056,7 @@
       ],
       "audience": "všichni",
       "status": "time-unconfirmed",
-      "verifiedAt": "2026-11-12T12:21:50+00:00",
+      "verifiedAt": "2026-11-12T13:04:46+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/betlem-v-kostele-1889_327cs.html",
       "location": {
         "lat": 49.8162537,

@@ -31,7 +31,7 @@ const coverageFixture = {
     id: `source-${index}`, town: ['Plasy', 'Turnov', '<img src=x onerror=alert(1)> Kuřim'][index],
     region: ['Plzeňský kraj', 'Liberecký kraj', 'Jihomoravský kraj'][index],
     url: index === 2 ? 'javascript:alert(1)' : `https://example.cz/source-${index}`,
-    adapter: 'municipal', status, lastChecked: '2026-11-12T10:00:00Z', lastSuccess: index === 2 ? null : '2026-11-12T10:00:00Z',
+    adapter: 'municipal', coverageNote: 'Pořadatelský výběr, nikoli celý městský kalendář.', excludedCount: 7, status, lastChecked: '2026-11-12T10:00:00Z', lastSuccess: index === 2 ? null : '2026-11-12T10:00:00Z',
     eventCount: [2, 1, 0][index], reviewCount: [0, 3, 0][index], lastError: index === 2 ? '<script>window.injected=true</script>' : null
   })),
   metrics: { durationSeconds: 125.4, requestCount: 18, http304: 0, cacheUnchanged: 0, eventsNew: 3, eventsChanged: 0, eventsUnchanged: 0, eventsPublished: 3, reviewCount: 3, aiCalls: 0 },
@@ -124,7 +124,7 @@ test('pilot names its bounded Christmas 2026 scope and excludes out-of-window ev
     assert.equal(await page.locator('h1').innerText(), 'Advent v Česku 2026');
     assert.equal(await page.title(), 'Advent v Česku 2026');
     assert.match(await page.locator('.intro').innerText(), /Pilot: Plzeňský, Liberecký a Jihomoravský kraj/);
-    assert.match(await page.locator('.intro').innerText(), /Výběr šesti měst, nikoli úplný přehled krajů ani celé ČR\./);
+    assert.match(await page.locator('.intro').innerText(), /Výběr šesti měst a místních částí Plas, nikoli úplný přehled krajů ani celé ČR\./);
     assert.match(await page.locator('.intro').innerText(), /20\. 11\. – 24\. 12\. 2026/);
     assert.equal(await page.getByRole('link', { name: 'Mnichovice a okolí', exact: true }).getAttribute('href'), 'https://romanzdk.github.io/advent-mnichovice/');
     assert.deepEqual(await page.locator('.event-card').evaluateAll(cards => cards.map(card => card.dataset.id)), ['fixture-a', 'fixture-b', 'fixture-c', 'boundary-2']);
@@ -165,6 +165,8 @@ test('coverage discloses real bounded collection safely without blocking events 
     const text = await page.locator('#coverage').innerText();
     for (const label of ['ověřeno', 'částečně', 'nedostupné', 'Plasy', 'Plzeňský kraj', '12. 11. 2026', '11:00', '2 min 5 s', 'AI volání při posledním automatickém sběru: 0', coverageFixture.coverageNote]) assert(text.includes(label), label);
     assert.match(text, /nejvýše 2 stránky výpisu a 14 detailů na zdroj/);
+    assert.match(text, /Pořadatelský výběr, nikoli celý městský kalendář/);
+    assert.match(text, /Mimo rozsah: 7/);
     assert.match(await page.locator('.coverage-source').first().innerText(), /Publikované akce: 2 · K ověření: 0/);
     assert.match(await page.locator('.coverage-source').nth(1).innerText(), /Publikované akce: 1 · K ověření: 3/);
     assert.equal(await page.locator('#coverage a').first().getAttribute('href'), 'https://example.cz/source-0');

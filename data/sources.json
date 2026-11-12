@@ -23,7 +23,99 @@
       ],
       "feed_url": null,
       "coverage_note": "Pilotní výběr měst a omezený počet stránek, nikoli úplný soupis kraje.",
-      "max_details": 14
+      "max_details": 14,
+      "event_locations": {
+        "https://www.plasy.cz/turista/kalendar-akci-v-plasich/mikulasska-besidka-pro-deti-3683_1322cs.html": {
+          "sourceTown": "Plasy",
+          "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/mikulasska-besidka-pro-deti-3683_1322cs.html",
+          "expectedVenue": "Nebřeziny",
+          "expectedDate": "2026-12-05",
+          "town": "Nebřeziny",
+          "locationKey": "plasy-nebreziny",
+          "verifiedAt": "2026-11-12T12:21:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.plasy.cz/turista/kalendar-akci-v-plasich/mikulasska-besidka-pro-deti-3683_1322cs.html",
+            "https://www.plasy.cz/mesto/pridruzene-obce/nebreziny/",
+            "https://www.openstreetmap.org/relation/20736709"
+          ],
+          "sourceId": "christmas2026-plzensky-plasy"
+        },
+        "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-babine-3944_1398cs.html": {
+          "sourceTown": "Plasy",
+          "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-babine-3944_1398cs.html",
+          "expectedVenue": "Babina",
+          "expectedDate": "2026-11-27",
+          "town": "Babina",
+          "locationKey": "plasy-babina",
+          "verifiedAt": "2026-11-12T12:21:06+00:00",
+          "supportingSourceUrls": [
+            "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-babine-3944_1398cs.html",
+            "https://www.plasy.cz/mesto/pridruzene-obce/babina/",
+            "https://www.openstreetmap.org/relation/20736710"
+          ],
+          "sourceId": "christmas2026-plzensky-plasy"
+        },
+        "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-hornim-hradisti-3901_1390cs.html": {
+          "sourceTown": "Plasy",
+          "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-hornim-hradisti-3901_1390cs.html",
+          "expectedVenue": "Horní Hradiště",
+          "expectedDate": "2026-11-27",
+          "town": "Horní Hradiště",
+          "locationKey": "plasy-horni-hradiste",
+          "verifiedAt": "2026-11-12T12:21:03+00:00",
+          "supportingSourceUrls": [
+            "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-hornim-hradisti-3901_1390cs.html",
+            "https://www.plasy.cz/mesto/pridruzene-obce/horni-hradiste/",
+            "https://www.openstreetmap.org/relation/20736712"
+          ],
+          "sourceId": "christmas2026-plzensky-plasy"
+        },
+        "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-zebnici-3902_1391cs.html": {
+          "sourceTown": "Plasy",
+          "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-zebnici-3902_1391cs.html",
+          "expectedVenue": "Žebnice",
+          "expectedDate": "2026-11-29",
+          "town": "Žebnice",
+          "locationKey": "plasy-zebnice",
+          "verifiedAt": "2026-11-12T12:21:20+00:00",
+          "supportingSourceUrls": [
+            "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-zebnici-3902_1391cs.html",
+            "https://www.plasy.cz/mesto/pridruzene-obce/zebnice/",
+            "https://www.openstreetmap.org/relation/20736711"
+          ],
+          "sourceId": "christmas2026-plzensky-plasy"
+        },
+        "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromu-v-nebrezinech-3682_1321cs.html": {
+          "sourceTown": "Plasy",
+          "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromu-v-nebrezinech-3682_1321cs.html",
+          "expectedVenue": "Nebřeziny",
+          "expectedDate": "2026-11-29",
+          "town": "Nebřeziny",
+          "locationKey": "plasy-nebreziny",
+          "verifiedAt": "2026-11-12T12:21:16+00:00",
+          "supportingSourceUrls": [
+            "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromu-v-nebrezinech-3682_1321cs.html",
+            "https://www.plasy.cz/mesto/pridruzene-obce/nebreziny/",
+            "https://www.openstreetmap.org/relation/20736709"
+          ],
+          "sourceId": "christmas2026-plzensky-plasy"
+        },
+        "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-dilnicky-3681_1320cs.html": {
+          "sourceTown": "Plasy",
+          "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-dilnicky-3681_1320cs.html",
+          "expectedVenue": "Nebřeziny",
+          "expectedDate": "2026-11-21",
+          "town": "Nebřeziny",
+          "locationKey": "plasy-nebreziny",
+          "verifiedAt": "2026-11-12T12:21:00+00:00",
+          "supportingSourceUrls": [
+            "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-dilnicky-3681_1320cs.html",
+            "https://www.plasy.cz/mesto/pridruzene-obce/nebreziny/",
+            "https://www.openstreetmap.org/relation/20736709"
+          ],
+          "sourceId": "christmas2026-plzensky-plasy"
+        }
+      }
     },
     {
       "id": "christmas2026-plzensky-cernosin",
@@ -45,20 +137,22 @@
       "max_details": 14
     },
     {
-      "id": "cz-semily-calendar",
+      "id": "cz-semily-kcgolf",
       "town": "Semily",
       "region": "Liberecký kraj",
-      "adapter": "vismo",
+      "adapter": "structured",
       "index_urls": [
-        "https://www.semily.cz/vismo/kalendar-akci.asp?hledani=1&id_org=14724&kdy=-1&datum_od=20.11.2026&datum_do=24.12.2026"
+        "https://kcgolf.cz/program"
       ],
-      "url_regex": "^https://(?:www\\.)?semily\\.cz/(?:[^/?#]+/a-\\d+(?:[?#].*)?|vismo/akce\\.asp\\?[^#]*\\bid=\\d+(?:[&#].*)?)$",
+      "url_regex": "^https://kcgolf\\.cz/program/udalosti/[^/?#]+$",
       "seed_urls": [
-        "https://www.semily.cz/mikulasske%2Dcaje%2Daneb%2Dmozna%2Dprijde%2Di%2Dmikulas/a-5747",
-        "https://www.semily.cz/vanoce%2Ds%2Dmusicou%2Dbohemicou/a-5837"
+        "https://kcgolf.cz/program/udalosti/richard-muller-vanoce-2026",
+        "https://kcgolf.cz/program/udalosti/mikulasske-caje-aneb-mozna-prijde-i-mikulas",
+        "https://kcgolf.cz/program/udalosti/vanoce-s-musicou-bohemicou",
+        "https://kcgolf.cz/program/udalosti/vanocni-dar"
       ],
       "feed_url": null,
-      "coverage_note": "Pilotní výběr měst a omezený počet stránek, nikoli úplný soupis kraje.",
+      "coverage_note": "Semily: omezený výběr vánočních akcí z primárního webu Kulturního centra Semily (KC Golf); nejde o úplné městské pokrytí. Původní městský kalendář semily.cz zůstává pro sběrač blokován robots.txt a není tímto zdrojem obcházen.",
       "max_details": 14
     },
     {

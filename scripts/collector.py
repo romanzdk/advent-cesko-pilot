@@ -15,6 +15,7 @@ from urllib.request import Request, build_opener, HTTPRedirectHandler
 from urllib.error import HTTPError
 from urllib.robotparser import RobotFileParser
 import uuid
+from zoneinfo import ZoneInfo
 
 
 def now():
@@ -27,6 +28,10 @@ def norm(text):
 
 def fold(text):
     return ''.join(c for c in unicodedata.normalize('NFD', text.lower()) if not unicodedata.combining(c))
+
+
+def exact_label(text):
+    return norm(unicodedata.normalize('NFKC', text)).casefold()
 
 
 def digest(value):
@@ -95,6 +100,11 @@ class Review(ValueError):
     pass
 
 
+class Excluded(Review):
+    """Known policy exclusion, not an unresolved factual candidate."""
+    pass
+
+
 def parse_dates(text):
     pattern = r'(?<!\d)(\d{1,2})\.\s*(\d{1,2})\.\s*(20\d{2})(?!\d)'
     found = []
@@ -136,6 +146,23 @@ def structured_event(root):
     return candidates[0] if candidates else None
 
 
+def structured_price(event):
+    offers = event.get('offers', [])
+    if isinstance(offers, dict):
+        offers = [offers]
+    prices = []
+    for offer in offers:
+        if not isinstance(offer, dict) or offer.get('priceCurrency') != 'CZK':
+            continue
+        values = [offer.get('lowPrice'), offer.get('highPrice')] if offer.get('@type') == 'AggregateOffer' else [offer.get('price')]
+        if not all(re.fullmatch(r'\d+(?:\.\d+)?',str(v)) for v in values):
+            continue
+        amount = '–'.join(dict.fromkeys(str(v) for v in values)) + ' Kč'
+        name = clean_public(str(offer.get('name','')))
+        prices.append((name + ': ' if name else '') + amount)
+    return '; '.join(prices) or None
+
+
 def parse_event(body, source, url, window):
     if not safe_url(url):
         raise Review('Neplatný odkaz zdroje.')
@@ -144,10 +171,12 @@ def parse_event(body, source, url, window):
     title = txt(root.find('h1'))
     adapter = source['adapter']
     structured = structured_event(root)
+    if adapter == 'structured' and not structured:
+        raise Review('Chybí strukturovaný detail jedné události.')
     if structured:
         scope = Node('div')
         title = str(structured.get('name', ''))
-        scope.children = [title]
+        scope.children = [title, txt(DOM(str(structured.get('description',''))).root)]
         adapter = 'structured'
     venue = ''
     if adapter == 'structured':
@@ -158,11 +187,17 @@ def parse_event(body, source, url, window):
                 continue
             try:
                 stamp = datetime.fromisoformat(value)
+                if stamp.tzinfo:
+                    stamp = stamp.astimezone(ZoneInfo('Europe/Prague'))
             except (ValueError, TypeError):
                 raise Review('Neplatné strukturované datum.')
             date_text += (' – ' if date_text else '') + stamp.strftime('%d. %m. %Y') + (stamp.strftime(' %H:%M') if 'T' in value else '')
         place = structured.get('location', {})
         venue = place.get('name', '') if isinstance(place,dict) else str(place)
+        address = place.get('address', {}) if isinstance(place,dict) else {}
+        locality = address.get('addressLocality') if isinstance(address,dict) else None
+        if locality and exact_label(str(locality)) != exact_label(source['town']):
+            raise Review('Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu.')
     elif adapter == 'galileo' and scope:
         date_node = scope.find(cls='event-action__date-start-text') or scope.find(cls='action-date')
         date_text = txt(date_node)
@@ -226,8 +261,6 @@ def parse_event(body, source, url, window):
         raise Review('Rozporná data v těle události vyžadují ověření.')
     if not dates:
         raise Review('V těle detailu chybí úplné datum s rokem.')
-    if not all(window['from'] <= d <= window['through'] for d, pos in dates):
-        raise Review('Datum je mimo sledované období.')
     times = re.findall(r'(?<!\d)([0-2]?\d):([0-5]\d)(?!\d)', date_text)
     if not times:
         hours = re.search(r'(?<!\d)(\d{1,2})\s*[-–]\s*(\d{1,2})\s*hod', date_text)
@@ -241,20 +274,34 @@ def parse_event(body, source, url, window):
     times = [f'{int(h):02d}:{m}' for h, m in times]
     start = times[0] if times and times[0] != '00:00' else None
     venue = re.sub(r'^Kde:\s*', '', venue)
+    mapping = source.get('event_locations', {}).get(url)
+    town = source['town']
+    if mapping:
+        if (mapping['sourceId'] != source.get('id') or mapping['sourceTown'] != source['town'] or mapping['sourceUrl'] != url
+                or exact_label(mapping['expectedVenue']) != exact_label(venue)
+                or mapping['expectedDate'] != dates[0][0]):
+            raise Review('Ověřené mapování lokality již neodpovídá zdroji, místu nebo datu; ověřte znovu.')
+        town = mapping['town']
     towns = ['Plasy', 'Černošín', 'Semily', 'Jilemnice', 'Rajhrad', 'Kuřim', 'Babina', 'Žebnice', 'Horní Hradiště', 'Nebřeziny']
-    if any(fold(t) in fold(venue) for t in towns if t != source['town']):
+    if not mapping and any(fold(t) in fold(venue) for t in towns if t != source['town']):
         raise Review('Místo konání neodpovídá obci zdroje; ověřte lokalitu.')
+    if not all(window['from'] <= d <= window['through'] for d, pos in dates):
+        raise Excluded('Datum je mimo sledované období.')
     text = fold(title + ' ' + txt(scope))
     title_key = fold(title)
     if re.search(r'\bzajezd\b|\bexkurze\b', title_key):
-        raise Review('Zájezd / výjezd: místo odjezdu není místo programu; ověřte cílovou lokalitu.')
+        raise Excluded('Zájezd / výjezd není součástí místního programového výběru.')
     category = next((cat for terms, cat in [('strom', 'strom'), ('mikulas', 'mikulas'), ('tvoren|diln|svicn|pranic', 'tvoreni'), ('jarmark|trh|vystav', 'trhy'), ('betlem', 'betlem')] if re.search(terms, title_key)), 'setkani')
-    audience = 'senioři / omezené zaměření' if re.search(r'senior|\bcaje\b|pro cleny', text) else ('dospělí' if 'pro dospele' in text else 'všichni')
+    audience = 'senioři / omezené zaměření' if re.search(r'pro seniory|pouze pro cleny|jen pro cleny', text) and not re.search(r'verejnost|vsichni jsou zvani',text) else ('dospělí' if 'pro dospele' in text else 'všichni')
     booking_mentioned = re.search(r'rezervac|prihlasen', text) and not re.search(r'bez rezervac|neni nutn[ae] rezervac', text)
     registration = 'Pořadatel uvádí rezervace / přihlášení; podmínky ověřte přímo u něj.' if booking_mentioned else None
     price_match = re.search(r'\b\d+(?:\s*[-–]\s*\d+)?\s*Kč\b', txt(scope))
     price = price_match[0] if price_match else ('dobrovolné' if 'dobrovolne' in text else None)
+    if structured:
+        price = structured_price(structured)
     notes = []
+    if mapping:
+        notes.append(f"{town} je část Plas; mapa ukazuje jen orientační střed místní části, nikoli přesné místo akce.")
     if len(dates) > 1:
         notes.append('Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření.')
     if 'predbezny' in text:
@@ -279,12 +326,12 @@ def parse_event(body, source, url, window):
     venue = clean_public(venue)[:180]
     if not title:
         raise Review('Chybí název události.')
-    return {'id': 'e-' + digest(url)[:20], 'title': title, 'town': source['town'], 'region': source['region'],
+    return {'id': 'e-' + digest(url)[:20], 'title': title, 'town': town, 'region': source['region'],
             'date': dates[0][0], 'endDate': dates[-1][0] if len(dates) > 1 else None,
             'startTime': start, 'endTime': times[1] if len(times) > 1 else None,
             'venue': venue or None, 'category': category, 'price': price, 'registration': registration,
             'registrationUrl': registration_url, 'description': f"{title}. {venue}"[:200], 'notes': notes,
-            'audience': audience, 'status': 'cancelled' if re.search(r'\bzrusen', text) else ('confirmed' if start else 'time-unconfirmed'),
+            'audience': audience, 'status': 'cancelled' if (structured and str(structured.get('eventStatus','')).rstrip('/').split('/')[-1] == 'EventCancelled') or re.search(r'\bzrusen', text) else ('confirmed' if start else 'time-unconfirmed'),
             'verifiedAt': now(), 'sourceUrl': url, 'location': None}
 
 
@@ -336,16 +383,17 @@ def collect(registry, db, output, locations, fetcher, source_id=None):
         CREATE TABLE IF NOT EXISTS observations (id INTEGER PRIMARY KEY, source_id TEXT, url TEXT, body_hash TEXT, observed_at TEXT);
         CREATE TABLE IF NOT EXISTS provenance (id INTEGER PRIMARY KEY, event_id TEXT, field TEXT, value TEXT, source_url TEXT, body_hash TEXT, observed_at TEXT);
         CREATE TABLE IF NOT EXISTS reviews (source_id TEXT, url TEXT, title TEXT, reason TEXT, observed_at TEXT, PRIMARY KEY(source_id,url));
+        CREATE TABLE IF NOT EXISTS exclusions (source_id TEXT, url TEXT, reason TEXT, observed_at TEXT, PRIMARY KEY(source_id,url));
     ''')
     metrics = dict(runId=str(uuid.uuid4()), durationSeconds=0, requestCount=0, http304=0, cacheUnchanged=0,
-                   eventsNew=0, eventsChanged=0, eventsUnchanged=0, eventsPublished=0, reviewCount=0, aiCalls=0)
+                   eventsNew=0, eventsChanged=0, eventsUnchanged=0, eventsPublished=0, reviewCount=0, excludedCount=0, aiCalls=0)
     for source in registry['sources']:
         if source_id and source['id'] != source_id:
             continue
         sid = source['id']
         old = con.execute('SELECT payload FROM source_state WHERE id=?', (sid,)).fetchone()
         previous = json.loads(old[0]) if old else {}
-        failures, successful, review_count = 0, 0, 0
+        failures, successful, review_count, excluded_count = 0, 0, 0, 0
         indices = list(dict.fromkeys(source['index_urls']))[:2]
         details = []
         i = 0
@@ -374,22 +422,36 @@ def collect(registry, db, output, locations, fetcher, source_id=None):
                 con.execute('INSERT INTO observations(source_id,url,body_hash,observed_at) VALUES (?,?,?,?)', (sid,url,body_hash,checked))
                 title = clean_public(txt(DOM(body).root.find('h1')))[:180] or title
                 event = parse_event(body, source, url, registry['window'])
-                location = locations.get(event['town']) if isinstance(locations, dict) else None
+                mapping = source.get('event_locations', {}).get(url)
+                location_key = mapping['locationKey'] if mapping else event['town']
+                location = locations.get(location_key) if isinstance(locations, dict) else None
                 if location and safe_url(location.get('sourceUrl', '')):
-                    event['location'] = location
+                    event['location'] = {k:location[k] for k in ('lat','lon','precision','label','sourceUrl')}
                 semantic = {k:v for k,v in event.items() if k != 'verifiedAt'}
                 fingerprint = digest(json.dumps(semantic, sort_keys=True, ensure_ascii=False))
                 old_event = con.execute('SELECT fingerprint FROM events WHERE id=?', (event['id'],)).fetchone()
                 kind = 'eventsNew' if not old_event else ('eventsUnchanged' if old_event[0] == fingerprint else 'eventsChanged')
                 metrics[kind] += 1
                 con.execute('INSERT OR REPLACE INTO events VALUES (?,?,?,?,?,?)', (event['id'],sid,url,fingerprint,json.dumps(event,ensure_ascii=False),checked))
-                for field in ('date', 'startTime', 'endDate', 'endTime', 'venue'):
+                for field in ('date', 'startTime', 'endDate', 'endTime', 'venue', 'town', 'price', 'audience', 'status'):
                     con.execute('INSERT INTO provenance(event_id,field,value,source_url,body_hash,observed_at) VALUES (?,?,?,?,?,?)', (event['id'],field,json.dumps(event[field]),url,body_hash,checked))
+                if mapping:
+                    for support in mapping.get('supportingSourceUrls', []):
+                        if safe_url(support):
+                            con.execute('INSERT INTO provenance(event_id,field,value,source_url,body_hash,observed_at) VALUES (?,?,?,?,?,?)', (event['id'],'town',json.dumps(event['town']),support,body_hash if support == url else None,mapping['verifiedAt']))
                 con.execute('DELETE FROM reviews WHERE source_id=? AND url=?', (sid,url))
+                con.execute('DELETE FROM exclusions WHERE source_id=? AND url=?', (sid,url))
+            except Excluded as exc:
+                excluded_count += 1
+                metrics['excludedCount'] += 1
+                con.execute('DELETE FROM events WHERE source_id=? AND url=?', (sid,url))
+                con.execute('DELETE FROM reviews WHERE source_id=? AND url=?', (sid,url))
+                con.execute('INSERT OR REPLACE INTO exclusions VALUES (?,?,?,?)', (sid,url,str(exc),checked))
             except Review as exc:
                 review_count += 1
                 # A changed, ambiguous detail must not silently keep advertising prior facts.
                 con.execute('DELETE FROM events WHERE source_id=? AND url=?', (sid,url))
+                con.execute('DELETE FROM exclusions WHERE source_id=? AND url=?', (sid,url))
                 con.execute('INSERT OR REPLACE INTO reviews VALUES (?,?,?,?,?)', (sid,url,title,str(exc),checked))
             except sqlite3.Error:
                 con.rollback()
@@ -399,6 +461,9 @@ def collect(registry, db, output, locations, fetcher, source_id=None):
                 failures += 1
         review_count = con.execute('SELECT count(*) FROM reviews WHERE source_id=?', (sid,)).fetchone()[0]
         state = dict(id=sid, town=source['town'], region=source['region'], url=source['index_urls'][0], adapter=source['adapter'],
+                     coverageNote=source.get('coverage_note',''),
+                     excludedCount=excluded_count,
+                     sourceNote='Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.',
                      status='error' if failures and not successful else ('partial' if failures or review_count else 'ok'),
                      lastChecked=checked, lastSuccess=checked if successful and not failures else previous.get('lastSuccess'),
                      eventCount=con.execute('SELECT count(*) FROM events WHERE source_id=?', (sid,)).fetchone()[0], reviewCount=review_count,

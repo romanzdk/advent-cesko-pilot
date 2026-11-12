@@ -40,5 +40,33 @@
     "precision": "town",
     "label": "Kuřim — orientační poloha obce",
     "sourceUrl": "https://www.openstreetmap.org/relation/442051"
+  },
+  "plasy-nebreziny": {
+    "lat": 49.9205793,
+    "lon": 13.4136535,
+    "precision": "town",
+    "label": "Nebřeziny — část Plas — orientační střed místní části; nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/20736709"
+  },
+  "plasy-babina": {
+    "lat": 49.9362949,
+    "lon": 13.4303243,
+    "precision": "town",
+    "label": "Babina — část Plas — orientační střed místní části; nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/20736710"
+  },
+  "plasy-horni-hradiste": {
+    "lat": 49.9557458,
+    "lon": 13.3731211,
+    "precision": "town",
+    "label": "Horní Hradiště — část Plas — orientační střed místní části; nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/20736712"
+  },
+  "plasy-zebnice": {
+    "lat": 49.9559675,
+    "lon": 13.3931451,
+    "precision": "town",
+    "label": "Žebnice — část Plas — orientační střed místní části; nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/20736711"
   }
 }

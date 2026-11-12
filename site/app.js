@@ -300,7 +300,8 @@ async function loadCoverage() {
       heading.append(title, el('span', statuses[source.status], `source-status source-${source.status}`));
       item.append(heading, el('p', source.region), el('p', `Poslední kontrola: ${checkedLabel(source.lastChecked)} (Česko)`));
       if (source.lastSuccess) item.append(el('p', `Poslední úspěch: ${checkedLabel(source.lastSuccess)} (Česko)`));
-      item.append(el('p', `Publikované akce: ${source.eventCount} · K ověření: ${source.reviewCount}`));
+      item.append(el('p', `Publikované akce: ${source.eventCount} · K ověření: ${source.reviewCount}${countValue(source.excludedCount) ? ` · Mimo rozsah: ${source.excludedCount}` : ''}`));
+      if (typeof source.coverageNote === 'string' && source.coverageNote) item.append(el('p', source.coverageNote));
       if (typeof source.lastError === 'string' && source.lastError) item.append(el('p', source.lastError, 'coverage-error'));
       sources.append(item);
     }

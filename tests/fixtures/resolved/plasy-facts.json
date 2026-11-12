@@ -1,0 +1,68 @@
+[
+  {
+    "url": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/mikulasska-besidka-pro-deti-3683_1322cs.html",
+    "title": "Mikulášská besídka pro děti.",
+    "town": "Nebřeziny",
+    "date": "2026-12-05",
+    "startTime": "17:00",
+    "file": "plasy-0.html",
+    "locationKey": "plasy-nebreziny",
+    "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/mikulasska-besidka-pro-deti-3683_1322cs.html",
+    "bodySha256": "9949c071dad3daa923976d91a16be6a63620e73a5e10401429f3e55a2ce28edc"
+  },
+  {
+    "url": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-babine-3944_1398cs.html",
+    "title": "Rozsvícení vánočního stromku v Babiné",
+    "town": "Babina",
+    "date": "2026-11-27",
+    "startTime": "17:00",
+    "file": "plasy-1.html",
+    "locationKey": "plasy-babina",
+    "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-babine-3944_1398cs.html",
+    "bodySha256": "800ff4ddd51a414fcef2c4cc686684fe5f2ac9274c297d0181003c20e2292635"
+  },
+  {
+    "url": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-hornim-hradisti-3901_1390cs.html",
+    "title": "Rozsvícení vánočního stromku v Horním Hradišti",
+    "town": "Horní Hradiště",
+    "date": "2026-11-27",
+    "startTime": "17:00",
+    "file": "plasy-2.html",
+    "locationKey": "plasy-horni-hradiste",
+    "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-hornim-hradisti-3901_1390cs.html",
+    "bodySha256": "c3fd94d6fbc5350e3a8e9bcb8e75bb3314aa30867cc82ac444af08f8e7f8a222"
+  },
+  {
+    "url": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-zebnici-3902_1391cs.html",
+    "title": "Rozsvícení vánočního stromku v Žebnici",
+    "town": "Žebnice",
+    "date": "2026-11-29",
+    "startTime": "17:00",
+    "file": "plasy-3.html",
+    "locationKey": "plasy-zebnice",
+    "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-zebnici-3902_1391cs.html",
+    "bodySha256": "d56ee4385e6c116e5557bf05c911b6ac5ef1ef3ea9e56a40e4bff0e43d961c0e"
+  },
+  {
+    "url": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromu-v-nebrezinech-3682_1321cs.html",
+    "title": "Rozsvícení vánočního stromu v Nebřezinech.",
+    "town": "Nebřeziny",
+    "date": "2026-11-29",
+    "startTime": "17:00",
+    "file": "plasy-4.html",
+    "locationKey": "plasy-nebreziny",
+    "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromu-v-nebrezinech-3682_1321cs.html",
+    "bodySha256": "a1479d24471359c4eee7d629744c64841e6d04c99534648937f137271c595387"
+  },
+  {
+    "url": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-dilnicky-3681_1320cs.html",
+    "title": "Vánoční dílničky",
+    "town": "Nebřeziny",
+    "date": "2026-11-21",
+    "startTime": "15:00",
+    "file": "plasy-5.html",
+    "locationKey": "plasy-nebreziny",
+    "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-dilnicky-3681_1320cs.html",
+    "bodySha256": "37ac5aaac38df1451fea469c45f861af2094d8ccaf9dcf8e57e55bca1b974832"
+  }
+]
