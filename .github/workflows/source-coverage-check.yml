@@ -13,10 +13,12 @@ jobs:
       - name: Test portable collector and publication safety
         run: python3 -m unittest discover -s tests -v
       - name: Test pure JavaScript calendar and region filtering
-        run: node --test tests-ui/helpers.test.mjs tests-ui/pilot.test.mjs
+        run: node --test tests-ui/helpers.test.mjs tests-ui/pilot.test.mjs tests-ui/feedback.test.mjs
       - name: Validate historical public projection against registry
         run: python3 scripts/validate_public.py site
       - name: Check browser module syntax
         run: |
           node --check site/app.js
           node --check site/helpers.js
+          node --check site/feedback.js
+          node --check site/feedback-helpers.js
