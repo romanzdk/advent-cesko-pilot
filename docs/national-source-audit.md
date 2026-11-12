@@ -70,4 +70,13 @@ Při konfliktu s denním publisherem zachovat aktuální main verze všech tří
 
 ## Výsledky ověření
 
-Konečné počty, oba finální živé běhy, jejich runtime a výsledky nezávislé review jsou doplněny v závěrečném ověřovacím protokolu této dokumentace po dokončení měření.
+Offline replay skutečných zachycených bajtů po opravách: **107 akcí, 11 review, 21 vyřazení, 0 HTTP požadavků**. Původních 78 ID i všechna jejich věcná pole zůstala stejná; čistý přírůstek je **29**. Každá přijatá akce má kontrolu místa, data, hodin a intervalu v [auditu přírůstku](national-event-audit.md). Všech pět nových zdrojů nalezlo skutečné detaily bez seeds.
+
+- Python: **85 testů prošlo**. Přenosné testy nových adaptérů byly doplněny před implementací, včetně pozorovaných RED → GREEN regresí pro neznámá místa/rok, více termínů, obrácené WP timestampy, od/do, dlouhé ceny, přidaný JSON-LD a inkluzivní štítky.
+- Po rebase na souběžně doplněný `origin/main` (`a98cc64`) prošlo **18 čistých JS testů** a **27 izolovaných Playwright testů**. Testy nečtou živý katalog a blokují OSM tiles; nejsou ověřením dostupnosti mapových dlaždic.
+- Historický public snapshot je validní s 78 akcemi; izolovaný replay s 107. Validator/allowlist nebyly oslabeny. JS syntax kontrolována včetně souběžně přidaných feedback modulů, bez jejich změn v této větvi.
+- Nezávislá statická review přes Codex CLI, bez dalšího Hermes agenta: čtyři konkrétní P2 byly opraveny a znovu posouzeny **PASSED** (JSON-LD bypass, zkrácení ceny, slovo od/do před datem a obrácený WP časový interval). Samostatná bounded review změny narativního scope a read-only PR workflow: **PASSED**. Reviewer nespouštěl testy ani síť; exekuční kontroly výše jsou zvláštní důkaz.
+- Nový PR workflow spouští offline Python, čisté JS, public validaci a syntax. Má jen `contents:read`, bez Pages oprávnění, uploadu nebo deploy jobu. Původní deploy workflow se touto větví nemění.
+- Baseline živý sběr 12 zdrojů: **304,838 s**, 78 akcí. Publisher má beze změny collector timeout **600 s**; skutečná funkce scheduleru `_get_script_timeout()` v aktivním prostředí vrátila **3600 s**. Nastavení scheduleru nebylo měněno.
+
+Dvě finální živá měření po všech opravách a stabilním offline replay se doplní po dokončení; předchozí vývojové sběry se za tuto dvojici nevydávají.
