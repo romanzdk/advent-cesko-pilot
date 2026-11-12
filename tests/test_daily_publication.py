@@ -113,10 +113,19 @@ class PublicationTests(unittest.TestCase):
 
     def test_real_validator_accepts_existing_public_projection_before_local_push(self):
         import shutil
+        # This regression deliberately validates the checked-in historic public
+        # projection, not a newly collected registry expansion.
+        spec = importlib.util.spec_from_file_location('validator', ROOT/'scripts/validate_public.py')
+        assert spec and spec.loader
+        validator = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(validator)
+        registry = json.loads((ROOT/'data/sources.json').read_text())
+        ids = {s['id'] for s in json.loads((ROOT/'site/coverage.json').read_text())['sources']}
+        registry['sources'] = [s for s in registry['sources'] if s['id'] in ids]
         def collect(root):
             for filename in pub.FILES: shutil.copyfile(ROOT/filename,root/filename)
         self.assertEqual(pub.publish(self.repo,today=date(2026,11,12),remote=str(self.remote),
-                                    collect=collect,verify=self.verify),'published')
+                                    collect=collect,validate=lambda path: validator.validate_directory(path,registry),verify=self.verify),'published')
 
     def test_pending_state_cannot_authorize_foreign_head(self):
         with patch.object(self,'verify',side_effect=RuntimeError('CI failed')):
@@ -196,7 +205,7 @@ class ProductionBoundaryTests(unittest.TestCase):
             args = run.call_args.args[1]
             self.assertIn('--locations',args)
             self.assertIn('--registry',args)
-            self.assertEqual(run.call_args.kwargs['timeout'],600)
+            self.assertEqual(run.call_args.kwargs['timeout'],1800)
             self.assertEqual((root/'private/collector-last.json').stat().st_mode & 0o777,0o600)
 
     def test_deploy_success_requires_actions_and_all_public_json(self):

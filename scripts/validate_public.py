@@ -5,14 +5,14 @@ import json
 from pathlib import Path
 import re
 import sys
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, unquote
 
 FIELDS=set('id title town region venue date endDate startTime endTime category price registration registrationUrl description notes audience status verifiedAt sourceUrl location'.split())
 REGIONS={'Hlavní město Praha','Středočeský kraj','Jihočeský kraj','Plzeňský kraj',
          'Karlovarský kraj','Ústecký kraj','Liberecký kraj','Královéhradecký kraj',
          'Pardubický kraj','Kraj Vysočina','Jihomoravský kraj','Olomoucký kraj',
          'Zlínský kraj','Moravskoslezský kraj'}
-PRIVATE=re.compile(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|/(?:home|private|tmp|workspace)/|calendar_id|event_id|responseStatus|sendUpdates|attendees|\.hermes/')
+PRIVATE=re.compile(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|/(?:home|private|tmp|workspace|var)/|calendar[_-]?id|event[_-]?id|responseStatus|sendUpdates|attendees|\.hermes/|file://',re.I)
 
 def require(ok,message):
     if not ok: raise ValueError(message)
@@ -25,12 +25,22 @@ def https(value):
         except ValueError:return '.' in p.hostname and not p.hostname.endswith(('.local','.internal'))
     except (ValueError,TypeError):return False
 
-def validate(data):
+def validate_privacy(data):
+    text=json.dumps(data,ensure_ascii=False)
+    # Permit at most 16 decoding layers, then require a stable representation.
+    for depth in range(17):
+        decoded=unquote(text)
+        if decoded==text:break
+        require(depth<16,'Excessive percent encoding')
+        text=decoded
+    require(not PRIVATE.search(text),'Private metadata detected')
+
+def validate(data, reviewed_ids=()):
     require(isinstance(data,dict) and set(data)=={'schemaVersion','generatedAt','season','region','events'},'Unexpected public root fields')
     require(data['schemaVersion']==1 and data['season']==2026,'Unsupported season/schema')
     require(isinstance(data['events'],list),'Events must be a list')
     datetime.fromisoformat(data['generatedAt'])
-    require(not PRIVATE.search(json.dumps(data,ensure_ascii=False)),'Private metadata detected')
+    validate_privacy(data)
     ids=set()
     for e in data['events']:
         require(isinstance(e,dict) and set(e)==FIELDS,'Unexpected public event fields')
@@ -38,8 +48,10 @@ def validate(data):
         require(isinstance(e['title'],str) and bool(e['title']) and isinstance(e['town'],str) and bool(e['town']),'Missing title/town')
         require(e['region'] in REGIONS,'Unknown region')
         start=date.fromisoformat(e['date']);require(date(2026,11,20)<=start<=date(2026,12,24),'Date outside seasonal window')
-        if e['endDate']:require(start<=date.fromisoformat(e['endDate'])<=date(2026,12,24),'End outside seasonal window or before start')
+        require(e['endDate'] is None or isinstance(e['endDate'],str) and bool(e['endDate']),'Invalid optional end date')
+        if e['endDate']:require(start<=date.fromisoformat(e['endDate'])<=(date(2026,12,31) if e['id'] in reviewed_ids else date(2026,12,24)),'End outside seasonal window or before start')
         for field in ['startTime','endTime']:
+            require(e[field] is None or isinstance(e[field],str) and bool(e[field]),'Invalid optional time')
             if e[field]:
                 require(isinstance(e[field],str) and re.fullmatch(r'(?:[01]\d|2[0-3]):[0-5]\d',e[field]),'Invalid published time');time.fromisoformat(e[field])
         for field in ['venue','price','registration','registrationUrl']:
@@ -48,7 +60,7 @@ def validate(data):
         require(e['audience'] in ['všichni','dospělí','senioři / omezené zaměření','omezené zaměření'],'Bad audience')
         require(e['status'] in ['confirmed','time-unconfirmed','cancelled'],'Bad status')
         require(https(e['sourceUrl']) and (e['registrationUrl'] is None or https(e['registrationUrl'])),'Unsafe public URL')
-        require(isinstance(e['description'],str) and len(e['description'])<=200,'Invalid/overlong description')
+        require(isinstance(e['description'],str) and len(e['description'])<=(1000 if e['id'] in reviewed_ids else 200),'Invalid/overlong description')
         require(isinstance(e['notes'],list) and all(isinstance(n,str) for n in e['notes']),'Bad notes')
         datetime.fromisoformat(e['verifiedAt'])
         loc=e['location']
@@ -64,14 +76,16 @@ def validate_directory(path, registry=None):
     sources=registry['sources'];regions={s['region'] for s in sources}
     by_id={s['id']:s for s in sources}
     require(bool(sources) and len(by_id)==len(sources) and regions<=REGIONS,'Invalid registry scope')
-    path=Path(path);data=json.loads((path/'events.json').read_text());validate(data)
+    path=Path(path);data=json.loads((path/'events.json').read_text())
+    reviewed_ids={e['id'] for e in data['events'] if any(s.get('adapter')=='reviewed-public' and re.fullmatch(s['url_regex'],e['sourceUrl']) for s in sources)}
+    validate(data,reviewed_ids)
     coverage=json.loads((path/'coverage.json').read_text());review=json.loads((path/'review.json').read_text())
     window=registry['window'];start=date.fromisoformat(window['from']);end=date.fromisoformat(window['through'])
     require(registry['season']==data['season']==2026 and date(2026,11,20)<=start<=end<=date(2026,12,24),'Invalid registry season/window')
     require(coverage['window']==window,'Coverage window disagrees with registry')
-    require(all(start<=date.fromisoformat(e['date'])<=date.fromisoformat(e['endDate'] or e['date'])<=end
+    require(all(start<=date.fromisoformat(e['date'])<=end and date.fromisoformat(e['date'])<=date.fromisoformat(e['endDate'] or e['date']) and (e['id'] in reviewed_ids or date.fromisoformat(e['endDate'] or e['date'])<=end)
                 for e in data['events']),'Event outside registry window')
-    for document in [coverage,review]:require(not PRIVATE.search(json.dumps(document,ensure_ascii=False)),'Private metadata detected')
+    for document in [coverage,review]:validate_privacy(document)
     require(coverage['complete'] is False,'Selection must not claim complete coverage')
     require(coverage['metrics']['eventsPublished']==len(data['events']),'Inconsistent published count')
     require(coverage['metrics']['reviewCount']==len(review['candidates']),'Inconsistent review count')
@@ -87,6 +101,11 @@ def validate_directory(path, registry=None):
         require(len(matches)==1,'Event URL must identify one registered source')
         source=matches[0]
         require(event['region']==source['region'],'Event region disagrees with source')
+        if source.get('adapter')=='reviewed-public':
+            require(urlsplit(event['sourceUrl']).hostname==source['primary_host'] and source['allowed_towns'].get(event['town'])==event['region'], 'Event town/host disagrees with reviewed scope')
+            require(event['location'] is None or event['location'] in source['allowed_locations'].get(event['town'],[]), 'Unreviewed event location')
+            require(not urlsplit(event['sourceUrl']).fragment or event['sourceUrl'] in source.get('allowed_fragment_urls',[]), 'Unreviewed source fragment')
+            continue
         mapping=source.get('event_locations',{}).get(event['sourceUrl'])
         town=source['town']
         if mapping:

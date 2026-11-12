@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import re
 import sqlite3
+import sys
 import time
 import unicodedata
 from urllib.parse import urljoin, urlsplit
@@ -16,6 +17,9 @@ from urllib.error import HTTPError
 from urllib.robotparser import RobotFileParser
 import uuid
 from zoneinfo import ZoneInfo
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import reviewed_public
 
 
 def now():
@@ -655,9 +659,14 @@ def json_write(path, value):
     tmp.replace(path)
 
 
-def collect(registry, db, output, locations, fetcher, source_id=None):
+def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewed_snapshot=None, reviewed_feed=None):
     started = time.monotonic()
     checked = now()
+    for source in registry['sources']:
+        for field, default, ceiling in [('max_index_pages',2,4),('max_details',14,40)]:
+            value = source.get(field,default)
+            if type(value) is not int or not 1 <= value <= ceiling:
+                raise ValueError('Invalid bounded source budget')
     Path(db).parent.mkdir(parents=True, exist_ok=True)
     con = sqlite3.connect(db)
     con.executescript('''
@@ -670,17 +679,27 @@ def collect(registry, db, output, locations, fetcher, source_id=None):
     ''')
     metrics = dict(runId=str(uuid.uuid4()), durationSeconds=0, requestCount=0, http304=0, cacheUnchanged=0,
                    eventsNew=0, eventsChanged=0, eventsUnchanged=0, eventsPublished=0, reviewCount=0, excludedCount=0, aiCalls=0)
+    try:
+        reviewed_public.refresh(con, registry, fetcher, checked, metrics, source_id, reviewed_snapshot, reviewed_feed)
+    except Exception:
+        con.rollback()
+        con.close()
+        raise
     for source in registry['sources']:
+        if source['adapter'] == 'reviewed-public':
+            continue
         if source_id and source['id'] != source_id:
             continue
         sid = source['id']
         old = con.execute('SELECT payload FROM source_state WHERE id=?', (sid,)).fetchone()
         previous = json.loads(old[0]) if old else {}
         failures, successful, review_count, excluded_count = 0, 0, 0, 0
-        indices = list(dict.fromkeys(source['index_urls']))[:2]
+        max_pages = source.get('max_index_pages', 2)
+        max_details = source.get('max_details', 14)
+        indices = list(dict.fromkeys(source['index_urls']))[:max_pages]
         details = []
         i = 0
-        while i < len(indices) and i < 2:
+        while i < len(indices) and i < max_pages:
             index_url = indices[i]
             i += 1
             try:
@@ -696,7 +715,7 @@ def collect(registry, db, output, locations, fetcher, source_id=None):
         # Retry known details after transient failures or disappearance from a bounded listing.
         details.extend(r[0] for r in con.execute('SELECT url FROM events WHERE source_id=? ORDER BY url', (sid,)))
         details = [u for u in dict.fromkeys(details) if safe_url(u) and same_host(u, source['index_urls'][0]) and re.match(source['url_regex'], u)]
-        for url in details[:min(14, source.get('max_details', 14))]:
+        for url in details[:max_details]:
             title = 'Událost k ověření'
             try:
                 body = fetcher.get(url)
@@ -749,7 +768,8 @@ def collect(registry, db, output, locations, fetcher, source_id=None):
                 failures += 1
         review_count = con.execute('SELECT count(*) FROM reviews WHERE source_id=?', (sid,)).fetchone()[0]
         state = dict(id=sid, town=source['town'], region=source['region'], url=source['index_urls'][0], adapter=source['adapter'],
-                     coverageNote=source.get('coverage_note',''),
+                     coverageNote=source.get('coverage_note','') + (f' Limit sběru: {max_pages} stránek a {max_details} detailů.' if (max_pages,max_details)!=(2,14) else ''),
+                     maxIndexPages=max_pages,maxDetails=max_details,
                      excludedCount=excluded_count,
                      sourceNote='Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.',
                      status='error' if failures and not successful else ('partial' if failures or review_count else 'ok'),
@@ -777,9 +797,12 @@ def collect(registry, db, output, locations, fetcher, source_id=None):
     states = {sid:json.loads(p) for sid,p in con.execute('SELECT id,payload FROM source_state')}
     metrics.update({k:fetcher.stats.get(k,0) for k in ('requestCount','http304','cacheUnchanged')})
     metrics.update(eventsPublished=len(events), reviewCount=len(review), durationSeconds=round(time.monotonic()-started,3))
+    live_sources = [s for s in registry['sources'] if s['adapter'] != 'reviewed-public']
+    page_limit = max((s.get('max_index_pages',2) for s in live_sources),default=0)
+    detail_limit = max((s.get('max_details',14) for s in live_sources),default=0)
     coverage = dict(generatedAt=checked, window=registry['window'], regions=list(dict.fromkeys(s['region'] for s in registry['sources'])),
                     sources=[states.get(s['id'], dict(id=s['id'],town=s['town'],region=s['region'],url=s['index_urls'][0],adapter=s['adapter'],status='partial',lastChecked=checked,lastSuccess=None,eventCount=0,reviewCount=0,lastError='Zdroj nebyl v tomto běhu kontrolován.')) for s in registry['sources']],
-                    metrics=metrics, complete=False, coverageNote='Neúplný výběr obcí, nejvýše dvě stránky a 14 detailů na zdroj. Nejde o úplný soupis krajů.')
+                    metrics=metrics, complete=False, coverageNote=f'Neúplný výběr obcí; živý sběr má podle zdroje nejvýše {page_limit} stránek a {detail_limit} detailů. Redakční veřejný výběr zachovává původní datum ověření; kontrola přenosu neověřuje znovu pořadatele. Nejde o úplný soupis krajů.')
     output = Path(output)
     json_write(output/'events.json', dict(schemaVersion=1,generatedAt=checked,season=registry['season'],region='Česko – sezonní výběr',events=events))
     json_write(output/'coverage.json', coverage)
@@ -925,6 +948,8 @@ def main(argv=None):
     parser.add_argument('--source-id', help='Collect a single registered source; retain other stored events')
     parser.add_argument('--offline-fixtures', metavar='MANIFEST', help='Offline JSON mapping exact source URLs to HTML paths relative to manifest')
     parser.add_argument('--project-url', help='Public project URL included in HTTP User-Agent')
+    parser.add_argument('--reviewed-snapshot', help='Approved public editorial snapshot; defaults to data/reviewed-events.json')
+    parser.add_argument('--reviewed-feed-config', help='Private trusted local JSON settings containing only the owned feed URL')
     args = parser.parse_args(argv)
     try:
         registry = json.loads(Path(args.registry).read_text())
@@ -936,7 +961,8 @@ def main(argv=None):
             if not safe_url(args.project_url):
                 raise ValueError('Unsafe project URL')
             client.USER_AGENT = 'AdventCeskoPilot/1.0 (+' + args.project_url + ')'
-        result = collect(registry,args.db,args.output,locations,client,args.source_id)
+        feed = json.loads(Path(args.reviewed_feed_config).read_text()) if args.reviewed_feed_config else None
+        result = collect(registry,args.db,args.output,locations,client,args.source_id,reviewed_snapshot=args.reviewed_snapshot,reviewed_feed=feed)
         print(json.dumps(result,ensure_ascii=False))
         return 0
     except Exception:

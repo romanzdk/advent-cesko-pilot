@@ -171,7 +171,8 @@
       ],
       "feed_url": null,
       "coverage_note": "Výběr měst a omezený počet stránek, nikoli úplný soupis kraje.",
-      "max_details": 14
+      "max_details": 14,
+      "max_index_pages": 4
     },
     {
       "id": "christmas2026-jihomoravsky-rajhrad",
@@ -386,7 +387,7 @@
         "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/zahajeni-adventu-3362_1907cs.html",
         "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/vanocni-beneficni-koncert-3372_1914cs.html"
       ],
-      "coverage_note": "Neúplný výběr z primárního městského / pořadatelského kalendáře; nejvýše dvě stránky a 14 detailů. Automaticky se zařazují pouze ověřená místa v uvedené obci, ostatní čekají na kontrolu. Samostatný Adventní koncert 3352 v Berouně je z tohoto zdroje vyřazen. U Zahájení adventu kalendář uvádí 10:00, doprovodný kulturní program od 14:00; hodina rozsvícení není potvrzena.",
+      "coverage_note": "Neúplný výběr z primárního městského / pořadatelského kalendáře; nejvýše čtyři stránky a 14 detailů. Automaticky se zařazují pouze ověřená místa v uvedené obci, ostatní čekají na kontrolu. Samostatný Adventní koncert 3352 v Berouně je z tohoto zdroje vyřazen. U Zahájení adventu kalendář uvádí 10:00, doprovodný kulturní program od 14:00; hodina rozsvícení není potvrzena.",
       "max_details": 14,
       "allowed_venues": [
         "Hořovice, Palackého náměstí",
@@ -444,7 +445,8 @@
             "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/vanoce-v-casech-davnych-i-nedavnych-3361_1906cs.html"
           ]
         }
-      }
+      },
+      "max_index_pages": 4
     },
     {
       "id": "sobeslav",
@@ -554,7 +556,7 @@
         "https://www.itrebon.cz/kalendar/-vyroba-vanocni-hostiny-pro-ptacky-kreativni-dilny_20915.html",
         "https://www.itrebon.cz/kalendar/-adventni-trh_20922.html"
       ],
-      "coverage_note": "Neúplný výběr z primárního městského / pořadatelského kalendáře; nejvýše dvě stránky a 14 detailů. Automaticky se zařazují pouze ověřená místa v uvedené obci, ostatní čekají na kontrolu.",
+      "coverage_note": "Neúplný výběr z primárního městského / pořadatelského kalendáře; nejvýše čtyři stránky a 14 detailů. Automaticky se zařazují pouze ověřená místa v uvedené obci, ostatní čekají na kontrolu.",
       "max_details": 14,
       "allowed_venues": [
         "Centrum města",
@@ -666,7 +668,8 @@
           ],
           "verifiedTown": "Třeboň"
         }
-      }
+      },
+      "max_index_pages": 4
     },
     {
       "id": "telc-mesto",
@@ -682,8 +685,8 @@
         "https://www.telc.eu/kalendar/4234",
         "https://www.telc.eu/kalendar/4235"
       ],
-      "coverage_note": "Neúplný výběr z primárního městského / pořadatelského kalendáře; nejvýše dvě stránky a 14 detailů. Automaticky se zařazují pouze ověřená místa v uvedené obci, ostatní čekají na kontrolu.",
-      "max_details": 14,
+      "coverage_note": "Neúplný výběr z primárního městského / pořadatelského kalendáře; nejvýše dvě stránky a 40 detailů. Automaticky se zařazují pouze ověřená místa v uvedené obci, ostatní čekají na kontrolu.",
+      "max_details": 40,
       "allowed_venues": [
         "Panský dvůr Telč",
         "kostel Jména Ježíš",
@@ -692,9 +695,76 @@
         "Sál ZUŠ",
         "Dům u Michala",
         "herna stolního tenisu",
-        "klubovna na poliklinice"
+        "klubovna na poliklinice",
+        "Sokolovna Telč",
+        "zimní stadion Telč"
       ],
       "event_reviews": {
+        "https://www.telc.eu/kalendar/4016": {
+          "sourceId": "telc-mesto",
+          "sourceUrl": "https://www.telc.eu/kalendar/4016",
+          "sourceTown": "Telč",
+          "expectedTitle": "O vánočního kapříka - volejbal",
+          "expectedDate": "2026-12-19",
+          "expectedEndDate": null,
+          "expectedVenue": "Sokolovna Telč",
+          "contentHash": "37e1e165976523c6d590978bc5c8b2f793644958b34dffc59c732a29aebbf71b",
+          "decision": "accept",
+          "reason": "Accept: 2026-12-19 09:00, Sokolovna Telč explicitly stated, SK Telč volleyball tournament. Participation not necessarily open; label limited focus, do not invent admission or registration.",
+          "overrides": {
+            "audience": "omezené zaměření",
+            "notes": [
+              "Volejbalový turnaj SK Telč; podmínky účasti ani cena nejsou v detailu uvedeny."
+            ]
+          },
+          "verifiedAt": "2026-11-12T22:35:28+00:00",
+          "supportingSourceUrls": [
+            "https://www.telc.eu/kalendar/4016"
+          ]
+        },
+        "https://www.telc.eu/kalendar/4259": {
+          "sourceId": "telc-mesto",
+          "sourceUrl": "https://www.telc.eu/kalendar/4259",
+          "sourceTown": "Telč",
+          "expectedTitle": "Vánoční led pro veřejnost s Krasobruslařským klubem",
+          "expectedDate": "2026-12-21",
+          "expectedEndDate": null,
+          "expectedVenue": "zimní stadion Telč",
+          "contentHash": "6ff155d6a663108956db213555279e316d1ded57317355d914777d97a561819b",
+          "decision": "accept",
+          "reason": "Accept: 2026-12-21 15:00–16:00 zimní stadion Telč explicitly stated, skating for public. Narrative Vstupné zdrarma is obvious source typo meaning free, retain literal evidence and price zdarma.",
+          "overrides": {
+            "price": "zdarma"
+          },
+          "verifiedAt": "2026-11-12T22:35:28+00:00",
+          "supportingSourceUrls": [
+            "https://www.telc.eu/kalendar/4259"
+          ]
+        },
+        "https://www.telc.eu/kalendar/4258": {
+          "sourceId": "telc-mesto",
+          "sourceUrl": "https://www.telc.eu/kalendar/4258",
+          "sourceTown": "Telč",
+          "expectedTitle": "Betlémské světlo",
+          "expectedDate": "2026-12-23",
+          "expectedEndDate": null,
+          "expectedVenue": "náměstí Zachariáše z Hradce",
+          "contentHash": "0637694f398ce8abcb354b4b0b78e0c493fc06a7d4f3cc3d7ecd8d579f3baa4b",
+          "decision": "accept",
+          "reason": "Primární detail výslovně uvádí 23. prosince 2026 od 15.00 do 17.30 a umístění tee-pee v horní části telčského náměstí.",
+          "overrides": {
+            "startTime": "15:00",
+            "endTime": "17:30",
+            "notes": [
+              "Betlémské světlo bude k dispozici v tee-pee v horní části telčského náměstí."
+            ]
+          },
+          "verifiedAt": "2026-11-12T22:35:05+00:00",
+          "supportingSourceUrls": [
+            "https://www.telc.eu/kalendar/4258"
+          ],
+          "verifiedTown": "Telč"
+        },
         "https://www.telc.eu/kalendar/3766": {
           "sourceId": "telc-mesto",
           "sourceUrl": "https://www.telc.eu/kalendar/3766",
@@ -923,16 +993,62 @@
         "https://humpolec.cz/akce/vanocni-koncert-josefa-vagnera-a-zus-gustava-mahlera-humpolec/",
         "https://humpolec.cz/akce/vanocni-dilna-tradicni-ozdoby/"
       ],
-      "coverage_note": "Neúplný výběr z primárního městského / pořadatelského kalendáře; nejvýše dvě stránky a 14 detailů. Automaticky se zařazují pouze ověřená místa v uvedené obci, ostatní čekají na kontrolu.",
-      "max_details": 14,
+      "coverage_note": "Neúplný výběr z primárního městského / pořadatelského kalendáře; nejvýše dvě stránky a 40 detailů. Automaticky se zařazují pouze ověřená místa v uvedené obci, ostatní čekají na kontrolu.",
+      "max_details": 40,
       "allowed_venues": [
         "Evangelický kostel, Husova, Humpolec, Česko",
         "Divadlo Za komínem z. s., Kamarytova, Humpolec, Česko",
         "8SMIČKA - zóna pro umění, Kamarytova, Humpolec, Česko",
         "Návštěvnické centrum Bernard, Jihlavská, Humpolec, Česko",
-        "Kino Humpolec, Havlíčkovo náměstí, Humpolec, Česko"
+        "Kino Humpolec, Havlíčkovo náměstí, Humpolec, Česko",
+        "SVČ Humpolec, U Nemocnice, Humpolec, Česko"
       ],
       "event_reviews": {
+        "https://humpolec.cz/akce/vanocni-jizda-v-svc/": {
+          "sourceId": "humpolec-mesto",
+          "sourceUrl": "https://humpolec.cz/akce/vanocni-jizda-v-svc/",
+          "sourceTown": "Humpolec",
+          "expectedTitle": "Vánoční jízda v SVČ",
+          "expectedDate": "2026-12-12",
+          "expectedEndDate": null,
+          "expectedVenue": "SVČ Humpolec, U Nemocnice, Humpolec, Česko",
+          "contentHash": "238a70af8569a317318926a9fa5f36478c319dfc7103b474f03d670af50c44cc",
+          "decision": "accept",
+          "reason": "Accept: explicit 2026-12-12 09:00–17:00 and SVČ Humpolec, U Nemocnice, Humpolec, Česko. Single programme, children/families; no price stated (retain null).",
+          "overrides": {
+            "audience": "omezené zaměření",
+            "notes": [
+              "Program pro děti a rodiny: modelové kolejiště a vánoční dílny; dopolední i odpolední program. Cena není v detailu uvedena."
+            ]
+          },
+          "verifiedAt": "2026-11-12T22:35:27+00:00",
+          "supportingSourceUrls": [
+            "https://humpolec.cz/akce/vanocni-jizda-v-svc/"
+          ]
+        },
+        "https://humpolec.cz/akce/vanocni-dilna-ozdoby-balici-papir/": {
+          "sourceId": "humpolec-mesto",
+          "sourceUrl": "https://humpolec.cz/akce/vanocni-dilna-ozdoby-balici-papir/",
+          "sourceTown": "Humpolec",
+          "expectedTitle": "Vánoční dílna #OZDOBY & BALICÍ PAPÍR",
+          "expectedDate": "2026-12-05",
+          "expectedEndDate": null,
+          "expectedVenue": "8SMIČKA - zóna pro umění, Kamarytova, Humpolec, Česko",
+          "contentHash": "45be7fa34d41e27b3d2ecd2eb996546a3c916b7a488a5eccab7f08395a66a2be",
+          "decision": "accept",
+          "reason": "Primární detail uvádí vhodnost dílny pro děti od 5 let a zve také rodiče i prarodiče; nejde o povinnou věkovou podmínku vstupu.",
+          "overrides": {
+            "audience": "všichni",
+            "notes": [
+              "Dílna je vhodná pro děti od 5 let; ke společnému tvoření jsou zváni rodiče i prarodiče."
+            ]
+          },
+          "verifiedAt": "2026-11-12T22:35:05+00:00",
+          "supportingSourceUrls": [
+            "https://humpolec.cz/akce/vanocni-dilna-ozdoby-balici-papir/"
+          ],
+          "verifiedTown": "Humpolec"
+        },
         "https://humpolec.cz/akce/ceska-mse-vanocni-jakuba-jana-ryby/": {
           "sourceId": "humpolec-mesto",
           "sourceUrl": "https://humpolec.cz/akce/ceska-mse-vanocni-jakuba-jana-ryby/",
@@ -1090,13 +1206,38 @@
       "town": "Nejdek",
       "region": "Karlovarský kraj",
       "adapter": "galileo",
-      "index_urls": ["https://www.nejdek.cz/aktivity/kultura/kalendar-akci/"],
+      "index_urls": [
+        "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/"
+      ],
       "url_regex": "^https://www\\.nejdek\\.cz/aktivity/kultura/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
       "seed_urls": [],
-      "coverage_note": "Neúplný výběr městského kalendáře Nejdku; nejvýše dvě stránky a 14 detailů. Pouze přesně ověřená místa v Nejdku; Rudné, Nové Hamry a jiné obce nejsou přiřazovány k Nejdku.",
+      "coverage_note": "Neúplný výběr městského kalendáře Nejdku; nejvýše čtyři stránky a 14 detailů. Pouze přesně ověřená místa v Nejdku; Rudné, Nové Hamry a jiné obce nejsou přiřazovány k Nejdku.",
       "max_details": 14,
-      "allowed_venues": ["náměstí Karla IV.", "Kino Nejdek", "nám. Karla IV. 94", "Městská knihovna Nejdek"],
+      "allowed_venues": [
+        "náměstí Karla IV.",
+        "Kino Nejdek",
+        "nám. Karla IV. 94",
+        "Městská knihovna Nejdek",
+        "Kulturní dům Nejdek"
+      ],
       "event_reviews": {
+        "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/vanocni-koncert-2439_1245cs.html": {
+          "sourceId": "nejdek-mesto",
+          "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/vanocni-koncert-2439_1245cs.html",
+          "sourceTown": "Nejdek",
+          "expectedTitle": "VÁNOČNÍ KONCERT",
+          "expectedDate": "2026-12-15",
+          "expectedEndDate": null,
+          "expectedVenue": "Kulturní dům Nejdek",
+          "contentHash": "aae56a410242d8d2325c058eb14f982517cc8aacd17bf3743bf630ad067722d8",
+          "decision": "accept",
+          "reason": "Accept: 2026-12-15 17:00 Kulturní dům Nejdek, Závodu míru 196, Nejdek explicitly stated twice. No price or restriction; all-public family event.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T22:35:27+00:00",
+          "supportingSourceUrls": [
+            "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/vanocni-koncert-2439_1245cs.html"
+          ]
+        },
         "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/zdobeni-pernicku-2424_1231cs.html": {
           "sourceId": "nejdek-mesto",
           "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/zdobeni-pernicku-2424_1231cs.html",
@@ -1108,24 +1249,54 @@
           "contentHash": "84fbdead66dcd39afdd2c1b3eaa136d399669be0ebb34edc415d29d859184274",
           "decision": "accept",
           "reason": "Adresa knihovny je v Nejdku; tělo primární pozvánky uvádí 13 až 17 hodin.",
-          "overrides": {"endTime": "17:00", "category": "tvoreni"},
+          "overrides": {
+            "endTime": "17:00",
+            "category": "tvoreni"
+          },
           "verifiedAt": "2026-11-12T17:01:18+00:00",
-          "supportingSourceUrls": ["https://www.nejdek.cz/aktivity/kultura/kalendar-akci/zdobeni-pernicku-2424_1231cs.html"],
+          "supportingSourceUrls": [
+            "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/zdobeni-pernicku-2424_1231cs.html"
+          ],
           "verifiedTown": "Nejdek"
+        },
+        "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/zajezd-na-vanocni-trhy-do-plzne-2435_1241cs.html": {
+          "sourceId": "nejdek-mesto",
+          "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/zajezd-na-vanocni-trhy-do-plzne-2435_1241cs.html",
+          "sourceTown": "Nejdek",
+          "expectedTitle": "Zájezd na vánoční trhy do Plzně",
+          "expectedDate": "2026-12-05",
+          "expectedEndDate": null,
+          "expectedVenue": "",
+          "contentHash": "5d292b5e75f81ae12df3d468e423365cc9cfa14a493e943b1233ab13efa25174",
+          "decision": "exclude",
+          "reason": "Organized seniors bus trip to Plzeň, not a local Nejdek programme; 10:00 departure and 16:30 return are travel times.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T18:31:24+00:00",
+          "supportingSourceUrls": [
+            "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/zajezd-na-vanocni-trhy-do-plzne-2435_1241cs.html"
+          ]
         }
-      }
+      },
+      "max_index_pages": 4
     },
     {
       "id": "dobruska-kultura",
       "town": "Dobruška",
       "region": "Královéhradecký kraj",
       "adapter": "galileo",
-      "index_urls": ["https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/"],
+      "index_urls": [
+        "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/"
+      ],
       "url_regex": "^https://www\\.kulturadobruska\\.cz/kultura-a-sport/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
       "seed_urls": [],
       "coverage_note": "Neúplný výběr Kulturních a sportovních zařízení města Dobrušky, nikoli pokrytí celého kraje. Nejvýše dvě stránky a 14 detailů; neověřená místa čekají na kontrolu.",
       "max_details": 14,
-      "allowed_venues": ["Náměstí F. L. Věka", "Kulturní dům", "Kostel svatého Václava", "Společenské centrum - Kino 70"],
+      "allowed_venues": [
+        "Náměstí F. L. Věka",
+        "Kulturní dům",
+        "Kostel svatého Václava",
+        "Společenské centrum - Kino 70"
+      ],
       "event_reviews": {
         "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/ceska-mse-vanocni-hej-mistre-4221_2360cs.html": {
           "sourceId": "dobruska-kultura",
@@ -1138,9 +1309,13 @@
           "contentHash": "13db908caac89082b21daa70f558287c09c031806f36c34e5624a4ddcb808618",
           "decision": "accept",
           "reason": "Kostelní adresa v Dobrušce a cenová podmínka ověřeny v detailu pořadatele.",
-          "overrides": {"price": "150 Kč; děti do 6 let bez nároku na místo zdarma"},
+          "overrides": {
+            "price": "150 Kč; děti do 6 let bez nároku na místo zdarma"
+          },
           "verifiedAt": "2026-11-12T17:01:18+00:00",
-          "supportingSourceUrls": ["https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/ceska-mse-vanocni-hej-mistre-4221_2360cs.html"],
+          "supportingSourceUrls": [
+            "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/ceska-mse-vanocni-hej-mistre-4221_2360cs.html"
+          ],
           "verifiedTown": "Dobruška"
         },
         "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/rozsviceni-vanocniho-stromu-4198_2350cs.html": {
@@ -1154,9 +1329,37 @@
           "contentHash": "aab658d7018ff1771924d3ffde2adc45274d90964f676cd2988db22c22b77cb8",
           "decision": "accept",
           "reason": "Rozlišen začátek doprovodného programu a okamžik rozsvícení v primární pozvánce.",
-          "overrides": {"notes": ["Doprovodný program od 16:30; rozsvícení vánočního stromu je uvedeno na 17:00."]},
+          "overrides": {
+            "notes": [
+              "Doprovodný program od 16:30; rozsvícení vánočního stromu je uvedeno na 17:00."
+            ]
+          },
           "verifiedAt": "2026-11-12T17:01:18+00:00",
-          "supportingSourceUrls": ["https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/rozsviceni-vanocniho-stromu-4198_2350cs.html"],
+          "supportingSourceUrls": [
+            "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/rozsviceni-vanocniho-stromu-4198_2350cs.html"
+          ],
+          "verifiedTown": "Dobruška"
+        },
+        "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/advent-v-rodnem-domku-f-l-veka-4224_2361cs.html": {
+          "sourceId": "dobruska-kultura",
+          "sourceUrl": "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/advent-v-rodnem-domku-f-l-veka-4224_2361cs.html",
+          "sourceTown": "Dobruška",
+          "expectedTitle": "ADVENT V RODNÉM DOMKU F. L. VĚKA",
+          "expectedDate": "2026-12-06",
+          "expectedEndDate": null,
+          "expectedVenue": "Domek F. L. Věka",
+          "contentHash": "ad456425b842a5019d555815d2408064327a2113776fb4b7fb2afea0d8cba53f",
+          "decision": "accept",
+          "reason": "Exact venue address explicitly names Dobruška. Programme 13:00–16:00; arrival of Mikuláš 15:00 is a subprogramme, not main start.",
+          "overrides": {
+            "notes": [
+              "Příchod Mikuláše je v 15:00; celkový program probíhá 13:00–16:00."
+            ]
+          },
+          "verifiedAt": "2026-11-12T18:31:54+00:00",
+          "supportingSourceUrls": [
+            "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/advent-v-rodnem-domku-f-l-veka-4224_2361cs.html"
+          ],
           "verifiedTown": "Dobruška"
         }
       }
@@ -1166,72 +1369,1226 @@
       "town": "Hranice",
       "region": "Olomoucký kraj",
       "adapter": "hranice",
-      "index_urls": ["https://kultura-hranice.cz/mista/masarykovo-namesti/", "https://kultura-hranice.cz/mista/evangelicky-kostel/"],
+      "index_urls": [
+        "https://kultura-hranice.cz/mista/masarykovo-namesti/",
+        "https://kultura-hranice.cz/mista/evangelicky-kostel/"
+      ],
       "url_regex": "^https://kultura-hranice\\.cz/akce/[^/?#]+/$",
       "seed_urls": [],
-      "coverage_note": "Neúplný výběr Městských kulturních zařízení Hranice (okres Přerov), omezený na výpisy Masarykova náměstí a evangelického kostela. Nejvýše dvě stránky a 14 detailů dohromady; druhý výpis se při naplnění limitu detailů neuplatní. Nejednoznačné vícečetné termíny zůstávají k ověření.",
-      "max_details": 14,
-      "allowed_venues": ["Evangelický kostel", "Evangelický kostel, Šromotovo náměstí Hranice", "Masarykovo náměstí"]
+      "coverage_note": "Neúplný výběr Městských kulturních zařízení Hranice (okres Přerov), omezený na výpisy Masarykova náměstí a evangelického kostela. Nejvýše dvě stránky a 40 detailů dohromady; druhý výpis se při naplnění limitu detailů neuplatní. Nejednoznačné vícečetné termíny zůstávají k ověření.",
+      "max_details": 40,
+      "allowed_venues": [
+        "Evangelický kostel",
+        "Evangelický kostel, Šromotovo náměstí Hranice",
+        "Masarykovo náměstí"
+      ]
     },
     {
       "id": "usti-muzeum",
       "town": "Ústí nad Labem",
       "region": "Ústecký kraj",
       "adapter": "wpem",
-      "index_urls": ["https://www.muzeumusti.cz/kalendar-akci/"],
+      "index_urls": [
+        "https://www.muzeumusti.cz/kalendar-akci/"
+      ],
       "url_regex": "^https://www\\.muzeumusti\\.cz/kalendar-akci/[^/?#]+/$",
       "seed_urls": [],
       "coverage_note": "Pouze sezonní program Oblastního muzea v Ústí nad Labem; nikoli celý městský nebo krajský kalendář. Nejvýše dvě stránky a 14 detailů; přesná adresa muzea ověřena v detailu.",
       "max_details": 14,
-      "allowed_venues": ["Brněnská 1000/1a, 400 01 Ústí nad Labem"]
+      "allowed_venues": [
+        "Brněnská 1000/1a, 400 01 Ústí nad Labem"
+      ]
     },
     {
       "id": "zlin-tic",
       "town": "Zlín",
       "region": "Zlínský kraj",
       "adapter": "visitzlin",
-      "index_urls": ["https://visitzlin.eu/kalendar-akci?search=advent"],
+      "index_urls": [
+        "https://visitzlin.eu/kalendar-akci?search=advent"
+      ],
       "url_regex": "^https://visitzlin\\.eu/kalendar-akci/[^/?#]+$",
       "seed_urls": [],
       "coverage_note": "Neúplný výběr oficiálního turistického portálu města Zlína, vyhledávání advent. Nejvýše dvě stránky a 14 detailů; jen ověřená místa v městě. Datumový interval není denní otevírací doba; hodiny z volného textu nejsou automaticky přejímány.",
       "max_details": 14,
-      "allowed_venues": ["náměstí Míru, Zlín", "Čiperova vila, Burešov 3675/4, Zlín", "Divadelní 3242, Zlín"]
+      "allowed_venues": [
+        "náměstí Míru, Zlín",
+        "Čiperova vila, Burešov 3675/4, Zlín",
+        "Divadelní 3242, Zlín",
+        "Senior Point, třída Tomáše Bati 204, Zlín"
+      ]
     },
     {
       "id": "praha16-radotin",
       "town": "Praha-Radotín",
       "region": "Hlavní město Praha",
       "adapter": "galileo",
-      "index_urls": ["https://www.praha16.eu/volny-cas/kalendar-akci/"],
+      "index_urls": [
+        "https://www.praha16.eu/volny-cas/kalendar-akci/"
+      ],
       "url_regex": "^https://www\\.praha16\\.eu/volny-cas/kalendar-akci/[^/?]+_\\d+cs\\.html$",
       "seed_urls": [],
-      "coverage_note": "Neúplný sezonní výběr oficiálního kalendáře Prahy 16 v Radotíně, nikoli pokrytí celé Prahy. Nejvýše dvě stránky a 14 detailů; jen ověřená místní místa. Filmové projekce s neověřenými podmínkami a jiná místa zůstávají k revizi.",
+      "coverage_note": "Neúplný sezonní výběr oficiálního kalendáře Prahy 16 v Radotíně, nikoli pokrytí celé Prahy. Nejvýše čtyři stránky a 14 detailů; jen ověřená místní místa. Filmové projekce s neověřenými podmínkami a jiná místa zůstávají k revizi.",
       "max_details": 14,
-      "allowed_venues": ["Kulturně komunitní centrum Koruna", "Římskokatolický kostel sv. Petra a Pavla", "Hasičská zbrojnice"]
+      "allowed_venues": [
+        "Kulturně komunitní centrum Koruna",
+        "Římskokatolický kostel sv. Petra a Pavla",
+        "Hasičská zbrojnice"
+      ],
+      "max_index_pages": 4
     },
     {
       "id": "stitina-obec",
       "town": "Štítina",
       "region": "Moravskoslezský kraj",
       "adapter": "galileo",
-      "index_urls": ["https://www.stitina.cz/aktualne/kalendar-akci/"],
+      "index_urls": [
+        "https://www.stitina.cz/aktualne/kalendar-akci/"
+      ],
       "url_regex": "^https://www\\.stitina\\.cz/aktualne/kalendar-akci/[^/?]+_\\d+cs\\.html$",
       "seed_urls": [],
       "coverage_note": "Neúplný sezonní výběr oficiálního kalendáře obce Štítina, okres Opava; nikoli Ostrava nebo celý kraj. Nejvýše dvě stránky a 14 detailů. Ověřen park v ulici Hlavní; obecný údaj Štítina bez konkrétního místa zůstává k revizi.",
       "max_details": 14,
-      "allowed_venues": ["Park"]
+      "allowed_venues": [
+        "Park"
+      ]
     },
     {
       "id": "lanskroun-kultura",
       "town": "Lanškroun",
       "region": "Pardubický kraj",
       "adapter": "lanskroun",
-      "index_urls": ["https://www.kclanskroun.cz/festivaly/"],
+      "index_urls": [
+        "https://www.kclanskroun.cz/festivaly/"
+      ],
       "url_regex": "^https://www\\.kclanskroun\\.cz/festival/[^/?#]+/$",
       "seed_urls": [],
       "coverage_note": "Výběr z festivalů Kulturního centra Lanškroun, nikoli celý městský či krajský program. Nejvýše dvě stránky a 14 detailů. Souhrnný adventní interval má výslovný společný rok v označeném poli; neznamená každodenní otevření ani nepřetržitý program. Jen ověřené náměstí J. M. Marků.",
       "max_details": 14,
-      "allowed_venues": ["náměstí J. M. Marků"]
+      "allowed_venues": [
+        "náměstí J. M. Marků"
+      ]
+    },
+    {
+      "id": "reviewed-eshop-muzeumricany-cz",
+      "town": "Říčany",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "eshop.muzeumricany.cz",
+      "allowed_towns": {
+        "Říčany": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://eshop.muzeumricany.cz/"
+      ],
+      "url_regex": "^https://eshop\\.muzeumricany\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Říčany": [
+          {
+            "lat": 49.9928801,
+            "lon": 14.6630381,
+            "precision": "venue",
+            "label": "Muzeum Říčany",
+            "sourceUrl": "https://www.openstreetmap.org/way/61856099"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-hrusice-muzeumbrandys-cz",
+      "town": "Hrusice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "hrusice.muzeumbrandys.cz",
+      "allowed_towns": {
+        "Hrusice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://hrusice.muzeumbrandys.cz/"
+      ],
+      "url_regex": "^https://hrusice\\.muzeumbrandys\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Hrusice": [
+          {
+            "lat": 49.9052402,
+            "lon": 14.7366194,
+            "precision": "venue",
+            "label": "Památník Josefa Lady, Hrusice",
+            "sourceUrl": "https://www.openstreetmap.org/way/146617092"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-kckamenice-cz",
+      "town": "Kamenice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "kckamenice.cz",
+      "allowed_towns": {
+        "Kamenice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://kckamenice.cz/"
+      ],
+      "url_regex": "^https://kckamenice\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Kamenice": [
+          {
+            "lat": 49.9015074,
+            "lon": 14.5825485,
+            "precision": "town",
+            "label": "Kamenice",
+            "sourceUrl": "https://www.openstreetmap.org/relation/436114"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-lodicka-webooker-eu",
+      "town": "Všechromy",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "lodicka.webooker.eu",
+      "allowed_towns": {
+        "Všechromy": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://lodicka.webooker.eu/"
+      ],
+      "url_regex": "^https://lodicka\\.webooker\\.eu/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Všechromy": [
+          {
+            "lat": 49.9490963,
+            "lon": 14.6510688,
+            "precision": "venue",
+            "label": "Všechromy 40",
+            "sourceUrl": "https://www.openstreetmap.org/node/1427535441"
+          }
+        ]
+      },
+      "allowed_fragment_urls": [
+        "https://lodicka.webooker.eu/flutter/#/events"
+      ]
+    },
+    {
+      "id": "reviewed-muzeumricany-cz",
+      "town": "Říčany",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "muzeumricany.cz",
+      "allowed_towns": {
+        "Říčany": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://muzeumricany.cz/"
+      ],
+      "url_regex": "^https://muzeumricany\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Říčany": [
+          {
+            "lat": 49.9928801,
+            "lon": 14.6630381,
+            "precision": "venue",
+            "label": "Muzeum Říčany",
+            "sourceUrl": "https://www.openstreetmap.org/way/61856099"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-obec-hrusice-cz",
+      "town": "Hrusice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "obec-hrusice.cz",
+      "allowed_towns": {
+        "Hrusice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://obec-hrusice.cz/"
+      ],
+      "url_regex": "^https://obec\\-hrusice\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Hrusice": [
+          {
+            "lat": 49.9114356,
+            "lon": 14.7395227,
+            "precision": "town",
+            "label": "Hrusice",
+            "sourceUrl": "https://www.openstreetmap.org/relation/437181"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-velkepopovice-uradvmobilu-cz",
+      "town": "Velké Popovice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "velkepopovice.uradvmobilu.cz",
+      "allowed_towns": {
+        "Velké Popovice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://velkepopovice.uradvmobilu.cz/"
+      ],
+      "url_regex": "^https://velkepopovice\\.uradvmobilu\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Velké Popovice": [
+          {
+            "lat": 49.9224718,
+            "lon": 14.6390582,
+            "precision": "town",
+            "label": "Velké Popovice",
+            "sourceUrl": "https://www.openstreetmap.org/relation/437951"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-chocerady-cz",
+      "town": "Chocerady",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.chocerady.cz",
+      "allowed_towns": {
+        "Chocerady": "Středočeský kraj",
+        "Samechov": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.chocerady.cz/"
+      ],
+      "url_regex": "^https://www\\.chocerady\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Chocerady": [
+          {
+            "lat": 49.8729023,
+            "lon": 14.8020685,
+            "precision": "town",
+            "label": "Chocerady",
+            "sourceUrl": "https://www.openstreetmap.org/relation/441468"
+          }
+        ],
+        "Samechov": [
+          {
+            "lat": 49.8758318,
+            "lon": 14.8472914,
+            "precision": "town",
+            "label": "Samechov",
+            "sourceUrl": "https://www.openstreetmap.org/relation/428439"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-facebook-com",
+      "town": "Říčany",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.facebook.com",
+      "allowed_towns": {
+        "Říčany": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.facebook.com/"
+      ],
+      "url_regex": "^https://www\\.facebook\\.com/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Říčany": [
+          {
+            "lat": 49.9919444,
+            "lon": 14.6542365,
+            "precision": "town",
+            "label": "Říčany",
+            "sourceUrl": "https://www.openstreetmap.org/relation/436100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-kkcm-cz",
+      "town": "Mukařov",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.kkcm.cz",
+      "allowed_towns": {
+        "Mukařov": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.kkcm.cz/"
+      ],
+      "url_regex": "^https://www\\.kkcm\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Mukařov": [
+          {
+            "lat": 49.9910675,
+            "lon": 14.7421272,
+            "precision": "town",
+            "label": "Mukařov",
+            "sourceUrl": "https://www.openstreetmap.org/relation/436112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-klokocna-eu",
+      "town": "Klokočná",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.klokocna.eu",
+      "allowed_towns": {
+        "Klokočná": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.klokocna.eu/"
+      ],
+      "url_regex": "^https://www\\.klokocna\\.eu/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Klokočná": [
+          {
+            "lat": 49.9563236,
+            "lon": 14.7195535,
+            "precision": "town",
+            "label": "Klokočná",
+            "sourceUrl": "https://www.openstreetmap.org/relation/437112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-kunice-cz",
+      "town": "Kunice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.kunice.cz",
+      "allowed_towns": {
+        "Kunice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.kunice.cz/"
+      ],
+      "url_regex": "^https://www\\.kunice\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Kunice": [
+          {
+            "lat": 49.9260951,
+            "lon": 14.6776948,
+            "precision": "town",
+            "label": "Kunice",
+            "sourceUrl": "https://www.openstreetmap.org/relation/437185"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-mirosovice-cz",
+      "town": "Mirošovice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.mirosovice.cz",
+      "allowed_towns": {
+        "Mirošovice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.mirosovice.cz/"
+      ],
+      "url_regex": "^https://www\\.mirosovice\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Mirošovice": [
+          {
+            "lat": 49.9129374,
+            "lon": 14.7114461,
+            "precision": "town",
+            "label": "Mirošovice",
+            "sourceUrl": "https://www.openstreetmap.org/relation/437901"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-mnichovice-cz",
+      "town": "Mnichovice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.mnichovice.cz",
+      "allowed_towns": {
+        "Mnichovice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.mnichovice.cz/"
+      ],
+      "url_regex": "^https://www\\.mnichovice\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Mnichovice": [
+          {
+            "lat": 49.9369981,
+            "lon": 14.7053537,
+            "precision": "venue",
+            "label": "MŠ Mnichovice, Tyršova",
+            "sourceUrl": "https://www.openstreetmap.org/node/13970695789"
+          },
+          {
+            "lat": 49.9360307,
+            "lon": 14.7096851,
+            "precision": "town",
+            "label": "Mnichovice",
+            "sourceUrl": "https://www.openstreetmap.org/relation/437902"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-mukarov-cz",
+      "town": "Mukařov",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.mukarov.cz",
+      "allowed_towns": {
+        "Mukařov": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.mukarov.cz/"
+      ],
+      "url_regex": "^https://www\\.mukarov\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Mukařov": [
+          {
+            "lat": 49.9910675,
+            "lon": 14.7421272,
+            "precision": "town",
+            "label": "Mukařov",
+            "sourceUrl": "https://www.openstreetmap.org/relation/436112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-obec-vsestary-cz",
+      "town": "Všestary",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.obec-vsestary.cz",
+      "allowed_towns": {
+        "Všestary": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.obec-vsestary.cz/"
+      ],
+      "url_regex": "^https://www\\.obec\\-vsestary\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Všestary": [
+          {
+            "lat": 49.9558322,
+            "lon": 14.6870198,
+            "precision": "town",
+            "label": "Všestary",
+            "sourceUrl": "https://www.openstreetmap.org/relation/437958"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-obecondrejov-cz",
+      "town": "Ondřejov",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.obecondrejov.cz",
+      "allowed_towns": {
+        "Ondřejov": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.obecondrejov.cz/"
+      ],
+      "url_regex": "^https://www\\.obecondrejov\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Ondřejov": [
+          {
+            "lat": 49.9045659,
+            "lon": 14.7831213,
+            "precision": "town",
+            "label": "Ondřejov",
+            "sourceUrl": "https://www.openstreetmap.org/relation/436115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-rclodicka-eu",
+      "town": "Všechromy",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.rclodicka.eu",
+      "allowed_towns": {
+        "Všechromy": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.rclodicka.eu/"
+      ],
+      "url_regex": "^https://www\\.rclodicka\\.eu/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Všechromy": [
+          {
+            "lat": 49.9490963,
+            "lon": 14.6510688,
+            "precision": "venue",
+            "label": "Všechromy 40",
+            "sourceUrl": "https://www.openstreetmap.org/node/1427535441"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-ricany-cz",
+      "town": "Říčany",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.ricany.cz",
+      "allowed_towns": {
+        "Říčany": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.ricany.cz/"
+      ],
+      "url_regex": "^https://www\\.ricany\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Říčany": [
+          {
+            "lat": 49.9918333,
+            "lon": 14.655608,
+            "precision": "venue",
+            "label": "Masarykovo náměstí, Říčany",
+            "sourceUrl": "https://www.openstreetmap.org/way/1547994877"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-struharov-cz",
+      "town": "Struhařov",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.struharov.cz",
+      "allowed_towns": {
+        "Struhařov": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.struharov.cz/"
+      ],
+      "url_regex": "^https://www\\.struharov\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Struhařov": [
+          {
+            "lat": 49.9519235,
+            "lon": 14.7444342,
+            "precision": "town",
+            "label": "Struhařov",
+            "sourceUrl": "https://www.openstreetmap.org/relation/436104"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-tehov-cz",
+      "town": "Tehov",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.tehov.cz",
+      "allowed_towns": {
+        "Tehov": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.tehov.cz/"
+      ],
+      "url_regex": "^https://www\\.tehov\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Tehov": [
+          {
+            "lat": 49.9776809,
+            "lon": 14.7032777,
+            "precision": "town",
+            "label": "Tehov",
+            "sourceUrl": "https://www.openstreetmap.org/relation/437866"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-zslosbates-edupage-org",
+      "town": "Louňovice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "zslosbates.edupage.org",
+      "allowed_towns": {
+        "Louňovice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://zslosbates.edupage.org/"
+      ],
+      "url_regex": "^https://zslosbates\\.edupage\\.org/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Louňovice": [
+          {
+            "lat": 49.9822632,
+            "lon": 14.7617424,
+            "precision": "town",
+            "label": "Louňovice",
+            "sourceUrl": "https://www.openstreetmap.org/relation/437188"
+          }
+        ]
+      },
+      "allowed_fragment_urls": [
+        "https://zslosbates.edupage.org/news/?gtnid=62#news-62"
+      ]
+    },
+    {
+      "id": "praha22-uhrineves",
+      "town": "Praha-Uhříněves",
+      "region": "Hlavní město Praha",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/",
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/?page=2"
+      ],
+      "url_regex": "^https://www\\.praha22\\.cz/volny-cas/prehled-akci-1/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_details": 40,
+      "max_index_pages": 2,
+      "coverage_note": "Omezený výběr kalendáře MČ Praha 22: nejvýše dva výpisy a 40 detailů, jen konkrétně ověřená místa v Uhříněvsi. Programy z Hájku, Pitkovic, centra Prahy a Průhonic se automaticky nepřebírají.",
+      "allowed_venues": [
+        "ZŠ Jandusů, nám. Bří Jandusů",
+        "Fara - vchod přes dvůr",
+        "STUDIO FIT Uhříněves",
+        "Nové náměstí před radnicí",
+        "Husova kaple, CČE",
+        "Kostel Všech svatých v Uhříněvsi",
+        "Divadlo U22"
+      ],
+      "event_reviews": {
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/vazani-adventnich-vencu-7533_3591cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vazani-adventnich-vencu-7533_3591cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Vázání adventních věnců",
+          "expectedDate": "2026-11-26",
+          "expectedEndDate": "2026-11-28",
+          "expectedVenue": "Fara - vchod přes dvůr",
+          "contentHash": "00fc95b6acb1934aef041ae2576706f27082152987a1ab6b6fb1fe5f658e4b6f",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {
+            "startTime": null,
+            "endTime": null,
+            "notes": [
+              "Rozmezí 26.–28. listopadu označuje krajní dny; denní otevírací hodiny nejsou uvedeny. Rezervace není nutná; vlastní zahradnické nůžky jsou doporučené."
+            ],
+            "registration": null,
+            "category": "tvoreni"
+          },
+          "verifiedAt": "2026-11-12T21:35:16+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/vazani-adventnich-vencu-7533_3591cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-akce-v-zs-jandusu-7538_3597cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-akce-v-zs-jandusu-7538_3597cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Vánoční akce v ZŠ Jandusů",
+          "expectedDate": "2026-11-27",
+          "expectedEndDate": null,
+          "expectedVenue": "ZŠ Jandusů, nám. Bří Jandusů",
+          "contentHash": "89187510d062a2f7d087d8ab5ca1ee1010920d5f081208110f0adca20add2f38",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {
+            "category": "betlem",
+            "notes": [
+              "Tento záznam označuje rozsvícení betlému 27. listopadu v 16:00; dílna 28. listopadu je samostatný záznam."
+            ]
+          },
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-akce-v-zs-jandusu-7538_3597cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-akce-v-zs-jandusu-7538_3598cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-akce-v-zs-jandusu-7538_3598cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Vánoční akce v ZŠ Jandusů",
+          "expectedDate": "2026-11-28",
+          "expectedEndDate": null,
+          "expectedVenue": "ZŠ Jandusů, nám. Bří Jandusů",
+          "contentHash": "5d2b05f4139b75a178cb6f4b7c2325aad74cef05c4ffdd9cb7be0d65f86bee2f",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {
+            "category": "tvoreni",
+            "endTime": "13:00",
+            "notes": [
+              "Tento záznam označuje vánoční dílnu 28. listopadu 09:00–13:00, nikoli rozsvícení betlému předchozí den."
+            ]
+          },
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-akce-v-zs-jandusu-7538_3598cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-workshop-pro-deti-7535_3592cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-workshop-pro-deti-7535_3592cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Adventní workshop pro děti",
+          "expectedDate": "2026-11-28",
+          "expectedEndDate": null,
+          "expectedVenue": "STUDIO FIT Uhříněves",
+          "contentHash": "5ee9016a387da206e98f93ebe429ac7c72e71c01727a8184d200ffc73b113e0d",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {
+            "audience": "omezené zaměření",
+            "notes": [
+              "Workshop je určen pro děti; cena 400 Kč zahrnuje materiál. Minimální počet přihlášených je 4."
+            ]
+          },
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-workshop-pro-deti-7535_3592cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/rozsveceni-stromecku-s-mikulasskou-nadilkou-7493_3546cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/rozsveceni-stromecku-s-mikulasskou-nadilkou-7493_3546cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Rozsvěcení stromečku s mikulášskou nadílkou",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Nové náměstí před radnicí",
+          "contentHash": "eba4386bf2ea0ac251cbb852bf77f9bdacc8d8ff98f04948f0186035e8330f70",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {
+            "price": "zdarma",
+            "notes": [
+              "Doprovodný program začíná v 17:30; rozsvícení stromu s mikulášskou nadílkou je v programu uvedeno v 18:15."
+            ]
+          },
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/rozsveceni-stromecku-s-mikulasskou-nadilkou-7493_3546cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/mammas-zni-uhrinevsi-koncert-7541_3601cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/mammas-zni-uhrinevsi-koncert-7541_3601cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Mammas zní Uhříněvsí - koncert",
+          "expectedDate": "2026-12-05",
+          "expectedEndDate": null,
+          "expectedVenue": "Husova kaple, CČE",
+          "contentHash": "c192ad70aad48d04f94349a260ac9ee4a7be05b2bf6cc68145845d27d7a0a4bf",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {
+            "notes": [
+              "Pořadatel výslovně uvádí, že nejde o klasický vánoční koncert; jde o adventní setkání s písňovým repertoárem."
+            ]
+          },
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/mammas-zni-uhrinevsi-koncert-7541_3601cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-jarmark-7494_3547cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-jarmark-7494_3547cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Vánoční jarmark",
+          "expectedDate": "2026-12-06",
+          "expectedEndDate": null,
+          "expectedVenue": "Nové náměstí před radnicí",
+          "contentHash": "8786f0936457b91e1b7063cb3f7dc8dc117786262c47bdcb1e7386c7a3eb84bf",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {
+            "notes": [
+              "Součástí jarmarku je v 17:00 Petr Bende Trio; tento koncert zde není počítán podruhé jako samostatná akce. Doprovodné řemeslné a tvořivé aktivity jsou uvedeny 13:00–18:00; konec celého jarmarku není potvrzen."
+            ]
+          },
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-jarmark-7494_3547cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/petr-bende-trio-akusticky-koncert-7507_3554cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/petr-bende-trio-akusticky-koncert-7507_3554cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Petr Bende Trio - akustický koncert",
+          "expectedDate": "2026-12-06",
+          "expectedEndDate": null,
+          "expectedVenue": "Nové náměstí před radnicí",
+          "contentHash": "2498087e05d694187f6857a2a110bb515e6159293239c7890e30a77b68f16386",
+          "decision": "exclude",
+          "reason": "Koncert 6. prosince v 17:00 je již výslovnou součástí přijímaného Vánočního jarmarku na stejném místě; nepočítat znovu jako nezávislou akci.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/petr-bende-trio-akusticky-koncert-7507_3554cs.html"
+          ]
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-koncert-ceska-mse-vanocni-j-j-ryby-7550_3620cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-koncert-ceska-mse-vanocni-j-j-ryby-7550_3620cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Vánoční koncert - Česká mše vánoční J. J. Ryby",
+          "expectedDate": "2026-12-12",
+          "expectedEndDate": null,
+          "expectedVenue": "Husova kaple, CČE",
+          "contentHash": "59ac68fe1550b136dbf5fdc86b9661e8b44241c87c4623c66d4d1a9dc579d044",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-koncert-ceska-mse-vanocni-j-j-ryby-7550_3620cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-koncert-ceska-mse-vanocni-j-j-ryby-7550_3621cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-koncert-ceska-mse-vanocni-j-j-ryby-7550_3621cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Vánoční koncert - Česká mše vánoční J. J. Ryby",
+          "expectedDate": "2026-12-12",
+          "expectedEndDate": null,
+          "expectedVenue": "Husova kaple, CČE",
+          "contentHash": "fe5c1910f3a8cfa1075d28c310049208a51641b73f8bea5fef5d1dc1b85189ad",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-koncert-ceska-mse-vanocni-j-j-ryby-7550_3621cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-jizda-hasicske-techniky-7531_3589cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-jizda-hasicske-techniky-7531_3589cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Adventní jízda hasičské techniky",
+          "expectedDate": "2026-12-13",
+          "expectedEndDate": null,
+          "expectedVenue": "Nové náměstí před radnicí",
+          "contentHash": "16380e2221dde708aae450aff1f51423c51d39af39f9c21fd27ba97c87761ef5",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {
+            "notes": [
+              "V 17:00 se konvoj řadí na Novém náměstí před radnicí, poté vyjíždí; nejde o stacionární program na náměstí. Trasa má být zveřejněna pořadatelem."
+            ]
+          },
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-jizda-hasicske-techniky-7531_3589cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-koncert-richarda-pachmana-a-dity-horinkove-6766_3578cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-koncert-richarda-pachmana-a-dity-horinkove-6766_3578cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Adventní koncert Richarda Pachmana a Dity Hořínkové",
+          "expectedDate": "2026-12-13",
+          "expectedEndDate": null,
+          "expectedVenue": "Husova kaple, CČE",
+          "contentHash": "83b4066dc281edfcb7b9b836dbc861b66499638ae3b9c0c2a4256c92d7a83051",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-koncert-richarda-pachmana-a-dity-horinkove-6766_3578cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/b-britten-a-ceremony-of-carols-7489_3541cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/b-britten-a-ceremony-of-carols-7489_3541cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "B. Britten - A Ceremony of Carols",
+          "expectedDate": "2026-12-15",
+          "expectedEndDate": null,
+          "expectedVenue": "Kostel Všech svatých v Uhříněvsi",
+          "contentHash": "e718e58d97e65a413cfb50366308bb6f2e61d99eb75278edf83876ac3cddd2fc",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/b-britten-a-ceremony-of-carols-7489_3541cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-koncert-raduza-7348_3453cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-koncert-raduza-7348_3453cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Vánoční koncert - Radůza",
+          "expectedDate": "2026-12-18",
+          "expectedEndDate": null,
+          "expectedVenue": "Divadlo U22",
+          "contentHash": "25c51c09861fee948cf0c30a6605702d1f82f812c40dccebd88f5cc48cfde4a7",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-koncert-raduza-7348_3453cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/betlemske-svetlo-s-programem-7553_3623cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/betlemske-svetlo-s-programem-7553_3623cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Betlémské světlo s programem",
+          "expectedDate": "2026-12-19",
+          "expectedEndDate": null,
+          "expectedVenue": "Husova kaple, CČE",
+          "contentHash": "f45b664377580a2d18d1e00b1b725291b449fe5cb140b9c0b3bed3f27c0e674f",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/betlemske-svetlo-s-programem-7553_3623cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/vytrubovani-z-veze-6365_3544cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vytrubovani-z-veze-6365_3544cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Vytrubování z věže",
+          "expectedDate": "2026-12-24",
+          "expectedEndDate": null,
+          "expectedVenue": "Kostel Všech svatých v Uhříněvsi",
+          "contentHash": "39c5bc1773f6ed1ecab215743c2c4d2f4d1eaab574c8a6f701d98bf70a2630f7",
+          "decision": "accept",
+          "reason": "Primární detail s výslovným rokem 2026 a konkrétním ověřeným místem v Uhříněvsi.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T21:35:17+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/vytrubovani-z-veze-6365_3544cs.html"
+          ],
+          "verifiedTown": "Praha-Uhříněves"
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/od-okynka-k-okynku-venkovni-hajecka-stezka-7552_3622cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/od-okynka-k-okynku-venkovni-hajecka-stezka-7552_3622cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Od okýnka k okýnku - venkovní hájecká stezka",
+          "expectedDate": "2026-11-21",
+          "expectedEndDate": "2026-11-29",
+          "expectedVenue": "Hájek",
+          "contentHash": "2076289f45594e923efbf00424cb46fedda3ebf8e8d17a88478ce56740330d0d",
+          "decision": "hold",
+          "reason": "Místo je Hájek, nikoli Uhříněves; chybí samostatně ověřené geografické mapování a denní časový režim.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T21:37:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/od-okynka-k-okynku-venkovni-hajecka-stezka-7552_3622cs.html"
+          ]
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-vence-7543_3603cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-vence-7543_3603cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Adventní věnce",
+          "expectedDate": "2026-11-25",
+          "expectedEndDate": null,
+          "expectedVenue": "DDM V Bytovkách 803",
+          "contentHash": "64255d835b7abe8ae19666d805321574e161f9bebfdbab66d12e76da491718a7",
+          "decision": "hold",
+          "reason": "U adresy DDM V Bytovkách 803 je rozporné PSČ 14000; před zařazením ověřit vazbu na Uhříněves.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T21:37:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-vence-7543_3603cs.html"
+          ]
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/ceska-mse-vanocni-v-pruhonicich-7536_3593cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/ceska-mse-vanocni-v-pruhonicich-7536_3593cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Česká mše vánoční v Průhonicích",
+          "expectedDate": "2026-12-19",
+          "expectedEndDate": null,
+          "expectedVenue": "Průhonický zámek-Rytířský sál",
+          "contentHash": "863252a81136b5c5bbb26dc97907112105aaa726471bb6d3ef44c07ecf99f051",
+          "decision": "exclude",
+          "reason": "Místo je výslovně Průhonice ve Středočeském kraji, nikoli Uhříněves v Praze; do lokálního výběru zdroje se nezařazuje.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T21:37:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/ceska-mse-vanocni-v-pruhonicich-7536_3593cs.html"
+          ]
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/ceska-mse-vanocni-v-pruhonicich-7536_3594cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/ceska-mse-vanocni-v-pruhonicich-7536_3594cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Česká mše vánoční v Průhonicích",
+          "expectedDate": "2026-12-19",
+          "expectedEndDate": null,
+          "expectedVenue": "Průhonický zámek-Rytířský sál",
+          "contentHash": "26a2546c9540cebc2b18d6dc621c9371871beceef2e60e9725b7c6a778b61764",
+          "decision": "exclude",
+          "reason": "Místo je výslovně Průhonice ve Středočeském kraji, nikoli Uhříněves v Praze; do lokálního výběru zdroje se nezařazuje.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T21:37:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/ceska-mse-vanocni-v-pruhonicich-7536_3594cs.html"
+          ]
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/zivy-betlem-s-rozdavanim-betlemskeho-svetla-7530_3588cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/zivy-betlem-s-rozdavanim-betlemskeho-svetla-7530_3588cs.html",
+          "sourceTown": "Praha-Uhříněves",
+          "expectedTitle": "Živý betlém s rozdáváním Betlémského světla",
+          "expectedDate": "2026-12-20",
+          "expectedEndDate": null,
+          "expectedVenue": "Pivovar",
+          "contentHash": "11038220c3d2d584ee1053b7062837b992dd1cbb61c5f7c43cd11fe4b87b5939",
+          "decision": "hold",
+          "reason": "Obecné místo Pivovar s ulicí K Sokolovně vyžaduje potvrzení konkrétního pivovaru v Uhříněvsi.",
+          "overrides": {},
+          "verifiedAt": "2026-11-12T21:37:23+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha22.cz/volny-cas/prehled-akci-1/zivy-betlem-s-rozdavanim-betlemskeho-svetla-7530_3588cs.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "praha-lipence-calendar",
+      "town": "Praha-Lipence",
+      "region": "Hlavní město Praha",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.praha-lipence.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.praha-lipence\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_details": 14,
+      "max_index_pages": 2,
+      "allowed_venues": [
+        "Hasičské hřiště",
+        "K Průhonu"
+      ],
+      "coverage_note": "Omezený výběr akcí MČ Praha-Lipence; pouze ověřené místní adresy, nikoli celý pražský program.",
+      "event_reviews": {
+        "https://www.praha-lipence.cz/volny-cas/kalendar-akci/mikulasska-nadilka-1691_1094cs.html": {
+          "sourceId": "praha-lipence-calendar",
+          "sourceUrl": "https://www.praha-lipence.cz/volny-cas/kalendar-akci/mikulasska-nadilka-1691_1094cs.html",
+          "sourceTown": "Praha-Lipence",
+          "expectedTitle": "Mikulášská nadílka",
+          "expectedDate": "2026-12-06",
+          "expectedEndDate": null,
+          "expectedVenue": "Hasičské hřiště",
+          "contentHash": "40e653295235565e269ee1ddf6ba0c9a54a026efd1fc4b0c84ac8ae57633289d",
+          "decision": "accept",
+          "reason": "Primární detail výslovně uvádí datum s rokem 2026, MČ Praha-Lipence a konkrétní lokální místo.",
+          "overrides": {
+            "price": "250 Kč",
+            "notes": [
+              "Mikulášská nadílka pro děti; rezervace času a platba předem do 20. listopadu 2026. Na konci dostanou děti jednotný balíček. Uvedených 17:00 není čas konkrétní individuální rezervace."
+            ]
+          },
+          "verifiedAt": "2026-11-12T21:35:18+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha-lipence.cz/volny-cas/kalendar-akci/mikulasska-nadilka-1691_1094cs.html"
+          ],
+          "verifiedTown": "Praha-Lipence"
+        },
+        "https://www.praha-lipence.cz/volny-cas/kalendar-akci/koncert-prazske-mobilni-zvonohry-1849_1156cs.html": {
+          "sourceId": "praha-lipence-calendar",
+          "sourceUrl": "https://www.praha-lipence.cz/volny-cas/kalendar-akci/koncert-prazske-mobilni-zvonohry-1849_1156cs.html",
+          "sourceTown": "Praha-Lipence",
+          "expectedTitle": "Koncert Pražské mobilní zvonohry",
+          "expectedDate": "2026-12-20",
+          "expectedEndDate": null,
+          "expectedVenue": "K Průhonu",
+          "contentHash": "68cd46ed1e2458d2132a21c49c06968169abfc077be68185382c44fc3aa1907d",
+          "decision": "accept",
+          "reason": "Primární detail výslovně uvádí datum s rokem 2026, MČ Praha-Lipence a konkrétní lokální místo.",
+          "overrides": {
+            "venue": "K Průhonu, u areálu TJ Sokol Lipence"
+          },
+          "verifiedAt": "2026-11-12T21:35:18+00:00",
+          "supportingSourceUrls": [
+            "https://www.praha-lipence.cz/volny-cas/kalendar-akci/koncert-prazske-mobilni-zvonohry-1849_1156cs.html"
+          ],
+          "verifiedTown": "Praha-Lipence"
+        }
+      }
     }
   ]
 }

@@ -985,7 +985,8 @@ test('coverage discloses real bounded collection safely without blocking events 
     assert.equal(await page.locator('.coverage-source').count(), 3);
     const text = await page.locator('#coverage').innerText();
     for (const label of ['ověřeno', 'částečně', 'nedostupné', 'Plasy', 'Plzeňský kraj', '12. 11. 2026', '11:00', '2 min 5 s', 'AI volání při posledním automatickém sběru: 0', coverageFixture.coverageNote]) assert(text.includes(label), label);
-    assert.match(text, /nejvýše 2 stránky výpisu a 14 detailů na zdroj/);
+    assert.match(text, /Limity sběru se liší podle zdroje/);
+    assert.doesNotMatch(text, /nejvýše 2 stránky výpisu a 14 detailů na zdroj/);
     assert.match(text, /Pořadatelský výběr, nikoli celý městský kalendář/);
     assert.match(text, /Mimo rozsah: 7/);
     assert.match(await page.locator('.coverage-source').first().innerText(), /Publikované akce: 2 · K ověření: 0/);

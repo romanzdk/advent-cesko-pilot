@@ -125,10 +125,12 @@ def _deliver(root, head, state, verify, push):
 
 
 def collect_projection(root):
+    settings = root/'private/reviewed-feed.json'
+    feed_args = ['--reviewed-feed-config',str(settings)] if settings.exists() else []
     output = command(root, [sys.executable, str(Path(__file__).with_name('collector.py')),
         '--registry', str(root/'data/sources.json'), '--db', str(root/'private/events.sqlite'),
         '--cache', str(root/'private/http-cache'), '--output', str(root/'site'),
-        '--locations', str(root/'data/locations.json')], timeout=600)
+        '--locations', str(root/'data/locations.json'), *feed_args], timeout=1800)
     atomic_private(root/'private/collector-last.json', json.loads(output))
 
 

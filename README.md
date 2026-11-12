@@ -42,18 +42,28 @@ Sezonní mapa adventních a vánočních akcí pro **20. listopadu – 24. prosi
 
 ## Pokrytí a rozsah
 
-**Datovaný stav k 12. listopadu 2026: 78 akcí · 12 zdrojů · 6 krajů.**
+**Ověřený sezonní výběr: 206 akcí ve 14 krajích.** Nejde o úplné pokrytí jednotlivých krajů.
 
-| Kraj | Sledované obce a pořadatelé |
-| --- | --- |
-| Plzeňský | Plasy, Černošín a ověřené místní části Plas |
-| Liberecký | Jilemnice, KC Golf Semily |
-| Jihomoravský | Rajhrad, Kuřim |
-| Středočeský | Beroun, Hořovice |
-| Jihočeský | Soběslav, IKS Třeboň |
-| Vysočina | Telč, Humpolec |
+| Kraj | Publikované akce |
+| --- | ---: |
+| Plzeňský kraj | 17 |
+| Liberecký kraj | 17 |
+| Jihomoravský kraj | 9 |
+| Středočeský kraj | 60 |
+| Jihočeský kraj | 12 |
+| Kraj Vysočina | 29 |
+| Karlovarský kraj | 7 |
+| Královéhradecký kraj | 6 |
+| Olomoucký kraj | 19 |
+| Ústecký kraj | 1 |
+| Zlínský kraj | 6 |
+| Hlavní město Praha | 21 |
+| Moravskoslezský kraj | 1 |
+| Pardubický kraj | 1 |
 
-Jde o **výběr zdrojů, ne úplný kalendář krajů nebo celé ČR**. Aktuální stav načítání a rozsah kontrol najdete na webu v panelu *Zdroje a pokrytí*. Dvě položky čekají na dořešení termínu či více samostatných představení; [podrobnosti kontroly](docs/operations.md#ruční-kontrola-kandidátů).
+Registr obsahuje **44 zdrojových skupin**: 22 automaticky čtených kalendářů a redakční veřejný výběr od 22 primárních hostitelů. Redakční výběr přidává 51 již veřejných záznamů s původním datem ověření; kontrola jeho přenosu není novým ověřením každé pořadatelské stránky.
+
+Jde o **výběr zdrojů, ne úplný kalendář krajů nebo celé ČR**. Aktuální čas aktualizace, rozsah a chyby načítání najdete na webu v panelu *Zdroje a pokrytí*. Nejasné kandidáty sběrač nepublikuje; [postup kontroly](docs/operations.md#ruční-kontrola-kandidátů) a [pravidla trvalého redakčního přenosu](docs/content-repair.md).
 
 ## Jak vznikají data
 
@@ -81,7 +91,7 @@ Projekt neobchází blokované kalendáře a neslibuje obecné zpracování vše
 
 ## Kvalita a orientace v kódu
 
-**75 Python testů a 64 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřovaný stav k 12. listopadu 2026. CI běží offline; úplné Chromium testy se spouštějí lokálně.
+**114 Python testů a 74 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, trvalý redakční přenos, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřenou sadu tohoto snapshotu. CI běží offline; úplné Chromium testy se spouštějí lokálně.
 
 ```text
 scripts/     sběr, adaptéry, validace a publisher

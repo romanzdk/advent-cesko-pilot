@@ -166,5 +166,19 @@
     "precision": "town",
     "label": "Lanškroun — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/440376"
+  },
+  "Praha-Uhříněves": {
+    "lat": 50.0378687,
+    "lon": 14.5973439,
+    "precision": "town",
+    "label": "Praha-Uhříněves — orientační bod katastrální části, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/429225"
+  },
+  "Praha-Lipence": {
+    "lat": 49.9638552,
+    "lon": 14.3504699,
+    "precision": "town",
+    "label": "Praha-Lipence — orientační bod katastrální části, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/428690"
   }
 }

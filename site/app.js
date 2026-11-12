@@ -461,7 +461,7 @@ async function loadCoverage() {
     const fragment = document.createDocumentFragment();
     fragment.append(el('p', data.coverageNote));
     fragment.append(el('p', `Sledované období: ${dateFormat.format(dateValue(data.window.from))}–${dateFormat.format(dateValue(data.window.through))}. Kraje: ${data.regions.join(', ')}.`));
-    fragment.append(el('p', 'Sběr je omezený: nejvýše 2 stránky výpisu a 14 detailů na zdroj. Nejde o úplný přehled akcí; nulový počet neznamená, že se ve městě nic nekoná.'));
+    fragment.append(el('p', 'Limity sběru se liší podle zdroje; redakční výběry nejsou úplné obecní kalendáře. Nulový počet neznamená, že se v obci nic nekoná.'));
     const seconds = Math.round(data.metrics.durationSeconds);
     const duration = seconds >= 60 ? `${Math.floor(seconds / 60)} min ${seconds % 60} s` : `${seconds} s`;
     fragment.append(el('p', `Poslední sběr: ${checkedLabel(data.generatedAt)} (Česko) · Doba sběru: ${duration} · HTTP požadavky: ${data.metrics.requestCount}.`, 'coverage-metrics'));

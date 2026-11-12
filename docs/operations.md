@@ -99,7 +99,9 @@ Po 24. prosinci 2026 publisher neprovede sběr ani publikaci, i kdyby se spustil
 
 ## Přidávání zdrojů
 
-Po rozšíření z 12. listopadu 2026 registr zahrnuje 12 zdrojů v šesti krajích. Validátor odvozuje přesná ID a počet zdrojů, jejich kraje, obce i přiřazení zdrojových URL z `data/sources.json`; pro izolované testy lze `validate_directory(path, registry=...)` předat jiný registr. Rozhraní odvozuje souhrn pokrytí z veřejných dat. Přidání kraje proto nevyžaduje přepsat pevný počet, ale stále vyžaduje zdrojové a geografické ověření.
+Registr a aktuální veřejné pokrytí se odvozují z `data/sources.json` a posledního validovaného sběru, nikoli z historického počtu zdrojů. Validátor ověřuje přesná ID zdrojů, jejich kraje, obce i přiřazení zdrojových URL; pro izolované testy lze `validate_directory(path, registry=...)` předat jiný registr. Rozhraní odvozuje souhrn pokrytí z veřejných dat. Přidání kraje proto nevyžaduje přepsat pevný počet, ale stále vyžaduje zdrojové a geografické ověření.
+
+Redakčně ověřené veřejné záznamy mají samostatný striktní adaptér a výslovné vazby na primární hostitele, obce a polohy. [Trvalý přenos a jeho limity](content-repair.md) popisuje soukromou provozní konfiguraci, zachování původního `verifiedAt`, odstranění záznamů, výpadky i rozdíl mezi kontrolou přenosu a novým ověřením pořadatele. Konfigurace musí být přenesena společně s odpovídající SQLite pod publikačním zámkem; není součástí veřejného repozitáře.
 
 Šest nových zdrojů používá `allowed_venues`: seznam přesně ověřených míst v obci, porovnávaný po normalizaci NFKC, mezer a velikosti písmen. Nové či změněné místo čeká na kontrolu; seznam není obecný geokodér ani oprávnění přiřadit sousední obec ke zdroji. Podklady pro přidání místa nejprve ověřte u pořadatele. Automatické objevování nových akcí na již ověřených místech zůstává funkční.
 
@@ -107,7 +109,7 @@ Nový zdroj musí mít ověřenou lokalitu, současný rok v obsahu, povolené a
 
 ## Ruční kontrola kandidátů
 
-Celá fronta 37 položek byla zkontrolována 12. listopadu 2026. Výsledek: 21 přijatých, 14 vyřazených a dvě zadržené akce. Rozhodnutí a opravy jsou v `event_reviews` příslušných zdrojů, nikoli v ručně přepsaném veřejném JSON.
+Historická dávka 37 položek byla zkontrolována 12. listopadu 2026: 21 přijatých, 14 vyřazených a dvě zadržené akce. Není to aktuální velikost fronty po rozšíření zdrojů. Aktuální nepublikované kandidáty a důvody obsahuje `site/review.json`; rozhodnutí a opravy se ukládají do `event_reviews` příslušných zdrojů, nikoli do ručně přepsaného veřejného JSON.
 
 Před novým rozhodnutím načtěte aktuální primární detail, ověřte rok, celý interval a skutečnou obec a případně plakát. Pro výpočet `contentHash` použijte exportovanou funkci `review_fingerprint(body, adapter)` nad týmiž původními bajty. Zachovejte původní hodnoty v `expected*`, přesnou URL a ID zdroje; `overrides` slouží jen doloženým opravám. `verifiedTown` přidávejte pouze po ověření obce, ne podle sídla vydavatele. U polí z plakátu připojte zdrojový odkaz a datum ověření do poznámky.
 

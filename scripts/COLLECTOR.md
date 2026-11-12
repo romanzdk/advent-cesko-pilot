@@ -14,7 +14,7 @@ Veřejný export je oddělený od ukládání interní evidence. `scripts/valida
 
 ## Objevování a HTTP
 
-Sběrač načte nejvýše dvě stránky výpisu a čtrnáct detailních URL na zdroj; zdroj může limit detailů dále snížit. Sleduje skutečné odkazy na stejném hostiteli, filtruje je podle registru a sezonního popisku. Nové odkazy mají přednost před bootstrap URL; známé uložené detaily se znovu kontrolují v rámci stejného limitu. Zachovává původní percent-encoding adres.
+Výchozí limit zůstává dvě stránky výpisu a čtrnáct detailních URL na zdroj. Registr může výslovně nastavit `max_index_pages` (celé číslo 1–4) a `max_details` (1–40); neplatné typy včetně booleanů nebo hodnoty mimo rozsah zastaví sběr před načítáním. Telč, Humpolec a Hranice mají 40 detailů; Jilemnice, Hořovice, Třeboň, Nejdek a Radotín čtyři výpisy. Nejde o neomezené procházení. Sběrač sleduje skutečné odkazy na stejném hostiteli, filtruje je podle registru a sezonního popisku. Nové odkazy mají přednost před bootstrap URL; známé uložené detaily se znovu kontrolují v rámci stejného limitu. Zachovává původní percent-encoding adres. Efektivní stropy jsou ve stavech zdrojů i souhrnné poznámce.
 
 Před čtením kontroluje robots.txt. Používá HTTPS, omezená přesměrování na stejném hostiteli a alespoň 1,05 s mezi dokončením a dalším požadavkem na hostitele; delší limity robots.txt respektuje. Obsahový požadavek má timeout 15 s, limit 2 MiB a nejvýše dva pokusy. ETag a Last-Modified umožňují podmíněné GET. Při HTTP 304 se znovu použijí původní bajty po kontrole otisku.
 
@@ -66,6 +66,18 @@ Deduplikace porovnává obec, místo, datum, název a začátek. Záznamy bez uv
 
 Projekt nemá obecné OCR plakátů, import libovolných PDF, Facebook, přihlašování, odvozování termínů z RSS publikačních dat ani AI fallback. Omezené procházení nikdy neopravňuje tvrdit úplnost regionu; `coverage.json` výslovně uvádí `complete: false`.
 
-Průzkum všech krajů, skutečně integrované a blokované zdroje, podklady geodat, izolovaná měření a regeneraci historických snapshotů popisuje [celostátní source audit](../docs/national-source-audit.md). Pět přidaných zdrojů má prázdné seeds a používá přesný venue allowlist; Hranice mají dohromady jen dva lokální výpisy a stejný sdílený limit 14 detailů.
+Průzkum všech krajů, skutečně integrované a blokované zdroje, podklady geodat, izolovaná měření a regeneraci historických snapshotů popisuje [celostátní source audit](../docs/national-source-audit.md). Pět přidaných zdrojů má prázdné seeds a používá přesný venue allowlist; Hranice mají dohromady dva lokální výpisy a sdílený limit 40 detailů.
 
-[Druhá dávka](../docs/national-wave2-audit.md) přidává další tři seedless zdroje: Praha 16 / Radotín a Štítina používají nezměněný Galileo; KC Lanškroun vlastní úzký festivalový adaptér. Všechny tři mají přesný venue allowlist, stále nejvýše 2 výpisy / 14 detailů. Každá nově přijatá akce je auditovaná zvlášť; reprezentace všech krajů není kompletní pokrytí.
+[Druhá dávka](../docs/national-wave2-audit.md) přidává další tři seedless zdroje: Praha 16 / Radotín a Štítina používají nezměněný Galileo; KC Lanškroun vlastní úzký festivalový adaptér. Všechny tři mají přesný venue allowlist; Radotín nyní nejvýše 4 výpisy / 14 detailů, ostatní 2 / 14. Každá nově přijatá akce je auditovaná zvlášť; reprezentace všech krajů není kompletní pokrytí.
+
+## Schválený veřejný redakční výběr
+
+Adaptér `reviewed-public` není dalším HTML crawlerem a nečte soukromý kalendář. Přenáší pouze uzavřené veřejné schéma z již schváleného `data/reviewed-events.json` nebo z vlastněného veřejného feedu určeného soukromou místní konfigurací. V registru jsou primární hostitelé, výslovné obce/kraj, schválené polohy s OSM původem a jediná explicitně povolená fragmentová URL. Neznámá obec, hostitel nebo změněné geosouřadnice vyžadují kontrolu; neprobíhá automatické odvozování kraje ani geokódování. Původní ID, časy, podmínky, intervaly a `verifiedAt` se zachovávají.
+
+Výchozí snapshot se do SQLite vloží jen jednou pro každý registrovaný redakční zdroj. Úspěšný feed nahrazuje jeho množinu záznamů, včetně odstranění a prázdného seznamu. Síťový výpadek uchová poslední přijatý stav; chybějící konfigurace ani další spuštění neobnoví odebrané položky ze snapshotu. Změněný neplatný záznam se stáhne do kontroly, ostatní platné záznamy mohou zůstat. Neplatný kořen nebo starší revize stáhne celý dotčený redakční výběr; nejvyšší přijatý čas revize přetrvá. Stejný timestamp smí opakovat stejný obsah, ne odlišnou revizi.
+
+`reviewed_state` uchovává bootstrap/revizní stav a `reviewed_provenance` skutečný hash přenesených bajtů, soukromou URL přenosu, čas přenosu a původní datum důkazu. V běžné provenienci primárních polí zůstává hash nenačtené stránky `NULL` a datum původní: kontrola feedu není ověřením pořadatelského webu. Veřejný stav používá primární URL a výslovně vysvětluje význam časů kontroly.
+
+Pouze tato registrovaná větev dovoluje veřejné delší kurátorské popisy do 1000 znaků a zachování konce již schváleného prosincového intervalu až do 31. prosince; začátek musí zůstat v sezonním okně. HTML adaptéry mají dál původní 200znakový popis a termíny uvnitř okna. Důvodem je nezkrátit důležité podmínky ani nevymyslet dřívější konec výstavy.
+
+Konfiguraci a offline regresní příkazy popisuje [oprava trvalého obsahu](../docs/content-repair.md). Publikační podproces má pro rozšířený, stále sekvenční sběr timeout 1800 s; zámek, Git ochrany, HTTPS/robots politika a plánovač se nemění.
