@@ -1,5 +1,7 @@
 # Celostátní průzkum primárních zdrojů — 12. listopadu 2026
 
+Tento dokument uchovává výsledky **první dávky** (17 zdrojů / 11 krajů, 107 izolovaných akcí). Navazující [druhá dávka](national-wave2-audit.md) přidává Radotín, Lanškroun a Štítinu: registr 20 zdrojů / zastoupení 14 krajů, offline výstup 113 akcí (+6 proti 107). Původní tabulka a měření níže jsou historická evidence, nikoli tvrzení, že tři nově zastoupené kraje stále nemají zdroj nebo že jsou nyní kompletně pokryté.
+
 ## Rozsah a hranice
 
 První rozšiřující dávka pro sezonu **20. 11.–24. 12. 2026**, nikoli úplné pokrytí ČR, měst ani krajů. Živé datum bylo ověřeno systémovým časem. Průzkum proběhl ve všech 14 krajích včetně Prahy. Integrace znamená registraci, přenosné testy, skutečné nalezení detailů ve výpisu a kontrolovaný sběr; samotné nalezené URL nestačí.

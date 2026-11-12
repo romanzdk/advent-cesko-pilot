@@ -1196,6 +1196,42 @@
       "coverage_note": "Neúplný výběr oficiálního turistického portálu města Zlína, vyhledávání advent. Nejvýše dvě stránky a 14 detailů; jen ověřená místa v městě. Datumový interval není denní otevírací doba; hodiny z volného textu nejsou automaticky přejímány.",
       "max_details": 14,
       "allowed_venues": ["náměstí Míru, Zlín", "Čiperova vila, Burešov 3675/4, Zlín", "Divadelní 3242, Zlín"]
+    },
+    {
+      "id": "praha16-radotin",
+      "town": "Praha-Radotín",
+      "region": "Hlavní město Praha",
+      "adapter": "galileo",
+      "index_urls": ["https://www.praha16.eu/volny-cas/kalendar-akci/"],
+      "url_regex": "^https://www\\.praha16\\.eu/volny-cas/kalendar-akci/[^/?]+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "coverage_note": "Neúplný sezonní výběr oficiálního kalendáře Prahy 16 v Radotíně, nikoli pokrytí celé Prahy. Nejvýše dvě stránky a 14 detailů; jen ověřená místní místa. Filmové projekce s neověřenými podmínkami a jiná místa zůstávají k revizi.",
+      "max_details": 14,
+      "allowed_venues": ["Kulturně komunitní centrum Koruna", "Římskokatolický kostel sv. Petra a Pavla", "Hasičská zbrojnice"]
+    },
+    {
+      "id": "stitina-obec",
+      "town": "Štítina",
+      "region": "Moravskoslezský kraj",
+      "adapter": "galileo",
+      "index_urls": ["https://www.stitina.cz/aktualne/kalendar-akci/"],
+      "url_regex": "^https://www\\.stitina\\.cz/aktualne/kalendar-akci/[^/?]+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "coverage_note": "Neúplný sezonní výběr oficiálního kalendáře obce Štítina, okres Opava; nikoli Ostrava nebo celý kraj. Nejvýše dvě stránky a 14 detailů. Ověřen park v ulici Hlavní; obecný údaj Štítina bez konkrétního místa zůstává k revizi.",
+      "max_details": 14,
+      "allowed_venues": ["Park"]
+    },
+    {
+      "id": "lanskroun-kultura",
+      "town": "Lanškroun",
+      "region": "Pardubický kraj",
+      "adapter": "lanskroun",
+      "index_urls": ["https://www.kclanskroun.cz/festivaly/"],
+      "url_regex": "^https://www\\.kclanskroun\\.cz/festival/[^/?#]+/$",
+      "seed_urls": [],
+      "coverage_note": "Výběr z festivalů Kulturního centra Lanškroun, nikoli celý městský či krajský program. Nejvýše dvě stránky a 14 detailů. Souhrnný adventní interval má výslovný společný rok v označeném poli; neznamená každodenní otevření ani nepřetržitý program. Jen ověřené náměstí J. M. Marků.",
+      "max_details": 14,
+      "allowed_venues": ["náměstí J. M. Marků"]
     }
   ]
 }

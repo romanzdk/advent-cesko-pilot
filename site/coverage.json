@@ -15,7 +15,10 @@
     "Královéhradecký kraj",
     "Olomoucký kraj",
     "Ústecký kraj",
-    "Zlínský kraj"
+    "Zlínský kraj",
+    "Hlavní město Praha",
+    "Moravskoslezský kraj",
+    "Pardubický kraj"
   ],
   "sources": [
     {
@@ -273,6 +276,48 @@
       "url": "https://visitzlin.eu/kalendar-akci?search=advent",
       "adapter": "visitzlin",
       "coverageNote": "Nový zdroj byl ověřen v izolovaném sběru; tento historický snapshot ještě neobsahuje jeho akce. Vyžaduje bezpečnou regeneraci po merge. Vyhledávání advent, pouze ověřená místa; neúplný výběr.",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "lastError": "Výsledky izolovaného sběru dosud nebyly publikovány."
+    },
+    {
+      "id": "praha16-radotin",
+      "town": "Praha-Radotín",
+      "region": "Hlavní město Praha",
+      "url": "https://www.praha16.eu/volny-cas/kalendar-akci/",
+      "adapter": "galileo",
+      "coverageNote": "Nový zdroj čeká na bezpečnou regeneraci po merge; výsledky izolovaného sběru nejsou publikovány. Pouze vybraná místa v Radotíně, nikoli celá Praha.",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "lastError": "Výsledky izolovaného sběru dosud nebyly publikovány."
+    },
+    {
+      "id": "stitina-obec",
+      "town": "Štítina",
+      "region": "Moravskoslezský kraj",
+      "url": "https://www.stitina.cz/aktualne/kalendar-akci/",
+      "adapter": "galileo",
+      "coverageNote": "Nový zdroj čeká na bezpečnou regeneraci po merge; výsledky izolovaného sběru nejsou publikovány. Výběr obce Štítina v okrese Opava, nikoli Ostrava nebo celý kraj.",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "lastError": "Výsledky izolovaného sběru dosud nebyly publikovány."
+    },
+    {
+      "id": "lanskroun-kultura",
+      "town": "Lanškroun",
+      "region": "Pardubický kraj",
+      "url": "https://www.kclanskroun.cz/festivaly/",
+      "adapter": "lanskroun",
+      "coverageNote": "Nový zdroj čeká na bezpečnou regeneraci po merge; výsledky izolovaného sběru nejsou publikovány. Souhrnný interval festivalu, nikoli denní otevírací doba nebo kompletní program města/kraje.",
       "status": "partial",
       "lastChecked": null,
       "lastSuccess": null,

@@ -194,7 +194,7 @@ def parse_event(body, source, url, window):
     title = txt(root.find('h1'))
     adapter = source['adapter']
     structured = structured_event(root)
-    if adapter in ('hranice', 'visitzlin') and structured:
+    if adapter in ('hranice', 'visitzlin', 'lanskroun') and structured:
         raise Review('Nová strukturovaná data nesmějí obejít ověření označených polí; ověřte formát znovu.')
     wpem_price = None
     if adapter == 'wpem' and structured:
@@ -249,6 +249,40 @@ def parse_event(body, source, url, window):
         locality = address.get('addressLocality') if isinstance(address,dict) else None
         if locality and exact_label(str(locality)) != exact_label(source['town']):
             raise Review('Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu.')
+    elif adapter == 'lanskroun':
+        tops = root.all(cls='festival-top__content')
+        if len(tops) != 1:
+            raise Review('Chybí jednoznačný festivalový detail.')
+        top = tops[0]
+        labels = top.all(cls='festival-top__datum-konani')
+        headings = top.all('h1', cls='festival-top__nazev')
+        summaries = top.all(cls='festival-top__kratky-popis')
+        if len(labels) != 1 or len(headings) != 1 or len(summaries) != 1:
+            raise Review('Nejednoznačná označená pole festivalu.')
+        interval = re.fullmatch(r'(\d{1,2})\.\s*(\d{1,2})\.?\s*[-–]\s*(\d{1,2})\.\s*(\d{1,2})\.\s*(20\d{2})', txt(labels[0]))
+        if not interval:
+            raise Review('Festival vyžaduje úplný označený interval s výslovným společným rokem.')
+        try:
+            first = date(int(interval[5]), int(interval[2]), int(interval[1]))
+            last = date(int(interval[5]), int(interval[4]), int(interval[3]))
+        except ValueError:
+            raise Review('Neplatné datum festivalového intervalu.')
+        if last < first:
+            raise Review('Obrácený festivalový interval.')
+        # The year is explicit in this single labelled range, never borrowed from URL or page chrome.
+        date_text = first.strftime('%d. %m. %Y') + ' – ' + last.strftime('%d. %m. %Y')
+        summary = txt(summaries[0])
+        if parse_dates(summary):
+            raise Review('Další termín v označeném popisu festivalu vyžaduje ověření.')
+        place = re.search(r'\bna (náměstí J\. M\. Marků)(?!\w)', summary)
+        if not place:
+            raise Review('Chybí ověřené místní náměstí v popisu festivalu.')
+        if re.search(r'\bkc\b|vstup|zdarma|cen[ay]|dobrovoln|prispevk', fold(txt(headings[0]) + ' ' + summary)):
+            raise Review('Nové cenové podmínky festivalu vyžadují ověření.')
+        venue = place[1]
+        title = txt(headings[0])
+        scope = Node('article')
+        scope.children = [headings[0], summaries[0]]
     elif adapter == 'galileo' and scope:
         date_node = scope.find(cls='event-action__date-start-text') or scope.find(cls='action-date')
         date_text = txt(date_node)
@@ -436,7 +470,7 @@ def parse_event(body, source, url, window):
     if adapter == 'itrebon' and re.search(r'[-–,]', fields.get('Datum konání akce', '')) and not re.fullmatch(r'\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}\s*[-–]\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}', fields['Datum konání akce']):
         raise Review('Neúplný nebo nejednoznačný interval události.')
     if len(dates) > 1:
-        explicit_range = adapter in ('itrebon', 'telc', 'visitzlin') and re.match(r'^\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}\s*[-–]\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}(?!\d)', date_text)
+        explicit_range = adapter in ('itrebon', 'telc', 'visitzlin', 'lanskroun') and re.match(r'^\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}\s*[-–]\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}(?!\d)', date_text)
         if (not explicit_range and (adapter not in ('galileo', 'structured', 'drupal') or not re.search(r'\s[-–]\s', date_text))) or len(dates) > 2 or dates[1][0] < dates[0][0]:
             raise Review('Více různých dat vyžaduje ruční kontrolu.')
     narrative_nodes = [scope.find(cls=cls) for cls in ('lead','event-action-lead__body','event-text')]

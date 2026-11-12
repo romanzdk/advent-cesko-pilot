@@ -1,5 +1,7 @@
 # Audit čistého přírůstku akcí
 
+Níže je zachovaný audit **29 přírůstků první dávky**. Všech šest dalších akcí druhé dávky, jejich primární odkazy, místo, interval/hodiny a interpretace jsou jednotlivě uvedeny v [auditu druhé dávky](national-wave2-audit.md). Souhrnný přírůstek PR je 35 proti původním 78; žádný z těchto izolovaných výsledků se tímto PR nenasazuje.
+
 Primární detaily byly zkontrolovány 12. 11. 2026 v izolovaném worktree. Rozdíl proti 78 výchozím veřejným ID činí **29 akcí**: Nejdek 5, Dobruška 5, Hranice 13, Ústí nad Labem 1 a Zlín 5. Tato tabulka je ověřovací evidence, nikoli nasazený katalog. Podklady nejsou celé stažené HTML.
 
 Všechna data i konce intervalů leží uvnitř 20. 11.–24. 12. 2026. Pouze Adventní Zlín má vícedenní interval; společné hodiny nejsou potvrzené a zůstávají null. U ostatních položek neuvedený konec neznamená odhadovanou délku ani celodenní program. Neuvedená cena neznamená vstup zdarma. Ověřené místo pochází z detailu/adresy nebo primárního výpisu konkrétního místa, nikoli jen z adresy vydavatele. Mapové body jsou pouze orientační středy obcí.

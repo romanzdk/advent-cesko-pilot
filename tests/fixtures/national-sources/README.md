@@ -6,6 +6,8 @@ Malé kurátorované sémantické fragmenty z primárních detailů ověřených
 - `hranice.html`: https://kultura-hranice.cz/akce/adventni-koncert-s-zaves-2/ — označené řádky termínu, začátku, místa a celého vstupného; omezený vlastní popis. Tato akce testuje formát, není tvrzením, že se vejde do prvních 14 detailů aktuálních výpisů.
 - `wpem.html`: https://www.muzeumusti.cz/kalendar-akci/advent-v-muzeu-6/ — skutečný nestandardní JSON-LD `Location` a mezera v timestampu, cenový blok „od 200 Kč (materiál je v ceně)“. Text popisu je zkrácen na podstatné podmínky; nejde o plný capture.
 - `visitzlin.html`: https://visitzlin.eu/kalendar-akci/adventni-zlin-2026 — skutečně označený adventní interval a místo; oddělená narativní povánoční část. Hodiny nejsou vymyšlené.
+- `wave2-galileo.json`: přesné primární URL Radotína a Štítiny, původní označené termíny/místa a krátké věcné fragmenty. Skutečná zbrojnice i kostel se ověřují mimo fixture podle živých detailů; fixture není úplný katalog.
+- `lanskroun.html`: https://www.kclanskroun.cz/festival/adventni-lanskroun/ — označený interval `29. 11 - 20. 12. 2026` a krátký popis náměstí. Historická zmínka roku 2024 není časovým zdrojem; footer je výslovně syntetický rušivý kontext. Živá discovery jde přes `/festivaly/`, ne bootstrap.
 
 Rušivé `aside`/`footer` bloky a mutace cen, chybějících roků, neplatných hodin, vloženého JSON-LD, štítků a neúplných intervalů jsou výslovně **syntetické negativní testy**, nikoli publikované akce nebo důkaz živé dostupnosti.
 

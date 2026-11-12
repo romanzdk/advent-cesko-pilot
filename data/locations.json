@@ -145,5 +145,26 @@
     "precision": "town",
     "label": "Zlín — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/440910"
+  },
+  "Praha-Radotín": {
+    "lat": 49.9899078,
+    "lon": 14.3635934,
+    "precision": "town",
+    "label": "Radotín v Praze — orientační bod katastrální části, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/429567"
+  },
+  "Štítina": {
+    "lat": 49.9148086,
+    "lon": 18.0125993,
+    "precision": "town",
+    "label": "Štítina, okres Opava — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437618"
+  },
+  "Lanškroun": {
+    "lat": 49.9124356,
+    "lon": 16.6118541,
+    "precision": "town",
+    "label": "Lanškroun — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440376"
   }
 }
