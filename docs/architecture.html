@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Architektura · Advent v Česku</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#020617;color:#e2e8f0;font:15px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace}main{max-width:1400px;margin:auto;padding:32px}h1{font-size:27px;margin:0 0 6px;font-weight:650}p{color:#94a3b8;margin:0 0 24px}svg{display:block;width:100%;height:auto;border:1px solid #1e293b;border-radius:16px;background:#020617}svg text{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.name{font-size:18px;fill:#f1f5f9;font-weight:650}.detail{font-size:14px;fill:#cbd5e1}.note{font-size:13px;fill:#94a3b8}.boundary{font-size:14px;fill:#fbbf24}.edge{fill:none;stroke:#94a3b8;stroke-width:2;marker-end:url(#arrow)}.control{fill:none;stroke:#fb7185;stroke-width:2;stroke-dasharray:6 5;marker-end:url(#control-arrow)}.box{stroke-width:1.5;rx:10}.backend{fill:#062d29;stroke:#34d399}.data{fill:#21143e;stroke:#a78bfa}.external{fill:#0f172a;stroke:#94a3b8}.cloud{fill:#2b210f;stroke:#fbbf24}.frontend{fill:#082c3a;stroke:#22d3ee}.security{fill:#331426;stroke:#fb7185}footer{font-size:12px;color:#94a3b8;margin-top:16px}
+</style>
+</head>
+<body><main>
+<h1>Advent v Česku · architektura</h1>
+<p>Python sbírá a ověřuje data. GitHub Pages servíruje hotový statický web.</p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 825" role="img" aria-labelledby="title desc">
+<title id="title">Datová cesta a řízení sezonního sběru Advent v Česku</title>
+<desc id="desc">Časovač Hermes bez AI volá lokální publisher. Python sběrač čte veřejné zdroje a konfiguraci, používá soukromou HTTP cache a SQLite a vytváří tři veřejné JSON soubory. Publisher je validuje a odešle do main. GitHub Actions provede kontroly a nasadí adresář site na GitHub Pages. Prohlížeč načítá statický web. Publisher samostatně ověřuje workflow a skutečné veřejné JSON.</desc>
+<defs>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width=".5"/></pattern>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#94a3b8"/></marker>
+<marker id="control-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#fb7185"/></marker>
+</defs>
+<rect width="1280" height="825" fill="url(#grid)"/>
+<rect x="30" y="225" width="800" height="400" rx="14" fill="none" stroke="#fbbf24" stroke-dasharray="8 5"/>
+<rect x="870" y="225" width="380" height="400" rx="14" fill="none" stroke="#fbbf24" stroke-dasharray="8 5"/>
+<text x="50" y="251" class="boundary">Lokální server · sběr a publikace</text>
+<text x="890" y="251" class="boundary">GitHub · veřejná část</text>
+<!-- Connections precede opaque component fills. -->
+<path class="edge" d="M175 170V280"/>
+<text x="85" y="207" class="note">HTTPS</text><text x="195" y="207" class="note">robots.txt</text>
+<path class="edge" d="M440 170V203H285V295H280"/>
+<path class="control" d="M690 170V280"/>
+<text x="709" y="207" class="note">08:30 · Praha</text>
+<path class="edge" d="M280 340H330"/>
+<path class="edge" d="M545 340H580"/>
+<path class="edge" d="M795 320H900"/>
+<text x="817" y="307" class="note">push</text>
+<path class="edge" d="M175 400V475"/>
+<path class="edge" d="M205 475V400"/>
+<text x="221" y="443" class="note">cache, historie, poslední dobrá data</text>
+<path class="edge" d="M1060 355V400"/>
+<path class="edge" d="M1060 480V525"/>
+<path class="edge" d="M1060 600V690"/>
+<text x="1076" y="653" class="note">HTML / CSS / JS / JSON</text>
+<!-- The publisher checks both Actions and deployed JSON, not just git push. -->
+<path class="control" d="M900 440H850V650H815V420H760V400"/>
+<path class="control" d="M900 560H875V650H850"/>
+<text x="375" y="675" class="note">Publisher ověří úspěšné Actions a skutečné JSON na Pages.</text>
+<rect x="65" y="70" width="220" height="100" class="box external"/>
+<text x="85" y="101" class="name">Veřejné zdroje</text><text x="85" y="127" class="detail">Obce a pořadatelé</text><text x="85" y="151" class="note">HTML / JSON-LD Event</text>
+<rect x="330" y="70" width="220" height="100" class="box data"/>
+<text x="350" y="101" class="name">Konfigurace</text><text x="350" y="127" class="detail">data/sources.json</text><text x="350" y="151" class="note">+ ověřené mapové polohy</text>
+<rect x="580" y="70" width="220" height="100" class="box security"/>
+<text x="600" y="101" class="name">Časovač Hermes</text><text x="600" y="127" class="detail">Volá publisher</text><text x="600" y="151" class="note">Režim bez AI / LLM</text>
+<rect x="65" y="280" width="215" height="120" class="box backend"/>
+<text x="85" y="313" class="name">Python sběrač</text><text x="85" y="342" class="detail">Adaptéry a normalizace</text><text x="85" y="366" class="note">Datum, místo, změny</text><text x="85" y="387" class="note">Nejasnosti → kontrola</text>
+<rect x="330" y="280" width="215" height="120" class="box data"/>
+<text x="350" y="313" class="name">Veřejná projekce</text><text x="350" y="342" class="detail">events.json</text><text x="350" y="366" class="detail">coverage.json</text><text x="350" y="387" class="detail">review.json</text>
+<rect x="580" y="280" width="215" height="120" class="box security"/>
+<text x="600" y="313" class="name">Publisher</text><text x="600" y="342" class="detail">Validace → commit</text><text x="600" y="366" class="note">Jen 3 veřejné JSON</text><text x="600" y="387" class="note">Omezená sezona + zámek</text>
+<rect x="65" y="475" width="730" height="110" class="box data"/>
+<text x="85" y="508" class="name">Soukromý stav · SQLite a HTTP cache</text><text x="85" y="537" class="detail">Pozorování, původ údajů, otisky změn, kontrola a vyřazení</text><text x="85" y="561" class="note">Zůstává na serveru; adresář private/ se do GitHubu ani Pages nenahrává.</text>
+<rect x="900" y="280" width="320" height="75" class="box cloud"/>
+<text x="920" y="311" class="name">Repozitář · main</text><text x="920" y="337" class="detail">Kód a veřejná data</text>
+<rect x="900" y="400" width="320" height="80" class="box cloud"/>
+<text x="920" y="431" class="name">GitHub Actions</text><text x="920" y="458" class="detail">Testy a validace → nasazení</text>
+<rect x="900" y="525" width="320" height="75" class="box frontend"/>
+<text x="920" y="556" class="name">GitHub Pages</text><text x="920" y="582" class="detail">Pouze obsah site/</text>
+<rect x="900" y="690" width="320" height="75" class="box frontend"/>
+<text x="920" y="721" class="name">Webový prohlížeč</text><text x="920" y="747" class="detail">Seznam · mapa · filtry · ICS</text>
+<path d="M50 795H100" stroke="#94a3b8" stroke-width="2"/><text x="113" y="800" class="note">Data / publikace</text>
+<path d="M340 795H390" stroke="#fb7185" stroke-width="2" stroke-dasharray="6 5"/><text x="403" y="800" class="note">Spouštění / ověření</text>
+</svg>
+<footer>Skutečná architektura pilotu pro Vánoce 2026. Prohlížeč nepřistupuje k lokální databázi ani ke sběrači.</footer>
+</main></body></html>
