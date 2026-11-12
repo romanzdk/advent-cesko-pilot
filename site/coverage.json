@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T13:03:16+00:00",
+  "generatedAt": "2026-11-12T13:10:01+00:00",
   "window": {
     "from": "2026-11-20",
     "through": "2026-12-24"
@@ -20,8 +20,8 @@
       "excludedCount": 0,
       "sourceNote": "Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.",
       "status": "ok",
-      "lastChecked": "2026-11-12T13:03:16+00:00",
-      "lastSuccess": "2026-11-12T13:03:16+00:00",
+      "lastChecked": "2026-11-12T13:10:01+00:00",
+      "lastSuccess": "2026-11-12T13:10:01+00:00",
       "eventCount": 12,
       "reviewCount": 0,
       "lastError": null
@@ -36,8 +36,8 @@
       "excludedCount": 0,
       "sourceNote": "Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.",
       "status": "ok",
-      "lastChecked": "2026-11-12T13:03:16+00:00",
-      "lastSuccess": "2026-11-12T13:03:16+00:00",
+      "lastChecked": "2026-11-12T13:10:01+00:00",
+      "lastSuccess": "2026-11-12T13:10:01+00:00",
       "eventCount": 5,
       "reviewCount": 0,
       "lastError": null
@@ -52,8 +52,8 @@
       "excludedCount": 1,
       "sourceNote": "Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.",
       "status": "ok",
-      "lastChecked": "2026-11-12T13:03:16+00:00",
-      "lastSuccess": "2026-11-12T13:03:16+00:00",
+      "lastChecked": "2026-11-12T13:10:01+00:00",
+      "lastSuccess": "2026-11-12T13:10:01+00:00",
       "eventCount": 6,
       "reviewCount": 0,
       "lastError": null
@@ -68,8 +68,8 @@
       "excludedCount": 3,
       "sourceNote": "Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.",
       "status": "ok",
-      "lastChecked": "2026-11-12T13:03:16+00:00",
-      "lastSuccess": "2026-11-12T13:03:16+00:00",
+      "lastChecked": "2026-11-12T13:10:01+00:00",
+      "lastSuccess": "2026-11-12T13:10:01+00:00",
       "eventCount": 5,
       "reviewCount": 0,
       "lastError": null
@@ -84,8 +84,8 @@
       "excludedCount": 0,
       "sourceNote": "Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.",
       "status": "ok",
-      "lastChecked": "2026-11-12T13:03:16+00:00",
-      "lastSuccess": "2026-11-12T13:03:16+00:00",
+      "lastChecked": "2026-11-12T13:10:01+00:00",
+      "lastSuccess": "2026-11-12T13:10:01+00:00",
       "eventCount": 3,
       "reviewCount": 0,
       "lastError": null
@@ -100,18 +100,18 @@
       "excludedCount": 1,
       "sourceNote": "Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.",
       "status": "ok",
-      "lastChecked": "2026-11-12T13:03:16+00:00",
-      "lastSuccess": "2026-11-12T13:03:16+00:00",
+      "lastChecked": "2026-11-12T13:10:01+00:00",
+      "lastSuccess": "2026-11-12T13:10:01+00:00",
       "eventCount": 6,
       "reviewCount": 0,
       "lastError": null
     }
   ],
   "metrics": {
-    "runId": "97aba0bd-72fc-465b-afaf-b2fea1c20bcd",
-    "durationSeconds": 157.39,
-    "requestCount": 65,
-    "http304": 11,
+    "runId": "550c477a-d64e-4d3c-9469-4a99bdc9d3e3",
+    "durationSeconds": 134.943,
+    "requestCount": 64,
+    "http304": 13,
     "cacheUnchanged": 21,
     "eventsNew": 0,
     "eventsChanged": 0,
