@@ -1,4 +1,4 @@
-import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs, distanceKm, nearbyEvents } from './helpers.js';
+import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs, distanceKm, nearbyEvents, MAP_COLORS, markerCategory } from './helpers.js';
 
 const $ = id => document.getElementById(id);
 const categories = { strom: 'Rozsvícení stromu', mikulas: 'Mikuláš', trhy: 'Trhy a jarmarky', tvoreni: 'Tvoření', setkani: 'Setkání', betlem: 'Betlémy' };
@@ -27,6 +27,13 @@ function selectEvent(id) {
   }
 }
 function updateMap() {
+  if (!$('map-legend').children.length) for (const [category, color] of Object.entries(MAP_COLORS)) {
+    const item = el('li'), swatch = el('span', null, 'map-legend-swatch');
+    swatch.style.backgroundColor = color;
+    swatch.setAttribute('aria-hidden', 'true');
+    item.append(swatch, document.createTextNode(categories[category] || 'Více typů akcí'));
+    $('map-legend').append(item);
+  }
   const groups = groupLocations(visibleEvents);
   const mappedCount = groups.reduce((sum, group) => sum + group.events.length, 0);
   $('map-count').textContent = `${groups.length} ${groups.length === 1 ? 'místo' : groups.length < 5 ? 'místa' : 'míst'}`;
@@ -37,8 +44,10 @@ function updateMap() {
   const bounds = userPosition ? [[userPosition.lat, userPosition.lon]] : [];
   if (userPosition) userMarker = globalThis.L.circleMarker(bounds[0], { radius: 9, color: '#fff', weight: 3, fillColor: '#2265b0', fillOpacity: 1, interactive: false, className: 'user-location-marker' }).addTo(map);
   for (const group of groups) {
+    const category = markerCategory(group.events);
+    const categoryLabel = categories[category] || 'Více typů akcí';
     const popup = el('div', null, 'map-popup');
-    popup.append(el('h3', group.label));
+    popup.append(el('h3', group.label), el('p', categoryLabel));
     if (group.precision === 'town') popup.append(el('p', 'Pouze střed obce, nikoli přesné místo konání.'));
     for (const event of group.events) {
       const button = el('button', `${dateFormat.format(dateValue(event.date))} · ${event.title}`, 'popup-event');
@@ -46,12 +55,13 @@ function updateMap() {
       button.addEventListener('click', () => { map.closePopup(); selectEvent(event.id); });
       popup.append(button);
     }
-    const marker = globalThis.L.circleMarker([group.lat, group.lon], { radius: 22, color: '#fffdf7', weight: 2, fillColor: '#244b3c', fillOpacity: .87, className: 'map-marker' }).addTo(markerLayer);
+    const marker = globalThis.L.circleMarker([group.lat, group.lon], { radius: 22, color: '#fffdf7', weight: 2, fillColor: MAP_COLORS[category], fillOpacity: .87, className: 'map-marker' }).addTo(markerLayer);
     marker.bindPopup(popup, { maxWidth: 280 });
     const path = marker.getElement();
     path.setAttribute('tabindex', '0');
     path.setAttribute('role', 'button');
-    path.setAttribute('aria-label', `${group.label}: ${group.events.length} ${group.events.length === 1 ? 'akce' : 'akcí'}`);
+    path.dataset.category = category;
+    path.setAttribute('aria-label', `${group.label}: ${group.events.length} ${group.events.length === 1 ? 'akce' : 'akcí'} · ${categoryLabel}`);
     path.addEventListener('keydown', event => {
       if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.stopPropagation(); marker.openPopup(); }
     });

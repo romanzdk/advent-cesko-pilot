@@ -75,3 +75,6 @@
 .geo-controls p:empty{display:none}
 .user-location-marker{pointer-events:none}
 @media print{.geo-controls{display:none}}
+.map-legend{display:flex;flex-wrap:wrap;gap:5px 14px;list-style:none;margin:0;padding:0 0 12px;color:var(--muted);font-size:.7rem;line-height:1.5}
+.map-legend li{display:inline-flex;align-items:center;gap:6px}
+.map-legend-swatch{width:11px;height:11px;flex:none;border-radius:50%}

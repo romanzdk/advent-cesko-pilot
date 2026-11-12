@@ -341,6 +341,27 @@ test('custom date inputs remain usable on narrow screens and with enlarged text'
   });
 });
 
+test('map markers use category colors, mixed places remain neutral and filtering recolors them', async () => {
+  for (const mobile of [false, true]) await app(async page => {
+    await page.waitForSelector('.event-card');
+    if (mobile) await page.locator('#show-map').click();
+    await page.waitForSelector('.map-marker');
+    assert.equal(await page.locator('.map-marker[data-category=strom]').count(), 1);
+    assert.equal(await page.locator('.map-marker[data-category=strom]').getAttribute('fill'), '#2f6b45');
+    const mixed = page.locator('.map-marker[data-category=mixed]');
+    assert.equal(await mixed.getAttribute('fill'), '#657168');
+    assert.match(await mixed.getAttribute('aria-label'), /Více typů akcí/);
+    assert.equal(await page.locator('#map-legend li').count(), 7);
+    assert.match(await page.locator('#map-legend').innerText(), /Rozsvícení stromu.*Mikuláš.*Trhy a jarmarky/s);
+    await page.locator('#category').selectOption('tvoreni');
+    assert.equal(await page.locator('.map-marker').count(), 1);
+    assert.equal(await page.locator('.map-marker').getAttribute('fill'), '#8054a3');
+    assert.match(await page.locator('.map-marker').getAttribute('aria-label'), /Tvoření/);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    if (mobile) await page.locator('.map-panel').screenshot({path:new URL('./category-map-mobile-fixture.png', import.meta.url).pathname});
+  }, {mobile});
+});
+
 test('search clear button removes the entire query, preserves other filters and restores input focus', async () => {
   for (const mobile of [false, true]) await app(async page => {
     await page.waitForSelector('.event-card');

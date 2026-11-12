@@ -17,6 +17,17 @@ test('crow-flies distance validates coordinates and nearby filtering is inclusiv
   assert.deepEqual(helpers.nearbyEvents(events, zero, -1), []);
   assert.equal(events.length, 4);
 });
+test('map categories have distinct colors and shared mixed places stay neutral', () => {
+  assert.equal(typeof helpers.markerCategory, 'function');
+  assert.equal(helpers.markerCategory([{ category:'strom' }, { category:'strom' }]), 'strom');
+  assert.equal(helpers.markerCategory([{ category:'strom' }, { category:'trhy' }]), 'mixed');
+  assert.equal(helpers.markerCategory([{ category:'__proto__' }]), 'mixed');
+  assert.equal(helpers.markerCategory([]), 'mixed');
+  assert.equal(new Set(Object.values(helpers.MAP_COLORS)).size, 7);
+  for (const color of Object.values(helpers.MAP_COLORS)) assert.match(color, /^#[0-9a-f]{6}$/i);
+});
+
+
 test('social metadata describes the current project with a full-size local PNG preview', async () => {
   const html = await readFile(new URL('../site/index.html', import.meta.url), 'utf8');
   const metadata = new Map([...html.matchAll(/<meta\b[^>]*>/gi)].map(([tag]) => {
