@@ -21,6 +21,19 @@ export function periodBounds(period, now = new Date()) {
   return null;
 }
 
+export const SEASON_START = '2026-11-20';
+export const SEASON_END = '2026-12-24';
+
+export function filterBounds(filters = {}, now = new Date()) {
+  if (filters.period !== 'custom') return periodBounds(filters.period, now);
+  const from = filters.dateFrom || SEASON_START, through = filters.dateTo || SEASON_END;
+  const valid = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && Number.isFinite(Date.parse(`${value}T12:00:00Z`)) && new Date(`${value}T12:00:00Z`).toISOString().slice(0, 10) === value;
+  if (!valid(from) || !valid(through)) throw new RangeError('Zadejte platné datum.');
+  if (from < SEASON_START || from > SEASON_END || through < SEASON_START || through > SEASON_END) throw new RangeError('Vyberte datum mezi 20. 11. a 24. 12. 2026.');
+  if (from > through) throw new RangeError('Datum Od nesmí být později než datum Do.');
+  return [from, through];
+}
+
 export function safeHttps(value) {
   if (typeof value !== 'string') return null;
   try {
@@ -85,7 +98,7 @@ export function eventIcs(event, now = new Date()) {
 }
 
 export function filterEvents(events, filters = {}, now = new Date()) {
-  const bounds = periodBounds(filters.period, now);
+  const bounds = filterBounds(filters, now);
   const query = normalize(filters.query).trim();
   return events.filter(event =>
     (!filters.region || event.region === filters.region) &&

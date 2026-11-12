@@ -40,6 +40,26 @@ test('combined filters use accent-insensitive search and overlap multiday events
   assert.equal(helpers.filterEvents(events, { category: 'betlem' }).length, 0);
   assert.equal(helpers.filterEvents(events, { query: 'nonsense' }).length, 0);
 });
+test('custom dates include both endpoints and overlapping multiday events without mutating input', () => {
+  const events = [event('before', '2026-11-27'), event('first', '2026-11-28'), event('last', '2026-11-30'), event('after', '2026-12-01'), event('overlap', '2026-11-25', null, { endDate: '2026-11-28' })];
+  assert.deepEqual(helpers.filterEvents(events, { period: 'custom', dateFrom: '2026-11-28', dateTo: '2026-11-30' }).map(e => e.id), ['overlap', 'first', 'last']);
+  assert.equal(events[0].id, 'before');
+});
+
+test('custom bounds reject impossible, reversed and out-of-season dates instead of showing an unfiltered list', () => {
+  for (const [dateFrom, dateTo] of [['2026-12-10', '2026-12-01'], ['2026-11-31', '2026-12-01'], ['2026-11-01', '2026-12-01'], ['2026-12-01', '2026-12-25'], ['2026-99-01', '2026-12-24'], ['not-a-date', '2026-12-24']]) {
+    assert.throws(() => helpers.filterEvents([event('one', '2026-12-01')], { period: 'custom', dateFrom, dateTo }), RangeError);
+  }
+});
+
+test('custom bounds support open ends, one day and ignore inactive custom dates for presets', () => {
+  assert.deepEqual(helpers.filterBounds({ period: 'custom', dateFrom: '2026-12-01' }), ['2026-12-01', '2026-12-24']);
+  assert.deepEqual(helpers.filterBounds({ period: 'custom', dateTo: '2026-11-28' }), ['2026-11-20', '2026-11-28']);
+  assert.deepEqual(helpers.filterBounds({ period: 'custom' }), ['2026-11-20', '2026-12-24']);
+  assert.deepEqual(helpers.filterBounds({ period: 'custom', dateFrom: '2026-12-05', dateTo: '2026-12-05' }), ['2026-12-05', '2026-12-05']);
+  for (const period of ['all', 'today', 'weekend']) assert.deepEqual(helpers.filterBounds({ period, dateFrom: 'invalid', dateTo: 'reversed' }, new Date('2026-11-27T23:30:00Z')), helpers.periodBounds(period, new Date('2026-11-27T23:30:00Z')));
+});
+
 test('date labels never describe an unknown programme time as all-day', () => {
   assert.equal(typeof helpers.timeLabel, 'function');
   assert.equal(helpers.timeLabel(event('unknown', '2026-11-28')), 'Čas bude upřesněn');
