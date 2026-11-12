@@ -123,12 +123,17 @@ export function eventIcs(event, now = new Date()) {
   return lines.map(foldLine).join('\r\n') + '\r\n';
 }
 
+export function townSuggestions(events, region = '', query = '') {
+  return [...new Set(events.filter(event => (!region || event.region === region) && typeof event.town === 'string' && event.town && normalize(event.town).includes(normalize(query).trim())).map(event => event.town))]
+    .sort((a, b) => a.localeCompare(b, 'cs')).slice(0, 8);
+}
+
 export function filterEvents(events, filters = {}, now = new Date()) {
   const bounds = filterBounds(filters, now);
   const query = normalize(filters.query).trim();
   return events.filter(event =>
     (!filters.region || event.region === filters.region) &&
-    (!filters.town || event.town === filters.town) &&
+    (!normalize(filters.town).trim() || normalize(event.town).includes(normalize(filters.town).trim())) &&
     (!filters.category || event.category === filters.category) &&
     (!query || normalize([event.title, event.town, event.venue, event.description].join(' ')).includes(query)) &&
     (!bounds || (event.date <= bounds[1] && (event.endDate || event.date) >= bounds[0]))

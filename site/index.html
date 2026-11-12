@@ -50,7 +50,7 @@
       <label>Termín<select id="period" name="period" aria-controls="date-range"><option value="all">Všechny termíny</option><option value="today">Dnes</option><option value="weekend">Tento víkend</option><option value="custom">Vlastní rozsah</option></select></label>
       <label>Co vás láká<select id="category" name="category"><option value="">Všechny typy</option><option value="strom">Rozsvícení stromu</option><option value="mikulas">Mikuláš</option><option value="trhy">Trhy a jarmarky</option><option value="tvoreni">Tvoření</option><option value="setkani">Setkání</option><option value="betlem">Betlémy</option></select></label>
       <label>Kraj<select id="region" name="region"><option value="">Všechny kraje</option></select></label>
-      <label>Obec<select id="town" name="town"><option value="">Všechny obce</option></select></label>
+      <div class="town-field"><label for="town">Obec</label><div class="town-control"><input id="town" name="town" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="town-options" autocomplete="off" placeholder="Začněte psát obec…"><button type="button" id="clear-town" class="clear-search" aria-label="Vymazat obec" title="Vymazat obec" hidden><span aria-hidden="true">×</span></button><ul id="town-options" role="listbox" aria-label="Návrhy obcí" hidden></ul></div></div>
       <button class="reset-button" type="reset">Zrušit filtry</button>
       <fieldset id="date-range" class="date-range" hidden>
         <legend>Vlastní rozsah dat</legend>

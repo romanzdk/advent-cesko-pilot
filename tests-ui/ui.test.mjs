@@ -5,7 +5,7 @@ import { readFile, readdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+const screenshotPath = name => join(process.env.TMPDIR || join(homedir(), '.hermes/cache/scratch'), name);
 import { chromium } from 'playwright';
 
 // Synthetic public fixture only: never load the parent's live events.json.
@@ -70,7 +70,7 @@ after(async () => {
   if (server) await new Promise(resolve => server.close(resolve));
 });
 async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile = false, responseStatus = 200, delay = 0, libraryFail = false, coverage = coverageFixture, coverageStatus = 200, coveragePending = false, javaScriptEnabled = true, geoMock = false } = {}) {
-  const context = await browser.newContext({ viewport: mobile ? { width: 393, height: 852 } : { width: 1440, height: 1000 }, timezoneId: 'America/Los_Angeles', javaScriptEnabled });
+  const context = await browser.newContext({ viewport: mobile ? { width: 393, height: 852 } : { width: 1440, height: 1000 }, timezoneId: 'America/Los_Angeles', hasTouch: mobile, javaScriptEnabled });
   try {
     if (geoMock) await context.addInitScript(installGeoMock);
     const page = await context.newPage();
@@ -105,6 +105,172 @@ async function mockLocation(page) { await page.evaluate(installGeoMock); }
 async function geoSuccess(page, index = 0) {
   await page.evaluate(index => window.geoCalls[index].success({ coords: { latitude: 49.964, longitude: 14.073, accuracy: 30 } }), index);
 }
+test('town autocomplete filters partial text without diacritics, survives edits and selects canonical local names', async () => {
+  for (const mobile of [false, true]) await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    const town = page.getByRole('combobox', {name:'Obec',exact:true});
+    assert.equal(await town.count(), 1);
+    assert.equal(await town.getAttribute('id'), 'town');
+    assert.equal(await town.getAttribute('name'), 'town');
+    assert.equal(await town.getAttribute('placeholder'), 'Začněte psát obec…');
+    assert.equal(await town.getAttribute('aria-controls'), 'town-options');
+    await town.fill('ric');
+    assert.equal(await town.inputValue(), 'ric');
+    assert.equal(await page.locator('.event-card').getAttribute('data-id'), 'fixture-a');
+    assert.equal(await town.getAttribute('aria-expanded'), 'true');
+    assert.deepEqual(await page.locator('#town-options').getByRole('option').allTextContents(), ['Říčany']);
+    await town.fill('ican');
+    await page.locator('#category').selectOption('strom');
+    assert.equal(await town.inputValue(), 'ican');
+    await town.click();
+    await page.getByRole('option', {name:'Říčany',exact:true}).click();
+    assert.equal(await town.inputValue(), 'Říčany');
+    assert.equal(await town.getAttribute('aria-expanded'), 'false');
+    assert.equal(await town.evaluate(n => n === document.activeElement), true);
+    assert.deepEqual(errors, []);
+  }, {mobile});
+});
+
+test('town keyboard navigation keeps input focus, selects with Enter and dismisses without changing text', async () => {
+  await app(async page => {
+    await page.waitForSelector('.event-card');
+    const town = page.locator('#town'), options = page.locator('#town-options [role=option]');
+    await town.focus();
+    await town.press('ArrowDown');
+    assert.equal(await town.getAttribute('aria-activedescendant'), await options.first().getAttribute('id'));
+    assert.equal(await options.first().getAttribute('aria-selected'), 'true');
+    await town.press('ArrowDown');
+    assert.equal(await town.getAttribute('aria-activedescendant'), await options.nth(1).getAttribute('id'));
+    await town.press('ArrowUp');
+    assert.equal(await town.evaluate(n => n === document.activeElement), true);
+    await town.press('Enter');
+    assert.equal(await town.inputValue(), 'Beroun');
+    assert.equal(await town.getAttribute('aria-expanded'), 'false');
+    assert.equal(await town.getAttribute('aria-activedescendant'), null);
+    await town.fill('ric');
+    await town.press('ArrowUp');
+    await town.press('Escape');
+    assert.equal(await town.inputValue(), 'ric');
+    assert.equal(await town.getAttribute('aria-expanded'), 'false');
+    await town.press('ArrowDown');
+    await town.press('Tab');
+    assert.equal(await town.inputValue(), 'ric');
+    assert.equal(await town.getAttribute('aria-expanded'), 'false');
+    assert.equal(await town.evaluate(n => n === document.activeElement), false);
+    await town.click();
+    await page.locator('h1').click();
+    assert.equal(await town.getAttribute('aria-expanded'), 'false');
+    await town.focus();
+    await page.locator('#search').focus();
+    assert.equal(await town.getAttribute('aria-expanded'), 'false');
+  });
+});
+
+test('town region changes preserve matching partial text and clear only incompatible towns', async () => {
+  await app(async page => {
+    await page.waitForSelector('.event-card');
+    await page.locator('#search').fill('dilna');
+    await page.locator('#category').selectOption('tvoreni');
+    await page.locator('#period').selectOption('custom');
+    await page.locator('#date-from').fill('2026-11-28');
+    await page.locator('#town').fill('pla');
+    await page.locator('#region').selectOption('Plzeňský kraj');
+    assert.equal(await page.locator('#town').inputValue(), 'pla');
+    await page.locator('#region').selectOption('Liberecký kraj');
+    assert.equal(await page.locator('#town').inputValue(), '');
+    for (const [id,value] of Object.entries({search:'dilna',category:'tvoreni',period:'custom','date-from':'2026-11-28'})) assert.equal(await page.locator(`#${id}`).inputValue(), value);
+    await page.locator('#town').fill('zzz');
+    await page.locator('#search').fill('jiný');
+    assert.equal(await page.locator('#town').inputValue(), 'zzz');
+    await page.locator('#filters button[type=reset]').click();
+    assert.equal(await page.locator('#search').inputValue(), '');
+    assert.equal(await page.locator('#town').inputValue(), '');
+  }, {data:regionalFixture,mobile:true});
+});
+
+test('town clear is labelled and touch-sized, restores focus without scroll and preserves every other filter', async () => {
+  for (const mobile of [false,true]) await app(async page => {
+    await page.waitForSelector('.event-card');
+    await page.locator('#locate-user').click();
+    await geoSuccess(page);
+    await page.locator('#nearby-radius').selectOption('25');
+    await page.locator('#region').selectOption('Plzeňský kraj');
+    await page.locator('#category').selectOption('tvoreni');
+    await page.locator('#period').selectOption('custom');
+    await page.locator('#date-from').fill('2026-11-28');
+    await page.locator('#date-to').fill('2026-11-29');
+    await page.locator('#search').fill('dilna');
+    const clear = page.locator('#clear-town');
+    assert.equal(await clear.count(), 1);
+    assert.equal(await clear.getAttribute('aria-label'), 'Vymazat obec');
+    assert.equal(await clear.isVisible(), false);
+    await page.locator('#town').fill('pla');
+    await page.locator('#town').press('Escape');
+    const box = await clear.boundingBox();
+    assert(box.width >= 44 && box.height >= 44);
+    const y = await page.evaluate(() => scrollY);
+    await clear.click();
+    assert.equal(await page.locator('#town').inputValue(), '');
+    assert.equal(await clear.isVisible(), false);
+    assert.equal(await page.locator('#town').evaluate(n => n === document.activeElement), true);
+    assert.equal(await page.evaluate(() => scrollY), y);
+    for (const [id,value] of Object.entries({search:'dilna',region:'Plzeňský kraj',category:'tvoreni',period:'custom','date-from':'2026-11-28','date-to':'2026-11-29','nearby-radius':'25'})) assert.equal(await page.locator(`#${id}`).inputValue(), value);
+    assert.equal(await page.locator('#clear-location').isVisible(), true);
+  }, {data:regionalFixture,mobile,geoMock:true});
+});
+
+test('town mobile suggestions are bounded, scroll without selection, survive blur and render hostile town names as text', async () => {
+  const hostile = 'Z <img src=x onerror=window.injected=true> Obec';
+  const data = {...fixture,events:[hostile,'Beroun','Český Brod','Český Krumlov','Černošín','Humpolec','Jilemnice','Kuřim','Plasy','Rajhrad','Semily','Telč','Turnov','Říčany'].map((town,i) => ({...fixture.events[0],id:`town-${i}`,town,region:'Plzeňský kraj'}))};
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    const requests = [];
+    page.on('request', request => requests.push(request.url()));
+    const town = page.locator('#town'), list = page.locator('#town-options');
+    for (const width of [393,320]) {
+      await page.setViewportSize({width,height:852});
+      await town.fill('');
+      await town.click();
+      assert.equal(await list.locator('[role=option]').count(), 8);
+      const box = await list.boundingBox();
+      assert(box.height <= 240 && box.x >= 0 && box.x + box.width <= width);
+      assert.equal(await list.evaluate(n => n.scrollHeight > n.clientHeight), true);
+      assert(Number.parseFloat(await town.evaluate(n => getComputedStyle(n).fontSize)) >= 16);
+      assert((await town.boundingBox()).height >= 44);
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    }
+    await page.setViewportSize({width:393,height:852});
+    await town.click();
+    await page.screenshot({path:screenshotPath('town-autocomplete-mobile-fixture.png')});
+    const box = await list.boundingBox(), x = box.x + box.width / 2, y = box.y + 180;
+    const cdp = await page.context().newCDPSession(page);
+    try {
+      await cdp.send('Input.dispatchTouchEvent', {type:'touchStart',touchPoints:[{x,y}]});
+      for (const delta of [20,50,90,130]) await cdp.send('Input.dispatchTouchEvent', {type:'touchMove',touchPoints:[{x,y:y-delta}]});
+      await cdp.send('Input.dispatchTouchEvent', {type:'touchEnd',touchPoints:[]});
+    } finally { await cdp.detach(); }
+    assert.equal(await town.inputValue(), '');
+    assert(await list.evaluate(n => n.scrollTop > 0), 'real touch gesture scrolls the list');
+    assert.equal(await town.getAttribute('aria-expanded'), 'true');
+    await town.fill('ric');
+    await town.evaluate(n => n.blur());
+    assert.equal(await list.isVisible(), true);
+    await list.getByRole('option',{name:'Říčany',exact:true}).tap();
+    assert.equal(await town.inputValue(), 'Říčany');
+    assert.equal(await town.evaluate(n => n === document.activeElement), true);
+    await town.fill('<img');
+    assert.equal(await list.innerText(), hostile);
+    assert.equal(await list.locator('img,script').count(), 0);
+    await list.getByRole('option').tap();
+    assert.equal(await town.inputValue(), hostile);
+    assert.equal(await page.evaluate(() => window.injected), undefined);
+    assert.deepEqual(requests, []);
+    assert.deepEqual(await page.evaluate(() => window.storageWrites), []);
+    assert.equal(await page.evaluate(() => window.geoCalls.length), 0);
+    assert.deepEqual(errors, []);
+  }, {data,mobile:true,geoMock:true});
+});
+
 test('location is gated by loaded events and trusted clicks without erasing fetch recovery', async () => {
   await app(async page => {
     await page.waitForSelector('.load-error');
@@ -256,7 +422,7 @@ test('nearby secondary controls fit touch targets on narrow screens without chan
     assert.match(await page.locator('#location-hint').innerText(), /vzdušnou čarou.*střed obce.*Poloha se neukládá\. OpenStreetMap.*prohlížené oblasti\./);
     await page.setViewportSize({ width:393, height:1000 });
     await page.locator('.geo-controls').scrollIntoViewIfNeeded();
-    await page.screenshot({ path:new URL('./nearby-mobile-fixture.png', import.meta.url).pathname });
+    await page.screenshot({ path:screenshotPath('nearby-mobile-fixture.png') });
   }, { mobile: true });
 });
 
@@ -332,8 +498,8 @@ test('custom date inputs remain usable on narrow screens and with enlarged text'
         assert.equal(await input.getAttribute('max'), '2026-12-24');
       }
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
-      if (width === 393) await page.screenshot({ path: new URL('./date-range-mobile-fixture.png', import.meta.url).pathname });
-      if (width === 1440) await page.screenshot({ path: new URL('./date-range-desktop-fixture.png', import.meta.url).pathname });
+      if (width === 393) await page.screenshot({ path: screenshotPath('date-range-mobile-fixture.png') });
+      if (width === 1440) await page.screenshot({ path: screenshotPath('date-range-desktop-fixture.png') });
     }
     await page.locator('#date-range').evaluate(node => { for (const input of node.querySelectorAll('input')) input.style.fontSize = '24px'; });
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
@@ -359,7 +525,7 @@ test('event dates distinguish weekends and holidays with text labels and start-d
     assert.match(await holiday.locator('time').getAttribute('aria-label'),/Štědrý den/);
     assert.match(await weekend.locator('time').getAttribute('aria-label'),/Víkend/);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
-    if(mobile) await page.locator('#results').screenshot({path:new URL('./calendar-days-mobile-fixture.png',import.meta.url).pathname});
+    if(mobile) await page.locator('#results').screenshot({path:screenshotPath('calendar-days-mobile-fixture.png')});
   },{data,mobile});
 });
 
@@ -380,7 +546,7 @@ test('map markers use category colors, mixed places remain neutral and filtering
     assert.equal(await page.locator('.map-marker').getAttribute('fill'), '#8054a3');
     assert.match(await page.locator('.map-marker').getAttribute('aria-label'), /Tvoření/);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
-    if (mobile) await page.locator('.map-panel').screenshot({path:new URL('./category-map-mobile-fixture.png', import.meta.url).pathname});
+    if (mobile) await page.locator('.map-panel').screenshot({path:screenshotPath('category-map-mobile-fixture.png')});
   }, {mobile});
 });
 
@@ -392,7 +558,7 @@ test('search clear button removes the entire query, preserves other filters and 
     assert.equal(await clear.getAttribute('aria-label'), 'Vymazat hledání');
     assert.equal(await clear.isVisible(), false);
     await page.locator('#region').selectOption('Plzeňský kraj');
-    await page.locator('#town').selectOption('Plasy');
+    await page.locator('#town').fill('Plasy');
     await page.locator('#category').selectOption('tvoreni');
     await page.locator('#period').selectOption('custom');
     await page.locator('#date-from').fill('2026-11-27');
@@ -438,7 +604,7 @@ test('personal origin story replaces the edition with a compact header question 
     const panelBox = await story.locator('.origin-story-panel').boundingBox();
     assert(panelBox.x >= 0 && panelBox.x + panelBox.width <= width);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
-    if (width === 393) await page.locator('.masthead').screenshot({ path: new URL('./origin-story-header-mobile-fixture.png', import.meta.url).pathname });
+    if (width === 393) await page.locator('.masthead').screenshot({ path: screenshotPath('origin-story-header-mobile-fixture.png') });
     await summary.press('Enter');
     assert.equal(await story.locator('.origin-story-panel').isVisible(), false);
   }, { javaScriptEnabled: false });
@@ -596,7 +762,8 @@ test('scope summary counts six coverage regions and twelve sources, not event to
     for (const region of regions) {
       await page.locator('#region').selectOption(region);
       assert.equal(await page.locator('.event-card').count(), 1);
-      assert.equal(await page.locator('#town option').count(), 2);
+      await page.locator('#town').focus();
+      assert.equal(await page.locator('#town-options [role=option]').count(), 1);
       assert.equal(await page.locator('#scope-summary').innerText(), '6 krajů · 12 zdrojů');
     }
   }, { data, coverage });
@@ -656,7 +823,9 @@ test('region filter includes every covered region even when its events are not p
     assert.equal(await page.locator('.event-card').count(), 0);
     assert.match(await page.locator('.empty-state').innerText(), /Pro tento kraj zatím nemáme publikované akce/);
     assert.match(await page.locator('.empty-state').innerText(), /Neznamená to, že se zde nic nekoná/);
-    assert.deepEqual(await page.locator('#town option').allTextContents(), ['Všechny obce']);
+    await page.locator('#town').focus();
+    assert.equal(await page.locator('#town-options [role=option]').count(), 0);
+    assert.equal(await page.locator('#town').getAttribute('aria-expanded'), 'false');
     await page.getByRole('button', {name:'Zrušit filtry',exact:true}).click();
     assert.equal(await page.locator('#region').inputValue(), '');
     assert.equal(await page.locator('.event-card').count(), 3);
@@ -672,7 +841,7 @@ test('late coverage expands regions without resetting an active event filter', a
     await page.reload();
     await page.waitForSelector('.event-card');
     await page.locator('#region').selectOption('Liberecký kraj');
-    await page.locator('#town').selectOption('Turnov');
+    await page.locator('#town').fill('Turnov');
     await page.locator('#search').fill('strom');
     assert(pendingCoverage);
     await pendingCoverage.fulfill({contentType:'application/json',body:JSON.stringify({...coverageFixture,regions:[...coverageFixture.regions,'Zlínský kraj']})});
@@ -708,19 +877,21 @@ test('region scope limits towns, combines with other filters and resets cleanly'
     await page.waitForSelector('.event-card');
     assert.equal(await page.locator('#region[name="region"]').count(), 1);
     assert.deepEqual(await page.locator('#region option').allTextContents(), ['Všechny kraje', 'Jihomoravský kraj', 'Liberecký kraj', 'Plzeňský kraj']);
-    await page.locator('#town').selectOption('Turnov');
+    await page.locator('#town').fill('Turnov');
     await page.locator('#region').selectOption('Plzeňský kraj');
     assert.equal(await page.locator('#town').inputValue(), '');
-    assert.deepEqual(await page.locator('#town option').allTextContents(), ['Všechny obce', 'Plasy']);
+    await page.locator('#town').focus();
+    assert.deepEqual(await page.locator('#town-options [role=option]').allTextContents(), ['Plasy']);
     assert.equal(await page.locator('.event-card').getAttribute('data-id'), 'fixture-b');
     assert.match(await page.locator('#result-count').innerText(), /Plzeňský kraj/);
-    await page.locator('#town').selectOption('Plasy');
+    await page.locator('#town').fill('Plasy');
     assert.match(await page.locator('#result-count').innerText(), /Plasy/);
     await page.locator('#category').selectOption('strom');
     await page.waitForSelector('.empty-state');
     await page.getByRole('button', { name: 'Zrušit filtry', exact: true }).click();
     assert.equal(await page.locator('#region').inputValue(), '');
-    assert.equal(await page.locator('#town option').count(), 4);
+    await page.locator('#town').focus();
+    assert.equal(await page.locator('#town-options [role=option]').count(), 3);
     assert.equal(await page.locator('.event-card').count(), 3);
     assert.deepEqual(errors, []);
   }, { data: regionalFixture, mobile: true });
@@ -821,7 +992,7 @@ test('coverage discloses real bounded collection safely without blocking events 
     await page.addStyleTag({ content: 'html { font-size: 125%; }' });
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     assert.deepEqual(errors, []);
-    await page.screenshot({ path: fileURLToPath(new URL('./coverage-mobile-fixture.png', import.meta.url)), fullPage: true });
+    await page.screenshot({ path: screenshotPath('coverage-mobile-fixture.png'), fullPage: true });
   }, { data: regionalFixture, mobile: true, base: '/' });
   for (const options of [{ coverageStatus: 503 }, { coverage: {} }]) {
     await app(async (page, errors) => {
@@ -853,7 +1024,7 @@ test('desktop filters retain one compact row with the added region control', asy
       assert(Math.max(...bottoms) - Math.min(...bottoms) < 2, JSON.stringify({ width, bottoms }));
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     }
-    await page.screenshot({ path: fileURLToPath(new URL('./pilot-desktop-fixture.png', import.meta.url)), fullPage: false });
+    await page.screenshot({ path: screenshotPath('pilot-desktop-fixture.png'), fullPage: false });
   }, { data: regionalFixture });
 });
 
@@ -970,7 +1141,7 @@ test('map groups shared places, selects a card and follows active filters even w
     await page.locator('#category').selectOption('strom');
     await page.waitForFunction(() => document.querySelectorAll('#map .leaflet-interactive').length === 1);
     assert.deepEqual(errors, []);
-    await page.screenshot({ path: fileURLToPath(new URL('./desktop-fixture.png', import.meta.url)), fullPage: true });
+    await page.screenshot({ path: screenshotPath('desktop-fixture.png'), fullPage: true });
   });
   await app(async page => {
     await page.waitForSelector('.event-card');
@@ -980,7 +1151,7 @@ test('map groups shared places, selects a card and follows active filters even w
     await page.locator('.popup-event').first().click();
     assert.equal(await page.locator('#results').isVisible(), true);
     assert.equal(await page.locator('.event-card.selected').getAttribute('data-id'), 'fixture-b');
-    await page.screenshot({ path: fileURLToPath(new URL('./mobile-fixture.png', import.meta.url)), fullPage: true });
+    await page.screenshot({ path: screenshotPath('mobile-fixture.png'), fullPage: true });
   }, { mobile: true });
 });
 
@@ -1017,7 +1188,7 @@ test('filters combine, announce empty results and reset to all season dates', as
     await page.locator('#search').fill('vanocni');
     await page.waitForFunction(() => document.querySelectorAll('.event-card').length === 1);
     assert.equal(await page.locator('.event-card').getAttribute('data-id'), 'fixture-b');
-    await page.locator('#town').selectOption('Říčany');
+    await page.locator('#town').fill('Říčany');
     await page.waitForSelector('.empty-state');
     assert.match(await page.locator('.empty-state').innerText(), /Žádná akce/);
     await page.getByRole('button', { name: 'Zrušit filtry', exact: true }).click();
@@ -1061,7 +1232,7 @@ test('review screenshots use synthetic display content and mobile map stays lazy
       await page.waitForSelector('.event-card');
       if (mobile) assert.equal(await page.locator('#map.leaflet-container').count(), 0);
       else await page.waitForSelector('#map .leaflet-interactive');
-      await page.screenshot({ path: fileURLToPath(new URL(`./${mobile ? 'mobile' : 'desktop'}-fixture.png`, import.meta.url)), fullPage: false });
+      await page.screenshot({ path: screenshotPath(`${mobile ? 'mobile' : 'desktop'}-fixture.png`), fullPage: false });
     }, { data: displayFixture, mobile });
   }
 });

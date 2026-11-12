@@ -72,6 +72,26 @@ test('combined filters use accent-insensitive search and overlap multiday events
   assert.equal(helpers.filterEvents(events, { category: 'betlem' }).length, 0);
   assert.equal(helpers.filterEvents(events, { query: 'nonsense' }).length, 0);
 });
+test('town suggestions are local, scoped, sorted, deduplicated, normalized and bounded to eight', () => {
+  assert.equal(typeof helpers.townSuggestions, 'function');
+  const events = ['Říčany','Beroun','Říčany','Český Brod', ...Array.from({length:10}, (_, i) => `Obec ${i}`)].map(town => ({town,region:'A'}));
+  events.push({town:'Říčany u Brna',region:'B'}, {town:null,region:'A'});
+  assert.deepEqual(helpers.townSuggestions(events, 'A', '  ICAN '), ['Říčany']);
+  assert.deepEqual(helpers.townSuggestions(events, '', 'ric'), ['Říčany','Říčany u Brna']);
+  assert.deepEqual(helpers.townSuggestions(events, 'A', 'CES'), ['Český Brod']);
+  assert.deepEqual(helpers.townSuggestions(events, 'empty', ''), []);
+  const all = helpers.townSuggestions(events, 'A', '');
+  assert.equal(all.length, 8);
+  assert.deepEqual(all, [...new Set(events.filter(e => e.region === 'A' && e.town).map(e => e.town))].sort((a,b) => a.localeCompare(b,'cs')).slice(0,8));
+});
+
+test('town text matches accent-insensitive partial names only and composes with other filters', () => {
+  const events = [event('match', '2026-11-28', null, {town:'Říčany',region:'A'}), event('wrong-region', '2026-11-28', null, {town:'Říčany',region:'B'}), event('name-only', '2026-11-28', null, {title:'Říčany',region:'A'})];
+  assert.deepEqual(helpers.filterEvents(events, {town:'  ICAN ',region:'A',category:'strom',period:'custom',dateFrom:'2026-11-28',dateTo:'2026-11-28'}).map(e => e.id), ['match']);
+  assert.equal(helpers.filterEvents(events, {town:'nic'}).length, 0);
+  assert.equal(helpers.filterEvents(events, {town:'   '}).length, 3);
+});
+
 test('custom dates include both endpoints and overlapping multiday events without mutating input', () => {
   const events = [event('before', '2026-11-27'), event('first', '2026-11-28'), event('last', '2026-11-30'), event('after', '2026-12-01'), event('overlap', '2026-11-25', null, { endDate: '2026-11-28' })];
   assert.deepEqual(helpers.filterEvents(events, { period: 'custom', dateFrom: '2026-11-28', dateTo: '2026-11-30' }).map(e => e.id), ['overlap', 'first', 'last']);

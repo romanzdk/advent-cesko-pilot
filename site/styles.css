@@ -90,3 +90,11 @@
 .date-rail.is-holiday,.holiday-badge{color:#973f43}
 .date-rail.is-holiday time,.holiday-badge{background:#f6e5e3}
 .day-badge{padding:2px 6px;border-radius:3px}
+/* Local editable town filter: suggestions overlay without widening the grid. */
+.town-field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.town-control{position:relative;min-width:0}
+#town{padding-inline-end:44px}
+#town-options{position:absolute;top:100%;left:0;right:0;z-index:2100;max-height:224px;overflow-y:auto;overscroll-behavior:contain;list-style:none;margin:4px 0 0;padding:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:0 8px 24px #283a311a;font-size:1rem}
+#town-options[hidden]{display:none}
+#town-options li{min-height:44px;padding:10px 12px;overflow-wrap:anywhere;cursor:pointer}
+#town-options li:hover,#town-options [aria-selected=true]{background:var(--wash)}

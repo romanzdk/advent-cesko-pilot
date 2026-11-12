@@ -1,5 +1,5 @@
 import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs, distanceKm, nearbyEvents, MAP_COLORS, markerCategory } from './helpers.js';
-import { dayHighlight } from './helpers.js';
+import { dayHighlight, townSuggestions } from './helpers.js';
 
 const $ = id => document.getElementById(id);
 const categories = { strom: 'Rozsvícení stromu', mikulas: 'Mikuláš', trhy: 'Trhy a jarmarky', tvoreni: 'Tvoření', setkani: 'Setkání', betlem: 'Betlémy' };
@@ -207,16 +207,63 @@ function updateRegions() {
     if (option.value && !published.has(option.value)) option.textContent = `${option.value} · zatím bez akcí`;
   }
 }
-function updateTowns() {
-  populateOptions('town', events.filter(event => !$('region').value || event.region === $('region').value).map(event => event.town), 'Všechny obce');
+function closeTowns() {
+  $('town-options').hidden = true;
+  $('town').setAttribute('aria-expanded', 'false');
+  $('town').removeAttribute('aria-activedescendant');
 }
+function updateTowns() {
+  const options = townSuggestions(events, $('region').value, $('town').value).map((town, index) => {
+    const option = el('li', town);
+    option.id = `town-option-${index}`;
+    option.setAttribute('role', 'option');
+    option.setAttribute('aria-selected', 'false');
+    option.addEventListener('click', () => {
+      $('town').value = town;
+      $('town').focus({ preventScroll: true });
+      render();
+      closeTowns();
+    });
+    return option;
+  });
+  $('town-options').replaceChildren(...options);
+  $('town').removeAttribute('aria-activedescendant');
+  const open = options.length > 0 && document.activeElement === $('town');
+  $('town-options').hidden = !open;
+  $('town').setAttribute('aria-expanded', String(open));
+}
+$('town').addEventListener('focus', updateTowns);
+$('town').addEventListener('click', updateTowns);
+$('town').addEventListener('keydown', event => {
+  if (event.isComposing) return;
+  if (event.key === 'Escape' || event.key === 'Tab') {
+    if (event.key === 'Escape' && !$('town-options').hidden) event.preventDefault();
+    closeTowns();
+  } else if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+    event.preventDefault();
+    if ($('town-options').hidden) updateTowns();
+    const options = [...$('town-options').children];
+    if (!options.length) return;
+    const active = options.findIndex(option => option.id === $('town').getAttribute('aria-activedescendant'));
+    const index = active < 0 ? (event.key === 'ArrowDown' ? 0 : options.length - 1) : (active + (event.key === 'ArrowDown' ? 1 : -1) + options.length) % options.length;
+    options.forEach((option, i) => option.setAttribute('aria-selected', String(i === index)));
+    $('town').setAttribute('aria-activedescendant', options[index].id);
+    options[index].scrollIntoView({ block: 'nearest' });
+  } else if (event.key === 'Enter' && !$('town-options').hidden) {
+    const active = $($('town').getAttribute('aria-activedescendant'));
+    if (active) { event.preventDefault(); active.click(); }
+  }
+});
+for (const type of ['pointerdown', 'focusin']) document.addEventListener(type, event => {
+  if (!event.target.closest('.town-field')) closeTowns();
+});
 function render() {
   if (!eventsLoaded) return;
   $('clear-search').hidden = !$('search').value;
+  $('clear-town').hidden = !$('town').value;
   const customDates = $('period').value === 'custom';
   $('date-range').hidden = !customDates;
   for (const id of ['date-from', 'date-to']) $(id).disabled = !customDates;
-  updateTowns();
   const filters = Object.fromEntries(new FormData($('filters')));
   let visible = [], bounds = null, rangeError = '';
   try {
@@ -312,8 +359,21 @@ $('clear-search').addEventListener('click', () => {
   render();
   $('search').focus({ preventScroll: true });
 });
-$('filters').addEventListener('input', render);
-$('filters').addEventListener('change', render);
+$('clear-town').addEventListener('click', () => {
+  $('town').value = '';
+  render();
+  $('town').focus({ preventScroll: true });
+  updateTowns();
+});
+$('region').addEventListener('change', () => {
+  if (!townSuggestions(events, $('region').value, $('town').value).length) $('town').value = '';
+  updateTowns();
+});
+$('filters').addEventListener('input', event => {
+  render();
+  if (event.target === $('town')) updateTowns(); else closeTowns();
+});
+$('filters').addEventListener('change', event => { if (event.target !== $('town')) { closeTowns(); render(); } });
 $('filters').addEventListener('reset', event => {
   event.preventDefault();
   $('search').value = '';
@@ -323,6 +383,7 @@ $('filters').addEventListener('reset', event => {
   $('category').value = '';
   $('region').value = '';
   $('town').value = '';
+  closeTowns();
   clearLocation();
   render();
 });
