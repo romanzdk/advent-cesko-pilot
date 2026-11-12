@@ -417,22 +417,31 @@ test('search clear button removes the entire query, preserves other filters and 
   }, { data:regionalFixture, mobile });
 });
 
-test('personal origin story stays subtle in the footer and expands on desktop and mobile', async () => {
-  for (const mobile of [false, true]) await app(async page => {
-    const story = page.locator('footer details.origin-story');
+test('personal origin story replaces the edition with a compact header question on desktop and mobile', async () => {
+  for (const width of [1440, 393, 320]) await app(async page => {
+    await page.setViewportSize({ width, height: 852 });
+    const story = page.locator('header details.origin-story');
     const summary = story.locator('summary');
     assert.equal(await summary.count(), 1);
-    assert.equal(await summary.innerText(), 'Proč tahle mapa vznikla');
-    assert.equal(await story.locator('p').isVisible(), false);
+    assert.equal(await summary.innerText(), '?');
+    assert.equal(await summary.getAttribute('aria-label'), 'Proč tahle mapa vznikla');
+    assert.equal(await page.locator('.edition, footer .origin-story').count(), 0);
+    assert.equal(await story.locator('.origin-story-panel').isVisible(), false);
+    const triggerBox = await summary.boundingBox();
+    assert(triggerBox.width >= 44 && triggerBox.height >= 44);
+    const wordmarkBox = await page.locator('.wordmark').boundingBox();
+    assert(wordmarkBox.x + wordmarkBox.width <= triggerBox.x);
     await summary.click({ timeout: 3000 });
-    assert.equal(await story.locator('p').isVisible(), true);
+    assert.equal(await story.locator('.origin-story-panel').isVisible(), true);
+    assert.equal(await story.locator('h2').innerText(), 'Proč tahle mapa vznikla');
     assert.equal(await story.locator('p').innerText(), 'Moje žena má ráda vánoční atmosféru a trhy. Tahle mapa vznikla, abychom měli po ruce tipy, kam spolu vyrazit.');
-    assert((await summary.boundingBox()).height >= 44);
+    const panelBox = await story.locator('.origin-story-panel').boundingBox();
+    assert(panelBox.x >= 0 && panelBox.x + panelBox.width <= width);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
-    if (mobile) await page.locator('footer').screenshot({ path: new URL('./origin-story-mobile-fixture.png', import.meta.url).pathname });
+    if (width === 393) await page.locator('.masthead').screenshot({ path: new URL('./origin-story-header-mobile-fixture.png', import.meta.url).pathname });
     await summary.press('Enter');
-    assert.equal(await story.locator('p').isVisible(), false);
-  }, { mobile, javaScriptEnabled: false });
+    assert.equal(await story.locator('.origin-story-panel').isVisible(), false);
+  }, { javaScriptEnabled: false });
 });
 
 test('feedback API failures are not empty results and never block drafts or map', async () => {
@@ -696,7 +705,7 @@ test('map names its bounded Christmas 2026 scope and excludes out-of-window even
     assert.match(await page.locator('.intro').innerText(), /Sezonní výběr veřejných akcí 2026/);
     assert.match(await page.locator('.intro').innerText(), /Výběr veřejných zdrojů, nikoli úplný přehled krajů ani celé ČR\./);
     assert.doesNotMatch(await page.locator('.footer').innerText(), /pilot/i);
-    assert.doesNotMatch(await page.locator('.edition').innerText(), /3 KRAJE/);
+    assert.equal(await page.locator('.edition').count(), 0);
     assert.match(await page.locator('.intro').innerText(), /20\. 11\. – 24\. 12\. 2026/);
     assert.equal(await page.locator('.footer-links a').count(), 3);
     assert.deepEqual(await page.locator('.event-card').evaluateAll(cards => cards.map(card => card.dataset.id)), ['fixture-a', 'fixture-b', 'fixture-c', 'boundary-2']);
