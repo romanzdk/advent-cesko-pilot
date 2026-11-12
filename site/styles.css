@@ -28,6 +28,10 @@
 @media(min-width:821px) and (max-width:1090px){.reset-button{min-height:44px}}
 .skip-link{position:absolute;clip-path:inset(50%);height:1px;width:1px;overflow:hidden;padding:0;transform:none}
 .skip-link:focus{position:fixed;top:8px;left:16px;clip-path:none;height:auto;width:auto;padding:12px;transform:none}
+.footer{flex-wrap:wrap;align-items:center}
+.footer-credit{display:flex;flex-wrap:wrap;gap:6px 16px}
+.footer-links{display:flex;flex-wrap:wrap;align-items:center;gap:0 16px}
+.footer-links a{display:inline-flex;align-items:center;min-height:44px}
 .load-error button{margin-top:16px}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media print{.filters,.view-switch,.map-panel,.event-actions button,.skip-link{display:none!important}.explore-layout{display:block}.wrap{max-width:none;padding-inline:0}.event-card{break-inside:avoid}.event-card,.about{font-size:12pt}.event-description,.event-facts,.event-place,.event-time,.verified{font-size:12pt}.intro{padding-block:15px}.masthead{min-height:55px}}

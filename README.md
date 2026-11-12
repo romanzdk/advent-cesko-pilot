@@ -104,7 +104,7 @@ Po kontrole celé fronty 37 kandidátů z 12. listopadu 2026 přibylo **21 ově�
 Ověření zahrnuje:
 
 - **75 Python testů:** parsování podkladů včetně tří nových HTML šablon, registr zdrojů, práce s daty, výpadky, geografická přiřazení a bezpečné publikování v dočasných Git repozitářích.
-- **29 JavaScriptových a prohlížečových testů:** šestikrajové filtry, kalendář, mobilní rozhraní, chybové stavy a bezpečné vykreslení.
+- **30 JavaScriptových a prohlížečových testů:** šestikrajové filtry, kalendář, mobilní rozhraní, chybové stavy a bezpečné vykreslení.
 - Kontrolu skutečně nasazené desktopové i mobilní verze, mapových dlaždic a stažení ICS.
 
 CI provádí offline Python testy, čisté JS testy, validaci veřejných dat a kontrolu syntaxe. Úplná sada Chromium testů se spouští lokálně. Počty testů popisují ověřený stav k 12. listopadu 2026.

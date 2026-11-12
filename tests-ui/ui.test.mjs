@@ -179,6 +179,26 @@ test('region scope limits towns, combines with other filters and resets cleanly'
   }, { data: regionalFixture, mobile: true });
 });
 
+test('footer credits Roman and links his website, GitHub and project', async () => {
+  for (const mobile of [false, true]) {
+    await app(async page => {
+      await page.waitForSelector('.event-card');
+      const footer = page.locator('footer');
+      await footer.scrollIntoViewIfNeeded();
+      assert.match(await footer.innerText(), /Autor: Roman Žydyk/);
+      for (const [name, href] of [['romanzdk.com', 'https://romanzdk.com/'], ['GitHub autora', 'https://github.com/romanzdk'], ['Kód projektu', 'https://github.com/romanzdk/advent-cesko-pilot']]) {
+        const link = footer.getByRole('link', {name, exact: true});
+        assert.equal(await link.getAttribute('href'), href);
+        assert.equal(await link.isVisible(), true);
+        const box = await link.boundingBox();
+        assert(box && box.height >= 44);
+      }
+      assert.equal(await footer.getByRole('link', {name: 'Mnichovice a okolí', exact: true}).getAttribute('href'), 'https://romanzdk.github.io/advent-mnichovice/');
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    }, {mobile});
+  }
+});
+
 test('restricted audience is not labelled as seniors', async () => {
   await app(async page => {
     await page.waitForSelector('.event-card');
