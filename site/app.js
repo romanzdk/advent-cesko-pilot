@@ -1,4 +1,5 @@
 import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs, MAP_COLORS, markerCategory } from './helpers.js';
+import { dayHighlight } from './helpers.js';
 
 const $ = id => document.getElementById(id);
 const categories = { strom: 'Rozsvícení stromu', mikulas: 'Mikuláš', trhy: 'Trhy a jarmarky', tvoreni: 'Tvoření', setkani: 'Setkání', betlem: 'Betlémy' };
@@ -115,12 +116,20 @@ function card(event) {
   article.tabIndex = -1;
   const date = dateValue(event.date);
   const rail = el('div', null, 'date-rail');
+  const day = dayHighlight(event.date);
+  const dayLabel = day.holiday ? `Svátek · ${day.holiday}` : day.weekend ? 'Víkend' : null;
+  if (dayLabel) {
+    rail.classList.add(day.holiday ? 'is-holiday' : 'is-weekend');
+    rail.title = `${dayLabel} — podle data začátku akce`;
+  }
   const time = el('time'); time.dateTime = event.date;
+  time.setAttribute('aria-label', `${dateFormat.format(date)}${dayLabel ? ` · ${dayLabel}` : ''}`);
   time.append(el('span', dayFormat.format(date)), el('strong', String(date.getUTCDate())), el('span', new Intl.DateTimeFormat('cs-CZ', { month: 'short', timeZone: 'Europe/Prague' }).format(date)));
   rail.append(time);
   const body = el('div', null, 'event-body');
   const badges = el('div', null, 'badges');
   badges.append(el('span', categories[event.category] || 'Akce', 'category-badge'));
+  if (dayLabel) badges.append(el('span', dayLabel, `day-badge ${day.holiday ? 'holiday-badge' : 'weekend-badge'}`));
   if (event.audience !== 'všichni') badges.append(el('span', event.audience === 'dospělí' ? 'Dospělí' : event.audience === 'omezené zaměření' ? 'Omezené zaměření' : 'Senioři / omezené zaměření', 'audience-badge'));
   if (event.status === 'cancelled') badges.append(el('span', 'Zrušeno', 'warning-badge'));
   body.append(badges, el('h3', event.title), el('p', [event.town, event.venue].filter(Boolean).join(' · '), 'event-place'));

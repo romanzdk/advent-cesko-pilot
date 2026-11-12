@@ -42,6 +42,14 @@ export function safeHttps(value) {
   } catch { return null; }
 }
 
+// In the published 20 Nov–24 Dec 2026 window, Christmas Eve is the only Czech public holiday.
+// Source: https://ppropo.mpsv.cz/pdf/zakon_245_2000.pdf (§ 2).
+export function dayHighlight(value) {
+  const date = new Date(`${value}T12:00:00Z`);
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || !Number.isFinite(date.getTime()) || date.toISOString().slice(0, 10) !== value) return { weekend:false, holiday:null };
+  return { weekend:[0,6].includes(date.getUTCDay()), holiday:value === '2026-12-24' ? 'Štědrý den' : null };
+}
+
 export const MAP_COLORS = Object.freeze({ strom:'#2f6b45', mikulas:'#b33d42', trhy:'#a36b17', tvoreni:'#8054a3', setkani:'#257b87', betlem:'#79513c', mixed:'#657168' });
 export function markerCategory(events) {
   const kinds = [...new Set(events.map(event => event.category))];
