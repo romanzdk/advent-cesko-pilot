@@ -41,11 +41,18 @@
     </section>
     <form class="filters" id="filters" aria-label="Filtrovat akce">
       <label class="search-field">Hledat<input type="search" id="search" name="query" placeholder="Název, místo nebo obec…" autocomplete="off"></label>
-      <label>Termín<select id="period" name="period"><option value="all">Všechny termíny</option><option value="today">Dnes</option><option value="weekend">Tento víkend</option></select></label>
+      <label>Termín<select id="period" name="period" aria-controls="date-range"><option value="all">Všechny termíny</option><option value="today">Dnes</option><option value="weekend">Tento víkend</option><option value="custom">Vlastní rozsah</option></select></label>
       <label>Co vás láká<select id="category" name="category"><option value="">Všechny typy</option><option value="strom">Rozsvícení stromu</option><option value="mikulas">Mikuláš</option><option value="trhy">Trhy a jarmarky</option><option value="tvoreni">Tvoření</option><option value="setkani">Setkání</option><option value="betlem">Betlémy</option></select></label>
       <label>Kraj<select id="region" name="region"><option value="">Všechny kraje</option></select></label>
       <label>Obec<select id="town" name="town"><option value="">Všechny obce</option></select></label>
       <button class="reset-button" type="reset">Zrušit filtry</button>
+      <fieldset id="date-range" class="date-range" hidden>
+        <legend>Vlastní rozsah dat</legend>
+        <label>Od data<input type="date" id="date-from" name="dateFrom" min="2026-11-20" max="2026-12-24" aria-describedby="date-range-hint date-range-error" disabled></label>
+        <label>Do data<input type="date" id="date-to" name="dateTo" min="2026-11-20" max="2026-12-24" aria-describedby="date-range-hint date-range-error" disabled></label>
+        <p id="date-range-hint">Včetně obou dnů a akcí, které do rozsahu zasahují. Prázdné pole znamená začátek nebo konec sezóny.</p>
+        <p id="date-range-error" role="alert" hidden></p>
+      </fieldset>
     </form>
     <details id="coverage" class="coverage">
       <summary>Zdroje a pokrytí</summary>

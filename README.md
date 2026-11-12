@@ -18,7 +18,7 @@ Sezonní mapa adventních a vánočních akcí pro **20. listopadu – 24. prosi
 
 ## Co mapa nabízí
 
-- **Výběr podle vás.** Kombinace kraje, obce, typu akce a termínu, textové hledání i filtr víkendu.
+- **Výběr podle vás.** Kombinace kraje, obce, typu akce a termínu, textové hledání, dnešek, víkend i vlastní rozsah dat Od–Do. Rozsah zahrnuje oba krajní dny a překrývající se vícedenní akce; lze zadat i pouze jednu hranici v rámci sezóny.
 - **Seznam i mapa.** Chronologický přehled na telefonu, prostorové zobrazení na větší obrazovce.
 - **Údaje se zdrojem.** Datum, zveřejněný čas, místo, známé vstupné, rezervace a přímý odkaz na pořadatele.
 - **Kalendář a navigace.** Samostatný ICS export každé akce; orientační polohy jsou výslovně označené.
@@ -79,7 +79,7 @@ Projekt neobchází blokované kalendáře a neslibuje obecné zpracování vše
 
 ## Kvalita a orientace v kódu
 
-**75 Python testů a 45 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, filtry, kalendář, mobilní rozhraní, tipy i sdílecí metadata. Počty popisují ověřovaný stav k 12. listopadu 2026. CI běží offline; úplné Chromium testy se spouštějí lokálně.
+**75 Python testů a 51 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy i sdílecí metadata. Počty popisují ověřovaný stav k 12. listopadu 2026. CI běží offline; úplné Chromium testy se spouštějí lokálně.
 
 ```text
 scripts/     sběr, adaptéry, validace a publisher

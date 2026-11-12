@@ -1,4 +1,4 @@
-import { filterEvents, timeLabel, safeHttps, periodBounds, groupLocations, eventIcs } from './helpers.js';
+import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs } from './helpers.js';
 
 const $ = id => document.getElementById(id);
 const categories = { strom: 'Rozsvícení stromu', mikulas: 'Mikuláš', trhy: 'Trhy a jarmarky', tvoreni: 'Tvoření', setkani: 'Setkání', betlem: 'Betlémy' };
@@ -175,13 +175,28 @@ function updateTowns() {
   populateOptions('town', events.filter(event => !$('region').value || event.region === $('region').value).map(event => event.town), 'Všechny obce');
 }
 function render() {
+  const customDates = $('period').value === 'custom';
+  $('date-range').hidden = !customDates;
+  for (const id of ['date-from', 'date-to']) $(id).disabled = !customDates;
   updateTowns();
   const filters = Object.fromEntries(new FormData($('filters')));
-  const visible = filterEvents(events, filters);
+  let visible = [], bounds = null, rangeError = '';
+  try {
+    if (customDates && ['date-from', 'date-to'].some(id => $(id).validity.badInput)) throw new RangeError('Zadejte platné datum.');
+    const now = new Date();
+    bounds = filterBounds(filters, now);
+    visible = filterEvents(events, filters, now);
+  } catch (error) {
+    if (!(error instanceof RangeError)) throw error;
+    rangeError = error.message;
+  }
+  $('date-range-error').textContent = rangeError;
+  $('date-range-error').hidden = !rangeError;
+  for (const id of ['date-from', 'date-to']) $(id).setAttribute('aria-invalid', String(Boolean(rangeError)));
   const fragment = document.createDocumentFragment();
   if (!visible.length) {
     const empty = el('div', null, 'empty-state state-message');
-    empty.append(el('h3', 'Žádná akce pro tento výběr'), el('p', 'Zkuste jiný termín, obec nebo zrušte filtry.'));
+    empty.append(el('h3', rangeError ? 'Zkontrolujte rozsah dat' : 'Žádná akce pro tento výběr'), el('p', rangeError || 'Zkuste jiný termín, obec nebo zrušte filtry.'));
     fragment.append(empty);
   }
   let month;
@@ -194,10 +209,9 @@ function render() {
   }
   $('results').replaceChildren(fragment);
   $('results').setAttribute('aria-busy', 'false');
-  const bounds = periodBounds(filters.period);
   const period = bounds ? `${dateFormat.format(dateValue(bounds[0]))}–${dateFormat.format(dateValue(bounds[1]))}` : 'všechny termíny';
   const scope = [filters.region, filters.town].filter(Boolean);
-  $('result-count').textContent = `${visible.length} ${visible.length === 1 ? 'akce' : visible.length < 5 ? 'akce' : 'akcí'} · ${[...scope, period].join(' · ')}`;
+  $('result-count').textContent = rangeError ? 'Opravte rozsah dat.' : `${visible.length} ${visible.length === 1 ? 'akce' : visible.length < 5 ? 'akce' : 'akcí'} · ${[...scope, period].join(' · ')}`;
   visibleEvents = visible;
   updateMap();
 }
@@ -217,6 +231,8 @@ $('filters').addEventListener('reset', event => {
   event.preventDefault();
   $('search').value = '';
   $('period').value = 'all';
+  $('date-from').value = '';
+  $('date-to').value = '';
   $('category').value = '';
   $('region').value = '';
   $('town').value = '';
@@ -244,7 +260,7 @@ async function load() {
     if (!response.ok) throw new Error('Přehled není dostupný');
     const data = await response.json();
     if (!validData(data)) throw new Error('Neplatný formát přehledu');
-    events = data.events.filter(event => event.date <= '2026-12-24' && (event.endDate || event.date) >= '2026-11-20');
+    events = data.events.filter(event => event.date <= SEASON_END && (event.endDate || event.date) >= SEASON_START);
     populateOptions('region', events.map(event => event.region), 'Všechny kraje');
     $('data-updated').textContent = `Přehled aktualizován ${dateFormat.format(dateValue(data.generatedAt))}.`;
     for (const control of $('filters').elements) control.disabled = false;

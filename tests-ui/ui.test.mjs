@@ -93,6 +93,87 @@ async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile 
   } finally { await context.close(); }
 }
 
+test('custom date range filters list and map inclusively and composes with other filters on desktop and mobile', async () => {
+  const data = { ...fixture, events: [...fixture.events, { ...fixture.events[0], id: 'fixture-span', title: 'Vícedenní trhy', date: '2026-11-25', endDate: '2026-11-30', category: 'trhy' }] };
+  for (const mobile of [false, true]) await app(async page => {
+    await page.waitForSelector('.event-card');
+    assert.equal(await page.locator('#date-range').isVisible(), false);
+    await page.locator('#period').selectOption('custom');
+    await page.locator('#date-from').fill('2026-11-28');
+    await page.locator('#date-to').fill('2026-11-28');
+    assert.deepEqual(await page.locator('.event-card').evaluateAll(nodes => nodes.map(n => n.dataset.id)), ['fixture-span', 'fixture-b']);
+    assert.match(await page.locator('#result-count').innerText(), /28\. 11\. 2026/);
+    await page.locator('#category').selectOption('tvoreni');
+    assert.equal(await page.locator('.event-card').count(), 1);
+    if (mobile) await page.locator('#show-map').click();
+    await page.waitForSelector('#map .leaflet-interactive');
+    assert.equal(await page.locator('#map .leaflet-interactive').count(), 1);
+    await page.locator('#category').selectOption('');
+    await page.locator('#period').selectOption('all');
+    assert.equal(await page.locator('.event-card').count(), 4);
+    assert.equal(await page.locator('#date-range').isVisible(), false);
+    await page.locator('#period').selectOption('custom');
+    assert.equal(await page.locator('.event-card').count(), 2);
+    await page.locator('#filters button[type=reset]').click();
+    assert.equal(await page.locator('.event-card').count(), 4);
+    assert.equal(await page.locator('#date-from').inputValue(), '');
+    assert.equal(await page.locator('#date-to').inputValue(), '');
+    assert.equal(await page.locator('#date-range').isVisible(), false);
+  }, { data, mobile });
+});
+
+test('invalid date ranges clear stale results and recover while allowing one-sided ranges', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await page.waitForSelector('#map .leaflet-interactive');
+    await page.locator('#period').selectOption('custom');
+    await page.locator('#date-from').fill('2026-12-05');
+    await page.locator('#date-to').fill('2026-11-28');
+    assert.equal(await page.locator('#date-range-error').isVisible(), true);
+    assert.match(await page.locator('#date-range-error').innerText(), /Od.*Do/);
+    assert.equal(await page.locator('.event-card').count(), 0);
+    assert.equal(await page.locator('#map .leaflet-interactive').count(), 0);
+    assert.match(await page.locator('#result-count').innerText(), /Opravte/);
+    await page.locator('#date-to').fill('2026-12-05');
+    assert.equal(await page.locator('.event-card').count(), 1);
+    assert.equal(await page.locator('#date-range-error').isVisible(), false);
+    await page.locator('#date-from').fill('');
+    assert.equal(await page.locator('.event-card').count(), 3);
+    await page.locator('#date-from').fill('2026-11-01');
+    assert.match(await page.locator('#date-range-error').innerText(), /20\. 11\./);
+    assert.equal(await page.locator('.event-card').count(), 0);
+    await page.locator('#period').selectOption('all');
+    assert.equal(await page.locator('.event-card').count(), 3);
+    assert.equal(await page.locator('#date-range-error').isVisible(), false);
+    assert.deepEqual(errors, []);
+  });
+});
+
+test('custom date inputs remain usable on narrow screens and with enlarged text', async () => {
+  await app(async page => {
+    await page.waitForSelector('.event-card');
+    await page.locator('#period').selectOption('custom');
+    await page.locator('#date-from').fill('2026-11-28');
+    await page.locator('#date-to').fill('2026-12-05');
+    for (const width of [1440, 900, 393, 320]) {
+      await page.setViewportSize({ width, height: 1000 });
+      for (const id of ['date-from', 'date-to']) {
+        const input = page.locator(`#${id}`), box = await input.boundingBox();
+        assert(box.height >= 44 && box.x >= 0 && box.x + box.width <= width);
+        assert(Number.parseFloat(await input.evaluate(n => getComputedStyle(n).fontSize)) >= 16);
+        assert.equal(await input.getAttribute('min'), '2026-11-20');
+        assert.equal(await input.getAttribute('max'), '2026-12-24');
+      }
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+      if (width === 393) await page.screenshot({ path: new URL('./date-range-mobile-fixture.png', import.meta.url).pathname });
+      if (width === 1440) await page.screenshot({ path: new URL('./date-range-desktop-fixture.png', import.meta.url).pathname });
+    }
+    await page.locator('#date-range').evaluate(node => { for (const input of node.querySelectorAll('input')) input.style.fontSize = '24px'; });
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    assert((await page.locator('#date-from').boundingBox()).width > 200);
+  });
+});
+
 test('feedback API failures are not empty results and never block drafts or map', async () => {
   for (const failure of ['429', 'network', 'timeout']) await app(async (page, errors) => {
     await page.route('https://api.github.com/**', route => failure === '429' ? route.fulfill({ status: 429, body: '{}', headers: { 'access-control-allow-origin': '*' } }) : failure === 'network' ? route.abort() : undefined);
@@ -437,7 +518,7 @@ test('desktop filters retain one compact row with the added region control', asy
     await page.waitForSelector('.event-card');
     for (const width of [1440, 1100]) {
       await page.setViewportSize({ width, height: 1000 });
-      const bottoms = await page.locator('#filters input, #filters select, #filters button').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().bottom));
+      const bottoms = await page.locator('#filters input, #filters select, #filters button').evaluateAll(nodes => nodes.filter(node => node.getClientRects().length).map(node => node.getBoundingClientRect().bottom));
       assert(Math.max(...bottoms) - Math.min(...bottoms) < 2, JSON.stringify({ width, bottoms }));
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     }
