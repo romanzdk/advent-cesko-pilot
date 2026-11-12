@@ -21,7 +21,7 @@ Sezonní mapa adventních a vánočních akcí pro **20. listopadu – 24. prosi
 - **Výběr podle vás.** Kombinace kraje, obce, typu akce a termínu, textové hledání, dnešek, víkend i vlastní rozsah dat Od–Do. Rozsah zahrnuje oba krajní dny a překrývající se vícedenní akce; lze zadat i pouze jednu hranici v rámci sezóny.
 - **Seznam i mapa.** Chronologický přehled na telefonu, prostorové zobrazení na větší obrazovce.
 - **Údaje se zdrojem.** Datum, zveřejněný čas, místo, známé vstupné, rezervace a přímý odkaz na pořadatele.
-- **Kalendář a navigace.** Samostatný ICS export každé akce; orientační polohy jsou výslovně označené.
+- **Kalendář a navigace.** Samostatný ICS export každé akce a trasa v Google Maps; orientační polohy jsou výslovně označené. Mapový podklad na webu zůstává OpenStreetMap.
 - **Viditelné pokrytí.** Sledované zdroje, poslední kontroly a položky čekající na ověření nejsou skryté.
 - **Veřejné tipy.** Návrh obce, odkazu nebo opravy přes GitHub; existující hlášení lze prohledat a doplnit komentářem. Odeslání vyžaduje účet GitHub a zařazení do mapy není automatické.
 

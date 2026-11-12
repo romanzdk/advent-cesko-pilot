@@ -134,10 +134,11 @@ function card(event) {
   if (source) actions.append(source);
   else actions.append(el('span', 'Zdroj není dostupný', 'muted'));
   if (groupLocations([event]).length) {
-    const url = new URL('https://www.openstreetmap.org/directions');
-    url.searchParams.set('to', `${event.location.lat},${event.location.lon}`);
+    const url = new URL('https://www.google.com/maps/dir/');
+    url.searchParams.set('api', '1');
+    url.searchParams.set('destination', `${event.location.lat},${event.location.lon}`);
     const navigation = publicLink(event.location.precision === 'town' ? 'Do obce ↗' : 'Navigovat ↗', url.href, 'navigation-link');
-    navigation.title = event.location.precision === 'town' ? 'Navigace do středu obce; přesné místo ověřte u pořadatele' : 'Navigace na místo konání';
+    navigation.title = event.location.precision === 'town' ? 'Google Maps: navigace do středu obce; přesné místo ověřte u pořadatele' : 'Google Maps: navigace na místo konání';
     actions.append(navigation);
   }
   const calendar = el('button', 'Do kalendáře (.ics)', 'calendar-button');

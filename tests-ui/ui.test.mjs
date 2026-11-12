@@ -606,8 +606,18 @@ test('individual calendar downloads contain the chosen event and navigation disc
     assert.match(text.replace(/\r\n /g, ''), /konec orientační/);
     assert.equal((text.match(/BEGIN:VEVENT/g) || []).length, 1);
     const navigation = card.getByRole('link', { name: /Do obce/ });
-    assert.match(await navigation.getAttribute('href'), /^https:\/\/www\.openstreetmap\.org\/directions\?/);
-    assert.match(await navigation.getAttribute('href'), /49\.964/);
+    const destination = new URL(await navigation.getAttribute('href'));
+    assert.equal(destination.origin, 'https://www.google.com');
+    assert.equal(destination.pathname, '/maps/dir/');
+    assert.equal(destination.searchParams.get('api'), '1');
+    assert.equal(destination.searchParams.get('destination'), '49.964,14.073');
+    assert.equal(destination.searchParams.has('origin'), false);
+    assert.equal(await navigation.getAttribute('target'), '_blank');
+    assert.equal(await navigation.getAttribute('rel'), 'noopener noreferrer');
+    assert.match(await navigation.getAttribute('title'), /Google Maps.*středu obce/);
+    const precise = page.locator('[data-id="fixture-a"] .navigation-link');
+    assert.match(await precise.innerText(), /Navigovat/);
+    assert.equal(new URL(await precise.getAttribute('href')).searchParams.get('destination'), '49.99,14.655');
   });
 });
 
