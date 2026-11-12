@@ -17,6 +17,14 @@ test('crow-flies distance validates coordinates and nearby filtering is inclusiv
   assert.deepEqual(helpers.nearbyEvents(events, zero, -1), []);
   assert.equal(events.length, 4);
 });
+test('season date highlights recognize weekends and Christmas Eve without timezone shifts', () => {
+  assert.deepEqual(helpers.dayHighlight('2026-11-27'), {weekend:false, holiday:null});
+  assert.deepEqual(helpers.dayHighlight('2026-11-28'), {weekend:true, holiday:null});
+  assert.deepEqual(helpers.dayHighlight('2026-11-29'), {weekend:true, holiday:null});
+  assert.deepEqual(helpers.dayHighlight('2026-12-24'), {weekend:false, holiday:'Štědrý den'});
+  assert.deepEqual(helpers.dayHighlight('2026-11-31'), {weekend:false, holiday:null});
+});
+
 test('map categories have distinct colors and shared mixed places stay neutral', () => {
   assert.equal(typeof helpers.markerCategory, 'function');
   assert.equal(helpers.markerCategory([{ category:'strom' }, { category:'strom' }]), 'strom');

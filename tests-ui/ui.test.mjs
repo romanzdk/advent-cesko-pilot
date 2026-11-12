@@ -341,6 +341,28 @@ test('custom date inputs remain usable on narrow screens and with enlarged text'
   });
 });
 
+test('event dates distinguish weekends and holidays with text labels and start-date-only coloring', async () => {
+  const data = { ...fixture, events:[...fixture.events, {...fixture.events[0],id:'weekday',date:'2026-11-27',endDate:'2026-11-30'}, {...fixture.events[0],id:'sunday',date:'2026-11-29'}, {...fixture.events[0],id:'holiday',date:'2026-12-24'}] };
+  for (const mobile of [false,true]) await app(async page => {
+    await page.waitForSelector('.event-card');
+    const weekend=page.locator('[data-id="fixture-b"]'), holiday=page.locator('[data-id="holiday"]'), weekday=page.locator('[data-id="weekday"]');
+    assert.equal(await weekend.locator('.date-rail.is-weekend').count(),1);
+    assert.equal(await page.locator('[data-id="sunday"] .date-rail.is-weekend').count(),1);
+    assert.equal(await holiday.locator('.date-rail.is-holiday').count(),1);
+    assert.equal(await weekday.locator('.date-rail.is-weekend').count(),0);
+    assert.equal(await weekend.locator('.day-badge').innerText(),'Víkend');
+    assert.equal(await holiday.locator('.day-badge').innerText(),'Svátek · Štědrý den');
+    assert.equal(await weekday.locator('.day-badge').count(),0);
+    const colors=[];
+    for (const c of [weekday,weekend,holiday]) colors.push(await c.locator('.date-rail').evaluate(n=>getComputedStyle(n).color));
+    assert.equal(new Set(colors).size,3);
+    assert.match(await holiday.locator('time').getAttribute('aria-label'),/Štědrý den/);
+    assert.match(await weekend.locator('time').getAttribute('aria-label'),/Víkend/);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    if(mobile) await page.locator('#results').screenshot({path:new URL('./calendar-days-mobile-fixture.png',import.meta.url).pathname});
+  },{data,mobile});
+});
+
 test('map markers use category colors, mixed places remain neutral and filtering recolors them', async () => {
   for (const mobile of [false, true]) await app(async page => {
     await page.waitForSelector('.event-card');

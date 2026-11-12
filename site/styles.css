@@ -78,3 +78,9 @@
 .map-legend{display:flex;flex-wrap:wrap;gap:5px 14px;list-style:none;margin:0;padding:0 0 12px;color:var(--muted);font-size:.7rem;line-height:1.5}
 .map-legend li{display:inline-flex;align-items:center;gap:6px}
 .map-legend-swatch{width:11px;height:11px;flex:none;border-radius:50%}
+.date-rail time{border-radius:5px;padding-block:5px}
+.date-rail.is-weekend,.weekend-badge{color:#805a20}
+.date-rail.is-weekend time,.weekend-badge{background:#f6edda}
+.date-rail.is-holiday,.holiday-badge{color:#973f43}
+.date-rail.is-holiday time,.holiday-badge{background:#f6e5e3}
+.day-badge{padding:2px 6px;border-radius:3px}
