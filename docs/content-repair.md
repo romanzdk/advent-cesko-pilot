@@ -6,7 +6,7 @@
 
 Nečte se soukromý kalendář, nedoplňují se kalendářní identifikátory, účastníci ani kontakty. Snapshot není prohlášen za nové živé ověření jednotlivých pořadatelských stránek. Adaptér rovněž neobchází zákaz načítání sociálních sítí nebo PDF: pouze přenáší schválená veřejná fakta a primární odkazy.
 
-Registr pro tuto větev obsahuje **22 primárních hostitelů a 17 výslovných obcí**, bez překryvu s původními živými adaptéry. Polohy jsou přesné veřejné OSM podklady z těchto záznamů v `allowed_locations`; nejsou odvozovány z hostitele nebo názvu kraje. Při změně souřadnic nebo nové obci je nutná nová cílená kurace registru. Dvě schválené fragmentové primární URL (Webooker a EduPage) jsou výslovně v `allowed_fragment_urls`; nepovolují se fragmenty plošně. Platný záznam bez polohy může zůstat bez bodu na mapě.
+Původní bootstrap registr obsahoval **22 primárních hostitelů a 17 výslovných obcí**, bez překryvu s původními živými adaptéry. Aktuální registr navíc schvaluje hostitele `www.zus-popo.net` pro Velké Popovice, `www.osadaladvi.cz` pro Ládví, `www.strancice.cz` pro Strančice a `www.krestanskevanoce.cz` pro Hrusice; postup omezené aktualizace a migrace vlastnictví popisuje [provozní dokumentace](operations.md#pouze-aktualizace-redakčního-výběru). Polohy jsou přesné veřejné OSM podklady z těchto záznamů v `allowed_locations`; nejsou odvozovány z hostitele nebo názvu kraje. Při změně souřadnic nebo nové obci je nutná nová cílená kurace registru. Dvě schválené fragmentové primární URL (Webooker a EduPage) jsou výslovně v `allowed_fragment_urls`; nepovolují se fragmenty plošně. Platný záznam bez polohy může zůstat bez bodu na mapě.
 
 ## Aktivace denního přenosu
 

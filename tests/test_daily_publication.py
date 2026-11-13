@@ -61,6 +61,21 @@ class PublicationTests(unittest.TestCase):
                            collect=self.collect, validate=lambda path: True,
                            verify=self.verify, **kwargs)
 
+    def test_reviewed_only_is_forwarded_under_lock_and_pending_retry_never_recollects(self):
+        def collect(root, *, reviewed_only=False):
+            self.assertTrue(reviewed_only)
+            self.collect(root)
+        with patch.object(pub,'collect_projection',side_effect=collect) as run:
+            with patch.object(self,'verify',side_effect=RuntimeError('CI failed')):
+                with self.assertRaisesRegex(RuntimeError,'CI failed'):
+                    pub.publish(self.repo,today=date(2026,11,12),remote=str(self.remote),
+                                validate=lambda path: True,verify=self.verify,reviewed_only=True)
+            self.assertTrue((self.repo/'private/publish-state.json').exists())
+            self.assertEqual(pub.publish(self.repo,today=date(2026,11,12),remote=str(self.remote),
+                                        validate=lambda path: True,verify=self.verify,reviewed_only=True),'published')
+            self.assertEqual(run.call_count,1)
+            self.assertEqual(self.collected,1)
+
     def test_preflight_preserves_dirty_staged_unknown_branch_remote_and_divergence(self):
         for case in ['dirty', 'staged', 'unknown', 'branch', 'remote', 'diverged']:
             with self.subTest(case=case):
@@ -189,6 +204,16 @@ class PublicationTests(unittest.TestCase):
 
 
 class ProductionBoundaryTests(unittest.TestCase):
+    def test_publisher_cli_reviewed_only_is_opt_in_and_check_stays_inert(self):
+        for extra, expected in [([],{}),(['--reviewed-only'],{'reviewed_only':True})]:
+            with self.subTest(extra=extra), patch.object(pub,'publish') as publish, \
+                    contextlib.redirect_stdout(io.StringIO()) as output:
+                self.assertEqual(pub.main(extra),0)
+                self.assertEqual(publish.call_args.kwargs,expected)
+                self.assertEqual(output.getvalue(),'')
+        with patch.object(pub,'publish',side_effect=AssertionError('check must not publish')):
+            self.assertEqual(pub.main(['--check','--reviewed-only']),0)
+
     def test_check_is_silent_inert_and_has_no_date_override(self):
         with patch.object(pub.subprocess,'run',side_effect=AssertionError('network/process')):
             with contextlib.redirect_stdout(io.StringIO()) as output:
@@ -196,6 +221,19 @@ class ProductionBoundaryTests(unittest.TestCase):
             self.assertEqual(output.getvalue(),'')
         with contextlib.redirect_stderr(io.StringIO()):
             with self.assertRaises(SystemExit): pub.main(['--date','2026-11-12'])
+
+    def test_reviewed_only_collector_command_is_opt_in_and_preserves_feed_settings(self):
+        with tempfile.TemporaryDirectory(dir=os.environ.get('TMPDIR')) as directory:
+            root = Path(directory); (root/'private').mkdir()
+            settings = root/'private/reviewed-feed.json'
+            settings.write_text('{"url":"https://owned.example.cz/events.json"}')
+            for enabled in (False,True):
+                with self.subTest(enabled=enabled), patch.object(pub,'command',return_value='{}') as run:
+                    pub.collect_projection(root, reviewed_only=enabled)
+                    args = run.call_args.args[1]
+                    self.assertEqual('--reviewed-only' in args,enabled)
+                    self.assertEqual(args[args.index('--reviewed-feed-config')+1],str(settings))
+                    self.assertEqual(run.call_args.kwargs['timeout'],1800)
 
     def test_collector_exact_arguments_timeout_and_private_capture(self):
         with tempfile.TemporaryDirectory(dir=os.environ.get('TMPDIR')) as directory:

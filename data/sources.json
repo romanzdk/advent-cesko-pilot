@@ -1524,6 +1524,98 @@
       }
     },
     {
+      "id": "reviewed-www-zus-popo-net",
+      "town": "Velké Popovice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.zus-popo.net",
+      "allowed_towns": {
+        "Velké Popovice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.zus-popo.net/"
+      ],
+      "url_regex": "^https://www\\.zus\\-popo\\.net/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Velké Popovice": [
+          {
+            "lat": 49.9224718,
+            "lon": 14.6390582,
+            "precision": "town",
+            "label": "Velké Popovice",
+            "sourceUrl": "https://www.openstreetmap.org/relation/437951"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-osadaladvi-cz",
+      "town": "Ládví",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.osadaladvi.cz",
+      "allowed_towns": {
+        "Ládví": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.osadaladvi.cz/"
+      ],
+      "url_regex": "^https://www\\.osadaladvi\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Ládví": []
+      }
+    },
+    {
+      "id": "reviewed-www-strancice-cz",
+      "town": "Strančice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.strancice.cz",
+      "allowed_towns": {
+        "Strančice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.strancice.cz/"
+      ],
+      "url_regex": "^https://www\\.strancice\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Strančice": []
+      }
+    },
+    {
+      "id": "reviewed-www-krestanskevanoce-cz",
+      "town": "Hrusice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.krestanskevanoce.cz",
+      "allowed_towns": {
+        "Hrusice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.krestanskevanoce.cz/"
+      ],
+      "url_regex": "^https://www\\.krestanskevanoce\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Hrusice": [
+          {
+            "lat": 49.9114356,
+            "lon": 14.7395227,
+            "precision": "town",
+            "label": "Hrusice",
+            "sourceUrl": "https://www.openstreetmap.org/relation/437181"
+          }
+        ]
+      }
+    },
+    {
       "id": "reviewed-kckamenice-cz",
       "town": "Kamenice",
       "region": "Středočeský kraj",

@@ -74,6 +74,26 @@ Sběrač vypisuje JSON metrik; ten je provozním výstupem, nikoli zprávou pro 
 
 **Pozor:** po samostatném sběru jsou veřejné soubory rozpracované. Denní publisher záměrně odmítá nečistou pracovní kopii. Nepouštějte samostatný sběr v jeho produkčním checkoutu bez plánu, jak výsledky zkontrolovat a autorizovaně publikovat; pro experiment použijte vlastní oddělený pracovní adresář a výstupy.
 
+## Pouze aktualizace redakčního výběru
+
+`--reviewed-only` je výslovná volba sběrače i publisheru; bez ní zůstává plný sběr. Přeskočí HTTP načítání všech běžných zdrojů, nikoli jejich registraci nebo veřejnou projekci. Jejich uložené akce, kandidáti a časy poslední kontroly se zachovají; výstup dál obsahuje celý registrovaný katalog. Metriky požadavků popisují jen tento průchod, nikoli nové ověření zachovaných pořadatelů. `--source-id` případně dále omezuje pouze vybraný redakční zdroj.
+
+Izolovaný sběr s **kopií odpovídající existující SQLite** a schválenou soukromou konfigurací (prázdná DB nedokáže obnovit ostatní akce):
+
+```sh
+python3 scripts/collector.py --registry data/sources.json \
+  --db private/events.sqlite --cache private/http-cache \
+  --output private/validated-output --locations data/locations.json \
+  --reviewed-feed-config private/reviewed-feed.json --reviewed-only
+python3 scripts/validate_public.py private/validated-output
+```
+
+Pro autorizovanou publikaci z čisté produkční větve `main` použijte `python3 scripts/publish_daily.py --reviewed-only`. Publisher automaticky předá existující `private/reviewed-feed.json`; zachová sezonní pojistku, zámek, kontrolu čistoty a původu, vlastnictví pending commitu i ověření Pages. Pending obnova vždy dokončí původní commit bez nového sběru, bez ohledu na nově zvolený režim. `--check --reviewed-only` zůstává pouze místní kontrolou připravenosti. Samotné přidání volby nemění plánovač ani jeho výchozí plný sběr.
+
+Před přenosem nového feedu zkontrolujte přesné vazby hostitel–obec–poloha a případnou změnu vlastnictví existujícího stabilního ID. Tu striktní adaptér úmyslně odmítá: pod publikačním zámkem zálohujte SQLite, ověřte nepřítomnost pending stavu a proveďte jen předem auditovanou transakční migraci `events.source_id` s podmínkou ID a původního vlastníka a kontrolou počtu řádků. Neměňte ostatní události, historii, revizní stavy ani guard vlastnictví; DB nemažte. Pak proveďte dva izolované průchody se stejným registrem/feedem, validujte všechny tři JSON a porovnejte sémantické hodnoty i zachování všech ostatních záznamů, teprve poté publikujte.
+
+Čtyři nové redakční skupiny pro `www.zus-popo.net` / Velké Popovice, `www.osadaladvi.cz` / Ládví, `www.strancice.cz` / Strančice a `www.krestanskevanoce.cz` / Hrusice rozšiřují jen schválený veřejný přenos, ne crawl těchto webů. Ládví a Strančice mají neznámou polohu, nikoli domyšlené souřadnice. Verzované pokrytí je pro ně zatím výslovně nepublikovaný nulový stav bez časů kontroly; stávající události, review, metriky a datové důkazy se tím neobnovují. Aktualizace je pouze webová: žádné zápisy do kalendářů ani pozvánky; kalendářní omezení nejsou filtrem webových kategorií či obcí.
+
 ## Celý publikační průchod
 
 Z čisté produkční pracovní kopie:

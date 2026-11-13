@@ -659,7 +659,7 @@ def json_write(path, value):
     tmp.replace(path)
 
 
-def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewed_snapshot=None, reviewed_feed=None):
+def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewed_snapshot=None, reviewed_feed=None, reviewed_only=False):
     started = time.monotonic()
     checked = now()
     for source in registry['sources']:
@@ -686,7 +686,7 @@ def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewe
         con.close()
         raise
     for source in registry['sources']:
-        if source['adapter'] == 'reviewed-public':
+        if reviewed_only or source['adapter'] == 'reviewed-public':
             continue
         if source_id and source['id'] != source_id:
             continue
@@ -946,6 +946,7 @@ def main(argv=None):
     parser.add_argument('--output', required=True)
     parser.add_argument('--locations', help='Optional JSON object keyed by town, containing public location records')
     parser.add_argument('--source-id', help='Collect a single registered source; retain other stored events')
+    parser.add_argument('--reviewed-only', action='store_true', help='Refresh reviewed public records only; retain stored live-source records and coverage without fetching them')
     parser.add_argument('--offline-fixtures', metavar='MANIFEST', help='Offline JSON mapping exact source URLs to HTML paths relative to manifest')
     parser.add_argument('--project-url', help='Public project URL included in HTTP User-Agent')
     parser.add_argument('--reviewed-snapshot', help='Approved public editorial snapshot; defaults to data/reviewed-events.json')
@@ -962,7 +963,7 @@ def main(argv=None):
                 raise ValueError('Unsafe project URL')
             client.USER_AGENT = 'AdventCeskoPilot/1.0 (+' + args.project_url + ')'
         feed = json.loads(Path(args.reviewed_feed_config).read_text()) if args.reviewed_feed_config else None
-        result = collect(registry,args.db,args.output,locations,client,args.source_id,reviewed_snapshot=args.reviewed_snapshot,reviewed_feed=feed)
+        result = collect(registry,args.db,args.output,locations,client,args.source_id,reviewed_snapshot=args.reviewed_snapshot,reviewed_feed=feed,reviewed_only=args.reviewed_only)
         print(json.dumps(result,ensure_ascii=False))
         return 0
     except Exception:

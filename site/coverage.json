@@ -768,6 +768,62 @@
       "eventCount": 2,
       "reviewCount": 0,
       "lastError": null
+    },
+    {
+      "id": "reviewed-www-zus-popo-net",
+      "town": "Velké Popovice",
+      "region": "Středočeský kraj",
+      "url": "https://www.zus-popo.net/",
+      "adapter": "reviewed-public",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": "Nově registrovaný redakční zdroj; přenos a publikace zatím neproběhly."
+    },
+    {
+      "id": "reviewed-www-osadaladvi-cz",
+      "town": "Ládví",
+      "region": "Středočeský kraj",
+      "url": "https://www.osadaladvi.cz/",
+      "adapter": "reviewed-public",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": "Nově registrovaný redakční zdroj; přenos a publikace zatím neproběhly."
+    },
+    {
+      "id": "reviewed-www-strancice-cz",
+      "town": "Strančice",
+      "region": "Středočeský kraj",
+      "url": "https://www.strancice.cz/",
+      "adapter": "reviewed-public",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": "Nově registrovaný redakční zdroj; přenos a publikace zatím neproběhly."
+    },
+    {
+      "id": "reviewed-www-krestanskevanoce-cz",
+      "town": "Hrusice",
+      "region": "Středočeský kraj",
+      "url": "https://www.krestanskevanoce.cz/",
+      "adapter": "reviewed-public",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": "Nově registrovaný redakční zdroj; přenos a publikace zatím neproběhly."
     }
   ],
   "metrics": {

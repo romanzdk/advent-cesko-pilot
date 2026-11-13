@@ -48,6 +48,100 @@ class ReviewedTests(unittest.TestCase):
         return data
     def events(self):
         return json.loads((self.out/'events.json').read_text())['events']
+    def test_reviewed_only_refresh_preserves_live_records_state_and_review_without_fetching(self):
+        live = copy.deepcopy(json.loads((ROOT/'data/sources.json').read_text())['sources'][0])
+        live['seed_urls'] = live['seed_urls'][:1]
+        self.registry['sources'].append(live)
+        detail = (ROOT/'tests/fixtures/research/pilot-plzensky/fixtures/plasy_tree.html').read_bytes()
+        settings = {'url':'https://owned.example.cz/events.json'}
+        original = self.feed_data()
+        class MixedFeed(Feed):
+            def get(self, url):
+                if url == settings['url']:
+                    return super().get(url)
+                self.urls.append(url)
+                return detail if url in live['seed_urls'] else b'<html></html>'
+        first = MixedFeed(original)
+        self.collect(first, reviewed_feed=settings)
+        self.assertIn(live['index_urls'][0], first.urls)  # default is still full collection
+        self.assertIn(live['seed_urls'][0], first.urls)
+        before = {e['id']:e for e in self.events()}
+        self.assertEqual(len(before), len(original['events'])+1)
+        with closing(sqlite3.connect(self.db)) as con:
+            con.execute('INSERT INTO reviews VALUES (?,?,?,?,?)',
+                        (live['id'],live['index_urls'][0],'Ke kontrole','Nejasný termín','2026-11-12T10:00:00+01:00'))
+            con.commit()
+            stored = {table:con.execute(f'SELECT * FROM {table} WHERE source_id=?',(live['id'],)).fetchall()
+                      for table in ('events','reviews','observations','exclusions')}
+            state = con.execute('SELECT payload FROM source_state WHERE id=?',(live['id'],)).fetchone()
+            provenance = con.execute('SELECT * FROM provenance').fetchall()
+        revised = self.feed_data(generatedAt='2026-11-13T11:00:00+01:00')
+        removed = revised['events'].pop(0)['id']
+        revised['events'][0]['title'] = 'Vánoční program – aktualizace'
+        feed = Feed(revised)
+        result = self.collect(feed, reviewed_feed=settings, reviewed_only=True)
+        self.assertEqual(feed.urls, [settings['url']])
+        expected = dict(before)
+        expected.pop(removed)
+        changed = revised['events'][0]
+        expected[changed['id']] = dict(changed, region='Středočeský kraj')
+        self.assertEqual({e['id']:e for e in self.events()}, expected)
+        self.assertEqual(len(result['sources']), len(self.registry['sources']))
+        self.assertIn('Ke kontrole', (self.out/'review.json').read_text())
+        with closing(sqlite3.connect(self.db)) as con:
+            for table, rows in stored.items():
+                self.assertEqual(con.execute(f'SELECT * FROM {table} WHERE source_id=?',(live['id'],)).fetchall(), rows)
+            self.assertEqual(con.execute('SELECT payload FROM source_state WHERE id=?',(live['id'],)).fetchone(), state)
+            self.assertEqual(con.execute('SELECT * FROM provenance').fetchall()[:len(provenance)], provenance)
+        failed = Feed()
+        self.collect(failed, reviewed_feed=settings, reviewed_only=True)
+        self.assertEqual(failed.urls, [settings['url']])
+        self.assertEqual({e['id']:e for e in self.events()}, expected)
+        unconfigured = Feed()
+        self.collect(unconfigured, reviewed_only=True)
+        self.assertEqual(unconfigured.urls, [])
+        self.assertEqual({e['id']:e for e in self.events()}, expected)
+        self.assertEqual(module('validate_public').validate_directory(self.out,self.registry), len(expected))
+
+    def test_collector_cli_forwards_reviewed_only_and_defaults_to_full(self):
+        from contextlib import redirect_stdout
+        import io
+        from unittest.mock import patch
+        path = Path(self.tmp.name)/'registry.json'
+        path.write_text(json.dumps(self.registry))
+        args = ['--registry',str(path),'--db',str(self.db),
+                '--cache',str(self.db.parent/'cache'),'--output',str(self.out)]
+        for extra, expected in [([],False),(['--reviewed-only'],True)]:
+            with self.subTest(extra=extra), patch.object(self.c,'HTTPClient'), \
+                    patch.object(self.c,'collect',return_value={}) as collect, redirect_stdout(io.StringIO()):
+                self.assertEqual(self.c.main(args+extra),0)
+                self.assertEqual(collect.call_args.kwargs.get('reviewed_only',False),expected)
+
+    def test_four_new_reviewed_groups_bind_only_exact_host_town_and_approved_location(self):
+        expected = [
+            ('www.zus-popo.net','Velké Popovice',{'lat':49.9224718,'lon':14.6390582,
+             'precision':'town','label':'Velké Popovice','sourceUrl':'https://www.openstreetmap.org/relation/437951'}),
+            ('www.osadaladvi.cz','Ládví',None),
+            ('www.strancice.cz','Strančice',None),
+            ('www.krestanskevanoce.cz','Hrusice',{'lat':49.9114356,'lon':14.7395227,
+             'precision':'town','label':'Hrusice','sourceUrl':'https://www.openstreetmap.org/relation/437181'}),
+        ]
+        sources = self.registry['sources']
+        for host,town,location in expected:
+            with self.subTest(host=host):
+                matches = [s for s in sources if s['primary_host']==host]
+                self.assertEqual(len(matches),1)
+                source = matches[0]
+                self.assertEqual(source['allowed_towns'],{town:'Středočeský kraj'})
+                self.assertEqual(source['allowed_locations'],{town:[location] if location else []})
+                event = dict(self.snapshot['events'][0],sourceUrl=f'https://{host}/program',
+                             town=town,region='Středočeský kraj',location=location)
+                self.assertEqual(self.c.reviewed_public.binding(event,sources)['id'],source['id'])
+                for change in [{'town':'Jiná obec'}, {'sourceUrl':f'https://other.{host}/program'},
+                               {'location':dict(location or {},lat=50.5)}, {'region':'Plzeňský kraj'}]:
+                    with self.subTest(change=change), self.assertRaises(ValueError):
+                        self.c.reviewed_public.binding(dict(event,**change),sources)
+
     def test_snapshot_survives_daily_recollection_without_invented_verification(self):
         first = self.collect()
         self.assertEqual(len(self.events()), 51)

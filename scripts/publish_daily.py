@@ -61,7 +61,7 @@ def validate_projection(path):
     return module.validate_directory(path)
 
 
-def publish(root, *, today=None, remote=REMOTE, collect=None, validate=None, verify=None):
+def publish(root, *, today=None, remote=REMOTE, collect=None, validate=None, verify=None, reviewed_only=False):
     """Dependency overrides are for local tests only; the CLI exposes none."""
     if not in_season(today or datetime.now(ZoneInfo('Europe/Prague')).date()):
         return 'skipped'
@@ -75,10 +75,10 @@ def publish(root, *, today=None, remote=REMOTE, collect=None, validate=None, ver
         except BlockingIOError:
             return 'skipped'
         return _locked(root, remote, collect or collect_projection, validate or validate_projection,
-                       verify or verify_deployment)
+                       verify or verify_deployment, reviewed_only=reviewed_only)
 
 
-def _locked(root, remote, collect, validate, verify):
+def _locked(root, remote, collect, validate, verify, *, reviewed_only=False):
     if git(root, 'branch', '--show-current') != 'main':
         raise PublicationError('branch')
     if git(root, 'remote', 'get-url', '--all', 'origin') != remote or git(root, 'remote', 'get-url', '--push', '--all', 'origin') != remote:
@@ -100,7 +100,10 @@ def _locked(root, remote, collect, validate, verify):
     if upstream != head:
         raise PublicationError('divergence')
     base = head
-    collect(root)
+    if reviewed_only:
+        collect(root, reviewed_only=True)
+    else:
+        collect(root)
     changed = git(root, 'status', '--porcelain', '--untracked-files=all').splitlines()
     if any(line[:3] != ' M ' or line[3:] not in FILES for line in changed):
         raise PublicationError('collector-scope')
@@ -124,13 +127,14 @@ def _deliver(root, head, state, verify, push):
     return 'published'
 
 
-def collect_projection(root):
+def collect_projection(root, *, reviewed_only=False):
     settings = root/'private/reviewed-feed.json'
     feed_args = ['--reviewed-feed-config',str(settings)] if settings.exists() else []
+    mode_args = ['--reviewed-only'] if reviewed_only else []
     output = command(root, [sys.executable, str(Path(__file__).with_name('collector.py')),
         '--registry', str(root/'data/sources.json'), '--db', str(root/'private/events.sqlite'),
         '--cache', str(root/'private/http-cache'), '--output', str(root/'site'),
-        '--locations', str(root/'data/locations.json'), *feed_args], timeout=1800)
+        '--locations', str(root/'data/locations.json'), *feed_args, *mode_args], timeout=1800)
     atomic_private(root/'private/collector-last.json', json.loads(output))
 
 
@@ -164,6 +168,7 @@ def verify_deployment(root, head):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', '--self-test', action='store_true', help='Read-only local readiness check; no Git/network/mutation')
+    parser.add_argument('--reviewed-only', action='store_true', help='Refresh only reviewed public records; publish the full stored catalogue without a live-source crawl')
     args = parser.parse_args(argv)
     root = Path(__file__).resolve().parents[1]
     if args.check:
@@ -173,7 +178,10 @@ def main(argv=None):
                 return 1
         return 0
     try:
-        publish(root)
+        if args.reviewed_only:
+            publish(root, reviewed_only=True)
+        else:
+            publish(root)
         return 0
     except Exception as error:
         stage = str(error) if isinstance(error, PublicationError) else 'aktualizace'

@@ -90,7 +90,7 @@ Projekt neobchází blokované kalendáře a neslibuje obecné zpracování vše
 
 ## Kvalita a orientace v kódu
 
-**152 Python testů a 133 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, trvalý redakční přenos, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřenou sadu tohoto snapshotu. CI běží offline; úplné Chromium testy se spouštějí lokálně.
+**158 Python testů a 133 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, trvalý redakční přenos, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřenou sadu tohoto snapshotu. CI běží offline; úplné Chromium testy se spouštějí lokálně.
 
 ```text
 scripts/     sběr, adaptéry, validace a publisher
