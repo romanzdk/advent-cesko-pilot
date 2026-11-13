@@ -579,5 +579,187 @@
     "precision": "town",
     "label": "Horní Blatná — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/439487"
+  },
+  "Dačice": {
+    "lat": 49.0818108,
+    "lon": 15.437216,
+    "precision": "town",
+    "label": "Dačice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437440"
+  },
+  "Napajedla": {
+    "lat": 49.1715891,
+    "lon": 17.5113718,
+    "precision": "town",
+    "label": "Napajedla — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440885"
+  },
+  "Pohořelice": {
+    "lat": 48.9816868,
+    "lon": 16.5242181,
+    "precision": "town",
+    "label": "Pohořelice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436886"
+  },
+  "Brumov-Bylnice": {
+    "lat": 49.0914652,
+    "lon": 18.0226805,
+    "precision": "town",
+    "label": "Brumov-Bylnice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/435554"
+  },
+  "Protivín": {
+    "lat": 49.1981675,
+    "lon": 14.2174766,
+    "precision": "town",
+    "label": "Protivín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437349"
+  },
+  "Fryšták": {
+    "lat": 49.2852044,
+    "lon": 17.6834631,
+    "precision": "town",
+    "label": "Fryšták — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440759"
+  },
+  "Větřní": {
+    "lat": 48.7742466,
+    "lon": 14.2861607,
+    "precision": "town",
+    "label": "Větřní — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438467"
+  },
+  "Lanžhot": {
+    "lat": 48.7245476,
+    "lon": 16.9667035,
+    "precision": "town",
+    "label": "Lanžhot — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442285"
+  },
+  "Valtice": {
+    "lat": 48.7412949,
+    "lon": 16.755758,
+    "precision": "town",
+    "label": "Valtice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442303"
+  },
+  "Ivanovice na Hané": {
+    "lat": 49.305449,
+    "lon": 17.0936032,
+    "precision": "town",
+    "label": "Ivanovice na Hané — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441912"
+  },
+  "Podivín": {
+    "lat": 48.8282341,
+    "lon": 16.8501418,
+    "precision": "town",
+    "label": "Podivín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442290"
+  },
+  "Kunštát": {
+    "lat": 49.5072078,
+    "lon": 16.5184624,
+    "precision": "town",
+    "label": "Kunštát — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436850"
+  },
+  "Golčův Jeníkov": {
+    "lat": 49.8160108,
+    "lon": 15.4772768,
+    "precision": "town",
+    "label": "Golčův Jeníkov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440525"
+  },
+  "Kelč": {
+    "lat": 49.4786945,
+    "lon": 17.8154631,
+    "precision": "town",
+    "label": "Kelč — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437033"
+  },
+  "Rudolfov": {
+    "lat": 48.9936055,
+    "lon": 14.5411628,
+    "precision": "town",
+    "label": "Rudolfov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437670"
+  },
+  "Počátky": {
+    "lat": 49.2602542,
+    "lon": 15.2404051,
+    "precision": "town",
+    "label": "Počátky — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441042"
+  },
+  "Klobouky u Brna": {
+    "lat": 48.9951795,
+    "lon": 16.8597347,
+    "precision": "town",
+    "label": "Klobouky u Brna — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441334"
+  },
+  "Kardašova Řečice": {
+    "lat": 49.1847779,
+    "lon": 14.8531546,
+    "precision": "town",
+    "label": "Kardašova Řečice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438416"
+  },
+  "Nová Včelnice": {
+    "lat": 49.2393496,
+    "lon": 15.0726025,
+    "precision": "town",
+    "label": "Nová Včelnice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438414"
+  },
+  "Lomnice nad Lužnicí": {
+    "lat": 49.0815285,
+    "lon": 14.7181416,
+    "precision": "town",
+    "label": "Lomnice nad Lužnicí — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438424"
+  },
+  "Černovice": {
+    "lat": 49.3725903,
+    "lon": 14.9599829,
+    "precision": "town",
+    "label": "Černovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442625"
+  },
+  "Vlachovo Březí": {
+    "lat": 49.0817729,
+    "lon": 13.9588404,
+    "precision": "town",
+    "label": "Vlachovo Březí — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437977"
+  },
+  "Sedlice": {
+    "lat": 49.3771938,
+    "lon": 13.9394969,
+    "precision": "town",
+    "label": "Sedlice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436485"
+  },
+  "Bělčice": {
+    "lat": 49.5026548,
+    "lon": 13.8758456,
+    "precision": "town",
+    "label": "Bělčice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438813"
+  },
+  "Stráž nad Nežárkou": {
+    "lat": 49.0697105,
+    "lon": 14.9055137,
+    "precision": "town",
+    "label": "Stráž nad Nežárkou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437481"
+  },
+  "Deštná": {
+    "lat": 49.2651773,
+    "lon": 14.9238356,
+    "precision": "town",
+    "label": "Deštná — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437429"
   }
 }

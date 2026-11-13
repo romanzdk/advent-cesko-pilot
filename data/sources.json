@@ -6350,6 +6350,598 @@
       "allowed_venues": [
         "Horní Blatná"
       ]
+    },
+    {
+      "id": "dacice-calendar",
+      "town": "Dačice",
+      "region": "Jihočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.dacice.cz/mesto/kalendar-akci-1/"
+      ],
+      "detail_prefixes": [
+        "https://www.dacice.cz/mesto/kalendar-akci-1/"
+      ],
+      "url_regex": "^https://www\\.dacice\\.cz/mesto/kalendar-akci-1/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Dačice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Antonínská 75",
+        "Dačický ZVONEČEK - denní stacionář",
+        "Katolický dům",
+        "Knihovna Matěje Mikšíčka",
+        "Městské muzeum a galerie Dačice",
+        "Palackého náměstí",
+        "Státní zámek"
+      ]
+    },
+    {
+      "id": "napajedla-calendar",
+      "town": "Napajedla",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.napajedla.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.napajedla.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.napajedla\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Napajedla: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Masarykovo náměstí"
+      ]
+    },
+    {
+      "id": "pohorelice-calendar",
+      "town": "Pohořelice",
+      "region": "Jihomoravský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.pohorelice.cz/kultura-a-sport/kalendar-akci-1/"
+      ],
+      "detail_prefixes": [
+        "https://www.pohorelice.cz/kultura-a-sport/kalendar-akci-1/"
+      ],
+      "url_regex": "^https://www\\.pohorelice\\.cz/kultura-a-sport/kalendar-akci-1/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Pohořelice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "KC Pfann",
+        "Kinosál",
+        "Radnice"
+      ]
+    },
+    {
+      "id": "brumov-bylnice-calendar",
+      "town": "Brumov-Bylnice",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.brumov-bylnice.cz/cs/aktuality/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.brumov-bylnice.cz/cs/aktuality/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.brumov-bylnice\\.cz/cs/aktuality/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Brumov-Bylnice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Dům dětí a mládeže",
+        "Městské muzeum na Podzámčí",
+        "Náměstí H. Synkové"
+      ]
+    },
+    {
+      "id": "protivin-calendar",
+      "town": "Protivín",
+      "region": "Jihočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.muprotivin.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.muprotivin.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.muprotivin\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Protivín: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kostel sv. Alžběty",
+        "Masarykovo náměstí",
+        "Městské kulturní středisko Protivín"
+      ]
+    },
+    {
+      "id": "frystak-calendar",
+      "town": "Fryšták",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.frystak.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.frystak.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.frystak\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Fryšták: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Fryšták",
+        "Kostel sv. Mikuláše"
+      ]
+    },
+    {
+      "id": "vetrni-calendar",
+      "town": "Větřní",
+      "region": "Jihočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mestovetrni.cz/volny-cas/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mestovetrni.cz/volny-cas/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mestovetrni\\.cz/volny-cas/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Větřní: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Městská knihovna",
+        "Sál zastupitelstva města - nad knihovnou"
+      ]
+    },
+    {
+      "id": "lanzhot-calendar",
+      "town": "Lanžhot",
+      "region": "Jihomoravský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.lanzhot.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.lanzhot.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.lanzhot\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Lanžhot: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Město Lanžhot",
+        "Restaurace Podlužan"
+      ]
+    },
+    {
+      "id": "valtice-calendar",
+      "town": "Valtice",
+      "region": "Jihomoravský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.valtice.eu/aktuality/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.valtice.eu/aktuality/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.valtice\\.eu/aktuality/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Valtice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Cafe Belveder",
+        "Klášterní kostel sv. Augustina, ul. P. Bezruče - u nemocnice",
+        "Městská knihovna Valtice",
+        "Národní zemědělské muzeum Valtice",
+        "Národní zemědělské muzeum, nám. Svobody 8",
+        "Státní zámek Valtice - Bílý sál",
+        "Státní zámek Valtice - Zimní jízdárna",
+        "Valtické Podzemí, Vinařská č. ev. 47",
+        "nám. Svobody"
+      ]
+    },
+    {
+      "id": "ivanovice-na-hane-calendar",
+      "town": "Ivanovice na Hané",
+      "region": "Jihomoravský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.ivanovicenahane.cz/volny-cas/kalendar-jednodennich-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.ivanovicenahane.cz/volny-cas/kalendar-jednodennich-akci/"
+      ],
+      "url_regex": "^https://www\\.ivanovicenahane\\.cz/volny-cas/kalendar-jednodennich-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Ivanovice na Hané: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "KOSTEL SV. ONDŘEJE",
+        "KULTURNÍ DŮM - Ivanovice na Hané",
+        "PALACKÉHO NÁMĚSTÍ"
+      ]
+    },
+    {
+      "id": "podivin-calendar",
+      "town": "Podivín",
+      "region": "Jihomoravský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.podivin.cz/mesto/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.podivin.cz/mesto/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.podivin\\.cz/mesto/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Podivín: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Masarykovo náměstí"
+      ]
+    },
+    {
+      "id": "kunstat-calendar",
+      "town": "Kunštát",
+      "region": "Jihomoravský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.kunstat-mesto.cz/aktualne/kam-za-kulturou/"
+      ],
+      "detail_prefixes": [
+        "https://www.kunstat-mesto.cz/aktualne/kam-za-kulturou/"
+      ],
+      "url_regex": "^https://www\\.kunstat-mesto\\.cz/aktualne/kam-za-kulturou/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Kunštát: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kostele sv. Stanislava",
+        "Náměstí Krále Jiřího"
+      ]
+    },
+    {
+      "id": "golcuv-jenikov-calendar",
+      "town": "Golčův Jeníkov",
+      "region": "Kraj Vysočina",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.golcuv-jenikov.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.golcuv-jenikov.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.golcuv-jenikov\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Golčův Jeníkov: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Náměstí T. G. Masaryka, Golčův Jeníkov",
+        "kostel sv. Františka Serafínského"
+      ]
+    },
+    {
+      "id": "kelc-calendar",
+      "town": "Kelč",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.kelc.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.kelc.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.kelc\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Kelč: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní dům",
+        "Náměstí",
+        "Náměstí Kelč"
+      ]
+    },
+    {
+      "id": "rudolfov-calendar",
+      "town": "Rudolfov",
+      "region": "Jihočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mestorudolfov.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mestorudolfov.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mestorudolfov\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Rudolfov: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Zahrady nad městem"
+      ]
+    },
+    {
+      "id": "pocatky-calendar",
+      "town": "Počátky",
+      "region": "Kraj Vysočina",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.pocatky.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.pocatky.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.pocatky\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Počátky: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Autobusové nádraží",
+        "Sokolovna",
+        "Výchovný ústav a dětský domov se školou Počátky"
+      ]
+    },
+    {
+      "id": "klobouky-u-brna-calendar",
+      "town": "Klobouky u Brna",
+      "region": "Jihomoravský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.kloboukyubrna.eu/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.kloboukyubrna.eu/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.kloboukyubrna\\.eu/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Klobouky u Brna: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Na náměstí v Kloboukách",
+        "Sokolovna Klobouky u Brna"
+      ]
+    },
+    {
+      "id": "kardasova-recice-calendar",
+      "town": "Kardašova Řečice",
+      "region": "Jihočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.kardasova-recice.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.kardasova-recice.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.kardasova-recice\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Kardašova Řečice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kardašova Řečice"
+      ]
+    },
+    {
+      "id": "nova-vcelnice-calendar",
+      "town": "Nová Včelnice",
+      "region": "Jihočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.vcelnice.cz/aktuality/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.vcelnice.cz/aktuality/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.vcelnice\\.cz/aktuality/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Nová Včelnice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kostel Nanebevzetí Panny Marie",
+        "Městská knihovna Nová Včelnice",
+        "Městský úřad - zasedací místnost",
+        "Vánoční strom u kostela"
+      ]
+    },
+    {
+      "id": "lomnice-nad-luznici-calendar",
+      "town": "Lomnice nad Lužnicí",
+      "region": "Jihočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.lomnice-nl.cz/volny-cas/kultura-1/"
+      ],
+      "detail_prefixes": [
+        "https://www.lomnice-nl.cz/volny-cas/kultura-1/"
+      ],
+      "url_regex": "^https://www\\.lomnice-nl\\.cz/volny-cas/kultura-1/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Lomnice nad Lužnicí: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Dům s pečovatelskou službou",
+        "Farská louka",
+        "Kostel sv. Václava",
+        "Městská knihovna",
+        "Náměstí 5. května",
+        "kostel sv. Jana Křtitele"
+      ]
+    },
+    {
+      "id": "cernovice-calendar",
+      "town": "Černovice",
+      "region": "Kraj Vysočina",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mestocernovice.cz/volny-cas/kalendar-akci-1/"
+      ],
+      "detail_prefixes": [
+        "https://www.mestocernovice.cz/volny-cas/kalendar-akci-1/"
+      ],
+      "url_regex": "^https://www\\.mestocernovice\\.cz/volny-cas/kalendar-akci-1/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Černovice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kostel Povýšení sv. kříže v Černovicích",
+        "Mariánské náměstí v Černovicích",
+        "Sokolovna",
+        "zasedací místnost města Černovice"
+      ]
+    },
+    {
+      "id": "vlachovo-brezi-calendar",
+      "town": "Vlachovo Březí",
+      "region": "Jihočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.vlachovobrezi.cz/zivot-ve-meste/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.vlachovobrezi.cz/zivot-ve-meste/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.vlachovobrezi\\.cz/zivot-ve-meste/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Vlachovo Březí: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Hlavní vchod ZŠ PJB"
+      ]
+    },
+    {
+      "id": "sedlice-calendar",
+      "town": "Sedlice",
+      "region": "Jihočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mestosedlice.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mestosedlice.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mestosedlice\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Sedlice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kostel sv. Jakuba v Sedlici",
+        "náměstí T. G. Masaryka"
+      ]
+    },
+    {
+      "id": "belcice-calendar",
+      "town": "Bělčice",
+      "region": "Jihočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.belcice.cz/kultura/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.belcice.cz/kultura/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.belcice\\.cz/kultura/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Bělčice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Náměstí Bělčice",
+        "malá zasedací místnost bělčické radnice"
+      ]
+    },
+    {
+      "id": "straz-nad-nezarkou-calendar",
+      "town": "Stráž nad Nežárkou",
+      "region": "Jihočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.straznadnezarkou.cz/mesto/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.straznadnezarkou.cz/mesto/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.straznadnezarkou\\.cz/mesto/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Stráž nad Nežárkou: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "náměstí",
+        "Śkolní jídelna"
+      ]
+    },
+    {
+      "id": "destna-calendar",
+      "town": "Deštná",
+      "region": "Jihočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.destna.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.destna.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.destna\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Deštná: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Deštná"
+      ]
     }
   ]
 }
