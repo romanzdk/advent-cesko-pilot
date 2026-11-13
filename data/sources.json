@@ -10733,6 +10733,134 @@
       "allowed_venues": [
         "U rybníka"
       ]
+    },
+    {
+      "id": "jindrichuv-hradec-dre-calendar",
+      "town": "Jindřichův Hradec",
+      "region": "Jihočeský kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.jh.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.jh.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.jh\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Jindřichův Hradec: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Dům gobelínů, kulturních tradic a řemesel Dobrovského 202, Jindřichův Hradec, 377 01"
+      ]
+    },
+    {
+      "id": "kadan-dre-calendar",
+      "town": "Kadaň",
+      "region": "Ústecký kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.mesto-kadan.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.mesto-kadan.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.mesto-kadan\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Kadaň: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Františkánský klášter Jana Švermy 474, Kadaň 432 01",
+        "Kulturní dům Střelnice Čechova 147, Kadaň 432 01",
+        "Mírové náměstí Kadaň 432 01",
+        "Pobočka městské knihovny Golovinova 1340, Kadaň 432 01"
+      ]
+    },
+    {
+      "id": "bechyne-dre-calendar",
+      "town": "Bechyně",
+      "region": "Jihočeský kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.mestobechyne.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.mestobechyne.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.mestobechyne\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Bechyně: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Domov pro seniory",
+        "Kino",
+        "Kulturní dům",
+        "U Domova pro seniory",
+        "ZUŠ V. Pichla",
+        "Zahrada U Hradeb"
+      ]
+    },
+    {
+      "id": "vrbno-pod-pradedem-dre-calendar",
+      "town": "Vrbno pod Pradědem",
+      "region": "Moravskoslezský kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.vrbnopp.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.vrbnopp.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.vrbnopp\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Vrbno pod Pradědem: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Městská knihovna Sadová 312, Vrbno pod Pradědem 79326",
+        "Střecha",
+        "Střelniční ulice"
+      ]
+    },
+    {
+      "id": "revnice-dre-calendar",
+      "town": "Řevnice",
+      "region": "Středočeský kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.revnice.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.revnice.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.revnice\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Řevnice: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Dřevák u nádraží",
+        "Fotbalové hřiště",
+        "Palackého náměstí",
+        "Zámeček",
+        "Zámeček, sál"
+      ]
+    },
+    {
+      "id": "hejnice-dre-calendar",
+      "town": "Hejnice",
+      "region": "Liberecký kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.mestohejnice.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.mestohejnice.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.mestohejnice\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Hejnice: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Hejnice"
+      ]
     }
   ]
 }
