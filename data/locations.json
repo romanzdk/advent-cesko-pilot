@@ -852,5 +852,159 @@
     "precision": "town",
     "label": "Javorník — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/437059"
+  },
+  "Dubí": {
+    "lat": 50.6812997,
+    "lon": 13.788771,
+    "precision": "town",
+    "label": "Dubí — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439348"
+  },
+  "Chrastava": {
+    "lat": 50.8172919,
+    "lon": 14.968859,
+    "precision": "town",
+    "label": "Chrastava — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436608"
+  },
+  "Česká Skalice": {
+    "lat": 50.3945544,
+    "lon": 16.0436385,
+    "precision": "town",
+    "label": "Česká Skalice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440652"
+  },
+  "Vamberk": {
+    "lat": 50.1179339,
+    "lon": 16.2903737,
+    "precision": "town",
+    "label": "Vamberk — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440077"
+  },
+  "Osek": {
+    "lat": 50.6230807,
+    "lon": 13.6861489,
+    "precision": "town",
+    "label": "Osek — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439341"
+  },
+  "Chlumec": {
+    "lat": 50.699992,
+    "lon": 13.9397526,
+    "precision": "town",
+    "label": "Chlumec — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440268"
+  },
+  "Kamenický Šenov": {
+    "lat": 50.7735891,
+    "lon": 14.4728675,
+    "precision": "town",
+    "label": "Kamenický Šenov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440182"
+  },
+  "Zákupy": {
+    "lat": 50.6844952,
+    "lon": 14.6454503,
+    "precision": "town",
+    "label": "Zákupy — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438937"
+  },
+  "Český Dub": {
+    "lat": 50.6607076,
+    "lon": 14.9957954,
+    "precision": "town",
+    "label": "Český Dub — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439062"
+  },
+  "Solnice": {
+    "lat": 50.2030082,
+    "lon": 16.2383273,
+    "precision": "town",
+    "label": "Solnice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440084"
+  },
+  "Vroutek": {
+    "lat": 50.1806231,
+    "lon": 13.3804345,
+    "precision": "town",
+    "label": "Vroutek — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439323"
+  },
+  "Hoštka": {
+    "lat": 50.4885904,
+    "lon": 14.3349996,
+    "precision": "town",
+    "label": "Hoštka — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439631"
+  },
+  "Dubá": {
+    "lat": 50.5403416,
+    "lon": 14.5402337,
+    "precision": "town",
+    "label": "Dubá — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440204"
+  },
+  "Teplice nad Metují": {
+    "lat": 50.5939134,
+    "lon": 16.1707745,
+    "precision": "town",
+    "label": "Teplice nad Metují — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439935"
+  },
+  "Železnice": {
+    "lat": 50.4730968,
+    "lon": 15.3847325,
+    "precision": "town",
+    "label": "Železnice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440621"
+  },
+  "Rovensko pod Troskami": {
+    "lat": 50.5351143,
+    "lon": 15.2598248,
+    "precision": "town",
+    "label": "Rovensko pod Troskami — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439050"
+  },
+  "Vysoké nad Jizerou": {
+    "lat": 50.6857713,
+    "lon": 15.4014639,
+    "precision": "town",
+    "label": "Vysoké nad Jizerou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439038"
+  },
+  "Špindlerův Mlýn": {
+    "lat": 50.7256448,
+    "lon": 15.6067567,
+    "precision": "town",
+    "label": "Špindlerův Mlýn — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440105"
+  },
+  "Janské Lázně": {
+    "lat": 50.6305685,
+    "lon": 15.7806938,
+    "precision": "town",
+    "label": "Janské Lázně — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440242"
+  },
+  "Stárkov": {
+    "lat": 50.533924,
+    "lon": 16.1581733,
+    "precision": "town",
+    "label": "Stárkov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439932"
+  },
+  "Mašťov": {
+    "lat": 50.262274,
+    "lon": 13.2804584,
+    "precision": "town",
+    "label": "Mašťov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439641"
+  },
+  "Výsluní": {
+    "lat": 50.4664819,
+    "lon": 13.2373954,
+    "precision": "town",
+    "label": "Výsluní — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439605"
   }
 }
