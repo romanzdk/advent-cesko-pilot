@@ -213,7 +213,7 @@ def parse_event(body, source, url, window):
     title = txt(root.find('h1'))
     adapter = source['adapter']
     structured = structured_event(root)
-    if adapter in ('hranice', 'visitzlin', 'lanskroun') and structured:
+    if adapter in ('hranice', 'visitzlin', 'lanskroun', 'dre') and structured:
         raise Review('Nová strukturovaná data nesmějí obejít ověření označených polí; ověřte formát znovu.')
     wpem_price = None
     if adapter == 'wpem' and structured:
@@ -458,6 +458,25 @@ def parse_event(body, source, url, window):
         date_text = txt(scope)
         venue_match = re.search(r'RAJHRAD\s*/\s*([^/]+)\s*/', date_text, re.I)
         venue = venue_match[1].strip() if venue_match else ''
+    elif adapter == 'dre':
+        title = txt(root.find(cls='nadpis_clanku'))
+        scope = root.find(cls='kratky_popis_akce')
+        fields = {}
+        if scope:
+            for row in scope.all('tr'):
+                fields[txt(row.find('th')).rstrip(':')] = txt(row.find('td'))
+        day = r'\d{1,2}\.\d{1,2}\.20\d{2}'
+        clock = r'(?:[01]?\d|2[0-3]):[0-5]\d'
+        raw = fields.get('Datum konání', '')
+        single = re.fullmatch(rf'({day})(?: od ({clock})(?: do ({clock}))? hodin)?', raw)
+        span = re.fullmatch(rf'({day}) až ({day})', raw)
+        if single:
+            date_text = ' '.join(part for part in single.groups() if part)
+        elif span:
+            date_text = f'{span[1]} – {span[2]}'
+        else:
+            raise Review('Více termínů nebo nejednoznačný termín události; ověřte jednotlivé termíny.')
+        venue = re.sub(r',?\s*Zobrazit na mapě$', '', fields.get('Místo konání', ''))
     elif adapter == 'drupal':
         scope = root.find('main')
         title = txt(scope.find('h1')) if scope else title
@@ -490,7 +509,7 @@ def parse_event(body, source, url, window):
         raise Review('Neúplný nebo nejednoznačný interval události.')
     if len(dates) > 1:
         explicit_range = adapter in ('itrebon', 'telc', 'visitzlin', 'lanskroun') and re.match(r'^\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}\s*[-–]\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}(?!\d)', date_text)
-        if (not explicit_range and (adapter not in ('galileo', 'structured', 'drupal') or not re.search(r'\s[-–]\s', date_text))) or len(dates) > 2 or dates[1][0] < dates[0][0]:
+        if (not explicit_range and (adapter not in ('galileo', 'structured', 'drupal', 'dre') or not re.search(r'\s[-–]\s', date_text))) or len(dates) > 2 or dates[1][0] < dates[0][0]:
             raise Review('Více různých dat vyžaduje ruční kontrolu.')
     narrative_nodes = [scope.find(cls=cls) for cls in ('lead','event-action-lead__body','event-text')]
     narrative_nodes.extend(n for n in scope.children if isinstance(n,Node) and n.tag == 'p')
@@ -732,9 +751,10 @@ def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewe
         return ok, failed, fetched
 
     # One host stays on one thread, so per-host spacing and robots rules still hold.
+    # DRE (as4u) towns share one hosting backend that answers HTTP 429 to parallel requests.
     by_host = {}
     for source in live:
-        by_host.setdefault(urlsplit(source['index_urls'][0]).hostname, []).append(source)
+        by_host.setdefault('dre' if source['adapter'] == 'dre' else urlsplit(source['index_urls'][0]).hostname, []).append(source)
     prefetched = {}
     with ThreadPoolExecutor(max_workers=8) as pool:
         for batch in pool.map(lambda group: [(s['id'], fetch_source(s)) for s in group], by_host.values()):
@@ -760,6 +780,8 @@ def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewe
                 if source['adapter'] == 'telc':
                     detail = detail_root.find(cls='clanek_levy_sloupec')
                     title_node = detail.find('h2') if detail else None
+                if source['adapter'] == 'dre':
+                    title_node = detail_root.find(cls='nadpis_clanku')
                 title = clean_public(txt(title_node))[:180] or title
                 parsed = parse_event(body, source, url, registry['window'])
                 try:

@@ -1132,5 +1132,82 @@
     "precision": "town",
     "label": "Skuteč — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/439965"
+  },
+  "Prostějov": {
+    "lat": 49.4721467,
+    "lon": 17.1117979,
+    "precision": "town",
+    "label": "Prostějov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438618"
+  },
+  "Kojetín": {
+    "lat": 49.3523028,
+    "lon": 17.3026301,
+    "precision": "town",
+    "label": "Kojetín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438345"
+  },
+  "Litovel": {
+    "lat": 49.7013305,
+    "lon": 17.0758784,
+    "precision": "town",
+    "label": "Litovel — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438809"
+  },
+  "Bílina": {
+    "lat": 50.5486059,
+    "lon": 13.7746622,
+    "precision": "town",
+    "label": "Bílina — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439352"
+  },
+  "Louny": {
+    "lat": 50.3572914,
+    "lon": 13.7969195,
+    "precision": "town",
+    "label": "Louny — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439344"
+  },
+  "Frýdlant": {
+    "lat": 50.9216775,
+    "lon": 15.0794594,
+    "precision": "town",
+    "label": "Frýdlant — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439060"
+  },
+  "Týniště nad Orlicí": {
+    "lat": 50.1513634,
+    "lon": 16.0776973,
+    "precision": "town",
+    "label": "Týniště nad Orlicí — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440087"
+  },
+  "Moravská Třebová": {
+    "lat": 49.7581546,
+    "lon": 16.6641472,
+    "precision": "town",
+    "label": "Moravská Třebová — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441874"
+  },
+  "Židlochovice": {
+    "lat": 49.0379775,
+    "lon": 16.6171639,
+    "precision": "town",
+    "label": "Židlochovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441227"
+  },
+  "Rožnov pod Radhoštěm": {
+    "lat": 49.4587958,
+    "lon": 18.1429843,
+    "precision": "town",
+    "label": "Rožnov pod Radhoštěm — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442433"
+  },
+  "Hlučín": {
+    "lat": 49.896755,
+    "lon": 18.1870424,
+    "precision": "town",
+    "label": "Hlučín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437592"
   }
 }
