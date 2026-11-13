@@ -16,7 +16,8 @@ from test_three_source_expansion import fragment, WINDOW
 REGISTRY = json.loads((ROOT / 'data/sources.json').read_text())
 LOCATIONS = json.loads((ROOT / 'data/locations.json').read_text())
 NOTE = '{}: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.'
-TOWN_SOURCES = [s for s in REGISTRY['sources'] if s['adapter'] == 'galileo' and s.get('coverage_note') == NOTE.format(s['town'])]
+OBEC_NOTE = '{}: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.'
+TOWN_SOURCES = [s for s in REGISTRY['sources'] if s['adapter'] == 'galileo' and s.get('coverage_note') in (NOTE.format(s['town']), OBEC_NOTE.format(s['town']))]
 
 
 class GalileoTownSources(unittest.TestCase):
@@ -40,6 +41,15 @@ class GalileoTownSources(unittest.TestCase):
                 self.assertEqual((event['town'], event['region'], event['date']), (source['town'], source['region'], '2026-11-29'))
                 with self.assertRaises(c.Review):
                     c.parse_event(fragment('Rozsvícení vánočního stromu', '2026-11-29', 'Neověřené místo v jiné obci'), deepcopy(source), url, WINDOW)
+
+
+    def test_private_events_are_excluded(self):
+        source = TOWN_SOURCES[0]
+        url = source['detail_prefixes'][0] + 'vanocni-besidka-9999_9999cs.html'
+        body = fragment('Vánoční besídka', '2026-12-19', source['allowed_venues'][0], text='soukromá akce')
+        with self.assertRaises(c.Excluded):
+            c.parse_event(body, deepcopy(source), url, WINDOW)
+        c.parse_event(body.replace('soukromá akce', 'veřejná akce'), deepcopy(source), url, WINDOW)
 
 
 class ConcurrentHosts(unittest.TestCase):
