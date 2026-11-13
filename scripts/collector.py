@@ -8,6 +8,7 @@ from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
+import socket
 import sqlite3
 import sys
 import threading
@@ -752,14 +753,23 @@ def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewe
                 fetched.append((url, None, exc))
         return ok, failed, fetched
 
-    # One host stays on one thread, so per-host spacing and robots rules still hold.
-    # DRE (as4u) towns share one hosting backend that answers HTTP 429 to parallel requests.
-    by_host = {}
+    # One server stays on one thread: many town sites share a few hosting servers (and the DRE towns
+    # one backend that answers HTTP 429 to parallel requests), so parallelism is only across servers.
+    def server(source):
+        if source['adapter'] == 'dre':
+            return 'dre'
+        host = urlsplit(source['index_urls'][0]).hostname
+        try:
+            return socket.gethostbyname(host)
+        except OSError:
+            return host
+
+    by_server = {}
     for source in live:
-        by_host.setdefault('dre' if source['adapter'] == 'dre' else urlsplit(source['index_urls'][0]).hostname, []).append(source)
+        by_server.setdefault(server(source), []).append(source)
     prefetched = {}
     with ThreadPoolExecutor(max_workers=8) as pool:
-        for batch in pool.map(lambda group: [(s['id'], fetch_source(s)) for s in group], by_host.values()):
+        for batch in pool.map(lambda group: [(s['id'], fetch_source(s)) for s in group], by_server.values()):
             prefetched.update(batch)
     for source in live:
         sid = source['id']
