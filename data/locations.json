@@ -1209,5 +1209,19 @@
     "precision": "town",
     "label": "Hlučín — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/437592"
+  },
+  "Slavičín": {
+    "lat": 49.0889594,
+    "lon": 17.874808,
+    "precision": "town",
+    "label": "Slavičín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440915"
+  },
+  "Trutnov": {
+    "lat": 50.5608165,
+    "lon": 15.912897,
+    "precision": "town",
+    "label": "Trutnov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440154"
   }
 }
