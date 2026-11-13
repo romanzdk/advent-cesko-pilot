@@ -16,6 +16,8 @@ Veřejný export je oddělený od ukládání interní evidence. `scripts/valida
 
 Výchozí limit zůstává dvě stránky výpisu a čtrnáct detailních URL na zdroj. Registr může výslovně nastavit `max_index_pages` (celé číslo 1–4) a `max_details` (1–40); neplatné typy včetně booleanů nebo hodnoty mimo rozsah zastaví sběr před načítáním. Telč, Humpolec a Hranice mají 40 detailů; Jilemnice, Hořovice, Třeboň, Nejdek a Radotín čtyři výpisy. Nejde o neomezené procházení. Sběrač sleduje skutečné odkazy na stejném hostiteli, filtruje je podle registru a sezonního popisku. Nové odkazy mají přednost před bootstrap URL; známé uložené detaily se znovu kontrolují v rámci stejného limitu. Zachovává původní percent-encoding adres. Efektivní stropy jsou ve stavech zdrojů i souhrnné poznámce.
 
+Zdroje na různých hostitelích se stahují souběžně (nejvýše 8 vláken); jeden hostitel zůstává na jednom vlákně, takže rozestupy i robots.txt platí beze změny. Zpracování a zápis do SQLite běží dál postupně v pořadí registru.
+
 Před čtením kontroluje robots.txt. Používá HTTPS, omezená přesměrování na stejném hostiteli a alespoň 1,05 s mezi dokončením a dalším požadavkem na hostitele; delší limity robots.txt respektuje. Obsahový požadavek má timeout 15 s, limit 2 MiB a nejvýše dva pokusy. ETag a Last-Modified umožňují podmíněné GET. Při HTTP 304 se znovu použijí původní bajty po kontrole otisku.
 
 ## Adaptéry a důkazy
