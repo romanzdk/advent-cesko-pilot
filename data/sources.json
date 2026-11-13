@@ -7730,6 +7730,413 @@
       "allowed_venues": [
         "Město Výsluní"
       ]
+    },
+    {
+      "id": "netolice-calendar",
+      "town": "Netolice",
+      "region": "Jihočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.netolice.cz/turista-a-volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.netolice.cz/turista-a-volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.netolice\\.cz/turista-a-volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Netolice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Domov pro seniory Pohoda",
+        "Netolice",
+        "ZUŠ Netolice",
+        "ZŠ Netolice"
+      ]
+    },
+    {
+      "id": "sternberk-calendar",
+      "town": "Šternberk",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.sternberk.eu/aktuality/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.sternberk.eu/aktuality/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.sternberk\\.eu/aktuality/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Šternberk: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Chrám Zvěstování Panny Marie",
+        "Dům s pečovatelskou službou",
+        "Hlavní náměstí",
+        "Informační centrum",
+        "Kulturní dům Šternberk",
+        "Státní hrad Šternberk"
+      ]
+    },
+    {
+      "id": "stochov-calendar",
+      "town": "Stochov",
+      "region": "Středočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.stochov.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.stochov.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.stochov\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Stochov: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní dům - velký sál",
+        "Mírové náměstí Stochov"
+      ]
+    },
+    {
+      "id": "harrachov-calendar",
+      "town": "Harrachov",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.harrachov.cz/aktuality-akce/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.harrachov.cz/aktuality-akce/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.harrachov\\.cz/aktuality-akce/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Harrachov: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "KC KINO HARRACHOV",
+        "na náměstíčku naproti Rotundě"
+      ]
+    },
+    {
+      "id": "jachymov-calendar",
+      "town": "Jáchymov",
+      "region": "Karlovarský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mestojachymov.cz/volny-cas/kalendar-akci-2/"
+      ],
+      "detail_prefixes": [
+        "https://www.mestojachymov.cz/volny-cas/kalendar-akci-2/"
+      ],
+      "url_regex": "^https://www\\.mestojachymov\\.cz/volny-cas/kalendar-akci-2/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Jáchymov: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "DPS Jáchymov",
+        "Kulturní a kreativní centrum",
+        "ZŠ Jáchymov",
+        "prostor u kostela sv. Jáchyma",
+        "Špitální kostel Všech svatých"
+      ]
+    },
+    {
+      "id": "vitkov-calendar",
+      "town": "Vítkov",
+      "region": "Moravskoslezský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.vitkov.info/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.vitkov.info/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.vitkov\\.info/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Vítkov: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní dům Vítkov",
+        "Městská knihovna Vítkov",
+        "náměstí Jana Zajíce"
+      ]
+    },
+    {
+      "id": "benesov-nad-ploucnici-calendar",
+      "town": "Benešov nad Ploučnicí",
+      "region": "Ústecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.benesovnpl.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.benesovnpl.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.benesovnpl\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Benešov nad Ploučnicí: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Městské kino Benešov nad Ploučnicí",
+        "ZŠ Benešov nad Ploučnicí"
+      ]
+    },
+    {
+      "id": "libochovice-calendar",
+      "town": "Libochovice",
+      "region": "Ústecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.libochovice.cz/mesto/kultura/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.libochovice.cz/mesto/kultura/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.libochovice\\.cz/mesto/kultura/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Libochovice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "KS U Tří lip",
+        "Město Libochovice",
+        "Náměstí 5. května",
+        "Zámek Libochovice"
+      ]
+    },
+    {
+      "id": "jaromer-calendar",
+      "town": "Jaroměř",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.jaromer-josefov.cz/volny-cas/akce/akce-v-obci/"
+      ],
+      "detail_prefixes": [
+        "https://www.jaromer-josefov.cz/volny-cas/akce/akce-v-obci/"
+      ],
+      "url_regex": "^https://www\\.jaromer-josefov\\.cz/volny-cas/akce/akce-v-obci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Jaroměř: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Městské divadlo",
+        "Městské muzeum"
+      ]
+    },
+    {
+      "id": "loucen-calendar",
+      "town": "Loučeň",
+      "region": "Středočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.loucen.cz/mestys/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.loucen.cz/mestys/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.loucen\\.cz/mestys/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Loučeň: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní dům",
+        "Úřad městyse Loučeň"
+      ]
+    },
+    {
+      "id": "nemcice-nad-hanou-calendar",
+      "town": "Němčice nad Hanou",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.nemcice.eu/obcan/akce/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.nemcice.eu/obcan/akce/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.nemcice\\.eu/obcan/akce/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Němčice nad Hanou: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní dům"
+      ]
+    },
+    {
+      "id": "praha-bechovice-calendar",
+      "town": "Praha-Běchovice",
+      "region": "Hlavní město Praha",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.praha-bechovice.cz/zivot-v-mestske-casti/pozvanka-na-akce/"
+      ],
+      "detail_prefixes": [
+        "https://www.praha-bechovice.cz/zivot-v-mestske-casti/pozvanka-na-akce/"
+      ],
+      "url_regex": "^https://www\\.praha-bechovice\\.cz/zivot-v-mestske-casti/pozvanka-na-akce/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Praha-Běchovice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "náměstí Běchovice"
+      ]
+    },
+    {
+      "id": "praha-seberov-calendar",
+      "town": "Praha-Šeberov",
+      "region": "Hlavní město Praha",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.seberov.cz/informace/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.seberov.cz/informace/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.seberov\\.cz/informace/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Praha-Šeberov: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Náměstí v Šeberově"
+      ]
+    },
+    {
+      "id": "drevohostice-calendar",
+      "town": "Dřevohostice",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.drevohostice.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.drevohostice.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.drevohostice\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Dřevohostice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Dřeváček - předzámčí",
+        "sokolovna"
+      ]
+    },
+    {
+      "id": "chropyne-calendar",
+      "town": "Chropyně",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.muchropyne.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.muchropyne.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.muchropyne\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Chropyně: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Městské kulturní středisko Chropyně",
+        "Zámek",
+        "areál zámeckého parku v Chropyni"
+      ]
+    },
+    {
+      "id": "budisov-nad-budisovkou-calendar",
+      "town": "Budišov nad Budišovkou",
+      "region": "Moravskoslezský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.budisov.eu/aktuality/prehled-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.budisov.eu/aktuality/prehled-akci/"
+      ],
+      "url_regex": "^https://www\\.budisov\\.eu/aktuality/prehled-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Budišov nad Budišovkou: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní dům"
+      ]
+    },
+    {
+      "id": "rousinov-calendar",
+      "town": "Rousínov",
+      "region": "Jihomoravský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.rousinov.cz/volny-cas/kulturni-akce/"
+      ],
+      "detail_prefixes": [
+        "https://www.rousinov.cz/volny-cas/kulturni-akce/"
+      ],
+      "url_regex": "^https://www\\.rousinov\\.cz/volny-cas/kulturni-akce/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Rousínov: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Sušilovo náměstí",
+        "Základní škola Rousínov",
+        "sál ZUŠ Fr. Sušila Rousínov, přízemí",
+        "velký sál Záložny"
+      ]
+    },
+    {
+      "id": "skutec-calendar",
+      "town": "Skuteč",
+      "region": "Pardubický kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.skutec.cz/kultura/kalendar-akci-2/"
+      ],
+      "detail_prefixes": [
+        "https://www.skutec.cz/kultura/kalendar-akci-2/"
+      ],
+      "url_regex": "^https://www\\.skutec\\.cz/kultura/kalendar-akci-2/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Skuteč: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní klub Skuteč",
+        "Palackého náměstí"
+      ]
     }
   ]
 }

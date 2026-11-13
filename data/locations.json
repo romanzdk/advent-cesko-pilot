@@ -1006,5 +1006,131 @@
     "precision": "town",
     "label": "Výsluní — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/439605"
+  },
+  "Netolice": {
+    "lat": 49.0494308,
+    "lon": 14.1960193,
+    "precision": "town",
+    "label": "Netolice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438074"
+  },
+  "Šternberk": {
+    "lat": 49.730712,
+    "lon": 17.2988474,
+    "precision": "town",
+    "label": "Šternberk — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438507"
+  },
+  "Stochov": {
+    "lat": 50.1481264,
+    "lon": 13.9629115,
+    "precision": "town",
+    "label": "Stochov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440952"
+  },
+  "Harrachov": {
+    "lat": 50.7720087,
+    "lon": 15.4315431,
+    "precision": "town",
+    "label": "Harrachov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439012"
+  },
+  "Jáchymov": {
+    "lat": 50.3629787,
+    "lon": 12.9299257,
+    "precision": "town",
+    "label": "Jáchymov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439473"
+  },
+  "Vítkov": {
+    "lat": 49.7758144,
+    "lon": 17.7517864,
+    "precision": "town",
+    "label": "Vítkov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437635"
+  },
+  "Benešov nad Ploučnicí": {
+    "lat": 50.7413413,
+    "lon": 14.3112047,
+    "precision": "town",
+    "label": "Benešov nad Ploučnicí — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439573"
+  },
+  "Libochovice": {
+    "lat": 50.4060716,
+    "lon": 14.0422063,
+    "precision": "town",
+    "label": "Libochovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439293"
+  },
+  "Jaroměř": {
+    "lat": 50.3555139,
+    "lon": 15.9189129,
+    "precision": "town",
+    "label": "Jaroměř — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440640"
+  },
+  "Loučeň": {
+    "lat": 50.2853689,
+    "lon": 15.0204889,
+    "precision": "town",
+    "label": "Loučeň — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441536"
+  },
+  "Němčice nad Hanou": {
+    "lat": 49.3420839,
+    "lon": 17.2056673,
+    "precision": "town",
+    "label": "Němčice nad Hanou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438235"
+  },
+  "Praha-Běchovice": {
+    "lat": 50.0811678,
+    "lon": 14.6106674,
+    "precision": "town",
+    "label": "Praha-Běchovice — orientační bod katastrální části, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/433480"
+  },
+  "Praha-Šeberov": {
+    "lat": 50.0066928,
+    "lon": 14.5088585,
+    "precision": "town",
+    "label": "Praha-Šeberov — orientační bod katastrální části, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/433568"
+  },
+  "Dřevohostice": {
+    "lat": 49.426187,
+    "lon": 17.5914716,
+    "precision": "town",
+    "label": "Dřevohostice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438585"
+  },
+  "Chropyně": {
+    "lat": 49.3567094,
+    "lon": 17.3644698,
+    "precision": "town",
+    "label": "Chropyně — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437408"
+  },
+  "Budišov nad Budišovkou": {
+    "lat": 49.7949749,
+    "lon": 17.6289202,
+    "precision": "town",
+    "label": "Budišov nad Budišovkou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437588"
+  },
+  "Rousínov": {
+    "lat": 49.2015498,
+    "lon": 16.8821032,
+    "precision": "town",
+    "label": "Rousínov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436905"
+  },
+  "Skuteč": {
+    "lat": 49.8434267,
+    "lon": 15.9961932,
+    "precision": "town",
+    "label": "Skuteč — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439965"
   }
 }
