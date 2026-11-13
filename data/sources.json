@@ -5149,6 +5149,216 @@
         }
       },
       "coverage_note": "Nové Město nad Metují: omezený sezónní výběr z oficiálního městského kalendáře. Ověřena jedna stránka a čtyři místní detaily; limit dvě stránky a čtrnáct detailů. Nejde o úplné městské ani krajské pokrytí. Okolní obce a neověřená místa se nepřiřazují středu města."
+    },
+    {
+      "id": "dobroslavice-obec",
+      "town": "Dobroslavice",
+      "region": "Moravskoslezský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.dobroslavice.cz/aktualne/kalendar-akci/"
+      ],
+      "seed_urls": [],
+      "url_regex": "^https://www\\.dobroslavice\\.cz/aktualne/kalendar\\-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "coverage_note": "Omezený výběr obecního kalendáře; nikoli úplné pokrytí kraje.",
+      "feed_url": null,
+      "detail_prefixes": [
+        "https://www.dobroslavice.cz/aktualne/kalendar-akci/"
+      ],
+      "allowed_venues": [
+        "Kulturní dům",
+        "Obec Dobroslavice"
+      ],
+      "max_details": 14,
+      "max_index_pages": 2,
+      "event_reviews": {
+        "https://www.dobroslavice.cz/aktualne/kalendar-akci/advent-plny-kridleni-501_102cs.html": {
+          "sourceId": "dobroslavice-obec",
+          "sourceUrl": "https://www.dobroslavice.cz/aktualne/kalendar-akci/advent-plny-kridleni-501_102cs.html",
+          "sourceTown": "Dobroslavice",
+          "expectedTitle": "Advent plný KŘÍDLENÍ",
+          "expectedDate": "2026-11-28",
+          "expectedEndDate": null,
+          "expectedVenue": "Nespecifikováno",
+          "contentHash": "e2a334caa29910f0442af7d6345f05631539befda924fb8c02c9d8652ce2a805",
+          "decision": "exclude",
+          "reason": "Program se koná v Aule VŠB–TUO v Ostravě-Porubě, nikoli v Dobroslavicích; nepublikuje se pod obcí vydavatele.",
+          "overrides": {}
+        },
+        "https://www.dobroslavice.cz/aktualne/kalendar-akci/tvoreni-adventnich-vencu-497_100cs.html": {
+          "sourceId": "dobroslavice-obec",
+          "sourceUrl": "https://www.dobroslavice.cz/aktualne/kalendar-akci/tvoreni-adventnich-vencu-497_100cs.html",
+          "sourceTown": "Dobroslavice",
+          "expectedTitle": "Tvoření adventních věnců",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Kulturní dům",
+          "contentHash": "447a7af9ac80fd81efe13e22f72e2aa22928359c3099dbb2335b33fe1e13110c",
+          "decision": "accept",
+          "reason": "Primární obecní detail a aktuální plakát potvrzují program, datum a obec.",
+          "overrides": {
+            "venue": "Sál kulturního domu Dobroslavice",
+            "notes": [
+              "Programový plakát ověřen 2026-11-13: https://www.dobroslavice.cz/evt_image.php?img=2541&v=1794386652",
+              "Materiál a hotové věnce lze koupit na místě; přesné ceny pořadatel neuvádí. Tvoření probíhá v sále kulturního domu v Dobroslavicích."
+            ]
+          }
+        },
+        "https://www.dobroslavice.cz/aktualne/kalendar-akci/rozsviceni-vanocniho-stromu-v-dobroslavicich-498_101cs.html": {
+          "sourceId": "dobroslavice-obec",
+          "sourceUrl": "https://www.dobroslavice.cz/aktualne/kalendar-akci/rozsviceni-vanocniho-stromu-v-dobroslavicich-498_101cs.html",
+          "sourceTown": "Dobroslavice",
+          "expectedTitle": "Rozsvícení vánočního stromu v Dobroslavicích",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Obec Dobroslavice",
+          "contentHash": "184cf1c05de4d466b3f5010319bf97533664aa0e968316209fef5588a5739c67",
+          "decision": "accept",
+          "reason": "Primární obecní detail a aktuální plakát potvrzují program, datum a obec.",
+          "overrides": {
+            "venue": "Autobusová zastávka v Dobroslavicích",
+            "notes": [
+              "Programový plakát ověřen 2026-11-13: https://www.dobroslavice.cz/evt_image.php?img=2542&v=1794389413",
+              "Plakát upřesňuje místo na autobusovou zastávku. Začátek je v 17:15, konec 17:45 uvádí obecní detail. Hrníčky na vánoční punč s sebou."
+            ]
+          }
+        },
+        "https://www.dobroslavice.cz/aktualne/kalendar-akci/vanocni-koncert-476_97cs.html": {
+          "sourceId": "dobroslavice-obec",
+          "sourceUrl": "https://www.dobroslavice.cz/aktualne/kalendar-akci/vanocni-koncert-476_97cs.html",
+          "sourceTown": "Dobroslavice",
+          "expectedTitle": "Vánoční koncert",
+          "expectedDate": "2026-12-05",
+          "expectedEndDate": null,
+          "expectedVenue": "Kulturní dům",
+          "contentHash": "a0ea981a9f07393174af13704854717f83692bd0da9b83fa8a6243ba835ac774",
+          "decision": "accept",
+          "reason": "Primární obecní detail a aktuální plakát potvrzují program, datum a obec.",
+          "overrides": {
+            "notes": [
+              "Programový plakát ověřen 2026-11-13: https://www.dobroslavice.cz/evt_image.php?img=2530&v=1793787943",
+              "Po koncertu bude vyhodnocena fotografická soutěž OKO; cena ani konec koncertu nejsou uvedeny."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "horni-lhota-obec",
+      "town": "Horní Lhota",
+      "region": "Moravskoslezský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.hornilhota.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "seed_urls": [],
+      "url_regex": "^https://www\\.hornilhota\\.cz/zivot\\-v\\-obci/kalendar\\-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "coverage_note": "Omezený výběr obecního kalendáře; nikoli úplné pokrytí kraje.",
+      "feed_url": null,
+      "detail_prefixes": [
+        "https://www.hornilhota.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "allowed_venues": [
+        "Prostranství před obchodem",
+        "Obecní dům"
+      ],
+      "max_details": 14,
+      "max_index_pages": 2,
+      "event_reviews": {
+        "https://www.hornilhota.cz/zivot-v-obci/kalendar-akci/rozsviceni-vanocniho-stromu-na-prostranstvi-pred-obchodem-873_305cs.html": {
+          "sourceId": "horni-lhota-obec",
+          "sourceUrl": "https://www.hornilhota.cz/zivot-v-obci/kalendar-akci/rozsviceni-vanocniho-stromu-na-prostranstvi-pred-obchodem-873_305cs.html",
+          "sourceTown": "Horní Lhota",
+          "expectedTitle": "Rozsvícení vánočního stromu na prostranství před obchodem",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Prostranství před obchodem",
+          "contentHash": "781653ae55f0891eacf18537377cf4933e7ad64b9d82a716fca9fa7d0e8d695a",
+          "decision": "accept",
+          "reason": "Primární obecní detail a aktuální plakát potvrzují program, datum a obec.",
+          "overrides": {
+            "notes": [
+              "Programový plakát ověřen 2026-11-13: https://www.hornilhota.cz/evt_image.php?img=3604&v=1794510900",
+              "16:00 začíná prodej občerstvení, 16:30 zpívání koled; od 17:00 je uvedeno slovo faráře, žehnání věnců, scénka a rozsvícení stromu. Čas 16:00 není samotné rozsvícení."
+            ]
+          }
+        },
+        "https://www.hornilhota.cz/zivot-v-obci/kalendar-akci/rozsviceni-vanocniho-stromu-879_312cs.html": {
+          "sourceId": "horni-lhota-obec",
+          "sourceUrl": "https://www.hornilhota.cz/zivot-v-obci/kalendar-akci/rozsviceni-vanocniho-stromu-879_312cs.html",
+          "sourceTown": "Horní Lhota",
+          "expectedTitle": "Rozsvícení vánočního stromu",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "",
+          "contentHash": "317f417ea18b76728fa4b4367e1036f3d36175e74de0847b40c963904084105c",
+          "decision": "exclude",
+          "reason": "Duplicitní pozvánka ke stejnému programu dne 29. 11. 2026 od 16:00 před obchodem. Zachována je podrobnější obecní URL končící 873_305cs.html; plakáty obou pozvánek jsou totožné.",
+          "overrides": {}
+        },
+        "https://www.hornilhota.cz/zivot-v-obci/kalendar-akci/adventni-jarmark-877_310cs.html": {
+          "sourceId": "horni-lhota-obec",
+          "sourceUrl": "https://www.hornilhota.cz/zivot-v-obci/kalendar-akci/adventni-jarmark-877_310cs.html",
+          "sourceTown": "Horní Lhota",
+          "expectedTitle": "Adventní jarmark",
+          "expectedDate": "2026-12-12",
+          "expectedEndDate": null,
+          "expectedVenue": "Obecní dům",
+          "contentHash": "94bbc827a9d79815835b60f73e2e97f3b9eb46de335d33176fdfe63c8716efc0",
+          "decision": "accept",
+          "reason": "Primární obecní detail a aktuální plakát potvrzují program, datum a obec.",
+          "overrides": {
+            "venue": "Prostranství za obecním domem",
+            "price": "Jízda na velbloudu či oslíkovi 80 Kč; vstupné na jarmark neuvedeno.",
+            "notes": [
+              "Programový plakát ověřen 2026-11-13: https://www.hornilhota.cz/evt_image.php?img=3605&v=1794563548",
+              "15:30 zahájení jarmarku a zvířátka, 16:00 andělské vystoupení dětí MŠ, 16:30 živý Betlém, 17:00 Krampus čerti s ohňovou show. Cena 80 Kč platí za jízdu, nikoli jako vstupné na celý jarmark."
+            ]
+          }
+        }
+      },
+      "audited_events": {
+        "https://www.hornilhota.cz/zivot-v-obci/kalendar-akci/vanocni-dilny-s-mikulasem-a-koncert-osamele-palacinky-880_313cs.html": {
+          "sourceId": "horni-lhota-obec",
+          "sourceTown": "Horní Lhota",
+          "sourceUrl": "https://www.hornilhota.cz/zivot-v-obci/kalendar-akci/vanocni-dilny-s-mikulasem-a-koncert-osamele-palacinky-880_313cs.html",
+          "expectedTitle": "Vánoční dílny s Mikulášem a koncert Osamělé palačinky",
+          "contentHash": "1abd75ccaf8e3da604b6351951eb490c411e25f7e5eb4bae4ff876b1bc583134",
+          "decision": "accept",
+          "reason": "Plakát potvrzuje místní společenský sál a tělocvičnu, dětské i dospělé dílny, cenu balíčku a povinné potvrzení účasti. Jedna návazná akce není souvislý časový interval.",
+          "verifiedAt": "2026-11-13T20:27:09+00:00",
+          "events": [
+            {
+              "title": "Vánoční dílny s Mikulášem a koncert Osamělé palačinky",
+              "town": "Horní Lhota",
+              "date": "2026-12-06",
+              "endDate": null,
+              "startTime": "14:30",
+              "endTime": null,
+              "venue": "Společenský sál (dílny); tělocvična (koncert)",
+              "category": "tvoreni",
+              "price": "Děti: dílny zdarma; dospělí: výroba svícnu 100 Kč; mikulášský balíček 100 Kč.",
+              "registration": "Pořadatel požaduje potvrzení účasti do 29. 11. 2026; podmínky ověřte přímo u obce.",
+              "registrationUrl": null,
+              "description": "Vánoční tvoření s Mikulášem a navazujícím koncertem v Horní Lhotě.",
+              "notes": [
+                "Programový plakát ověřen 2026-11-13: https://www.hornilhota.cz/evt_image.php?img=3607&v=1794563987",
+                "14:30 start dílniček, 15:30 návštěva Mikuláše, 17:30 koncert tria violoncellistů Osamělé palačinky a souběžné promítání pohádky pro menší děti. Koncert je v tělocvičně, dílny ve společenském sále. Cena koncertu není uvedena."
+              ],
+              "audience": "všichni",
+              "location": {
+                "lat": 49.8530442,
+                "lon": 18.0683779,
+                "precision": "town",
+                "label": "Horní Lhota — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/437335"
+              },
+              "occurrenceKey": "main",
+              "allowExtendedEnd": false
+            }
+          ]
+        }
+      }
     }
   ]
 }

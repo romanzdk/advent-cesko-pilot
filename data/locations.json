@@ -257,5 +257,19 @@
     "precision": "town",
     "label": "Žireč (Dvůr Králové nad Labem) — orientační střed obce či místní části, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/21035129"
+  },
+  "Dobroslavice": {
+    "lat": 49.8803361,
+    "lon": 18.1409218,
+    "precision": "town",
+    "label": "Dobroslavice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437682"
+  },
+  "Horní Lhota": {
+    "lat": 49.8530442,
+    "lon": 18.0683779,
+    "precision": "town",
+    "label": "Horní Lhota — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437335"
   }
 }
