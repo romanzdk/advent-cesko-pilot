@@ -7,7 +7,7 @@ Tento dokument je určený ke správě autorizované pracovní kopie projektu. V
 - Python sběrač a publisher běží na lokálním serveru. Produkční publisher používá POSIX zámek `fcntl`, Git a autentizovaný GitHub CLI `gh`.
 - Hermes pouze plánuje spuštění skriptu v režimu `no_agent`. K samotnému sběru nejsou potřeba LLM ani API klíče pořadatelů.
 - GitHub Actions provede kontroly a nasadí pouze `site/` na GitHub Pages.
-- Návštěvníkův prohlížeč načítá statické soubory a mapové dlaždice. Nepřistupuje k SQLite ani k lokálnímu serveru.
+- Návštěvníkův prohlížeč načítá statické soubory a mapové dlaždice; pro dobrovolná hlášení používá oddělené veřejné přijímací rozhraní. Nemá přístup k interním databázím ani správě infrastruktury.
 
 Sběrač používá standardní knihovnu Pythonu. Aktuální prostředí bylo ověřené s Pythonem 3.14.9 a Node.js 26.12.1; nejde o prohlášení, že starší vydání nejsou podporovaná. Prohlížečové testy mají samostatnou závislost Playwright v `tests-ui/package.json`.
 
@@ -92,7 +92,7 @@ Pro autorizovanou publikaci z čisté produkční větve `main` použijte `pytho
 
 Před přenosem nového feedu zkontrolujte přesné vazby hostitel–obec–poloha a případnou změnu vlastnictví existujícího stabilního ID. Tu striktní adaptér úmyslně odmítá: pod publikačním zámkem zálohujte SQLite, ověřte nepřítomnost pending stavu a proveďte jen předem auditovanou transakční migraci `events.source_id` s podmínkou ID a původního vlastníka a kontrolou počtu řádků. Neměňte ostatní události, historii, revizní stavy ani guard vlastnictví; DB nemažte. Pak proveďte dva izolované průchody se stejným registrem/feedem, validujte všechny tři JSON a porovnejte sémantické hodnoty i zachování všech ostatních záznamů, teprve poté publikujte.
 
-Čtyři nové redakční skupiny pro `www.zus-popo.net` / Velké Popovice, `www.osadaladvi.cz` / Ládví, `www.strancice.cz` / Strančice a `www.krestanskevanoce.cz` / Hrusice rozšiřují jen schválený veřejný přenos, ne crawl těchto webů. Ládví a Strančice mají neznámou polohu, nikoli domyšlené souřadnice. Verzované pokrytí je pro ně zatím výslovně nepublikovaný nulový stav bez časů kontroly; stávající události, review, metriky a datové důkazy se tím neobnovují. Aktualizace je pouze webová: žádné zápisy do kalendářů ani pozvánky; kalendářní omezení nejsou filtrem webových kategorií či obcí.
+Redakční skupiny pro `www.zus-popo.net` / Velké Popovice, `www.osadaladvi.cz` / Ládví, `www.strancice.cz` / Strančice a `www.krestanskevanoce.cz` / Hrusice pokrývají schválený veřejný přenos, ne crawl těchto webů. Ládví a Strančice mají neznámou polohu, nikoli domyšlené souřadnice. Aktuální počty a stav přenosu se odvozují z publikovaného pokrytí. Aktualizace je pouze webová: žádné zápisy do kalendářů ani pozvánky; kalendářní omezení nejsou filtrem webových kategorií či obcí.
 
 ## Celý publikační průchod
 
@@ -151,7 +151,7 @@ Panel „Chybí vám akce nebo obec?“ nabízí plný návrh a rychlý tip. U k
 
 Přijato / čeká ve frontě, nejisté odeslání a ověřené zveřejnění jsou odlišné stavy. Potvrzený odkaz se ukáže až po přesném readbacku issue. Po přijetí či nejednoznačné odpovědi se blokuje ruční záloha a nové podání; opakování ověřuje stejné ID, ne další kopii. Rozpracované opravy jsou svázané s konkrétní akcí i při přepnutí dialogu nebo přidání dalších karet do seznamu. Manuální návrh na GitHubu před přijetím zůstává dostupný a vyžaduje účet a konečné potvrzení návštěvníka.
 
-Podrobnosti, hranice a příkazy popisuje [API a soukromá fronta](feedback-api.md). Runtime používá neměnný obsahový release backendu, credential-free Docker receiver s read-only katalogovým adresářem a oddělenou user-systemd službu workeru. Receiver nemá GitHub přístup, domov ani privátní sockety; jeho odchozí spojení jsou zakázaná. Stavová fronta se při aktualizaci nikdy nemaže ani neobnovuje ze staré zálohy. Ověření nové verze musí zahrnout skutečné denial probes, zachování soukromých Serve listenerů, restart vlastních služeb a veřejnou HTTPS/CORS dostupnost. `/health` potvrzuje jen receiver, nikoli odesílatele nebo GitHub.
+[Veřejný postup a obecné bezpečnostní hranice](feedback-api.md) vysvětlují příjem, frontu a odděleného odesílatele bez přístupových údajů v prohlížeči. Konkrétní serverové cesty, interní síť a příkazy pro správu tohoto nasazení zde nerozepisujeme; úplná provozní konfigurace a obnovovací poznámky se vedou neveřejně mimo repozitář. Adresa veřejného přijímacího rozhraní zůstává zjistitelná z klientského kódu a síťových požadavků. Ochrana musí vycházet z oddělení oprávnění, validace a provozních kontrol, ne z utajení této adresy. Fronta se při aktualizaci nesmí mazat ani obnovovat ze staré kopie kvůli opakování. Kontrola dostupnosti příjmu sama nepotvrzuje dostupnost odesílatele ani GitHubu.
 
 Základní ochrany zahrnují podepsaný jednorázový challenge, omezenou velikost/počet požadavků a globální limit přijetí; nejsou silnou ochranou proti botům. Frontu a její kapacitu je nutné provozně sledovat. Návrhy a odkazy jsou nedůvěryhodná data, nikoli instrukce nebo automatické vstupy sběrače. Před zařazením se ověří primární zdroj, rok, termín, lokalita a duplicity.
 

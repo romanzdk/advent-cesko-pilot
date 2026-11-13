@@ -2,13 +2,13 @@
   <img src="site/social-preview.png" alt="Advent v Česku 2026 — sezonní mapa veřejných akcí" width="100%">
 </p>
 
-# Advent v Česku
+# Kam na advent
 
 **Najděte svůj adventní program. S odkazem přímo na pořadatele.**
 
 Sezonní mapa adventních a vánočních akcí pro **20. listopadu – 24. prosince 2026**. Rozsvěcení stromků, mikulášské nadílky, jarmarky, koncerty i tvoření na jednom místě — s přiznanými nejistotami a ověřitelným původem údajů.
 
-[**Otevřít mapu**](https://kamnaadvent.cz/) · [Poslat tip](https://github.com/romanzdk/advent-cesko-pilot/issues/new?template=tip.md) · [Veřejná hlášení](https://github.com/romanzdk/advent-cesko-pilot/issues?q=is%3Aissue) · [Provozní dokumentace](docs/operations.md)
+[**Otevřít mapu**](https://kamnaadvent.cz/) · [Přidat akci nebo tip](https://kamnaadvent.cz/#feedback) · [Veřejná hlášení](https://github.com/romanzdk/advent-cesko-pilot/issues?q=is%3Aissue) · [Provozní dokumentace](docs/operations.md)
 
 [![Kontroly a nasazení](https://github.com/romanzdk/advent-cesko-pilot/actions/workflows/deploy.yml/badge.svg)](https://github.com/romanzdk/advent-cesko-pilot/actions/workflows/deploy.yml)
 ![Sezóna 2026](https://img.shields.io/badge/sez%C3%B3na-2026-244b3c?style=flat)
@@ -24,7 +24,18 @@ Sezonní mapa adventních a vánočních akcí pro **20. listopadu – 24. prosi
 - **Kalendář a navigace.** Samostatný ICS export každé akce a trasa v Google Maps; orientační polohy jsou výslovně označené. Mapový podklad na webu zůstává OpenStreetMap.
 - **Sdílení konkrétní akce.** Klikací název má trvalý odkaz podle ID (`#akce=…`). Otevřený odkaz najde a zvýrazní kartu i po načtení dat; neexistující akce zobrazí vysvětlení. Tlačítko Sdílet použije systémové sdílení, nebo kopírování odkazu s ruční zálohou. URL neobsahuje polohu ani aktuální filtry. Náhled při sdílení zůstává společný pro celý web.
 - **Viditelné pokrytí.** Sledované zdroje, poslední kontroly a položky čekající na ověření nejsou skryté.
-- **Veřejné tipy, návrhy a opravy.** Strukturovaný formulář nabízí název, obec, místo, datum a časy, kraj, kategorii, cenu, rezervace, publikum, popis, poznámky a zdroj; zachovává i rychlý tip. Odeslání bez účtu používá oddělenou frontu a soukromého odesílatele na veřejný GitHub. U každé akce je Nahlásit chybu s jejím kontextem. Přijetí do fronty není totéž co potvrzené zveřejnění; zařazení do mapy je vždy ruční. Návrhy jsou veřejné a vyžadují výslovný souhlas, nikoli osobní kontakty. Ruční GitHub návrh zůstává zálohou před přijetím a vyžaduje účet.
+- **Veřejné tipy, návrhy a opravy.** Plný formulář nové akce, rychlý tip i Nahlásit chybu u každé karty. Odeslání přes web nevyžaduje GitHub účet; podněty se zveřejňují se souhlasem návštěvníka a před změnou mapy procházejí kontrolou.
+
+## Jak poslat tip nebo nahlásit chybu
+
+1. **Nová akce nebo rychlý tip:** na [webu otevřete formulář](https://kamnaadvent.cz/#feedback). Přidejte veřejný zdroj a známé údaje; u plného návrhu datum vyplňte nebo výslovně označte za neznámé.
+2. **Oprava:** na kartě konkrétní akce klikněte na **Nahlásit chybu**, vyberte typ problému a popište opravu, ideálně s odkazem na pořadatele.
+3. Potvrďte souhlas s **veřejným zveřejněním na GitHubu** a odešlete. Nepřidávejte osobní kontakty ani citlivé údaje. GitHub účet při odeslání přes web není potřeba.
+4. Formulář nejprve potvrdí přijetí do fronty a teprve po ověření zveřejnění ukáže odkaz na hlášení. **Přijatý návrh není automaticky schválená změna mapy**; následuje redakční kontrola zdroje a duplicit.
+
+Při nejisté odpovědi použijte ověření stavu původního podání, ne další kopii. Ruční návrh přímo na GitHubu zůstává zálohou před přijetím a vyžaduje vlastní účet. Podání samo nevytváří kalendářní události ani pozvánky.
+
+[Celý postup, soukromí a obecné bezpečnostní hranice](docs/feedback-api.md)
 
 ## Ukázka rozhraní
 
@@ -41,14 +52,14 @@ Sezonní mapa adventních a vánočních akcí pro **20. listopadu – 24. prosi
 
 ## Pokrytí a rozsah
 
-**Ověřený sezonní výběr: 206 akcí ve 14 krajích.** Nejde o úplné pokrytí jednotlivých krajů.
+**Ověřený sezonní výběr: 215 akcí ve 14 krajích.** Nejde o úplné pokrytí jednotlivých krajů.
 
 | Kraj | Publikované akce |
 | --- | ---: |
 | Plzeňský kraj | 17 |
 | Liberecký kraj | 17 |
 | Jihomoravský kraj | 9 |
-| Středočeský kraj | 60 |
+| Středočeský kraj | 69 |
 | Jihočeský kraj | 12 |
 | Kraj Vysočina | 29 |
 | Karlovarský kraj | 7 |
@@ -60,7 +71,7 @@ Sezonní mapa adventních a vánočních akcí pro **20. listopadu – 24. prosi
 | Moravskoslezský kraj | 1 |
 | Pardubický kraj | 1 |
 
-Registr obsahuje **44 zdrojových skupin**: 22 automaticky čtených kalendářů a redakční veřejný výběr od 22 primárních hostitelů. Redakční výběr přidává 51 již veřejných záznamů s původním datem ověření; kontrola jeho přenosu není novým ověřením každé pořadatelské stránky.
+Registr obsahuje **48 zdrojových skupin**: 22 automaticky čtených kalendářů a redakční veřejný výběr od 26 primárních hostitelů. Redakční výběr přidává 60 již veřejných záznamů s původním datem ověření; kontrola jeho přenosu není novým ověřením každé pořadatelské stránky.
 
 Jde o **výběr zdrojů, ne úplný kalendář krajů nebo celé ČR**. Aktuální čas aktualizace, rozsah a chyby načítání najdete na webu v panelu *Zdroje a pokrytí*. Nejasné kandidáty sběrač nepublikuje; [postup kontroly](docs/operations.md#ruční-kontrola-kandidátů) a [pravidla trvalého redakčního přenosu](docs/content-repair.md).
 
