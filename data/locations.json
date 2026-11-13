@@ -229,5 +229,33 @@
     "precision": "town",
     "label": "Nové Město nad Metují — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/440694"
+  },
+  "Rtyně v Podkrkonoší": {
+    "lat": 50.505532,
+    "lon": 16.0711662,
+    "precision": "town",
+    "label": "Rtyně v Podkrkonoší — orientační střed obce či místní části, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440255"
+  },
+  "Lhota za Červeným Kostelcem": {
+    "lat": 50.4838175,
+    "lon": 16.0810022,
+    "precision": "town",
+    "label": "Lhota za Červeným Kostelcem — orientační střed obce či místní části, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/node/1586673712"
+  },
+  "Červený Kostelec – Bohdašín": {
+    "lat": 50.5000001,
+    "lon": 16.1127047,
+    "precision": "town",
+    "label": "Červený Kostelec – Bohdašín — orientační střed obce či místní části, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/21067313"
+  },
+  "Žireč (Dvůr Králové nad Labem)": {
+    "lat": 50.41392,
+    "lon": 15.8499116,
+    "precision": "town",
+    "label": "Žireč (Dvůr Králové nad Labem) — orientační střed obce či místní části, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/21035129"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T14:02:30+00:00",
+  "generatedAt": "2026-11-13T14:32:41+00:00",
   "window": {
     "from": "2026-11-20",
     "through": "2026-12-24"
@@ -248,11 +248,11 @@
       "maxDetails": 14,
       "excludedCount": 1,
       "sourceNote": "Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.",
-      "status": "partial",
-      "lastChecked": "2026-11-13T12:13:30+00:00",
-      "lastSuccess": "2026-11-13T12:13:30+00:00",
-      "eventCount": 8,
-      "reviewCount": 1,
+      "status": "ok",
+      "lastChecked": "2026-11-13T14:32:41+00:00",
+      "lastSuccess": "2026-11-13T14:32:41+00:00",
+      "eventCount": 9,
+      "reviewCount": 0,
       "lastError": null
     },
     {
@@ -911,16 +911,16 @@
       "region": "Královéhradecký kraj",
       "url": "https://www.ckzije.cz/kalendar-akci/?page=3",
       "adapter": "galileo",
-      "coverageNote": "Červený Kostelec: omezený výběr adventních akcí z oficiálního městského kalendáře CK Žije. Dvě ověřené stránky, nejvýše 18 detailů; Rtyně, Žireč, Lhota a Bohdašín zůstávají k samostatnému ověření lokality, ne na středu města. Nejde o úplné městské ani krajské pokrytí. Limit sběru: 2 stránek a 18 detailů.",
+      "coverageNote": "Červený Kostelec: omezený výběr adventních akcí z oficiálního městského kalendáře CK Žije. Dvě stránky, nejvýše 18 detailů. Jednotlivé obsahově ověřené akce ve Rtyni, Žirči, Lhotě a Bohdašíně mají vlastní lokalitu a orientační bod, nikoli střed Červeného Kostelce. Nejde o úplné městské ani krajské pokrytí. Limit sběru: 2 stránek a 18 detailů.",
       "maxIndexPages": 2,
       "maxDetails": 18,
       "excludedCount": 0,
       "sourceNote": "Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.",
-      "status": "partial",
-      "lastChecked": "2026-11-13T14:01:25+00:00",
-      "lastSuccess": "2026-11-13T14:01:25+00:00",
-      "eventCount": 8,
-      "reviewCount": 10,
+      "status": "ok",
+      "lastChecked": "2026-11-13T14:31:37+00:00",
+      "lastSuccess": "2026-11-13T14:31:37+00:00",
+      "eventCount": 18,
+      "reviewCount": 0,
       "lastError": null
     },
     {
@@ -943,17 +943,17 @@
     }
   ],
   "metrics": {
-    "runId": "6e60ff26-6e2e-4643-92bc-5142b37e6838",
-    "durationSeconds": 17.409,
-    "requestCount": 6,
+    "runId": "a48dc0fe-eebc-4485-80f0-c9799ce30c53",
+    "durationSeconds": 44.056,
+    "requestCount": 14,
     "http304": 0,
     "cacheUnchanged": 0,
     "eventsNew": 0,
     "eventsChanged": 0,
-    "eventsUnchanged": 4,
-    "eventsPublished": 296,
-    "reviewCount": 11,
-    "excludedCount": 0,
+    "eventsUnchanged": 9,
+    "eventsPublished": 307,
+    "reviewCount": 0,
+    "excludedCount": 1,
     "aiCalls": 0
   },
   "complete": false,
