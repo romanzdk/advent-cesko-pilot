@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Bounded, deterministic public-event collector (stdlib only)."""
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone, date
 import hashlib
 from html.parser import HTMLParser
@@ -9,6 +10,7 @@ from pathlib import Path
 import re
 import sqlite3
 import sys
+import threading
 import time
 import unicodedata
 from urllib.parse import urljoin, urlsplit
@@ -698,40 +700,58 @@ def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewe
         con.rollback()
         con.close()
         raise
-    for source in registry['sources']:
-        if reviewed_only or source['adapter'] == 'reviewed-public':
-            continue
-        if source_id and source['id'] != source_id:
-            continue
-        sid = source['id']
-        old = con.execute('SELECT payload FROM source_state WHERE id=?', (sid,)).fetchone()
-        previous = json.loads(old[0]) if old else {}
-        failures, successful, review_count, excluded_count = 0, 0, 0, 0
+    live = [s for s in registry['sources'] if not (reviewed_only or s['adapter'] == 'reviewed-public') and not (source_id and s['id'] != source_id)]
+    known = {s['id']: [r[0] for r in con.execute('SELECT url FROM events WHERE source_id=? ORDER BY url', (s['id'],))] for s in live}
+
+    def fetch_source(source):
         max_pages = source.get('max_index_pages', 2)
-        max_details = source.get('max_details', 14)
         indices = list(dict.fromkeys(source['index_urls']))[:max_pages]
-        details = []
-        i = 0
+        ok, failed, details, i = 0, 0, [], 0
         while i < len(indices) and i < max_pages:
             index_url = indices[i]
             i += 1
             try:
                 body = fetcher.get(index_url)
-                successful += 1
+                ok += 1
                 links, more = discover(body, index_url, source)
                 details.extend(links)
                 indices.extend(u for u in more if u not in indices)
             except Exception:
-                failures += 1
+                failed += 1
         # Newly discovered details are prioritized; bootstrap is never the sole discovery mechanism.
         details.extend(source.get('seed_urls', []))
         # Retry known details after transient failures or disappearance from a bounded listing.
-        details.extend(r[0] for r in con.execute('SELECT url FROM events WHERE source_id=? ORDER BY url', (sid,)))
+        details.extend(known[source['id']])
         details = [u for u in dict.fromkeys(details) if safe_url(u) and same_host(u, source['index_urls'][0]) and re.match(source['url_regex'], u)]
-        for url in details[:max_details]:
+        fetched = []
+        for url in details[:source.get('max_details', 14)]:
+            try:
+                fetched.append((url, fetcher.get(url), None))
+            except Exception as exc:
+                fetched.append((url, None, exc))
+        return ok, failed, fetched
+
+    # One host stays on one thread, so per-host spacing and robots rules still hold.
+    by_host = {}
+    for source in live:
+        by_host.setdefault(urlsplit(source['index_urls'][0]).hostname, []).append(source)
+    prefetched = {}
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for batch in pool.map(lambda group: [(s['id'], fetch_source(s)) for s in group], by_host.values()):
+            prefetched.update(batch)
+    for source in live:
+        sid = source['id']
+        old = con.execute('SELECT payload FROM source_state WHERE id=?', (sid,)).fetchone()
+        previous = json.loads(old[0]) if old else {}
+        review_count, excluded_count = 0, 0
+        max_pages = source.get('max_index_pages', 2)
+        max_details = source.get('max_details', 14)
+        successful, failures, fetched = prefetched[sid]
+        for url, body, error in fetched:
             title = 'Událost k ověření'
             try:
-                body = fetcher.get(url)
+                if error:
+                    raise error
                 successful += 1
                 body_hash = digest(body)
                 con.execute('INSERT INTO observations(source_id,url,body_hash,observed_at) VALUES (?,?,?,?)', (sid,url,body_hash,checked))
@@ -857,6 +877,7 @@ class HTTPClient:
         self.last = {}
         self.robots = {}
         self.stats = dict(requestCount=0,http304=0,cacheUnchanged=0)
+        self.lock = threading.Lock()
         self.opener = build_opener(NoRedirect())
 
     def _transport(self, url, headers):
@@ -884,7 +905,8 @@ class HTTPClient:
             gap = delay - (time.monotonic() - self.last.get(host, 0))
             if gap > 0:
                 time.sleep(gap)
-            self.stats['requestCount'] += 1
+            with self.lock:
+                self.stats['requestCount'] += 1
             try:
                 status, response_headers, body = self.send(url, headers)
             finally:
@@ -935,14 +957,16 @@ class HTTPClient:
                     body = body_path.read_bytes()
                     if digest(body) != meta.get('sha256'):
                         raise OSError('Cache integrity failure')
-                    self.stats['http304'] += 1
-                    self.stats['cacheUnchanged'] += 1
+                    with self.lock:
+                        self.stats['http304'] += 1
+                        self.stats['cacheUnchanged'] += 1
                     return body
                 if status != 200:
                     raise OSError('HTTP failure')
                 sha = digest(body)
                 if sha == meta.get('sha256'):
-                    self.stats['cacheUnchanged'] += 1
+                    with self.lock:
+                        self.stats['cacheUnchanged'] += 1
                 else:
                     body_path.write_bytes(body)
                 json_write(meta_path,dict(url=url,etag=response_headers.get('etag'),lastModified=response_headers.get('last-modified'),sha256=sha,checkedAt=now()))
