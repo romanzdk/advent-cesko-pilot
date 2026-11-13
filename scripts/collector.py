@@ -20,6 +20,8 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import reviewed_public
+import audited_events
+import validate_public
 
 
 def now():
@@ -193,6 +195,17 @@ def review_fingerprint(body, adapter):
 def parse_event(body, source, url, window):
     if not safe_url(url):
         raise Review('Neplatný odkaz zdroje.')
+    try:
+        audited = audited_events.resolve(source, url, window, body)
+    except audited_events.AuditError as exc:
+        raise Review(str(exc)) from exc
+    if audited is not None:
+        decision, reason, events, _ = audited
+        if decision == 'exclude':
+            raise Excluded(reason)
+        if decision == 'hold':
+            raise Review(reason)
+        return events[0] if len(events) == 1 else events
     root = DOM(body).root
     scope = root.find(cls='event-detail')
     title = txt(root.find('h1'))
@@ -728,24 +741,40 @@ def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewe
                     detail = detail_root.find(cls='clanek_levy_sloupec')
                     title_node = detail.find('h2') if detail else None
                 title = clean_public(txt(title_node))[:180] or title
-                event = parse_event(body, source, url, registry['window'])
-                mapping = source.get('event_locations', {}).get(url)
-                location_key = mapping['locationKey'] if mapping else event['town']
-                location = locations.get(location_key) if isinstance(locations, dict) else None
-                if location and safe_url(location.get('sourceUrl', '')):
-                    event['location'] = {k:location[k] for k in ('lat','lon','precision','label','sourceUrl')}
-                semantic = {k:v for k,v in event.items() if k != 'verifiedAt'}
-                fingerprint = digest(json.dumps(semantic, sort_keys=True, ensure_ascii=False))
-                old_event = con.execute('SELECT fingerprint FROM events WHERE id=?', (event['id'],)).fetchone()
-                kind = 'eventsNew' if not old_event else ('eventsUnchanged' if old_event[0] == fingerprint else 'eventsChanged')
-                metrics[kind] += 1
-                con.execute('INSERT OR REPLACE INTO events VALUES (?,?,?,?,?,?)', (event['id'],sid,url,fingerprint,json.dumps(event,ensure_ascii=False),checked))
-                for field in ('date', 'startTime', 'endDate', 'endTime', 'venue', 'town', 'price', 'audience', 'status'):
-                    con.execute('INSERT INTO provenance(event_id,field,value,source_url,body_hash,observed_at) VALUES (?,?,?,?,?,?)', (event['id'],field,json.dumps(event[field]),url,body_hash,checked))
-                if mapping:
-                    for support in mapping.get('supportingSourceUrls', []):
-                        if safe_url(support):
-                            con.execute('INSERT INTO provenance(event_id,field,value,source_url,body_hash,observed_at) VALUES (?,?,?,?,?,?)', (event['id'],'town',json.dumps(event['town']),support,body_hash if support == url else None,mapping['verifiedAt']))
+                parsed = parse_event(body, source, url, registry['window'])
+                try:
+                    audited = audited_events.resolve(source, url, registry['window'])
+                    events = [parsed] if type(parsed) is dict else parsed
+                    if type(events) is not list or not 1 <= len(events) <= 16 or any(type(e) is not dict for e in events):
+                        raise ValueError('Invalid parsed occurrences')
+                    mapping = None if audited else source.get('event_locations', {}).get(url)
+                    if not audited:
+                        for event in events:
+                            location_key = mapping['locationKey'] if mapping else event['town']
+                            location = locations.get(location_key) if isinstance(locations, dict) else None
+                            if location and safe_url(location.get('sourceUrl', '')):
+                                event['location'] = {k:location[k] for k in ('lat','lon','precision','label','sourceUrl')}
+                    validate_public.validate(dict(schemaVersion=1, generatedAt=checked,
+                        season=registry['season'], region='Česko', events=events), audited[3] if audited else ())
+                except (ValueError, TypeError, KeyError, AttributeError) as exc:
+                    raise Review('Neplatná veřejná pole události; ověřte znovu.') from exc
+                # Every occurrence is validated before the first event/provenance write.
+                for event in events:
+                    semantic = {k:v for k,v in event.items() if k != 'verifiedAt'}
+                    fingerprint = digest(json.dumps(semantic, sort_keys=True, ensure_ascii=False))
+                    old_event = con.execute('SELECT fingerprint FROM events WHERE id=?', (event['id'],)).fetchone()
+                    kind = 'eventsNew' if not old_event else ('eventsUnchanged' if old_event[0] == fingerprint else 'eventsChanged')
+                    metrics[kind] += 1
+                    con.execute('INSERT OR REPLACE INTO events VALUES (?,?,?,?,?,?)', (event['id'],sid,url,fingerprint,json.dumps(event,ensure_ascii=False),checked))
+                    fields = event if audited else ('date', 'startTime', 'endDate', 'endTime', 'venue', 'town', 'price', 'audience', 'status')
+                    for field in fields:
+                        con.execute('INSERT INTO provenance(event_id,field,value,source_url,body_hash,observed_at) VALUES (?,?,?,?,?,?)', (event['id'],field,json.dumps(event[field]),url,body_hash,checked))
+                    if mapping:
+                        for support in mapping.get('supportingSourceUrls', []):
+                            if safe_url(support):
+                                con.execute('INSERT INTO provenance(event_id,field,value,source_url,body_hash,observed_at) VALUES (?,?,?,?,?,?)', (event['id'],'town',json.dumps(event['town']),support,body_hash if support == url else None,mapping['verifiedAt']))
+                ids = [event['id'] for event in events]
+                con.execute('DELETE FROM events WHERE source_id=? AND url=? AND id NOT IN (' + ','.join('?' for _ in ids) + ')', (sid, url, *ids))
                 con.execute('DELETE FROM reviews WHERE source_id=? AND url=?', (sid,url))
                 con.execute('DELETE FROM exclusions WHERE source_id=? AND url=?', (sid,url))
             except Excluded as exc:

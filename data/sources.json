@@ -372,6 +372,19 @@
             "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/sklenene-vanoce-aneb-13111_7113cs.html"
           ]
         }
+      },
+      "audited_events": {
+        "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/sklenene-vanoce-aneb-13111_7113cs.html": {
+          "sourceId": "beroun-mesto",
+          "sourceTown": "Beroun",
+          "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/sklenene-vanoce-aneb-13111_7113cs.html",
+          "expectedTitle": "Skleněné Vánoce aneb…",
+          "contentHash": "c7a69aa378fcafbbdb59b4a92288a8ebee527e6e589ca4e63682df190a439c0b",
+          "decision": "exclude",
+          "reason": "Celá výstava trvá 29. 11. 2026–10. 1. 2027, mimo schválený koncový rozsah. Nepublikovat ji jako jediný den ani zkrátit skutečný interval; městský čas navíc nesouhlasí se samostatnou vernisáží.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": []
+        }
       }
     },
     {
@@ -977,6 +990,132 @@
           ],
           "verifiedTown": "Telč"
         }
+      },
+      "audited_events": {
+        "https://www.telc.eu/kalendar/3842": {
+          "sourceId": "telc-mesto",
+          "sourceTown": "Telč",
+          "sourceUrl": "https://www.telc.eu/kalendar/3842",
+          "expectedTitle": "Živý betlém",
+          "contentHash": "063c6de059c8dc1ea0d2c4b3bdca63fc4fbef1f79063243a41d0489e8de3d7d3",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "show-2026-12-19-1700",
+              "title": "Živý betlém",
+              "town": "Telč",
+              "venue": "nádvoří Státního zámku Telč",
+              "date": "2026-12-19",
+              "endDate": null,
+              "startTime": "17:00",
+              "endTime": null,
+              "price": null,
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Živý betlém. nádvoří Státního zámku Telč",
+              "notes": [
+                "Samostatné představení na nádvoří zámku; přibližná délka 40 minut není potvrzením přesného konce.",
+                "Další začátky: 19. 12. v 17:00 a 18:15; 20. 12. ve 14:00 a 15:00. Cena a registrace nejsou zveřejněny."
+              ],
+              "category": "betlem",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.1847652,
+                "lon": 15.4524773,
+                "precision": "town",
+                "label": "Telč — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/441173"
+              },
+              "allowExtendedEnd": false
+            },
+            {
+              "occurrenceKey": "show-2026-12-19-1815",
+              "title": "Živý betlém",
+              "town": "Telč",
+              "venue": "nádvoří Státního zámku Telč",
+              "date": "2026-12-19",
+              "endDate": null,
+              "startTime": "18:15",
+              "endTime": null,
+              "price": null,
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Živý betlém. nádvoří Státního zámku Telč",
+              "notes": [
+                "Samostatné představení na nádvoří zámku; přibližná délka 40 minut není potvrzením přesného konce.",
+                "Další začátky: 19. 12. v 17:00 a 18:15; 20. 12. ve 14:00 a 15:00. Cena a registrace nejsou zveřejněny."
+              ],
+              "category": "betlem",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.1847652,
+                "lon": 15.4524773,
+                "precision": "town",
+                "label": "Telč — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/441173"
+              },
+              "allowExtendedEnd": false
+            },
+            {
+              "occurrenceKey": "show-2026-12-20-1400",
+              "title": "Živý betlém",
+              "town": "Telč",
+              "venue": "nádvoří Státního zámku Telč",
+              "date": "2026-12-20",
+              "endDate": null,
+              "startTime": "14:00",
+              "endTime": null,
+              "price": null,
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Živý betlém. nádvoří Státního zámku Telč",
+              "notes": [
+                "Samostatné představení na nádvoří zámku; přibližná délka 40 minut není potvrzením přesného konce.",
+                "Další začátky: 19. 12. v 17:00 a 18:15; 20. 12. ve 14:00 a 15:00. Cena a registrace nejsou zveřejněny."
+              ],
+              "category": "betlem",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.1847652,
+                "lon": 15.4524773,
+                "precision": "town",
+                "label": "Telč — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/441173"
+              },
+              "allowExtendedEnd": false
+            },
+            {
+              "occurrenceKey": "show-2026-12-20-1500",
+              "title": "Živý betlém",
+              "town": "Telč",
+              "venue": "nádvoří Státního zámku Telč",
+              "date": "2026-12-20",
+              "endDate": null,
+              "startTime": "15:00",
+              "endTime": null,
+              "price": null,
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Živý betlém. nádvoří Státního zámku Telč",
+              "notes": [
+                "Samostatné představení na nádvoří zámku; přibližná délka 40 minut není potvrzením přesného konce.",
+                "Další začátky: 19. 12. v 17:00 a 18:15; 20. 12. ve 14:00 a 15:00. Cena a registrace nejsou zveřejněny."
+              ],
+              "category": "betlem",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.1847652,
+                "lon": 15.4524773,
+                "precision": "town",
+                "label": "Telč — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/441173"
+              },
+              "allowExtendedEnd": false
+            }
+          ]
+        }
       }
     },
     {
@@ -1199,6 +1338,184 @@
           ],
           "verifiedTown": "Humpolec"
         }
+      },
+      "audited_events": {
+        "https://humpolec.cz/akce/ceska-mse-vanocni-jakuba-jana-ryby/": {
+          "sourceId": "humpolec-mesto",
+          "sourceTown": "Humpolec",
+          "sourceUrl": "https://humpolec.cz/akce/ceska-mse-vanocni-jakuba-jana-ryby/",
+          "expectedTitle": "Česká mše vánoční Jakuba Jana Ryby",
+          "contentHash": "4592aee1b8de1f4e8eb73a27e33ddb81cc346e2a77a346e3a3fdc9f5672736bf",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "concert-1700",
+              "title": "Česká mše vánoční Jakuba Jana Ryby",
+              "town": "Humpolec",
+              "venue": "Evangelický kostel, Husova 144, Humpolec",
+              "date": "2026-12-17",
+              "endDate": null,
+              "startTime": "17:00",
+              "endTime": null,
+              "price": "Předprodej 200 Kč, senioři 65+, ZTP a děti do 6 let 150 Kč; na místě 250 Kč, zvýhodněné skupiny 200 Kč.",
+              "registration": "Vstupenky se prodávají zvlášť pro každý začátek. Dostupnost míst není potvrzena.",
+              "registrationUrl": "https://www.smsticket.cz/vstupenky/78346-ceska-mse-vanocni-jakuba-jana-ryby-evangelicky-kostel-humpolec",
+              "description": "Česká mše vánoční Jakuba Jana Ryby. Evangelický kostel, Husova 144, Humpolec",
+              "notes": [
+                "Dva samostatné koncerty v 17:00 a 19:00; nejde o interval 17:00–19:00. Konec není zveřejněn."
+              ],
+              "category": "setkani",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.5418861,
+                "lon": 15.3586709,
+                "precision": "town",
+                "label": "Humpolec — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/441024"
+              },
+              "allowExtendedEnd": false
+            },
+            {
+              "occurrenceKey": "concert-1900",
+              "title": "Česká mše vánoční Jakuba Jana Ryby",
+              "town": "Humpolec",
+              "venue": "Evangelický kostel, Husova 144, Humpolec",
+              "date": "2026-12-17",
+              "endDate": null,
+              "startTime": "19:00",
+              "endTime": null,
+              "price": "Předprodej 200 Kč, senioři 65+, ZTP a děti do 6 let 150 Kč; na místě 250 Kč, zvýhodněné skupiny 200 Kč.",
+              "registration": "Vstupenky se prodávají zvlášť pro každý začátek. Dostupnost míst není potvrzena.",
+              "registrationUrl": "https://www.smsticket.cz/vstupenky/78347-ceska-mse-vanocni-jakuba-jana-ryby-evangelicky-kostel-humpolec",
+              "description": "Česká mše vánoční Jakuba Jana Ryby. Evangelický kostel, Husova 144, Humpolec",
+              "notes": [
+                "Dva samostatné koncerty v 17:00 a 19:00; nejde o interval 17:00–19:00. Konec není zveřejněn."
+              ],
+              "category": "setkani",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.5418861,
+                "lon": 15.3586709,
+                "precision": "town",
+                "label": "Humpolec — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/441024"
+              },
+              "allowExtendedEnd": false
+            }
+          ]
+        },
+        "https://humpolec.cz/akce/predvanocni-setkani-v-lipnici-nad-sazavou/": {
+          "sourceId": "humpolec-mesto",
+          "sourceTown": "Humpolec",
+          "sourceUrl": "https://humpolec.cz/akce/predvanocni-setkani-v-lipnici-nad-sazavou/",
+          "expectedTitle": "Předvánoční setkání v Lipnici nad Sázavou",
+          "contentHash": "7a4b9c7cd8defede7bf2cc167402c9ece95fa4cb1ead9108cdacece918470d3a",
+          "decision": "accept",
+          "reason": "Datovaný pořadatelský plakát potvrzuje veřejné setkání 6. 12. v Lipnici nad Sázavou, nikoli v Humpolci.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "Předvánoční setkání v Lipnici nad Sázavou",
+              "town": "Lipnice nad Sázavou",
+              "venue": "Amfiteátr, Lipnice nad Sázavou",
+              "date": "2026-12-06",
+              "endDate": null,
+              "startTime": "15:00",
+              "endTime": null,
+              "price": null,
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Předvánoční setkání v Lipnici nad Sázavou. Amfiteátr, Lipnice nad Sázavou",
+              "notes": [
+                "Od 15:00 předvánoční setkání, od 17:00 vánoční hra; 17:00 není konec akce.",
+                "Skutečná obec konání je Lipnice nad Sázavou. Přesná poloha není ověřena; žádné souřadnice Humpolce se nepřebírají."
+              ],
+              "category": "setkani",
+              "audience": "všichni",
+              "location": null,
+              "allowExtendedEnd": false
+            }
+          ]
+        },
+        "https://humpolec.cz/akce/vanocni-vystava-betlemu-ze-sbirky-josefa-horkeho/": {
+          "sourceId": "humpolec-mesto",
+          "sourceTown": "Humpolec",
+          "sourceUrl": "https://humpolec.cz/akce/vanocni-vystava-betlemu-ze-sbirky-josefa-horkeho/",
+          "expectedTitle": "Vánoční výstava betlémů ze sbírky Josefa Horkého",
+          "contentHash": "f9906b5a9814e02232eca4c7c11c8b8a781c5d7390e54e4e67de78b6689bfce6",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "Vánoční výstava betlémů ze sbírky Josefa Horkého",
+              "town": "Humpolec",
+              "venue": "Muzeum dr. Aleše Hrdličky, Horní náměstí 273, Humpolec",
+              "date": "2026-11-29",
+              "endDate": "2026-12-27",
+              "startTime": null,
+              "endTime": null,
+              "price": "20 Kč",
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Vánoční výstava betlémů ze sbírky Josefa Horkého. Muzeum dr. Aleše Hrdličky, Horní náměstí 273, Humpolec",
+              "notes": [
+                "Výstava trvá do 27. 12.; jednotlivé návštěvní dny se řídí otevírací dobou, nejde o nepřetržité otevření.",
+                "Zimní režim: úterý–pátek 9–12 a 13–16, neděle 14–16, pondělí a soboty zavřeno.",
+                "24. 12. zavřeno; 25. a 26. 12. 14–16. Poslední vstup 15 minut před zavřením."
+              ],
+              "category": "betlem",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.5418861,
+                "lon": 15.3586709,
+                "precision": "town",
+                "label": "Humpolec — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/441024"
+              },
+              "allowExtendedEnd": true
+            }
+          ]
+        },
+        "https://humpolec.cz/akce/vernisaz-a-vanocni-vystava-betlemu-v-klastere-zeliv/": {
+          "sourceId": "humpolec-mesto",
+          "sourceTown": "Humpolec",
+          "sourceUrl": "https://humpolec.cz/akce/vernisaz-a-vanocni-vystava-betlemu-v-klastere-zeliv/",
+          "expectedTitle": "Vernisáž a vánoční výstava betlémů v Klášteře Želiv",
+          "contentHash": "10f6b92cd4961fd7e368189f5a6b9b9137b8c31339a1b00b4854d25499141e6d",
+          "decision": "accept",
+          "reason": "Pořadatel potvrzuje samostatnou vernisáž 29. 11. v 11:30 v Želivě; publikuje se pouze tato jednorázová část, nikoli celý výstavní interval do ledna.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "Vernisáž vánoční výstavy betlémů v Klášteře Želiv",
+              "town": "Želiv",
+              "venue": "Malovaný refektář, Klášter Želiv, Želiv",
+              "date": "2026-11-29",
+              "endDate": null,
+              "startTime": "11:30",
+              "endTime": null,
+              "price": null,
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Vernisáž vánoční výstavy betlémů v Klášteře Želiv. Malovaný refektář, Klášter Želiv, Želiv",
+              "notes": [
+                "Samostatná vernisáž po mši svaté, 29. 11. v 11:30. Čas ukončení není zveřejněn.",
+                "Navazující výstava trvá do 15. 1. 2027; tento záznam označuje jen slavnostní zahájení, nikoli její denní provoz.",
+                "Želiv je samostatná obec, nikoli Humpolec; přesné souřadnice nebyly ověřeny."
+              ],
+              "category": "betlem",
+              "audience": "všichni",
+              "location": null,
+              "allowExtendedEnd": false
+            }
+          ]
+        }
       }
     },
     {
@@ -1277,7 +1594,43 @@
           ]
         }
       },
-      "max_index_pages": 4
+      "max_index_pages": 4,
+      "audited_events": {
+        "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/adventni-koncert-2402_1214cs.html": {
+          "sourceId": "nejdek-mesto",
+          "sourceTown": "Nejdek",
+          "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/adventni-koncert-2402_1214cs.html",
+          "expectedTitle": "Adventní koncert",
+          "contentHash": "2625652b1781c5b71e65238129ca32f80a17bb73aee8945e9fe8800c2e9b86a9",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "Adventní koncert",
+              "town": "Vysoká Pec – Rudné",
+              "venue": "Kostel Navštívení Panny Marie v Rudném",
+              "date": "2026-11-27",
+              "endDate": null,
+              "startTime": "18:00",
+              "endTime": null,
+              "price": "Vstup zdarma",
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Adventní koncert. Kostel Navštívení Panny Marie v Rudném",
+              "notes": [
+                "Koncert se koná v Rudném, části obce Vysoká Pec, nikoli v Nejdku. Přesná poloha kostela nebyla ověřena.",
+                "Čas ukončení není uveden."
+              ],
+              "category": "setkani",
+              "audience": "všichni",
+              "location": null,
+              "allowExtendedEnd": false
+            }
+          ]
+        }
+      }
     },
     {
       "id": "dobruska-kultura",
@@ -1362,6 +1715,48 @@
           ],
           "verifiedTown": "Dobruška"
         }
+      },
+      "audited_events": {
+        "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/vanocni-koncert-janek-ledecky-band-4090_2289cs.html": {
+          "sourceId": "dobruska-kultura",
+          "sourceTown": "Dobruška",
+          "sourceUrl": "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/vanocni-koncert-janek-ledecky-band-4090_2289cs.html",
+          "expectedTitle": "VÁNOČNÍ KONCERT - JANEK LEDECKÝ & BAND",
+          "contentHash": "5f1df1fe79d3ba9693b6c80cc21b7eceaee46982edc059068c75aaa59afe1b56",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "VÁNOČNÍ KONCERT - JANEK LEDECKÝ & BAND",
+              "town": "Dobruška",
+              "venue": "Společenské centrum - Kino 70, Komenského 70, Dobruška, 51801",
+              "date": "2026-12-01",
+              "endDate": null,
+              "startTime": "19:00",
+              "endTime": null,
+              "price": null,
+              "registration": "Předprodej vstupenek u pořadatele; aktuální cena a dostupnost nejsou ověřené.",
+              "registrationUrl": null,
+              "description": "VÁNOČNÍ KONCERT - JANEK LEDECKÝ & BAND. Společenské centrum - Kino 70, Komenského 70, Dobruška, 51801",
+              "notes": [
+                "Koncert 1. 12. v 19:00. Datum 1. 8. v původním textu označuje předprodej, nikoli další koncert.",
+                "Čas ukončení nebyl zveřejněn."
+              ],
+              "category": "setkani",
+              "audience": "všichni",
+              "location": {
+                "lat": 50.2921062,
+                "lon": 16.1605457,
+                "precision": "town",
+                "label": "Dobruška — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/440632"
+              },
+              "allowExtendedEnd": false
+            }
+          ]
+        }
       }
     },
     {
@@ -1381,7 +1776,129 @@
         "Evangelický kostel",
         "Evangelický kostel, Šromotovo náměstí Hranice",
         "Masarykovo náměstí"
-      ]
+      ],
+      "audited_events": {
+        "https://kultura-hranice.cz/akce/betlemske-svetlo-3-2/": {
+          "sourceId": "hranice-kultura",
+          "sourceTown": "Hranice",
+          "sourceUrl": "https://kultura-hranice.cz/akce/betlemske-svetlo-3-2/",
+          "expectedTitle": "Betlémské světlo",
+          "contentHash": "eff3d65a54b51c31d183bd3aa2a3e1bba741eb404d47e8c452a69ee17c728298",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "Betlémské světlo",
+              "town": "Hranice",
+              "venue": "Masarykovo náměstí, Hranice",
+              "date": "2026-12-22",
+              "endDate": null,
+              "startTime": "16:00",
+              "endTime": "20:00",
+              "price": "zdarma",
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Betlémské světlo. Masarykovo náměstí, Hranice",
+              "notes": [
+                "Samostatné odpoledne; světlo je k dispozici 21. i 22. prosince, vždy 16:00–20:00. Nejde o nepřetržité otevření přes noc."
+              ],
+              "category": "betlem",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.5481764,
+                "lon": 17.7347407,
+                "precision": "town",
+                "label": "Hranice, okres Přerov — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/438577"
+              },
+              "allowExtendedEnd": false
+            }
+          ]
+        },
+        "https://kultura-hranice.cz/akce/betlemske-svetlo-3/": {
+          "sourceId": "hranice-kultura",
+          "sourceTown": "Hranice",
+          "sourceUrl": "https://kultura-hranice.cz/akce/betlemske-svetlo-3/",
+          "expectedTitle": "Betlémské světlo",
+          "contentHash": "7e3e3a702f1496a2efd3e58b2ffa49f5cd4d079297672dfa99b1d38f8187f10e",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "Betlémské světlo",
+              "town": "Hranice",
+              "venue": "Masarykovo náměstí, Hranice",
+              "date": "2026-12-21",
+              "endDate": null,
+              "startTime": "16:00",
+              "endTime": "20:00",
+              "price": "zdarma",
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Betlémské světlo. Masarykovo náměstí, Hranice",
+              "notes": [
+                "Samostatné odpoledne; světlo je k dispozici 21. i 22. prosince, vždy 16:00–20:00. Nejde o nepřetržité otevření přes noc."
+              ],
+              "category": "betlem",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.5481764,
+                "lon": 17.7347407,
+                "precision": "town",
+                "label": "Hranice, okres Přerov — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/438577"
+              },
+              "allowExtendedEnd": false
+            }
+          ]
+        },
+        "https://kultura-hranice.cz/akce/vanoce-v-hranicich-2026/": {
+          "sourceId": "hranice-kultura",
+          "sourceTown": "Hranice",
+          "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-2026/",
+          "expectedTitle": "Vánoce v Hranicích 2026",
+          "contentHash": "6db91f4265868c0bca66646cd6f4e623b216f89bb21c46107e6d775ebbb05fa7",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "Vánoce v Hranicích 2026",
+              "town": "Hranice",
+              "venue": "Masarykovo náměstí, Hranice",
+              "date": "2026-11-27",
+              "endDate": "2026-12-20",
+              "startTime": null,
+              "endTime": null,
+              "price": "Vstup zdarma",
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Vánoce v Hranicích 2026. Masarykovo náměstí, Hranice",
+              "notes": [
+                "Hlavní vánoční trhy a program 27. 11.–20. 12.; denní otevírací hodiny nejsou potvrzené.",
+                "27. 11. trhy od 10:00, rozsvícení stromu v 17:00.",
+                "Štědrovečerní muzicírování 24. 12. a provoz kluziště 1.–27. 12. jsou samostatné programy, nikoli další konec těchto trhů.",
+                "Uvedeny jsou krajní dny, nikoli nepřetržité nebo každodenní otevření."
+              ],
+              "category": "trhy",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.5481764,
+                "lon": 17.7347407,
+                "precision": "town",
+                "label": "Hranice, okres Přerov — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/438577"
+              },
+              "allowExtendedEnd": false
+            }
+          ]
+        }
+      }
     },
     {
       "id": "usti-muzeum",
@@ -1416,7 +1933,179 @@
         "Čiperova vila, Burešov 3675/4, Zlín",
         "Divadelní 3242, Zlín",
         "Senior Point, třída Tomáše Bati 204, Zlín"
-      ]
+      ],
+      "audited_events": {
+        "https://visitzlin.eu/kalendar-akci/adventni-dilny": {
+          "sourceId": "zlin-tic",
+          "sourceTown": "Zlín",
+          "sourceUrl": "https://visitzlin.eu/kalendar-akci/adventni-dilny",
+          "expectedTitle": "Adventní dílny",
+          "contentHash": "ba45d68e39c15e74c472b6bf838cc9d3560a464d99c4b578a5640306de2463bd",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "workshops-2026-11-28",
+              "title": "Adventní dílny",
+              "town": "Zlín",
+              "venue": "1. patro Tyrolského domu, ZOO a zámek Zlín-Lešná (naproti zámku Lešná)",
+              "date": "2026-11-28",
+              "endDate": null,
+              "startTime": "09:00",
+              "endTime": "15:00",
+              "price": "150 Kč za jeden věnec; vstupné do zoo není zahrnuto a platí se zvlášť.",
+              "registration": "Povinná elektronická rezervace hodinového termínu; jedna rezervace pro tři osoby včetně dětí.",
+              "registrationUrl": "https://www.zoozlin.eu/rezervace-akci/",
+              "description": "Adventní dílny. 1. patro Tyrolského domu, ZOO a zámek Zlín-Lešná (naproti zámku Lešná)",
+              "notes": [
+                "Každý den šest hodinových termínů od 09:00 do 15:00. Dílna je v 1. patře Tyrolského domu naproti zámku Lešná.",
+                "150 Kč je cena za jeden věnec; vstupné do zoo se platí zvlášť. Dostupnost míst není potvrzena."
+              ],
+              "category": "tvoreni",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.226766,
+                "lon": 17.6667415,
+                "precision": "town",
+                "label": "Zlín — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/440910"
+              },
+              "allowExtendedEnd": false
+            },
+            {
+              "occurrenceKey": "workshops-2026-11-29",
+              "title": "Adventní dílny",
+              "town": "Zlín",
+              "venue": "1. patro Tyrolského domu, ZOO a zámek Zlín-Lešná (naproti zámku Lešná)",
+              "date": "2026-11-29",
+              "endDate": null,
+              "startTime": "09:00",
+              "endTime": "15:00",
+              "price": "150 Kč za jeden věnec; vstupné do zoo není zahrnuto a platí se zvlášť.",
+              "registration": "Povinná elektronická rezervace hodinového termínu; jedna rezervace pro tři osoby včetně dětí.",
+              "registrationUrl": "https://www.zoozlin.eu/rezervace-akci/",
+              "description": "Adventní dílny. 1. patro Tyrolského domu, ZOO a zámek Zlín-Lešná (naproti zámku Lešná)",
+              "notes": [
+                "Každý den šest hodinových termínů od 09:00 do 15:00. Dílna je v 1. patře Tyrolského domu naproti zámku Lešná.",
+                "150 Kč je cena za jeden věnec; vstupné do zoo se platí zvlášť. Dostupnost míst není potvrzena."
+              ],
+              "category": "tvoreni",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.226766,
+                "lon": 17.6667415,
+                "precision": "town",
+                "label": "Zlín — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/440910"
+              },
+              "allowExtendedEnd": false
+            }
+          ]
+        },
+        "https://visitzlin.eu/kalendar-akci/dopoledne-v-lese-pro-rodice-s-detmi-advent-prichazi": {
+          "sourceId": "zlin-tic",
+          "sourceTown": "Zlín",
+          "sourceUrl": "https://visitzlin.eu/kalendar-akci/dopoledne-v-lese-pro-rodice-s-detmi-advent-prichazi",
+          "expectedTitle": "Dopoledne v lese pro rodiče s dětmi – Advent přichází",
+          "contentHash": "b0e83bbf480a83c1bee384ad77dbe8a6616593e3f092858a19fe8a447d704c94",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "Dopoledne v lese pro rodiče s dětmi – Advent přichází",
+              "town": "Zlín-Velíková",
+              "venue": "zázemí lesní školky Na Pasece, Sýkorka 234, Zlín-Velíková; navazující hřiště, les a louka",
+              "date": "2026-11-27",
+              "endDate": null,
+              "startTime": "09:15",
+              "endTime": "11:15",
+              "price": "150 Kč za rodinu",
+              "registration": "Přihlášení u pořadatele; konkrétní dostupnost termínu není ověřena.",
+              "registrationUrl": null,
+              "description": "Dopoledne v lese pro rodiče s dětmi – Advent přichází. zázemí lesní školky Na Pasece, Sýkorka 234, Zlín-Velíková; navazující hřiště, les a louka",
+              "notes": [
+                "Pro děti přibližně 1,5–6 let s rodičem nebo prarodičem; venkovní program na hřišti, v lese a na louce.",
+                "Skutečné zázemí je v části Zlín-Velíková, nikoli v centru Zlína; přesné souřadnice nejsou ověřeny."
+              ],
+              "category": "tvoreni",
+              "audience": "všichni",
+              "location": null,
+              "allowExtendedEnd": false
+            }
+          ]
+        },
+        "https://visitzlin.eu/kalendar-akci/zahajeni-adventni-doby-s-rozsvicenim-vanocniho-stromu": {
+          "sourceId": "zlin-tic",
+          "sourceTown": "Zlín",
+          "sourceUrl": "https://visitzlin.eu/kalendar-akci/zahajeni-adventni-doby-s-rozsvicenim-vanocniho-stromu",
+          "expectedTitle": "Zahájení adventní doby s rozsvícením vánočního stromu",
+          "contentHash": "d104fb394d6c020f8a67d7141908e9b382a402b58eb7e40966ae20d8eac98aef",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "market",
+              "title": "Salesiánský dobročinný jarmark",
+              "town": "Zlín",
+              "venue": "kostel Panny Marie Pomocnice křesťanů, Zlín-Jižní Svahy; dopoledne sál B, odpoledne před kostelem",
+              "date": "2026-11-29",
+              "endDate": null,
+              "startTime": "08:30",
+              "endTime": "12:30",
+              "price": "Vstup zdarma",
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Salesiánský dobročinný jarmark. kostel Panny Marie Pomocnice křesťanů, Zlín-Jižní Svahy; dopoledne sál B, odpoledne před kostelem",
+              "notes": [
+                "Dva oddělené bloky téže akce: jarmark 08:30–12:30, odpolední program 16:00–18:30. Mezi nimi není vyhlášený program.",
+                "16:00 je začátek odpoledního programu, nikoli samostatně potvrzený okamžik rozsvícení stromu."
+              ],
+              "category": "trhy",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.226766,
+                "lon": 17.6667415,
+                "precision": "town",
+                "label": "Zlín — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/440910"
+              },
+              "allowExtendedEnd": false
+            },
+            {
+              "occurrenceKey": "afternoon",
+              "title": "Zahájení adventní doby s rozsvícením vánočního stromu",
+              "town": "Zlín",
+              "venue": "kostel Panny Marie Pomocnice křesťanů, Zlín-Jižní Svahy; dopoledne sál B, odpoledne před kostelem",
+              "date": "2026-11-29",
+              "endDate": null,
+              "startTime": "16:00",
+              "endTime": "18:30",
+              "price": "Vstup zdarma",
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Zahájení adventní doby s rozsvícením vánočního stromu. kostel Panny Marie Pomocnice křesťanů, Zlín-Jižní Svahy; dopoledne sál B, odpoledne před kostelem",
+              "notes": [
+                "Dva oddělené bloky téže akce: jarmark 08:30–12:30, odpolední program 16:00–18:30. Mezi nimi není vyhlášený program.",
+                "16:00 je začátek odpoledního programu, nikoli samostatně potvrzený okamžik rozsvícení stromu."
+              ],
+              "category": "strom",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.226766,
+                "lon": 17.6667415,
+                "precision": "town",
+                "label": "Zlín — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/440910"
+              },
+              "allowExtendedEnd": false
+            }
+          ]
+        }
+      }
     },
     {
       "id": "praha16-radotin",
@@ -1435,7 +2124,128 @@
         "Římskokatolický kostel sv. Petra a Pavla",
         "Hasičská zbrojnice"
       ],
-      "max_index_pages": 4
+      "max_index_pages": 4,
+      "audited_events": {
+        "https://www.praha16.eu/volny-cas/kalendar-akci/ebenezer-vanocni-koleda-26180_729cs.html": {
+          "sourceId": "praha16-radotin",
+          "sourceTown": "Praha-Radotín",
+          "sourceUrl": "https://www.praha16.eu/volny-cas/kalendar-akci/ebenezer-vanocni-koleda-26180_729cs.html",
+          "expectedTitle": "Ebenezer: Vánoční koleda",
+          "contentHash": "b016e07627b72fbad0ccdd721b75ed7c44cc1b5ff2f307ce94399708c4f019e9",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "Ebenezer: Vánoční koleda",
+              "town": "Praha-Radotín",
+              "venue": "Kino Radotín, Na Výšince 875, 153 00 Praha-Radotín",
+              "date": "2026-11-21",
+              "endDate": null,
+              "startTime": "17:00",
+              "endTime": null,
+              "price": null,
+              "registration": "Rezervační pravidla a dostupnost ověřte přímo u kina.",
+              "registrationUrl": null,
+              "description": "Ebenezer: Vánoční koleda. Kino Radotín, Na Výšince 875, 153 00 Praha-Radotín",
+              "notes": [
+                "Filmová projekce; nevhodné pro děti do 12 let. Cena ani přesný konec nejsou ověřeny.",
+                "Téhož dne jsou samostatné projekce v 17:00 a 20:00. Nejde o duplicitu ani jeden časový interval."
+              ],
+              "category": "setkani",
+              "audience": "omezené zaměření",
+              "location": {
+                "lat": 49.9899078,
+                "lon": 14.3635934,
+                "precision": "town",
+                "label": "Radotín v Praze — orientační bod katastrální části, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/429567"
+              },
+              "allowExtendedEnd": false
+            }
+          ]
+        },
+        "https://www.praha16.eu/volny-cas/kalendar-akci/ebenezer-vanocni-koleda-26180_730cs.html": {
+          "sourceId": "praha16-radotin",
+          "sourceTown": "Praha-Radotín",
+          "sourceUrl": "https://www.praha16.eu/volny-cas/kalendar-akci/ebenezer-vanocni-koleda-26180_730cs.html",
+          "expectedTitle": "Ebenezer: Vánoční koleda",
+          "contentHash": "ff9557c391fa71dd13836f05b74cb9881ed6ac8a7cb7cdacd3f3e17eee0412f7",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "Ebenezer: Vánoční koleda",
+              "town": "Praha-Radotín",
+              "venue": "Kino Radotín, Na Výšince 875, 153 00 Praha-Radotín",
+              "date": "2026-11-21",
+              "endDate": null,
+              "startTime": "20:00",
+              "endTime": null,
+              "price": null,
+              "registration": "Rezervační pravidla a dostupnost ověřte přímo u kina.",
+              "registrationUrl": null,
+              "description": "Ebenezer: Vánoční koleda. Kino Radotín, Na Výšince 875, 153 00 Praha-Radotín",
+              "notes": [
+                "Filmová projekce; nevhodné pro děti do 12 let. Cena ani přesný konec nejsou ověřeny.",
+                "Téhož dne jsou samostatné projekce v 17:00 a 20:00. Nejde o duplicitu ani jeden časový interval."
+              ],
+              "category": "setkani",
+              "audience": "omezené zaměření",
+              "location": {
+                "lat": 49.9899078,
+                "lon": 14.3635934,
+                "precision": "town",
+                "label": "Radotín v Praze — orientační bod katastrální části, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/429567"
+              },
+              "allowExtendedEnd": false
+            }
+          ]
+        },
+        "https://www.praha16.eu/volny-cas/kalendar-akci/vanocni-dilny-v-zs-praha-radotin-26219_750cs.html": {
+          "sourceId": "praha16-radotin",
+          "sourceTown": "Praha-Radotín",
+          "sourceUrl": "https://www.praha16.eu/volny-cas/kalendar-akci/vanocni-dilny-v-zs-praha-radotin-26219_750cs.html",
+          "expectedTitle": "Vánoční dílny v ZŠ Praha-Radotín",
+          "contentHash": "59d17733a0573ebc5b4f568708dfee9b5723a1544de567b0e681a7c3c86ce752",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "Vánoční dílny v ZŠ Praha-Radotín",
+              "town": "Praha-Radotín",
+              "venue": "ZŠ Praha-Radotín, budova 2. stupně, Loučanská 1112/3, 153 00 Praha-Radotín",
+              "date": "2026-12-05",
+              "endDate": null,
+              "startTime": "09:00",
+              "endTime": "13:00",
+              "price": "100 Kč",
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Vánoční dílny v ZŠ Praha-Radotín. ZŠ Praha-Radotín, budova 2. stupně, Loučanská 1112/3, 153 00 Praha-Radotín",
+              "notes": [
+                "Dílny v budově 2. stupně školy. Rozlišení vstupného pro dospělé/děti ani povinná rezervace nejsou uvedeny."
+              ],
+              "category": "tvoreni",
+              "audience": "všichni",
+              "location": {
+                "lat": 49.9899078,
+                "lon": 14.3635934,
+                "precision": "town",
+                "label": "Radotín v Praze — orientační bod katastrální části, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/429567"
+              },
+              "allowExtendedEnd": false
+            }
+          ]
+        }
+      }
     },
     {
       "id": "stitina-obec",
@@ -1451,7 +2261,20 @@
       "max_details": 14,
       "allowed_venues": [
         "Park"
-      ]
+      ],
+      "audited_events": {
+        "https://www.stitina.cz/aktualne/kalendar-akci/mikulas-cert-a-andel-1642_169cs.html": {
+          "sourceId": "stitina-obec",
+          "sourceTown": "Štítina",
+          "sourceUrl": "https://www.stitina.cz/aktualne/kalendar-akci/mikulas-cert-a-andel-1642_169cs.html",
+          "expectedTitle": "Mikuláš, čert a anděl",
+          "contentHash": "91d3860df986b3321db879c8b8c4013039a6f1c1b6695d7e03387cb3b0baa025",
+          "decision": "exclude",
+          "reason": "Jde o předem objednávané návštěvy Mikuláše v domácnostech, nikoli o veřejnou akci na konkrétním místě. Nezveřejňovat jako volně přístupný program.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": []
+        }
+      }
     },
     {
       "id": "lanskroun-kultura",
@@ -2614,6 +3437,123 @@
           "verifiedAt": "2026-11-12T21:37:23+00:00",
           "supportingSourceUrls": [
             "https://www.praha22.cz/volny-cas/prehled-akci-1/zivy-betlem-s-rozdavanim-betlemskeho-svetla-7530_3588cs.html"
+          ]
+        }
+      },
+      "audited_events": {
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-vence-7543_3603cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceTown": "Praha-Uhříněves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-vence-7543_3603cs.html",
+          "expectedTitle": "Adventní věnce",
+          "contentHash": "04a7599343ddb0be5cd02b4c7dd34ce2670b2ab5556ff4100d9f26bc905eb9a7",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "Adventní věnce",
+              "town": "Praha-Uhříněves",
+              "venue": "Dům UM, V Bytovkách 803/12, 104 00 Praha 22 – Uhříněves, ateliér ve 2. patře",
+              "date": "2026-11-25",
+              "endDate": null,
+              "startTime": "17:30",
+              "endTime": "19:30",
+              "price": "250 Kč za materiál na výrobu jednoho věnce, bez svíček",
+              "registration": "Nutná rezervace u pořadatele; kontakt je na jeho veřejné stránce.",
+              "registrationUrl": null,
+              "description": "Adventní věnce. Dům UM, V Bytovkách 803/12, 104 00 Praha 22 – Uhříněves, ateliér ve 2. patře",
+              "notes": [
+                "Pracoviště Dům UM má PSČ 104 00; údaj 14000 v městském detailu je chybný.",
+                "Cena za materiál na jeden věnec, bez svíček. S sebou zahradnické nůžky, případně rukavice."
+              ],
+              "category": "tvoreni",
+              "audience": "všichni",
+              "location": {
+                "lat": 50.0378687,
+                "lon": 14.5973439,
+                "precision": "town",
+                "label": "Praha-Uhříněves — orientační bod katastrální části, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/429225"
+              },
+              "allowExtendedEnd": false
+            }
+          ]
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/od-okynka-k-okynku-venkovni-hajecka-stezka-7552_3622cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceTown": "Praha-Uhříněves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/od-okynka-k-okynku-venkovni-hajecka-stezka-7552_3622cs.html",
+          "expectedTitle": "Od okýnka k okýnku - venkovní hájecká stezka",
+          "contentHash": "ec8990dcd60b0a1b4a8e4b52328a6fdb8a37cef97e24596fc7cd448e229d7e4b",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "Od okýnka k okýnku - venkovní hájecká stezka",
+              "town": "Praha-Hájek u Uhříněvsi",
+              "venue": "Hájek u Uhříněvsi; start a herní kartičky na autobusové zastávce na točně",
+              "date": "2026-11-21",
+              "endDate": "2026-11-29",
+              "startTime": null,
+              "endTime": null,
+              "price": null,
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Od okýnka k okýnku - venkovní hájecká stezka. Hájek u Uhříněvsi; start a herní kartičky na autobusové zastávce na točně",
+              "notes": [
+                "Hru lze hrát ve dne i po setmění. Okýnka budou osvětlená přibližně 17:00–22:00; nejde o denní otevírací dobu 17:00–19:00.",
+                "Herní kartičky na zastávce na točně; vezměte si tužku. Vyplněnou kartičku odevzdat 29. 11. při rozsvěcení stromku na louce u potoka.",
+                "Hájek u Uhříněvsi je jiná část Prahy 22 než Uhříněves; přesné souřadnice nejsou ověřeny."
+              ],
+              "category": "setkani",
+              "audience": "všichni",
+              "location": null,
+              "allowExtendedEnd": false
+            }
+          ]
+        },
+        "https://www.praha22.cz/volny-cas/prehled-akci-1/zivy-betlem-s-rozdavanim-betlemskeho-svetla-7530_3588cs.html": {
+          "sourceId": "praha22-uhrineves",
+          "sourceTown": "Praha-Uhříněves",
+          "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/zivy-betlem-s-rozdavanim-betlemskeho-svetla-7530_3588cs.html",
+          "expectedTitle": "Živý betlém s rozdáváním Betlémského světla",
+          "contentHash": "39713949855b27e033f971812892ccbc1691f380582e85392cac37cecd0ca81d",
+          "decision": "accept",
+          "reason": "Ověřen primární detail a připojené pořadatelské podklady; přesná oprava termínu, místa a podmínek.",
+          "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+          "events": [
+            {
+              "occurrenceKey": "main",
+              "title": "Živý betlém s rozdáváním Betlémského světla",
+              "town": "Praha-Uhříněves",
+              "venue": "Areál Pivovaru Uhříněves, K Sokolovně 37, 104 00 Praha 22",
+              "date": "2026-12-20",
+              "endDate": null,
+              "startTime": "17:00",
+              "endTime": null,
+              "price": null,
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Živý betlém s rozdáváním Betlémského světla. Areál Pivovaru Uhříněves, K Sokolovně 37, 104 00 Praha 22",
+              "notes": [
+                "Po představení se rozdává Betlémské světlo; vezměte si vlastní lucernu.",
+                "Čas ukončení, cena ani rezervace nejsou zveřejněny."
+              ],
+              "category": "betlem",
+              "audience": "všichni",
+              "location": {
+                "lat": 50.0378687,
+                "lon": 14.5973439,
+                "precision": "town",
+                "label": "Praha-Uhříněves — orientační bod katastrální části, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/429225"
+              },
+              "allowExtendedEnd": false
+            }
           ]
         }
       }

@@ -52,7 +52,7 @@ Při nejisté odpovědi použijte ověření stavu původního podání, ne dal�
 
 ## Pokrytí a rozsah
 
-**Ověřený sezonní výběr: 215 akcí ve 14 krajích.** Nejde o úplné pokrytí jednotlivých krajů.
+**Ověřený sezonní výběr: 241 akcí ve 14 krajích.** Nejde o úplné pokrytí jednotlivých krajů.
 
 | Kraj | Publikované akce |
 | --- | ---: |
@@ -60,14 +60,14 @@ Při nejisté odpovědi použijte ověření stavu původního podání, ne dal�
 | Liberecký kraj | 17 |
 | Jihomoravský kraj | 9 |
 | Středočeský kraj | 69 |
-| Jihočeský kraj | 12 |
-| Kraj Vysočina | 29 |
-| Karlovarský kraj | 7 |
-| Královéhradecký kraj | 6 |
-| Olomoucký kraj | 19 |
+| Jihočeský kraj | 13 |
+| Kraj Vysočina | 38 |
+| Karlovarský kraj | 8 |
+| Královéhradecký kraj | 7 |
+| Olomoucký kraj | 22 |
 | Ústecký kraj | 1 |
-| Zlínský kraj | 6 |
-| Hlavní město Praha | 21 |
+| Zlínský kraj | 11 |
+| Hlavní město Praha | 27 |
 | Moravskoslezský kraj | 1 |
 | Pardubický kraj | 1 |
 

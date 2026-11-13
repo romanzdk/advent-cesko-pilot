@@ -139,7 +139,13 @@ Nový zdroj musí mít ověřenou lokalitu, současný rok v obsahu, povolené a
 
 ## Ruční kontrola kandidátů
 
-Historická dávka 37 položek byla zkontrolována 12. listopadu 2026: 21 přijatých, 14 vyřazených a dvě zadržené akce. Není to aktuální velikost fronty po rozšíření zdrojů. Aktuální nepublikované kandidáty a důvody obsahuje `site/review.json`; rozhodnutí a opravy se ukládají do `event_reviews` příslušných zdrojů, nikoli do ručně přepsaného veřejného JSON.
+Historická dávka 37 položek byla zkontrolována 12. listopadu 2026: 21 přijatých, 14 vyřazených a dvě zadržené akce. Není to aktuální velikost fronty po rozšíření zdrojů. Aktuální nepublikované kandidáty a důvody obsahuje `site/review.json`; jednoduchá rozhodnutí a opravy se ukládají do `event_reviews`, složité případy s explicitními termíny do `audited_events` příslušného zdroje. Veřejný JSON se ručně neopravuje.
+
+`audited_events` je uzavřený redakční doklad pro jednu přesnou, běžným sběrem objevenou URL. Váže ID a obec vydavatele, URL, skutečný nadpis, otisk sémantického detailu včetně odkazů a plakátů a datum původního ověření. Neznámý formát, změněný obsah, neplatný doklad nebo vložený rámec vyvolají novou kontrolu; výpadek sítě se dál odlišuje od změny obsahu. Samotné načtení stejného detailu neposouvá datum ověření doplňujících podkladů.
+
+Každý potvrzený termín má vlastní neměnný `occurrenceKey` a veřejné ID odvozené z URL a tohoto klíče. Dva koncerty nejsou jeden interval; přeskládání seznamu nemění ID a odstraněný termín se při příštím úspěšném zpracování odstraní i z interní evidence. Před uložením se validují všechny termíny. Skutečnou jinou obec lze schválit jen v tomto konkrétním dokladu; nepřebírají se souřadnice sídla vydavatele a obecné kontroly míst se nezměkčují.
+
+Pouze jednotlivý ověřený výstavní záznam s výslovným `allowExtendedEnd` smí zachovat skutečný konec nejvýše 31. prosince. Začátek musí stále ležet 20. listopadu–24. prosince; leden se nepovoluje a ostatní živé záznamy si zachovávají původní hranici 24. prosince. Samostatně doložená vernisáž se může zveřejnit pod vlastním přesným názvem, nikdy jako falešně jednodenní celá výstava.
 
 Před novým rozhodnutím načtěte aktuální primární detail, ověřte rok, celý interval a skutečnou obec a případně plakát. Pro výpočet `contentHash` použijte exportovanou funkci `review_fingerprint(body, adapter)` nad týmiž původními bajty. Zachovejte původní hodnoty v `expected*`, přesnou URL a ID zdroje; `overrides` slouží jen doloženým opravám. `verifiedTown` přidávejte pouze po ověření obce, ne podle sídla vydavatele. U polí z plakátu připojte zdrojový odkaz a datum ověření do poznámky.
 

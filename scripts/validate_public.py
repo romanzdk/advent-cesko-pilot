@@ -78,6 +78,32 @@ def validate_directory(path, registry=None):
     require(bool(sources) and len(by_id)==len(sources) and regions<=REGIONS,'Invalid registry scope')
     path=Path(path);data=json.loads((path/'events.json').read_text())
     reviewed_ids={e['id'] for e in data['events'] if any(s.get('adapter')=='reviewed-public' and re.fullmatch(s['url_regex'],e['sourceUrl']) for s in sources)}
+    audited = {}
+    for event in data['events']:
+        require(isinstance(event, dict) and set(event) == FIELDS, 'Unexpected public event fields')
+        require(isinstance(event['id'], str) and isinstance(event['sourceUrl'], str), 'Invalid public event identity')
+        url = event['sourceUrl']
+        candidates = []
+        for source in sources:
+            records = source.get('audited_events', {})
+            require(isinstance(records, dict) or not re.fullmatch(source['url_regex'], url), 'Invalid audited receipt map')
+            if isinstance(records, dict) and url in records:
+                candidates.append(source)
+        require(len(candidates) <= 1, 'Ambiguous audited URL')
+        if candidates:
+            # Lazy import keeps the generic public validator independent of collection.
+            script_dir = str(Path(__file__).resolve().parent)
+            if script_dir not in sys.path:
+                sys.path.insert(0, script_dir)
+            import audited_events
+            source = candidates[0]
+            if url not in audited:
+                audited[url] = (source, audited_events.resolve(source, url, registry['window']))
+            decision, _, expected, extended = audited[url][1]
+            require(decision == 'accept' and event in expected, 'Event disagrees with exact audited facts')
+            reviewed_ids.update(extended)
+        else:
+            require(not event['id'].startswith('e-audit-'), 'Audited event lacks current receipt')
     validate(data,reviewed_ids)
     coverage=json.loads((path/'coverage.json').read_text());review=json.loads((path/'review.json').read_text())
     window=registry['window'];start=date.fromisoformat(window['from']);end=date.fromisoformat(window['through'])
@@ -101,6 +127,9 @@ def validate_directory(path, registry=None):
         require(len(matches)==1,'Event URL must identify one registered source')
         source=matches[0]
         require(event['region']==source['region'],'Event region disagrees with source')
+        if event['sourceUrl'] in audited:
+            require(audited[event['sourceUrl']][0]['id'] == source['id'], 'Audited registry binding disagrees')
+            continue
         if source.get('adapter')=='reviewed-public':
             require(urlsplit(event['sourceUrl']).hostname==source['primary_host'] and source['allowed_towns'].get(event['town'])==event['region'], 'Event town/host disagrees with reviewed scope')
             require(event['location'] is None or event['location'] in source['allowed_locations'].get(event['town'],[]), 'Unreviewed event location')
