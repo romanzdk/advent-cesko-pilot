@@ -69,10 +69,19 @@ class NextThreeSources(unittest.TestCase):
     def test_foreign_towns_and_parts_remain_held(self):
         source = self.source('cerveny-kostelec-ckzije')
         holds = [u for u, r in source['event_reviews'].items() if r['decision'] == 'hold']
-        self.assertEqual(len(holds), 10)
+        approved = source.get('audited_events', {})
+        self.assertEqual(len(holds) + len(approved), 10)
         for url in holds:
             with self.subTest(url=url), self.assertRaises(c.Review):
                 self.reviewed(source, url)
+        for url, receipt in approved.items():
+            fact = receipt['events'][0]
+            body = fragment(receipt['expectedTitle'], fact['date'], fact['venue'], fact['endDate'])
+            unreviewed = deepcopy(source)
+            unreviewed.pop('audited_events', None)
+            unreviewed.get('event_reviews', {}).pop(url, None)
+            with self.subTest(url=url), self.assertRaises(c.Review):
+                c.parse_event(body, unreviewed, url, WINDOW)
         url = source['detail_prefixes'][0] + 'vanocni-akce-9999_9999cs.html'
         with self.assertRaises(c.Review):
             c.parse_event(fragment('Vánoční akce', '2026-12-05', 'Neověřené místo'), source, url, WINDOW)

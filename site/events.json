@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T14:02:30+00:00",
+  "generatedAt": "2026-11-13T14:32:41+00:00",
   "season": 2026,
   "region": "Česko – sezonní výběr",
   "events": [
@@ -108,7 +108,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T12:19:34+00:00",
+      "verifiedAt": "2026-11-13T14:32:55+00:00",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/celodenni-vanocni-kurz-tiffany-vitraze-2410_1225cs.html",
       "location": {
         "lat": 50.3247878,
@@ -400,7 +400,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T14:02:00+00:00",
+      "verifiedAt": "2026-11-13T14:32:12+00:00",
       "sourceUrl": "https://www.ckzije.cz/kalendar-akci/vanocni-pribeh-aneb-cesta-do-betlema-212_25cs.html",
       "location": {
         "lat": 50.476505,
@@ -456,7 +456,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T12:19:37+00:00",
+      "verifiedAt": "2026-11-13T14:32:58+00:00",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/kurz-vazani-adventnich-vencu-2413_1228cs.html",
       "location": {
         "lat": 50.3247878,
@@ -573,7 +573,7 @@
       ],
       "audience": "omezené zaměření",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T14:02:03+00:00",
+      "verifiedAt": "2026-11-13T14:32:15+00:00",
       "sourceUrl": "https://www.ckzije.cz/kalendar-akci/pujdem-spolu-do-betlema-divadlo-scena-zlin-449_116cs.html",
       "location": {
         "lat": 50.476505,
@@ -1309,6 +1309,39 @@
       "region": "Karlovarský kraj",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/adventni-koncert-2402_1214cs.html",
       "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
+      "status": "confirmed"
+    },
+    {
+      "title": "Adventní koncerty Koletovy hornické hudby",
+      "town": "Rtyně v Podkrkonoší",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Hala Orlovna Rtyně v Podkrkonoší",
+      "category": "setkani",
+      "price": null,
+      "registration": "Předprodej vstupenek od 12. října na webu pořadatele; povinná rezervace není uvedena.",
+      "registrationUrl": null,
+      "description": "Adventní koncert Koletovy hornické hudby v hale Orlovna ve Rtyni v Podkrkonoší.",
+      "notes": [
+        "Samostatný koncert v uvedený den; druhý koncert se koná v jiný den, nejde o nepřetržitý dvoudenní program.",
+        "Plakát uvádí předprodej na www.koletovka.cz od 12. října. Výše vstupného, slevové varianty a čas ukončení nejsou v zachyceném detailu ani plakátu uvedeny.",
+        "Věkové nebo členské omezení vstupu není uvedeno. Dostupnost vstupenek nebyla ověřena.",
+        "Mapa ukazuje pouze ověřený orientační střed uvedené obce či místní části, nikoli přesné místo nebo vstup do budovy."
+      ],
+      "audience": "všichni",
+      "location": {
+        "lat": 50.505532,
+        "lon": 16.0711662,
+        "precision": "town",
+        "label": "Rtyně v Podkrkonoší — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440255"
+      },
+      "id": "e-audit-9caf6c8be0b4c4fa872424c479270458",
+      "region": "Královéhradecký kraj",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-koncerty-koletovy-hornicke-hudby-384_62cs.html",
+      "verifiedAt": "2026-11-13T14:24:56+00:00",
       "status": "confirmed"
     },
     {
@@ -2091,7 +2124,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T12:19:44+00:00",
+      "verifiedAt": "2026-11-13T14:33:05+00:00",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/rozsviceni-vanocniho-stromu-v-nejdku-2406_1222cs.html",
       "location": {
         "lat": 50.3247878,
@@ -2128,6 +2161,39 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/436115"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "title": "Adventní koncerty Koletovy hornické hudby",
+      "town": "Rtyně v Podkrkonoší",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Hala Orlovna Rtyně v Podkrkonoší",
+      "category": "setkani",
+      "price": null,
+      "registration": "Předprodej vstupenek od 12. října na webu pořadatele; povinná rezervace není uvedena.",
+      "registrationUrl": null,
+      "description": "Adventní koncert Koletovy hornické hudby v hale Orlovna ve Rtyni v Podkrkonoší.",
+      "notes": [
+        "Samostatný koncert v uvedený den; druhý koncert se koná v jiný den, nejde o nepřetržitý dvoudenní program.",
+        "Plakát uvádí předprodej na www.koletovka.cz od 12. října. Výše vstupného, slevové varianty a čas ukončení nejsou v zachyceném detailu ani plakátu uvedeny.",
+        "Věkové nebo členské omezení vstupu není uvedeno. Dostupnost vstupenek nebyla ověřena.",
+        "Mapa ukazuje pouze ověřený orientační střed uvedené obce či místní části, nikoli přesné místo nebo vstup do budovy."
+      ],
+      "audience": "všichni",
+      "location": {
+        "lat": 50.505532,
+        "lon": 16.0711662,
+        "precision": "town",
+        "label": "Rtyně v Podkrkonoší — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440255"
+      },
+      "id": "e-audit-a89b910b15149994afcdf4bec3ff43c7",
+      "region": "Královéhradecký kraj",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-koncerty-koletovy-hornicke-hudby-384_63cs.html",
+      "verifiedAt": "2026-11-13T14:24:56+00:00",
+      "status": "confirmed"
     },
     {
       "id": "e-6791dd58fe264edc",
@@ -2708,6 +2774,38 @@
       }
     },
     {
+      "title": "Adventní neděle ve Lhotě",
+      "town": "Lhota za Červeným Kostelcem",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "náves ve Lhotě",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Slavnostní rozsvícení vánočního stromu a první adventní svíce na návsi s vystoupením dětí ze ZŠ Lhota.",
+      "notes": [
+        "Samostatný termín adventního cyklu; nejde o každodenní ani souvislý program.",
+        "Čas ukončení, cena a podmínky rezervace nejsou v pozvánce uvedeny.",
+        "Mapa ukazuje pouze ověřený orientační střed uvedené obce či místní části, nikoli přesné místo nebo vstup do budovy."
+      ],
+      "audience": "všichni",
+      "location": {
+        "lat": 50.4838175,
+        "lon": 16.0810022,
+        "precision": "town",
+        "label": "Lhota za Červeným Kostelcem — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/node/1586673712"
+      },
+      "id": "e-audit-00b8cf2790e32e61e0b0109116fb3dbf",
+      "region": "Královéhradecký kraj",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_124cs.html",
+      "verifiedAt": "2026-11-13T14:23:50+00:00",
+      "status": "confirmed"
+    },
+    {
       "title": "Zahájení adventní doby s rozsvícením vánočního stromu",
       "town": "Zlín",
       "venue": "kostel Panny Marie Pomocnice křesťanů, Zlín-Jižní Svahy; dopoledne sál B, odpoledne před kostelem",
@@ -2759,7 +2857,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T14:02:12+00:00",
+      "verifiedAt": "2026-11-13T14:32:25+00:00",
       "sourceUrl": "https://www.ckzije.cz/kalendar-akci/slavnostni-rozsviceni-vanocniho-stromku-447_114cs.html",
       "location": {
         "lat": 50.476505,
@@ -3068,7 +3166,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T14:02:19+00:00",
+      "verifiedAt": "2026-11-13T14:32:31+00:00",
       "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-koncert-cervanku-byla-cesta-byla-uslapana-437_106cs.html",
       "location": {
         "lat": 50.476505,
@@ -3979,6 +4077,40 @@
       }
     },
     {
+      "title": "Mikulášská nadílka ve Lhotě",
+      "town": "Lhota za Červeným Kostelcem",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "sokolovna u základní školy ve Lhotě za Červeným Kostelcem",
+      "category": "mikulas",
+      "price": null,
+      "registration": "Pouze při předávání soukromých dárků je třeba předem domluvit podrobnosti s pořadatelem nejpozději do 2. prosince 2026. Povinné přihlášení každého návštěvníka není uvedeno.",
+      "registrationUrl": null,
+      "description": "Mikulášská nadílka pro děti a rodiče v sokolovně u základní školy ve Lhotě za Červeným Kostelcem.",
+      "notes": [
+        "Plakát potvrzuje pátek 4. 12. 2026 od 16:00 a uvádí odměňování dětí Mikulášem v 18:00; 18:00 není oznámený konec akce.",
+        "Čekají hry, zábava a soutěže; masky jsou vítány. Text uvádí drobné občerstvení pro děti i rodiče, ne jeho cenu.",
+        "Uzávěrka 2. prosince se týká domluvy soukromých dárků, nikoli povinné rezervace pro všechny návštěvníky. Kontaktní údaje jsou pouze v primárním zdroji.",
+        "Vstupné, věková hranice a čas ukončení nejsou uvedeny.",
+        "Mapa ukazuje pouze ověřený orientační střed uvedené obce či místní části, nikoli přesné místo nebo vstup do budovy."
+      ],
+      "audience": "všichni",
+      "location": {
+        "lat": 50.4838175,
+        "lon": 16.0810022,
+        "precision": "town",
+        "label": "Lhota za Červeným Kostelcem — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/node/1586673712"
+      },
+      "id": "e-audit-df2b556a2f2917e4a3b3645be8f5d6f6",
+      "region": "Královéhradecký kraj",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/mikulasska-nadilka-ve-lhote-438_107cs.html",
+      "verifiedAt": "2026-11-13T14:24:56+00:00",
+      "status": "confirmed"
+    },
+    {
       "id": "e-7360ebb4c5b24857e2c9",
       "title": "Adventní folk & rock",
       "town": "Hranice",
@@ -4770,6 +4902,39 @@
       }
     },
     {
+      "title": "Tajemství pohádkových Vánoc s MDO a Family Bandem",
+      "town": "Žireč (Dvůr Králové nad Labem)",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Areál domu sv. Josefa, Žireč",
+      "category": "setkani",
+      "price": "Plné vstupné: 150 Kč",
+      "registration": "Vstupenky v předprodeji v IC Červený Kostelec nebo online na webu MKS ČK; povinná rezervace není uvedena.",
+      "registrationUrl": null,
+      "description": "Vánoční koncert Městského dechového orchestru a přípravného orchestru Family Band ČK s pohádkovými a tradičními melodiemi.",
+      "notes": [
+        "Koncert se koná v areálu domu sv. Josefa v Žirči, podle přesného odkazu této akce v obci Dvůr Králové nad Labem, nikoli v Červeném Kostelci.",
+        "Zachycený detail uvádí plné vstupné 150 Kč a předprodej v IC Červený Kostelec nebo online na www.mksck.cz. Jiné ceny, slevy ani uzávěrku neuvádí; dostupnost nebyla ověřena.",
+        "Čas ukončení a věkové nebo členské omezení vstupu nejsou uvedeny.",
+        "Mapa ukazuje pouze ověřený orientační střed uvedené obce či místní části, nikoli přesné místo nebo vstup do budovy."
+      ],
+      "audience": "všichni",
+      "location": {
+        "lat": 50.41392,
+        "lon": 15.8499116,
+        "precision": "town",
+        "label": "Žireč (Dvůr Králové nad Labem) — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/21035129"
+      },
+      "id": "e-audit-36c7373549b53c98ffc0cb00dc6ced15",
+      "region": "Královéhradecký kraj",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/tajemstvi-pohadkovych-vanoc-s-mdo-a-family-bandem-446_113cs.html",
+      "verifiedAt": "2026-11-13T14:24:56+00:00",
+      "status": "confirmed"
+    },
+    {
       "id": "e-fe2188cf907d5a69",
       "title": "Mikulášská",
       "town": "Klokočná",
@@ -4940,6 +5105,70 @@
         "label": "Ludgeřovice — orientační střed obce či místní části, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437640"
       }
+    },
+    {
+      "title": "Mikulášská besídka na Bohdašíně",
+      "town": "Červený Kostelec – Bohdašín",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "Pohostinství Bohdašín",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášská besídka pro děti v pohostinství na Bohdašíně: soutěže, hudba, Mikuláš, čerti a anděl.",
+      "notes": [
+        "Bohdašín je v přesném odkazu na tuto akci výslovně přiřazen k Červenému Kostelci; akce není v centru města.",
+        "Pozvánka je určena dětem a rodinám; věková hranice není uvedena. Vstupné, povinné přihlášení a čas ukončení nejsou v zachyceném detailu uvedeny.",
+        "Mapa ukazuje pouze ověřený orientační střed uvedené obce či místní části, nikoli přesné místo nebo vstup do budovy."
+      ],
+      "audience": "všichni",
+      "location": {
+        "lat": 50.5000001,
+        "lon": 16.1127047,
+        "precision": "town",
+        "label": "Červený Kostelec – Bohdašín — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/21067313"
+      },
+      "id": "e-audit-de95adc07282817cde04d98444aff62c",
+      "region": "Královéhradecký kraj",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/mikulasska-besidka-na-bohdasine-439_108cs.html",
+      "verifiedAt": "2026-11-13T14:24:56+00:00",
+      "status": "confirmed"
+    },
+    {
+      "title": "Adventní neděle ve Lhotě",
+      "town": "Lhota za Červeným Kostelcem",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "náves ve Lhotě",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vystoupení dětí z MŠ Větrník, rozsvícení druhé adventní svíce a návštěva Mikuláše a čerta na návsi.",
+      "notes": [
+        "Samostatný termín adventního cyklu; nejde o každodenní ani souvislý program.",
+        "Čas ukončení, cena a podmínky rezervace nejsou v pozvánce uvedeny.",
+        "Mapa ukazuje pouze ověřený orientační střed uvedené obce či místní části, nikoli přesné místo nebo vstup do budovy."
+      ],
+      "audience": "všichni",
+      "location": {
+        "lat": 50.4838175,
+        "lon": 16.0810022,
+        "precision": "town",
+        "label": "Lhota za Červeným Kostelcem — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/node/1586673712"
+      },
+      "id": "e-audit-b332d6fa38bc91a8eb3f3d7043f6f704",
+      "region": "Královéhradecký kraj",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_125cs.html",
+      "verifiedAt": "2026-11-13T14:23:50+00:00",
+      "status": "confirmed"
     },
     {
       "id": "e-0efc9fc80a33b85cbff7",
@@ -5425,7 +5654,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T12:19:51+00:00",
+      "verifiedAt": "2026-11-13T14:33:12+00:00",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/adventni-koncert-studentskeho-sboru-gybon-2425_1232cs.html",
       "location": {
         "lat": 50.3247878,
@@ -5738,7 +5967,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T14:01:47+00:00",
+      "verifiedAt": "2026-11-13T14:31:59+00:00",
       "sourceUrl": "https://www.ckzije.cz/kalendar-akci/vanocni-koncert-junior-big-band-379_56cs.html",
       "location": {
         "lat": 50.476505,
@@ -5794,7 +6023,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T12:19:54+00:00",
+      "verifiedAt": "2026-11-13T14:33:15+00:00",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/zdobeni-pernicku-2424_1231cs.html",
       "location": {
         "lat": 50.3247878,
@@ -6082,7 +6311,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T12:19:58+00:00",
+      "verifiedAt": "2026-11-13T14:33:18+00:00",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/vanocni-krusnohorsky-jarmark-v-knihovne-2423_1230cs.html",
       "location": {
         "lat": 50.3247878,
@@ -6659,6 +6888,38 @@
       }
     },
     {
+      "title": "Adventní neděle ve Lhotě",
+      "town": "Lhota za Červeným Kostelcem",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "náves ve Lhotě",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení třetí adventní svíce na návsi a překvapení pro děti.",
+      "notes": [
+        "Samostatný termín adventního cyklu; nejde o každodenní ani souvislý program.",
+        "Čas ukončení, cena a podmínky rezervace nejsou v pozvánce uvedeny.",
+        "Mapa ukazuje pouze ověřený orientační střed uvedené obce či místní části, nikoli přesné místo nebo vstup do budovy."
+      ],
+      "audience": "všichni",
+      "location": {
+        "lat": 50.4838175,
+        "lon": 16.0810022,
+        "precision": "town",
+        "label": "Lhota za Červeným Kostelcem — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/node/1586673712"
+      },
+      "id": "e-audit-f3e3fb5394691438891c7ac8e97ea4e4",
+      "region": "Královéhradecký kraj",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_126cs.html",
+      "verifiedAt": "2026-11-13T14:23:50+00:00",
+      "status": "confirmed"
+    },
+    {
       "id": "e-1c40674f8a920a72f6a5",
       "title": "Koledy v podloubí",
       "town": "Žatec",
@@ -7046,7 +7307,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T12:20:01+00:00",
+      "verifiedAt": "2026-11-13T14:33:22+00:00",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/vanocni-koncert-2439_1245cs.html",
       "location": {
         "lat": 50.3247878,
@@ -7278,7 +7539,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T14:01:53+00:00",
+      "verifiedAt": "2026-11-13T14:32:06+00:00",
       "sourceUrl": "https://www.ckzije.cz/kalendar-akci/andelske-putovani-vanocni-vystoupeni-zus-380_57cs.html",
       "location": {
         "lat": 50.476505,
@@ -7455,7 +7716,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T14:01:57+00:00",
+      "verifiedAt": "2026-11-13T14:32:09+00:00",
       "sourceUrl": "https://www.ckzije.cz/kalendar-akci/andelske-putovani-vanocni-vystoupeni-zus-380_58cs.html",
       "location": {
         "lat": 50.476505,
@@ -7664,6 +7925,39 @@
         "label": "Telč — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441173"
       }
+    },
+    {
+      "title": "Adventní bohoslužba",
+      "town": "Nejdek",
+      "date": "2026-12-19",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "venue": "Nejdek, Kollárova 953",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní bohoslužba Novoapoštolské církve v Nejdku, Kollárova 953.",
+      "notes": [
+        "Primární HTML i plakát výslovně uvádějí Nejdek, Kollárova 953, sobotu 19. prosince 2026 v 10:00.",
+        "Plakát také uvádí pravidelné nedělní bohoslužby v 10:00; toto obecné sdělení nepřidává další výskyty adventní akce.",
+        "Vstupné, povinná registrace, uzávěrka, věkové nebo členské omezení a čas ukončení nejsou uvedeny.",
+        "Mapa ukazuje pouze ověřený orientační střed uvedené obce či místní části, nikoli přesné místo nebo vstup do budovy."
+      ],
+      "audience": "všichni",
+      "location": {
+        "lat": 50.3247878,
+        "lon": 12.7332967,
+        "precision": "town",
+        "label": "Nejdek — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439476"
+      },
+      "id": "e-audit-2b7a501c398cb07db12c33510e40b795",
+      "region": "Karlovarský kraj",
+      "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/adventni-bohosluzba-2441_1246cs.html",
+      "verifiedAt": "2026-11-13T14:24:56+00:00",
+      "status": "confirmed"
     },
     {
       "id": "e-9cbcde050dbac373bd6b",
@@ -8014,6 +8308,38 @@
       "status": "confirmed"
     },
     {
+      "title": "Adventní neděle ve Lhotě",
+      "town": "Lhota za Červeným Kostelcem",
+      "date": "2026-12-20",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "náves ve Lhotě",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení čtvrté adventní svíce na návsi a zpívání koled.",
+      "notes": [
+        "Samostatný termín adventního cyklu; nejde o každodenní ani souvislý program.",
+        "Čas ukončení, cena a podmínky rezervace nejsou v pozvánce uvedeny.",
+        "Mapa ukazuje pouze ověřený orientační střed uvedené obce či místní části, nikoli přesné místo nebo vstup do budovy."
+      ],
+      "audience": "všichni",
+      "location": {
+        "lat": 50.4838175,
+        "lon": 16.0810022,
+        "precision": "town",
+        "label": "Lhota za Červeným Kostelcem — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/node/1586673712"
+      },
+      "id": "e-audit-721b513ab802ddd581921f029cc6791d",
+      "region": "Královéhradecký kraj",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_127cs.html",
+      "verifiedAt": "2026-11-13T14:23:50+00:00",
+      "status": "confirmed"
+    },
+    {
       "id": "e-9058e280764c398c75a6",
       "title": "Koledy v podloubí",
       "town": "Žatec",
@@ -8205,7 +8531,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-13T14:02:25+00:00",
+      "verifiedAt": "2026-11-13T14:32:37+00:00",
       "sourceUrl": "https://www.ckzije.cz/kalendar-akci/ceska-mse-vanocni-375_51cs.html",
       "location": {
         "lat": 50.476505,
@@ -8444,6 +8770,38 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/437181"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "title": "Adventní neděle ve Lhotě",
+      "town": "Lhota za Červeným Kostelcem",
+      "date": "2026-12-24",
+      "endDate": null,
+      "startTime": "11:00",
+      "endTime": null,
+      "venue": "náves ve Lhotě a místní kaplička",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Štědrodenní sousedské zpívání koled společně na návsi i v místní kapličce.",
+      "notes": [
+        "Samostatný termín adventního cyklu; nejde o každodenní ani souvislý program.",
+        "Čas ukončení, cena a podmínky rezervace nejsou v pozvánce uvedeny.",
+        "Mapa ukazuje pouze ověřený orientační střed uvedené obce či místní části, nikoli přesné místo nebo vstup do budovy."
+      ],
+      "audience": "všichni",
+      "location": {
+        "lat": 50.4838175,
+        "lon": 16.0810022,
+        "precision": "town",
+        "label": "Lhota za Červeným Kostelcem — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/node/1586673712"
+      },
+      "id": "e-audit-fe1b8b1b0983d0542c959db674e49fb8",
+      "region": "Královéhradecký kraj",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_128cs.html",
+      "verifiedAt": "2026-11-13T14:23:50+00:00",
+      "status": "confirmed"
     },
     {
       "id": "e-55e2d666835f2ce2c9d6",
