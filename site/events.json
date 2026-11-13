@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T12:13:30+00:00",
+  "generatedAt": "2026-11-13T13:09:26+00:00",
   "season": 2026,
   "region": "Česko – sezonní výběr",
   "events": [
@@ -435,6 +435,36 @@
       }
     },
     {
+      "id": "e-a0002aa5bafdd24eae47",
+      "title": "Vyrábění adventních věnců",
+      "town": "Hlinsko",
+      "region": "Pardubický kraj",
+      "date": "2026-11-24",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Zastáfka Kafé",
+      "category": "tvoreni",
+      "price": "600 Kč",
+      "registration": "Pořadatel uvádí rezervace / přihlášení; podmínky ověřte přímo u něj.",
+      "registrationUrl": null,
+      "description": "Vyrábění adventních věnců. Zastáfka Kafé",
+      "notes": [
+        "Pořadatel požaduje rezervaci; vezměte si zahradnické nůžky. Volná místa nebyla ověřena."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:08:43+00:00",
+      "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vyrabeni-adventnich-vencu-3444_2090cs.html",
+      "location": {
+        "lat": 49.7625672,
+        "lon": 15.907339,
+        "precision": "town",
+        "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439995"
+      }
+    },
+    {
       "id": "e-9368ed290a98e9fb",
       "title": "Výroba adventních věnců",
       "town": "Mukařov",
@@ -575,6 +605,96 @@
         "precision": "town",
         "label": "Jilemnice — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439145"
+      }
+    },
+    {
+      "id": "e-c5c90aef533556396ae0",
+      "title": "Adventní jarmark na ZŠ Resslova",
+      "town": "Hlinsko",
+      "region": "Pardubický kraj",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "startTime": null,
+      "endTime": null,
+      "venue": "ZŠ Resslova",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní jarmark na ZŠ Resslova. ZŠ Resslova",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek.",
+        "Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření.",
+        "Otevírací doba: 25. 11. 15:30–18:00; 26. 11. 8:00–17:00; 27. 11. 8:00–11:00. Nejde o nepřetržitý provoz."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T13:08:47+00:00",
+      "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/adventni-jarmark-na-zs-resslova-3445_2091cs.html",
+      "location": {
+        "lat": 49.7625672,
+        "lon": 15.907339,
+        "precision": "town",
+        "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439995"
+      }
+    },
+    {
+      "id": "e-083a239e535bb42e8c8a",
+      "title": "Vánoční jarmark ve Staré papírně",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-11-26",
+      "endDate": "2026-11-28",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "venue": "Regionální muzeum K.A.Polánka, Stará papírna",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční jarmark ve Staré papírně. Regionální muzeum K.A.Polánka, Stará papírna",
+      "notes": [
+        "Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:07:29+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/vanocni-jarmark-ve-stare-papirne-697_813cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
+    },
+    {
+      "id": "e-2fd587b80f2488e94927",
+      "title": "Vánoční těšení na ZŠ Ležáků",
+      "town": "Hlinsko",
+      "region": "Pardubický kraj",
+      "date": "2026-11-26",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "ZŠ Ležáků",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční těšení na ZŠ Ležáků. ZŠ Ležáků",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:08:53+00:00",
+      "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vanocni-teseni-na-zs-lezaku-3443_2089cs.html",
+      "location": {
+        "lat": 49.7625672,
+        "lon": 15.907339,
+        "precision": "town",
+        "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439995"
       }
     },
     {
@@ -719,6 +839,37 @@
       "status": "confirmed"
     },
     {
+      "id": "e-193626a7baf2075bad0c",
+      "title": "Mikulášsko-vánoční jarmark",
+      "town": "Hlinsko",
+      "region": "Pardubický kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "12:00",
+      "endTime": "19:00",
+      "venue": "areál Betléma a před Orlovnou",
+      "category": "mikulas",
+      "price": "zdarma",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášsko-vánoční jarmark. areál Betléma a před Orlovnou",
+      "notes": [
+        "12:00–19:00 se vztahuje k jarmarku; rozsvícení stromu je uvedeno v 18:00. Změny programu vyhrazeny.",
+        "Mikuláš je v doprovodném programu uveden ve 14:00; 12:00 je otevření jarmarku."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:08:56+00:00",
+      "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/mikulassko-vanocni-jarmark-3442_2088cs.html",
+      "location": {
+        "lat": 49.7625672,
+        "lon": 15.907339,
+        "precision": "town",
+        "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439995"
+      }
+    },
+    {
       "id": "e-4b88a026df4d658f3495",
       "title": "VÁNOČNÍ JARMARK ZŠ RAJHRAD * 27.11.2026",
       "town": "Rajhrad",
@@ -805,6 +956,31 @@
         "label": "Třeboň — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437495"
       }
+    },
+    {
+      "title": "Rozsvícení vánočního stromu na Vrablovci",
+      "town": "Ludgeřovice-Vrablovec",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "18:00",
+      "venue": "Společenský dům na Vrablovci",
+      "category": "strom",
+      "price": "volný vstup",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu na Vrablovci. Společenský dům na Vrablovci",
+      "notes": [
+        "Plakát výslovně uvádí vstup volný; akce je u Společenského domu na Vrablovci.",
+        "Vrablovec je lokalita Ludgeřovic. Přesný bod Společenského domu není ověřen; nenahrazuje se středem Ludgeřovic ani bodem jiné ulice."
+      ],
+      "audience": "všichni",
+      "location": null,
+      "id": "e-audit-d417f71a27bf3fae821b53d2f503b0c9",
+      "region": "Moravskoslezský kraj",
+      "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/rozsviceni-vanocniho-stromu-na-vrablovci-2652_510cs.html",
+      "verifiedAt": "2026-11-13T12:41:32+00:00",
+      "status": "confirmed"
     },
     {
       "id": "e-578c483002bee51513e4",
@@ -1044,6 +1220,36 @@
       }
     },
     {
+      "id": "e-d280c847dcf08b1e86a4",
+      "title": "Vánoční trhy a rozsvícení vánočního stromu",
+      "town": "Ludgeřovice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "08:00",
+      "endTime": "14:00",
+      "venue": "Obecní dům Ludgeřovice",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční trhy a rozsvícení vánočního stromu. Obecní dům Ludgeřovice",
+      "notes": [
+        "Tento detail se vztahuje na vánoční trhy 8:00–14:00 v sále Obecního domu; rozsvícení stromu je samostatný večerní program na farské louce."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:36+00:00",
+      "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/vanocni-trhy-a-rozsviceni-vanocniho-stromu-2647_504cs.html",
+      "location": {
+        "lat": 49.8903906,
+        "lon": 18.2401116,
+        "precision": "town",
+        "label": "Ludgeřovice — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437640"
+      }
+    },
+    {
       "id": "e-e2b846b94f0e04ddfaf0",
       "title": "Adventní jarmark",
       "town": "Beroun",
@@ -1099,6 +1305,36 @@
         "precision": "town",
         "label": "Beroun — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442333"
+      }
+    },
+    {
+      "id": "e-5326a08c16e2581e40de",
+      "title": "Vánoční aranžování pro děti i dospělé",
+      "town": "Hlinsko",
+      "region": "Pardubický kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": null,
+      "venue": "Dům dětí a mládeže Hlinsko",
+      "category": "tvoreni",
+      "price": "zdarma",
+      "registration": "Pořadatel uvádí rezervace / přihlášení; podmínky ověřte přímo u něj.",
+      "registrationUrl": null,
+      "description": "Vánoční aranžování pro děti i dospělé. Dům dětí a mládeže Hlinsko",
+      "notes": [
+        "Pořadatel uvádí přihlášení a vlastní nádobu na aranžování, větvičky, svíčky a další přízdoby; místo nebylo rezervováno."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:00+00:00",
+      "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vanocni-aranzovani-pro-deti-i-dospele-3461_2102cs.html",
+      "location": {
+        "lat": 49.7625672,
+        "lon": 15.907339,
+        "precision": "town",
+        "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439995"
       }
     },
     {
@@ -1537,6 +1773,37 @@
       "region": "Středočeský kraj"
     },
     {
+      "title": "Rozsvícení vánočního stromu",
+      "town": "Hlinsko-Blatno",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "18:00",
+      "venue": "u hasičárny v Blatně",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu. u hasičárny v Blatně",
+      "notes": [
+        "Blatno je zde výslovně spojeno s městem Hlinsko v adrese kalendáře i na plakátu; nejde o stejnojmennou vzdálenou obec. Přesné umístění hasičárny ani souřadnice nebyly určeny.",
+        "Blatno je místní část Hlinska; bod je pouze orientační střed místní části, nikoli hasičárna."
+      ],
+      "audience": "všichni",
+      "location": {
+        "lat": 49.7597268,
+        "lon": 15.9233236,
+        "precision": "town",
+        "label": "Hlinsko-Blatno — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/node/1584552881"
+      },
+      "id": "e-audit-3bb57d937899a22683f32c6c9d36c4ad",
+      "region": "Pardubický kraj",
+      "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/rozsviceni-vanocniho-stromu-3463_2104cs.html",
+      "verifiedAt": "2026-11-13T12:45:51+00:00",
+      "status": "confirmed"
+    },
+    {
       "id": "e-09c6f5cfa7ba2c8c1fb7",
       "title": "Rozsvícení vánočního stromečku v Plasích",
       "town": "Plasy",
@@ -1619,6 +1886,36 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/437185"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-43f27651bd3ca34ae08e",
+      "title": "Vánoční trhy a rozsvícení vánočního stromu",
+      "town": "Ludgeřovice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "19:00",
+      "venue": "louka u kostela sv. Mikuláše",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční trhy a rozsvícení vánočního stromu. louka u kostela sv. Mikuláše",
+      "notes": [
+        "Kalendář označuje program 17:00–19:00; plakát uvádí slavnostní rozsvícení stromu až po 17:00, nikoli přesně v 17:00. Jde o jinou část společné akce než dopolední trhy v Obecním domě."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:39+00:00",
+      "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/vanocni-trhy-a-rozsviceni-vanocniho-stromu-2647_505cs.html",
+      "location": {
+        "lat": 49.8903906,
+        "lon": 18.2401116,
+        "precision": "town",
+        "label": "Ludgeřovice — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437640"
+      }
     },
     {
       "id": "e-28fccb5333a7f2668bde",
@@ -1849,6 +2146,37 @@
         "precision": "town",
         "label": "Dobruška — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/440632"
+      }
+    },
+    {
+      "id": "e-49d4088fa291073e0f0e",
+      "title": "Rozsvícení vánočního stromu",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": null,
+      "venue": "náměstí Svobody",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu. náměstí Svobody",
+      "notes": [
+        "13:00 je začátek doprovodného programu, nikoli potvrzený okamžik rozsvícení.",
+        "Rozpor konce: konkrétní detail uvádí 19:00, souhrnný adventní přehled 18:30; konec proto není pevně uveden."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:07:35+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/rozsviceni-vanocniho-stromu-692_808cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
       }
     },
     {
@@ -2253,6 +2581,34 @@
       "sourceUrl": "https://visitzlin.eu/kalendar-akci/zahajeni-adventni-doby-s-rozsvicenim-vanocniho-stromu",
       "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
       "status": "confirmed"
+    },
+    {
+      "id": "e-dfc75b58331f25bb7ec2",
+      "title": "Koledy v podloubí",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "venue": "Ramon Cafe",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Koledy v podloubí. Ramon Cafe",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:07:39+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/koledy-v-podloubi-691_804cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
     },
     {
       "id": "e-e9831b570cd7b4261e6e",
@@ -3057,6 +3413,34 @@
       }
     },
     {
+      "id": "e-568868a7d63bfe509103",
+      "title": "Advent na Trojce - Den otevřených dvěří",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-12-02",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "18:00",
+      "venue": "Základní škola 28. října",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Advent na Trojce - Den otevřených dvěří. Základní škola 28. října",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:07:42+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/advent-na-trojce-den-otevrenych-dveri-690_803cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
+    },
+    {
       "id": "e-ab6ba0d3a9499162",
       "title": "Vánoční jarmark ZŠ Mukařov",
       "town": "Mukařov",
@@ -3510,6 +3894,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-0616795fb5212df27f8f",
+      "title": "Advent u Svatého Jakuba",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "venue": "Dvůr U Svatého Jakuba",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Advent u Svatého Jakuba. Dvůr U Svatého Jakuba",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:07:49+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/advent-u-svateho-jakuba-1001_1214cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
+    },
+    {
       "id": "e-ed812763b7b5649b",
       "title": "Vánoční jarmark 2026 v Mirošovicích s Mikulášem",
       "town": "Mirošovice",
@@ -3596,6 +4008,36 @@
       }
     },
     {
+      "id": "e-34f649058518c779da5a",
+      "title": "Mikulášská nadílka pro děti - obecní akce",
+      "town": "Ludgeřovice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "18:00",
+      "venue": "sál Obecního domu Ludgeřovice",
+      "category": "mikulas",
+      "price": null,
+      "registration": "Plakát uvádí přihlášení dětí telefonicky u pořadatele; termín a cenu neuvádí.",
+      "registrationUrl": null,
+      "description": "Mikulášská nadílka pro děti - obecní akce. sál Obecního domu Ludgeřovice",
+      "notes": [
+        "Konkrétní sál je doložen v popisu a na přiloženém plakátu, nikoli v obecném poli Kde: Obec Ludgeřovice."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:42+00:00",
+      "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/mikulasska-nadilka-pro-deti-obecni-akce-2650_508cs.html",
+      "location": {
+        "lat": 49.8903906,
+        "lon": 18.2401116,
+        "precision": "town",
+        "label": "Ludgeřovice — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437640"
+      }
+    },
+    {
       "id": "e-07898a00eaa4d1fc241e",
       "title": "Mikulášská stezka - v parku u altánu",
       "town": "Soběslav",
@@ -3676,6 +4118,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-8fa04c00ae919db74862",
+      "title": "Adventní běh",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "15:55",
+      "endTime": "17:00",
+      "venue": "náměstí Svobody",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní běh. náměstí Svobody",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:07:52+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/adventni-beh-685_798cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
+    },
+    {
       "id": "e-768d27168aa3c59a",
       "title": "Mikulášská nadílka",
       "town": "Hrusice",
@@ -3732,6 +4202,36 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-d578b23b3ef2d78d60f0",
+      "title": "Mikulášská nadílka ANO Ludgeřovice",
+      "town": "Ludgeřovice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Areál chovatelů Ludgeřovice",
+      "category": "mikulas",
+      "price": "dobrovolné",
+      "registration": "Nutná rezervace stolu u pořadatele.",
+      "registrationUrl": null,
+      "description": "Mikulášská nadílka ANO Ludgeřovice. Areál chovatelů Ludgeřovice",
+      "notes": [
+        "Plakát: animační program 16:00–17:30, mikulášská nadílka v 17:30. Rodiče mají přinést balíček se jménem dítěte. Konec celé akce neuveden."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:46+00:00",
+      "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/mikulasska-nadilka-ano-ludgerovice-2658_514cs.html",
+      "location": {
+        "lat": 49.8903906,
+        "lon": 18.2401116,
+        "precision": "town",
+        "label": "Ludgeřovice — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437640"
+      }
+    },
+    {
       "id": "e-c7405a2c3a90ef14",
       "title": "Mikulášský průvod",
       "town": "Mukařov",
@@ -3758,6 +4258,36 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/436112"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-a5d50ed6419ad45632ac",
+      "title": "Mikulášská nadílka Klubu turistů Ludgeřovice",
+      "town": "Ludgeřovice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "venue": "Areál u hřiště TJ Ludgeřovice",
+      "category": "mikulas",
+      "price": "dobrovolné",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášská nadílka Klubu turistů Ludgeřovice. Areál u hřiště TJ Ludgeřovice",
+      "notes": [
+        "Rodiče mohou přinést vlastní dárky na místo v den akce do 16:00; začátek programu je v 16:30. Plakát nestanoví členství ani předběžnou rezervaci. Rok 2026 je výslovně v označeném datu HTML, nikoli na plakátu."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:49+00:00",
+      "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/mikulasska-nadilka-klubu-turistu-ludgerovice-2667_518cs.html",
+      "location": {
+        "lat": 49.8903906,
+        "lon": 18.2401116,
+        "precision": "town",
+        "label": "Ludgeřovice — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437640"
+      }
     },
     {
       "id": "e-adece956dd5023685718",
@@ -4070,6 +4600,92 @@
       "status": "confirmed"
     },
     {
+      "id": "e-9d85aba135e13621e2d2",
+      "title": "Adventní koncert",
+      "town": "Ludgeřovice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "16:30",
+      "venue": "Kostel sv. Mikuláše",
+      "category": "setkani",
+      "price": "dobrovolné",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert. Kostel sv. Mikuláše",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:52+00:00",
+      "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/adventni-koncert-2649_507cs.html",
+      "location": {
+        "lat": 49.8903906,
+        "lon": 18.2401116,
+        "precision": "town",
+        "label": "Ludgeřovice — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437640"
+      }
+    },
+    {
+      "id": "e-0efc9fc80a33b85cbff7",
+      "title": "Koledy v podloubí",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "venue": "Ramon Cafe",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Koledy v podloubí. Ramon Cafe",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:07:59+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/koledy-v-podloubi-691_805cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
+    },
+    {
+      "id": "e-566699702893cc4aa785",
+      "title": "Adventní souborový koncert",
+      "town": "Hlinsko",
+      "region": "Pardubický kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Multifunkční centrum",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní souborový koncert. Multifunkční centrum",
+      "notes": [
+        "Pořadatel uvádí předprodej od 10. 11. 2026; cenu ani zbývající vstupenky se nepodařilo z tohoto primárního detailu/plakátu ověřit."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:09+00:00",
+      "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/adventni-souborovy-koncert-3457_2098cs.html",
+      "location": {
+        "lat": 49.7625672,
+        "lon": 15.907339,
+        "precision": "town",
+        "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439995"
+      }
+    },
+    {
       "id": "e-ec27b46c867091d988f7",
       "title": "Mikulášská nadílka",
       "town": "Praha-Lipence",
@@ -4216,6 +4832,39 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-593d31dcf3dc78f0b02e",
+      "title": "Mikulášská nadílka",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": null,
+      "endTime": "18:00",
+      "venue": "Městské divadlo Žatec",
+      "category": "mikulas",
+      "price": "Děti do 13 let: 100,- Kč (v ceně mikulášský balíček cukrovinek v hodnotě 100,- Kč); doprovod: 50,- Kč.",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášská nadílka. Městské divadlo Žatec",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek.",
+        "Rozpor začátku: konkrétní detail uvádí 14:45, souhrnný program 15:00. Přesný začátek proto není potvrzený.",
+        "Detail uvádí konec programu 18:00 a délku představení s nadílkou 90 minut; nejde o délku celého odpoledne.",
+        "Počet zájemců je omezen kapacitou budovy; aktuální dostupnost ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T13:07:56+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/mikulasska-nadilka-683_796cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
+    },
+    {
       "id": "e-4267ad981dd04a2d4809",
       "title": "VÁNOČNÍ TVOŘENÍ ANEB VYZDOB KNIHOVNU!",
       "town": "Jilemnice",
@@ -4299,6 +4948,34 @@
         "precision": "town",
         "label": "Hranice, okres Přerov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438577"
+      }
+    },
+    {
+      "id": "e-7425885016debc2fc26a",
+      "title": "Adventní jarmark v Charitním domově sv. Mikuláše v Ludgeřovicích",
+      "town": "Ludgeřovice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-08",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": "18:00",
+      "venue": "Domov sv. Mikuláše",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní jarmark v Charitním domově sv. Mikuláše v Ludgeřovicích. Domov sv. Mikuláše",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:55+00:00",
+      "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/adventni-jarmark-v-charitnim-domove-sv-mikulase-v-ludgerovicich-2641_500cs.html",
+      "location": {
+        "lat": 49.8903906,
+        "lon": 18.2401116,
+        "precision": "town",
+        "label": "Ludgeřovice — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437640"
       }
     },
     {
@@ -4498,6 +5175,64 @@
       }
     },
     {
+      "id": "e-e9256673ba3ad414abe7",
+      "title": "Smetanové Vánoce",
+      "town": "Hlinsko",
+      "region": "Pardubický kraj",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Dopravní hřiště (pořádá ZŠ Smetanova)",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Smetanové Vánoce. Dopravní hřiště (pořádá ZŠ Smetanova)",
+      "notes": [
+        "Plakát upřesňuje místo na dopravní hřiště; rok 2026 a Hlinsko jsou výslovně uvedeny v označených polích téhož detailu, nikoli odhadnuty z plakátu."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:13+00:00",
+      "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/smetanove-vanoce-3460_2101cs.html",
+      "location": {
+        "lat": 49.7625672,
+        "lon": 15.907339,
+        "precision": "town",
+        "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439995"
+      }
+    },
+    {
+      "id": "e-37fe3ea31d6277ea63f2",
+      "title": "Česko zpívá koledy s Deníkem a Vánoční jarmark ZŠ Jižní",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "18:30",
+      "venue": "Základní škola Jižní 2777",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Česko zpívá koledy s Deníkem a Vánoční jarmark ZŠ Jižní. Základní škola Jižní 2777",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:08:02+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/cesko-zpiva-koledy-s-denikem-a-vanocni-jarmark-zs-jizni-677_792cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
+    },
+    {
       "id": "e-c58b2a50ad7e073bd4d1",
       "title": "Vánoce v Hranicích: Česko zpívá koledy",
       "town": "Hranice",
@@ -4666,6 +5401,36 @@
       }
     },
     {
+      "id": "e-447b83adee961c00f2d5",
+      "title": "U stromečku na dvorečku",
+      "town": "Hlinsko",
+      "region": "Pardubický kraj",
+      "date": "2026-12-10",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "venue": "muzejní dvorek, Městské muzeum a galerie",
+      "category": "setkani",
+      "price": "dobrovolné",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "U stromečku na dvorečku. muzejní dvorek, Městské muzeum a galerie",
+      "notes": [
+        "Akce může být v případě nepříznivého počasí zrušena."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:16+00:00",
+      "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/u-stromecku-na-dvorecku-3472_2111cs.html",
+      "location": {
+        "lat": 49.7625672,
+        "lon": 15.907339,
+        "precision": "town",
+        "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439995"
+      }
+    },
+    {
       "id": "e-02f3834b7473305147cd",
       "title": "Vánoce v Hranicích: Poutníci + Turbo",
       "town": "Hranice",
@@ -4722,6 +5487,34 @@
       }
     },
     {
+      "id": "e-f28cdfdc2d789791302d",
+      "title": "Adventní sborový koncert",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-12-11",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": "19:00",
+      "venue": "Kapucínský klášter",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní sborový koncert. Kapucínský klášter",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:08:06+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/adventni-sborovy-koncert-673_788cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
+    },
+    {
       "id": "e-ef74f4604f674c036ced",
       "title": "VÁNOCE S MUSICOU BOHEMICOU",
       "town": "Semily",
@@ -4747,6 +5540,34 @@
         "precision": "town",
         "label": "Semily — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438971"
+      }
+    },
+    {
+      "id": "e-eac8d129fc0729822317",
+      "title": "Vánoční koncert: Česká mše vánoční",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-12-11",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "21:00",
+      "venue": "Městské divadlo Žatec",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert: Česká mše vánoční. Městské divadlo Žatec",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:08:09+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/vanocni-koncert-ceska-mse-vanocni-795_920cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
       }
     },
     {
@@ -4865,6 +5686,64 @@
         "precision": "town",
         "label": "Nejdek — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439476"
+      }
+    },
+    {
+      "id": "e-6758adc7d245b87d8103",
+      "title": "Advent u Svatého Jakuba",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "venue": "Dvůr U Svatého Jakuba",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Advent u Svatého Jakuba. Dvůr U Svatého Jakuba",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:08:19+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/advent-u-svateho-jakuba-1001_1215cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
+    },
+    {
+      "id": "e-14a5d5f6e1c7faf85ee7",
+      "title": "Žatecké Vánoce 2026",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "18:00",
+      "venue": "Město Žatec",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Žatecké Vánoce 2026. Město Žatec",
+      "notes": [
+        "Detail označuje místo obecně jako Město Žatec a uvádí adresu Náměstí Svobody 1. Souhrnný program uvádí náměstí Svobody; mapa může ukázat jen orientační střed města, nikoli ověřený bod stánku či pódia."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:08:12+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/zatecke-vanoce-2026-676_791cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
       }
     },
     {
@@ -5122,6 +6001,36 @@
       }
     },
     {
+      "id": "e-f01eabbe957e1b6be4ab",
+      "title": "Bílé Vánoce Lucie Bílé",
+      "town": "Ludgeřovice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "20:30",
+      "venue": "Kostel sv. Mikuláše",
+      "category": "setkani",
+      "price": "1 800 Kč / 1 400 Kč",
+      "registration": "Vstupenky pouze v knihovně Obecního úřadu Ludgeřovice, na konkrétní místo; nejvýše 6 při jednom nákupu.",
+      "registrationUrl": null,
+      "description": "Bílé Vánoce Lucie Bílé. Kostel sv. Mikuláše",
+      "notes": [
+        "Knihovna: platba v hotovosti. Platba kartou v pokladně pouze v úředních dnech PO, ST 8–12 a 12:30–16:30. Aktuální dostupnost vstupenek není potvrzena."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:59+00:00",
+      "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/bile-vanoce-lucie-bile-2637_498cs.html",
+      "location": {
+        "lat": 49.8903906,
+        "lon": 18.2401116,
+        "precision": "town",
+        "label": "Ludgeřovice — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437640"
+      }
+    },
+    {
       "id": "e-5b9db3d75ac35176946e",
       "title": "Trio Spolektiv - Adventní koncert Dům u Michala",
       "town": "Telč",
@@ -5316,6 +6225,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/437951"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-1c40674f8a920a72f6a5",
+      "title": "Koledy v podloubí",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "venue": "Ramon Cafe",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Koledy v podloubí. Ramon Cafe",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:08:23+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/koledy-v-podloubi-691_806cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
     },
     {
       "id": "e-1b15f9ffc1d1240ab151",
@@ -5515,6 +6452,34 @@
         "precision": "town",
         "label": "Telč — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441173"
+      }
+    },
+    {
+      "id": "e-5df61204d28680daca1d",
+      "title": "Vánoční koncert žáků ZUŠ Hlinsko",
+      "town": "Hlinsko",
+      "region": "Pardubický kraj",
+      "date": "2026-12-14",
+      "endDate": null,
+      "startTime": "17:30",
+      "endTime": null,
+      "venue": "sál ZUŠ",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert žáků ZUŠ Hlinsko. sál ZUŠ",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:19+00:00",
+      "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vanocni-koncert-zaku-zus-hlinsko-3458_2099cs.html",
+      "location": {
+        "lat": 49.7625672,
+        "lon": 15.907339,
+        "precision": "town",
+        "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439995"
       }
     },
     {
@@ -5774,6 +6739,34 @@
       }
     },
     {
+      "id": "e-7ba1f0f118cebe6be91f",
+      "title": "Vánoční koncert žáků ZUŠ Hlinsko",
+      "town": "Hlinsko",
+      "region": "Pardubický kraj",
+      "date": "2026-12-16",
+      "endDate": null,
+      "startTime": "17:30",
+      "endTime": null,
+      "venue": "sál ZUŠ",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert žáků ZUŠ Hlinsko. sál ZUŠ",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:22+00:00",
+      "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vanocni-koncert-zaku-zus-hlinsko-3459_2100cs.html",
+      "location": {
+        "lat": 49.7625672,
+        "lon": 15.907339,
+        "precision": "town",
+        "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439995"
+      }
+    },
+    {
       "id": "e-53c094dfb9e1d36a01fb",
       "title": "ADVENTNÍ ZASTAVENÍ | TVOŘÍME VÁNOČNÍ SVÍCNY",
       "town": "Kuřim",
@@ -5799,6 +6792,36 @@
         "precision": "town",
         "label": "Kuřim — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442051"
+      }
+    },
+    {
+      "id": "e-5987c9030f6fb6674e12",
+      "title": "Magda Malá a Bohuš Matuš",
+      "town": "Hlinsko",
+      "region": "Pardubický kraj",
+      "date": "2026-12-16",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Multifunkční centrum",
+      "category": "setkani",
+      "price": "650 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Magda Malá a Bohuš Matuš. Multifunkční centrum",
+      "notes": [
+        "Cena 650 Kč je uvedena na přiloženém primárním plakátu; zveřejněný prodej neprokazuje volná místa."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:09:26+00:00",
+      "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/magda-mala-a-bohus-matus-3267_1942cs.html",
+      "location": {
+        "lat": 49.7625672,
+        "lon": 15.907339,
+        "precision": "town",
+        "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439995"
       }
     },
     {
@@ -6115,6 +7138,34 @@
         "precision": "town",
         "label": "Telč — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441173"
+      }
+    },
+    {
+      "id": "e-9cbcde050dbac373bd6b",
+      "title": "Advent u Svatého Jakuba",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-12-19",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "venue": "Dvůr U Svatého Jakuba",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Advent u Svatého Jakuba. Dvůr U Svatého Jakuba",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:08:29+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/advent-u-svateho-jakuba-1001_1216cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
       }
     },
     {
@@ -6436,6 +7487,34 @@
       "sourceUrl": "https://www.telc.eu/kalendar/3842",
       "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
       "status": "confirmed"
+    },
+    {
+      "id": "e-9058e280764c398c75a6",
+      "title": "Koledy v podloubí",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "date": "2026-12-20",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "venue": "Ramon Cafe",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Koledy v podloubí. Ramon Cafe",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T13:08:33+00:00",
+      "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/koledy-v-podloubi-691_807cs4903.html",
+      "location": {
+        "lat": 50.3274423,
+        "lon": 13.545952,
+        "precision": "town",
+        "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
     },
     {
       "id": "e-88e067ffd0d5366195ee",

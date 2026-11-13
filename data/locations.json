@@ -140,7 +140,7 @@
     "sourceUrl": "https://www.openstreetmap.org/relation/440166"
   },
   "Zlín": {
-    "lat": 49.2267660,
+    "lat": 49.226766,
     "lon": 17.6667415,
     "precision": "town",
     "label": "Zlín — orientační střed obce, nikoli přesné místo akce",
@@ -180,5 +180,33 @@
     "precision": "town",
     "label": "Praha-Lipence — orientační bod katastrální části, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/428690"
+  },
+  "Žatec": {
+    "lat": 50.3274423,
+    "lon": 13.545952,
+    "precision": "town",
+    "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+  },
+  "Hlinsko": {
+    "lat": 49.7625672,
+    "lon": 15.907339,
+    "precision": "town",
+    "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439995"
+  },
+  "Ludgeřovice": {
+    "lat": 49.8903906,
+    "lon": 18.2401116,
+    "precision": "town",
+    "label": "Ludgeřovice — orientační střed obce či místní části, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437640"
+  },
+  "hlinsko-blatno": {
+    "lat": 49.7597268,
+    "lon": 15.9233236,
+    "precision": "town",
+    "label": "Hlinsko-Blatno — orientační střed obce či místní části, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/node/1584552881"
   }
 }

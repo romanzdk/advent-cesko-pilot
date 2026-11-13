@@ -3621,6 +3621,662 @@
           "verifiedTown": "Praha-Lipence"
         }
       }
+    },
+    {
+      "id": "cz-zatec-calendar",
+      "town": "Žatec",
+      "region": "Ústecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mesto-zatec.cz/kalendar-akci-3/",
+        "https://www.mesto-zatec.cz/kalendar-akci-3/?page=2"
+      ],
+      "url_regex": "^https://www\\.mesto-zatec\\.cz/kalendar-akci-3/[^/?#]+-\\d+_\\d+cs4903\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_details": 20,
+      "coverage_note": "Žatec: omezený adventní výběr z primárního městského kalendáře, dvě stránky a nejvýše 20 detailů. Duplicitní oznámení stejných trhů jsou vyloučena; celosezonní přehled přesahující 24. prosinec není samostatnou akcí. Ceny neuvedené v textu zůstávají nepotvrzené; nejde o úplné městské ani krajské pokrytí.",
+      "max_index_pages": 2,
+      "allowed_venues": [
+        "Dvůr U Svatého Jakuba",
+        "Kapucínský klášter",
+        "Město Žatec",
+        "Městské divadlo Žatec",
+        "Ramon Cafe",
+        "Regionální muzeum K.A.Polánka, Stará papírna",
+        "Základní škola 28. října",
+        "Základní škola Jižní 2777",
+        "náměstí Svobody"
+      ],
+      "event_reviews": {
+        "https://www.mesto-zatec.cz/kalendar-akci-3/rozsviceni-vanocniho-stromu-692_808cs4903.html": {
+          "sourceId": "cz-zatec-calendar",
+          "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/rozsviceni-vanocniho-stromu-692_808cs4903.html",
+          "sourceTown": "Žatec",
+          "expectedTitle": "Rozsvícení vánočního stromu",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "náměstí Svobody",
+          "contentHash": "d8a94ee257f3170ee1fedc8cd395fae09efa1c7cce608b3887ebac3d097aaf86",
+          "decision": "accept",
+          "reason": "Použit výslovný interval detailu; odlišný konec v souhrnném přehledu je transparentně uveden.",
+          "overrides": {
+            "notes": [
+              "13:00 je začátek doprovodného programu, nikoli potvrzený okamžik rozsvícení.",
+              "Rozpor konce: konkrétní detail uvádí 19:00, souhrnný adventní přehled 18:30; konec proto není pevně uveden."
+            ],
+            "endTime": null
+          }
+        },
+        "https://www.mesto-zatec.cz/kalendar-akci-3/advent-ve-dvore-sv-jakuba-671_784cs4903.html": {
+          "sourceId": "cz-zatec-calendar",
+          "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/advent-ve-dvore-sv-jakuba-671_784cs4903.html",
+          "sourceTown": "Žatec",
+          "expectedTitle": "Advent ve Dvoře sv. Jakuba",
+          "expectedDate": "2026-12-05",
+          "expectedEndDate": null,
+          "expectedVenue": "Dvůr U Svatého Jakuba",
+          "contentHash": "441aad046a582fc80a2a393a62434da764d7529fff11c7b239b7f811477c3a3c",
+          "decision": "exclude",
+          "reason": "Duplicitní oznámení stejných vánočních trhů: shodné datum, čas, místo, adresa i pořadatel jako novější Advent u Svatého Jakuba; ponecháno novější oznámení."
+        },
+        "https://www.mesto-zatec.cz/kalendar-akci-3/mikulasska-nadilka-683_796cs4903.html": {
+          "sourceId": "cz-zatec-calendar",
+          "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/mikulasska-nadilka-683_796cs4903.html",
+          "sourceTown": "Žatec",
+          "expectedTitle": "Mikulášská nadílka",
+          "expectedDate": "2026-12-06",
+          "expectedEndDate": null,
+          "expectedVenue": "Městské divadlo Žatec",
+          "contentHash": "375dfdce45b114df7c499d70a6a7e8a13719e9861c5d9273fa6e47d4c3ed1294",
+          "decision": "accept",
+          "reason": "Převzata úplná cena z textu a upozornění na kapacitu; označený časový interval detailu není délkou představení.",
+          "overrides": {
+            "price": "Děti do 13 let: 100,- Kč (v ceně mikulášský balíček cukrovinek v hodnotě 100,- Kč); doprovod: 50,- Kč.",
+            "notes": [
+              "Rozpor začátku: konkrétní detail uvádí 14:45, souhrnný program 15:00. Přesný začátek proto není potvrzený.",
+              "Detail uvádí konec programu 18:00 a délku představení s nadílkou 90 minut; nejde o délku celého odpoledne.",
+              "Počet zájemců je omezen kapacitou budovy; aktuální dostupnost ověřte u pořadatele."
+            ],
+            "startTime": null
+          }
+        },
+        "https://www.mesto-zatec.cz/kalendar-akci-3/zatecke-vanoce-2026-676_791cs4903.html": {
+          "sourceId": "cz-zatec-calendar",
+          "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/zatecke-vanoce-2026-676_791cs4903.html",
+          "sourceTown": "Žatec",
+          "expectedTitle": "Žatecké Vánoce 2026",
+          "expectedDate": "2026-12-12",
+          "expectedEndDate": null,
+          "expectedVenue": "Město Žatec",
+          "contentHash": "f0cbfd0fcadaafb143a7f74a8dfe353d6ecda1aca58673bb7990145fc21bb465",
+          "decision": "accept",
+          "reason": "Obec potvrzena adresou v konkrétním detailu; obecný název místa se nemění na neověřený přesný bod.",
+          "overrides": {
+            "notes": [
+              "Detail označuje místo obecně jako Město Žatec a uvádí adresu Náměstí Svobody 1. Souhrnný program uvádí náměstí Svobody; mapa může ukázat jen orientační střed města, nikoli ověřený bod stánku či pódia."
+            ],
+            "category": "trhy"
+          }
+        },
+        "https://www.mesto-zatec.cz/kalendar-akci-3/advent-ve-dvore-sv-jakuba-671_786cs4903.html": {
+          "sourceId": "cz-zatec-calendar",
+          "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/advent-ve-dvore-sv-jakuba-671_786cs4903.html",
+          "sourceTown": "Žatec",
+          "expectedTitle": "Advent ve Dvoře sv. Jakuba",
+          "expectedDate": "2026-12-12",
+          "expectedEndDate": null,
+          "expectedVenue": "Dvůr U Svatého Jakuba",
+          "contentHash": "012b8f02c4b9a1f6358e26a5d5043f2f2b409584df6c1e3eda1dadf24019bea4",
+          "decision": "exclude",
+          "reason": "Duplicitní oznámení stejných vánočních trhů: shodné datum, čas, místo, adresa i pořadatel jako novější Advent u Svatého Jakuba; ponecháno novější oznámení."
+        },
+        "https://www.mesto-zatec.cz/kalendar-akci-3/advent-ve-dvore-sv-jakuba-671_787cs4903.html": {
+          "sourceId": "cz-zatec-calendar",
+          "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/advent-ve-dvore-sv-jakuba-671_787cs4903.html",
+          "sourceTown": "Žatec",
+          "expectedTitle": "Advent ve Dvoře sv. Jakuba",
+          "expectedDate": "2026-12-19",
+          "expectedEndDate": null,
+          "expectedVenue": "Dvůr U Svatého Jakuba",
+          "contentHash": "13e7429ffd7e9a3a6a3887aeeea72466e50da1bd1e16600ba6caebb29b51572f",
+          "decision": "exclude",
+          "reason": "Duplicitní oznámení stejných vánočních trhů: shodné datum, čas, místo, adresa i pořadatel jako novější Advent u Svatého Jakuba; ponecháno novější oznámení."
+        },
+        "https://www.mesto-zatec.cz/kalendar-akci-3/advent-u-svateho-jakuba-1001_1214cs4903.html": {
+          "sourceId": "cz-zatec-calendar",
+          "sourceTown": "Žatec",
+          "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/advent-u-svateho-jakuba-1001_1214cs4903.html",
+          "expectedTitle": "Advent u Svatého Jakuba",
+          "expectedDate": "2026-12-05",
+          "expectedEndDate": null,
+          "expectedVenue": "Dvůr U Svatého Jakuba",
+          "contentHash": "ffdebf10656ca5268476d7784e462de98196f72ec8c9614c6f5c9041c10e1eb2",
+          "decision": "accept",
+          "reason": "Přesná redakční oprava podle primárního obsahu.",
+          "overrides": {
+            "category": "trhy"
+          }
+        },
+        "https://www.mesto-zatec.cz/kalendar-akci-3/advent-u-svateho-jakuba-1001_1215cs4903.html": {
+          "sourceId": "cz-zatec-calendar",
+          "sourceTown": "Žatec",
+          "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/advent-u-svateho-jakuba-1001_1215cs4903.html",
+          "expectedTitle": "Advent u Svatého Jakuba",
+          "expectedDate": "2026-12-12",
+          "expectedEndDate": null,
+          "expectedVenue": "Dvůr U Svatého Jakuba",
+          "contentHash": "514a8909566bf184b0958713be57e78bc24be3f4b0718d252cf45a724cf4095a",
+          "decision": "accept",
+          "reason": "Přesná redakční oprava podle primárního obsahu.",
+          "overrides": {
+            "category": "trhy"
+          }
+        },
+        "https://www.mesto-zatec.cz/kalendar-akci-3/advent-u-svateho-jakuba-1001_1216cs4903.html": {
+          "sourceId": "cz-zatec-calendar",
+          "sourceTown": "Žatec",
+          "sourceUrl": "https://www.mesto-zatec.cz/kalendar-akci-3/advent-u-svateho-jakuba-1001_1216cs4903.html",
+          "expectedTitle": "Advent u Svatého Jakuba",
+          "expectedDate": "2026-12-19",
+          "expectedEndDate": null,
+          "expectedVenue": "Dvůr U Svatého Jakuba",
+          "contentHash": "2784b93a2fd0be4fb5b3af67fb229b1a8b600b1a7e7f2aaa91242213b835dfd6",
+          "decision": "accept",
+          "reason": "Přesná redakční oprava podle primárního obsahu.",
+          "overrides": {
+            "category": "trhy"
+          }
+        }
+      }
+    },
+    {
+      "id": "cz-hlinsko-calendar",
+      "town": "Hlinsko",
+      "region": "Pardubický kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/",
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/?page=2"
+      ],
+      "url_regex": "^https://www\\.hlinsko\\.cz/volny\\-cas/prehled\\-kulturnich\\-akci/[^/?#]+-\\d+_\\d+cs(?:\\d+)?\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Neúplný výběr místních adventních a vánočních akcí z oficiálního kalendáře města Hlinska, včetně výslovně doloženého Blatna; nejvýše dvě stránky a 14 detailů. Okolní obce, testovací kalendáře, delší výstavy a měsíční rozpisy nejsou tímto zdrojem zahrnuty.",
+      "allowed_venues": [
+        "Blatno",
+        "Dům dětí a mládeže Hlinsko",
+        "Multifunkční centrum",
+        "Městské muzeum a galerie",
+        "Orlovna",
+        "Zastáfka Kafé",
+        "ZŠ Ležáků",
+        "ZŠ Resslova",
+        "ZŠ Smetanova",
+        "areál Betléma a před Orlovnou",
+        "sál ZUŠ"
+      ],
+      "event_reviews": {
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vyrabeni-adventnich-vencu-3444_2090cs.html": {
+          "sourceId": "cz-hlinsko-calendar",
+          "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vyrabeni-adventnich-vencu-3444_2090cs.html",
+          "sourceTown": "Hlinsko",
+          "expectedTitle": "Vyrábění adventních věnců",
+          "expectedDate": "2026-11-24",
+          "expectedEndDate": null,
+          "expectedVenue": "Zastáfka Kafé",
+          "contentHash": "445ca19db740babe6838a6cde72a8b01af31348976d12fb4578f2fbf6d122edb",
+          "decision": "accept",
+          "verifiedTown": "Hlinsko",
+          "reason": "Označená data/obec detailu a skutečný primární plakát souhlasí; zveřejněné podrobnosti zachovány bez odhadu.",
+          "overrides": {
+            "category": "tvoreni",
+            "notes": [
+              "Pořadatel požaduje rezervaci; vezměte si zahradnické nůžky. Volná místa nebyla ověřena."
+            ]
+          }
+        },
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/adventni-jarmark-na-zs-resslova-3445_2091cs.html": {
+          "sourceId": "cz-hlinsko-calendar",
+          "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/adventni-jarmark-na-zs-resslova-3445_2091cs.html",
+          "sourceTown": "Hlinsko",
+          "expectedTitle": "Adventní jarmark na ZŠ Resslova",
+          "expectedDate": "2026-11-25",
+          "expectedEndDate": "2026-11-27",
+          "expectedVenue": "ZŠ Resslova",
+          "contentHash": "dc8e4222a1ab9f579fdca75f66cadab824f4f713c8e2da97e2ba7f9c2927eb0a",
+          "decision": "accept",
+          "verifiedTown": "Hlinsko",
+          "reason": "Označená data/obec detailu a skutečný primární plakát souhlasí; zveřejněné podrobnosti zachovány bez odhadu.",
+          "overrides": {
+            "notes": [
+              "Otevírací doba: 25. 11. 15:30–18:00; 26. 11. 8:00–17:00; 27. 11. 8:00–11:00. Nejde o nepřetržitý provoz."
+            ],
+            "startTime": null,
+            "endTime": null
+          }
+        },
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vanocni-teseni-na-zs-lezaku-3443_2089cs.html": {
+          "sourceId": "cz-hlinsko-calendar",
+          "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vanocni-teseni-na-zs-lezaku-3443_2089cs.html",
+          "sourceTown": "Hlinsko",
+          "expectedTitle": "Vánoční těšení na ZŠ Ležáků",
+          "expectedDate": "2026-11-26",
+          "expectedEndDate": null,
+          "expectedVenue": "ZŠ Ležáků",
+          "contentHash": "5e7818ab43206861ded1a94b2993f5fe320872732c9898f08cb58b556780b926",
+          "decision": "accept",
+          "verifiedTown": "Hlinsko",
+          "reason": "Označená data/obec detailu a skutečný primární plakát souhlasí; zveřejněné podrobnosti zachovány bez odhadu.",
+          "overrides": {}
+        },
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/mikulassko-vanocni-jarmark-3442_2088cs.html": {
+          "sourceId": "cz-hlinsko-calendar",
+          "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/mikulassko-vanocni-jarmark-3442_2088cs.html",
+          "sourceTown": "Hlinsko",
+          "expectedTitle": "Mikulášsko-vánoční jarmark",
+          "expectedDate": "2026-11-27",
+          "expectedEndDate": null,
+          "expectedVenue": "areál Betléma a před Orlovnou",
+          "contentHash": "7b5d0f6bf52587057f1123e2e6279cab295b95e8ae7366f1f017e917a430267b",
+          "decision": "accept",
+          "verifiedTown": "Hlinsko",
+          "reason": "Označená data/obec detailu a skutečný primární plakát souhlasí; zveřejněné podrobnosti zachovány bez odhadu.",
+          "overrides": {
+            "price": "zdarma",
+            "notes": [
+              "12:00–19:00 se vztahuje k jarmarku; rozsvícení stromu je uvedeno v 18:00. Změny programu vyhrazeny.",
+              "Mikuláš je v doprovodném programu uveden ve 14:00; 12:00 je otevření jarmarku."
+            ]
+          }
+        },
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vanocni-aranzovani-pro-deti-i-dospele-3461_2102cs.html": {
+          "sourceId": "cz-hlinsko-calendar",
+          "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vanocni-aranzovani-pro-deti-i-dospele-3461_2102cs.html",
+          "sourceTown": "Hlinsko",
+          "expectedTitle": "Vánoční aranžování pro děti i dospělé",
+          "expectedDate": "2026-11-28",
+          "expectedEndDate": null,
+          "expectedVenue": "Dům dětí a mládeže Hlinsko",
+          "contentHash": "07e194b741d0632d6d0ace37f2610edc7d477e593d27842caad6df156d1b165f",
+          "decision": "accept",
+          "verifiedTown": "Hlinsko",
+          "reason": "Označená data/obec detailu a skutečný primární plakát souhlasí; zveřejněné podrobnosti zachovány bez odhadu.",
+          "overrides": {
+            "category": "tvoreni",
+            "price": "zdarma",
+            "notes": [
+              "Pořadatel uvádí přihlášení a vlastní nádobu na aranžování, větvičky, svíčky a další přízdoby; místo nebylo rezervováno."
+            ]
+          }
+        },
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/adventni-souborovy-koncert-3457_2098cs.html": {
+          "sourceId": "cz-hlinsko-calendar",
+          "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/adventni-souborovy-koncert-3457_2098cs.html",
+          "sourceTown": "Hlinsko",
+          "expectedTitle": "Adventní souborový koncert",
+          "expectedDate": "2026-12-06",
+          "expectedEndDate": null,
+          "expectedVenue": "Multifunkční centrum",
+          "contentHash": "0d0a4f61d22f4c125272853a00e687b9863f1c1dbb3a5f214bf5ebe0f88dccad",
+          "decision": "accept",
+          "verifiedTown": "Hlinsko",
+          "reason": "Označená data/obec detailu a skutečný primární plakát souhlasí; zveřejněné podrobnosti zachovány bez odhadu.",
+          "overrides": {
+            "notes": [
+              "Pořadatel uvádí předprodej od 10. 11. 2026; cenu ani zbývající vstupenky se nepodařilo z tohoto primárního detailu/plakátu ověřit."
+            ]
+          }
+        },
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/smetanove-vanoce-3460_2101cs.html": {
+          "sourceId": "cz-hlinsko-calendar",
+          "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/smetanove-vanoce-3460_2101cs.html",
+          "sourceTown": "Hlinsko",
+          "expectedTitle": "Smetanové Vánoce",
+          "expectedDate": "2026-12-09",
+          "expectedEndDate": null,
+          "expectedVenue": "ZŠ Smetanova",
+          "contentHash": "a3c52c2a04e27d794ddb096df8d47b9c9cfa81737eecb4354d2fac036674bb04",
+          "decision": "accept",
+          "verifiedTown": "Hlinsko",
+          "reason": "Označená data/obec detailu a skutečný primární plakát souhlasí; zveřejněné podrobnosti zachovány bez odhadu.",
+          "overrides": {
+            "venue": "Dopravní hřiště (pořádá ZŠ Smetanova)",
+            "notes": [
+              "Plakát upřesňuje místo na dopravní hřiště; rok 2026 a Hlinsko jsou výslovně uvedeny v označených polích téhož detailu, nikoli odhadnuty z plakátu."
+            ]
+          }
+        },
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/u-stromecku-na-dvorecku-3472_2111cs.html": {
+          "sourceId": "cz-hlinsko-calendar",
+          "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/u-stromecku-na-dvorecku-3472_2111cs.html",
+          "sourceTown": "Hlinsko",
+          "expectedTitle": "U stromečku na dvorečku",
+          "expectedDate": "2026-12-10",
+          "expectedEndDate": null,
+          "expectedVenue": "Městské muzeum a galerie",
+          "contentHash": "4aa0376db99eaf16327025f73845edc78f07c5c22db000d6c7c5765ba38a3adc",
+          "decision": "accept",
+          "verifiedTown": "Hlinsko",
+          "reason": "Označená data/obec detailu a skutečný primární plakát souhlasí; zveřejněné podrobnosti zachovány bez odhadu.",
+          "overrides": {
+            "category": "setkani",
+            "venue": "muzejní dvorek, Městské muzeum a galerie",
+            "notes": [
+              "Akce může být v případě nepříznivého počasí zrušena."
+            ]
+          }
+        },
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vanocni-koncert-zaku-zus-hlinsko-3458_2099cs.html": {
+          "sourceId": "cz-hlinsko-calendar",
+          "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vanocni-koncert-zaku-zus-hlinsko-3458_2099cs.html",
+          "sourceTown": "Hlinsko",
+          "expectedTitle": "Vánoční koncert žáků ZUŠ Hlinsko",
+          "expectedDate": "2026-12-14",
+          "expectedEndDate": null,
+          "expectedVenue": "sál ZUŠ",
+          "contentHash": "f5d5136049219b03076fa5efdacf76a8ee1b5466627e9d8fed6acf58f8afbcca",
+          "decision": "accept",
+          "verifiedTown": "Hlinsko",
+          "reason": "Označená data/obec detailu a skutečný primární plakát souhlasí; zveřejněné podrobnosti zachovány bez odhadu.",
+          "overrides": {}
+        },
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vanocni-koncert-zaku-zus-hlinsko-3459_2100cs.html": {
+          "sourceId": "cz-hlinsko-calendar",
+          "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/vanocni-koncert-zaku-zus-hlinsko-3459_2100cs.html",
+          "sourceTown": "Hlinsko",
+          "expectedTitle": "Vánoční koncert žáků ZUŠ Hlinsko",
+          "expectedDate": "2026-12-16",
+          "expectedEndDate": null,
+          "expectedVenue": "sál ZUŠ",
+          "contentHash": "e7ddbaa340e6b6c1bc33b7e7bae39de4a54c5f8237405510d572259deee99d76",
+          "decision": "accept",
+          "verifiedTown": "Hlinsko",
+          "reason": "Označená data/obec detailu a skutečný primární plakát souhlasí; zveřejněné podrobnosti zachovány bez odhadu.",
+          "overrides": {}
+        },
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/magda-mala-a-bohus-matus-3267_1942cs.html": {
+          "sourceId": "cz-hlinsko-calendar",
+          "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/magda-mala-a-bohus-matus-3267_1942cs.html",
+          "sourceTown": "Hlinsko",
+          "expectedTitle": "Magda Malá a Bohuš Matuš",
+          "expectedDate": "2026-12-16",
+          "expectedEndDate": null,
+          "expectedVenue": "Multifunkční centrum",
+          "contentHash": "e2c877b43b81d017ee475eedfee3556a7a85bd461f3c6df46ad14c7df27811c7",
+          "decision": "accept",
+          "verifiedTown": "Hlinsko",
+          "reason": "Označená data/obec detailu a skutečný primární plakát souhlasí; zveřejněné podrobnosti zachovány bez odhadu.",
+          "overrides": {
+            "price": "650 Kč",
+            "notes": [
+              "Cena 650 Kč je uvedena na přiloženém primárním plakátu; zveřejněný prodej neprokazuje volná místa."
+            ]
+          }
+        },
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/hudebni-betlemska-noc-ii-3440_2086cs.html": {
+          "sourceId": "cz-hlinsko-calendar",
+          "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/hudebni-betlemska-noc-ii-3440_2086cs.html",
+          "sourceTown": "Hlinsko",
+          "expectedTitle": "Hudební Betlémská noc II.",
+          "expectedDate": "2026-12-19",
+          "expectedEndDate": null,
+          "expectedVenue": "Orlovna",
+          "contentHash": "dbc6e4b5c9b6c8cb71110eb9e2638b176c11adb4adef5b4647999be4817d770a",
+          "decision": "hold",
+          "reason": "Rozporné cenové varianty: HTML uvádí 150 Kč, pro děti 100 Kč; přiložený primární plakát uvádí 150 Kč / 100 Kč, stůl / balkon. Nelze svévolně určit nárok na slevu ani potlačit jednu verzi."
+        }
+      },
+      "audited_events": {
+        "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/rozsviceni-vanocniho-stromu-3463_2104cs.html": {
+          "sourceId": "cz-hlinsko-calendar",
+          "sourceTown": "Hlinsko",
+          "sourceUrl": "https://www.hlinsko.cz/volny-cas/prehled-kulturnich-akci/rozsviceni-vanocniho-stromu-3463_2104cs.html",
+          "expectedTitle": "Rozsvícení vánočního stromu",
+          "contentHash": "94036ac968d7fc5bd310914e51e7f02d8e8a620187295cb124e2896e64f8aad3",
+          "decision": "accept",
+          "reason": "Přesná obec a lokalita potvrzena primárním detailem a plakátem; geodata jsou samostatně omezená na ověřený podklad.",
+          "verifiedAt": "2026-11-13T12:45:51+00:00",
+          "events": [
+            {
+              "title": "Rozsvícení vánočního stromu",
+              "town": "Hlinsko-Blatno",
+              "date": "2026-11-28",
+              "endDate": null,
+              "startTime": "16:00",
+              "endTime": "18:00",
+              "venue": "u hasičárny v Blatně",
+              "category": "strom",
+              "price": null,
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Rozsvícení vánočního stromu. u hasičárny v Blatně",
+              "notes": [
+                "Blatno je zde výslovně spojeno s městem Hlinsko v adrese kalendáře i na plakátu; nejde o stejnojmennou vzdálenou obec. Přesné umístění hasičárny ani souřadnice nebyly určeny.",
+                "Blatno je místní část Hlinska; bod je pouze orientační střed místní části, nikoli hasičárna."
+              ],
+              "audience": "všichni",
+              "location": {
+                "lat": 49.7597268,
+                "lon": 15.9233236,
+                "precision": "town",
+                "label": "Hlinsko-Blatno — orientační střed obce či místní části, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/node/1584552881"
+              },
+              "occurrenceKey": "main",
+              "allowExtendedEnd": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ludgerovice-obec",
+      "town": "Ludgeřovice",
+      "region": "Moravskoslezský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/"
+      ],
+      "url_regex": "^https://www\\.ludgerovice\\.cz/volny-cas/kalendar-akci-v-ludgerovicich/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [
+        "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/rozsviceni-vanocniho-stromu-na-vrablovci-2652_510cs.html",
+        "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/adventni-koncert-2649_507cs.html",
+        "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/adventni-jarmark-v-charitnim-domove-sv-mikulase-v-ludgerovicich-2641_500cs.html"
+      ],
+      "feed_url": null,
+      "max_details": 14,
+      "max_index_pages": 2,
+      "coverage_note": "Omezený sezonní výběr primárního obecního kalendáře Ludgeřovic; nejvýše dvě stránky a 14 detailů, nikoli celé Hlučínsko.",
+      "allowed_venues": [
+        "Společenský dům na Vrablovci",
+        "Obecní dům Ludgeřovice",
+        "louka u kostela sv. Mikuláše",
+        "Obec Ludgeřovice",
+        "Areál chovatelů Ludgeřovice",
+        "Areál u hřiště TJ Ludgeřovice",
+        "Kostel sv. Mikuláše",
+        "Domov sv. Mikuláše"
+      ],
+      "event_reviews": {
+        "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/vanocni-trhy-a-rozsviceni-vanocniho-stromu-2647_504cs.html": {
+          "sourceId": "ludgerovice-obec",
+          "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/vanocni-trhy-a-rozsviceni-vanocniho-stromu-2647_504cs.html",
+          "sourceTown": "Ludgeřovice",
+          "expectedTitle": "Vánoční trhy a rozsvícení vánočního stromu",
+          "expectedDate": "2026-11-28",
+          "expectedEndDate": null,
+          "expectedVenue": "Obecní dům Ludgeřovice",
+          "contentHash": "8caab986d217f5b79da797732c3e01d273a1a98685d523fa067a2d61a3223cdf",
+          "decision": "accept",
+          "reason": "Ověřeno proti skutečnému detailu obecního kalendáře a přiloženému plakátu; zachovat všechny doložené cenové, registrační a místní podmínky.",
+          "verifiedTown": "Ludgeřovice",
+          "verifiedAt": "2026-11-13T12:41:32+00:00",
+          "overrides": {
+            "category": "trhy",
+            "notes": [
+              "Tento detail se vztahuje na vánoční trhy 8:00–14:00 v sále Obecního domu; rozsvícení stromu je samostatný večerní program na farské louce."
+            ]
+          }
+        },
+        "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/vanocni-trhy-a-rozsviceni-vanocniho-stromu-2647_505cs.html": {
+          "sourceId": "ludgerovice-obec",
+          "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/vanocni-trhy-a-rozsviceni-vanocniho-stromu-2647_505cs.html",
+          "sourceTown": "Ludgeřovice",
+          "expectedTitle": "Vánoční trhy a rozsvícení vánočního stromu",
+          "expectedDate": "2026-11-28",
+          "expectedEndDate": null,
+          "expectedVenue": "louka u kostela sv. Mikuláše",
+          "contentHash": "9b5883a68e6ad51e8357ca78e6c73e17b6b40532205e60fc7bd73287c7122dce",
+          "decision": "accept",
+          "reason": "Ověřeno proti skutečnému detailu obecního kalendáře a přiloženému plakátu; zachovat všechny doložené cenové, registrační a místní podmínky.",
+          "verifiedTown": "Ludgeřovice",
+          "verifiedAt": "2026-11-13T12:41:32+00:00",
+          "overrides": {
+            "notes": [
+              "Kalendář označuje program 17:00–19:00; plakát uvádí slavnostní rozsvícení stromu až po 17:00, nikoli přesně v 17:00. Jde o jinou část společné akce než dopolední trhy v Obecním domě."
+            ]
+          }
+        },
+        "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/mikulasska-nadilka-pro-deti-obecni-akce-2650_508cs.html": {
+          "sourceId": "ludgerovice-obec",
+          "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/mikulasska-nadilka-pro-deti-obecni-akce-2650_508cs.html",
+          "sourceTown": "Ludgeřovice",
+          "expectedTitle": "Mikulášská nadílka pro děti - obecní akce",
+          "expectedDate": "2026-12-05",
+          "expectedEndDate": null,
+          "expectedVenue": "Obec Ludgeřovice",
+          "contentHash": "6ee2b62db412a8b312b2648e2cd7087c01a9955ed1510c3ba7575fd773a3ad57",
+          "decision": "accept",
+          "reason": "Ověřeno proti skutečnému detailu obecního kalendáře a přiloženému plakátu; zachovat všechny doložené cenové, registrační a místní podmínky.",
+          "verifiedTown": "Ludgeřovice",
+          "verifiedAt": "2026-11-13T12:41:32+00:00",
+          "overrides": {
+            "venue": "sál Obecního domu Ludgeřovice",
+            "registration": "Plakát uvádí přihlášení dětí telefonicky u pořadatele; termín a cenu neuvádí.",
+            "notes": [
+              "Konkrétní sál je doložen v popisu a na přiloženém plakátu, nikoli v obecném poli Kde: Obec Ludgeřovice."
+            ]
+          }
+        },
+        "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/mikulasska-nadilka-ano-ludgerovice-2658_514cs.html": {
+          "sourceId": "ludgerovice-obec",
+          "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/mikulasska-nadilka-ano-ludgerovice-2658_514cs.html",
+          "sourceTown": "Ludgeřovice",
+          "expectedTitle": "Mikulášská nadílka ANO Ludgeřovice",
+          "expectedDate": "2026-12-05",
+          "expectedEndDate": null,
+          "expectedVenue": "Areál chovatelů Ludgeřovice",
+          "contentHash": "7e666c86eefecb70fa7ebe91c8ea6249929b52f40e7b10c439ce081c38232870",
+          "decision": "accept",
+          "reason": "Ověřeno proti skutečnému detailu obecního kalendáře a přiloženému plakátu; zachovat všechny doložené cenové, registrační a místní podmínky.",
+          "verifiedTown": "Ludgeřovice",
+          "verifiedAt": "2026-11-13T12:41:32+00:00",
+          "overrides": {
+            "price": "dobrovolné",
+            "registration": "Nutná rezervace stolu u pořadatele.",
+            "notes": [
+              "Plakát: animační program 16:00–17:30, mikulášská nadílka v 17:30. Rodiče mají přinést balíček se jménem dítěte. Konec celé akce neuveden."
+            ]
+          }
+        },
+        "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/mikulasska-nadilka-klubu-turistu-ludgerovice-2667_518cs.html": {
+          "sourceId": "ludgerovice-obec",
+          "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/mikulasska-nadilka-klubu-turistu-ludgerovice-2667_518cs.html",
+          "sourceTown": "Ludgeřovice",
+          "expectedTitle": "Mikulášská nadílka Klubu turistů Ludgeřovice",
+          "expectedDate": "2026-12-05",
+          "expectedEndDate": null,
+          "expectedVenue": "Areál u hřiště TJ Ludgeřovice",
+          "contentHash": "cd6d48c2eec9e60fe2607a262914b970243d5970408346e8f243a461c6b60ce6",
+          "decision": "accept",
+          "reason": "Ověřeno proti skutečnému detailu obecního kalendáře a přiloženému plakátu; zachovat všechny doložené cenové, registrační a místní podmínky.",
+          "verifiedTown": "Ludgeřovice",
+          "verifiedAt": "2026-11-13T12:41:32+00:00",
+          "overrides": {
+            "price": "dobrovolné",
+            "notes": [
+              "Rodiče mohou přinést vlastní dárky na místo v den akce do 16:00; začátek programu je v 16:30. Plakát nestanoví členství ani předběžnou rezervaci. Rok 2026 je výslovně v označeném datu HTML, nikoli na plakátu."
+            ]
+          }
+        },
+        "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/adventni-jarmark-v-charitnim-domove-sv-mikulase-v-ludgerovicich-2641_500cs.html": {
+          "sourceId": "ludgerovice-obec",
+          "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/adventni-jarmark-v-charitnim-domove-sv-mikulase-v-ludgerovicich-2641_500cs.html",
+          "sourceTown": "Ludgeřovice",
+          "expectedTitle": "Adventní jarmark v Charitním domově sv. Mikuláše v Ludgeřovicích",
+          "expectedDate": "2026-12-08",
+          "expectedEndDate": null,
+          "expectedVenue": "Domov sv. Mikuláše",
+          "contentHash": "eb0484bd752daea38b2592154b1cf4fb8dc664c402367f6488e09ab29ca32776",
+          "decision": "accept",
+          "reason": "Ověřeno proti skutečnému detailu obecního kalendáře a přiloženému plakátu; zachovat všechny doložené cenové, registrační a místní podmínky.",
+          "verifiedTown": "Ludgeřovice",
+          "verifiedAt": "2026-11-13T12:41:32+00:00",
+          "overrides": {
+            "category": "trhy"
+          }
+        },
+        "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/bile-vanoce-lucie-bile-2637_498cs.html": {
+          "sourceId": "ludgerovice-obec",
+          "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/bile-vanoce-lucie-bile-2637_498cs.html",
+          "sourceTown": "Ludgeřovice",
+          "expectedTitle": "Bílé Vánoce Lucie Bílé",
+          "expectedDate": "2026-12-12",
+          "expectedEndDate": null,
+          "expectedVenue": "Kostel sv. Mikuláše",
+          "contentHash": "1315e1e15a0eff33f9eace863329cfcdcfcf23e8e46aefa8162fdfad933d40ee",
+          "decision": "accept",
+          "reason": "Ověřeno proti skutečnému detailu obecního kalendáře a přiloženému plakátu; zachovat všechny doložené cenové, registrační a místní podmínky.",
+          "verifiedTown": "Ludgeřovice",
+          "verifiedAt": "2026-11-13T12:41:32+00:00",
+          "overrides": {
+            "price": "1 800 Kč / 1 400 Kč",
+            "registration": "Vstupenky pouze v knihovně Obecního úřadu Ludgeřovice, na konkrétní místo; nejvýše 6 při jednom nákupu.",
+            "notes": [
+              "Knihovna: platba v hotovosti. Platba kartou v pokladně pouze v úředních dnech PO, ST 8–12 a 12:30–16:30. Aktuální dostupnost vstupenek není potvrzena."
+            ]
+          }
+        }
+      },
+      "audited_events": {
+        "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/rozsviceni-vanocniho-stromu-na-vrablovci-2652_510cs.html": {
+          "sourceId": "ludgerovice-obec",
+          "sourceTown": "Ludgeřovice",
+          "sourceUrl": "https://www.ludgerovice.cz/volny-cas/kalendar-akci-v-ludgerovicich/rozsviceni-vanocniho-stromu-na-vrablovci-2652_510cs.html",
+          "expectedTitle": "Rozsvícení vánočního stromu na Vrablovci",
+          "contentHash": "51aacf5f352e1b48ce5f4018d9adf9ba693bcd96c72cfa9b50d424b2bbf135c6",
+          "decision": "accept",
+          "reason": "Přesná obec a lokalita potvrzena primárním detailem a plakátem; geodata jsou samostatně omezená na ověřený podklad.",
+          "verifiedAt": "2026-11-13T12:41:32+00:00",
+          "events": [
+            {
+              "title": "Rozsvícení vánočního stromu na Vrablovci",
+              "town": "Ludgeřovice-Vrablovec",
+              "date": "2026-11-27",
+              "endDate": null,
+              "startTime": "16:00",
+              "endTime": "18:00",
+              "venue": "Společenský dům na Vrablovci",
+              "category": "strom",
+              "price": "volný vstup",
+              "registration": null,
+              "registrationUrl": null,
+              "description": "Rozsvícení vánočního stromu na Vrablovci. Společenský dům na Vrablovci",
+              "notes": [
+                "Plakát výslovně uvádí vstup volný; akce je u Společenského domu na Vrablovci.",
+                "Vrablovec je lokalita Ludgeřovic. Přesný bod Společenského domu není ověřen; nenahrazuje se středem Ludgeřovic ani bodem jiné ulice."
+              ],
+              "audience": "všichni",
+              "location": null,
+              "occurrenceKey": "main",
+              "allowExtendedEnd": false
+            }
+          ]
+        }
+      }
     }
   ]
 }

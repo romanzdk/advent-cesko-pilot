@@ -52,7 +52,7 @@ Při nejisté odpovědi použijte ověření stavu původního podání, ne dal�
 
 ## Pokrytí a rozsah
 
-**Ověřený sezonní výběr: 241 akcí ve 14 krajích.** Nejde o úplné pokrytí jednotlivých krajů.
+**Ověřený sezonní výběr: 278 akcí ve 14 krajích.** Nejde o úplné pokrytí jednotlivých krajů.
 
 | Kraj | Publikované akce |
 | --- | ---: |
@@ -65,13 +65,13 @@ Při nejisté odpovědi použijte ověření stavu původního podání, ne dal�
 | Karlovarský kraj | 8 |
 | Královéhradecký kraj | 7 |
 | Olomoucký kraj | 22 |
-| Ústecký kraj | 1 |
+| Ústecký kraj | 17 |
 | Zlínský kraj | 11 |
 | Hlavní město Praha | 27 |
-| Moravskoslezský kraj | 1 |
-| Pardubický kraj | 1 |
+| Moravskoslezský kraj | 10 |
+| Pardubický kraj | 13 |
 
-Registr obsahuje **48 zdrojových skupin**: 22 automaticky čtených kalendářů a redakční veřejný výběr od 26 primárních hostitelů. Redakční výběr přidává 60 již veřejných záznamů s původním datem ověření; kontrola jeho přenosu není novým ověřením každé pořadatelské stránky.
+Registr obsahuje **51 zdrojových skupin**: 25 automaticky čtených kalendářů a redakční veřejný výběr od 26 primárních hostitelů. Redakční výběr přidává 60 již veřejných záznamů s původním datem ověření; kontrola jeho přenosu není novým ověřením každé pořadatelské stránky.
 
 Jde o **výběr zdrojů, ne úplný kalendář krajů nebo celé ČR**. Aktuální čas aktualizace, rozsah a chyby načítání najdete na webu v panelu *Zdroje a pokrytí*. Nejasné kandidáty sběrač nepublikuje; [postup kontroly](docs/operations.md#ruční-kontrola-kandidátů) a [pravidla trvalého redakčního přenosu](docs/content-repair.md).
 
