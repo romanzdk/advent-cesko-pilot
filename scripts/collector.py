@@ -569,6 +569,8 @@ def parse_event(body, source, url, window):
     title_key = fold(title)
     if re.search(r'\bzajezd\b|\bexkurze\b', title_key):
         raise Excluded('Zájezd / výjezd není součástí místního programového výběru.')
+    if re.search(r'\bsoukrom\w* akc|\bneverejn\w* akc', text):
+        raise Excluded('Soukromá nebo neveřejná akce není veřejným programem.')
     category = next((cat for terms, cat in [('strom', 'strom'), ('mikulas', 'mikulas'), ('tvoren|diln|svicn|pranic', 'tvoreni'), ('jarmark|trh|vystav', 'trhy'), ('betlem', 'betlem')] if re.search(terms, title_key)), 'setkani')
     audience = 'senioři / omezené zaměření' if re.search(r'pro seniory|pouze pro cleny|jen pro cleny', text) and not re.search(r'verejnost|vsichni jsou zvani',text) else ('dospělí' if 'pro dospele' in text else 'všichni')
     booking_mentioned = re.search(r'rezervac|prihlasen', text) and not re.search(r'bez rezervac|neni nutn[ae] rezervac', text)
