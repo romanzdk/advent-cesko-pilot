@@ -8137,6 +8137,239 @@
         "Kulturní klub Skuteč",
         "Palackého náměstí"
       ]
+    },
+    {
+      "id": "prostejov-dre-calendar",
+      "town": "Prostějov",
+      "region": "Olomoucký kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.prostejov.eu/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.prostejov.eu/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.prostejov\\.eu/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Prostějov: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "DUHA kulturní klub u hradeb",
+        "LIPKA, z.s., Tetín 1,Prostějov"
+      ]
+    },
+    {
+      "id": "kojetin-dre-calendar",
+      "town": "Kojetín",
+      "region": "Olomoucký kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.kojetin.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.kojetin.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.kojetin\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Kojetín: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Husův sbor, modlitebna - synagoga Husova, Kojetín 75201",
+        "Kojetín Kojetín 75201",
+        "Sokolovna Kojetín - Kulturní dům náměstí Republiky 1033, Kojetín 75201",
+        "Vzdělávací a informační centrum - galerie Masarykovo náměstí 8, Kojetín 75201"
+      ]
+    },
+    {
+      "id": "litovel-dre-calendar",
+      "town": "Litovel",
+      "region": "Olomoucký kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.litovel.eu/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.litovel.eu/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.litovel\\.eu/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Litovel: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Aula GJO Litovel, Opletalova 189, Litovel 784 01",
+        "Kostel Sv. Marka",
+        "Záložna Litovel - Velký sál",
+        "nám. Př. Otakara Litovel, Nám. Př. Otakara, Litovel 78401",
+        "vestibul MK Litovel"
+      ]
+    },
+    {
+      "id": "bilina-dre-calendar",
+      "town": "Bílina",
+      "region": "Ústecký kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.bilina.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.bilina.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.bilina\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Bílina: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Mírové náměstí Mírové náměstí, Bílina 41801"
+      ]
+    },
+    {
+      "id": "louny-dre-calendar",
+      "town": "Louny",
+      "region": "Ústecký kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://akce.louny.eu/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://akce.louny.eu/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://akce\\.louny\\.eu/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Louny: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "MÍROVÉ NÁMĚSTÍ",
+        "Oblastní muzeum Louny, Pivovarská 28",
+        "chrám sv. Mikuláše Beneše z Loun, Louny, 440 01"
+      ]
+    },
+    {
+      "id": "frydlant-dre-calendar",
+      "town": "Frýdlant",
+      "region": "Liberecký kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.mesto-frydlant.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.mesto-frydlant.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.mesto-frydlant\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Frýdlant: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Frýdlant, náměstí T. G. Masaryka",
+        "Frýdlant, obřadní síň radnice",
+        "Frýdlant, radnice - výstavní síň",
+        "Kino Frýdlant"
+      ]
+    },
+    {
+      "id": "tyniste-nad-orlici-dre-calendar",
+      "town": "Týniště nad Orlicí",
+      "region": "Královéhradecký kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.tyniste.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.tyniste.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.tyniste\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Týniště nad Orlicí: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní dům",
+        "Mateřská škola Město",
+        "Městská knihovna Týniště nad Orlicí"
+      ]
+    },
+    {
+      "id": "moravska-trebova-dre-calendar",
+      "town": "Moravská Třebová",
+      "region": "Pardubický kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.moravskatrebova.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.moravskatrebova.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.moravskatrebova\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Moravská Třebová: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Dům dětí a mládeže Maják",
+        "Na Písku",
+        "Náměstí",
+        "Zámek - nádvoří"
+      ]
+    },
+    {
+      "id": "zidlochovice-dre-calendar",
+      "town": "Židlochovice",
+      "region": "Jihomoravský kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.zidlochovice.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.zidlochovice.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.zidlochovice\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Židlochovice: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Židlochovice - Masarykův kulturní dům",
+        "Židlochovice - areál Komunitního centra",
+        "Židlochovice - sál Komunitního centra, Legionářská 950, Židlochovice"
+      ]
+    },
+    {
+      "id": "roznov-pod-radhostem-dre-calendar",
+      "town": "Rožnov pod Radhoštěm",
+      "region": "Zlínský kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.roznov.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.roznov.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.roznov\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Rožnov pod Radhoštěm: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Masarykovo náměstí",
+        "Valašské muzeum v přírodě"
+      ]
+    },
+    {
+      "id": "hlucin-dre-calendar",
+      "town": "Hlučín",
+      "region": "Moravskoslezský kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.hlucin.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.hlucin.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.hlucin\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Hlučín: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Hlučín - KD Hlučín",
+        "Hlučín - Mírové náměstí v Hlučíně",
+        "Hlučín - Mírové náměstí, Hlučín",
+        "Hlučín - Červený kostel v Hlučíně"
+      ]
     }
   ]
 }

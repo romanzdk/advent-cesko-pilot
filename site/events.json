@@ -2332,6 +2332,34 @@
       }
     },
     {
+      "id": "e-ee055e46a66239540c79",
+      "title": "29. ROČNÍK PRODEJE VÁNOČNÍ HVĚZDY",
+      "town": "Litovel",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "venue": "vestibul MK Litovel",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "29. ROČNÍK PRODEJE VÁNOČNÍ HVĚZDY. vestibul MK Litovel",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.litovel.eu/dre-cs/56815-29-rocnik-prodeje-vanocni-hvezdy.html",
+      "location": {
+        "lat": 49.7013305,
+        "lon": 17.0758784,
+        "precision": "town",
+        "label": "Litovel — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438809"
+      }
+    },
+    {
       "id": "e-41cc8a5b141071e5e911",
       "title": "Vánoční trhy Nemocnice Počátky",
       "town": "Počátky",
@@ -3468,6 +3496,37 @@
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-2026/",
       "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
       "status": "time-unconfirmed"
+    },
+    {
+      "id": "e-3633b8c1ee69dd724d98",
+      "title": "Výstava: Betlémy",
+      "town": "Kojetín",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-27",
+      "endDate": "2026-12-18",
+      "startTime": null,
+      "endTime": null,
+      "venue": "Vzdělávací a informační centrum - galerie Masarykovo náměstí 8, Kojetín 75201",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Výstava: Betlémy. Vzdělávací a informační centrum - galerie Masarykovo náměstí 8, Kojetín 75201",
+      "notes": [
+        "Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření.",
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.kojetin.cz/dre-cs/71437-vystava-betlemy.html",
+      "location": {
+        "lat": 49.3523028,
+        "lon": 17.3026301,
+        "precision": "town",
+        "label": "Kojetín — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438345"
+      }
     },
     {
       "id": "e-1e6519b141b9c5e7d276",
@@ -4756,6 +4815,34 @@
       }
     },
     {
+      "id": "e-88226af9f1371d825eb6",
+      "title": "Rozsvícení vánočního stromu",
+      "town": "Bílina",
+      "region": "Ústecký kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "Mírové náměstí Mírové náměstí, Bílina 41801",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu. Mírové náměstí Mírové náměstí, Bílina 41801",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.bilina.cz/dre-cs/79383-rozsviceni-vanocniho-stromu.html",
+      "location": {
+        "lat": 50.5486059,
+        "lon": 13.7746622,
+        "precision": "town",
+        "label": "Bílina — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439352"
+      }
+    },
+    {
       "id": "e-1c7b7c781d60d62c8fd1",
       "title": "ROZSVÍCENÍ VÁNOČNÍHO STROMU",
       "town": "Chropyně",
@@ -4837,6 +4924,34 @@
         "precision": "town",
         "label": "Dřevohostice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438585"
+      }
+    },
+    {
+      "id": "e-cefbb3d66a6a741e940a",
+      "title": "Adventní koncert Magdalény Kovářové",
+      "town": "Hlučín",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "Hlučín - Červený kostel v Hlučíně",
+      "category": "setkani",
+      "price": "dobrovolné",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert Magdalény Kovářové. Hlučín - Červený kostel v Hlučíně",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.hlucin.cz/dre-cs/38317-adventni-koncert-magdaleny-kovarove.html",
+      "location": {
+        "lat": 49.896755,
+        "lon": 18.1870424,
+        "precision": "town",
+        "label": "Hlučín — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437592"
       }
     },
     {
@@ -5431,6 +5546,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-57beb3406853de7e7865",
+      "title": "ADVENTNÍ KONCERT ÚSTECKÉHO KRAJE",
+      "town": "Louny",
+      "region": "Ústecký kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "chrám sv. Mikuláše Beneše z Loun, Louny, 440 01",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "ADVENTNÍ KONCERT ÚSTECKÉHO KRAJE. chrám sv. Mikuláše Beneše z Loun, Louny, 440 01",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://akce.louny.eu/dre-cs/863-adventni-koncert-usteckeho-kraje.html",
+      "location": {
+        "lat": 50.3572914,
+        "lon": 13.7969195,
+        "precision": "town",
+        "label": "Louny — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439344"
+      }
+    },
+    {
       "id": "e-43f27651bd3ca34ae08e",
       "title": "Vánoční trhy a rozsvícení vánočního stromu",
       "town": "Ludgeřovice",
@@ -5979,6 +6122,34 @@
       "status": "confirmed"
     },
     {
+      "id": "e-9bc5a0769d2fc305e9d2",
+      "title": "ROZSVÍCENÍ VÁNOČNÍHO STROMU V LOUNECH",
+      "town": "Louny",
+      "region": "Ústecký kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "12:00",
+      "endTime": null,
+      "venue": "MÍROVÉ NÁMĚSTÍ",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "ROZSVÍCENÍ VÁNOČNÍHO STROMU V LOUNECH. MÍROVÉ NÁMĚSTÍ",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://akce.louny.eu/dre-cs/864-rozsviceni-vanocniho-stromu-v-lounech.html",
+      "location": {
+        "lat": 50.3572914,
+        "lon": 13.7969195,
+        "precision": "town",
+        "label": "Louny — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439344"
+      }
+    },
+    {
       "id": "e-fc6d6d59a822c716ee03",
       "title": "VÁNOČNÍ JARMARK",
       "town": "Dobruška",
@@ -6178,6 +6349,34 @@
         "precision": "town",
         "label": "Dobroslavice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437682"
+      }
+    },
+    {
+      "id": "e-71bf8042b887d5a3470e",
+      "title": "Rozsvěcení vánočního stromu 2026",
+      "town": "Frýdlant",
+      "region": "Liberecký kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": "18:00",
+      "venue": "Frýdlant, náměstí T. G. Masaryka",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvěcení vánočního stromu 2026. Frýdlant, náměstí T. G. Masaryka",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.mesto-frydlant.cz/dre-cs/80770-rozsveceni-vanocniho-stromu-2026.html",
+      "location": {
+        "lat": 50.9216775,
+        "lon": 15.0794594,
+        "precision": "town",
+        "label": "Frýdlant — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439060"
       }
     },
     {
@@ -8752,6 +8951,67 @@
       }
     },
     {
+      "id": "e-65ea8ce2627a1dcc83e4",
+      "title": "Vánoční dobročinný svařák 2026",
+      "town": "Frýdlant",
+      "region": "Liberecký kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "venue": "Frýdlant, náměstí T. G. Masaryka",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční dobročinný svařák 2026. Frýdlant, náměstí T. G. Masaryka",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.mesto-frydlant.cz/dre-cs/81358-vanocni-dobrocinny-svarak-2026.html",
+      "location": {
+        "lat": 50.9216775,
+        "lon": 15.0794594,
+        "precision": "town",
+        "label": "Frýdlant — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439060"
+      }
+    },
+    {
+      "id": "e-eb7c6fddb41abeb0e1c3",
+      "title": "Advent v Hlučíně 2026: Čtyři adventní neděle plné vánoční atmosféry",
+      "town": "Hlučín",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-29",
+      "endDate": "2026-12-24",
+      "startTime": null,
+      "endTime": null,
+      "venue": "Hlučín - Mírové náměstí v Hlučíně",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Advent v Hlučíně 2026: Čtyři adventní neděle plné vánoční atmosféry. Hlučín - Mírové náměstí v Hlučíně",
+      "notes": [
+        "Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření.",
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.hlucin.cz/dre-cs/38318-advent-v-hlucine-2026-ctyri-adventni-nedele-plne-vanocni-atmosfery.html",
+      "location": {
+        "lat": 49.896755,
+        "lon": 18.1870424,
+        "precision": "town",
+        "label": "Hlučín — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437592"
+      }
+    },
+    {
       "title": "Vánoční výstava betlémů ze sbírky Josefa Horkého",
       "town": "Humpolec",
       "venue": "Muzeum dr. Aleše Hrdličky, Horní náměstí 273, Humpolec",
@@ -9030,6 +9290,36 @@
         "precision": "town",
         "label": "Valtice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442303"
+      }
+    },
+    {
+      "id": "e-b747b47ae1c5dbf92735",
+      "title": "ROZSVÍCENÍ VÁNOČNÍHO STROMU",
+      "town": "Židlochovice",
+      "region": "Jihomoravský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "venue": "Židlochovice - areál Komunitního centra",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "ROZSVÍCENÍ VÁNOČNÍHO STROMU. Židlochovice - areál Komunitního centra",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.zidlochovice.cz/dre-cs/77469-rozsviceni-vanocniho-stromu.html",
+      "location": {
+        "lat": 49.0379775,
+        "lon": 16.6171639,
+        "precision": "town",
+        "label": "Židlochovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441227"
       }
     },
     {
@@ -9516,6 +9806,34 @@
       }
     },
     {
+      "id": "e-6d416fb81b81499301cb",
+      "title": "Vernisáž Vánoční výstavy ZŠ speciální Frýdlant - VERNISÁŽ",
+      "town": "Frýdlant",
+      "region": "Liberecký kraj",
+      "date": "2026-12-02",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "venue": "Frýdlant, radnice - výstavní síň",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vernisáž Vánoční výstavy ZŠ speciální Frýdlant - VERNISÁŽ. Frýdlant, radnice - výstavní síň",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.mesto-frydlant.cz/dre-cs/81239-vernisaz-vanocni-vystavy-zs-specialni-frydlant-vernisaz.html",
+      "location": {
+        "lat": 50.9216775,
+        "lon": 15.0794594,
+        "precision": "town",
+        "label": "Frýdlant — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439060"
+      }
+    },
+    {
       "id": "e-50b099f4421f5e726dde",
       "title": "Vánoční výstava prací žáků VO",
       "town": "Jilemnice",
@@ -9711,6 +10029,34 @@
         "precision": "town",
         "label": "Jilemnice — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439145"
+      }
+    },
+    {
+      "id": "e-17ac23bd89b81e8549f8",
+      "title": "Advent v Rožnově • Hrubá hudba",
+      "town": "Rožnov pod Radhoštěm",
+      "region": "Zlínský kraj",
+      "date": "2026-12-02",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Masarykovo náměstí",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Advent v Rožnově • Hrubá hudba. Masarykovo náměstí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.roznov.cz/dre-cs/81281-advent-v-roznove-hruba-hudba.html",
+      "location": {
+        "lat": 49.4587958,
+        "lon": 18.1429843,
+        "precision": "town",
+        "label": "Rožnov pod Radhoštěm — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442433"
       }
     },
     {
@@ -10193,6 +10539,34 @@
       }
     },
     {
+      "id": "e-bc7eea75215c032160fa",
+      "title": "VÁNOCE V NAŠÍ CHALOUPCE",
+      "town": "Litovel",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "09:30",
+      "endTime": "10:45",
+      "venue": "Záložna Litovel - Velký sál",
+      "category": "setkani",
+      "price": "70 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "VÁNOCE V NAŠÍ CHALOUPCE. Záložna Litovel - Velký sál",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.litovel.eu/dre-cs/77874-vanoce-v-nasi-chaloupce.html",
+      "location": {
+        "lat": 49.7013305,
+        "lon": 17.0758784,
+        "precision": "town",
+        "label": "Litovel — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438809"
+      }
+    },
+    {
       "id": "e-ee62a3880cd6c753749f",
       "title": "Mikulášská nadílka RC",
       "town": "Kralovice",
@@ -10332,6 +10706,34 @@
         "precision": "town",
         "label": "Kostelec na Hané — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438449"
+      }
+    },
+    {
+      "id": "e-45f64d2cdce0a92f45a7",
+      "title": "Betlémská hvězda",
+      "town": "Bílina",
+      "region": "Ústecký kraj",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Mírové náměstí Mírové náměstí, Bílina 41801",
+      "category": "betlem",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Betlémská hvězda. Mírové náměstí Mírové náměstí, Bílina 41801",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.bilina.cz/dre-cs/77409-betlemska-hvezda.html",
+      "location": {
+        "lat": 50.5486059,
+        "lon": 13.7746622,
+        "precision": "town",
+        "label": "Bílina — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439352"
       }
     },
     {
@@ -10649,6 +11051,34 @@
       }
     },
     {
+      "id": "e-bdc3aeecc94a71511eca",
+      "title": "Advent v Rožnově • Fleret",
+      "town": "Rožnov pod Radhoštěm",
+      "region": "Zlínský kraj",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Masarykovo náměstí",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Advent v Rožnově • Fleret. Masarykovo náměstí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.roznov.cz/dre-cs/81283-advent-v-roznove-fleret.html",
+      "location": {
+        "lat": 49.4587958,
+        "lon": 18.1429843,
+        "precision": "town",
+        "label": "Rožnov pod Radhoštěm — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442433"
+      }
+    },
+    {
       "id": "e-b772a2b7e1ad13ca498f",
       "title": "Cesta za Mikulášem",
       "town": "Starý Plzenec",
@@ -10702,6 +11132,34 @@
         "precision": "town",
         "label": "Šternberk — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438507"
+      }
+    },
+    {
+      "id": "e-fe4cea12f136243356b5",
+      "title": "Adventní koncert Daniely Radosy",
+      "town": "Frýdlant",
+      "region": "Liberecký kraj",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Frýdlant, obřadní síň radnice",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert Daniely Radosy. Frýdlant, obřadní síň radnice",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.mesto-frydlant.cz/dre-cs/81240-adventni-koncert-daniely-radosy.html",
+      "location": {
+        "lat": 50.9216775,
+        "lon": 15.0794594,
+        "precision": "town",
+        "label": "Frýdlant — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439060"
       }
     },
     {
@@ -10989,6 +11447,34 @@
       }
     },
     {
+      "id": "e-269f323b82eb30ef1ebc",
+      "title": "Duhové vánoční dopoledne - Brundibáři",
+      "town": "Prostějov",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "venue": "DUHA kulturní klub u hradeb",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Duhové vánoční dopoledne - Brundibáři. DUHA kulturní klub u hradeb",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.prostejov.eu/dre-cs/81216-duhove-vanocni-dopoledne-brundibari.html",
+      "location": {
+        "lat": 49.4721467,
+        "lon": 17.1117979,
+        "precision": "town",
+        "label": "Prostějov — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438618"
+      }
+    },
+    {
       "id": "e-4708791b300987bf5301",
       "title": "Vánoční melodie na hradě",
       "town": "Šternberk",
@@ -11215,6 +11701,34 @@
       }
     },
     {
+      "id": "e-b782719b4881203a3d3b",
+      "title": "Předvánoční dílna",
+      "town": "Moravská Třebová",
+      "region": "Pardubický kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "venue": "Dům dětí a mládeže Maják",
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Předvánoční dílna. Dům dětí a mládeže Maják",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.moravskatrebova.cz/dre-cs/81092-predvanocni-dilna.html",
+      "location": {
+        "lat": 49.7581546,
+        "lon": 16.6641472,
+        "precision": "town",
+        "label": "Moravská Třebová — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441874"
+      }
+    },
+    {
       "id": "e-fb69e30f0d7a68baa2ec",
       "title": "V objetí tmy | Adventní setkávání s Lucií Králíkovou",
       "town": "Roztoky",
@@ -11240,6 +11754,34 @@
         "precision": "town",
         "label": "Roztoky — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/436152"
+      }
+    },
+    {
+      "id": "e-5546b8dd62d0a81ff7e8",
+      "title": "Mikulášský podvečer",
+      "town": "Rožnov pod Radhoštěm",
+      "region": "Zlínský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": "18:00",
+      "venue": "Valašské muzeum v přírodě",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášský podvečer. Valašské muzeum v přírodě",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.roznov.cz/dre-cs/72961-mikulassky-podvecer.html",
+      "location": {
+        "lat": 49.4587958,
+        "lon": 18.1429843,
+        "precision": "town",
+        "label": "Rožnov pod Radhoštěm — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442433"
       }
     },
     {
@@ -11271,6 +11813,34 @@
       }
     },
     {
+      "id": "e-6a592bac0d6d4f06b109",
+      "title": "Mikulášské řádění 2026",
+      "town": "Hlučín",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "Hlučín - Mírové náměstí, Hlučín",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášské řádění 2026. Hlučín - Mírové náměstí, Hlučín",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.hlucin.cz/dre-cs/81346-mikulasske-radeni-2026.html",
+      "location": {
+        "lat": 49.896755,
+        "lon": 18.1870424,
+        "precision": "town",
+        "label": "Hlučín — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437592"
+      }
+    },
+    {
       "id": "e-cbd838bbe87a35713f81",
       "title": "Mikulášská nadílka",
       "town": "Kelč",
@@ -11296,6 +11866,34 @@
         "precision": "town",
         "label": "Kelč — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437033"
+      }
+    },
+    {
+      "id": "e-3b5d400c2abe68aa36df",
+      "title": "Mikuláš, anděl a čerti - Návštěvy u vás doma",
+      "town": "Kojetín",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "Kojetín Kojetín 75201",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikuláš, anděl a čerti - Návštěvy u vás doma. Kojetín Kojetín 75201",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.kojetin.cz/dre-cs/67790-mikulas-andel-a-certi-navstevy-u-vas-doma.html",
+      "location": {
+        "lat": 49.3523028,
+        "lon": 17.3026301,
+        "precision": "town",
+        "label": "Kojetín — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438345"
       }
     },
     {
@@ -11608,6 +12206,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-6eb7fede1137bc29d299",
+      "title": "XVIII. SLET ČERTŮ, MIKULÁŠŮ A ANDĚLŮ",
+      "town": "Litovel",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "19:00",
+      "venue": "nám. Př. Otakara Litovel, Nám. Př. Otakara, Litovel 78401",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "XVIII. SLET ČERTŮ, MIKULÁŠŮ A ANDĚLŮ. nám. Př. Otakara Litovel, Nám. Př. Otakara, Litovel 78401",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.litovel.eu/dre-cs/67732-xviii-slet-certu-mikulasu-a-andelu.html",
+      "location": {
+        "lat": 49.7013305,
+        "lon": 17.0758784,
+        "precision": "town",
+        "label": "Litovel — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438809"
+      }
+    },
+    {
       "id": "e-47160088f193e49c3239",
       "title": "Setkání se sv. Mikulášem",
       "town": "Lomnice nad Lužnicí",
@@ -11663,6 +12289,34 @@
         "precision": "town",
         "label": "Ludgeřovice — orientační střed obce či místní části, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437640"
+      }
+    },
+    {
+      "id": "e-4acdecedb06513b959de",
+      "title": "Mikuláš na zámku",
+      "town": "Moravská Třebová",
+      "region": "Pardubický kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "19:00",
+      "venue": "Zámek - nádvoří",
+      "category": "mikulas",
+      "price": "50 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikuláš na zámku. Zámek - nádvoří",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.moravskatrebova.cz/dre-cs/78641-mikulas-na-zamku.html",
+      "location": {
+        "lat": 49.7581546,
+        "lon": 16.6641472,
+        "precision": "town",
+        "label": "Moravská Třebová — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441874"
       }
     },
     {
@@ -12379,6 +13033,36 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-b09f08dd73107f70d978",
+      "title": "MIKULÁŠ A PEKLO POD RADNICÍ",
+      "town": "Židlochovice",
+      "region": "Jihomoravský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "venue": "Židlochovice - areál Komunitního centra",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "MIKULÁŠ A PEKLO POD RADNICÍ. Židlochovice - areál Komunitního centra",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.zidlochovice.cz/dre-cs/77472-mikulas-a-peklo-pod-radnici.html",
+      "location": {
+        "lat": 49.0379775,
+        "lon": 16.6171639,
+        "precision": "town",
+        "label": "Židlochovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441227"
+      }
+    },
+    {
       "id": "e-efd0dd40ef03e0d8e2e8",
       "title": "Vánoční jarmark",
       "town": "Dačice",
@@ -12404,6 +13088,34 @@
         "precision": "town",
         "label": "Dačice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437440"
+      }
+    },
+    {
+      "id": "e-6be532fec858219d558e",
+      "title": "Bohoslužby: 2. adventní neděle (sv. Mikuláše)",
+      "town": "Kojetín",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "venue": "Husův sbor, modlitebna - synagoga Husova, Kojetín 75201",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Bohoslužby: 2. adventní neděle (sv. Mikuláše). Husův sbor, modlitebna - synagoga Husova, Kojetín 75201",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.kojetin.cz/dre-cs/81076-bohosluzby-2-adventni-nedele-sv-mikulase.html",
+      "location": {
+        "lat": 49.3523028,
+        "lon": 17.3026301,
+        "precision": "town",
+        "label": "Kojetín — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438345"
       }
     },
     {
@@ -12800,6 +13512,34 @@
         "precision": "town",
         "label": "Ludgeřovice — orientační střed obce či místní části, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437640"
+      }
+    },
+    {
+      "id": "e-6fab3ae3471508b5251c",
+      "title": "Mikulášský karneval",
+      "town": "Moravská Třebová",
+      "region": "Pardubický kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "Na Písku",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášský karneval. Na Písku",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.moravskatrebova.cz/dre-cs/81188-mikulassky-karneval.html",
+      "location": {
+        "lat": 49.7581546,
+        "lon": 16.6641472,
+        "precision": "town",
+        "label": "Moravská Třebová — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441874"
       }
     },
     {
@@ -13431,6 +14171,34 @@
       }
     },
     {
+      "id": "e-e93c5922c0940eb0a04e",
+      "title": "Vánoce u Osmanyho",
+      "town": "Hlučín",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Hlučín - KD Hlučín",
+      "category": "setkani",
+      "price": "590 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoce u Osmanyho. Hlučín - KD Hlučín",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.hlucin.cz/dre-cs/68574-vanoce-u-osmanyho.html",
+      "location": {
+        "lat": 49.896755,
+        "lon": 18.1870424,
+        "precision": "town",
+        "label": "Hlučín — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437592"
+      }
+    },
+    {
       "id": "e-5689f09266bde0c2e0fc",
       "title": "VÁNOČNÍ KONCERT BÁRY BASIKOVÉ",
       "town": "Studénka",
@@ -13580,6 +14348,37 @@
         "precision": "town",
         "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
+    },
+    {
+      "id": "e-a1a8607af57758f76eb5",
+      "title": "OCHOTNICKÉ DIVADLO: PŘÍBĚH O VÁNOCÍCH",
+      "town": "Židlochovice",
+      "region": "Jihomoravský kraj",
+      "date": "2026-12-06",
+      "endDate": "2026-12-11",
+      "startTime": null,
+      "endTime": null,
+      "venue": "Židlochovice - Masarykův kulturní dům",
+      "category": "setkani",
+      "price": "150 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "OCHOTNICKÉ DIVADLO: PŘÍBĚH O VÁNOCÍCH. Židlochovice - Masarykův kulturní dům",
+      "notes": [
+        "Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření.",
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.zidlochovice.cz/dre-cs/81431-ochotnicke-divadlo-pribeh-o-vanocich.html",
+      "location": {
+        "lat": 49.0379775,
+        "lon": 16.6171639,
+        "precision": "town",
+        "label": "Židlochovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441227"
       }
     },
     {
@@ -13783,6 +14582,34 @@
       }
     },
     {
+      "id": "e-b60bb6af7511f4384240",
+      "title": "Advent v Rožnově • MEKI tribute",
+      "town": "Rožnov pod Radhoštěm",
+      "region": "Zlínský kraj",
+      "date": "2026-12-07",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Masarykovo náměstí",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Advent v Rožnově • MEKI tribute. Masarykovo náměstí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.roznov.cz/dre-cs/81286-advent-v-roznove-meki-tribute.html",
+      "location": {
+        "lat": 49.4587958,
+        "lon": 18.1429843,
+        "precision": "town",
+        "label": "Rožnov pod Radhoštěm — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442433"
+      }
+    },
+    {
       "id": "e-5e700df84e943cc3aaed",
       "title": "Na pokec s vedením města s vánočním svařákem",
       "town": "Pohořelice",
@@ -13892,6 +14719,34 @@
         "precision": "town",
         "label": "Pohořelice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/436886"
+      }
+    },
+    {
+      "id": "e-a09724c3c12fac8349a1",
+      "title": "Vánoční svíčka",
+      "town": "Prostějov",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-08",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "venue": "LIPKA, z.s., Tetín 1,Prostějov",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční svíčka. LIPKA, z.s., Tetín 1,Prostějov",
+      "notes": [],
+      "audience": "senioři / omezené zaměření",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.prostejov.eu/dre-cs/81374-vanocni-svicka.html",
+      "location": {
+        "lat": 49.4721467,
+        "lon": 17.1117979,
+        "precision": "town",
+        "label": "Prostějov — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438618"
       }
     },
     {
@@ -14203,6 +15058,34 @@
       }
     },
     {
+      "id": "e-0f9143cead09d563f140",
+      "title": "Vánoční trhy",
+      "town": "Moravská Třebová",
+      "region": "Pardubický kraj",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "08:00",
+      "endTime": "16:00",
+      "venue": "Náměstí",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční trhy. Náměstí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.moravskatrebova.cz/dre-cs/81128-vanocni-trhy.html",
+      "location": {
+        "lat": 49.7581546,
+        "lon": 16.6641472,
+        "precision": "town",
+        "label": "Moravská Třebová — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441874"
+      }
+    },
+    {
       "id": "e-b10ed5d8536f7844",
       "title": "Předvánoční tvořivé dílničky",
       "town": "Kamenice",
@@ -14317,6 +15200,34 @@
       }
     },
     {
+      "id": "e-c2ac09577928f761a0c6",
+      "title": "ČESKO ZPÍVÁ KOLEDY S KAPELOU REFLEXY A PS PALORA",
+      "town": "Litovel",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "18:00",
+      "venue": "nám. Př. Otakara Litovel, Nám. Př. Otakara, Litovel 78401",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "ČESKO ZPÍVÁ KOLEDY S KAPELOU REFLEXY A PS PALORA. nám. Př. Otakara Litovel, Nám. Př. Otakara, Litovel 78401",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.litovel.eu/dre-cs/77876-cesko-zpiva-koledy-s-kapelou-reflexy-a-ps-palora.html",
+      "location": {
+        "lat": 49.7013305,
+        "lon": 17.0758784,
+        "precision": "town",
+        "label": "Litovel — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438809"
+      }
+    },
+    {
       "id": "e-37fe3ea31d6277ea63f2",
       "title": "Česko zpívá koledy s Deníkem a Vánoční jarmark ZŠ Jižní",
       "town": "Žatec",
@@ -14342,6 +15253,34 @@
         "precision": "town",
         "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
+    },
+    {
+      "id": "e-3975a8240243e6505e61",
+      "title": "Předvánoční vyhrávání žáků ZUŠ Kojetín",
+      "town": "Kojetín",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Sokolovna Kojetín - Kulturní dům náměstí Republiky 1033, Kojetín 75201",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Předvánoční vyhrávání žáků ZUŠ Kojetín. Sokolovna Kojetín - Kulturní dům náměstí Republiky 1033, Kojetín 75201",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.kojetin.cz/dre-cs/69628-predvanocni-vyhravani-zaku-zus-kojetin.html",
+      "location": {
+        "lat": 49.3523028,
+        "lon": 17.3026301,
+        "precision": "town",
+        "label": "Kojetín — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438345"
       }
     },
     {
@@ -14992,6 +15931,34 @@
       }
     },
     {
+      "id": "e-4200333889e8652e123b",
+      "title": "Vánoce jsou za vrátky",
+      "town": "Týniště nad Orlicí",
+      "region": "Královéhradecký kraj",
+      "date": "2026-12-10",
+      "endDate": null,
+      "startTime": "15:30",
+      "endTime": "17:00",
+      "venue": "Mateřská škola Město",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoce jsou za vrátky. Mateřská škola Město",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.tyniste.cz/dre-cs/79156-vanoce-jsou-za-vratky.html",
+      "location": {
+        "lat": 50.1513634,
+        "lon": 16.0776973,
+        "precision": "town",
+        "label": "Týniště nad Orlicí — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440087"
+      }
+    },
+    {
       "id": "e-b0f0169465f73dd577cf",
       "title": "Předvánoční odpoledne s Petrem Rychlým",
       "town": "Chlumec",
@@ -15131,6 +16098,36 @@
         "precision": "town",
         "label": "Staňkov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439129"
+      }
+    },
+    {
+      "id": "e-a8cd0f27e938e4101dad",
+      "title": "VÁNOČNÍ BESÍDKA PRO SENIORY",
+      "town": "Židlochovice",
+      "region": "Jihomoravský kraj",
+      "date": "2026-12-10",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "venue": "Židlochovice - sál Komunitního centra, Legionářská 950, Židlochovice",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "VÁNOČNÍ BESÍDKA PRO SENIORY. Židlochovice - sál Komunitního centra, Legionářská 950, Židlochovice",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek."
+      ],
+      "audience": "senioři / omezené zaměření",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.zidlochovice.cz/dre-cs/77473-vanocni-besidka-pro-seniory.html",
+      "location": {
+        "lat": 49.0379775,
+        "lon": 16.6171639,
+        "precision": "town",
+        "label": "Židlochovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441227"
       }
     },
     {
@@ -15383,6 +16380,34 @@
         "precision": "town",
         "label": "Javorník — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437059"
+      }
+    },
+    {
+      "id": "e-2241fcb6975cdace212f",
+      "title": "VÁNOČNÍ KONCERT PS PALORA",
+      "town": "Litovel",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-11",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "20:30",
+      "venue": "Aula GJO Litovel, Opletalova 189, Litovel 784 01",
+      "category": "setkani",
+      "price": "dobrovolné",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "VÁNOČNÍ KONCERT PS PALORA. Aula GJO Litovel, Opletalova 189, Litovel 784 01",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.litovel.eu/dre-cs/81265-vanocni-koncert-ps-palora.html",
+      "location": {
+        "lat": 49.7013305,
+        "lon": 17.0758784,
+        "precision": "town",
+        "label": "Litovel — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438809"
       }
     },
     {
@@ -15672,6 +16697,34 @@
       }
     },
     {
+      "id": "e-a246721a5d23a8655010",
+      "title": "Vánoce v muzeu",
+      "town": "Louny",
+      "region": "Ústecký kraj",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "venue": "Oblastní muzeum Louny, Pivovarská 28",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoce v muzeu. Oblastní muzeum Louny, Pivovarská 28",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://akce.louny.eu/dre-cs/874-vanoce-v-muzeu.html",
+      "location": {
+        "lat": 50.3572914,
+        "lon": 13.7969195,
+        "precision": "town",
+        "label": "Louny — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439344"
+      }
+    },
+    {
       "id": "e-9804d019e6d5697df467",
       "title": "Vánoční krušnohorský jarmark v knihovně",
       "town": "Nejdek",
@@ -15897,6 +16950,34 @@
         "precision": "town",
         "label": "Roztoky — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/436152"
+      }
+    },
+    {
+      "id": "e-cfed48ece6b44e04b8a7",
+      "title": "Vesmírné Vánoce",
+      "town": "Týniště nad Orlicí",
+      "region": "Královéhradecký kraj",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": "18:00",
+      "venue": "Městská knihovna Týniště nad Orlicí",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vesmírné Vánoce. Městská knihovna Týniště nad Orlicí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.tyniste.cz/dre-cs/80721-vesmirne-vanoce.html",
+      "location": {
+        "lat": 50.1513634,
+        "lon": 16.0776973,
+        "precision": "town",
+        "label": "Týniště nad Orlicí — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440087"
       }
     },
     {
@@ -16379,6 +17460,34 @@
       }
     },
     {
+      "id": "e-2edc900c29ad07a23ec6",
+      "title": "LOUSKÁČEK – VÁNOČNÍ PŘÍBĚH",
+      "town": "Hlučín",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Hlučín - KD Hlučín",
+      "category": "setkani",
+      "price": "200 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "LOUSKÁČEK – VÁNOČNÍ PŘÍBĚH. Hlučín - KD Hlučín",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.hlucin.cz/dre-cs/81386-louskacek-vanocni-pribeh.html",
+      "location": {
+        "lat": 49.896755,
+        "lon": 18.1870424,
+        "precision": "town",
+        "label": "Hlučín — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437592"
+      }
+    },
+    {
       "id": "e-717fdfa543492c7116aa",
       "title": "Česká mše vánoční - J. J. Ryba",
       "town": "Jáchymov",
@@ -16716,6 +17825,34 @@
         "precision": "town",
         "label": "Studénka — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437003"
+      }
+    },
+    {
+      "id": "e-ec3f9961ee116ab443ab",
+      "title": "Vánoční čas a hosté Jů a Hele",
+      "town": "Frýdlant",
+      "region": "Liberecký kraj",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "venue": "Kino Frýdlant",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční čas a hosté Jů a Hele. Kino Frýdlant",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.mesto-frydlant.cz/dre-cs/81241-vanocni-cas-a-hoste-ju-a-hele.html",
+      "location": {
+        "lat": 50.9216775,
+        "lon": 15.0794594,
+        "precision": "town",
+        "label": "Frýdlant — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439060"
       }
     },
     {
@@ -17141,6 +18278,34 @@
       "status": "confirmed"
     },
     {
+      "id": "e-a368069bf9cf1491cb4c",
+      "title": "VÁNOČNÍ KONCERT SPS KANTIKA",
+      "town": "Litovel",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Kostel Sv. Marka",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "VÁNOČNÍ KONCERT SPS KANTIKA. Kostel Sv. Marka",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.litovel.eu/dre-cs/39557-vanocni-koncert-sps-kantika.html",
+      "location": {
+        "lat": 49.7013305,
+        "lon": 17.0758784,
+        "precision": "town",
+        "label": "Litovel — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438809"
+      }
+    },
+    {
       "id": "e-ee3b6d8ee4709ab05342",
       "title": "Česká mše vánoční",
       "town": "Staňkov",
@@ -17534,6 +18699,34 @@
         "precision": "town",
         "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439995"
+      }
+    },
+    {
+      "id": "e-1b6159ecd208d4191efd",
+      "title": "ADVENTNÍ KONCERT PS SENZAKORD A JEHO HOSTŮ",
+      "town": "Litovel",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-14",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Kostel Sv. Marka",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "ADVENTNÍ KONCERT PS SENZAKORD A JEHO HOSTŮ. Kostel Sv. Marka",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.litovel.eu/dre-cs/33393-adventni-koncert-ps-senzakord-a-jeho-hostu.html",
+      "location": {
+        "lat": 49.7013305,
+        "lon": 17.0758784,
+        "precision": "town",
+        "label": "Litovel — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438809"
       }
     },
     {
@@ -18731,6 +19924,34 @@
         "precision": "town",
         "label": "Protivín — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437349"
+      }
+    },
+    {
+      "id": "e-2fad8e863baff9d5f2e4",
+      "title": "Vánoční koncert - Václav Marek s orchestrem, host: Jan Čenský",
+      "town": "Týniště nad Orlicí",
+      "region": "Královéhradecký kraj",
+      "date": "2026-12-18",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Kulturní dům",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert - Václav Marek s orchestrem, host: Jan Čenský. Kulturní dům",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.tyniste.cz/dre-cs/78495-vanocni-koncert-vaclav-marek-s-orchestrem-host-jan-censky.html",
+      "location": {
+        "lat": 50.1513634,
+        "lon": 16.0776973,
+        "precision": "town",
+        "label": "Týniště nad Orlicí — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440087"
       }
     },
     {
@@ -20276,6 +21497,34 @@
         "precision": "town",
         "label": "Zbiroh — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438901"
+      }
+    },
+    {
+      "id": "e-754c37edd619ab5e3c41",
+      "title": "Vánoční koncert",
+      "town": "Frýdlant",
+      "region": "Liberecký kraj",
+      "date": "2026-12-22",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Frýdlant, obřadní síň radnice",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert. Frýdlant, obřadní síň radnice",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:03:59+00:00",
+      "sourceUrl": "https://www.mesto-frydlant.cz/dre-cs/81242-vanocni-koncert.html",
+      "location": {
+        "lat": 50.9216775,
+        "lon": 15.0794594,
+        "precision": "town",
+        "label": "Frýdlant — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439060"
       }
     },
     {
