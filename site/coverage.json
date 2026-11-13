@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T14:32:41+00:00",
+  "generatedAt": "2026-11-13T20:36:30+00:00",
   "window": {
     "from": "2026-11-20",
     "through": "2026-12-24"
@@ -940,18 +940,54 @@
       "eventCount": 4,
       "reviewCount": 0,
       "lastError": null
+    },
+    {
+      "id": "dobroslavice-obec",
+      "town": "Dobroslavice",
+      "region": "Moravskoslezský kraj",
+      "url": "https://www.dobroslavice.cz/aktualne/kalendar-akci/",
+      "adapter": "galileo",
+      "coverageNote": "Omezený výběr obecního kalendáře; nikoli úplné pokrytí kraje.",
+      "maxIndexPages": 2,
+      "maxDetails": 14,
+      "excludedCount": 1,
+      "sourceNote": "Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.",
+      "status": "ok",
+      "lastChecked": "2026-11-13T20:36:14+00:00",
+      "lastSuccess": "2026-11-13T20:36:14+00:00",
+      "eventCount": 3,
+      "reviewCount": 0,
+      "lastError": null
+    },
+    {
+      "id": "horni-lhota-obec",
+      "town": "Horní Lhota",
+      "region": "Moravskoslezský kraj",
+      "url": "https://www.hornilhota.cz/zivot-v-obci/kalendar-akci/",
+      "adapter": "galileo",
+      "coverageNote": "Omezený výběr obecního kalendáře; nikoli úplné pokrytí kraje.",
+      "maxIndexPages": 2,
+      "maxDetails": 14,
+      "excludedCount": 1,
+      "sourceNote": "Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.",
+      "status": "ok",
+      "lastChecked": "2026-11-13T20:36:30+00:00",
+      "lastSuccess": "2026-11-13T20:36:30+00:00",
+      "eventCount": 3,
+      "reviewCount": 0,
+      "lastError": null
     }
   ],
   "metrics": {
-    "runId": "a48dc0fe-eebc-4485-80f0-c9799ce30c53",
-    "durationSeconds": 44.056,
-    "requestCount": 14,
+    "runId": "9f6b0847-fac4-4705-8f44-dbd98917c392",
+    "durationSeconds": 16.024,
+    "requestCount": 6,
     "http304": 0,
     "cacheUnchanged": 0,
     "eventsNew": 0,
     "eventsChanged": 0,
-    "eventsUnchanged": 9,
-    "eventsPublished": 307,
+    "eventsUnchanged": 3,
+    "eventsPublished": 313,
     "reviewCount": 0,
     "excludedCount": 1,
     "aiCalls": 0

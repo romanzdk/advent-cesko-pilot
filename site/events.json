@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T14:32:41+00:00",
+  "generatedAt": "2026-11-13T20:36:30+00:00",
   "season": 2026,
   "region": "Česko – sezonní výběr",
   "events": [
@@ -2430,6 +2430,37 @@
       }
     },
     {
+      "id": "e-86234bd4730d71bc9104",
+      "title": "Tvoření adventních věnců",
+      "town": "Dobroslavice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": "19:00",
+      "venue": "Sál kulturního domu Dobroslavice",
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tvoření adventních věnců. Sál kulturního domu Dobroslavice",
+      "notes": [
+        "Programový plakát ověřen 2026-11-13: https://www.dobroslavice.cz/evt_image.php?img=2541&v=1794386652",
+        "Materiál a hotové věnce lze koupit na místě; přesné ceny pořadatel neuvádí. Tvoření probíhá v sále kulturního domu v Dobroslavicích."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:36:23+00:00",
+      "sourceUrl": "https://www.dobroslavice.cz/aktualne/kalendar-akci/tvoreni-adventnich-vencu-497_100cs.html",
+      "location": {
+        "lat": 49.8803361,
+        "lon": 18.1409218,
+        "precision": "town",
+        "label": "Dobroslavice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437682"
+      }
+    },
+    {
       "id": "e-e56cbece9c3c2819",
       "title": "Kamenické vánoční trhy s mikulášskou nadílkou",
       "town": "Kamenice",
@@ -2713,6 +2744,37 @@
         "precision": "town",
         "label": "Beroun — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442333"
+      }
+    },
+    {
+      "id": "e-097cd1466d1d2e46b910",
+      "title": "Rozsvícení vánočního stromu na prostranství před obchodem",
+      "town": "Horní Lhota",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Prostranství před obchodem",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu na prostranství před obchodem. Prostranství před obchodem",
+      "notes": [
+        "Programový plakát ověřen 2026-11-13: https://www.hornilhota.cz/evt_image.php?img=3604&v=1794510900",
+        "16:00 začíná prodej občerstvení, 16:30 zpívání koled; od 17:00 je uvedeno slovo faráře, žehnání věnců, scénka a rozsvícení stromu. Čas 16:00 není samotné rozsvícení."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:36:37+00:00",
+      "sourceUrl": "https://www.hornilhota.cz/zivot-v-obci/kalendar-akci/rozsviceni-vanocniho-stromu-na-prostranstvi-pred-obchodem-873_305cs.html",
+      "location": {
+        "lat": 49.8530442,
+        "lon": 18.0683779,
+        "precision": "town",
+        "label": "Horní Lhota — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437335"
       }
     },
     {
@@ -3204,6 +3266,37 @@
         "precision": "town",
         "label": "Žebnice — část Plas — orientační střed místní části; nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/20736711"
+      }
+    },
+    {
+      "id": "e-f920c67a94bf479f5949",
+      "title": "Rozsvícení vánočního stromu v Dobroslavicích",
+      "town": "Dobroslavice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:15",
+      "endTime": "17:45",
+      "venue": "Autobusová zastávka v Dobroslavicích",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu v Dobroslavicích. Autobusová zastávka v Dobroslavicích",
+      "notes": [
+        "Programový plakát ověřen 2026-11-13: https://www.dobroslavice.cz/evt_image.php?img=2542&v=1794389413",
+        "Plakát upřesňuje místo na autobusovou zastávku. Začátek je v 17:15, konec 17:45 uvádí obecní detail. Hrníčky na vánoční punč s sebou."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:36:27+00:00",
+      "sourceUrl": "https://www.dobroslavice.cz/aktualne/kalendar-akci/rozsviceni-vanocniho-stromu-v-dobroslavicich-498_101cs.html",
+      "location": {
+        "lat": 49.8803361,
+        "lon": 18.1409218,
+        "precision": "town",
+        "label": "Dobroslavice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437682"
       }
     },
     {
@@ -4561,6 +4654,37 @@
       }
     },
     {
+      "id": "e-90d2f8f161830dd6c911",
+      "title": "Vánoční koncert",
+      "town": "Dobroslavice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Kulturní dům",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert. Kulturní dům",
+      "notes": [
+        "Programový plakát ověřen 2026-11-13: https://www.dobroslavice.cz/evt_image.php?img=2530&v=1793787943",
+        "Po koncertu bude vyhodnocena fotografická soutěž OKO; cena ani konec koncertu nejsou uvedeny."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:36:30+00:00",
+      "sourceUrl": "https://www.dobroslavice.cz/aktualne/kalendar-akci/vanocni-koncert-476_97cs.html",
+      "location": {
+        "lat": 49.8803361,
+        "lon": 18.1409218,
+        "precision": "town",
+        "label": "Dobroslavice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437682"
+      }
+    },
+    {
       "id": "e-768d27168aa3c59a",
       "title": "Mikulášská nadílka",
       "town": "Hrusice",
@@ -5052,6 +5176,37 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/436112"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "title": "Vánoční dílny s Mikulášem a koncert Osamělé palačinky",
+      "town": "Horní Lhota",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "14:30",
+      "endTime": null,
+      "venue": "Společenský sál (dílny); tělocvična (koncert)",
+      "category": "tvoreni",
+      "price": "Děti: dílny zdarma; dospělí: výroba svícnu 100 Kč; mikulášský balíček 100 Kč.",
+      "registration": "Pořadatel požaduje potvrzení účasti do 29. 11. 2026; podmínky ověřte přímo u obce.",
+      "registrationUrl": null,
+      "description": "Vánoční tvoření s Mikulášem a navazujícím koncertem v Horní Lhotě.",
+      "notes": [
+        "Programový plakát ověřen 2026-11-13: https://www.hornilhota.cz/evt_image.php?img=3607&v=1794563987",
+        "14:30 start dílniček, 15:30 návštěva Mikuláše, 17:30 koncert tria violoncellistů Osamělé palačinky a souběžné promítání pohádky pro menší děti. Koncert je v tělocvičně, dílny ve společenském sále. Cena koncertu není uvedena."
+      ],
+      "audience": "všichni",
+      "location": {
+        "lat": 49.8530442,
+        "lon": 18.0683779,
+        "precision": "town",
+        "label": "Horní Lhota — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437335"
+      },
+      "id": "e-audit-7bac7874294c627018b2611bd621068a",
+      "region": "Moravskoslezský kraj",
+      "sourceUrl": "https://www.hornilhota.cz/zivot-v-obci/kalendar-akci/vanocni-dilny-s-mikulasem-a-koncert-osamele-palacinky-880_313cs.html",
+      "verifiedAt": "2026-11-13T20:27:09+00:00",
+      "status": "confirmed"
     },
     {
       "title": "Předvánoční setkání v Lipnici nad Sázavou",
@@ -6519,6 +6674,37 @@
         "precision": "town",
         "label": "Černošín — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438873"
+      }
+    },
+    {
+      "id": "e-97327a61e3981bd8d327",
+      "title": "Adventní jarmark",
+      "town": "Horní Lhota",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "15:30",
+      "endTime": null,
+      "venue": "Prostranství za obecním domem",
+      "category": "trhy",
+      "price": "Jízda na velbloudu či oslíkovi 80 Kč; vstupné na jarmark neuvedeno.",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní jarmark. Prostranství za obecním domem",
+      "notes": [
+        "Programový plakát ověřen 2026-11-13: https://www.hornilhota.cz/evt_image.php?img=3605&v=1794563548",
+        "15:30 zahájení jarmarku a zvířátka, 16:00 andělské vystoupení dětí MŠ, 16:30 živý Betlém, 17:00 Krampus čerti s ohňovou show. Cena 80 Kč platí za jízdu, nikoli jako vstupné na celý jarmark."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:36:46+00:00",
+      "sourceUrl": "https://www.hornilhota.cz/zivot-v-obci/kalendar-akci/adventni-jarmark-877_310cs.html",
+      "location": {
+        "lat": 49.8530442,
+        "lon": 18.0683779,
+        "precision": "town",
+        "label": "Horní Lhota — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437335"
       }
     },
     {
