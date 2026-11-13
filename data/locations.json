@@ -761,5 +761,96 @@
     "precision": "town",
     "label": "Deštná — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/437429"
+  },
+  "Přelouč": {
+    "lat": 50.039436,
+    "lon": 15.5606989,
+    "precision": "town",
+    "label": "Přelouč — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440298"
+  },
+  "Studénka": {
+    "lat": 49.7137494,
+    "lon": 18.0610845,
+    "precision": "town",
+    "label": "Studénka — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437003"
+  },
+  "Příbor": {
+    "lat": 49.6401091,
+    "lon": 18.1438062,
+    "precision": "town",
+    "label": "Příbor — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437566"
+  },
+  "Kravaře": {
+    "lat": 49.9321321,
+    "lon": 18.0044266,
+    "precision": "town",
+    "label": "Kravaře — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437005"
+  },
+  "Klimkovice": {
+    "lat": 49.7884424,
+    "lon": 18.1254099,
+    "precision": "town",
+    "label": "Klimkovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437339"
+  },
+  "Brušperk": {
+    "lat": 49.7003751,
+    "lon": 18.2216061,
+    "precision": "town",
+    "label": "Brušperk — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437869"
+  },
+  "Paskov": {
+    "lat": 49.7317867,
+    "lon": 18.2903689,
+    "precision": "town",
+    "label": "Paskov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437903"
+  },
+  "Velká Bystřice": {
+    "lat": 49.5947568,
+    "lon": 17.3654414,
+    "precision": "town",
+    "label": "Velká Bystřice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438434"
+  },
+  "Město Albrechtice": {
+    "lat": 50.1631183,
+    "lon": 17.5750385,
+    "precision": "town",
+    "label": "Město Albrechtice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437758"
+  },
+  "Třemošnice": {
+    "lat": 49.8693093,
+    "lon": 15.5803962,
+    "precision": "town",
+    "label": "Třemošnice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440126"
+  },
+  "Kostelec na Hané": {
+    "lat": 49.5139792,
+    "lon": 17.0582398,
+    "precision": "town",
+    "label": "Kostelec na Hané — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438449"
+  },
+  "Luže": {
+    "lat": 49.8934114,
+    "lon": 16.0284252,
+    "precision": "town",
+    "label": "Luže — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440033"
+  },
+  "Javorník": {
+    "lat": 50.3923374,
+    "lon": 17.0052268,
+    "precision": "town",
+    "label": "Javorník — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437059"
   }
 }

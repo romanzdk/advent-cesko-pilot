@@ -6942,6 +6942,301 @@
       "allowed_venues": [
         "Deštná"
       ]
+    },
+    {
+      "id": "prelouc-calendar",
+      "town": "Přelouč",
+      "region": "Pardubický kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mestoprelouc.cz/zivot-ve-meste/kalendar-kulturnich-a-sportovnich-akci-ve-meste-a-blizkem-okoli/"
+      ],
+      "detail_prefixes": [
+        "https://www.mestoprelouc.cz/zivot-ve-meste/kalendar-kulturnich-a-sportovnich-akci-ve-meste-a-blizkem-okoli/"
+      ],
+      "url_regex": "^https://www\\.mestoprelouc\\.cz/zivot-ve-meste/kalendar-kulturnich-a-sportovnich-akci-ve-meste-a-blizkem-okoli/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Přelouč: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "KINO - Přelouč",
+        "Masarykovo náměstí - Přelouč"
+      ]
+    },
+    {
+      "id": "studenka-calendar",
+      "town": "Studénka",
+      "region": "Moravskoslezský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mesto-studenka.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mesto-studenka.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mesto-studenka\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Studénka: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Dělnický dům",
+        "Sportovní centrum - hřiště",
+        "hasičská zbrojnice ul. Družstevní",
+        "nám. Republiky"
+      ]
+    },
+    {
+      "id": "pribor-calendar",
+      "town": "Příbor",
+      "region": "Moravskoslezský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.pribor.eu/volny-cas-a-sport/kalendar-akci-pribor/"
+      ],
+      "detail_prefixes": [
+        "https://www.pribor.eu/volny-cas-a-sport/kalendar-akci-pribor/"
+      ],
+      "url_regex": "^https://www\\.pribor\\.eu/volny-cas-a-sport/kalendar-akci-pribor/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Příbor: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kostel Narození Panny Marie",
+        "Kulturní dům Příbor",
+        "Náměstí S. Freuda",
+        "Piaristický klášter Příbor",
+        "kostel sv. Valentina"
+      ]
+    },
+    {
+      "id": "kravare-calendar",
+      "town": "Kravaře",
+      "region": "Moravskoslezský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.kravare.cz/aktualne/kalendar-kravarskych-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.kravare.cz/aktualne/kalendar-kravarskych-akci/"
+      ],
+      "url_regex": "^https://www\\.kravare\\.cz/aktualne/kalendar-kravarskych-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Kravaře: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Aquapark"
+      ]
+    },
+    {
+      "id": "klimkovice-calendar",
+      "town": "Klimkovice",
+      "region": "Moravskoslezský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mesto-klimkovice.cz/akce-ve-meste/"
+      ],
+      "detail_prefixes": [
+        "https://www.mesto-klimkovice.cz/akce-ve-meste/"
+      ],
+      "url_regex": "^https://www\\.mesto-klimkovice\\.cz/akce-ve-meste/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Klimkovice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kino Panorama Klimkovice"
+      ]
+    },
+    {
+      "id": "brusperk-calendar",
+      "town": "Brušperk",
+      "region": "Moravskoslezský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.brusperk-mesto.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.brusperk-mesto.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.brusperk-mesto\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Brušperk: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Náměstí J. Á. Komenského",
+        "Národní dům Brušperk"
+      ]
+    },
+    {
+      "id": "paskov-calendar",
+      "town": "Paskov",
+      "region": "Moravskoslezský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mesto-paskov.cz/mesto/kultura-a-sport/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mesto-paskov.cz/mesto/kultura-a-sport/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mesto-paskov\\.cz/mesto/kultura-a-sport/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Paskov: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kostel sv. Vavřince",
+        "Náměstí"
+      ]
+    },
+    {
+      "id": "velka-bystrice-calendar",
+      "town": "Velká Bystřice",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.velkabystrice.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.velkabystrice.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.velkabystrice\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Velká Bystřice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Zámecká MŠ",
+        "Zámecké náměstí",
+        "škola - budova 1. stupně"
+      ]
+    },
+    {
+      "id": "mesto-albrechtice-calendar",
+      "town": "Město Albrechtice",
+      "region": "Moravskoslezský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mesto-albrechtice.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mesto-albrechtice.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mesto-albrechtice\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Město Albrechtice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Klubovna ZŠ Město Albrechtice",
+        "Kostel sv. Mikuláše",
+        "náměstí ČSA"
+      ]
+    },
+    {
+      "id": "tremosnice-calendar",
+      "town": "Třemošnice",
+      "region": "Pardubický kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.tremosnice.cz/zivot-ve-meste/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.tremosnice.cz/zivot-ve-meste/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.tremosnice\\.cz/zivot-ve-meste/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Třemošnice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní dům",
+        "Náměstí",
+        "Náměstí v Třemošnici",
+        "Obřadní síň"
+      ]
+    },
+    {
+      "id": "kostelec-na-hane-calendar",
+      "town": "Kostelec na Hané",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.kostelecnh.cz/zivot-ve-meste/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.kostelecnh.cz/zivot-ve-meste/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.kostelecnh\\.cz/zivot-ve-meste/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Kostelec na Hané: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Prostranství před městkým úřadem",
+        "V knihovně"
+      ]
+    },
+    {
+      "id": "luze-calendar",
+      "town": "Luže",
+      "region": "Pardubický kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.luze.cz/sluzby/zivot-ve-meste/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.luze.cz/sluzby/zivot-ve-meste/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.luze\\.cz/sluzby/zivot-ve-meste/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Luže: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Chrám Panny Marie Pomocné na Chlumku",
+        "Náměstí Plk. Josefa Koukala"
+      ]
+    },
+    {
+      "id": "javornik-calendar",
+      "town": "Javorník",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mestojavornik.cz/zivot-ve-meste/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mestojavornik.cz/zivot-ve-meste/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mestojavornik\\.cz/zivot-ve-meste/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Javorník: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kino Olympia - velký sál",
+        "Nový sál - Kulturní dům",
+        "kostel sv. Kříže v Javorníku",
+        "náměstí Svobody"
+      ]
     }
   ]
 }

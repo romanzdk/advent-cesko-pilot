@@ -119,6 +119,34 @@
       }
     },
     {
+      "id": "e-cd0f976875270afd329a",
+      "title": "Jarmark na sv.Kateřinu 21. listopadu 2026",
+      "town": "Brušperk",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-21",
+      "endDate": null,
+      "startTime": "08:30",
+      "endTime": null,
+      "venue": "Náměstí J. Á. Komenského",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Jarmark na sv.Kateřinu 21. listopadu 2026. Náměstí J. Á. Komenského",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:54+00:00",
+      "sourceUrl": "https://www.brusperk-mesto.cz/aktualne/kalendar-akci/jarmark-na-svkaterinu-21-listopadu-2026-2211_962cs.html",
+      "location": {
+        "lat": 49.7003751,
+        "lon": 18.2216061,
+        "precision": "town",
+        "label": "Brušperk — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437869"
+      }
+    },
+    {
       "id": "e-8da4fa2149dcc96ec3db",
       "title": "Vánoce v našem městě - Adventní čas 2026",
       "town": "Libušín",
@@ -631,6 +659,34 @@
       "status": "time-unconfirmed"
     },
     {
+      "id": "e-97cbddb03bf80463f4c0",
+      "title": "Vánoční trhy s rozsvícením vánočního stromu",
+      "town": "Javorník",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-22",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": null,
+      "venue": "náměstí Svobody",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční trhy s rozsvícením vánočního stromu. náměstí Svobody",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:56+00:00",
+      "sourceUrl": "https://www.mestojavornik.cz/zivot-ve-meste/kalendar-akci/vanocni-trhy-s-rozsvicenim-vanocniho-stromu-3649_1496cs.html",
+      "location": {
+        "lat": 50.3923374,
+        "lon": 17.0052268,
+        "precision": "town",
+        "label": "Javorník — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437059"
+      }
+    },
+    {
       "id": "e-7b6f5d452bd8d1bb831d",
       "title": "Předadventní vyrábění",
       "town": "Beroun",
@@ -777,6 +833,36 @@
         "precision": "town",
         "label": "Zbiroh — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438901"
+      }
+    },
+    {
+      "id": "e-019e6d0f7645868ddc68",
+      "title": "Vánoční výstava zahrádkářů",
+      "town": "Město Albrechtice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-23",
+      "endDate": "2026-11-25",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "venue": "Klubovna ZŠ Město Albrechtice",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční výstava zahrádkářů. Klubovna ZŠ Město Albrechtice",
+      "notes": [
+        "Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:55+00:00",
+      "sourceUrl": "https://www.mesto-albrechtice.cz/volny-cas/kalendar-akci/vanocni-vystava-zahradkaru-4507_543cs.html",
+      "location": {
+        "lat": 50.1631183,
+        "lon": 17.5750385,
+        "precision": "town",
+        "label": "Město Albrechtice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437758"
       }
     },
     {
@@ -1032,6 +1118,34 @@
         "precision": "town",
         "label": "Bor — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438869"
+      }
+    },
+    {
+      "id": "e-d46e471c22d39d8c3c7b",
+      "title": "Workshop: Adventní věnce s Hankou Skřivánkovou",
+      "town": "Brušperk",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-24",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Národní dům Brušperk",
+      "category": "setkani",
+      "price": "100 Kč",
+      "registration": "Pořadatel uvádí rezervace / přihlášení; podmínky ověřte přímo u něj.",
+      "registrationUrl": null,
+      "description": "Workshop: Adventní věnce s Hankou Skřivánkovou. Národní dům Brušperk",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:54+00:00",
+      "sourceUrl": "https://www.brusperk-mesto.cz/aktualne/kalendar-akci/workshop-adventni-vence-s-hankou-skrivankovou-2239_981cs.html",
+      "location": {
+        "lat": 49.7003751,
+        "lon": 18.2216061,
+        "precision": "town",
+        "label": "Brušperk — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437869"
       }
     },
     {
@@ -1614,6 +1728,34 @@
       }
     },
     {
+      "id": "e-44041e4b89debee4e1bc",
+      "title": "Vánoční koledování s jarmarkem",
+      "town": "Velká Bystřice",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-26",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "18:00",
+      "venue": "škola - budova 1. stupně",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koledování s jarmarkem. škola - budova 1. stupně",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:54+00:00",
+      "sourceUrl": "https://www.velkabystrice.cz/volny-cas/kalendar-akci/vanocni-koledovani-s-jarmarkem-73_51cs.html",
+      "location": {
+        "lat": 49.5947568,
+        "lon": 17.3654414,
+        "precision": "town",
+        "label": "Velká Bystřice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438434"
+      }
+    },
+    {
       "id": "e-dbaf5cac6d159109880e",
       "title": "Rozsvícení vánočního stromečku",
       "town": "Zlín",
@@ -2044,6 +2186,34 @@
       }
     },
     {
+      "id": "e-10dab3796103f6d0f2df",
+      "title": "Vánoční jarmark",
+      "town": "Město Albrechtice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "náměstí ČSA",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční jarmark. náměstí ČSA",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:55+00:00",
+      "sourceUrl": "https://www.mesto-albrechtice.cz/volny-cas/kalendar-akci/vanocni-jarmark-4475_535cs.html",
+      "location": {
+        "lat": 50.1631183,
+        "lon": 17.5750385,
+        "precision": "town",
+        "label": "Město Albrechtice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437758"
+      }
+    },
+    {
       "id": "e-4b88a026df4d658f3495",
       "title": "VÁNOČNÍ JARMARK ZŠ RAJHRAD * 27.11.2026",
       "town": "Rajhrad",
@@ -2129,6 +2299,34 @@
         "precision": "town",
         "label": "Třeboň — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437495"
+      }
+    },
+    {
+      "id": "e-2a55fd67a728a46da286",
+      "title": "Vánoční jarmark",
+      "town": "Velká Bystřice",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "15:30",
+      "endTime": "18:00",
+      "venue": "Zámecká MŠ",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční jarmark. Zámecká MŠ",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:54+00:00",
+      "sourceUrl": "https://www.velkabystrice.cz/volny-cas/kalendar-akci/vanocni-jarmark-75_53cs.html",
+      "location": {
+        "lat": 49.5947568,
+        "lon": 17.3654414,
+        "precision": "town",
+        "label": "Velká Bystřice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438434"
       }
     },
     {
@@ -2299,6 +2497,34 @@
       }
     },
     {
+      "id": "e-f8720aae8962a84414f5",
+      "title": "Vánoční tvoření věnců",
+      "town": "Javorník",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "venue": "Nový sál - Kulturní dům",
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční tvoření věnců. Nový sál - Kulturní dům",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:56+00:00",
+      "sourceUrl": "https://www.mestojavornik.cz/zivot-ve-meste/kalendar-akci/vanocni-tvoreni-vencu-3677_1512cs.html",
+      "location": {
+        "lat": 50.3923374,
+        "lon": 17.0052268,
+        "precision": "town",
+        "label": "Javorník — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437059"
+      }
+    },
+    {
       "id": "e-36868d1f44596624fa75",
       "title": "Rozsvícení vánočního stromku v Babiné",
       "town": "Babina",
@@ -2440,6 +2666,34 @@
         "precision": "town",
         "label": "Hranice, okres Přerov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438577"
+      }
+    },
+    {
+      "id": "e-d003942145e6a5f8833f",
+      "title": "Rozsvícení vánočního stromu a Mikulášská nadílka",
+      "town": "Paskov",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Náměstí",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu a Mikulášská nadílka. Náměstí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:54+00:00",
+      "sourceUrl": "https://www.mesto-paskov.cz/mesto/kultura-a-sport/kalendar-akci/rozsviceni-vanocniho-stromu-a-mikulasska-nadilka-3281_1116cs.html",
+      "location": {
+        "lat": 49.7317867,
+        "lon": 18.2903689,
+        "precision": "town",
+        "label": "Paskov — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437903"
       }
     },
     {
@@ -2609,6 +2863,34 @@
         "precision": "town",
         "label": "Horní Slavkov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439502"
+      }
+    },
+    {
+      "id": "e-90040620e646fe757c74",
+      "title": "Předvánoční posezení u cimbálu 27.listopadu od 19:00 hodin",
+      "town": "Brušperk",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Národní dům Brušperk",
+      "category": "setkani",
+      "price": "dobrovolné",
+      "registration": "Pořadatel uvádí rezervace / přihlášení; podmínky ověřte přímo u něj.",
+      "registrationUrl": null,
+      "description": "Předvánoční posezení u cimbálu 27.listopadu od 19:00 hodin. Národní dům Brušperk",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:54+00:00",
+      "sourceUrl": "https://www.brusperk-mesto.cz/aktualne/kalendar-akci/predvanocni-posezeni-u-cimbalu-27listopadu-od-1900-hodin-2227_972cs.html",
+      "location": {
+        "lat": 49.7003751,
+        "lon": 18.2216061,
+        "precision": "town",
+        "label": "Brušperk — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437869"
       }
     },
     {
@@ -3600,6 +3882,34 @@
       }
     },
     {
+      "id": "e-b692feb94713e1334b8a",
+      "title": "Vánoční trhy",
+      "town": "Třemošnice",
+      "region": "Pardubický kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "venue": "Náměstí",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční trhy. Náměstí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:55+00:00",
+      "sourceUrl": "https://www.tremosnice.cz/zivot-ve-meste/kalendar-akci/vanocni-trhy-4328_2953cs.html",
+      "location": {
+        "lat": 49.8693093,
+        "lon": 15.5803962,
+        "precision": "town",
+        "label": "Třemošnice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440126"
+      }
+    },
+    {
       "id": "e-4f7dffdfd352f683068f",
       "title": "Adventní setkání - sobota 28. listopadu",
       "town": "Sedlice",
@@ -3992,6 +4302,34 @@
         "precision": "town",
         "label": "Starý Plzenec — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438336"
+      }
+    },
+    {
+      "id": "e-17f8303decee2cd6486f",
+      "title": "Rozsvícení vánočního stromu 28.listopadu",
+      "town": "Brušperk",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "16:02",
+      "endTime": null,
+      "venue": "Náměstí J. Á. Komenského",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu 28.listopadu. Náměstí J. Á. Komenského",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:54+00:00",
+      "sourceUrl": "https://www.brusperk-mesto.cz/aktualne/kalendar-akci/rozsviceni-vanocniho-stromu-28listopadu-2216_966cs.html",
+      "location": {
+        "lat": 49.7003751,
+        "lon": 18.2216061,
+        "precision": "town",
+        "label": "Brušperk — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437869"
       }
     },
     {
@@ -5281,6 +5619,34 @@
       }
     },
     {
+      "id": "e-5464540dc2225f7a4f94",
+      "title": "Adventní neděle",
+      "town": "Třemošnice",
+      "region": "Pardubický kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "14:50",
+      "endTime": null,
+      "venue": "Náměstí v Třemošnici",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní neděle. Náměstí v Třemošnici",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:55+00:00",
+      "sourceUrl": "https://www.tremosnice.cz/zivot-ve-meste/kalendar-akci/adventni-nedele-4346_2967cs.html",
+      "location": {
+        "lat": 49.8693093,
+        "lon": 15.5803962,
+        "precision": "town",
+        "label": "Třemošnice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440126"
+      }
+    },
+    {
       "id": "e-7a457e2196678898705e",
       "title": "Santova kouzelná dílna",
       "town": "Beroun",
@@ -5392,6 +5758,34 @@
         "precision": "town",
         "label": "Kralovice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439733"
+      }
+    },
+    {
+      "id": "e-a18ad4e36d57d557796d",
+      "title": "Vánoční jarmark náměstí Luže",
+      "town": "Luže",
+      "region": "Pardubický kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "Náměstí Plk. Josefa Koukala",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční jarmark náměstí Luže. Náměstí Plk. Josefa Koukala",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:56+00:00",
+      "sourceUrl": "https://www.luze.cz/sluzby/zivot-ve-meste/kalendar-akci/vanocni-jarmark-namesti-luze-2332_1359cs.html",
+      "location": {
+        "lat": 49.8934114,
+        "lon": 16.0284252,
+        "precision": "town",
+        "label": "Luže — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440033"
       }
     },
     {
@@ -5964,6 +6358,34 @@
       }
     },
     {
+      "id": "e-94e666e61555d435be50",
+      "title": "UŽ SVÍTÍ!",
+      "town": "Studénka",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "nám. Republiky",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "UŽ SVÍTÍ!. nám. Republiky",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.mesto-studenka.cz/aktualne/kalendar-akci/uz-sviti-7703_3635cs.html",
+      "location": {
+        "lat": 49.7137494,
+        "lon": 18.0610845,
+        "precision": "town",
+        "label": "Studénka — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437003"
+      }
+    },
+    {
       "title": "Zahájení adventní doby s rozsvícením vánočního stromu",
       "town": "Zlín",
       "venue": "kostel Panny Marie Pomocnice křesťanů, Zlín-Jižní Svahy; dopoledne sál B, odpoledne před kostelem",
@@ -6472,6 +6894,34 @@
       }
     },
     {
+      "id": "e-37e30eb4b7c21e6a249b",
+      "title": "Adventní koncert",
+      "town": "Příbor",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "kostel sv. Valentina",
+      "category": "setkani",
+      "price": "100 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert. kostel sv. Valentina",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.pribor.eu/volny-cas-a-sport/kalendar-akci-pribor/adventni-koncert-6821_2619cs.html",
+      "location": {
+        "lat": 49.6401091,
+        "lon": 18.1438062,
+        "precision": "town",
+        "label": "Příbor — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437566"
+      }
+    },
+    {
       "id": "e-7b6ccbe1e85fe9788124",
       "title": "Rozsvícení vánočního stromu",
       "town": "Stříbro",
@@ -6703,6 +7153,34 @@
         "precision": "town",
         "label": "Mirošov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439807"
+      }
+    },
+    {
+      "id": "e-1fa0caea9da5371457c8",
+      "title": "TRADIČNÍ ROZSVÍCENÍ VÁNOČNÍHO STROMU",
+      "town": "Přelouč",
+      "region": "Pardubický kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": "19:00",
+      "venue": "Masarykovo náměstí - Přelouč",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "TRADIČNÍ ROZSVÍCENÍ VÁNOČNÍHO STROMU. Masarykovo náměstí - Přelouč",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.mestoprelouc.cz/zivot-ve-meste/kalendar-kulturnich-a-sportovnich-akci-ve-meste-a-blizkem-okoli/tradicni-rozsviceni-vanocniho-stromu-4724_740cs.html",
+      "location": {
+        "lat": 50.039436,
+        "lon": 15.5606989,
+        "precision": "town",
+        "label": "Přelouč — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440298"
       }
     },
     {
@@ -7263,6 +7741,34 @@
       }
     },
     {
+      "id": "e-1f01112d83655bf3e37c",
+      "title": "Vánoční koncert v kostele sv. Kříže",
+      "town": "Javorník",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-01",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "kostel sv. Kříže v Javorníku",
+      "category": "setkani",
+      "price": "dobrovolné",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert v kostele sv. Kříže. kostel sv. Kříže v Javorníku",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:56+00:00",
+      "sourceUrl": "https://www.mestojavornik.cz/zivot-ve-meste/kalendar-akci/vanocni-koncert-v-kostele-sv-krize-3655_1501cs.html",
+      "location": {
+        "lat": 50.3923374,
+        "lon": 17.0052268,
+        "precision": "town",
+        "label": "Javorník — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437059"
+      }
+    },
+    {
       "id": "e-dff89cad09895d065a51",
       "title": "Vánoční koncert ZUŠ Černovice",
       "town": "Černovice",
@@ -7545,6 +8051,34 @@
         "precision": "town",
         "label": "Větřní — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438467"
+      }
+    },
+    {
+      "id": "e-9a4c55725a9f34201cf6",
+      "title": "VÁNOČNÍ KONCERT JOSEF VÁGNER S ŽIVOU KAPELOU",
+      "town": "Přelouč",
+      "region": "Pardubický kraj",
+      "date": "2026-12-02",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "21:00",
+      "venue": "KINO - Přelouč",
+      "category": "setkani",
+      "price": "480 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "VÁNOČNÍ KONCERT JOSEF VÁGNER S ŽIVOU KAPELOU. KINO - Přelouč",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.mestoprelouc.cz/zivot-ve-meste/kalendar-kulturnich-a-sportovnich-akci-ve-meste-a-blizkem-okoli/vanocni-koncert-josef-vagner-s-zivou-kapelou-4695_732cs.html",
+      "location": {
+        "lat": 50.039436,
+        "lon": 15.5606989,
+        "precision": "town",
+        "label": "Přelouč — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440298"
       }
     },
     {
@@ -7861,6 +8395,62 @@
       }
     },
     {
+      "id": "e-d1c22fc0b589d5ebe4bf",
+      "title": "Mikulášská nadílka s ohnivou show",
+      "town": "Kostelec na Hané",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "15:30",
+      "endTime": null,
+      "venue": "Prostranství před městkým úřadem",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášská nadílka s ohnivou show. Prostranství před městkým úřadem",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:56+00:00",
+      "sourceUrl": "https://www.kostelecnh.cz/zivot-ve-meste/kalendar-akci/mikulasska-nadilka-s-ohnivou-show-1923_237cs.html",
+      "location": {
+        "lat": 49.5139792,
+        "lon": 17.0582398,
+        "precision": "town",
+        "label": "Kostelec na Hané — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438449"
+      }
+    },
+    {
+      "id": "e-435fa8e50debb8a5cef3",
+      "title": "Mikuláš v aquaparku",
+      "town": "Kravaře",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "19:00",
+      "venue": "Aquapark",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikuláš v aquaparku. Aquapark",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:52+00:00",
+      "sourceUrl": "https://www.kravare.cz/aktualne/kalendar-kravarskych-akci/mikulas-v-aquaparku-9043_6876cs.html",
+      "location": {
+        "lat": 49.9321321,
+        "lon": 18.0044266,
+        "precision": "town",
+        "label": "Kravaře — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437005"
+      }
+    },
+    {
       "title": "Mikulášská nadílka ve Lhotě",
       "town": "Lhota za Červeným Kostelcem",
       "date": "2026-12-04",
@@ -7951,6 +8541,34 @@
       }
     },
     {
+      "id": "e-bbb9b65a86110af41d8f",
+      "title": "MIKULÁŠOVÁNÍ",
+      "town": "Studénka",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "venue": "Dělnický dům",
+      "category": "mikulas",
+      "price": "100 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "MIKULÁŠOVÁNÍ. Dělnický dům",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.mesto-studenka.cz/aktualne/kalendar-akci/mikulasovani-7730_3649cs.html",
+      "location": {
+        "lat": 49.7137494,
+        "lon": 18.0610845,
+        "precision": "town",
+        "label": "Studénka — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437003"
+      }
+    },
+    {
       "id": "e-7360ebb4c5b24857e2c9",
       "title": "Adventní folk & rock",
       "town": "Hranice",
@@ -8032,6 +8650,34 @@
         "precision": "town",
         "label": "Jesenice (okres Rakovník) — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/436644"
+      }
+    },
+    {
+      "id": "e-ee725b71a971874cf56a",
+      "title": "Mozaikové mikulášské smutnění",
+      "town": "Klimkovice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Kino Panorama Klimkovice",
+      "category": "mikulas",
+      "price": "130 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mozaikové mikulášské smutnění. Kino Panorama Klimkovice",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:54+00:00",
+      "sourceUrl": "https://www.mesto-klimkovice.cz/akce-ve-meste/mozaikove-mikulasske-smutneni-2851_608cs.html",
+      "location": {
+        "lat": 49.7884424,
+        "lon": 18.1254099,
+        "precision": "town",
+        "label": "Klimkovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437339"
       }
     },
     {
@@ -9074,6 +9720,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-6eacde91faacfc58a686",
+      "title": "Mikulášská pouť",
+      "town": "Město Albrechtice",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Kostel sv. Mikuláše",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášská pouť. Kostel sv. Mikuláše",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:55+00:00",
+      "sourceUrl": "https://www.mesto-albrechtice.cz/volny-cas/kalendar-akci/mikulasska-pout-4518_547cs.html",
+      "location": {
+        "lat": 50.1631183,
+        "lon": 17.5750385,
+        "precision": "town",
+        "label": "Město Albrechtice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437758"
+      }
+    },
+    {
       "id": "e-0039969db1b333bb4913",
       "title": "Mikulášská besídka pro děti.",
       "town": "Nebřeziny",
@@ -9218,6 +9892,34 @@
         "precision": "town",
         "label": "Rožmitál pod Třemšínem — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441355"
+      }
+    },
+    {
+      "id": "e-af25ecec089ed0791d9d",
+      "title": "Sv. Mikuláš a rozsvícení vánočního stromu",
+      "town": "Velká Bystřice",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "19:00",
+      "venue": "Zámecké náměstí",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Sv. Mikuláš a rozsvícení vánočního stromu. Zámecké náměstí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:54+00:00",
+      "sourceUrl": "https://www.velkabystrice.cz/volny-cas/kalendar-akci/sv-mikulas-a-rozsviceni-vanocniho-stromu-76_54cs.html",
+      "location": {
+        "lat": 49.5947568,
+        "lon": 17.3654414,
+        "precision": "town",
+        "label": "Velká Bystřice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438434"
       }
     },
     {
@@ -9424,6 +10126,34 @@
         "precision": "town",
         "label": "Dačice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437440"
+      }
+    },
+    {
+      "id": "e-206b6fc4f9c05f81ad50",
+      "title": "Vánoční jarmark a Mikulášská jízda",
+      "town": "Příbor",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "venue": "Náměstí S. Freuda",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční jarmark a Mikulášská jízda. Náměstí S. Freuda",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.pribor.eu/volny-cas-a-sport/kalendar-akci-pribor/vanocni-jarmark-a-mikulasska-jizda-6871_2644cs.html",
+      "location": {
+        "lat": 49.6401091,
+        "lon": 18.1438062,
+        "precision": "town",
+        "label": "Příbor — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437566"
       }
     },
     {
@@ -9767,6 +10497,34 @@
       }
     },
     {
+      "id": "e-72c295b071f1f7b3ea63",
+      "title": "Adventní koncert Jakub Jalůvka s harfou",
+      "town": "Příbor",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "Piaristický klášter Příbor",
+      "category": "setkani",
+      "price": "100 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert Jakub Jalůvka s harfou. Piaristický klášter Příbor",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.pribor.eu/volny-cas-a-sport/kalendar-akci-pribor/adventni-koncert-jakub-jaluvka-s-harfou-6830_2626cs.html",
+      "location": {
+        "lat": 49.6401091,
+        "lon": 18.1438062,
+        "precision": "town",
+        "label": "Příbor — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437566"
+      }
+    },
+    {
       "id": "e-6479bee7423ac68cd73f",
       "title": "Mikulášský karneval",
       "town": "Roztoky",
@@ -9943,6 +10701,34 @@
       }
     },
     {
+      "id": "e-40f1222de04f836347fa",
+      "title": "CESTA DO BETLÉMA - DIVADÉLKO KŮZLE",
+      "town": "Přelouč",
+      "region": "Pardubický kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "venue": "KINO - Přelouč",
+      "category": "betlem",
+      "price": "150 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "CESTA DO BETLÉMA - DIVADÉLKO KŮZLE. KINO - Přelouč",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.mestoprelouc.cz/zivot-ve-meste/kalendar-kulturnich-a-sportovnich-akci-ve-meste-a-blizkem-okoli/cesta-do-betlema-divadelko-kuzle-4743_746cs.html",
+      "location": {
+        "lat": 50.039436,
+        "lon": 15.5606989,
+        "precision": "town",
+        "label": "Přelouč — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440298"
+      }
+    },
+    {
       "id": "e-f90caf3f3f986eb3236b",
       "title": "Adventní koncert ZUŠ Přeštice",
       "town": "Přeštice",
@@ -9968,6 +10754,34 @@
         "precision": "town",
         "label": "Přeštice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439654"
+      }
+    },
+    {
+      "id": "e-949f251d84939b42e9f6",
+      "title": "Mikulášská jízda",
+      "town": "Příbor",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Náměstí S. Freuda",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášská jízda. Náměstí S. Freuda",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.pribor.eu/volny-cas-a-sport/kalendar-akci-pribor/mikulasska-jizda-6829_2625cs.html",
+      "location": {
+        "lat": 49.6401091,
+        "lon": 18.1438062,
+        "precision": "town",
+        "label": "Příbor — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437566"
       }
     },
     {
@@ -10227,6 +11041,34 @@
       }
     },
     {
+      "id": "e-200d27c8a39812a0441d",
+      "title": "Adventní koncert",
+      "town": "Třemošnice",
+      "region": "Pardubický kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "17:30",
+      "endTime": null,
+      "venue": "Kulturní dům",
+      "category": "setkani",
+      "price": "50 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert. Kulturní dům",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:55+00:00",
+      "sourceUrl": "https://www.tremosnice.cz/zivot-ve-meste/kalendar-akci/adventni-koncert-4349_2969cs.html",
+      "location": {
+        "lat": 49.8693093,
+        "lon": 15.5803962,
+        "precision": "town",
+        "label": "Třemošnice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440126"
+      }
+    },
+    {
       "id": "e-c61049dd2f3ca5f5a8b8",
       "title": "VÁNOČNÍ KONCERT UČITELŮ ZUŠ JINDŘICHA JINDŘICHA DOMAŽLICE",
       "town": "Domažlice",
@@ -10252,6 +11094,34 @@
         "precision": "town",
         "label": "Domažlice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438629"
+      }
+    },
+    {
+      "id": "e-5689f09266bde0c2e0fc",
+      "title": "VÁNOČNÍ KONCERT BÁRY BASIKOVÉ",
+      "town": "Studénka",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Dělnický dům",
+      "category": "setkani",
+      "price": "490 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "VÁNOČNÍ KONCERT BÁRY BASIKOVÉ. Dělnický dům",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.mesto-studenka.cz/aktualne/kalendar-akci/vanocni-koncert-bary-basikove-7616_3587cs.html",
+      "location": {
+        "lat": 49.7137494,
+        "lon": 18.0610845,
+        "precision": "town",
+        "label": "Studénka — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437003"
       }
     },
     {
@@ -10663,6 +11533,34 @@
       }
     },
     {
+      "id": "e-82bbdf02b7c3132a8841",
+      "title": "Vánoční kavárnička pro seniory s tvořením",
+      "town": "Kostelec na Hané",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-08",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "V knihovně",
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční kavárnička pro seniory s tvořením. V knihovně",
+      "notes": [],
+      "audience": "senioři / omezené zaměření",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:56+00:00",
+      "sourceUrl": "https://www.kostelecnh.cz/zivot-ve-meste/kalendar-akci/vanocni-kavarnicka-pro-seniory-s-tvorenim-1932_238cs.html",
+      "location": {
+        "lat": 49.5139792,
+        "lon": 17.0582398,
+        "precision": "town",
+        "label": "Kostelec na Hané — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438449"
+      }
+    },
+    {
       "id": "e-c102ddd7d36b8441939b",
       "title": "Adventní koncert",
       "town": "Plasy",
@@ -10973,6 +11871,34 @@
       }
     },
     {
+      "id": "e-20fde8d22e2dea1e6389",
+      "title": "Česko zpívá koledy",
+      "town": "Příbor",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "17:30",
+      "endTime": null,
+      "venue": "Náměstí S. Freuda",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Česko zpívá koledy. Náměstí S. Freuda",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.pribor.eu/volny-cas-a-sport/kalendar-akci-pribor/cesko-zpiva-koledy-6831_2627cs.html",
+      "location": {
+        "lat": 49.6401091,
+        "lon": 18.1438062,
+        "precision": "town",
+        "label": "Příbor — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437566"
+      }
+    },
+    {
       "id": "e-c58b2a50ad7e073bd4d1",
       "title": "Vánoce v Hranicích: Česko zpívá koledy",
       "town": "Hranice",
@@ -11222,6 +12148,34 @@
         "precision": "town",
         "label": "Sedlice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/436485"
+      }
+    },
+    {
+      "id": "e-b430fd057cc1e29678fc",
+      "title": "ČESKO ZPÍVÁ KOLEDY",
+      "town": "Studénka",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Sportovní centrum - hřiště",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "ČESKO ZPÍVÁ KOLEDY. Sportovní centrum - hřiště",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.mesto-studenka.cz/aktualne/kalendar-akci/cesko-zpiva-koledy-7747_3659cs.html",
+      "location": {
+        "lat": 49.7137494,
+        "lon": 18.0610845,
+        "precision": "town",
+        "label": "Studénka — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437003"
       }
     },
     {
@@ -11482,6 +12436,34 @@
       }
     },
     {
+      "id": "e-a1153bdfbc8c728a054d",
+      "title": "VÁNOČNÍ KONCERT TAMBURAŠSKÉHO SOUBORU BRAČ",
+      "town": "Studénka",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-11",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Dělnický dům",
+      "category": "setkani",
+      "price": "120 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "VÁNOČNÍ KONCERT TAMBURAŠSKÉHO SOUBORU BRAČ. Dělnický dům",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.mesto-studenka.cz/aktualne/kalendar-akci/vanocni-koncert-tamburasskeho-souboru-brac-7695_3629cs.html",
+      "location": {
+        "lat": 49.7137494,
+        "lon": 18.0610845,
+        "precision": "town",
+        "label": "Studénka — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437003"
+      }
+    },
+    {
       "id": "e-f28cdfdc2d789791302d",
       "title": "Adventní sborový koncert",
       "town": "Žatec",
@@ -11507,6 +12489,34 @@
         "precision": "town",
         "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
+    },
+    {
+      "id": "e-61743e23d0b3cec8434a",
+      "title": "Vánoční ČECHOMOR v Javorníku 11. prosince 2026",
+      "town": "Javorník",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-11",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Kino Olympia - velký sál",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční ČECHOMOR v Javorníku 11. prosince 2026. Kino Olympia - velký sál",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:56+00:00",
+      "sourceUrl": "https://www.mestojavornik.cz/zivot-ve-meste/kalendar-akci/vanocni-cechomor-v-javorniku-11-prosince-2026-3593_1468cs.html",
+      "location": {
+        "lat": 50.3923374,
+        "lon": 17.0052268,
+        "precision": "town",
+        "label": "Javorník — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437059"
       }
     },
     {
@@ -12619,6 +13629,34 @@
       }
     },
     {
+      "id": "e-d3f0019bf2cfceabf337",
+      "title": "HASIČSKÉ VÁNOČNÍ TRHY",
+      "town": "Studénka",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "08:00",
+      "endTime": null,
+      "venue": "hasičská zbrojnice ul. Družstevní",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "HASIČSKÉ VÁNOČNÍ TRHY. hasičská zbrojnice ul. Družstevní",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.mesto-studenka.cz/aktualne/kalendar-akci/hasicske-vanocni-trhy-7724_3646cs.html",
+      "location": {
+        "lat": 49.7137494,
+        "lon": 18.0610845,
+        "precision": "town",
+        "label": "Studénka — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437003"
+      }
+    },
+    {
       "id": "e-b32a7cb8d208ee8f814e",
       "title": "TUTEN TRH",
       "town": "Kralovice",
@@ -12786,6 +13824,34 @@
         "precision": "town",
         "label": "Telč — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441173"
+      }
+    },
+    {
+      "id": "e-440d47541709d7f666b8",
+      "title": "Adventní koncert v kostele na Chlumku",
+      "town": "Luže",
+      "region": "Pardubický kraj",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "Chrám Panny Marie Pomocné na Chlumku",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert v kostele na Chlumku. Chrám Panny Marie Pomocné na Chlumku",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:56+00:00",
+      "sourceUrl": "https://www.luze.cz/sluzby/zivot-ve-meste/kalendar-akci/adventni-koncert-v-kostele-na-chlumku-2363_1369cs.html",
+      "location": {
+        "lat": 49.8934114,
+        "lon": 16.0284252,
+        "precision": "town",
+        "label": "Luže — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440033"
       }
     },
     {
@@ -13099,6 +14165,34 @@
       }
     },
     {
+      "id": "e-c50c5dc9317b6df90e15",
+      "title": "Adventní koncert All Brass band",
+      "town": "Příbor",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "kostel sv. Valentina",
+      "category": "setkani",
+      "price": "100 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert All Brass band. kostel sv. Valentina",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.pribor.eu/volny-cas-a-sport/kalendar-akci-pribor/adventni-koncert-all-brass-band-6832_2628cs.html",
+      "location": {
+        "lat": 49.6401091,
+        "lon": 18.1438062,
+        "precision": "town",
+        "label": "Příbor — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437566"
+      }
+    },
+    {
       "id": "e-338f48e1a6330e1f9c3b",
       "title": "3. adventní koncert - PS Smetana",
       "town": "Telč",
@@ -13124,6 +14218,34 @@
         "precision": "town",
         "label": "Telč — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441173"
+      }
+    },
+    {
+      "id": "e-6ec480f7abb211dbcb40",
+      "title": "Adventní koncert - Andělský akordeon",
+      "town": "Třemošnice",
+      "region": "Pardubický kraj",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Obřadní síň",
+      "category": "setkani",
+      "price": "50 Kč",
+      "registration": "Pořadatel uvádí rezervace / přihlášení; podmínky ověřte přímo u něj.",
+      "registrationUrl": null,
+      "description": "Adventní koncert - Andělský akordeon. Obřadní síň",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:55+00:00",
+      "sourceUrl": "https://www.tremosnice.cz/zivot-ve-meste/kalendar-akci/adventni-koncert-andelsky-akordeon-4351_2970cs.html",
+      "location": {
+        "lat": 49.8693093,
+        "lon": 15.5803962,
+        "precision": "town",
+        "label": "Třemošnice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440126"
       }
     },
     {
@@ -14158,6 +15280,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-d62662e3e3f9f3e70ca4",
+      "title": "Předvánoční plavání při svíčkách",
+      "town": "Kravaře",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-18",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": "20:30",
+      "venue": "Aquapark",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Předvánoční plavání při svíčkách. Aquapark",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:52+00:00",
+      "sourceUrl": "https://www.kravare.cz/aktualne/kalendar-kravarskych-akci/predvanocni-plavani-pri-svickach-9044_6877cs.html",
+      "location": {
+        "lat": 49.9321321,
+        "lon": 18.0044266,
+        "precision": "town",
+        "label": "Kravaře — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437005"
+      }
+    },
+    {
       "id": "e-0d134d50eec951606a61",
       "title": "Vánoční recitál Jitky Čvančarové & kapely Blue Cimbal",
       "town": "Humpolec",
@@ -14389,6 +15539,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-da5be27c2e1e51a72814",
+      "title": "VÁNOČNÍ TRHY",
+      "town": "Studénka",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-19",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": null,
+      "venue": "nám. Republiky",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "VÁNOČNÍ TRHY. nám. Republiky",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.mesto-studenka.cz/aktualne/kalendar-akci/vanocni-trhy-7700_3631cs.html",
+      "location": {
+        "lat": 49.7137494,
+        "lon": 18.0610845,
+        "precision": "town",
+        "label": "Studénka — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437003"
+      }
+    },
+    {
       "id": "e-a5a91735532a6c61f332",
       "title": "Vánoční setkání",
       "town": "Luby",
@@ -14443,6 +15621,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/437902"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-4dacb1975811e903a8e4",
+      "title": "Česká mše vánoční Jana Jakuba Ryby",
+      "town": "Paskov",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-19",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "venue": "Kostel sv. Vavřince",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Česká mše vánoční Jana Jakuba Ryby. Kostel sv. Vavřince",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:54+00:00",
+      "sourceUrl": "https://www.mesto-paskov.cz/mesto/kultura-a-sport/kalendar-akci/ceska-mse-vanocni-jana-jakuba-ryby-3316_1120cs.html",
+      "location": {
+        "lat": 49.7317867,
+        "lon": 18.2903689,
+        "precision": "town",
+        "label": "Paskov — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437903"
+      }
     },
     {
       "id": "e-aebdf37fedce7f6e96f9",
@@ -14645,6 +15851,34 @@
       "sourceUrl": "https://www.telc.eu/kalendar/3842",
       "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
       "status": "confirmed"
+    },
+    {
+      "id": "e-a9e6033a688c2051cdc0",
+      "title": "Elvis opět v Příboře",
+      "town": "Příbor",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-19",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Kulturní dům Příbor",
+      "category": "setkani",
+      "price": "300 Kč",
+      "registration": "Pořadatel uvádí rezervace / přihlášení; podmínky ověřte přímo u něj.",
+      "registrationUrl": null,
+      "description": "Elvis opět v Příboře. Kulturní dům Příbor",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.pribor.eu/volny-cas-a-sport/kalendar-akci-pribor/elvis-opet-v-pribore-6817_2616cs.html",
+      "location": {
+        "lat": 49.6401091,
+        "lon": 18.1438062,
+        "precision": "town",
+        "label": "Příbor — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437566"
+      }
     },
     {
       "id": "e-227c4d83ce5745ed",
@@ -14937,6 +16171,34 @@
       }
     },
     {
+      "id": "e-8c4d3bae95d947f400ae",
+      "title": "Zpívání u vánočního stromu",
+      "town": "Velká Bystřice",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-20",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "venue": "Zámecké náměstí",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Zpívání u vánočního stromu. Zámecké náměstí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:54+00:00",
+      "sourceUrl": "https://www.velkabystrice.cz/volny-cas/kalendar-akci/zpivani-u-vanocniho-stromu-77_55cs.html",
+      "location": {
+        "lat": 49.5947568,
+        "lon": 17.3654414,
+        "precision": "town",
+        "label": "Velká Bystřice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438434"
+      }
+    },
+    {
       "id": "e-9058e280764c398c75a6",
       "title": "Koledy v podloubí",
       "town": "Žatec",
@@ -15022,6 +16284,34 @@
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/zivy-betlem-s-rozdavanim-betlemskeho-svetla-7530_3588cs.html",
       "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
       "status": "confirmed"
+    },
+    {
+      "id": "e-af644246512e405cc094",
+      "title": "Adventní koncert",
+      "town": "Příbor",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-20",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Kostel Narození Panny Marie",
+      "category": "setkani",
+      "price": "100 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert. Kostel Narození Panny Marie",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T20:54:51+00:00",
+      "sourceUrl": "https://www.pribor.eu/volny-cas-a-sport/kalendar-akci-pribor/adventni-koncert-6833_2629cs.html",
+      "location": {
+        "lat": 49.6401091,
+        "lon": 18.1438062,
+        "precision": "town",
+        "label": "Příbor — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437566"
+      }
     },
     {
       "id": "e-658c5a3d34475947ee85",
