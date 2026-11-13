@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T22:50:31+00:00",
+  "generatedAt": "2026-11-13T08:25:01+00:00",
   "season": 2026,
   "region": "Česko – sezonní výběr",
   "events": [
@@ -22,7 +22,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:54:29+00:00",
+      "verifiedAt": "2026-11-13T08:29:25+00:00",
       "sourceUrl": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/kreativ-vanoce-a-zima-sobeslav-2026-5452_1535cs.html",
       "location": {
         "lat": 49.259407,
@@ -52,7 +52,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:50:42+00:00",
+      "verifiedAt": "2026-11-13T08:25:13+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-vystava-3894_1381cs.html",
       "location": {
         "lat": 49.9341107,
@@ -80,7 +80,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:50:45+00:00",
+      "verifiedAt": "2026-11-13T08:25:17+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-dilnicky-pro-deti-3897_1386cs.html",
       "location": {
         "lat": 49.9341107,
@@ -108,7 +108,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:28+00:00",
+      "verifiedAt": "2026-11-13T08:31:34+00:00",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/celodenni-vanocni-kurz-tiffany-vitraze-2410_1225cs.html",
       "location": {
         "lat": 50.3247878,
@@ -136,7 +136,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:54:32+00:00",
+      "verifiedAt": "2026-11-13T08:29:28+00:00",
       "sourceUrl": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/kreativ-vanoce-a-zima-sobeslav-2026-5452_1536cs.html",
       "location": {
         "lat": 49.259407,
@@ -164,7 +164,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:08+00:00",
+      "verifiedAt": "2026-11-13T08:30:04+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4232",
       "location": {
         "lat": 49.1847652,
@@ -224,7 +224,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:50:49+00:00",
+      "verifiedAt": "2026-11-13T08:25:20+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-dilnicky-3681_1320cs.html",
       "location": {
         "lat": 49.9205793,
@@ -252,7 +252,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:27+00:00",
+      "verifiedAt": "2026-11-13T08:28:20+00:00",
       "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/predadventni-vyrabeni-13097_7099cs.html",
       "location": {
         "lat": 49.9640292,
@@ -280,7 +280,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:58:09+00:00",
+      "verifiedAt": "2026-11-13T08:33:40+00:00",
       "sourceUrl": "https://visitzlin.eu/kalendar-akci/mezigeneracni-aktivita-vyroba-adventnich-vencu",
       "location": {
         "lat": 49.226766,
@@ -308,7 +308,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:31+00:00",
+      "verifiedAt": "2026-11-13T08:31:38+00:00",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/kurz-vazani-adventnich-vencu-2413_1228cs.html",
       "location": {
         "lat": 50.3247878,
@@ -420,7 +420,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:52:26+00:00",
+      "verifiedAt": "2026-11-13T08:27:16+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/vaclav-noid-barta-vanocni-koncert-3523_2442cs.html",
       "location": {
         "lat": 50.6091761,
@@ -448,7 +448,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:58:10+00:00",
+      "verifiedAt": "2026-11-13T08:33:41+00:00",
       "sourceUrl": "https://visitzlin.eu/kalendar-akci/rozsviceni-vanocniho-stromecku",
       "location": {
         "lat": 49.226766,
@@ -508,7 +508,7 @@
       ],
       "audience": "všichni",
       "status": "time-unconfirmed",
-      "verifiedAt": "2026-11-12T22:59:24+00:00",
+      "verifiedAt": "2026-11-13T08:35:01+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vazani-adventnich-vencu-7533_3591cs.html",
       "location": {
         "lat": 50.0378687,
@@ -536,7 +536,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:03+00:00",
+      "verifiedAt": "2026-11-13T08:27:55+00:00",
       "sourceUrl": "https://www.rajhrad.cz/2026/11/vanocni-jarmark-zs-rajhrad-27-11-2026/",
       "location": {
         "lat": 49.0890629,
@@ -566,7 +566,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:11+00:00",
+      "verifiedAt": "2026-11-13T08:30:08+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/3841",
       "location": {
         "lat": 49.1847652,
@@ -596,7 +596,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:54:56+00:00",
+      "verifiedAt": "2026-11-13T08:29:53+00:00",
       "sourceUrl": "https://www.itrebon.cz/kalendar/-advent-na-bejkarne_20916.html",
       "location": {
         "lat": 49.0040317,
@@ -626,7 +626,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:59:30+00:00",
+      "verifiedAt": "2026-11-13T08:35:08+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-akce-v-zs-jandusu-7538_3597cs.html",
       "location": {
         "lat": 50.0378687,
@@ -656,7 +656,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:50:55+00:00",
+      "verifiedAt": "2026-11-13T08:25:27+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-babine-3944_1398cs.html",
       "location": {
         "lat": 49.9362949,
@@ -686,7 +686,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:50:52+00:00",
+      "verifiedAt": "2026-11-13T08:25:23+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-hornim-hradisti-3901_1390cs.html",
       "location": {
         "lat": 49.9557458,
@@ -714,7 +714,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:33+00:00",
+      "verifiedAt": "2026-11-13T08:33:03+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-slavnostni-rozsviceni-stromu-2/",
       "location": {
         "lat": 49.5481764,
@@ -744,7 +744,7 @@
       ],
       "audience": "omezené zaměření",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:30+00:00",
+      "verifiedAt": "2026-11-13T08:28:23+00:00",
       "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/ebenezer-vanocni-koleda-13035_7026cs.html",
       "location": {
         "lat": 49.9640292,
@@ -775,7 +775,7 @@
       ],
       "audience": "všichni",
       "status": "time-unconfirmed",
-      "verifiedAt": "2026-11-12T22:58:12+00:00",
+      "verifiedAt": "2026-11-13T08:33:44+00:00",
       "sourceUrl": "https://visitzlin.eu/kalendar-akci/adventni-zlin-2026",
       "location": {
         "lat": 49.226766,
@@ -803,7 +803,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:33+00:00",
+      "verifiedAt": "2026-11-13T08:28:27+00:00",
       "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/adventni-jarmark-13109_7111cs.html",
       "location": {
         "lat": 49.9640292,
@@ -833,7 +833,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:37+00:00",
+      "verifiedAt": "2026-11-13T08:28:30+00:00",
       "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/adventni-vyslap-na-lisek-13020_6992cs.html",
       "location": {
         "lat": 49.9640292,
@@ -863,7 +863,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:59:34+00:00",
+      "verifiedAt": "2026-11-13T08:35:11+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-akce-v-zs-jandusu-7538_3598cs.html",
       "location": {
         "lat": 50.0378687,
@@ -891,7 +891,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:54:36+00:00",
+      "verifiedAt": "2026-11-13T08:29:32+00:00",
       "sourceUrl": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/adventni-vikend-s-ddm-vyroba-vencu-a-svicnu-5462_1540cs.html",
       "location": {
         "lat": 49.259407,
@@ -921,7 +921,7 @@
       ],
       "audience": "omezené zaměření",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:59:37+00:00",
+      "verifiedAt": "2026-11-13T08:35:15+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-workshop-pro-deti-7535_3592cs.html",
       "location": {
         "lat": 50.0378687,
@@ -979,7 +979,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:50:59+00:00",
+      "verifiedAt": "2026-11-13T08:25:30+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/vanocni-vystava-3894_1382cs.html",
       "location": {
         "lat": 49.9341107,
@@ -1009,7 +1009,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:04+00:00",
+      "verifiedAt": "2026-11-13T08:27:56+00:00",
       "sourceUrl": "https://www.rajhrad.cz/2026/10/mikulasska-nadilka/",
       "location": {
         "lat": 49.0890629,
@@ -1037,7 +1037,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:04+00:00",
+      "verifiedAt": "2026-11-13T08:30:00+00:00",
       "sourceUrl": "https://www.itrebon.cz/kalendar/-trebon-plna-andelu_20849.html",
       "location": {
         "lat": 49.0040317,
@@ -1065,7 +1065,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:54:58+00:00",
+      "verifiedAt": "2026-11-13T08:29:54+00:00",
       "sourceUrl": "https://www.itrebon.cz/kalendar/-vyroba-vanocni-hostiny-pro-ptacky-kreativni-dilny_20915.html",
       "location": {
         "lat": 49.0040317,
@@ -1095,7 +1095,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:58:06+00:00",
+      "verifiedAt": "2026-11-13T08:33:37+00:00",
       "sourceUrl": "https://www.muzeumusti.cz/kalendar-akci/advent-v-muzeu-6/",
       "location": {
         "lat": 50.6603327,
@@ -1181,7 +1181,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:58:59+00:00",
+      "verifiedAt": "2026-11-13T08:34:34+00:00",
       "sourceUrl": "https://www.stitina.cz/aktualne/kalendar-akci/vitame-advent-1636_167cs.html",
       "location": {
         "lat": 49.9148086,
@@ -1237,7 +1237,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:02+00:00",
+      "verifiedAt": "2026-11-13T08:25:34+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromecku-v-plasich-3900_1389cs.html",
       "location": {
         "lat": 49.9341107,
@@ -1265,7 +1265,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:34+00:00",
+      "verifiedAt": "2026-11-13T08:33:04+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-tango-julian-zahorovsky/",
       "location": {
         "lat": 49.5481764,
@@ -1321,7 +1321,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:38+00:00",
+      "verifiedAt": "2026-11-13T08:31:44+00:00",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/rozsviceni-vanocniho-stromu-v-nejdku-2406_1222cs.html",
       "location": {
         "lat": 50.3247878,
@@ -1408,7 +1408,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:54:16+00:00",
+      "verifiedAt": "2026-11-13T08:29:11+00:00",
       "sourceUrl": "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/zahajeni-adventu-3362_1907cs.html",
       "location": {
         "lat": 49.8363239,
@@ -1436,7 +1436,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:07+00:00",
+      "verifiedAt": "2026-11-13T08:32:37+00:00",
       "sourceUrl": "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/vanocni-jarmark-4200_2352cs.html",
       "location": {
         "lat": 50.2921062,
@@ -1464,7 +1464,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:40+00:00",
+      "verifiedAt": "2026-11-13T08:28:34+00:00",
       "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/adventni-koncert-13112_7114cs.html",
       "location": {
         "lat": 49.9640292,
@@ -1522,7 +1522,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:54:42+00:00",
+      "verifiedAt": "2026-11-13T08:29:38+00:00",
       "sourceUrl": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/adventni-vikend-s-ddm-vanocni-tvoreni-pro-deti-5463_1542cs.html",
       "location": {
         "lat": 49.259407,
@@ -1550,7 +1550,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:54:39+00:00",
+      "verifiedAt": "2026-11-13T08:29:35+00:00",
       "sourceUrl": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/rozsviceni-vanocniho-stromu-a-adventni-trh-5464_1543cs.html",
       "location": {
         "lat": 49.259407,
@@ -1578,7 +1578,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:58:16+00:00",
+      "verifiedAt": "2026-11-13T08:33:48+00:00",
       "sourceUrl": "https://visitzlin.eu/kalendar-akci/nalad-si-vanoce",
       "location": {
         "lat": 49.226766,
@@ -1606,7 +1606,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:58:15+00:00",
+      "verifiedAt": "2026-11-13T08:33:46+00:00",
       "sourceUrl": "https://visitzlin.eu/kalendar-akci/predvanocni-sici-dilna-rodinny-textilni-portret",
       "location": {
         "lat": 49.226766,
@@ -1636,7 +1636,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:46+00:00",
+      "verifiedAt": "2026-11-13T08:28:40+00:00",
       "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/santova-kouzelna-dilna-13049_7050cs.html",
       "location": {
         "lat": 49.9640292,
@@ -1720,7 +1720,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:49+00:00",
+      "verifiedAt": "2026-11-13T08:28:44+00:00",
       "sourceUrl": "https://www.mesto-beroun.cz/pro-obcany/kultura-sport-a-cestovni-ruch/kalendar-akci/zahajeni-berounskeho-adventu-13113_7115cs.html",
       "location": {
         "lat": 49.9640292,
@@ -1748,7 +1748,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:59+00:00",
+      "verifiedAt": "2026-11-13T08:30:58+00:00",
       "sourceUrl": "https://humpolec.cz/akce/vanocni-putovani-s-andely/",
       "location": {
         "lat": 49.5418861,
@@ -1778,7 +1778,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:52:29+00:00",
+      "verifiedAt": "2026-11-13T08:27:20+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/rozsviceni-vanocniho-stromecku-v-jilemnici-4001_2935cs.html",
       "location": {
         "lat": 50.6091761,
@@ -1808,7 +1808,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:10+00:00",
+      "verifiedAt": "2026-11-13T08:32:41+00:00",
       "sourceUrl": "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/rozsviceni-vanocniho-stromu-4198_2350cs.html",
       "location": {
         "lat": 50.2921062,
@@ -1894,7 +1894,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:05+00:00",
+      "verifiedAt": "2026-11-13T08:25:37+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromu-v-nebrezinech-3682_1321cs.html",
       "location": {
         "lat": 49.9205793,
@@ -1922,7 +1922,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:58:32+00:00",
+      "verifiedAt": "2026-11-13T08:34:04+00:00",
       "sourceUrl": "https://www.praha16.eu/volny-cas/kalendar-akci/i-adventni-koncert-26167_706cs.html",
       "location": {
         "lat": 49.9899078,
@@ -1950,7 +1950,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:13+00:00",
+      "verifiedAt": "2026-11-13T08:30:10+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4234",
       "location": {
         "lat": 49.1847652,
@@ -1978,7 +1978,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:26+00:00",
+      "verifiedAt": "2026-11-13T08:26:17+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/rozsviceni-vanocniho-stromu-1885_323cs.html",
       "location": {
         "lat": 49.8162537,
@@ -2008,7 +2008,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:09+00:00",
+      "verifiedAt": "2026-11-13T08:25:41+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/rozsviceni-vanocniho-stromku-v-zebnici-3902_1391cs.html",
       "location": {
         "lat": 49.9559675,
@@ -2038,7 +2038,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:59:43+00:00",
+      "verifiedAt": "2026-11-13T08:35:22+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/rozsveceni-stromecku-s-mikulasskou-nadilkou-7493_3546cs.html",
       "location": {
         "lat": 50.0378687,
@@ -2066,7 +2066,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:54:59+00:00",
+      "verifiedAt": "2026-11-13T08:29:56+00:00",
       "sourceUrl": "https://www.itrebon.cz/kalendar/ebenezer-vanocni-koleda_20868.html",
       "location": {
         "lat": 49.0040317,
@@ -2128,7 +2128,7 @@
       ],
       "audience": "všichni",
       "status": "time-unconfirmed",
-      "verifiedAt": "2026-11-12T22:59:05+00:00",
+      "verifiedAt": "2026-11-13T08:34:40+00:00",
       "sourceUrl": "https://www.kclanskroun.cz/festival/adventni-lanskroun/",
       "location": {
         "lat": 49.9124356,
@@ -2219,7 +2219,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:07+00:00",
+      "verifiedAt": "2026-11-13T08:28:00+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-adventni-stezka-v-knihovne-kouzlo-ceskych-vanoc",
       "location": {
         "lat": 49.2987857,
@@ -2247,7 +2247,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:36+00:00",
+      "verifiedAt": "2026-11-13T08:33:06+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-zs-1-maje-3/",
       "location": {
         "lat": 49.5481764,
@@ -2303,7 +2303,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:48+00:00",
+      "verifiedAt": "2026-11-13T08:26:39+00:00",
       "sourceUrl": "https://kcgolf.cz/program/udalosti/vanocni-raketa",
       "location": {
         "lat": 50.602249,
@@ -2331,7 +2331,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:05+00:00",
+      "verifiedAt": "2026-11-13T08:27:57+00:00",
       "sourceUrl": "https://www.rajhrad.cz/2026/10/setkani-u-vanocniho-stromu-1-12-2026/",
       "location": {
         "lat": 49.0890629,
@@ -2359,7 +2359,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:08+00:00",
+      "verifiedAt": "2026-11-13T08:31:11+00:00",
       "sourceUrl": "https://humpolec.cz/akce/vanocni-koncert-josefa-vagnera-a-zus-gustava-mahlera-humpolec/",
       "location": {
         "lat": 49.5418861,
@@ -2417,7 +2417,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:08+00:00",
+      "verifiedAt": "2026-11-13T08:28:01+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-vanocni-vystava-palickovane-krajky-1",
       "location": {
         "lat": 49.2987857,
@@ -2445,7 +2445,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:52:33+00:00",
+      "verifiedAt": "2026-11-13T08:27:23+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/vanocni-vystava-praci-zaku-vo-4022_2951cs.html",
       "location": {
         "lat": 50.6091761,
@@ -2501,7 +2501,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:37+00:00",
+      "verifiedAt": "2026-11-13T08:33:07+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-leopardi/",
       "location": {
         "lat": 49.5481764,
@@ -2529,7 +2529,7 @@
       "notes": [],
       "audience": "dospělí",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:52:36+00:00",
+      "verifiedAt": "2026-11-13T08:27:27+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/vanocni-tvoreni-pro-dospele-4018_2947cs.html",
       "location": {
         "lat": 50.6091761,
@@ -2557,7 +2557,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:43+00:00",
+      "verifiedAt": "2026-11-13T08:26:34+00:00",
       "sourceUrl": "https://kcgolf.cz/program/udalosti/richard-muller-vanoce-2026",
       "location": {
         "lat": 50.602249,
@@ -2588,7 +2588,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:01+00:00",
+      "verifiedAt": "2026-11-13T08:29:57+00:00",
       "sourceUrl": "https://www.itrebon.cz/kalendar/-sklenene-vanoce_20903.html",
       "location": {
         "lat": 49.0040317,
@@ -2616,7 +2616,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:51+00:00",
+      "verifiedAt": "2026-11-13T08:26:41+00:00",
       "sourceUrl": "https://kcgolf.cz/program/udalosti/mikulasske-caje-aneb-mozna-prijde-i-mikulas",
       "location": {
         "lat": 50.602249,
@@ -2644,7 +2644,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:52:39+00:00",
+      "verifiedAt": "2026-11-13T08:27:30+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/christmas-show-travesti-revue-techtle-mechtle-3794_2704cs.html",
       "location": {
         "lat": 50.6091761,
@@ -2700,7 +2700,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:52:43+00:00",
+      "verifiedAt": "2026-11-13T08:27:33+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/christmas-show-travesti-revue-techtle-mechtle-3794_2705cs.html",
       "location": {
         "lat": 50.6091761,
@@ -2728,7 +2728,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:59+00:00",
+      "verifiedAt": "2026-11-13T08:33:29+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/adventni-folk-rock/",
       "location": {
         "lat": 49.5481764,
@@ -2756,7 +2756,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:39+00:00",
+      "verifiedAt": "2026-11-13T08:33:09+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-gabriela-v-g-fany/",
       "location": {
         "lat": 49.5481764,
@@ -2784,7 +2784,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:54:19+00:00",
+      "verifiedAt": "2026-11-13T08:29:14+00:00",
       "sourceUrl": "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/vanocni-beneficni-koncert-3372_1914cs.html",
       "location": {
         "lat": 49.8363239,
@@ -2954,7 +2954,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:14+00:00",
+      "verifiedAt": "2026-11-13T08:31:19+00:00",
       "sourceUrl": "https://humpolec.cz/akce/vanocni-dilna-ozdoby-balici-papir/",
       "location": {
         "lat": 49.5418861,
@@ -2984,7 +2984,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:54:46+00:00",
+      "verifiedAt": "2026-11-13T08:29:42+00:00",
       "sourceUrl": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/mikulasska-stezka-v-parku-u-altanu-5487_1548cs.html",
       "location": {
         "lat": 49.259407,
@@ -3124,7 +3124,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:40+00:00",
+      "verifiedAt": "2026-11-13T08:33:10+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-add-gospel-alzbeta-koleckarova/",
       "location": {
         "lat": 49.5481764,
@@ -3154,7 +3154,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:12+00:00",
+      "verifiedAt": "2026-11-13T08:25:44+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/mikulasska-besidka-pro-deti-3683_1322cs.html",
       "location": {
         "lat": 49.9205793,
@@ -3184,7 +3184,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:59:46+00:00",
+      "verifiedAt": "2026-11-13T08:35:25+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/mammas-zni-uhrinevsi-koncert-7541_3601cs.html",
       "location": {
         "lat": 50.0378687,
@@ -3240,7 +3240,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:58:52+00:00",
+      "verifiedAt": "2026-11-13T08:34:28+00:00",
       "sourceUrl": "https://www.praha16.eu/volny-cas/kalendar-akci/pekelne-setkani-s-mikulasem-u-sdh-26213_749cs.html",
       "location": {
         "lat": 49.9899078,
@@ -3301,7 +3301,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:17+00:00",
+      "verifiedAt": "2026-11-13T08:32:47+00:00",
       "sourceUrl": "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/advent-v-rodnem-domku-f-l-veka-4224_2361cs.html",
       "location": {
         "lat": 50.2921062,
@@ -3331,7 +3331,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:59:50+00:00",
+      "verifiedAt": "2026-11-13T08:35:28+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-jarmark-7494_3547cs.html",
       "location": {
         "lat": 50.0378687,
@@ -3389,7 +3389,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T23:00:41+00:00",
+      "verifiedAt": "2026-11-13T08:36:23+00:00",
       "sourceUrl": "https://www.praha-lipence.cz/volny-cas/kalendar-akci/mikulasska-nadilka-1691_1094cs.html",
       "location": {
         "lat": 49.9638552,
@@ -3417,7 +3417,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:58:36+00:00",
+      "verifiedAt": "2026-11-13T08:34:07+00:00",
       "sourceUrl": "https://www.praha16.eu/volny-cas/kalendar-akci/ii-adventni-koncert-26168_707cs.html",
       "location": {
         "lat": 49.9899078,
@@ -3445,7 +3445,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:15+00:00",
+      "verifiedAt": "2026-11-13T08:30:11+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4235",
       "location": {
         "lat": 49.1847652,
@@ -3535,7 +3535,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:52:46+00:00",
+      "verifiedAt": "2026-11-13T08:27:37+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/vanocni-tvoreni-aneb-vyzdob-knihovnu-4020_2949cs.html",
       "location": {
         "lat": 50.6091761,
@@ -3591,7 +3591,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:42+00:00",
+      "verifiedAt": "2026-11-13T08:33:12+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-zs-drahotuse-sls-hranice/",
       "location": {
         "lat": 49.5481764,
@@ -3619,7 +3619,7 @@
       "notes": [],
       "audience": "senioři / omezené zaměření",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:53+00:00",
+      "verifiedAt": "2026-11-13T08:26:44+00:00",
       "sourceUrl": "https://kcgolf.cz/program/udalosti/predvanocni-odpoledne-pro-seniory-2025",
       "location": {
         "lat": 50.602249,
@@ -3647,7 +3647,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:15+00:00",
+      "verifiedAt": "2026-11-13T08:25:48+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/adventni-koncert-3926_1394cs.html",
       "location": {
         "lat": 49.9341107,
@@ -3703,7 +3703,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:44+00:00",
+      "verifiedAt": "2026-11-13T08:31:51+00:00",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/adventni-koncert-studentskeho-sboru-gybon-2425_1232cs.html",
       "location": {
         "lat": 50.3247878,
@@ -3759,7 +3759,7 @@
       "notes": [],
       "audience": "senioři / omezené zaměření",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:29+00:00",
+      "verifiedAt": "2026-11-13T08:26:20+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/predvanocni-posezeni-se-seniory-1886_324cs.html",
       "location": {
         "lat": 49.8162537,
@@ -3787,7 +3787,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:10+00:00",
+      "verifiedAt": "2026-11-13T08:28:02+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-vanocni-tvoreni-vanocni-svitici-pranicka",
       "location": {
         "lat": 49.2987857,
@@ -3815,7 +3815,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:43+00:00",
+      "verifiedAt": "2026-11-13T08:33:13+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-cesko-zpiva-koledy/",
       "location": {
         "lat": 49.5481764,
@@ -3843,7 +3843,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:52:49+00:00",
+      "verifiedAt": "2026-11-13T08:27:40+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/husopas-skutecny-pribeh-muze-ktery-letal-s-divokymi-husami-vanocni-special-4032_2962cs.html",
       "location": {
         "lat": 50.6091761,
@@ -3899,7 +3899,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:17+00:00",
+      "verifiedAt": "2026-11-13T08:30:13+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4266",
       "location": {
         "lat": 49.1847652,
@@ -3927,7 +3927,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:00+00:00",
+      "verifiedAt": "2026-11-13T08:31:00+00:00",
       "sourceUrl": "https://humpolec.cz/akce/vanocni-komorni-recital-bary-basikove-za-klavirniho-doprovodu-prof-lubose-pribyla/",
       "location": {
         "lat": 49.5418861,
@@ -3955,7 +3955,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:47+00:00",
+      "verifiedAt": "2026-11-13T08:31:54+00:00",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/zdobeni-pernicku-2424_1231cs.html",
       "location": {
         "lat": 50.3247878,
@@ -3983,7 +3983,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:44+00:00",
+      "verifiedAt": "2026-11-13T08:33:15+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-poutnici-turbo/",
       "location": {
         "lat": 49.5481764,
@@ -4011,7 +4011,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:58:01+00:00",
+      "verifiedAt": "2026-11-13T08:33:31+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/folkove-vanoce/",
       "location": {
         "lat": 49.5481764,
@@ -4039,7 +4039,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:56+00:00",
+      "verifiedAt": "2026-11-13T08:26:46+00:00",
       "sourceUrl": "https://kcgolf.cz/program/udalosti/vanoce-s-musicou-bohemicou",
       "location": {
         "lat": 50.602249,
@@ -4067,7 +4067,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:20+00:00",
+      "verifiedAt": "2026-11-13T08:32:50+00:00",
       "sourceUrl": "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/vanocni-recital-vaclav-koubek-4180_2340cs.html",
       "location": {
         "lat": 50.2921062,
@@ -4099,7 +4099,7 @@
       ],
       "audience": "všichni",
       "status": "time-unconfirmed",
-      "verifiedAt": "2026-11-12T22:55:19+00:00",
+      "verifiedAt": "2026-11-13T08:30:15+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/3766",
       "location": {
         "lat": 49.1847652,
@@ -4129,7 +4129,7 @@
       ],
       "audience": "omezené zaměření",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:12+00:00",
+      "verifiedAt": "2026-11-13T08:31:17+00:00",
       "sourceUrl": "https://humpolec.cz/akce/vanocni-jizda-v-svc/",
       "location": {
         "lat": 49.5418861,
@@ -4157,7 +4157,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:54+00:00",
+      "verifiedAt": "2026-11-13T08:32:22+00:00",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/vanocni-krusnohorsky-jarmark-v-knihovne-2423_1230cs.html",
       "location": {
         "lat": 50.3247878,
@@ -4187,7 +4187,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:22+00:00",
+      "verifiedAt": "2026-11-13T08:30:16+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4262",
       "location": {
         "lat": 49.1847652,
@@ -4215,7 +4215,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:07+00:00",
+      "verifiedAt": "2026-11-13T08:31:10+00:00",
       "sourceUrl": "https://humpolec.cz/akce/vanocni-dilna-tradicni-ozdoby/",
       "location": {
         "lat": 49.5418861,
@@ -4243,7 +4243,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:58+00:00",
+      "verifiedAt": "2026-11-13T08:26:49+00:00",
       "sourceUrl": "https://kcgolf.cz/program/udalosti/vanocni-dar",
       "location": {
         "lat": 50.602249,
@@ -4271,7 +4271,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:58:18+00:00",
+      "verifiedAt": "2026-11-13T08:33:50+00:00",
       "sourceUrl": "https://visitzlin.eu/kalendar-akci/vanocni-zlata-brana-o-hvezdicce",
       "location": {
         "lat": 49.226766,
@@ -4299,7 +4299,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:32+00:00",
+      "verifiedAt": "2026-11-13T08:26:23+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/mikulasska-besidka-1887_325cs.html",
       "location": {
         "lat": 49.8162537,
@@ -4327,7 +4327,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:23+00:00",
+      "verifiedAt": "2026-11-13T08:32:53+00:00",
       "sourceUrl": "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/ceska-mse-vanocni-hej-mistre-4221_2360cs.html",
       "location": {
         "lat": 50.2921062,
@@ -4355,7 +4355,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:58:02+00:00",
+      "verifiedAt": "2026-11-13T08:33:32+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/adventni-koncert-s-zaves-2/",
       "location": {
         "lat": 49.5481764,
@@ -4383,7 +4383,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:46+00:00",
+      "verifiedAt": "2026-11-13T08:33:16+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-libor-pavlata-band-fleret/",
       "location": {
         "lat": 49.5481764,
@@ -4411,7 +4411,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:59:56+00:00",
+      "verifiedAt": "2026-11-13T08:35:35+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-koncert-ceska-mse-vanocni-j-j-ryby-7550_3620cs.html",
       "location": {
         "lat": 50.0378687,
@@ -4439,7 +4439,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:21+00:00",
+      "verifiedAt": "2026-11-13T08:30:18+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4245",
       "location": {
         "lat": 49.1847652,
@@ -4467,7 +4467,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:59:59+00:00",
+      "verifiedAt": "2026-11-13T08:35:39+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-koncert-ceska-mse-vanocni-j-j-ryby-7550_3621cs.html",
       "location": {
         "lat": 50.0378687,
@@ -4497,7 +4497,7 @@
       ],
       "audience": "všichni",
       "status": "time-unconfirmed",
-      "verifiedAt": "2026-11-12T22:55:02+00:00",
+      "verifiedAt": "2026-11-13T08:29:59+00:00",
       "sourceUrl": "https://www.itrebon.cz/kalendar/-adventni-trh_20922.html",
       "location": {
         "lat": 49.0040317,
@@ -4527,7 +4527,7 @@
       ],
       "audience": "senioři / omezené zaměření",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:24+00:00",
+      "verifiedAt": "2026-11-13T08:30:22+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4265",
       "location": {
         "lat": 49.1847652,
@@ -4555,7 +4555,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:58:39+00:00",
+      "verifiedAt": "2026-11-13T08:34:11+00:00",
       "sourceUrl": "https://www.praha16.eu/volny-cas/kalendar-akci/iii-adventni-koncert-26169_708cs.html",
       "location": {
         "lat": 49.9899078,
@@ -4615,7 +4615,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T23:00:02+00:00",
+      "verifiedAt": "2026-11-13T08:35:42+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-jizda-hasicske-techniky-7531_3589cs.html",
       "location": {
         "lat": 50.0378687,
@@ -4643,7 +4643,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:26+00:00",
+      "verifiedAt": "2026-11-13T08:30:23+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4236",
       "location": {
         "lat": 49.1847652,
@@ -4701,7 +4701,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T23:00:06+00:00",
+      "verifiedAt": "2026-11-13T08:35:46+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/adventni-koncert-richarda-pachmana-a-dity-horinkove-6766_3578cs.html",
       "location": {
         "lat": 50.0378687,
@@ -4729,7 +4729,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:27+00:00",
+      "verifiedAt": "2026-11-13T08:32:56+00:00",
       "sourceUrl": "https://www.kulturadobruska.cz/kultura-a-sport/kalendar-akci/tradicni-vanocni-koncert-opocenky-4189_2344cs.html",
       "location": {
         "lat": 50.2921062,
@@ -4757,7 +4757,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:47+00:00",
+      "verifiedAt": "2026-11-13T08:33:17+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-zs-sromotovo-zs-struhlovsko/",
       "location": {
         "lat": 49.5481764,
@@ -4785,7 +4785,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:29+00:00",
+      "verifiedAt": "2026-11-13T08:30:25+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4229",
       "location": {
         "lat": 49.1847652,
@@ -4813,7 +4813,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:52:53+00:00",
+      "verifiedAt": "2026-11-13T08:27:44+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/advent-2026-petr-tomecek-3952_2880cs.html",
       "location": {
         "lat": 50.6091761,
@@ -4841,7 +4841,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:12+00:00",
+      "verifiedAt": "2026-11-13T08:28:04+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-vanocni-koncert-ondreje-rumla",
       "location": {
         "lat": 49.2987857,
@@ -4899,7 +4899,7 @@
       ],
       "audience": "omezené zaměření",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:31+00:00",
+      "verifiedAt": "2026-11-13T08:30:27+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4254",
       "location": {
         "lat": 49.1847652,
@@ -4927,7 +4927,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:57+00:00",
+      "verifiedAt": "2026-11-13T08:32:28+00:00",
       "sourceUrl": "https://www.nejdek.cz/aktivity/kultura/kalendar-akci/vanocni-koncert-2439_1245cs.html",
       "location": {
         "lat": 50.3247878,
@@ -4955,7 +4955,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:54+00:00",
+      "verifiedAt": "2026-11-13T08:30:52+00:00",
       "sourceUrl": "https://humpolec.cz/akce/talkshow-na-tri-s-mirkou-vanocni-dil/",
       "location": {
         "lat": 49.5418861,
@@ -4985,7 +4985,7 @@
       ],
       "audience": "všichni",
       "status": "time-unconfirmed",
-      "verifiedAt": "2026-11-12T23:00:09+00:00",
+      "verifiedAt": "2026-11-13T08:35:49+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/b-britten-a-ceremony-of-carols-7489_3541cs.html",
       "location": {
         "lat": 50.0378687,
@@ -5041,7 +5041,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:49+00:00",
+      "verifiedAt": "2026-11-13T08:33:19+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-kamil-strihavka-the-leaders/",
       "location": {
         "lat": 49.5481764,
@@ -5069,7 +5069,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:13+00:00",
+      "verifiedAt": "2026-11-13T08:28:05+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-adventni-zastaveni-tvorime-vanocni-svicny",
       "location": {
         "lat": 49.2987857,
@@ -5099,7 +5099,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:03+00:00",
+      "verifiedAt": "2026-11-13T08:31:05+00:00",
       "sourceUrl": "https://humpolec.cz/akce/zimni-kino-mysi-v-akci-vanocni-past/",
       "location": {
         "lat": 49.5418861,
@@ -5127,7 +5127,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:32+00:00",
+      "verifiedAt": "2026-11-13T08:30:28+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4230",
       "location": {
         "lat": 49.1847652,
@@ -5155,7 +5155,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:52:56+00:00",
+      "verifiedAt": "2026-11-13T08:27:47+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/vanocni-predstaveni-tanecniho-oboru-4025_2954cs.html",
       "location": {
         "lat": 50.6091761,
@@ -5183,7 +5183,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:53:14+00:00",
+      "verifiedAt": "2026-11-13T08:28:06+00:00",
       "sourceUrl": "https://www.kulturakurim.cz/akce-vanocni-klubik-pohadkove-hnizdecko",
       "location": {
         "lat": 49.2987857,
@@ -5211,7 +5211,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:50+00:00",
+      "verifiedAt": "2026-11-13T08:33:20+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-sara-milfajtova-ondrej-fencl/",
       "location": {
         "lat": 49.5481764,
@@ -5267,7 +5267,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:04+00:00",
+      "verifiedAt": "2026-11-13T08:31:06+00:00",
       "sourceUrl": "https://humpolec.cz/akce/vanocni-recital-jitky-cvancarove-kapely-blue-cimbal/",
       "location": {
         "lat": 49.5418861,
@@ -5295,7 +5295,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T23:00:12+00:00",
+      "verifiedAt": "2026-11-13T08:35:52+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vanocni-koncert-raduza-7348_3453cs.html",
       "location": {
         "lat": 50.0378687,
@@ -5325,7 +5325,7 @@
       ],
       "audience": "omezené zaměření",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:36+00:00",
+      "verifiedAt": "2026-11-13T08:30:32+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4016",
       "location": {
         "lat": 49.1847652,
@@ -5409,7 +5409,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:52+00:00",
+      "verifiedAt": "2026-11-13T08:33:22+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-lh-band-michal-tucny-revival/",
       "location": {
         "lat": 49.5481764,
@@ -5437,7 +5437,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T23:00:15+00:00",
+      "verifiedAt": "2026-11-13T08:35:56+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/betlemske-svetlo-s-programem-7553_3623cs.html",
       "location": {
         "lat": 50.0378687,
@@ -5493,7 +5493,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:56:10+00:00",
+      "verifiedAt": "2026-11-13T08:31:14+00:00",
       "sourceUrl": "https://humpolec.cz/akce/vanocni-cteni-pohadky-pro-deti/",
       "location": {
         "lat": 49.5418861,
@@ -5521,7 +5521,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:19+00:00",
+      "verifiedAt": "2026-11-13T08:25:51+00:00",
       "sourceUrl": "https://www.plasy.cz/turista/kalendar-akci-v-plasich/kolednici-z-mladotic-3903_1392cs.html",
       "location": {
         "lat": 49.9341107,
@@ -5549,7 +5549,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:53+00:00",
+      "verifiedAt": "2026-11-13T08:33:23+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-gentlemens-club-rock-revival-cs-radka-knury/",
       "location": {
         "lat": 49.5481764,
@@ -5577,7 +5577,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:37+00:00",
+      "verifiedAt": "2026-11-13T08:30:34+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4237",
       "location": {
         "lat": 49.1847652,
@@ -5605,7 +5605,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:51:36+00:00",
+      "verifiedAt": "2026-11-13T08:26:27+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/adventni-koncert-1888_326cs.html",
       "location": {
         "lat": 49.8162537,
@@ -5633,7 +5633,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T23:00:44+00:00",
+      "verifiedAt": "2026-11-13T08:36:26+00:00",
       "sourceUrl": "https://www.praha-lipence.cz/volny-cas/kalendar-akci/koncert-prazske-mobilni-zvonohry-1849_1156cs.html",
       "location": {
         "lat": 49.9638552,
@@ -5661,7 +5661,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:52:59+00:00",
+      "verifiedAt": "2026-11-13T08:27:50+00:00",
       "sourceUrl": "https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/beckove-kvarteto-vanocni-klarinetove-dostavenicko-4031_2961cs.html",
       "location": {
         "lat": 50.6091761,
@@ -5689,7 +5689,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:39+00:00",
+      "verifiedAt": "2026-11-13T08:30:35+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4259",
       "location": {
         "lat": 49.1847652,
@@ -5717,7 +5717,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:56+00:00",
+      "verifiedAt": "2026-11-13T08:30:55+00:00",
       "sourceUrl": "https://humpolec.cz/akce/vanocni-koncert-pevecke-tridy-lucie-honzlove/",
       "location": {
         "lat": 49.5418861,
@@ -5747,7 +5747,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:42+00:00",
+      "verifiedAt": "2026-11-13T08:30:39+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4258",
       "location": {
         "lat": 49.1847652,
@@ -5775,7 +5775,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:55:40+00:00",
+      "verifiedAt": "2026-11-13T08:30:37+00:00",
       "sourceUrl": "https://www.telc.eu/kalendar/4267",
       "location": {
         "lat": 49.1847652,
@@ -5831,7 +5831,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T22:57:58+00:00",
+      "verifiedAt": "2026-11-13T08:33:28+00:00",
       "sourceUrl": "https://kultura-hranice.cz/akce/vanoce-v-hranicich-stedrovecerni-muzicirovani-3/",
       "location": {
         "lat": 49.5481764,
@@ -5859,7 +5859,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12T23:00:28+00:00",
+      "verifiedAt": "2026-11-13T08:36:09+00:00",
       "sourceUrl": "https://www.praha22.cz/volny-cas/prehled-akci-1/vytrubovani-z-veze-6365_3544cs.html",
       "location": {
         "lat": 50.0378687,
@@ -5889,7 +5889,7 @@
       ],
       "audience": "všichni",
       "status": "time-unconfirmed",
-      "verifiedAt": "2026-11-12T22:51:39+00:00",
+      "verifiedAt": "2026-11-13T08:26:30+00:00",
       "sourceUrl": "https://www.cernosin.cz/kultura-a-sport/kam-za-kulturou-a-sportem/betlem-v-kostele-1889_327cs.html",
       "location": {
         "lat": 49.8162537,
