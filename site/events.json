@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T13:09:26+00:00",
+  "generatedAt": "2026-11-13T14:02:30+00:00",
   "season": 2026,
   "region": "Česko – sezonní výběr",
   "events": [
@@ -379,6 +379,38 @@
       }
     },
     {
+      "id": "e-84f4237cd81249df2b5c",
+      "title": "Vánoční příběh aneb cesta do Betléma",
+      "town": "Červený Kostelec",
+      "region": "Královéhradecký kraj",
+      "date": "2026-11-22",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Divadlo J. K. Tyla",
+      "category": "setkani",
+      "price": "Plné vstupné: 120 Kč.",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční příběh aneb cesta do Betléma. Divadlo J. K. Tyla",
+      "notes": [
+        "Loutkové adventní představení pro celou rodinu, nikoli výstava betlémů.",
+        "Detail uvádí předprodej od 18. listopadu 2025; termín samotné akce je výslovně 22. 11. 2026. Aktuální dostupnost vstupenek není ověřena.",
+        "Věkové omezení vstupu není uvedeno; obecná kategorie publika nepotvrzuje vhodnost pro konkrétní věk."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T14:02:00+00:00",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/vanocni-pribeh-aneb-cesta-do-betlema-212_25cs.html",
+      "location": {
+        "lat": 50.476505,
+        "lon": 16.0926214,
+        "precision": "town",
+        "label": "Červený Kostelec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440656"
+      }
+    },
+    {
       "id": "e-29b4f3d0337fdde0d4b0",
       "title": "Mezigenerační aktivita – výroba adventních věnců",
       "town": "Zlín",
@@ -521,6 +553,37 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-644bd2277ea0a2243517",
+      "title": "Půjdem spolu do betléma, Divadlo Scéna Zlín",
+      "town": "Červený Kostelec",
+      "region": "Královéhradecký kraj",
+      "date": "2026-11-25",
+      "endDate": null,
+      "startTime": "10:45",
+      "endTime": null,
+      "venue": "Divadlo J. K. Tyla",
+      "category": "setkani",
+      "price": "120 Kč.",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Půjdem spolu do betléma, Divadlo Scéna Zlín. Divadlo J. K. Tyla",
+      "notes": [
+        "Divadelní představení je určeno pro mateřské školy a 1.–3. třídy ZŠ; pro veřejnost se prodává omezená kapacita vstupenek.",
+        "Pořadatel uvádí délku cca 40 minut; konec není dopočítán. Vstupenky v IC ČK, online na webu MKS ČK nebo na pokladně před představením; dostupnost není ověřena."
+      ],
+      "audience": "omezené zaměření",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T14:02:03+00:00",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/pujdem-spolu-do-betlema-divadlo-scena-zlin-449_116cs.html",
+      "location": {
+        "lat": 50.476505,
+        "lon": 16.0926214,
+        "precision": "town",
+        "label": "Červený Kostelec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440656"
+      }
+    },
+    {
       "id": "e-2a25cd0b98ed6aba",
       "title": "Aranžování adventního věnce / Adventní věnce",
       "town": "Všechromy",
@@ -605,6 +668,37 @@
         "precision": "town",
         "label": "Jilemnice — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439145"
+      }
+    },
+    {
+      "id": "e-94f6c548819896435665",
+      "title": "Adventní koncert",
+      "town": "Nové Město nad Metují",
+      "region": "Královéhradecký kraj",
+      "date": "2026-11-25",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Kino 70, Nové Město nad Metují",
+      "category": "setkani",
+      "price": "Plné vstupné: 460 Kč.",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert. Kino 70, Nové Město nad Metují",
+      "notes": [
+        "Předprodej: Městský klub, Boženy Němcové 720, Nové Město nad Metují; www.mestskyklub.cz; prodej také v místě konání před akcí. Prodej neznamená povinnou rezervaci ani ověřenou dostupnost vstupenek.",
+        "Výtěžek je věnován Stacionáři Nona v Novém Městě nad Metují. Slevy, věkové omezení vstupu ani povinná registrace nejsou uvedeny."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T14:02:37+00:00",
+      "sourceUrl": "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/adventni-koncert-18978_15166cs.html",
+      "location": {
+        "lat": 50.3442064,
+        "lon": 16.1512997,
+        "precision": "town",
+        "label": "Nové Město nad Metují — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440694"
       }
     },
     {
@@ -726,6 +820,36 @@
       }
     },
     {
+      "id": "e-5dabdc28a0b42167eef7",
+      "title": "VERNISÁŽ VÝSTAVY VÁNOČNÍCH STROMKŮ MŠ, ZŠ, ZUŠ A DDM KRASLICE",
+      "town": "Kraslice",
+      "region": "Karlovarský kraj",
+      "date": "2026-11-26",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Dům kultury Kraslice",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "VERNISÁŽ VÝSTAVY VÁNOČNÍCH STROMKŮ MŠ, ZŠ, ZUŠ A DDM KRASLICE. Dům kultury Kraslice",
+      "notes": [
+        "Vernisáž výstavy školních vánočních stromků s hudebním doprovodem ZUŠ Kraslice; nejde o rozsvícení městského stromu. Cena, rezervace ani povinné věkové omezení nejsou uvedeny."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T14:01:08+00:00",
+      "sourceUrl": "https://www.kraslice.cz/volny-cas/kalendar-akci/vernisaz-vystavy-vanocnich-stromku-ms-zs-zus-a-ddm-kraslice-2613_1731cs.html",
+      "location": {
+        "lat": 50.3288071,
+        "lon": 12.5085759,
+        "precision": "town",
+        "label": "Kraslice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439547"
+      }
+    },
+    {
       "id": "e-242c39882cf51999",
       "title": "Výroba adventního věnce",
       "town": "Všestary",
@@ -780,6 +904,38 @@
         "sourceUrl": "https://www.openstreetmap.org/way/61856099"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "title": "VÁNOČNÍ VÝSTAVA",
+      "town": "Kraslice",
+      "date": "2026-11-26",
+      "endDate": "2026-11-28",
+      "startTime": null,
+      "endTime": null,
+      "venue": "Dům kultury Kraslice",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "VÁNOČNÍ VÝSTAVA. Dům kultury Kraslice",
+      "notes": [
+        "Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření.",
+        "Otevírací doba: čtvrtek a pátek 10:00–17:00; sobota 10:00–12:00. Koncert žáků ZUŠ Kraslice 28. 11. 2026 od 11:00. Souhrnný interval není nepřetržité otevření; cena a rezervace nejsou uvedeny.",
+        "Denní otevírací doby jsou potvrzené; souhrnné časové pole je prázdné, protože jednotlivé dny mají různé hodiny. Nejde o trh ani nepřetržitou akci."
+      ],
+      "audience": "všichni",
+      "location": {
+        "lat": 50.3288071,
+        "lon": 12.5085759,
+        "precision": "town",
+        "label": "Kraslice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439547"
+      },
+      "id": "e-audit-837c221121434e4d5e05407cca4ed3b8",
+      "region": "Karlovarský kraj",
+      "sourceUrl": "https://www.kraslice.cz/volny-cas/kalendar-akci/vanocni-vystava-2858_1856cs.html",
+      "verifiedAt": "2026-11-13T13:37:01+00:00",
+      "status": "time-unconfirmed"
     },
     {
       "id": "e-092c0db59b7485b1c7dd",
@@ -2583,6 +2739,37 @@
       "status": "confirmed"
     },
     {
+      "id": "e-22192c9dc64c0a07a0dd",
+      "title": "Slavnostní rozsvícení vánočního stromku",
+      "town": "Červený Kostelec",
+      "region": "Královéhradecký kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "nám. T. G. Masaryka",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Slavnostní rozsvícení vánočního stromku. nám. T. G. Masaryka",
+      "notes": [
+        "16:00 je začátek hudebního programu; strom se podle textu rozsvítí po vystoupení, přesná hodina rozsvícení uvedena není. Vstupné ani povinná rezervace nejsou uvedeny.",
+        "Věkové omezení vstupu není uvedeno; obecná kategorie publika nepotvrzuje vhodnost pro konkrétní věk."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T14:02:12+00:00",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/slavnostni-rozsviceni-vanocniho-stromku-447_114cs.html",
+      "location": {
+        "lat": 50.476505,
+        "lon": 16.0926214,
+        "precision": "town",
+        "label": "Červený Kostelec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440656"
+      }
+    },
+    {
       "id": "e-dfc75b58331f25bb7ec2",
       "title": "Koledy v podloubí",
       "town": "Žatec",
@@ -2861,6 +3048,37 @@
       }
     },
     {
+      "id": "e-fba59a14df92b2b69741",
+      "title": "Adventní koncert Červánku: Byla cesta, byla ušlapaná...",
+      "town": "Červený Kostelec",
+      "region": "Královéhradecký kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Husův sbor",
+      "category": "setkani",
+      "price": "Dospělí: 120 Kč; děti: 90 Kč (věková hranice neuvedena).",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert Červánku: Byla cesta, byla ušlapaná.... Husův sbor",
+      "notes": [
+        "Prodej vstupenek na místě 45 minut před zahájením koncertu. Plakát uvádí dětské vstupné 90 Kč, HTML je označuje pouze jako snížené.",
+        "Věkové omezení vstupu není uvedeno; obecná kategorie publika nepotvrzuje vhodnost pro konkrétní věk."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T14:02:19+00:00",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-koncert-cervanku-byla-cesta-byla-uslapana-437_106cs.html",
+      "location": {
+        "lat": 50.476505,
+        "lon": 16.0926214,
+        "precision": "town",
+        "label": "Červený Kostelec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440656"
+      }
+    },
+    {
       "id": "e-badd2a1ab91d5ac2e433",
       "title": "Rozsvícení vánočního stromku v Žebnici",
       "town": "Žebnice",
@@ -3034,6 +3252,38 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-38274db99201a064af1c",
+      "title": "PRVNÍ ADVENT A ROZSVÍCENÍ VÁNOČNÍHO STROMU",
+      "town": "Kraslice",
+      "region": "Karlovarský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "venue": "Náměstí T. G. Masaryka",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "PRVNÍ ADVENT A ROZSVÍCENÍ VÁNOČNÍHO STROMU. Náměstí T. G. Masaryka",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek.",
+        "HTML uvádí začátek od 15:00, aktuální plakát první vystoupení 15:30; celkový začátek je ponechán nepotvrzený. Rozsvícení stromu je na plakátu v 18:00, následuje vystoupení ZUŠ v 18:10; časy jsou orientační a změna programu vyhrazena.",
+        "V galerii zůstal také plakát výslovně datovaný 30. 11. 2025; ten nebyl použit pro ročník 2026. Cena ani rezervace nejsou uvedeny."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T14:01:11+00:00",
+      "sourceUrl": "https://www.kraslice.cz/volny-cas/kalendar-akci/prvni-advent-a-rozsviceni-vanocniho-stromu-2848_1846cs.html",
+      "location": {
+        "lat": 50.3288071,
+        "lon": 12.5085759,
+        "precision": "town",
+        "label": "Kraslice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439547"
+      }
+    },
+    {
       "id": "e-402e25236fa28628d42c",
       "title": "Adventní Lanškroun",
       "town": "Lanškroun",
@@ -3124,6 +3374,39 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/436112"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-01d4cd2c5220f97c3f46",
+      "title": "1. Adventní neděle",
+      "town": "Nové Město nad Metují",
+      "region": "Královéhradecký kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "venue": "Husovo náměstí",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "1. Adventní neděle. Husovo náměstí",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek.",
+        "Rozpor v hodinách: HTML uvádí 16:30–22:00 a dobu 5 hodin 30 minut, ale hlavní plakát uvádí adventní trhy 13:00–18:00 a prohlídky muzea ve 13:00, 14:00 a 15:00. Celkový začátek a konec proto zůstávají nepotvrzené; nejde o jeden souvislý interval všech aktivit.",
+        "Plakáty potvrzují koncert dětí MŠ Na Františku / Sborečku Lísteček od 16:30 a rozsvícení vánočního stromu v 17:00. Tvořivé dílny, měšťanský betlém a ukázky vánočních tradic jsou uvedeny jako celoodpolední program.",
+        "Místo: Husovo náměstí, u Městského muzea a v Hildeském atriu za IC. Ceny jednotlivých aktivit, povinná registrace a věková omezení nejsou uvedeny; neoznačovat celý program za zdarma."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T14:02:40+00:00",
+      "sourceUrl": "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/1-adventni-nedele-18971_15164cs.html",
+      "location": {
+        "lat": 50.3442064,
+        "lon": 16.1512997,
+        "precision": "town",
+        "label": "Nové Město nad Metují — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440694"
+      }
     },
     {
       "id": "e-b65b3d409943053454a2",
@@ -4370,6 +4653,37 @@
       }
     },
     {
+      "id": "e-85b57420f0cc6eadae0c",
+      "title": "Adventní benefiční koncert",
+      "town": "Nové Město nad Metují",
+      "region": "Královéhradecký kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Zámek rodiny Bartoň-Dobenín",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní benefiční koncert. Zámek rodiny Bartoň-Dobenín",
+      "notes": [
+        "Místo v zámku: Velký sál. Datum s rokem 2026 a začátek 17:00 jsou v označeném poli městského detailu.",
+        "V městském detailu není plakát ani cena, předprodej, povinná rezervace nebo věkové omezení. Benefiční účel neznamená dobrovolné či nulové vstupné."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T14:02:44+00:00",
+      "sourceUrl": "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/adventni-beneficni-koncert-18792_15098cs.html",
+      "location": {
+        "lat": 50.3442064,
+        "lon": 16.1512997,
+        "precision": "town",
+        "label": "Nové Město nad Metují — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440694"
+      }
+    },
+    {
       "id": "e-9e49c1f8dbac9dc2bfb9",
       "title": "Mammas zní Uhříněvsí - koncert",
       "town": "Praha-Uhříněves",
@@ -4769,6 +5083,37 @@
         "precision": "town",
         "label": "Telč — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441173"
+      }
+    },
+    {
+      "id": "e-96eaf774b37774aefe1f",
+      "title": "DRUHÝ ADVENT",
+      "town": "Kraslice",
+      "region": "Karlovarský kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "venue": "Náměstí T. G. Masaryka",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "DRUHÝ ADVENT. Náměstí T. G. Masaryka",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek.",
+        "HTML uvádí od 15:00, aktuální plakát zahajuje seznam vystoupení v 15:30; souhrnný začátek je ponechán nepotvrzený. Program pokračuje do vystoupení Delectio v 18:30, čas ukončení není uveden. Změna programu vyhrazena. Cena ani rezervace nejsou uvedeny."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T14:01:14+00:00",
+      "sourceUrl": "https://www.kraslice.cz/volny-cas/kalendar-akci/druhy-advent-2340_1584cs.html",
+      "location": {
+        "lat": 50.3288071,
+        "lon": 12.5085759,
+        "precision": "town",
+        "label": "Kraslice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439547"
       }
     },
     {
@@ -5317,6 +5662,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-de7b2ff3bc3317752fac",
+      "title": "ČESKO ZPÍVÁ KOLEDY",
+      "town": "Kraslice",
+      "region": "Karlovarský kraj",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Náměstí T. G. Masaryka",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "ČESKO ZPÍVÁ KOLEDY. Náměstí T. G. Masaryka",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T14:01:18+00:00",
+      "sourceUrl": "https://www.kraslice.cz/volny-cas/kalendar-akci/cesko-zpiva-koledy-2851_1849cs.html",
+      "location": {
+        "lat": 50.3288071,
+        "lon": 12.5085759,
+        "precision": "town",
+        "label": "Kraslice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439547"
+      }
+    },
+    {
       "id": "e-5c3116954b420f8049a7",
       "title": "Česko zpívá koledy",
       "town": "Telč",
@@ -5342,6 +5715,37 @@
         "precision": "town",
         "label": "Telč — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441173"
+      }
+    },
+    {
+      "id": "e-ecc1d9a3d743c881e3f4",
+      "title": "Vánoční koncert Junior Big Band",
+      "town": "Červený Kostelec",
+      "region": "Královéhradecký kraj",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Divadlo J. K. Tyla",
+      "category": "setkani",
+      "price": "Základní vstupné: 210 Kč; děti do 15 let: 150 Kč; držitelé průkazů ZTP: 50% sleva.",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert Junior Big Band. Divadlo J. K. Tyla",
+      "notes": [
+        "Předprodej od 1. října v IC Červený Kostelec a na webu MKS ČK. Zmínka o předprodeji není tvrzením o povinné rezervaci ani potvrzením volných míst.",
+        "Věkové omezení vstupu není uvedeno; obecná kategorie publika nepotvrzuje vhodnost pro konkrétní věk."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T14:01:47+00:00",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/vanocni-koncert-junior-big-band-379_56cs.html",
+      "location": {
+        "lat": 50.476505,
+        "lon": 16.0926214,
+        "precision": "town",
+        "label": "Červený Kostelec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440656"
       }
     },
     {
@@ -6227,6 +6631,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-51025a28af0596bda05d",
+      "title": "TŘETÍ ADVENT",
+      "town": "Kraslice",
+      "region": "Karlovarský kraj",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Náměstí T. G. Masaryka",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "TŘETÍ ADVENT. Náměstí T. G. Masaryka",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T14:01:21+00:00",
+      "sourceUrl": "https://www.kraslice.cz/volny-cas/kalendar-akci/treti-advent-2341_1586cs.html",
+      "location": {
+        "lat": 50.3288071,
+        "lon": 12.5085759,
+        "precision": "town",
+        "label": "Kraslice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439547"
+      }
+    },
+    {
       "id": "e-1c40674f8a920a72f6a5",
       "title": "Koledy v podloubí",
       "town": "Žatec",
@@ -6653,6 +7085,37 @@
       }
     },
     {
+      "id": "e-11d659f8e702122f636f",
+      "title": "Vánoční talk show s písněmi",
+      "town": "Nové Město nad Metují",
+      "region": "Královéhradecký kraj",
+      "date": "2026-12-15",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Kino 70, Nové Město nad Metují",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční talk show s písněmi. Kino 70, Nové Město nad Metují",
+      "notes": [
+        "Účinkují Hanka Křížková a Naďa Konvalinková. Plakát uvádí předprodej na www.mestskyklub.cz nebo v IC Husovo náměstí, nikoli povinnou rezervaci. Dostupnost vstupenek není ověřena.",
+        "Cena ani věkové omezení nejsou v městském detailu nebo plakátu uvedeny; vstupné ověřte přímo u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T14:02:47+00:00",
+      "sourceUrl": "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/vanocni-talk-show-s-pisnemi-18693_15070cs.html",
+      "location": {
+        "lat": 50.3442064,
+        "lon": 16.1512997,
+        "precision": "town",
+        "label": "Nové Město nad Metují — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440694"
+      }
+    },
+    {
       "id": "e-a1caf5e58939ca5eaf3c",
       "title": "B. Britten - A Ceremony of Carols",
       "town": "Praha-Uhříněves",
@@ -6792,6 +7255,37 @@
         "precision": "town",
         "label": "Kuřim — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442051"
+      }
+    },
+    {
+      "id": "e-78873eb6c306f407b527",
+      "title": "Andělské putování – vánoční vystoupení ZUŠ",
+      "town": "Červený Kostelec",
+      "region": "Královéhradecký kraj",
+      "date": "2026-12-16",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Divadlo J. K. Tyla",
+      "category": "setkani",
+      "price": "Základní vstupné: 150 Kč; děti do 15 let: 90 Kč; držitelé průkazů ZTP: 50% sleva.",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Andělské putování – vánoční vystoupení ZUŠ. Divadlo J. K. Tyla",
+      "notes": [
+        "Předprodej od 1. října v IC Červený Kostelec a na webu MKS ČK. Zmínka o předprodeji není tvrzením o povinné rezervaci ani potvrzením volných míst.",
+        "Věkové omezení vstupu není uvedeno; obecná kategorie publika nepotvrzuje vhodnost pro konkrétní věk."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T14:01:53+00:00",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/andelske-putovani-vanocni-vystoupeni-zus-380_57cs.html",
+      "location": {
+        "lat": 50.476505,
+        "lon": 16.0926214,
+        "precision": "town",
+        "label": "Červený Kostelec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440656"
       }
     },
     {
@@ -6938,6 +7432,37 @@
         "precision": "town",
         "label": "Jilemnice — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439145"
+      }
+    },
+    {
+      "id": "e-ae37d1746832c0055096",
+      "title": "Andělské putování – vánoční vystoupení ZUŠ",
+      "town": "Červený Kostelec",
+      "region": "Královéhradecký kraj",
+      "date": "2026-12-17",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Divadlo J. K. Tyla",
+      "category": "setkani",
+      "price": "Základní vstupné: 150 Kč; děti do 15 let: 90 Kč; držitelé průkazů ZTP: 50% sleva.",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Andělské putování – vánoční vystoupení ZUŠ. Divadlo J. K. Tyla",
+      "notes": [
+        "Předprodej od 1. října v IC Červený Kostelec a na webu MKS ČK. Zmínka o předprodeji není tvrzením o povinné rezervaci ani potvrzením volných míst.",
+        "Věkové omezení vstupu není uvedeno; obecná kategorie publika nepotvrzuje vhodnost pro konkrétní věk."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T14:01:57+00:00",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/andelske-putovani-vanocni-vystoupeni-zus-380_58cs.html",
+      "location": {
+        "lat": 50.476505,
+        "lon": 16.0926214,
+        "precision": "town",
+        "label": "Červený Kostelec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440656"
       }
     },
     {
@@ -7657,6 +8182,37 @@
         "precision": "town",
         "label": "Praha-Lipence — orientační bod katastrální části, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/428690"
+      }
+    },
+    {
+      "id": "e-b701b7181a733271681e",
+      "title": "Česká mše vánoční",
+      "town": "Červený Kostelec",
+      "region": "Královéhradecký kraj",
+      "date": "2026-12-20",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Divadlo J. K. Tyla",
+      "category": "setkani",
+      "price": "Základní vstupné: 230 Kč; děti do 15 let: 150 Kč; držitelé průkazů ZTP: 50% sleva.",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Česká mše vánoční. Divadlo J. K. Tyla",
+      "notes": [
+        "Předprodej od 1. října v IC Červený Kostelec a na webu MKS ČK. Zmínka o předprodeji není tvrzením o povinné rezervaci ani potvrzením volných míst.",
+        "Věkové omezení vstupu není uvedeno; obecná kategorie publika nepotvrzuje vhodnost pro konkrétní věk."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T14:02:25+00:00",
+      "sourceUrl": "https://www.ckzije.cz/kalendar-akci/ceska-mse-vanocni-375_51cs.html",
+      "location": {
+        "lat": 50.476505,
+        "lon": 16.0926214,
+        "precision": "town",
+        "label": "Červený Kostelec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440656"
       }
     },
     {

@@ -4277,6 +4277,539 @@
           ]
         }
       }
+    },
+    {
+      "id": "kraslice-mesto",
+      "town": "Kraslice",
+      "region": "Karlovarský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.kraslice.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.kraslice.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.kraslice\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Kraslice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Dům kultury Kraslice",
+        "Náměstí T. G. Masaryka"
+      ],
+      "event_reviews": {
+        "https://www.kraslice.cz/volny-cas/kalendar-akci/vernisaz-vystavy-vanocnich-stromku-ms-zs-zus-a-ddm-kraslice-2613_1731cs.html": {
+          "sourceId": "kraslice-mesto",
+          "sourceUrl": "https://www.kraslice.cz/volny-cas/kalendar-akci/vernisaz-vystavy-vanocnich-stromku-ms-zs-zus-a-ddm-kraslice-2613_1731cs.html",
+          "sourceTown": "Kraslice",
+          "expectedTitle": "VERNISÁŽ VÝSTAVY VÁNOČNÍCH STROMKŮ MŠ, ZŠ, ZUŠ A DDM KRASLICE",
+          "expectedDate": "2026-11-26",
+          "expectedEndDate": null,
+          "expectedVenue": "Dům kultury Kraslice",
+          "contentHash": "d65326b087ac093a487cb4f6ec45b7ff131da7c73ce50007c7ee144166851200",
+          "decision": "accept",
+          "reason": "Aktuální plakát potvrzuje vernisáž výstavy, nikoli kategorii rozsvícení stromu; datum, hodina i kraslické místo souhlasí.",
+          "overrides": {
+            "category": "setkani",
+            "notes": [
+              "Vernisáž výstavy školních vánočních stromků s hudebním doprovodem ZUŠ Kraslice; nejde o rozsvícení městského stromu. Cena, rezervace ani povinné věkové omezení nejsou uvedeny."
+            ]
+          }
+        },
+        "https://www.kraslice.cz/volny-cas/kalendar-akci/prvni-advent-a-rozsviceni-vanocniho-stromu-2848_1846cs.html": {
+          "sourceId": "kraslice-mesto",
+          "sourceUrl": "https://www.kraslice.cz/volny-cas/kalendar-akci/prvni-advent-a-rozsviceni-vanocniho-stromu-2848_1846cs.html",
+          "sourceTown": "Kraslice",
+          "expectedTitle": "PRVNÍ ADVENT A ROZSVÍCENÍ VÁNOČNÍHO STROMU",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Náměstí T. G. Masaryka",
+          "contentHash": "77db9d29fd6f7db06671a2f824a4db2b761eb03bc9536a6ec0f22eb46514a661",
+          "decision": "accept",
+          "reason": "Rok 2026 potvrzuje aktuální plakát 29. 11. 2026; HTML a plakát pojmenovávají různé začátky programu, proto souhrnná hodina zůstává neznámá. Starší plakát 2025 je oddělen.",
+          "overrides": {
+            "startTime": null,
+            "endTime": null,
+            "notes": [
+              "HTML uvádí začátek od 15:00, aktuální plakát první vystoupení 15:30; celkový začátek je ponechán nepotvrzený. Rozsvícení stromu je na plakátu v 18:00, následuje vystoupení ZUŠ v 18:10; časy jsou orientační a změna programu vyhrazena.",
+              "V galerii zůstal také plakát výslovně datovaný 30. 11. 2025; ten nebyl použit pro ročník 2026. Cena ani rezervace nejsou uvedeny."
+            ]
+          }
+        },
+        "https://www.kraslice.cz/volny-cas/kalendar-akci/druhy-advent-2340_1584cs.html": {
+          "sourceId": "kraslice-mesto",
+          "sourceUrl": "https://www.kraslice.cz/volny-cas/kalendar-akci/druhy-advent-2340_1584cs.html",
+          "sourceTown": "Kraslice",
+          "expectedTitle": "DRUHÝ ADVENT",
+          "expectedDate": "2026-12-06",
+          "expectedEndDate": null,
+          "expectedVenue": "Náměstí T. G. Masaryka",
+          "contentHash": "0bd0f8f22f8c837793b6fe82788f73f0e5a0a76dd2a73a827a0115efc72ea4be",
+          "decision": "accept",
+          "reason": "Datum a kraslické náměstí jsou potvrzeny HTML i aktuálním plakátem; nejednotný údaj o začátku není změněn na jistý čas ani na konec posledního vystoupení.",
+          "overrides": {
+            "startTime": null,
+            "endTime": null,
+            "notes": [
+              "HTML uvádí od 15:00, aktuální plakát zahajuje seznam vystoupení v 15:30; souhrnný začátek je ponechán nepotvrzený. Program pokračuje do vystoupení Delectio v 18:30, čas ukončení není uveden. Změna programu vyhrazena. Cena ani rezervace nejsou uvedeny."
+            ]
+          }
+        }
+      },
+      "audited_events": {
+        "https://www.kraslice.cz/volny-cas/kalendar-akci/vanocni-vystava-2858_1856cs.html": {
+          "sourceId": "kraslice-mesto",
+          "sourceTown": "Kraslice",
+          "sourceUrl": "https://www.kraslice.cz/volny-cas/kalendar-akci/vanocni-vystava-2858_1856cs.html",
+          "expectedTitle": "VÁNOČNÍ VÝSTAVA",
+          "contentHash": "be9efd6767e0fd8980e3a7871cb7f92fb0746fd51d6a2b1bba5aebc7c4915a85",
+          "decision": "accept",
+          "reason": "Výstava krajky, nikoli trh. Denní otevírací doby potvrzené HTML a aktuálním plakátem zůstávají rozepsané; nevytváří se souvislý interval.",
+          "verifiedAt": "2026-11-13T13:37:01+00:00",
+          "events": [
+            {
+              "title": "VÁNOČNÍ VÝSTAVA",
+              "town": "Kraslice",
+              "date": "2026-11-26",
+              "endDate": "2026-11-28",
+              "startTime": null,
+              "endTime": null,
+              "venue": "Dům kultury Kraslice",
+              "category": "setkani",
+              "price": null,
+              "registration": null,
+              "registrationUrl": null,
+              "description": "VÁNOČNÍ VÝSTAVA. Dům kultury Kraslice",
+              "notes": [
+                "Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření.",
+                "Otevírací doba: čtvrtek a pátek 10:00–17:00; sobota 10:00–12:00. Koncert žáků ZUŠ Kraslice 28. 11. 2026 od 11:00. Souhrnný interval není nepřetržité otevření; cena a rezervace nejsou uvedeny.",
+                "Denní otevírací doby jsou potvrzené; souhrnné časové pole je prázdné, protože jednotlivé dny mají různé hodiny. Nejde o trh ani nepřetržitou akci."
+              ],
+              "audience": "všichni",
+              "location": {
+                "lat": 50.3288071,
+                "lon": 12.5085759,
+                "precision": "town",
+                "label": "Kraslice — orientační střed obce, nikoli přesné místo akce",
+                "sourceUrl": "https://www.openstreetmap.org/relation/439547"
+              },
+              "occurrenceKey": "main",
+              "allowExtendedEnd": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cerveny-kostelec-ckzije",
+      "town": "Červený Kostelec",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.ckzije.cz/kalendar-akci/?page=3",
+        "https://www.ckzije.cz/kalendar-akci/?page=4"
+      ],
+      "url_regex": "^https://www\\.ckzije\\.cz/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "detail_prefixes": [
+        "https://www.ckzije.cz/kalendar-akci/"
+      ],
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 18,
+      "allowed_venues": [
+        "Divadlo J. K. Tyla",
+        "Husův sbor",
+        "nám. T. G. Masaryka"
+      ],
+      "event_reviews": {
+        "https://www.ckzije.cz/kalendar-akci/mikulasska-nadilka-ve-lhote-438_107cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/mikulasska-nadilka-ve-lhote-438_107cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Mikulášská nadílka ve Lhotě",
+          "expectedDate": "2026-12-04",
+          "expectedEndDate": null,
+          "expectedVenue": "sokolovna u ZŠ Lhota",
+          "contentHash": "ff573f4379121d547f11890e25f4c8d99a84e2aa8f59b92aaedfec0b9c9f9952",
+          "decision": "hold",
+          "reason": "Místo mimo ověřené jádro Červeného Kostelce (Rtyně/Žireč) nebo samostatná místní část (Lhota/Bohdašín). Vyžaduje přesný samostatný geography/audited receipt; nepřiřazovat centroid města. U souhrnů Lhota navíc nezaměňovat více odlišných dnů a hodin za jeden souvislý program."
+        },
+        "https://www.ckzije.cz/kalendar-akci/tajemstvi-pohadkovych-vanoc-s-mdo-a-family-bandem-446_113cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/tajemstvi-pohadkovych-vanoc-s-mdo-a-family-bandem-446_113cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Tajemství pohádkových Vánoc s MDO a Family Bandem",
+          "expectedDate": "2026-12-05",
+          "expectedEndDate": null,
+          "expectedVenue": "Areál domu sv. Josefa, Žireč",
+          "contentHash": "c10262be5f654a1ce1d39ea60df443b8b69dcabe7ed20c7d801fc1aaeb71b21a",
+          "decision": "hold",
+          "reason": "Místo mimo ověřené jádro Červeného Kostelce (Rtyně/Žireč) nebo samostatná místní část (Lhota/Bohdašín). Vyžaduje přesný samostatný geography/audited receipt; nepřiřazovat centroid města. U souhrnů Lhota navíc nezaměňovat více odlišných dnů a hodin za jeden souvislý program."
+        },
+        "https://www.ckzije.cz/kalendar-akci/mikulasska-besidka-na-bohdasine-439_108cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/mikulasska-besidka-na-bohdasine-439_108cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Mikulášská besídka na Bohdašíně",
+          "expectedDate": "2026-12-06",
+          "expectedEndDate": null,
+          "expectedVenue": "Pohostinství Bohdašín",
+          "contentHash": "2dfb2bfb566aa6cb40ec621c2b9275392cb40cc467b26d1c0a67643bbe4ab8f0",
+          "decision": "hold",
+          "reason": "Místo mimo ověřené jádro Červeného Kostelce (Rtyně/Žireč) nebo samostatná místní část (Lhota/Bohdašín). Vyžaduje přesný samostatný geography/audited receipt; nepřiřazovat centroid města. U souhrnů Lhota navíc nezaměňovat více odlišných dnů a hodin za jeden souvislý program."
+        },
+        "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_125cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_125cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Adventní neděle ve Lhotě",
+          "expectedDate": "2026-12-06",
+          "expectedEndDate": null,
+          "expectedVenue": "náves ve Lhotě",
+          "contentHash": "a730d84f0ef13ffd526ed6ce77d454ab19b529c780bf3da785d64cb2718e777b",
+          "decision": "hold",
+          "reason": "Místo mimo ověřené jádro Červeného Kostelce (Rtyně/Žireč) nebo samostatná místní část (Lhota/Bohdašín). Vyžaduje přesný samostatný geography/audited receipt; nepřiřazovat centroid města. U souhrnů Lhota navíc nezaměňovat více odlišných dnů a hodin za jeden souvislý program."
+        },
+        "https://www.ckzije.cz/kalendar-akci/vanocni-koncert-junior-big-band-379_56cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/vanocni-koncert-junior-big-band-379_56cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Vánoční koncert Junior Big Band",
+          "expectedDate": "2026-12-09",
+          "expectedEndDate": null,
+          "expectedVenue": "Divadlo J. K. Tyla",
+          "contentHash": "6df063d75d8df4aa6d8ef2f96e8e221cb8f4b5966d4553c51390c05f27be6104",
+          "decision": "accept",
+          "reason": "Ověřený místní program v Červeném Kostelci; datum včetně roku je v označeném poli detailu, soulad hodin a podmínek zkontrolován s textem a dostupnými primárními plakáty.",
+          "overrides": {
+            "price": "Základní vstupné: 210 Kč; děti do 15 let: 150 Kč; držitelé průkazů ZTP: 50% sleva.",
+            "notes": [
+              "Předprodej od 1. října v IC Červený Kostelec a na webu MKS ČK. Zmínka o předprodeji není tvrzením o povinné rezervaci ani potvrzením volných míst.",
+              "Věkové omezení vstupu není uvedeno; obecná kategorie publika nepotvrzuje vhodnost pro konkrétní věk."
+            ]
+          }
+        },
+        "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_126cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_126cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Adventní neděle ve Lhotě",
+          "expectedDate": "2026-12-13",
+          "expectedEndDate": null,
+          "expectedVenue": "náves ve Lhotě",
+          "contentHash": "43e509d13f3cbcce4a84d7855ce73a517f4e4987317131953d9d9ee132fd0555",
+          "decision": "hold",
+          "reason": "Místo mimo ověřené jádro Červeného Kostelce (Rtyně/Žireč) nebo samostatná místní část (Lhota/Bohdašín). Vyžaduje přesný samostatný geography/audited receipt; nepřiřazovat centroid města. U souhrnů Lhota navíc nezaměňovat více odlišných dnů a hodin za jeden souvislý program."
+        },
+        "https://www.ckzije.cz/kalendar-akci/andelske-putovani-vanocni-vystoupeni-zus-380_57cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/andelske-putovani-vanocni-vystoupeni-zus-380_57cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Andělské putování – vánoční vystoupení ZUŠ",
+          "expectedDate": "2026-12-16",
+          "expectedEndDate": null,
+          "expectedVenue": "Divadlo J. K. Tyla",
+          "contentHash": "da2ec133585e1d52e96f9b580e4f5fa50f05df8598ddb4227b4822023361db96",
+          "decision": "accept",
+          "reason": "Ověřený místní program v Červeném Kostelci; datum včetně roku je v označeném poli detailu, soulad hodin a podmínek zkontrolován s textem a dostupnými primárními plakáty.",
+          "overrides": {
+            "price": "Základní vstupné: 150 Kč; děti do 15 let: 90 Kč; držitelé průkazů ZTP: 50% sleva.",
+            "notes": [
+              "Předprodej od 1. října v IC Červený Kostelec a na webu MKS ČK. Zmínka o předprodeji není tvrzením o povinné rezervaci ani potvrzením volných míst.",
+              "Věkové omezení vstupu není uvedeno; obecná kategorie publika nepotvrzuje vhodnost pro konkrétní věk."
+            ]
+          }
+        },
+        "https://www.ckzije.cz/kalendar-akci/andelske-putovani-vanocni-vystoupeni-zus-380_58cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/andelske-putovani-vanocni-vystoupeni-zus-380_58cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Andělské putování – vánoční vystoupení ZUŠ",
+          "expectedDate": "2026-12-17",
+          "expectedEndDate": null,
+          "expectedVenue": "Divadlo J. K. Tyla",
+          "contentHash": "d7d478e429d0550ebdc65e76e88f6bbcfbe6246bfd4e30b28d886a954694ab70",
+          "decision": "accept",
+          "reason": "Ověřený místní program v Červeném Kostelci; datum včetně roku je v označeném poli detailu, soulad hodin a podmínek zkontrolován s textem a dostupnými primárními plakáty.",
+          "overrides": {
+            "price": "Základní vstupné: 150 Kč; děti do 15 let: 90 Kč; držitelé průkazů ZTP: 50% sleva.",
+            "notes": [
+              "Předprodej od 1. října v IC Červený Kostelec a na webu MKS ČK. Zmínka o předprodeji není tvrzením o povinné rezervaci ani potvrzením volných míst.",
+              "Věkové omezení vstupu není uvedeno; obecná kategorie publika nepotvrzuje vhodnost pro konkrétní věk."
+            ]
+          }
+        },
+        "https://www.ckzije.cz/kalendar-akci/vanocni-pribeh-aneb-cesta-do-betlema-212_25cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/vanocni-pribeh-aneb-cesta-do-betlema-212_25cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Vánoční příběh aneb cesta do Betléma",
+          "expectedDate": "2026-11-22",
+          "expectedEndDate": null,
+          "expectedVenue": "Divadlo J. K. Tyla",
+          "contentHash": "7f54d84f3972b6c64033c413160ab4eb93d6e3c93bc3f6f974cae712e7c41de1",
+          "decision": "accept",
+          "reason": "Ověřený místní program v Červeném Kostelci; datum včetně roku je v označeném poli detailu, soulad hodin a podmínek zkontrolován s textem a dostupnými primárními plakáty.",
+          "overrides": {
+            "category": "setkani",
+            "price": "Plné vstupné: 120 Kč.",
+            "notes": [
+              "Loutkové adventní představení pro celou rodinu, nikoli výstava betlémů.",
+              "Detail uvádí předprodej od 18. listopadu 2025; termín samotné akce je výslovně 22. 11. 2026. Aktuální dostupnost vstupenek není ověřena.",
+              "Věkové omezení vstupu není uvedeno; obecná kategorie publika nepotvrzuje vhodnost pro konkrétní věk."
+            ]
+          }
+        },
+        "https://www.ckzije.cz/kalendar-akci/pujdem-spolu-do-betlema-divadlo-scena-zlin-449_116cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/pujdem-spolu-do-betlema-divadlo-scena-zlin-449_116cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Půjdem spolu do betléma, Divadlo Scéna Zlín",
+          "expectedDate": "2026-11-25",
+          "expectedEndDate": null,
+          "expectedVenue": "Divadlo J. K. Tyla",
+          "contentHash": "d206cd700f2662ee84a02bdb928491f37a5fb0d9c45c1f93f91881c8eb1a5de0",
+          "decision": "accept",
+          "reason": "Ověřený místní program v Červeném Kostelci; datum včetně roku je v označeném poli detailu, soulad hodin a podmínek zkontrolován s textem a dostupnými primárními plakáty.",
+          "overrides": {
+            "category": "setkani",
+            "audience": "omezené zaměření",
+            "price": "120 Kč.",
+            "notes": [
+              "Divadelní představení je určeno pro mateřské školy a 1.–3. třídy ZŠ; pro veřejnost se prodává omezená kapacita vstupenek.",
+              "Pořadatel uvádí délku cca 40 minut; konec není dopočítán. Vstupenky v IC ČK, online na webu MKS ČK nebo na pokladně před představením; dostupnost není ověřena."
+            ]
+          }
+        },
+        "https://www.ckzije.cz/kalendar-akci/adventni-koncerty-koletovy-hornicke-hudby-384_62cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-koncerty-koletovy-hornicke-hudby-384_62cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Adventní koncerty Koletovy hornické hudby",
+          "expectedDate": "2026-11-27",
+          "expectedEndDate": null,
+          "expectedVenue": "Hala Orlovna Rtyně v Podkrkonoší",
+          "contentHash": "d343ab1191ff0576948c57e0ff1c8d6c402d0bb4f76083b607ccbc57858c1fe1",
+          "decision": "hold",
+          "reason": "Místo mimo ověřené jádro Červeného Kostelce (Rtyně/Žireč) nebo samostatná místní část (Lhota/Bohdašín). Vyžaduje přesný samostatný geography/audited receipt; nepřiřazovat centroid města. U souhrnů Lhota navíc nezaměňovat více odlišných dnů a hodin za jeden souvislý program."
+        },
+        "https://www.ckzije.cz/kalendar-akci/adventni-koncerty-koletovy-hornicke-hudby-384_63cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-koncerty-koletovy-hornicke-hudby-384_63cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Adventní koncerty Koletovy hornické hudby",
+          "expectedDate": "2026-11-28",
+          "expectedEndDate": null,
+          "expectedVenue": "Hala Orlovna Rtyně v Podkrkonoší",
+          "contentHash": "29db1fcf3e37cb2a5b43e02cd6add92a24a444be7afdae1f9a71d4449f184c60",
+          "decision": "hold",
+          "reason": "Místo mimo ověřené jádro Červeného Kostelce (Rtyně/Žireč) nebo samostatná místní část (Lhota/Bohdašín). Vyžaduje přesný samostatný geography/audited receipt; nepřiřazovat centroid města. U souhrnů Lhota navíc nezaměňovat více odlišných dnů a hodin za jeden souvislý program."
+        },
+        "https://www.ckzije.cz/kalendar-akci/slavnostni-rozsviceni-vanocniho-stromku-447_114cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/slavnostni-rozsviceni-vanocniho-stromku-447_114cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Slavnostní rozsvícení vánočního stromku",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "nám. T. G. Masaryka",
+          "contentHash": "fa68d7709b5394871760d55afd4efe571f980387bfcfd6a07f13a85aece08478",
+          "decision": "accept",
+          "reason": "Ověřený místní program v Červeném Kostelci; datum včetně roku je v označeném poli detailu, soulad hodin a podmínek zkontrolován s textem a dostupnými primárními plakáty.",
+          "overrides": {
+            "notes": [
+              "16:00 je začátek hudebního programu; strom se podle textu rozsvítí po vystoupení, přesná hodina rozsvícení uvedena není. Vstupné ani povinná rezervace nejsou uvedeny.",
+              "Věkové omezení vstupu není uvedeno; obecná kategorie publika nepotvrzuje vhodnost pro konkrétní věk."
+            ]
+          }
+        },
+        "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_124cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_124cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Adventní neděle ve Lhotě",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "náves ve Lhotě",
+          "contentHash": "68c77c46c3def1bfba3b19fa674b678fef0ba4290bb70cb745aac72b2eeb7db5",
+          "decision": "hold",
+          "reason": "Místo mimo ověřené jádro Červeného Kostelce (Rtyně/Žireč) nebo samostatná místní část (Lhota/Bohdašín). Vyžaduje přesný samostatný geography/audited receipt; nepřiřazovat centroid města. U souhrnů Lhota navíc nezaměňovat více odlišných dnů a hodin za jeden souvislý program."
+        },
+        "https://www.ckzije.cz/kalendar-akci/adventni-koncert-cervanku-byla-cesta-byla-uslapana-437_106cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-koncert-cervanku-byla-cesta-byla-uslapana-437_106cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Adventní koncert Červánku: Byla cesta, byla ušlapaná...",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Husův sbor",
+          "contentHash": "e0be49bbd119d48dd00ceb859d1a72c86a9d6126d221e41334e88754194aa4e6",
+          "decision": "accept",
+          "reason": "Ověřený místní program v Červeném Kostelci; datum včetně roku je v označeném poli detailu, soulad hodin a podmínek zkontrolován s textem a dostupnými primárními plakáty.",
+          "overrides": {
+            "price": "Dospělí: 120 Kč; děti: 90 Kč (věková hranice neuvedena).",
+            "notes": [
+              "Prodej vstupenek na místě 45 minut před zahájením koncertu. Plakát uvádí dětské vstupné 90 Kč, HTML je označuje pouze jako snížené.",
+              "Věkové omezení vstupu není uvedeno; obecná kategorie publika nepotvrzuje vhodnost pro konkrétní věk."
+            ]
+          }
+        },
+        "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_127cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_127cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Adventní neděle ve Lhotě",
+          "expectedDate": "2026-12-20",
+          "expectedEndDate": null,
+          "expectedVenue": "náves ve Lhotě",
+          "contentHash": "7b416ea60d23c54c559a2508772b6fc1d52eb18404e75a0d158e60ab2d56712d",
+          "decision": "hold",
+          "reason": "Místo mimo ověřené jádro Červeného Kostelce (Rtyně/Žireč) nebo samostatná místní část (Lhota/Bohdašín). Vyžaduje přesný samostatný geography/audited receipt; nepřiřazovat centroid města. U souhrnů Lhota navíc nezaměňovat více odlišných dnů a hodin za jeden souvislý program."
+        },
+        "https://www.ckzije.cz/kalendar-akci/ceska-mse-vanocni-375_51cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/ceska-mse-vanocni-375_51cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Česká mše vánoční",
+          "expectedDate": "2026-12-20",
+          "expectedEndDate": null,
+          "expectedVenue": "Divadlo J. K. Tyla",
+          "contentHash": "f63c5c03e6fdf414ceab09e690bdfb27bcb1459150869981494f5b7fe547e5c2",
+          "decision": "accept",
+          "reason": "Ověřený místní program v Červeném Kostelci; datum včetně roku je v označeném poli detailu, soulad hodin a podmínek zkontrolován s textem a dostupnými primárními plakáty.",
+          "overrides": {
+            "price": "Základní vstupné: 230 Kč; děti do 15 let: 150 Kč; držitelé průkazů ZTP: 50% sleva.",
+            "notes": [
+              "Předprodej od 1. října v IC Červený Kostelec a na webu MKS ČK. Zmínka o předprodeji není tvrzením o povinné rezervaci ani potvrzením volných míst.",
+              "Věkové omezení vstupu není uvedeno; obecná kategorie publika nepotvrzuje vhodnost pro konkrétní věk."
+            ]
+          }
+        },
+        "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_128cs.html": {
+          "sourceId": "cerveny-kostelec-ckzije",
+          "sourceUrl": "https://www.ckzije.cz/kalendar-akci/adventni-nedele-ve-lhote-457_128cs.html",
+          "sourceTown": "Červený Kostelec",
+          "expectedTitle": "Adventní neděle ve Lhotě",
+          "expectedDate": "2026-12-24",
+          "expectedEndDate": null,
+          "expectedVenue": "náves ve Lhotě",
+          "contentHash": "a96892b9420b6216ea5c760eff51890de29353080a01fc31f303c7ad80ebb29f",
+          "decision": "hold",
+          "reason": "Místo mimo ověřené jádro Červeného Kostelce (Rtyně/Žireč) nebo samostatná místní část (Lhota/Bohdašín). Vyžaduje přesný samostatný geography/audited receipt; nepřiřazovat centroid města. U souhrnů Lhota navíc nezaměňovat více odlišných dnů a hodin za jeden souvislý program."
+        }
+      },
+      "coverage_note": "Červený Kostelec: omezený výběr adventních akcí z oficiálního městského kalendáře CK Žije. Dvě ověřené stránky, nejvýše 18 detailů; Rtyně, Žireč, Lhota a Bohdašín zůstávají k samostatnému ověření lokality, ne na středu města. Nejde o úplné městské ani krajské pokrytí."
+    },
+    {
+      "id": "cz-nove-mesto-nad-metuji-calendar",
+      "town": "Nové Město nad Metují",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/"
+      ],
+      "detail_prefixes": [
+        "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/"
+      ],
+      "url_regex": "^https://www\\.novemestonm\\.cz/volny-cas/kalendar-akci-1/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "allowed_venues": [
+        "Kino 70, Nové Město nad Metují",
+        "Husovo náměstí",
+        "Zámek rodiny Bartoň-Dobenín"
+      ],
+      "event_reviews": {
+        "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/adventni-koncert-18978_15166cs.html": {
+          "sourceId": "cz-nove-mesto-nad-metuji-calendar",
+          "sourceUrl": "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/adventni-koncert-18978_15166cs.html",
+          "sourceTown": "Nové Město nad Metují",
+          "expectedTitle": "Adventní koncert",
+          "expectedDate": "2026-11-25",
+          "expectedEndDate": null,
+          "expectedVenue": "Kino 70, Nové Město nad Metují",
+          "contentHash": "b7b152a298acf943f6e198e4f7e3cd696ada7ebdb0130ea801c6b62f460be03a",
+          "decision": "accept",
+          "reason": "Ověřena označená pole primárního detailu a všechny připojené plné plakáty. Neznámé ceny a podmínky nejsou odhadovány; rozporné souhrnné hodiny zůstávají null.",
+          "overrides": {
+            "price": "Plné vstupné: 460 Kč.",
+            "notes": [
+              "Předprodej: Městský klub, Boženy Němcové 720, Nové Město nad Metují; www.mestskyklub.cz; prodej také v místě konání před akcí. Prodej neznamená povinnou rezervaci ani ověřenou dostupnost vstupenek.",
+              "Výtěžek je věnován Stacionáři Nona v Novém Městě nad Metují. Slevy, věkové omezení vstupu ani povinná registrace nejsou uvedeny."
+            ]
+          }
+        },
+        "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/1-adventni-nedele-18971_15164cs.html": {
+          "sourceId": "cz-nove-mesto-nad-metuji-calendar",
+          "sourceUrl": "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/1-adventni-nedele-18971_15164cs.html",
+          "sourceTown": "Nové Město nad Metují",
+          "expectedTitle": "1. Adventní neděle",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Husovo náměstí",
+          "contentHash": "37acf0f60cc755cb9131db9d462593a1bd4f7d90d1648b33c486e5eddd9dcc00",
+          "decision": "accept",
+          "reason": "Ověřena označená pole primárního detailu a všechny připojené plné plakáty. Neznámé ceny a podmínky nejsou odhadovány; rozporné souhrnné hodiny zůstávají null.",
+          "overrides": {
+            "category": "trhy",
+            "startTime": null,
+            "endTime": null,
+            "price": null,
+            "registration": null,
+            "notes": [
+              "Rozpor v hodinách: HTML uvádí 16:30–22:00 a dobu 5 hodin 30 minut, ale hlavní plakát uvádí adventní trhy 13:00–18:00 a prohlídky muzea ve 13:00, 14:00 a 15:00. Celkový začátek a konec proto zůstávají nepotvrzené; nejde o jeden souvislý interval všech aktivit.",
+              "Plakáty potvrzují koncert dětí MŠ Na Františku / Sborečku Lísteček od 16:30 a rozsvícení vánočního stromu v 17:00. Tvořivé dílny, měšťanský betlém a ukázky vánočních tradic jsou uvedeny jako celoodpolední program.",
+              "Místo: Husovo náměstí, u Městského muzea a v Hildeském atriu za IC. Ceny jednotlivých aktivit, povinná registrace a věková omezení nejsou uvedeny; neoznačovat celý program za zdarma."
+            ]
+          }
+        },
+        "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/adventni-beneficni-koncert-18792_15098cs.html": {
+          "sourceId": "cz-nove-mesto-nad-metuji-calendar",
+          "sourceUrl": "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/adventni-beneficni-koncert-18792_15098cs.html",
+          "sourceTown": "Nové Město nad Metují",
+          "expectedTitle": "Adventní benefiční koncert",
+          "expectedDate": "2026-12-05",
+          "expectedEndDate": null,
+          "expectedVenue": "Zámek rodiny Bartoň-Dobenín",
+          "contentHash": "780e8fdc30b84efe91d09c10b9738ec012da4577f025683c92a25be73e270ebb",
+          "decision": "accept",
+          "reason": "Ověřena označená pole primárního detailu a všechny připojené plné plakáty. Neznámé ceny a podmínky nejsou odhadovány; rozporné souhrnné hodiny zůstávají null.",
+          "overrides": {
+            "price": null,
+            "registration": null,
+            "notes": [
+              "Místo v zámku: Velký sál. Datum s rokem 2026 a začátek 17:00 jsou v označeném poli městského detailu.",
+              "V městském detailu není plakát ani cena, předprodej, povinná rezervace nebo věkové omezení. Benefiční účel neznamená dobrovolné či nulové vstupné."
+            ]
+          }
+        },
+        "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/vanocni-talk-show-s-pisnemi-18693_15070cs.html": {
+          "sourceId": "cz-nove-mesto-nad-metuji-calendar",
+          "sourceUrl": "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/vanocni-talk-show-s-pisnemi-18693_15070cs.html",
+          "sourceTown": "Nové Město nad Metují",
+          "expectedTitle": "Vánoční talk show s písněmi",
+          "expectedDate": "2026-12-15",
+          "expectedEndDate": null,
+          "expectedVenue": "Kino 70, Nové Město nad Metují",
+          "contentHash": "ddd4d65408eb10555c7e2b4cbc8d036a437800ca033a69734b6e47d6efcf06fc",
+          "decision": "accept",
+          "reason": "Ověřena označená pole primárního detailu a všechny připojené plné plakáty. Neznámé ceny a podmínky nejsou odhadovány; rozporné souhrnné hodiny zůstávají null.",
+          "overrides": {
+            "price": null,
+            "registration": null,
+            "notes": [
+              "Účinkují Hanka Křížková a Naďa Konvalinková. Plakát uvádí předprodej na www.mestskyklub.cz nebo v IC Husovo náměstí, nikoli povinnou rezervaci. Dostupnost vstupenek není ověřena.",
+              "Cena ani věkové omezení nejsou v městském detailu nebo plakátu uvedeny; vstupné ověřte přímo u pořadatele."
+            ]
+          }
+        }
+      },
+      "coverage_note": "Nové Město nad Metují: omezený sezónní výběr z oficiálního městského kalendáře. Ověřena jedna stránka a čtyři místní detaily; limit dvě stránky a čtrnáct detailů. Nejde o úplné městské ani krajské pokrytí. Okolní obce a neověřená místa se nepřiřazují středu města."
     }
   ]
 }
