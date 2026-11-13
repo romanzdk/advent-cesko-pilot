@@ -7237,6 +7237,499 @@
         "kostel sv. Kříže v Javorníku",
         "náměstí Svobody"
       ]
+    },
+    {
+      "id": "dubi-calendar",
+      "town": "Dubí",
+      "region": "Ústecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mesto-dubi.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mesto-dubi.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mesto-dubi\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Dubí: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Dům porcelánu s modrou krví",
+        "Kostel Panny Marie"
+      ]
+    },
+    {
+      "id": "chrastava-calendar",
+      "town": "Chrastava",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.chrastava.eu/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.chrastava.eu/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.chrastava\\.eu/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Chrastava: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Infocentrum",
+        "Kostel sv. Vavřince",
+        "Náměstí 1. máje"
+      ]
+    },
+    {
+      "id": "ceska-skalice-calendar",
+      "town": "Česká Skalice",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.ceskaskalice.cz/volny-cas/kultura/kulturni-kalendar/"
+      ],
+      "detail_prefixes": [
+        "https://www.ceskaskalice.cz/volny-cas/kultura/kulturni-kalendar/"
+      ],
+      "url_regex": "^https://www\\.ceskaskalice\\.cz/volny-cas/kultura/kulturni-kalendar/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Česká Skalice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "na Hurdálkově náměstí",
+        "na Husově náměstí",
+        "v Muzeu Boženy Němcové",
+        "v sokolovně",
+        "ve Staré radnici"
+      ]
+    },
+    {
+      "id": "vamberk-calendar",
+      "town": "Vamberk",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.vamberk.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.vamberk.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.vamberk\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Vamberk: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Husovo náměstí",
+        "Kostel sv. Prokopa",
+        "Městský klub Sokolovna",
+        "Vamberk"
+      ]
+    },
+    {
+      "id": "osek-calendar",
+      "town": "Osek",
+      "region": "Ústecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.osek.cz/volny-cas/kalendar-akci-1/"
+      ],
+      "detail_prefixes": [
+        "https://www.osek.cz/volny-cas/kalendar-akci-1/"
+      ],
+      "url_regex": "^https://www\\.osek\\.cz/volny-cas/kalendar-akci-1/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Osek: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Cisterciácký klášter",
+        "KD Stropník"
+      ]
+    },
+    {
+      "id": "chlumec-calendar",
+      "town": "Chlumec",
+      "region": "Ústecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mesto-chlumec.cz/zivot-ve-meste/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mesto-chlumec.cz/zivot-ve-meste/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mesto-chlumec\\.cz/zivot-ve-meste/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Chlumec: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Náměstí",
+        "Sál Kulturního domu"
+      ]
+    },
+    {
+      "id": "kamenicky-senov-calendar",
+      "town": "Kamenický Šenov",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.kamenicky-senov.cz/kultura-a-sport/kalendar-akci-1/"
+      ],
+      "detail_prefixes": [
+        "https://www.kamenicky-senov.cz/kultura-a-sport/kalendar-akci-1/"
+      ],
+      "url_regex": "^https://www\\.kamenicky-senov\\.cz/kultura-a-sport/kalendar-akci-1/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Kamenický Šenov: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "náměstí T.G.Masaryka"
+      ]
+    },
+    {
+      "id": "zakupy-calendar",
+      "town": "Zákupy",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.zakupy.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.zakupy.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.zakupy\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Zákupy: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "KD Zákupy",
+        "Státní zámek Zákupy",
+        "Školní jídelna Základní školy Zákupy"
+      ]
+    },
+    {
+      "id": "cesky-dub-calendar",
+      "town": "Český Dub",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.cdub.cz/aktuality-2/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.cdub.cz/aktuality-2/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.cdub\\.cz/aktuality-2/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Český Dub: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Husův sbor",
+        "Komunitní centrum Karolínka",
+        "Městská knihovna",
+        "Náměstí B. Smetany",
+        "Podještědské muzeum - Blaschkova vila",
+        "Sokolovna Český Dub"
+      ]
+    },
+    {
+      "id": "solnice-calendar",
+      "town": "Solnice",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.solnice.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.solnice.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.solnice\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Solnice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Společenský dům",
+        "kostel Sv. Jakuba Většího"
+      ]
+    },
+    {
+      "id": "vroutek-calendar",
+      "town": "Vroutek",
+      "region": "Ústecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.vroutek.net/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.vroutek.net/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.vroutek\\.net/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Vroutek: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "nám. Míru"
+      ]
+    },
+    {
+      "id": "hostka-calendar",
+      "town": "Hoštka",
+      "region": "Ústecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.hostka.cz/cs/volny-cas/akce-a-udalosti/"
+      ],
+      "detail_prefixes": [
+        "https://www.hostka.cz/cs/volny-cas/akce-a-udalosti/"
+      ],
+      "url_regex": "^https://www\\.hostka\\.cz/cs/volny-cas/akce-a-udalosti/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Hoštka: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "náměstí"
+      ]
+    },
+    {
+      "id": "duba-calendar",
+      "town": "Dubá",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mestoduba.cz/o-meste/informace-pro-obcany/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mestoduba.cz/o-meste/informace-pro-obcany/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mestoduba\\.cz/o-meste/informace-pro-obcany/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Dubá: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Město Dubá - obřadní síň",
+        "Náměstí v Dubé"
+      ]
+    },
+    {
+      "id": "teplice-nad-metuji-calendar",
+      "town": "Teplice nad Metují",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.teplicenadmetuji.cz/volny-cas-a-turistika/akce-u-nas/"
+      ],
+      "detail_prefixes": [
+        "https://www.teplicenadmetuji.cz/volny-cas-a-turistika/akce-u-nas/"
+      ],
+      "url_regex": "^https://www\\.teplicenadmetuji\\.cz/volny-cas-a-turistika/akce-u-nas/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Teplice nad Metují: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Domov Dolní Zámek"
+      ]
+    },
+    {
+      "id": "zeleznice-calendar",
+      "town": "Železnice",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.zeleznice.net/zivot-ve-meste/kultura/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.zeleznice.net/zivot-ve-meste/kultura/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.zeleznice\\.net/zivot-ve-meste/kultura/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Železnice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Sokolovna Železnice",
+        "Vlastivědné muzeum a galerie v Železnici",
+        "Zasedací síň radnice v přízemí v Železnici",
+        "fara v Železnici",
+        "kostel sv. Jiljí v Železnici",
+        "před kulturním domem",
+        "před roubenou chaloupkou Vlastivědného muzea a galerie v Železnici",
+        "Železnice"
+      ]
+    },
+    {
+      "id": "rovensko-pod-troskami-calendar",
+      "town": "Rovensko pod Troskami",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.rovensko.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.rovensko.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.rovensko\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Rovensko pod Troskami: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Náměstí prof. Drahoňovského 1",
+        "Sborový dům - Revoluční 399, Rovensko p. Tr."
+      ]
+    },
+    {
+      "id": "vysoke-nad-jizerou-calendar",
+      "town": "Vysoké nad Jizerou",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.vysokenadjizerou.cz/mesto/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.vysokenadjizerou.cz/mesto/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.vysokenadjizerou\\.cz/mesto/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Vysoké nad Jizerou: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Divadlo Krakonoš",
+        "Nám. Dr. Karla Kramáře"
+      ]
+    },
+    {
+      "id": "spindleruv-mlyn-calendar",
+      "town": "Špindlerův Mlýn",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.spindleruvmlyn.org/volny-cas-a-turistika/kultura-a-sport/kalendar-akci-2/"
+      ],
+      "detail_prefixes": [
+        "https://www.spindleruvmlyn.org/volny-cas-a-turistika/kultura-a-sport/kalendar-akci-2/"
+      ],
+      "url_regex": "^https://www\\.spindleruvmlyn\\.org/volny-cas-a-turistika/kultura-a-sport/kalendar-akci-2/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Špindlerův Mlýn: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Centrum města",
+        "Městský park"
+      ]
+    },
+    {
+      "id": "janske-lazne-calendar",
+      "town": "Janské Lázně",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.janske-lazne.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.janske-lazne.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.janske-lazne\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Janské Lázně: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "centrum města a okolí"
+      ]
+    },
+    {
+      "id": "starkov-calendar",
+      "town": "Stárkov",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.starkov.cz/cs/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.starkov.cz/cs/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.starkov\\.cz/cs/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Stárkov: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Město Stárkov"
+      ]
+    },
+    {
+      "id": "mastov-calendar",
+      "town": "Mašťov",
+      "region": "Ústecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mastov.cz/zivot-ve-meste/akce-v-nasem-meste/"
+      ],
+      "detail_prefixes": [
+        "https://www.mastov.cz/zivot-ve-meste/akce-v-nasem-meste/"
+      ],
+      "url_regex": "^https://www\\.mastov\\.cz/zivot-ve-meste/akce-v-nasem-meste/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Mašťov: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Město Maštov"
+      ]
+    },
+    {
+      "id": "vysluni-calendar",
+      "town": "Výsluní",
+      "region": "Ústecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mesto-vysluni.cz/kultura-a-sport/kulturni-akce/"
+      ],
+      "detail_prefixes": [
+        "https://www.mesto-vysluni.cz/kultura-a-sport/kulturni-akce/"
+      ],
+      "url_regex": "^https://www\\.mesto-vysluni\\.cz/kultura-a-sport/kulturni-akce/[^/?#]+-\\d+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Výsluní: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Město Výsluní"
+      ]
     }
   ]
 }
