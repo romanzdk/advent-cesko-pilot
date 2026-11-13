@@ -10,6 +10,40 @@ let events = [];
 let coverageRegions = [];
 let eventsLoaded = false;
 let visibleEvents = [];
+const LIST_BATCH = 20;
+let listLimit = LIST_BATCH, renderedCount = 0, lastFilterKey;
+const listControls = el('div', null, 'list-controls');
+const listCount = el('p');
+listCount.id = 'list-count';
+listCount.setAttribute('role', 'status');
+listCount.setAttribute('aria-live', 'polite');
+const loadMore = el('button', 'Zobrazit další');
+loadMore.type = 'button';
+loadMore.id = 'load-more';
+loadMore.setAttribute('aria-controls', 'results');
+listControls.append(listCount, loadMore);
+loadMore.addEventListener('click', () => {
+  const focusNew = document.activeElement === loadMore;
+  const start = renderedCount;
+  listLimit += LIST_BATCH;
+  appendCards();
+  if (focusNew) $('results').querySelectorAll('.event-card')[start]?.focus({ preventScroll: true });
+});
+function appendCards() {
+  const fragment = document.createDocumentFragment();
+  let month = visibleEvents[renderedCount - 1]?.date.slice(0, 7);
+  for (const event of visibleEvents.slice(renderedCount, listLimit)) {
+    if (event.date.slice(0, 7) !== month) {
+      month = event.date.slice(0, 7);
+      fragment.append(el('h2', monthFormat.format(dateValue(event.date)), 'month-heading'));
+    }
+    fragment.append(card(event));
+  }
+  $('results').insertBefore(fragment, listControls);
+  renderedCount = Math.min(listLimit, visibleEvents.length);
+  listCount.textContent = `Zobrazeno ${renderedCount} z ${visibleEvents.length}`;
+  loadMore.hidden = renderedCount >= visibleEvents.length;
+}
 let map, markerLayer, mapPromise;
 let tileFailed = false;
 let userPosition = null, userMarker, locationTimer;
@@ -23,6 +57,11 @@ permalinkStatus.hidden = true;
 $('explore').before(permalinkStatus);
 
 function selectEvent(id) {
+  const index = visibleEvents.findIndex(event => event.id === id);
+  if (index >= renderedCount) {
+    listLimit = Math.ceil((index + 1) / LIST_BATCH) * LIST_BATCH;
+    appendCards();
+  }
   setView('list');
   for (const card of document.querySelectorAll('.event-card')) {
     const selected = card.dataset.id === id;
@@ -361,6 +400,10 @@ function render() {
   $('date-range-error').textContent = rangeError;
   $('date-range-error').hidden = !rangeError;
   for (const id of ['date-from', 'date-to']) $(id).setAttribute('aria-invalid', String(Boolean(rangeError)));
+  const filterKey = JSON.stringify([filters, userPosition?.lat, userPosition?.lon, $('nearby-radius').value, rangeError]);
+  if (filterKey === lastFilterKey) return;
+  lastFilterKey = filterKey;
+  listLimit = LIST_BATCH;
   const fragment = document.createDocumentFragment();
   if (!visible.length) {
     const empty = el('div', null, 'empty-state state-message');
@@ -368,20 +411,14 @@ function render() {
     empty.append(el('h3', rangeError ? 'Zkontrolujte rozsah dat' : 'Žádná akce pro tento výběr'), el('p', rangeError || (emptyRegion ? 'Pro tento kraj zatím nemáme publikované akce. Neznamená to, že se zde nic nekoná. Přehled má neúplné pokrytí.' : userPosition ? 'Žádné akce ve zvoleném okruhu a filtrech; přehled má neúplné pokrytí. Zkuste větší okruh nebo jiné filtry.' : 'Zkuste jiný termín, obec nebo zrušte filtry.')));
     fragment.append(empty);
   }
-  let month;
-  for (const event of visible) {
-    if (event.date.slice(0, 7) !== month) {
-      month = event.date.slice(0, 7);
-      fragment.append(el('h2', monthFormat.format(dateValue(event.date)), 'month-heading'));
-    }
-    fragment.append(card(event));
-  }
-  $('results').replaceChildren(fragment);
+  visibleEvents = visible;
+  renderedCount = 0;
+  $('results').replaceChildren(fragment, listControls);
+  appendCards();
   $('results').setAttribute('aria-busy', 'false');
   const period = bounds ? `${dateFormat.format(dateValue(bounds[0]))}–${dateFormat.format(dateValue(bounds[1]))}` : 'všechny termíny';
   const scope = [filters.region, filters.town].filter(Boolean);
   $('result-count').textContent = rangeError ? 'Opravte rozsah dat.' : `${visible.length} ${visible.length === 1 ? 'akce' : visible.length < 5 ? 'akce' : 'akcí'} · ${[...scope, period].join(' · ')}`;
-  visibleEvents = visible;
   updateMap();
 }
 function setView(view) {
@@ -467,6 +504,7 @@ $('filters').addEventListener('reset', event => {
   $('town').value = '';
   closeTowns();
   clearLocation();
+  lastFilterKey = undefined;
   render();
 });
 function validData(data) {
@@ -483,6 +521,7 @@ function validData(data) {
 }
 async function load() {
   eventsLoaded = false;
+  lastFilterKey = undefined;
   $('locate-user').disabled = true;
   for (const control of $('filters').elements) control.disabled = true;
   $('results').setAttribute('aria-busy', 'true');

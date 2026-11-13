@@ -16,6 +16,170 @@ export const fixture = {
     { id: 'fixture-c', title: '<img src=x onerror=alert(1)> Adventní setkání', town: 'Beroun', venue: 'Klub', date: '2026-12-05', endDate: null, startTime: '14:00', endTime: '17:00', category: 'setkani', price: 'Zdarma', registration: null, registrationUrl: 'javascript:alert(1)', description: '<script>window.injected=true</script>', notes: [], audience: 'senioři / omezené zaměření', status: 'confirmed', verifiedAt: '2026-11-12T10:00:00Z', sourceUrl: 'javascript:alert(1)', location: { lat: 49.964, lon: 14.073, precision: 'town', label: 'Beroun', sourceUrl: 'https://example.cz/poloha' } }
   ]
 };
+const batchFixture = { ...fixture, events: Array.from({ length: 47 }, (_, i) => ({
+  ...fixture.events[0], id: `e-batch-${i}`, title: `Akce ${String(i).padStart(2, '0')}`,
+  date: i < 25 ? '2026-11-28' : '2026-12-05', category: i % 2 ? 'strom' : 'tvoreni',
+  region: 'Středočeský kraj', town: i % 2 ? 'Beroun' : 'Říčany'
+})) };
+test('list batches append 20/40/47 cards with honest totals, stable DOM and accessible focus', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    assert.equal(await page.locator('.event-card').count(), 20);
+    assert.match(await page.locator('#result-count').innerText(), /^47 akcí/);
+    assert.equal(await page.locator('.month-heading').count(), 1);
+    assert.equal(await page.locator('#list-count').innerText(), 'Zobrazeno 20 z 47');
+    assert.equal(await page.locator('#list-count').getAttribute('role'), 'status');
+    const more = page.getByRole('button', { name: 'Zobrazit další', exact: true });
+    assert.equal(await more.count(), 1);
+    await page.evaluate(() => { window.firstCard = document.querySelector('.event-card'); window.firstMonth = document.querySelector('.month-heading'); });
+    await more.focus();
+    await more.scrollIntoViewIfNeeded();
+    const y = await page.evaluate(() => scrollY);
+    const requests = [];
+    page.on('request', request => requests.push(request.url()));
+    await more.press('Enter');
+    assert.equal(await page.locator('.event-card').count(), 40);
+    assert.equal(await page.locator('#list-count').innerText(), 'Zobrazeno 40 z 47');
+    assert.equal(await page.evaluate(() => document.querySelector('.event-card') === window.firstCard && document.querySelector('.month-heading') === window.firstMonth), true);
+    assert.equal(await page.locator('[data-id="e-batch-20"]').evaluate(n => n === document.activeElement), true);
+    assert.equal(await page.evaluate(() => scrollY), y);
+    assert.equal(await page.locator('.month-heading').count(), 2);
+    await more.focus();
+    await more.press('Enter');
+    assert.equal(await page.locator('.event-card').count(), 47);
+    assert.equal(await page.locator('#list-count').innerText(), 'Zobrazeno 47 z 47');
+    assert.equal(await more.isVisible(), false);
+    assert.equal(await page.locator('[data-id="e-batch-40"]').evaluate(n => n === document.activeElement), true);
+    assert.equal(await page.locator('.month-heading').count(), 2);
+    assert.deepEqual(requests, []);
+    assert.deepEqual(errors, []);
+  }, { data: batchFixture, mobile: true });
+});
+test('list batches reset only for changed filters or explicit reset, not same-filter renders or map toggles', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    const more = page.locator('#load-more');
+    await more.click();
+    await page.evaluate(() => { window.keptCard = document.querySelector('.event-card'); document.getElementById('search').dispatchEvent(new Event('input', { bubbles: true })); });
+    assert.equal(await page.locator('.event-card').count(), 40);
+    assert.equal(await page.evaluate(() => document.querySelector('.event-card') === window.keptCard), true);
+    await page.locator('#show-map').click();
+    await page.locator('#show-list').click();
+    assert.equal(await page.locator('.event-card').count(), 40);
+    for (const [id, value] of [['search','Akce'], ['town','Ber'], ['category','strom'], ['region','Středočeský kraj'], ['period','custom']]) {
+      if (await page.locator('#load-more').isVisible()) await more.click();
+      if (['search','town'].includes(id)) await page.locator(`#${id}`).fill(value);
+      else await page.locator(`#${id}`).selectOption(value);
+      assert.equal(await page.locator('.event-card').count(), 20, id);
+    }
+    await more.click();
+    await page.locator('#date-from').fill('2026-11-20');
+    assert.equal(await page.locator('.event-card').count(), 20);
+    await page.locator('#date-from').press('Backspace');
+    assert.equal(await page.locator('#date-from').evaluate(n => n.validity.badInput), true);
+    assert.equal(await page.locator('.event-card').count(), 0);
+    assert.equal(await more.isVisible(), false);
+    await page.evaluate(() => document.getElementById('date-from').dispatchEvent(new Event('change', { bubbles: true })));
+    assert.equal(await page.locator('.event-card').count(), 0);
+    await page.locator('#date-from').fill('2026-11-20');
+    await page.locator('#date-to').fill('2026-11-19');
+    assert.equal(await more.isVisible(), false);
+    assert.equal(await page.locator('.event-card').count(), 0);
+    await page.locator('button[type=reset]').click();
+    assert.equal(await page.locator('.event-card').count(), 20);
+    await more.click();
+    await page.locator('button[type=reset]').click();
+    assert.equal(await page.locator('.event-card').count(), 20);
+    await page.locator('#search').fill('nonesuch');
+    assert.equal(await more.isVisible(), false);
+    assert.equal(await page.locator('#list-count').innerText(), 'Zobrazeno 0 z 0');
+    assert.deepEqual(errors, []);
+  }, { data: batchFixture, mobile: true });
+});
+test('batched permalinks reveal whole required batches after async load, filters, history and retry', async () => {
+  for (const mobile of [false, true]) await app(async (page, errors) => {
+    await page.waitForSelector('[data-id="e-batch-42"].selected', { timeout: 3000 });
+    assert.equal(await page.locator('.event-card').count(), 47);
+    assert.equal(await page.locator('[data-id="e-batch-42"]').evaluate(n => n === document.activeElement), true);
+    await page.locator('#search').fill('Akce 00');
+    await page.evaluate(() => { location.hash = 'akce=e-batch-21'; });
+    await page.waitForSelector('[data-id="e-batch-21"].selected', { timeout: 3000 });
+    assert.equal(await page.locator('#search').inputValue(), '');
+    assert.equal(await page.locator('.event-card').count(), 40);
+    await page.goBack();
+    await page.waitForSelector('[data-id="e-batch-42"].selected', { timeout: 3000 });
+    assert.equal(await page.locator('.event-card').count(), 47);
+    assert.deepEqual(errors, []);
+  }, { data: batchFixture, mobile, delay: 100, base: '/advent-cesko-pilot/#akce=e-batch-42' });
+  await app(async (page, errors) => {
+    await page.waitForSelector('.load-error');
+    assert.equal(await page.locator('#load-more').isVisible(), false);
+    await page.route('**/events.json', route => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(batchFixture) }));
+    await page.getByRole('button', { name: 'Zkusit znovu', exact: true }).click();
+    await page.waitForSelector('[data-id="e-batch-21"].selected', { timeout: 3000 });
+    assert.equal(await page.locator('.event-card').count(), 40);
+    assert.equal(await page.locator('#list-count').innerText(), 'Zobrazeno 40 z 47');
+    assert.deepEqual(errors, []);
+  }, { data: batchFixture, responseStatus: 503, mobile: true, base: '/#akce=e-batch-21' });
+});
+test('all batched matches stay on the map; popup reveals a late card and appending preserves selection and markers', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.map-marker');
+    assert.equal(await page.locator('.event-card').count(), 20);
+    await page.locator('.map-marker').click();
+    assert.equal(await page.locator('.popup-event').count(), 47);
+    await page.locator('.popup-event').filter({ hasText: 'Akce 21' }).click();
+    assert.equal(await page.locator('.event-card').count(), 40);
+    assert.equal(await page.locator('[data-id="e-batch-21"].selected').evaluate(n => n === document.activeElement), true);
+    assert.equal(new URL(page.url()).hash, '');
+    await page.evaluate(() => { window.keptMarker = document.querySelector('.map-marker'); window.keptSelection = document.querySelector('.event-card.selected'); });
+    const requests = [];
+    page.on('request', request => requests.push(request.url()));
+    await page.locator('#load-more').click();
+    assert.equal(await page.locator('.event-card').count(), 47);
+    assert.equal(await page.evaluate(() => document.querySelector('.map-marker') === window.keptMarker && document.querySelector('.event-card.selected') === window.keptSelection), true);
+    assert.deepEqual(requests, []);
+    assert.deepEqual(errors, []);
+  }, { data: batchFixture });
+});
+test('batch control fits 393px and 320px phones with a 44px target; loading has no stale CTA', async () => {
+  for (const width of [393, 320]) await app(async (page, errors) => {
+    await page.setViewportSize({ width, height: 852 });
+    assert.equal(await page.locator('#load-more').isVisible(), false);
+    await page.waitForSelector('.event-card');
+    const box = await page.locator('#load-more').boundingBox();
+    assert(box.height >= 44 && box.width >= 44);
+    assert(box.x >= 0 && box.x + box.width <= width);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    await page.locator('#load-more').click();
+    assert.equal(await page.locator('.event-card').count(), 40);
+    assert.deepEqual(errors, []);
+  }, { data: batchFixture, mobile: true, delay: 400 });
+});
+test('nearby changes reset batches and delayed coverage leaves the expanded list alone', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await page.locator('#load-more').click();
+    await page.locator('#locate-user').click();
+    await geoSuccess(page);
+    await page.locator('#show-list').click();
+    assert.equal(await page.locator('.event-card').count(), 20);
+    await page.locator('#load-more').click();
+    await page.locator('#nearby-radius').selectOption('25');
+    assert.equal(await page.locator('.event-card').count(), 20);
+    await page.locator('#load-more').click();
+    await page.locator('#clear-location').click();
+    assert.equal(await page.locator('.event-card').count(), 20);
+    await page.locator('#load-more').click();
+    await page.evaluate(() => { window.coverageCard = document.querySelector('.event-card'); });
+    // Fulfil the initial independently pending coverage request after expansion.
+    await page.evaluate(() => window.releaseCoverage());
+    await page.waitForFunction(() => document.getElementById('scope-summary').textContent.includes('3 kraje'), null, { timeout: 3000 });
+    assert.equal(await page.locator('.event-card').count(), 40);
+    assert.equal(await page.evaluate(() => document.querySelector('.event-card') === window.coverageCard), true);
+    assert.deepEqual(errors, []);
+  }, { data: batchFixture, mobile: true, geoMock: true, coverageDeferred: true });
+});
 const regionalFixture = {
   ...fixture,
   events: fixture.events.map((event, index) => ({ ...event,
@@ -69,11 +233,14 @@ after(async () => {
   await browser?.close();
   if (server) await new Promise(resolve => server.close(resolve));
 });
-async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile = false, responseStatus = 200, delay = 0, libraryFail = false, coverage = coverageFixture, coverageStatus = 200, coveragePending = false, javaScriptEnabled = true, geoMock = false } = {}) {
+async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile = false, responseStatus = 200, delay = 0, libraryFail = false, coverage = coverageFixture, coverageStatus = 200, coveragePending = false, coverageDeferred = false, javaScriptEnabled = true, geoMock = false } = {}) {
   const context = await browser.newContext({ viewport: mobile ? { width: 393, height: 852 } : { width: 1440, height: 1000 }, timezoneId: 'America/Los_Angeles', hasTouch: mobile, javaScriptEnabled });
   try {
     if (geoMock) await context.addInitScript(installGeoMock);
     const page = await context.newPage();
+    let releaseCoverage;
+    const coverageReady = new Promise(resolve => { releaseCoverage = resolve; });
+    if (coverageDeferred) await page.exposeFunction('releaseCoverage', releaseCoverage);
     await context.route('https://api.github.com/**', route => route.fulfill({ status: 200, contentType: 'application/json', body: '[]', headers: { 'access-control-allow-origin': '*' } }));
     await context.route('https://github.com/**', route => route.fulfill({ status: 200, contentType: 'text/html', body: '<title>Draft interception fixture</title>' }));
     const errors = [];
@@ -85,6 +252,7 @@ async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile 
     });
     await page.route('**/coverage.json', async route => {
       if (coveragePending) return;
+      if (coverageDeferred) await coverageReady;
       await route.fulfill({ status: coverageStatus, contentType: 'application/json', body: JSON.stringify(coverage) });
     });
     await page.route('https://tile.openstreetmap.org/**', route => route.abort());
