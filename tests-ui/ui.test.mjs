@@ -222,7 +222,7 @@ before(async () => {
       const data = await readFile(new URL(`../site${path}`, import.meta.url));
       res.setHeader('Content-Type', path.endsWith('.js') ? 'text/javascript' : path.endsWith('.css') ? 'text/css' : path.endsWith('.svg') ? 'image/svg+xml' : 'text/html; charset=utf-8');
       res.setHeader('X-Content-Type-Options', 'nosniff');
-      res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'");
+      res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://api.github.com https://hermes.dory-geological.ts.net:10000; object-src 'none'; base-uri 'self'");
       res.end(data);
     } catch { res.setHeader('Content-Type', 'text/html'); res.end('<!doctype html><html lang="cs"><title>Missing frontend</title><body>Frontend not implemented</body></html>'); }
   });
@@ -241,6 +241,8 @@ async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile 
     let releaseCoverage;
     const coverageReady = new Promise(resolve => { releaseCoverage = resolve; });
     if (coverageDeferred) await page.exposeFunction('releaseCoverage', releaseCoverage);
+    // Credential-free receiver is ALWAYS mocked: no real submissions in this suite.
+    await context.route('https://hermes.dory-geological.ts.net:10000/**', route => route.fulfill({ status: 503, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: '{"error":"unavailable"}' }));
     await context.route('https://api.github.com/**', route => route.fulfill({ status: 200, contentType: 'application/json', body: '[]', headers: { 'access-control-allow-origin': '*' } }));
     await context.route('https://github.com/**', route => route.fulfill({ status: 200, contentType: 'text/html', body: '<title>Draft interception fixture</title>' }));
     const errors = [];
@@ -273,6 +275,326 @@ async function mockLocation(page) { await page.evaluate(installGeoMock); }
 async function geoSuccess(page, index = 0) {
   await page.evaluate(index => window.geoCalls[index].success({ coords: { latitude: 49.964, longitude: 14.073, accuracy: 30 } }), index);
 }
+const API = 'https://hermes.dory-geological.ts.net:10000';
+const acceptedID = '10000000-0000-4000-8000-000000000001';
+async function receiver(page, handle) {
+  await page.route(`${API}/**`, async route => {
+    const request = route.request(), path = new URL(request.url()).pathname;
+    const result = await handle(path, request.method() === 'POST' ? request.postDataJSON() : undefined, route);
+    if (result === undefined) return;
+    await route.fulfill({ status: result.http || 200, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify(result) });
+  });
+}
+async function readyTip(page) {
+  await page.locator('#feedback > summary').click();
+  await page.locator('#feedback-mode').selectOption('quick');
+  await page.locator('#feedback-town').fill('Brno');
+  await page.locator('#feedback-consent').check();
+}
+test('anonymous tip primary submit accepts then follows canonical ID without opening GitHub', async () => {
+  await app(async (page, errors) => {
+    const calls = [];
+    await receiver(page, (path, payload) => {
+      calls.push([path, payload]);
+      if (path === '/api/challenge') return { challenge: 'fixture-token' };
+      if (payload) return { requestId: acceptedID, status: 'pending' };
+      return { requestId: acceptedID, status: 'submitted', issueURL: 'https://github.com/romanzdk/advent-cesko-pilot/issues/42' };
+    });
+    await page.waitForSelector('.event-card');
+    assert.equal(calls.length, 0);
+    await readyTip(page);
+    await page.clock.fastForward(2200);
+    await page.locator('#feedback-form button[type=submit]').click();
+    await page.waitForFunction(() => document.getElementById('feedback-message').textContent.includes('Přijato'));
+    assert.equal(await page.locator('#feedback-fallback').isEnabled(), false);
+    await page.clock.fastForward(1100);
+    await page.waitForFunction(() => document.getElementById('feedback-message').textContent.includes('Zveřejněno'));
+    assert.equal(await page.locator('#feedback-result').getAttribute('href'), 'https://github.com/romanzdk/advent-cesko-pilot/issues/42');
+    assert(calls.some(([path]) => path === `/api/submissions/${acceptedID}`));
+    const payload = calls.find(([, payload]) => payload)?.[1];
+    assert.equal(payload.mode, 'tip'); assert.equal(payload.consent, true);
+    assert.equal(payload.website, ''); assert.match(payload.requestId, /^[0-9a-f-]{36}$/);
+    assert.equal(page.context().pages().length, 1);
+    assert.deepEqual(errors, []);
+  });
+});
+test('reports preserve event-scoped drafts, accepted locks and accessible native dialog across A B A and rerenders', async () => {
+  await app(async (page, errors) => {
+    const posts = [];
+    await receiver(page, (path, payload) => {
+      if (path === '/api/challenge') return { challenge: 'fixture-token' };
+      if (payload) posts.push(payload);
+      return { requestId: acceptedID, status: 'submitted', issueURL: 'https://github.com/romanzdk/advent-cesko-pilot/issues/42' };
+    });
+    await page.waitForSelector('.event-card');
+    const action = id => page.locator(`[data-id="fixture-${id}"] .report-button`);
+    await action('a').click({ timeout: 1500 });
+    assert.equal(await page.locator('#report-dialog').evaluate(n => n.open && n.matches(':modal')), true);
+    assert.match(await page.locator('#report-context').innerText(), /Rozsvícení stromu.*|Říčany/s);
+    assert.equal(await page.locator('#report-kind').evaluate(n => n === document.activeElement), true);
+    await page.locator('#report-kind').selectOption('time');
+    await page.locator('#report-description').fill('Začátek je v 17:00.');
+    await page.locator('#report-source').fill('https://example.cz/correction');
+    await page.locator('#report-consent').check();
+    await page.clock.fastForward(2200);
+    await page.locator('#report-form button[type=submit]').click();
+    await page.waitForFunction(() => document.getElementById('report-message').textContent.includes('Zveřejněno'));
+    await page.keyboard.press('Escape');
+    assert.equal(await action('a').evaluate(n => n === document.activeElement), true);
+    await action('b').click();
+    assert.equal(await page.locator('#report-description').inputValue(), '');
+    await page.locator('#report-description').fill('B draft');
+    await page.locator('#report-close').click();
+    await page.locator('#category').selectOption('strom');
+    await action('a').click();
+    assert.equal(await page.locator('#report-description').inputValue(), 'Začátek je v 17:00.');
+    assert.equal(await page.locator('#report-fallback').isEnabled(), false);
+    assert.match(await page.locator('#report-message').innerText(), /Zveřejněno/);
+    await page.locator('#report-form button[type=submit]').click();
+    await page.waitForFunction(() => !document.querySelector('#report-form button[type=submit]').disabled);
+    assert.equal(posts.length, 1);
+    assert.deepEqual(Object.keys(posts[0]).sort(), ['challenge','consent','description','errorKind','eventId','mode','requestId','sourceURL','website'].sort());
+    assert.equal(posts[0].eventId, 'fixture-a'); assert.equal(posts[0].errorKind, 'time');
+    for (const width of [393,320]) {
+      await page.setViewportSize({width,height:852});
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+      assert.equal(await page.locator('#report-dialog').evaluate(n => n.scrollWidth <= n.clientWidth), true);
+    }
+    assert.deepEqual(errors, []);
+  }, {mobile:true});
+});
+for (const stage of ['readiness', 'refresh-success', 'refresh-failure']) test(`report stale ${stage} cannot overwrite another confirmed event`, async () => {
+  await app(async (page, errors) => {
+    let challengeCount = 0, release;
+    const gate = new Promise(resolve => { release = resolve; });
+    await receiver(page, async (path, payload, route) => {
+      if (path === '/api/challenge') {
+        challengeCount++;
+        if (challengeCount === (stage === 'readiness' ? 1 : 2)) {
+          await gate;
+          if (stage !== 'refresh-success') { await route.abort(); return; }
+        }
+        return { challenge: 'fixture-token' };
+      }
+      if (payload?.eventId === 'fixture-a') return { http:400, error:'challenge', message:'Obnovte ověření.' };
+      return { requestId: acceptedID, status:'submitted', issueURL:'https://github.com/romanzdk/advent-cesko-pilot/issues/42' };
+    });
+    await page.waitForSelector('.report-button');
+    const open = id => page.locator(`[data-id="fixture-${id}"] .report-button`).click();
+    await open('a');
+    if (stage !== 'readiness') {
+      await page.locator('#report-description').fill('A correction'); await page.locator('#report-consent').check();
+      await page.clock.fastForward(2200);
+      await page.locator('#report-form button[type=submit]').click();
+      await page.waitForFunction(() => document.querySelector('#report-form button[type=submit]').disabled);
+      while (challengeCount < 2) await page.waitForTimeout(10);
+    }
+    await page.locator('#report-close').click(); await open('b');
+    await page.locator('#report-description').fill('B correction'); await page.locator('#report-consent').check();
+    await page.clock.fastForward(2200);
+    await page.locator('#report-form button[type=submit]').click();
+    await page.waitForFunction(() => document.getElementById('report-message').textContent.includes('Zveřejněno'));
+    await page.evaluate(() => {
+      window.reportWrites = [];
+      const descriptor = Object.getOwnPropertyDescriptor(Node.prototype, 'textContent');
+      Object.defineProperty(document.getElementById('report-message'), 'textContent', {get(){return descriptor.get.call(this);},set(value){window.reportWrites.push(value);descriptor.set.call(this,value);}});
+    });
+    release(); await page.clock.fastForward(2200); await page.waitForTimeout(80);
+    assert.match(await page.locator('#report-message').innerText(), /Zveřejněno/);
+    assert.deepEqual(await page.evaluate(() => window.reportWrites), []);
+    assert.equal(await page.locator('#report-fallback').isEnabled(), false);
+    await page.locator('#report-close').click(); await open('a');
+    if (stage !== 'readiness') {
+      await page.waitForFunction(() => !document.querySelector('#report-form button[type=submit]').disabled);
+      assert.match(await page.locator('#report-message').innerText(), stage === 'refresh-success' ? /Ověření obnoveno/ : /nelze obnovit/);
+    }
+    assert.deepEqual(errors, []);
+  });
+});
+test('unknown POST locks fallback after edits and retries GET with original ID, then follows uncertain canonical ID', async () => {
+  await app(async (page, errors) => {
+    let sent, gets = 0, posts = 0;
+    await receiver(page, async (path, payload, route) => {
+      if (path === '/api/challenge') return {challenge:'fixture-token'};
+      if (payload) { posts++; sent=payload; await route.abort(); return; }
+      gets++;
+      assert.equal(path, `/api/submissions/${gets === 1 ? sent.requestId : acceptedID}`);
+      return {requestId:acceptedID,status:gets === 1 ? 'uncertain' : 'submitted',issueURL:'https://github.com/romanzdk/advent-cesko-pilot/issues/42'};
+    });
+    await readyTip(page); await page.clock.fastForward(2200);
+    await page.locator('#feedback-fallback').click();
+    assert.equal(await page.locator('#feedback-draft').isVisible(), true);
+    await page.locator('#feedback-form button[type=submit]').click();
+    await page.waitForFunction(() => document.getElementById('feedback-message').textContent.includes('nelze potvrdit'));
+    assert.equal(await page.locator('#feedback-draft').isVisible(), false);
+    assert.equal(await page.locator('#feedback-direct-draft').isVisible(), false);
+    await page.locator('#feedback-town').fill('Changed draft');
+    await page.locator('#feedback-consent').uncheck(); // Status lookup must not resubmit or require renewed consent.
+    assert.equal(await page.locator('#feedback-fallback').isEnabled(), false);
+    await page.locator('#feedback-form button[type=submit]').click();
+    await page.waitForFunction(() => document.getElementById('feedback-message').textContent.includes('není jisté'));
+    await page.clock.fastForward(1100);
+    await page.waitForFunction(() => document.getElementById('feedback-message').textContent.includes('Zveřejněno'));
+    assert.equal(posts,1); assert.equal(gets,2);
+    assert.equal(await page.locator('#feedback-town').inputValue(),'Changed draft');
+    assert.deepEqual(errors, []);
+  });
+});
+for (const status of ['pending', 'uncertain']) {
+  for (const [http, code] of [[403, 'origin'], [400, 'challenge'], [400, 'validation'], [429, 'rate_limit'], [413, 'too_large'], [415, 'content_type']]) {
+    test(`accepted ${status} coded GET ${code} rejection keeps fallback locked and retries canonical GET only`, async () => {
+      await app(async (page, errors) => {
+        const posts = [], gets = [];
+        let complete = false, challenges = 0;
+        await receiver(page, (path, payload) => {
+          if (path === '/api/challenge') { challenges++; return { challenge: 'fixture-token' }; }
+          if (payload) { posts.push(payload); return { requestId: acceptedID, status }; }
+          gets.push(path);
+          return complete ? { requestId: acceptedID, status: 'submitted', issueURL: 'https://github.com/romanzdk/advent-cesko-pilot/issues/42' }
+            : { http, error: code, message: 'Status lookup rejected.' };
+        });
+        await readyTip(page);
+        await page.clock.fastForward(2200);
+        const submit = page.locator('#feedback-form button[type=submit]');
+        await submit.click();
+        await page.waitForFunction(() => /Přijato|není jisté/.test(document.getElementById('feedback-message').textContent));
+        const poll = page.waitForResponse(response => response.url() === `${API}/api/submissions/${acceptedID}`);
+        await page.clock.fastForward(1100);
+        await poll;
+        await page.waitForFunction(() => !document.querySelector('#feedback-form button[type=submit]').disabled, null, { timeout: 3000 });
+        assert.equal(await submit.isEnabled(), true);
+        assert.equal(await page.locator('#feedback-fallback').isEnabled(), false);
+        assert.equal(await page.locator('#feedback-direct-draft').isVisible(), false);
+        assert.equal(await page.locator('#feedback-draft').isVisible(), false);
+        assert.deepEqual(gets, [`/api/submissions/${acceptedID}`]);
+        assert.notEqual(posts[0].requestId, acceptedID); // Deduplication returned a canonical ID.
+        await page.locator('#feedback-town').fill('Changed accepted draft');
+        await page.locator('#feedback-consent').uncheck();
+        assert.equal(await page.locator('#feedback-fallback').isEnabled(), false);
+        await submit.click();
+        await page.waitForFunction(() => !document.querySelector('#feedback-form button[type=submit]').disabled);
+        assert.equal(await page.locator('#feedback-fallback').isEnabled(), false);
+        assert.deepEqual(gets, Array(2).fill(`/api/submissions/${acceptedID}`));
+        complete = true;
+        await submit.click();
+        await page.waitForFunction(() => document.getElementById('feedback-message').textContent.includes('Zveřejněno'));
+        assert.equal(posts.length, 1);
+        assert.equal(challenges, 1);
+        assert.deepEqual(gets, Array(3).fill(`/api/submissions/${acceptedID}`));
+        assert.equal(await page.locator('#feedback-town').inputValue(), 'Changed accepted draft');
+        assert.equal(await page.locator('#feedback-fallback').isEnabled(), false);
+        assert.deepEqual(errors, []);
+      });
+    });
+  }
+}
+for (const status of ['pending','uncertain']) test(`anonymous ${status} polling is bounded and resumes GET without duplicate POST`, async () => {
+  await app(async (page, errors) => {
+    let posts=0, gets=0, complete=false;
+    await receiver(page, async (path, payload) => {
+      if (path === '/api/challenge') return {challenge:'fixture-token'};
+      if (payload) posts++; else { gets++; await new Promise(resolve => setTimeout(resolve,5)); }
+      return {requestId:acceptedID,status:complete ? 'submitted' : status,issueURL:'https://github.com/romanzdk/advent-cesko-pilot/issues/42'};
+    });
+    await readyTip(page); await page.clock.fastForward(2200);
+    await page.locator('#feedback-form button[type=submit]').click();
+    await page.waitForFunction(() => /Přijato|není jisté/.test(document.getElementById('feedback-message').textContent));
+    for (let i=0;i<24;i++) { await page.clock.fastForward(1100); await page.waitForTimeout(15); }
+    assert.equal(await page.locator('#feedback-form button[type=submit]').isEnabled(),true);
+    assert(gets>0 && gets<=20, String(gets));
+    assert.equal(await page.locator('#feedback-fallback').isEnabled(),false);
+    assert.doesNotMatch(await page.locator('#feedback-message').innerText(),/Zveřejněno/);
+    complete=true;
+    await page.locator('#feedback-form button[type=submit]').click();
+    await page.waitForFunction(() => document.getElementById('feedback-message').textContent.includes('Zveřejněno'));
+    assert.equal(posts,1); assert.deepEqual(errors,[]);
+  });
+});
+test('challenge rejection refresh keeps original UUID and server validation keeps values and manual fallback', async () => {
+  for (const rejection of ['challenge','validation']) await app(async (page, errors) => {
+    const posts=[];
+    await receiver(page, (path,payload) => {
+      if (path === '/api/challenge') return {challenge:'fixture-token'};
+      posts.push(payload);
+      return posts.length===1 ? {http:400,error:rejection,message:'Opravte návrh.'} : {requestId:acceptedID,status:'submitted',issueURL:'https://github.com/romanzdk/advent-cesko-pilot/issues/42'};
+    });
+    await readyTip(page); await page.clock.fastForward(2200);
+    await page.locator('#feedback-form button[type=submit]').click();
+    if (rejection==='challenge') { await page.waitForTimeout(60); await page.clock.fastForward(2200); }
+    await page.waitForFunction(() => !document.querySelector('#feedback-form button[type=submit]').disabled);
+    assert.equal(await page.locator('#feedback-town').inputValue(),'Brno');
+    assert.equal(await page.locator('#feedback-fallback').isEnabled(),true);
+    await page.locator('#feedback-form button[type=submit]').click();
+    await page.waitForFunction(() => document.getElementById('feedback-message').textContent.includes('Zveřejněno'));
+    assert.equal(posts.length,2); assert.equal(posts[0].requestId,posts[1].requestId);
+    assert.deepEqual(errors,[]);
+  });
+});
+test('similar catalogue events use inert safe local permalinks without fetching sources', async () => {
+  await app(async (page, errors) => {
+    const requests=[]; page.on('request',r=>requests.push(r.url()));
+    await page.locator('#feedback > summary').click();
+    await page.locator('#feedback-town').fill('beroun');
+    await page.waitForSelector('#feedback-matches a', {timeout:1200});
+    assert.equal(await page.locator('#feedback-matches a').count(),2);
+    for (const href of await page.locator('#feedback-matches a').evaluateAll(nodes=>nodes.map(n=>n.href))) {
+      assert.equal(new URL(href).origin,origin); assert.match(new URL(href).hash,/^#akce=fixture-/);
+    }
+    assert.equal(requests.some(url=>url.startsWith('https://example.cz')),false);
+    assert.equal(await page.locator('#feedback-matches img').count(),0);
+    assert.deepEqual(errors,[]);
+  });
+});
+test('malformed submitted links never become confirmed or release the duplicate lock', async () => {
+  for (const issueURL of ['https://github.com/romanzdk/advent-cesko-pilot/issues/42\n','https://github.com/other/repo/issues/42','javascript:alert(1)']) await app(async (page, errors) => {
+    await receiver(page, path => path==='/api/challenge' ? {challenge:'fixture-token'} : {requestId:acceptedID,status:'submitted',issueURL});
+    await readyTip(page); await page.clock.fastForward(2200);
+    await page.locator('#feedback-form button[type=submit]').click();
+    await page.waitForFunction(() => !document.querySelector('#feedback-form button[type=submit]').disabled);
+    assert.equal(await page.locator('#feedback-result').isVisible(),false);
+    assert.doesNotMatch(await page.locator('#feedback-message').innerText(),/Zveřejněno/);
+    assert.equal(await page.locator('#feedback-fallback').isEnabled(),false);
+    assert.deepEqual(errors,[]);
+  });
+});
+test('full anonymous form transports every optional field, then unknown dates omit inactive clocks', async () => {
+  for (const unknown of [false,true]) await app(async (page, errors) => {
+    let sent;
+    await receiver(page,(path,payload)=>{
+      if(path==='/api/challenge') return {challenge:'fixture-token'};
+      sent=payload; return {requestId:acceptedID,status:'submitted',issueURL:'https://github.com/romanzdk/advent-cesko-pilot/issues/42'};
+    });
+    await page.locator('#feedback > summary').click();
+    const fields={title:'Dílna',town:'Beroun',date:'2026-11-28',sourceURL:'https://example.cz/event',region:'Středočeský kraj',category:'tvoreni',venue:'Klub',endDate:'2026-11-29',startTime:'16:00',endTime:'18:00',price:'150 Kč',registration:'Rezervace',registrationURL:'https://example.cz/booking',audience:'Dospělí',description:'Popis',notes:'Poznámka'};
+    await page.locator('#feedback-optional > summary').click();
+    for(const [name,value] of Object.entries(fields)) {
+      const control=page.locator(`#feedback-form [name="${name}"]`);
+      if(['region','category'].includes(name)) await control.selectOption(value); else await control.fill(value);
+    }
+    if(unknown) await page.locator('#feedback-date-unknown').check();
+    await page.locator('#feedback-consent').check(); await page.clock.fastForward(2200);
+    await page.locator('#feedback-form button[type=submit]').click();
+    await page.waitForFunction(()=>document.getElementById('feedback-message').textContent.includes('Zveřejněno'));
+    for(const [name,value] of Object.entries(fields)) {
+      if(unknown && ['date','endDate','startTime','endTime'].includes(name)) assert.equal(name in sent,false,name); else assert.equal(sent[name],value,name);
+    }
+    assert.equal(sent.mode,'event'); assert.deepEqual(errors,[]);
+  });
+});
+test('report draft identity survives pagination destruction and recreation', async () => {
+  await app(async(page,errors)=>{
+    await page.locator('#load-more').click();
+    const open=()=>page.locator('[data-id="e-batch-21"] .report-button').click();
+    await open(); await page.locator('#report-description').fill('Late page draft');
+    await page.locator('#report-close').click();
+    await page.locator('#search').fill('Akce 00'); await page.locator('#search').fill('');
+    assert.equal(await page.locator('.event-card').count(),20);
+    await page.locator('#load-more').click(); await open();
+    assert.equal(await page.locator('#report-description').inputValue(),'Late page draft');
+    const box=await page.locator('#report-close').boundingBox(); assert(box.height>=44);
+    assert.deepEqual(errors,[]);
+  },{data:batchFixture,mobile:true});
+});
 const permalinkFixture = { ...fixture, events: fixture.events.map(event => ({ ...event, id: event.id.replace('fixture-', 'e-') })) };
 test('permalink titles are real safe links; initial deep link selects, focuses and scrolls after loading', async () => {
   for (const mobile of [false, true]) await app(async (page, errors) => {
@@ -1135,7 +1457,7 @@ test('feedback API failures are not empty results and never block drafts or map'
     await page.locator('#feedback-town').fill('Brno');
     await page.locator('#feedback-consent').check();
     await page.evaluate(() => { window.open = () => null; });
-    await page.locator('#feedback-form button').click();
+    await page.locator('#feedback-fallback').click();
     assert.equal(await page.locator('#feedback-draft').isVisible(), true);
     const target = new URL(await page.locator('#feedback-draft').getAttribute('href'));
     assert.equal(target.searchParams.get('title'), '[Tip] Brno');
@@ -1165,6 +1487,8 @@ test('feedback module failure retains a direct template link and working event f
     await page.locator('#feedback > summary').click();
     assert.equal(await page.getByRole('link', { name: 'Napsat tip přímo na GitHubu (i bez JavaScriptu)' }).isVisible(), true);
     assert.equal(await page.locator('#feedback-form').isVisible(), false);
+    assert.equal(await page.locator('.report-button').first().isDisabled(), true);
+    assert.match(await page.locator('.report-button').first().getAttribute('title'), /není dostupné.*GitHub/);
     await page.locator('#category').selectOption('strom');
     assert.equal(await page.locator('.event-card').count(), 1);
   }, { mobile: true });
@@ -1788,11 +2112,11 @@ test('structured event defaults to full, preserves inactive drafts and prepares 
     await page.locator('#feedback-end-time').fill('15:00');
     await page.locator('#feedback-consent').check();
     await page.evaluate(() => { window.open = () => { throw new Error('Popup denied'); }; });
-    await page.locator('#feedback-form button').click();
+    await page.locator('#feedback-fallback').click();
     assert.match(await page.locator('#feedback-message').innerText(), /Konec/);
     await page.locator('#feedback-date-unknown').check();
     assert.equal(await page.locator('#feedback-date').isDisabled(), true);
-    await page.locator('#feedback-form button').click();
+    await page.locator('#feedback-fallback').click();
     assert.equal(await page.locator('#feedback-draft').isVisible(), true);
     let body = new URL(await page.locator('#feedback-draft').getAttribute('href')).searchParams.get('body');
     assert.match(body, /Datum\nNeznámé/);
@@ -1802,7 +2126,7 @@ test('structured event defaults to full, preserves inactive drafts and prepares 
     await mode.selectOption('quick');
     assert.equal(await page.locator('#feedback-draft').isVisible(), false);
     assert.equal(await page.locator('#feedback-title').isDisabled(), true);
-    await page.locator('#feedback-form button').click();
+    await page.locator('#feedback-fallback').click();
     body = new URL(await page.locator('#feedback-draft').getAttribute('href')).searchParams.get('body');
     assert.doesNotMatch(body, /<img src=x>|Datum|Kategorie/);
     await mode.selectOption('full');
@@ -1812,7 +2136,7 @@ test('structured event defaults to full, preserves inactive drafts and prepares 
     assert.equal(await page.locator('#feedback-start-time').inputValue(), '16:00');
     assert.equal(await page.locator('#feedback img').count(), 0);
     await page.locator('#feedback-end-time').fill('18:00');
-    await page.locator('#feedback-form button').click();
+    await page.locator('#feedback-fallback').click();
     assert.equal(await page.locator('#feedback-draft').isVisible(), true);
     for (const width of [393, 320]) {
       await page.setViewportSize({width, height:852});

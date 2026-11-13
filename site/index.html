@@ -69,7 +69,7 @@
       <div class="feedback-content">
         <p>Přidat akci: připravte údaje o veřejné akci od 20. 11. do 24. 12. 2026. Neznáte podrobnosti? Zvolte rychlý tip – stačí obec, odkaz nebo krátký popis.</p>
         <p>Vyplněné údaje se automaticky nezveřejňují v mapě. Geodata, interní identifikátor, stav a datum ověření doplní správce až po kontrole zdroje. Nežádejte o zveřejnění osobních údajů.</p>
-        <p>Potřebujete účet GitHub. Zde připravíte pouze návrh; přihlášení a konečné odeslání dokončíte na GitHubu. Tipy jsou veřejné: neuvádějte osobní údaje. Zařazení do mapy není automatické.</p>
+        <p>Odeslání bez účtu: návrh po přijetí čeká na zveřejnění na veřejném GitHubu. Neuvádějte osobní údaje. Zařazení do mapy není automatické. Pouze ruční záloha vyžaduje účet GitHub.</p>
         <h3>Poslední tipy a hlášení</h3>
         <p>Nejvýše 10 nedávno aktualizovaných hlášení, ne úplný seznam. Najdete-li podobný tip, doplňte raději komentář k němu.</p>
         <p id="feedback-list-status" role="status">Seznam se načte po otevření panelu.</p>
@@ -78,6 +78,7 @@
         <label>Hledat existující tip (obec nebo konkrétní fráze)<input id="feedback-search" type="search" maxlength="100" placeholder="Např. Říčany nebo vánoční dílna"></label>
         <a id="feedback-search-link" href="https://github.com/romanzdk/advent-cesko-pilot/issues?q=is%3Aissue">Hledat na GitHubu</a>
         <form id="feedback-form" hidden>
+          <div id="feedback-matches" role="status" hidden></div>
           <label>Způsob návrhu<select id="feedback-mode" name="mode"><option value="full">Přidat akci</option><option value="quick">Rychlý tip</option></select></label>
           <fieldset>
             <legend>Základní údaje</legend>
@@ -109,12 +110,15 @@
             </fieldset>
           </details>
           <label>Popis (nepovinné, max. 1000 znaků)<textarea id="feedback-description" name="description" maxlength="1000" rows="3"></textarea></label>
-          <label class="feedback-consent"><input id="feedback-consent" name="consent" type="checkbox" required>Rozumím, že návrh bude veřejný</label>
-          <button type="submit">Připravit návrh na GitHubu</button>
+          <label class="feedback-consent"><input id="feedback-consent" name="consent" type="checkbox" required>Souhlasím se zveřejněním návrhu na veřejném GitHubu; neuvádím osobní údaje</label>
+          <label class="feedback-trap" aria-hidden="true">Web<input name="website" tabindex="-1" autocomplete="off"></label>
+          <button type="submit">Odeslat bez účtu</button>
+          <button id="feedback-fallback" type="button">Připravit návrh na GitHubu</button>
         </form>
         <p id="feedback-message" role="status" aria-live="polite"></p>
+        <a id="feedback-result" hidden target="_blank" rel="noopener noreferrer">Zobrazit zveřejněné hlášení</a>
         <a id="feedback-draft" hidden target="_blank" rel="noopener noreferrer">Otevřít připravený návrh na GitHubu</a>
-        <a href="https://github.com/romanzdk/advent-cesko-pilot/issues/new?template=tip.md" target="_blank" rel="noopener noreferrer">Napsat tip přímo na GitHubu (i bez JavaScriptu)</a>
+        <a id="feedback-direct-draft" href="https://github.com/romanzdk/advent-cesko-pilot/issues/new?template=tip.md" target="_blank" rel="noopener noreferrer">Napsat tip přímo na GitHubu (i bez JavaScriptu)</a>
       </div>
     </details>
     <div class="results-toolbar"><div><h2 id="results-heading">Kam vyrazit</h2><p id="result-count" role="status" aria-live="polite">Načítáme přehled…</p></div><div class="view-switch" aria-label="Zobrazení"><button id="show-list" type="button" aria-pressed="true" aria-controls="results">Seznam</button><button id="show-map" type="button" aria-pressed="false" aria-controls="map-panel">Mapa</button></div></div>
@@ -131,6 +135,25 @@
     </div>
     <section class="about" aria-label="O přehledu"><h2>Než vyrazíte</h2><p>Program se může změnit. Aktuální čas, podmínky vstupu a volná místa si ověřte v odkazu na pořadatele. Neuvedený čas neznamená celodenní program. Časy jsou místní, pro Česko.</p><p id="data-updated"></p></section>
   </main>
+  <dialog id="report-dialog" aria-labelledby="report-heading" aria-describedby="report-context">
+    <h2 id="report-heading">Nahlásit chybu</h2>
+    <div id="report-context"></div>
+    <p>Hlášení bude veřejné na GitHubu, bez osobních údajů. Oprava v mapě není automatická.</p>
+    <a id="report-search" target="_blank" rel="noopener noreferrer">Zkontrolovat existující hlášení na GitHubu</a>
+    <form id="report-form">
+      <label>Druh chyby<select id="report-kind" name="errorKind"><option value="date">Datum</option><option value="time">Čas</option><option value="venue">Místo</option><option value="cancelled">Zrušení</option><option value="other">Jiné</option></select></label>
+      <label>Co je chybně a jaká je oprava? (max. 1000 znaků)<textarea id="report-description" name="description" required maxlength="1000" rows="4"></textarea></label>
+      <label>Veřejný zdroj opravy (nepovinné)<input id="report-source" name="sourceURL" type="url" maxlength="800" placeholder="https://…"></label>
+      <label class="feedback-consent"><input id="report-consent" type="checkbox" required>Souhlasím se zveřejněním hlášení na veřejném GitHubu; neuvádím osobní údaje</label>
+      <label class="feedback-trap" aria-hidden="true">Web<input name="website" tabindex="-1" autocomplete="off"></label>
+      <button type="submit">Odeslat bez účtu</button>
+      <button id="report-fallback" type="button">Připravit návrh na GitHubu (účet nutný)</button>
+    </form>
+    <p id="report-message" role="status" aria-live="polite"></p>
+    <a id="report-result" hidden target="_blank" rel="noopener noreferrer">Zobrazit zveřejněné hlášení</a>
+    <a id="report-draft" hidden target="_blank" rel="noopener noreferrer">Otevřít připravený návrh na GitHubu</a>
+    <button id="report-close" type="button">Zavřít</button>
+  </dialog>
   <footer class="wrap footer">
     <div class="footer-credit"><span>Advent v Česku · 2026</span><span>Autor: Roman Žydyk</span></div>
     <nav class="footer-links" aria-label="Autor a odkazy projektu">

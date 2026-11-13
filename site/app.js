@@ -7,6 +7,10 @@ const dateFormat = new Intl.DateTimeFormat('cs-CZ', { day: 'numeric', month: 'nu
 const dayFormat = new Intl.DateTimeFormat('cs-CZ', { weekday: 'short', timeZone: 'Europe/Prague' });
 const monthFormat = new Intl.DateTimeFormat('cs-CZ', { month: 'long', year: 'numeric', timeZone: 'Europe/Prague' });
 let events = [];
+document.addEventListener('advent:catalog-request', () => document.dispatchEvent(new CustomEvent('advent:catalog', { detail: events })));
+document.addEventListener('advent:feedback-ready', () => {
+  for (const button of document.querySelectorAll('.report-button')) { button.disabled = false; button.title = ''; }
+});
 let coverageRegions = [];
 let eventsLoaded = false;
 let visibleEvents = [];
@@ -304,6 +308,13 @@ function card(event) {
     }
   });
   actions.append(share);
+  const report = el('button', 'Nahlásit chybu', 'report-button');
+  report.type = 'button';
+  report.setAttribute('aria-label', `Nahlásit chybu: ${event.title}`);
+  report.disabled = document.documentElement.dataset.feedbackReady !== 'true';
+  report.title = report.disabled ? 'Hlášení není dostupné. Použijte odkaz na GitHub v panelu Chybí vám akce nebo obec.' : '';
+  report.addEventListener('click', () => document.dispatchEvent(new CustomEvent('advent:report', { detail: { id: event.id, trigger: report } })));
+  actions.append(report);
   body.append(actions, shareStatus);
   const verified = dateValue(event.verifiedAt);
   if (!Number.isNaN(verified.getTime())) body.append(el('p', `Ověřeno ${dateFormat.format(verified)}`, 'verified'));
@@ -534,6 +545,7 @@ async function load() {
     if (!validData(data)) throw new Error('Neplatný formát přehledu');
     events = data.events.filter(event => event.date <= SEASON_END && (event.endDate || event.date) >= SEASON_START);
     eventsLoaded = true;
+    document.dispatchEvent(new CustomEvent('advent:catalog', { detail: events }));
     $('locate-user').disabled = false;
     updateRegions();
     $('data-updated').textContent = `Přehled aktualizován ${dateFormat.format(dateValue(data.generatedAt))}.`;

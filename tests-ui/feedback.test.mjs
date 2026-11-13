@@ -80,6 +80,16 @@ test('quick mode ignores all inactive full-only values while retaining original 
   assert.equal(draft.searchParams.get('title'), '[Tip] Brno');
   assert.doesNotMatch(draft.searchParams.get('body'), /javascript:bad|Kategorie|Název/);
 });
+test('anonymous payload retains all structured fields, omits unknown clocks and ignores quick inactive fields', () => {
+  const fields = { ...full, region: 'Středočeský kraj', category: 'tvoreni', venue: 'Klub', price: '150 Kč', registration: 'Rezervace', registrationURL: 'https://example.cz/booking', audience: 'Dospělí', notes: 'Poznámka', description: '漢'.repeat(1000), endTime: '18:00' };
+  const payload = feedback.proposalPayload(fields);
+  assert.equal(payload.mode, 'event');
+  for (const [key, value] of Object.entries(fields)) if (key !== 'mode') assert.equal(payload[key], value, key);
+  const unknown = feedback.proposalPayload({ ...fields, dateUnknown: true, startTime: 'bad', endTime: 'bad' });
+  for (const key of ['date', 'endDate', 'startTime', 'endTime']) assert.equal(key in unknown, false, key);
+  assert.equal(unknown.dateUnknown, true);
+  assert.deepEqual(feedback.proposalPayload({ mode: 'quick', town: 'Brno', consent: true, registrationURL: 'bad' }), { mode: 'tip', town: 'Brno', sourceURL: '', description: '', consent: true, website: '' });
+});
 const valid = { town: ' Říčany & okolí? #1 ', sourceURL: ' https://example.cz/žluťoučký?a=1&b=2#část ', description: ' Tip & dotaz? #ano\nDruhý řádek ', consent: true };
 test('draft preserves trimmed Unicode and special characters with only official draft parameters', () => {
   assert.equal(typeof feedback.draftURL, 'function');
