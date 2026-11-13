@@ -205,6 +205,34 @@
       }
     },
     {
+      "id": "e-58a19f41b1dbfa56ec17",
+      "title": "Rozsvícení Vánočního domu ve Vrbně",
+      "town": "Vrbno pod Pradědem",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-20",
+      "endDate": null,
+      "startTime": "16:15",
+      "endTime": "19:00",
+      "venue": "Střelniční ulice",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení Vánočního domu ve Vrbně. Střelniční ulice",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.vrbnopp.cz/dre-cs/80633-rozsviceni-vanocniho-domu-ve-vrbne.html",
+      "location": {
+        "lat": 50.1209513,
+        "lon": 17.3831569,
+        "precision": "town",
+        "label": "Vrbno pod Pradědem — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437806"
+      }
+    },
+    {
       "id": "e-3c5fb8a5775cc3d78e27",
       "title": "Hogo Fogo + Excelence - předvánoční koncert",
       "town": "Černošice",
@@ -1109,6 +1137,36 @@
       "sourceUrl": "https://www.praha16.eu/volny-cas/kalendar-akci/ebenezer-vanocni-koleda-26180_730cs.html",
       "verifiedAt": "2026-11-13T11:21:05.782250+00:00",
       "status": "confirmed"
+    },
+    {
+      "id": "e-8845340baaa173a0331c",
+      "title": "Kurz - Floristiky adventní věnec",
+      "town": "Jindřichův Hradec",
+      "region": "Jihočeský kraj",
+      "date": "2026-11-21",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "venue": "Dům gobelínů, kulturních tradic a řemesel Dobrovského 202, Jindřichův Hradec, 377 01",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Kurz - Floristiky adventní věnec. Dům gobelínů, kulturních tradic a řemesel Dobrovského 202, Jindřichův Hradec, 377 01",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.jh.cz/dre-cs/9131-kurz-floristiky-adventni-venec.html",
+      "location": {
+        "lat": 49.1443265,
+        "lon": 15.003354,
+        "precision": "town",
+        "label": "Jindřichův Hradec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438489"
+      }
     },
     {
       "title": "Od okýnka k okýnku - venkovní hájecká stezka",
@@ -5235,6 +5293,36 @@
       }
     },
     {
+      "id": "e-8fcd80e59ca34c53ece7",
+      "title": "Rozsvěcení vánočního stromu v Hejnicích",
+      "town": "Hejnice",
+      "region": "Liberecký kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "venue": "Hejnice",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvěcení vánočního stromu v Hejnicích. Hejnice",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mestohejnice.cz/dre-cs/81112-rozsveceni-vanocniho-stromu-v-hejnicich.html",
+      "location": {
+        "lat": 50.8780657,
+        "lon": 15.182001,
+        "precision": "town",
+        "label": "Hejnice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439065"
+      }
+    },
+    {
       "title": "Vánoce v Hranicích 2026",
       "town": "Hranice",
       "venue": "Masarykovo náměstí, Hranice",
@@ -5590,6 +5678,34 @@
         "precision": "town",
         "label": "Jaroměř — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/440640"
+      }
+    },
+    {
+      "id": "e-89fb804d49663e82b813",
+      "title": "Adventní tvoření",
+      "town": "Kadaň",
+      "region": "Ústecký kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": null,
+      "venue": "Pobočka městské knihovny Golovinova 1340, Kadaň 432 01",
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní tvoření. Pobočka městské knihovny Golovinova 1340, Kadaň 432 01",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mesto-kadan.cz/dre-cs/77127-adventni-tvoreni.html",
+      "location": {
+        "lat": 50.3761991,
+        "lon": 13.2710364,
+        "precision": "town",
+        "label": "Kadaň — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439593"
       }
     },
     {
@@ -9133,6 +9249,34 @@
       }
     },
     {
+      "id": "e-77013ae68f3c50f6eed6",
+      "title": "ADVENTNÍ MATINÉ",
+      "town": "Řevnice",
+      "region": "Středočeský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "11:00",
+      "endTime": "12:00",
+      "venue": "Zámeček, sál",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "ADVENTNÍ MATINÉ. Zámeček, sál",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.revnice.cz/dre-cs/80852-adventni-matine.html",
+      "location": {
+        "lat": 49.914333,
+        "lon": 14.2361169,
+        "precision": "town",
+        "label": "Řevnice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442252"
+      }
+    },
+    {
       "title": "Vernisáž vánoční výstavy betlémů v Klášteře Želiv",
       "town": "Želiv",
       "venue": "Malovaný refektář, Klášter Želiv, Želiv",
@@ -9924,6 +10068,34 @@
         "precision": "town",
         "label": "Vranovice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441219"
+      }
+    },
+    {
+      "id": "e-603d6a37c04832ba7d67",
+      "title": "Rozsvícení vánočního stromu",
+      "town": "Vrbno pod Pradědem",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "venue": "Střecha",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu. Střecha",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.vrbnopp.cz/dre-cs/81025-rozsviceni-vanocniho-stromu.html",
+      "location": {
+        "lat": 50.1209513,
+        "lon": 17.3831569,
+        "precision": "town",
+        "label": "Vrbno pod Pradědem — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437806"
       }
     },
     {
@@ -12779,6 +12951,34 @@
       }
     },
     {
+      "id": "e-20990b039f9a564a4bb3",
+      "title": "ROZSVÍCENÍ VÁNOČNÍHO STROMU",
+      "town": "Řevnice",
+      "region": "Středočeský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "venue": "Zámeček",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "ROZSVÍCENÍ VÁNOČNÍHO STROMU. Zámeček",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.revnice.cz/dre-cs/81245-rozsviceni-vanocniho-stromu.html",
+      "location": {
+        "lat": 49.914333,
+        "lon": 14.2361169,
+        "precision": "town",
+        "label": "Řevnice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442252"
+      }
+    },
+    {
       "id": "e-cb5052fda1dc68945e2c",
       "title": "Vánoční Šternberk 2026",
       "town": "Šternberk",
@@ -13887,6 +14087,34 @@
         "precision": "town",
         "label": "Benešov nad Ploučnicí — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439573"
+      }
+    },
+    {
+      "id": "e-60dc0f43912fff64baf3",
+      "title": "Adventní setkání seniorů",
+      "town": "Bechyně",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-01",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Kulturní dům",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní setkání seniorů. Kulturní dům",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mestobechyne.cz/dre-cs/79396-adventni-setkani-senioru.html",
+      "location": {
+        "lat": 49.2953802,
+        "lon": 14.46884,
+        "precision": "town",
+        "label": "Bechyně — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438670"
       }
     },
     {
@@ -16013,6 +16241,34 @@
       }
     },
     {
+      "id": "e-5ae739aed701c226644c",
+      "title": "Mikulášský víceboj v deskových hrách",
+      "town": "Bechyně",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": null,
+      "venue": "Kulturní dům",
+      "category": "mikulas",
+      "price": "dobrovolné",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášský víceboj v deskových hrách. Kulturní dům",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mestobechyne.cz/dre-cs/80759-mikulassky-viceboj-v-deskovych-hrach.html",
+      "location": {
+        "lat": 49.2953802,
+        "lon": 14.46884,
+        "precision": "town",
+        "label": "Bechyně — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438670"
+      }
+    },
+    {
       "id": "e-b108c3dee401f27a6068",
       "title": "Adventní turnaj ve stolním tenisu",
       "town": "Horoměřice",
@@ -16266,6 +16522,34 @@
         "precision": "town",
         "label": "Prostějov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438618"
+      }
+    },
+    {
+      "id": "e-707b062c5f75ddbe2854",
+      "title": "ADVENTNÍ SRDCAŘSKÝ MARKET",
+      "town": "Řevnice",
+      "region": "Středočeský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "venue": "Dřevák u nádraží",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "ADVENTNÍ SRDCAŘSKÝ MARKET. Dřevák u nádraží",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.revnice.cz/dre-cs/81391-adventni-srdcarsky-market.html",
+      "location": {
+        "lat": 49.914333,
+        "lon": 14.2361169,
+        "precision": "town",
+        "label": "Řevnice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442252"
       }
     },
     {
@@ -16997,6 +17281,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-73b4a3f8c8564830f328",
+      "title": "POCHOD ZA MIKULÁŠEM",
+      "town": "Řevnice",
+      "region": "Středočeský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "19:00",
+      "venue": "Palackého náměstí",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "POCHOD ZA MIKULÁŠEM. Palackého náměstí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.revnice.cz/dre-cs/81244-pochod-za-mikulasem.html",
+      "location": {
+        "lat": 49.914333,
+        "lon": 14.2361169,
+        "precision": "town",
+        "label": "Řevnice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442252"
+      }
+    },
+    {
       "id": "e-8fa04c00ae919db74862",
       "title": "Adventní běh",
       "town": "Žatec",
@@ -17138,6 +17450,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/437181"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-eb2ca07190eba2ac31cd",
+      "title": "Mikuláš na Mírovém náměstí",
+      "town": "Kadaň",
+      "region": "Ústecký kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Mírové náměstí Kadaň 432 01",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikuláš na Mírovém náměstí. Mírové náměstí Kadaň 432 01",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mesto-kadan.cz/dre-cs/78983-mikulas-na-mirovem-namesti.html",
+      "location": {
+        "lat": 50.3761991,
+        "lon": 13.2710364,
+        "precision": "town",
+        "label": "Kadaň — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439593"
+      }
     },
     {
       "id": "e-b9b2eb6ec50b23e8",
@@ -17508,6 +17848,34 @@
       }
     },
     {
+      "id": "e-faeb2cfd15a3667cd1e4",
+      "title": "Mikuláš u Vánočního domu",
+      "town": "Vrbno pod Pradědem",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "venue": "Střelniční ulice",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikuláš u Vánočního domu. Střelniční ulice",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.vrbnopp.cz/dre-cs/80947-mikulas-u-vanocniho-domu.html",
+      "location": {
+        "lat": 50.1209513,
+        "lon": 17.3831569,
+        "precision": "town",
+        "label": "Vrbno pod Pradědem — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437806"
+      }
+    },
+    {
       "id": "e-6d2557062e7d45d30de6",
       "title": "MIKULÁŠSKÁ NADÍLKA",
       "town": "Zbiroh",
@@ -17533,6 +17901,34 @@
         "precision": "town",
         "label": "Zbiroh — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438901"
+      }
+    },
+    {
+      "id": "e-5db2bdc59768d48ab30f",
+      "title": "Čert a Mikuláš a andělé",
+      "town": "Bechyně",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Zahrada U Hradeb",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Čert a Mikuláš a andělé. Zahrada U Hradeb",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mestobechyne.cz/dre-cs/72264-cert-a-mikulas-a-andele.html",
+      "location": {
+        "lat": 49.2953802,
+        "lon": 14.46884,
+        "precision": "town",
+        "label": "Bechyně — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438670"
       }
     },
     {
@@ -18367,6 +18763,36 @@
       }
     },
     {
+      "id": "e-98155b40a217607e9b36",
+      "title": "Mikuláš v knihovně",
+      "town": "Vrbno pod Pradědem",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "venue": "Městská knihovna Sadová 312, Vrbno pod Pradědem 79326",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikuláš v knihovně. Městská knihovna Sadová 312, Vrbno pod Pradědem 79326",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.vrbnopp.cz/dre-cs/80956-mikulas-v-knihovne.html",
+      "location": {
+        "lat": 50.1209513,
+        "lon": 17.3831569,
+        "precision": "town",
+        "label": "Vrbno pod Pradědem — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437806"
+      }
+    },
+    {
       "id": "e-b09f08dd73107f70d978",
       "title": "MIKULÁŠ A PEKLO POD RADNICÍ",
       "town": "Židlochovice",
@@ -18506,6 +18932,34 @@
         "precision": "town",
         "label": "Příbor — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437566"
+      }
+    },
+    {
+      "id": "e-c608064b04e9c4fa33d5",
+      "title": "1. ROČNÍK KOMORNÍCH ADVENTNÍCH TRHŮ ZA VODOU",
+      "town": "Řevnice",
+      "region": "Středočeský kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "15:30",
+      "venue": "Fotbalové hřiště",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "1. ROČNÍK KOMORNÍCH ADVENTNÍCH TRHŮ ZA VODOU. Fotbalové hřiště",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.revnice.cz/dre-cs/81392-1-rocnik-komornich-adventnich-trhu-za-vodou.html",
+      "location": {
+        "lat": 49.914333,
+        "lon": 14.2361169,
+        "precision": "town",
+        "label": "Řevnice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442252"
       }
     },
     {
@@ -19529,6 +19983,34 @@
       }
     },
     {
+      "id": "e-382b6f23df75b1eb35bb",
+      "title": "2. ADVENTNÍ ZASTAVENÍ",
+      "town": "Bechyně",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "ZUŠ V. Pichla",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "2. ADVENTNÍ ZASTAVENÍ. ZUŠ V. Pichla",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mestobechyne.cz/dre-cs/79391-2-adventni-zastaveni.html",
+      "location": {
+        "lat": 49.2953802,
+        "lon": 14.46884,
+        "precision": "town",
+        "label": "Bechyně — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438670"
+      }
+    },
+    {
       "id": "e-c77709c495b72b8a8ffa",
       "title": "Mikuláš na faře",
       "town": "Březí",
@@ -19894,6 +20376,34 @@
         "precision": "town",
         "label": "Hlučín — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437592"
+      }
+    },
+    {
+      "id": "e-d72a66e54d74586b6861",
+      "title": "2. adventní koncert: David Kraus a Felix Slováček ml.",
+      "town": "Kadaň",
+      "region": "Ústecký kraj",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Kulturní dům Střelnice Čechova 147, Kadaň 432 01",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "2. adventní koncert: David Kraus a Felix Slováček ml.. Kulturní dům Střelnice Čechova 147, Kadaň 432 01",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mesto-kadan.cz/dre-cs/75590-2-adventni-koncert-david-kraus-a-felix-slovacek-ml.html",
+      "location": {
+        "lat": 50.3761991,
+        "lon": 13.2710364,
+        "precision": "town",
+        "label": "Kadaň — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439593"
       }
     },
     {
@@ -20305,6 +20815,34 @@
         "precision": "town",
         "label": "Rožnov pod Radhoštěm — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442433"
+      }
+    },
+    {
+      "id": "e-699d21007db11ff6204f",
+      "title": "Kostelní betlémy na Táborsku",
+      "town": "Bechyně",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-07",
+      "endDate": null,
+      "startTime": "17:30",
+      "endTime": null,
+      "venue": "Kino",
+      "category": "betlem",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Kostelní betlémy na Táborsku. Kino",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mestobechyne.cz/dre-cs/81222-kostelni-betlemy-na-taborsku.html",
+      "location": {
+        "lat": 49.2953802,
+        "lon": 14.46884,
+        "precision": "town",
+        "label": "Bechyně — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438670"
       }
     },
     {
@@ -20898,6 +21436,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-e2db695c1737daf1eebc",
+      "title": "Vánoční trh DPS a Česko zpívá koledy",
+      "town": "Bechyně",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "18:00",
+      "venue": "U Domova pro seniory",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční trh DPS a Česko zpívá koledy. U Domova pro seniory",
+      "notes": [],
+      "audience": "senioři / omezené zaměření",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mestobechyne.cz/dre-cs/80760-vanocni-trh-dps-a-cesko-zpiva-koledy.html",
+      "location": {
+        "lat": 49.2953802,
+        "lon": 14.46884,
+        "precision": "town",
+        "label": "Bechyně — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438670"
+      }
+    },
+    {
       "id": "e-bead3e67b6883807c28e",
       "title": "Vánoční pískování",
       "town": "Kozlovice",
@@ -21065,6 +21631,34 @@
         "precision": "town",
         "label": "Žatec — orientační střed obce či místní části, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439319"
+      }
+    },
+    {
+      "id": "e-438c2cd744ffbeeb1e51",
+      "title": "Česko zpívá koledy",
+      "town": "Bechyně",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Domov pro seniory",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Česko zpívá koledy. Domov pro seniory",
+      "notes": [],
+      "audience": "senioři / omezené zaměření",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mestobechyne.cz/dre-cs/81401-cesko-zpiva-koledy.html",
+      "location": {
+        "lat": 49.2953802,
+        "lon": 14.46884,
+        "precision": "town",
+        "label": "Bechyně — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438670"
       }
     },
     {
@@ -21289,6 +21883,34 @@
         "precision": "town",
         "label": "Jáchymov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439473"
+      }
+    },
+    {
+      "id": "e-0930ef55f24d492a374d",
+      "title": "Česko zpívá koledy",
+      "town": "Kadaň",
+      "region": "Ústecký kraj",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Mírové náměstí Kadaň 432 01",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Česko zpívá koledy. Mírové náměstí Kadaň 432 01",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mesto-kadan.cz/dre-cs/81213-cesko-zpiva-koledy.html",
+      "location": {
+        "lat": 50.3761991,
+        "lon": 13.2710364,
+        "precision": "town",
+        "label": "Kadaň — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439593"
       }
     },
     {
@@ -23157,6 +23779,34 @@
       }
     },
     {
+      "id": "e-00902da1e0f28250a3a3",
+      "title": "Živý betlém",
+      "town": "Kadaň",
+      "region": "Ústecký kraj",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "venue": "Mírové náměstí Kadaň 432 01",
+      "category": "betlem",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Živý betlém. Mírové náměstí Kadaň 432 01",
+      "notes": [],
+      "audience": "dospělí",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mesto-kadan.cz/dre-cs/75584-zivy-betlem.html",
+      "location": {
+        "lat": 50.3761991,
+        "lon": 13.2710364,
+        "precision": "town",
+        "label": "Kadaň — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439593"
+      }
+    },
+    {
       "id": "e-4009b74f4b333e4358a1",
       "title": "Mikuláš na chalupě F. Mikuleckého",
       "town": "Mikulčice",
@@ -23605,6 +24255,34 @@
         "precision": "town",
         "label": "Železnice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/440621"
+      }
+    },
+    {
+      "id": "e-35fa0cdfb62cf2128934",
+      "title": "Vánoční koncert",
+      "town": "Bechyně",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Zahrada U Hradeb",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert. Zahrada U Hradeb",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mestobechyne.cz/dre-cs/72265-vanocni-koncert.html",
+      "location": {
+        "lat": 49.2953802,
+        "lon": 14.46884,
+        "precision": "town",
+        "label": "Bechyně — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438670"
       }
     },
     {
@@ -24083,6 +24761,34 @@
         "precision": "town",
         "label": "Vamberk — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/440077"
+      }
+    },
+    {
+      "id": "e-60f5b8d762fbc3461948",
+      "title": "Vánoční koncert",
+      "town": "Vrbno pod Pradědem",
+      "region": "Moravskoslezský kraj",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Střecha",
+      "category": "setkani",
+      "price": "150 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert. Střecha",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.vrbnopp.cz/dre-cs/81024-vanocni-koncert.html",
+      "location": {
+        "lat": 50.1209513,
+        "lon": 17.3831569,
+        "precision": "town",
+        "label": "Vrbno pod Pradědem — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437806"
       }
     },
     {
@@ -25439,6 +26145,34 @@
         "precision": "town",
         "label": "Kaznějov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439713"
+      }
+    },
+    {
+      "id": "e-5a53e9f8a0458ba2c85b",
+      "title": "3. adventní koncert: Dagmar Pecková",
+      "town": "Kadaň",
+      "region": "Ústecký kraj",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "Kulturní dům Střelnice Čechova 147, Kadaň 432 01",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "3. adventní koncert: Dagmar Pecková. Kulturní dům Střelnice Čechova 147, Kadaň 432 01",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mesto-kadan.cz/dre-cs/77767-3-adventni-koncert-dagmar-peckova.html",
+      "location": {
+        "lat": 50.3761991,
+        "lon": 13.2710364,
+        "precision": "town",
+        "label": "Kadaň — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439593"
       }
     },
     {
@@ -28231,6 +28965,34 @@
         "precision": "town",
         "label": "Hranice, okres Přerov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438577"
+      }
+    },
+    {
+      "id": "e-dd4932d09c65ec536dad",
+      "title": "4. adventní koncert: Gemini musicales",
+      "town": "Kadaň",
+      "region": "Ústecký kraj",
+      "date": "2026-12-20",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Františkánský klášter Jana Švermy 474, Kadaň 432 01",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "4. adventní koncert: Gemini musicales. Františkánský klášter Jana Švermy 474, Kadaň 432 01",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T23:34:37+00:00",
+      "sourceUrl": "https://www.mesto-kadan.cz/dre-cs/79170-4-adventni-koncert-gemini-musicales.html",
+      "location": {
+        "lat": 50.3761991,
+        "lon": 13.2710364,
+        "precision": "town",
+        "label": "Kadaň — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439593"
       }
     },
     {

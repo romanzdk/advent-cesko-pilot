@@ -1958,5 +1958,47 @@
     "precision": "town",
     "label": "Čížkovice — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/439636"
+  },
+  "Jindřichův Hradec": {
+    "lat": 49.1443265,
+    "lon": 15.003354,
+    "precision": "town",
+    "label": "Jindřichův Hradec — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438489"
+  },
+  "Kadaň": {
+    "lat": 50.3761991,
+    "lon": 13.2710364,
+    "precision": "town",
+    "label": "Kadaň — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439593"
+  },
+  "Bechyně": {
+    "lat": 49.2953802,
+    "lon": 14.46884,
+    "precision": "town",
+    "label": "Bechyně — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438670"
+  },
+  "Vrbno pod Pradědem": {
+    "lat": 50.1209513,
+    "lon": 17.3831569,
+    "precision": "town",
+    "label": "Vrbno pod Pradědem — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437806"
+  },
+  "Řevnice": {
+    "lat": 49.914333,
+    "lon": 14.2361169,
+    "precision": "town",
+    "label": "Řevnice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442252"
+  },
+  "Hejnice": {
+    "lat": 50.8780657,
+    "lon": 15.182001,
+    "precision": "town",
+    "label": "Hejnice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439065"
   }
 }
