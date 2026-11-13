@@ -8370,6 +8370,44 @@
         "Hlučín - Mírové náměstí, Hlučín",
         "Hlučín - Červený kostel v Hlučíně"
       ]
+    },
+    {
+      "id": "slavicin-dre-calendar",
+      "town": "Slavičín",
+      "region": "Zlínský kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.mesto-slavicin.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.mesto-slavicin.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.mesto-slavicin\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Slavičín: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Horní náměstí"
+      ]
+    },
+    {
+      "id": "trutnov-dre-calendar",
+      "town": "Trutnov",
+      "region": "Královéhradecký kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.trutnov.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.trutnov.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.trutnov\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Trutnov: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Stará radnice, Krakonošovo náměstí"
+      ]
     }
   ]
 }

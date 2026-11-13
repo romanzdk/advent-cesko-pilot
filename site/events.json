@@ -2413,6 +2413,34 @@
       "status": "confirmed"
     },
     {
+      "id": "e-59ba5855e8d19988227e",
+      "title": "Rozsvícení vánočního stromu",
+      "town": "Slavičín",
+      "region": "Zlínský kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "venue": "Horní náměstí",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu. Horní náměstí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-13T22:21:17+00:00",
+      "sourceUrl": "https://www.mesto-slavicin.cz/dre-cs/81117-rozsviceni-vanocniho-stromu.html",
+      "location": {
+        "lat": 49.0889594,
+        "lon": 17.874808,
+        "precision": "town",
+        "label": "Slavičín — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440915"
+      }
+    },
+    {
       "id": "e-193626a7baf2075bad0c",
       "title": "Mikulášsko-vánoční jarmark",
       "town": "Hlinsko",
@@ -3526,6 +3554,37 @@
         "precision": "town",
         "label": "Kojetín — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438345"
+      }
+    },
+    {
+      "id": "e-9a9f003e92dbdbe29719",
+      "title": "Výstava betlémů",
+      "town": "Trutnov",
+      "region": "Královéhradecký kraj",
+      "date": "2026-11-27",
+      "endDate": "2026-12-13",
+      "startTime": null,
+      "endTime": null,
+      "venue": "Stará radnice, Krakonošovo náměstí",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Výstava betlémů. Stará radnice, Krakonošovo náměstí",
+      "notes": [
+        "Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření.",
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-13T22:21:17+00:00",
+      "sourceUrl": "https://www.trutnov.cz/dre-cs/80747-vystava-betlemu.html",
+      "location": {
+        "lat": 50.5608165,
+        "lon": 15.912897,
+        "precision": "town",
+        "label": "Trutnov — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440154"
       }
     },
     {

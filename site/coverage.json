@@ -3388,6 +3388,42 @@
       "eventCount": 5,
       "reviewCount": 0,
       "lastError": null
+    },
+    {
+      "id": "slavicin-dre-calendar",
+      "town": "Slavičín",
+      "region": "Zlínský kraj",
+      "url": "https://www.mesto-slavicin.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+      "adapter": "dre",
+      "coverageNote": "Slavičín: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "maxIndexPages": 2,
+      "maxDetails": 14,
+      "excludedCount": 0,
+      "sourceNote": "Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.",
+      "status": "ok",
+      "lastChecked": "2026-11-13T22:20:53+00:00",
+      "lastSuccess": "2026-11-13T22:20:53+00:00",
+      "eventCount": 1,
+      "reviewCount": 0,
+      "lastError": null
+    },
+    {
+      "id": "trutnov-dre-calendar",
+      "town": "Trutnov",
+      "region": "Královéhradecký kraj",
+      "url": "https://www.trutnov.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+      "adapter": "dre",
+      "coverageNote": "Trutnov: omezený sezónní výběr z oficiálního městského kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "maxIndexPages": 2,
+      "maxDetails": 14,
+      "excludedCount": 2,
+      "sourceNote": "Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.",
+      "status": "partial",
+      "lastChecked": "2026-11-13T22:20:53+00:00",
+      "lastSuccess": "2026-11-13T22:20:53+00:00",
+      "eventCount": 1,
+      "reviewCount": 3,
+      "lastError": null
     }
   ],
   "metrics": {
@@ -3399,8 +3435,8 @@
     "eventsNew": 0,
     "eventsChanged": 0,
     "eventsUnchanged": 3,
-    "eventsPublished": 777,
-    "reviewCount": 94,
+    "eventsPublished": 779,
+    "reviewCount": 97,
     "excludedCount": 1,
     "aiCalls": 0
   },
