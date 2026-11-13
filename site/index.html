@@ -24,8 +24,8 @@
   <meta name="twitter:image:alt" content="Advent v Česku 2026: sezonní mapa veřejných akcí, 20. listopadu až 24. prosince.">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./vendor/leaflet.css">
-  <link rel="stylesheet" href="./styles.css">
-  <script type="module" src="./app.js"></script>
+  <link rel="stylesheet" href="./styles.css?v=poloha-2">
+  <script type="module" src="./app.js?v=poloha-2"></script>
   <script type="module" src="./feedback.js"></script>
 </head>
 <body>
@@ -127,6 +127,12 @@
       <label id="nearby-options" hidden>Okruh <select id="nearby-radius"><option value="25">25 km</option><option value="50" selected>50 km</option><option value="100">100 km</option></select></label>
       <button id="clear-location" type="button" hidden>Zrušit okolí</button>
       <p id="location-status" role="status"></p>
+      <details id="location-help" hidden>
+        <summary>Podrobnosti o poloze</summary>
+        <p>Povolovací dialog řídí prohlížeč a systém. Samotné zamítnutí neříká, kde blokace vznikla. Při otevření webu uvnitř jiné aplikace zkuste samostatný prohlížeč.</p>
+        <p>Tyto údaje zůstávají jen na stránce a neobsahují souřadnice. Pokud problém trvá, můžete poslat jejich snímek.</p>
+        <pre id="location-diagnostic"></pre>
+      </details>
       <p id="location-hint">Orientační okruh vzdušnou čarou; některé akce mají jen střed obce. Poloha se neukládá. OpenStreetMap při načítání mapy získá informaci o prohlížené oblasti.</p>
     </div>
     <div class="explore-layout" id="explore" data-view="list">

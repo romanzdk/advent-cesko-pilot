@@ -100,6 +100,10 @@
 .geo-controls select{min-width:100px;min-height:44px;font-size:1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:8px}
 .geo-controls p{flex-basis:100%;margin:0;color:var(--muted);font-size:.75rem}
 .geo-controls p:empty{display:none}
+#location-help{flex-basis:100%;min-width:0;max-width:100%;color:var(--muted)}
+#location-help summary{min-height:44px;padding-block:11px;cursor:pointer;color:var(--forest)}
+#location-help p{margin-bottom:8px}
+#location-diagnostic{max-width:100%;margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;font-size:.75rem;user-select:text}
 .user-location-marker{pointer-events:none}
 @media print{.geo-controls{display:none}}
 .map-legend{display:flex;flex-wrap:wrap;gap:5px 14px;list-style:none;margin:0;padding:0 0 12px;color:var(--muted);font-size:.7rem;line-height:1.5}

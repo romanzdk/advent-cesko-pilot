@@ -50,7 +50,7 @@ function appendCards() {
 }
 let map, markerLayer, mapPromise;
 let tileFailed = false;
-let userPosition = null, userMarker, locationTimer;
+let userPosition = null, userMarker, locationTimer, locationSlowTimer;
 let locationGeneration = 0;
 let shareGeneration = 0, activeShareStatus;
 const desktop = matchMedia('(min-width: 821px)');
@@ -442,44 +442,86 @@ desktop.addEventListener('change', () => { if (desktop.matches) ensureMap(); });
 function clearLocation() {
   locationGeneration++;
   clearTimeout(locationTimer);
+  clearTimeout(locationSlowTimer);
   userPosition = null;
   $('nearby-options').hidden = true;
   $('nearby-radius').value = '50';
   $('clear-location').hidden = true;
   $('locate-user').disabled = !eventsLoaded;
   $('location-status').textContent = '';
+  $('location-help').hidden = true;
+  $('location-help').open = false;
+  $('location-diagnostic').textContent = '';
 }
 $('clear-location').addEventListener('click', () => { clearLocation(); render(); });
 $('nearby-radius').addEventListener('change', render);
+function locationFailureDetails(started, outcome, error) {
+  let policy = 'nelze zjistit';
+  try {
+    const rules = document.permissionsPolicy || document.featurePolicy;
+    if (typeof rules?.allowsFeature === 'function') policy = rules.allowsFeature('geolocation') ? 'povoleno' : 'zakázáno';
+  } catch { /* Unsupported policy introspection must not decide permission. */ }
+  const message = typeof error?.message === 'string' ? error.message.replace(/[\u0000-\u001f\u007f]/g, ' ').slice(0, 300) : '';
+  return [
+    'Verze: poloha-2', `Výsledek: ${outcome}`,
+    `Kód prohlížeče: ${Number.isFinite(error?.code) ? error.code : 'neuveden'}`,
+    `Zpráva prohlížeče: ${message || 'neuvedena'}`,
+    `Čekání: ${Math.round((performance.now() - started) / 1000)} s`,
+    `HTTPS: ${isSecureContext ? 'ano' : 'ne'}`,
+    `Hlavní okno: ${window.top === window.self ? 'ano' : 'ne'}`,
+    `Viditelnost: ${document.visibilityState}`, `Pravidla dokumentu: ${policy}`
+  ].join('\n');
+}
 $('locate-user').addEventListener('click', event => {
   if (!event.isTrusted || !eventsLoaded) return;
   const generation = ++locationGeneration;
-  const fail = message => { if (generation !== locationGeneration) return; clearLocation(); $('location-status').textContent = message; render(); };
+  const started = performance.now();
+  const fail = (message, outcome = 'kontrola před žádostí', error) => {
+    if (generation !== locationGeneration) return;
+    const diagnostic = locationFailureDetails(started, outcome, error);
+    clearLocation();
+    $('location-status').textContent = message + ' Podrobnosti najdete níže.';
+    $('location-help').hidden = false;
+    $('location-diagnostic').textContent = diagnostic;
+    render();
+  };
+  $('location-help').hidden = true;
+  $('location-help').open = false;
+  $('location-diagnostic').textContent = '';
   if (!isSecureContext) return fail('Poloha vyžaduje zabezpečené připojení HTTPS.');
   if (!navigator.geolocation) return fail('Tento prohlížeč zjištění polohy nepodporuje.');
   $('locate-user').disabled = true;
   $('clear-location').hidden = false;
   $('location-status').textContent = 'Zjišťujeme orientační polohu…';
-  locationTimer = setTimeout(() => fail('Vypršel časový limit zjišťování polohy. Zkuste to znovu.'), 10000);
-  navigator.geolocation.getCurrentPosition(async result => {
-    if (generation !== locationGeneration) return;
-    clearTimeout(locationTimer);
-    const coords = result?.coords;
-    const position = { lat: coords?.latitude, lon: coords?.longitude, accuracy: coords?.accuracy };
-    if (!Number.isFinite(distanceKm(position, position)) || !Number.isFinite(position.accuracy) || position.accuracy < 0) return fail('Poloha nyní není dostupná. Zkuste to znovu.');
-    userPosition = position;
-    $('locate-user').disabled = false;
-    $('nearby-options').hidden = false;
-    $('location-status').textContent = `${position.accuracy > 5000 ? 'Nízká přesnost. ' : ''}Orientační poloha, přesnost přibližně ${Math.round(position.accuracy)} m.`;
-    render();
-    setView('map');
-    await ensureMap();
-    if (generation !== locationGeneration) return;
-    if (!map) {
-      $('location-status').textContent += ' Mapu se nepodařilo načíst; okolní akce najdete v seznamu.';
-      setView('list');
-    }
-  }, error => fail(error?.code === 1 ? 'Zjištění polohy nebylo povoleno. Přehled funguje i bez ní.' : error?.code === 3 ? 'Vypršel časový limit zjišťování polohy. Zkuste to znovu.' : 'Poloha nyní není dostupná. Zkuste to znovu.'), { timeout: 10000, maximumAge: 60000, enableHighAccuracy: false });
+  // Native timeout excludes time awaiting permission; a 10s JS cutoff did not.
+  locationSlowTimer = setTimeout(() => {
+    if (generation === locationGeneration) $('location-status').textContent = 'Stále čekáme na odpověď prohlížeče nebo určení polohy. Požadavek můžete zrušit.';
+  }, 10000);
+  locationTimer = setTimeout(() => fail('Vypršel časový limit čekání na prohlížeč (1 minuta). Zkuste to znovu.', 'prohlížeč neodpověděl; ukončeno stránkou'), 60000);
+  try {
+    navigator.geolocation.getCurrentPosition(async result => {
+      if (generation !== locationGeneration) return;
+      clearTimeout(locationTimer);
+      clearTimeout(locationSlowTimer);
+      const coords = result?.coords;
+      const position = { lat: coords?.latitude, lon: coords?.longitude, accuracy: coords?.accuracy };
+      if (!Number.isFinite(distanceKm(position, position)) || !Number.isFinite(position.accuracy) || position.accuracy < 0) return fail('Poloha nyní není dostupná. Zkuste to znovu.', 'neplatná odpověď prohlížeče');
+      userPosition = position;
+      $('locate-user').disabled = false;
+      $('nearby-options').hidden = false;
+      $('location-status').textContent = `${position.accuracy > 5000 ? 'Nízká přesnost. ' : ''}Orientační poloha, přesnost přibližně ${Math.round(position.accuracy)} m.`;
+      render();
+      setView('map');
+      await ensureMap();
+      if (generation !== locationGeneration) return;
+      if (!map) {
+        $('location-status').textContent += ' Mapu se nepodařilo načíst; okolní akce najdete v seznamu.';
+        setView('list');
+      }
+    }, error => fail(error?.code === 1 ? 'Zjištění polohy nebylo povoleno prohlížečem nebo systémem. Přehled funguje i bez ní.' : error?.code === 3 ? 'Vypršel časový limit zjišťování polohy. Zkuste to znovu.' : 'Poloha nyní není dostupná. Zkuste to znovu.', 'chyba vrácená prohlížečem', error), { timeout: 10000, maximumAge: 60000, enableHighAccuracy: false });
+  } catch (error) {
+    fail('Prohlížeč žádost o polohu nepřijal. Zkuste to znovu.', 'výjimka při volání prohlížeče', error);
+  }
 });
 $('show-list').addEventListener('click', () => setView('list'));
 $('show-map').addEventListener('click', () => setView('map'));

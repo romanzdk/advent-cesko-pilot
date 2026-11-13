@@ -1186,6 +1186,83 @@ test('nearby failures are inline and retryable, invalid coordinates never filter
   });
 });
 
+test('nearby exposes the native failure reason locally without assuming user refusal', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await mockLocation(page);
+    const requests = [];
+    page.on('request', request => requests.push(request.url()));
+    await page.locator('#locate-user').click();
+    await page.evaluate(() => window.geoCalls[0].failure({ code: 1, message: 'Origin denied by system <img src=x onerror=alert(1)>' }));
+    assert.equal(await page.locator('#location-help').isVisible(), true);
+    await page.locator('#location-help > summary').click();
+    const detail = await page.locator('#location-diagnostic').innerText();
+    assert.match(detail, /poloha-2/);
+    assert.match(detail, /Kód prohlížeče: 1/);
+    assert.match(detail, /Origin denied by system <img/);
+    assert.match(detail, /HTTPS: ano/);
+    assert.match(detail, /Hlavní okno: ano/);
+    assert.equal(await page.locator('#location-diagnostic img').count(), 0);
+    assert.doesNotMatch(detail, /49\.964|14\.073|latitude|longitude/);
+    assert.equal(await page.locator('#locate-user').isEnabled(), true);
+    assert.deepEqual(requests, []);
+    assert.deepEqual(await page.evaluate(() => window.storageWrites), []);
+    await page.locator('#clear-location').evaluate(n => n.click());
+    assert.equal(await page.locator('#location-help').isVisible(), false);
+    assert.deepEqual(errors, []);
+  }, { mobile: true });
+});
+
+test('nearby recovers immediately from synchronous API exceptions instead of misreporting a timeout', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await mockLocation(page);
+    await page.evaluate(() => { navigator.geolocation.getCurrentPosition = () => { throw new DOMException('Location service exception', 'SecurityError'); }; });
+    await page.locator('#locate-user').click();
+    assert.equal(await page.locator('#locate-user').isEnabled(), true);
+    assert.match(await page.locator('#location-status').innerText(), /nepřijal/);
+    await page.locator('#location-help > summary').click();
+    assert.match(await page.locator('#location-diagnostic').innerText(), /Location service exception/);
+    await page.clock.runFor(65000);
+    assert.doesNotMatch(await page.locator('#location-status').innerText(), /časový limit/);
+    assert.deepEqual(errors, []);
+  }, { mobile: true });
+});
+
+test('nearby diagnostic stays readable on narrow phones with long native messages', async () => {
+  for (const width of [393, 320]) await app(async (page, errors) => {
+    await page.setViewportSize({ width, height: 852 });
+    await page.waitForSelector('.event-card');
+    await mockLocation(page);
+    await page.locator('#locate-user').click();
+    await page.evaluate(() => window.geoCalls[0].failure({ code: 1, message: 'LongNativeMessage'.repeat(100) }));
+    await page.locator('#location-help > summary').click();
+    const box = await page.locator('#location-help > summary').boundingBox();
+    assert(box.height >= 44);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    assert((await page.locator('#location-diagnostic').innerText()).length < 1000);
+    await page.screenshot({ path: screenshotPath(`advent-location-help-${width}.png`), fullPage: false });
+    assert.deepEqual(errors, []);
+  }, { mobile: true });
+});
+
+test('nearby keeps a slow permission response alive beyond the old ten-second cutoff', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await mockLocation(page);
+    await page.locator('#locate-user').click();
+    await page.clock.runFor(11000);
+    assert.equal(await page.locator('#locate-user').isDisabled(), true);
+    assert.match(await page.locator('#location-status').innerText(), /Stále čekáme/);
+    await geoSuccess(page);
+    assert.equal(await page.locator('#nearby-radius').isVisible(), true);
+    assert.match(await page.locator('#location-status').innerText(), /Orientační poloha/);
+    await page.clock.runFor(65000);
+    assert.equal(await page.locator('#nearby-radius').isVisible(), true);
+    assert.deepEqual(errors, []);
+  }, { mobile: true });
+});
+
 test('nearby cancellation and global reset ignore late callbacks and bound a pending request', async () => {
   await app(async (page, errors) => {
     await page.waitForSelector('.event-card');
@@ -1200,7 +1277,7 @@ test('nearby cancellation and global reset ignore late callbacks and bound a pen
       assert.equal(await page.locator('#locate-user').isEnabled(), true);
     }
     await page.locator('#locate-user').click();
-    await page.clock.runFor(10500);
+    await page.clock.runFor(60500);
     assert.equal(await page.locator('#locate-user').isEnabled(), true);
     assert.match(await page.locator('#location-status').innerText(), /časový limit/);
     await geoSuccess(page, 2);

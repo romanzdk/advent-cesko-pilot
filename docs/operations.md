@@ -47,6 +47,16 @@ Pokud na daném systému chybí systémové knihovny Chromium, je třeba je zaji
 
 V čistém checkoutu testy používají přenositelné faktické HTML fragmenty. Tam, kde jsou dostupné původní soukromé podklady, doplňují lokální ověření; celé zachycené stránky se do veřejného repozitáře nekopírují.
 
+## Poloha v prohlížeči
+
+Poloha se žádá jednorázově přímo po skutečném kliknutí na „Akce v mém okolí“, nikoli přes předběžnou kontrolu oprávnění. Souřadnice se neukládají ani neodesílají a nepoužívá se náhradní zjišťování podle IP adresy.
+
+Nativní limit 10 sekund se vztahuje k určení polohy, ne čekání na povolení. Samostatný JavaScriptový limit proto po 10 sekundách jen ukáže čekání a až po minutě ukončí neodpovídající pokus. Zrušení/reset/permalink stále ignorují opožděné odpovědi; při úspěchu, chybě nebo výjimce se oba časovače vyčistí. Zachycená synchronní výjimka není vydávána za timeout.
+
+Při selhání nabízí stránka „Podrobnosti o poloze“: původní kód a omezenou zprávu prohlížeče, dobu čekání, zabezpečený kontext, viditelnost, vložení do rámce a pravidla dokumentu, pokud je prohlížeč zpřístupní. Údaje zůstávají pouze v aktuální stránce, bez souřadnic či automatické telemetrie. Kód 1 sám o sobě nedokazuje ruční zamítnutí uživatelem; nepřítomnost podpory kontroly pravidel znamená neznámý stav, nikoli zákaz. Web neumí vynutit systémový dialog.
+
+Izolované testy ověřují pomalou odpověď, rozlišení chyb, výjimky, rušení a rozložení na úzkém displeji; nenahrazují ověření oprávnění na fyzickém iPhonu. Pokud tam problém trvá, je potřeba nejprve přesná místní diagnostika, nikoli další změny parametrů či opakované automatické žádosti naslepo.
+
 ## Samostatný sběr
 
 Následující příkaz provádí skutečné HTTP požadavky a mění lokální evidenci i tři veřejné JSON soubory, ale neprovádí Git commit ani push:
