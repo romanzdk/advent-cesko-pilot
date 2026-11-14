@@ -218,7 +218,7 @@ def parse_event(body, source, url, window):
     title = txt(root.find('h1'))
     adapter = source['adapter']
     structured = structured_event(root, url)
-    if adapter in ('hranice', 'visitzlin', 'lanskroun', 'dre', 'ostravainfo', 'anawe', 'jevents', 'visittrebic') and structured:
+    if adapter in ('hranice', 'visitzlin', 'lanskroun', 'dre', 'ostravainfo', 'anawe', 'jevents', 'visittrebic', 'dko') and structured:
         raise Review('Nová strukturovaná data nesmějí obejít ověření označených polí; ověřte formát znovu.')
     wpem_price = None
     if adapter == 'wpem' and structured:
@@ -483,6 +483,17 @@ def parse_event(body, source, url, window):
             raise Review('Nejednoznačný termín nebo místo akce; ověřte detail.')
         date_text = ' '.join(part for part in when.groups() if part)
         venue = places[0]
+    elif adapter == 'dko':
+        title = txt(root.find('h1'))
+        for col in root.all(cls='icon-col'):
+            fields[txt(col.find(cls='icon-title'))] = txt(col.find(cls='icon-text'))
+        clock = r'(?:[01]?\d|2[0-3]):[0-5]\d'
+        when = re.fullmatch(rf'(\d{{1,2}}\. ?\d{{1,2}}\. ?20\d{{2}})(?: od ({clock})(?: do {clock})?)?', fields.get('Datum a čas konání', ''))
+        if not title or not when:
+            raise Review('Nejednoznačný termín akce; ověřte detail.')
+        date_text = ' '.join(x for x in when.groups() if x)
+        venue = fields.get('Místo konání', '')
+        scope = root.find(cls='description') or root
     elif adapter == 'visittrebic':
         title = txt(root.find('h1', cls='h1_clanek_akce'))
         days = root.all(cls='obal_datum_akce')
@@ -582,7 +593,7 @@ def parse_event(body, source, url, window):
         raise Review('Neúplný nebo nejednoznačný interval události.')
     if len(dates) > 1:
         explicit_range = adapter in ('itrebon', 'telc', 'visitzlin', 'lanskroun') and re.match(r'^\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}\s*[-–]\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}(?!\d)', date_text)
-        if (not explicit_range and (adapter not in ('galileo', 'structured', 'drupal', 'dre', 'ostravainfo', 'anawe', 'jevents', 'visittrebic') or not re.search(r'\s[-–]\s', date_text))) or len(dates) > 2 or dates[1][0] < dates[0][0]:
+        if (not explicit_range and (adapter not in ('galileo', 'structured', 'drupal', 'dre', 'ostravainfo', 'anawe', 'jevents', 'visittrebic', 'dko') or not re.search(r'\s[-–]\s', date_text))) or len(dates) > 2 or dates[1][0] < dates[0][0]:
             raise Review('Více různých dat vyžaduje ruční kontrolu.')
     narrative_nodes = [scope.find(cls=cls) for cls in ('lead','event-action-lead__body','event-text')]
     narrative_nodes.extend(n for n in scope.children if isinstance(n,Node) and n.tag == 'p')

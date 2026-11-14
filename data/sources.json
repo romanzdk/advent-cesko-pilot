@@ -14779,6 +14779,335 @@
       "max_index_pages": 7,
       "max_details": 40,
       "coverage_note": "Ostrava: omezený sezónní výběr z oficiálního turistického portálu ostravainfo.cz (hledání sezónních slov v termínu 20. 11. – 24. 12.); akce mimo Ostravu jdou k ověření. Nejde o úplné městské ani krajské pokrytí."
+    },
+    {
+      "id": "jihlava-kudyznudy",
+      "town": "Jihlava",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=586846",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=586846&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Jihlava: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Jihlava, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "havlickuv-brod-kudyznudy",
+      "town": "Havlíčkův Brod",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=568414",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=568414&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Havlíčkův Brod: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Havlíčkův Brod, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "zdar-nad-sazavou-kudyznudy",
+      "town": "Žďár nad Sázavou",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=595209",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=595209&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Žďár nad Sázavou: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Žďár nad Sázavou, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "pelhrimov-kudyznudy",
+      "town": "Pelhřimov",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=547492",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=547492&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Pelhřimov: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Pelhřimov, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "nove-mesto-na-morave-kudyznudy",
+      "town": "Nové Město na Moravě",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=596230",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=596230&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Nové Město na Moravě: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Nové Město na Moravě, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "chotebor-kudyznudy",
+      "town": "Chotěboř",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=568759",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=568759&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Chotěboř: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Chotěboř, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "bystrice-nad-pernstejnem-kudyznudy",
+      "town": "Bystřice nad Pernštejnem",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=595411",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=595411&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Bystřice nad Pernštejnem: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Bystřice nad Pernštejnem, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "svetla-nad-sazavou-kudyznudy",
+      "town": "Světlá nad Sázavou",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=569569",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=569569&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Světlá nad Sázavou: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Světlá nad Sázavou, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "trest-kudyznudy",
+      "town": "Třešť",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=588032",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=588032&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Třešť: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Třešť, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "namest-nad-oslavou-kudyznudy",
+      "town": "Náměšť nad Oslavou",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=591211",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=591211&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Náměšť nad Oslavou: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Náměšť nad Oslavou, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "ledec-nad-sazavou-kudyznudy",
+      "town": "Ledeč nad Sázavou",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=568988",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=568988&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Ledeč nad Sázavou: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Ledeč nad Sázavou, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "jaromerice-nad-rokytnou-kudyznudy",
+      "town": "Jaroměřice nad Rokytnou",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=590754",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=590754&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Jaroměřice nad Rokytnou: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Jaroměřice nad Rokytnou, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "kamenice-nad-lipou-kudyznudy",
+      "town": "Kamenice nad Lipou",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=548111",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=548111&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Kamenice nad Lipou: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Kamenice nad Lipou, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "merin-kudyznudy",
+      "town": "Měřín",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=596116",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=596116&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Měřín: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Měřín, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "zeliv-kudyznudy",
+      "town": "Želiv",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=549215",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=549215&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Želiv: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Želiv, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "libice-nad-doubravou-kudyznudy",
+      "town": "Libice nad Doubravou",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=569020",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=569020&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Libice nad Doubravou: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Libice nad Doubravou, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "valec-kudyznudy",
+      "town": "Valeč",
+      "region": "Kraj Vysočina",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=591874",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=591874&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Valeč: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Valeč, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "havlickova-borova-obec-calendar",
+      "town": "Havlíčkova Borová",
+      "region": "Kraj Vysočina",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.havlickovaborova.cz/pro-obcany/kultura-a-sport/"
+      ],
+      "detail_prefixes": [
+        "https://www.havlickovaborova.cz/pro-obcany/kultura-a-sport/"
+      ],
+      "url_regex": "^https://www\\.havlickovaborova\\.cz/pro-obcany/kultura-a-sport/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Havlíčkova Borová: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Fara, Havlíčkova Borová",
+        "Knihovna",
+        "Sokolovna"
+      ]
+    },
+    {
+      "id": "jihlava-dko-program",
+      "town": "Jihlava",
+      "region": "Kraj Vysočina",
+      "adapter": "dko",
+      "index_urls": [
+        "https://www.dko.cz/program/2026/11",
+        "https://www.dko.cz/program/2026/12"
+      ],
+      "url_regex": "^https://www\\.dko\\.cz/program/\\d+-[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "slug_keywords": true,
+      "coverage_note": "Jihlava: omezený sezónní výběr z programu Domu kultury a odborů Jihlava (dko.cz); městský web je pro sběrač blokován robots.txt a není obcházen. Nejde o úplné městské pokrytí."
     }
   ]
 }

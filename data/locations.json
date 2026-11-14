@@ -3302,5 +3302,131 @@
     "precision": "town",
     "label": "Ostrava — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/437354"
+  },
+  "Jihlava": {
+    "lat": 49.396064,
+    "lon": 15.5903065,
+    "precision": "town",
+    "label": "Jihlava — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440427"
+  },
+  "Havlíčkův Brod": {
+    "lat": 49.606942,
+    "lon": 15.5795748,
+    "precision": "town",
+    "label": "Havlíčkův Brod — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440699"
+  },
+  "Žďár nad Sázavou": {
+    "lat": 49.5629014,
+    "lon": 15.9391924,
+    "precision": "town",
+    "label": "Žďár nad Sázavou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/428066"
+  },
+  "Pelhřimov": {
+    "lat": 49.4308737,
+    "lon": 15.2232341,
+    "precision": "town",
+    "label": "Pelhřimov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441095"
+  },
+  "Nové Město na Moravě": {
+    "lat": 49.5616916,
+    "lon": 16.0744185,
+    "precision": "town",
+    "label": "Nové Město na Moravě — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441738"
+  },
+  "Chotěboř": {
+    "lat": 49.7202055,
+    "lon": 15.6704437,
+    "precision": "town",
+    "label": "Chotěboř — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440712"
+  },
+  "Bystřice nad Pernštejnem": {
+    "lat": 49.5229885,
+    "lon": 16.2610589,
+    "precision": "town",
+    "label": "Bystřice nad Pernštejnem — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441693"
+  },
+  "Světlá nad Sázavou": {
+    "lat": 49.6680082,
+    "lon": 15.403934,
+    "precision": "town",
+    "label": "Světlá nad Sázavou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440447"
+  },
+  "Třešť": {
+    "lat": 49.2911919,
+    "lon": 15.4830063,
+    "precision": "town",
+    "label": "Třešť — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441174"
+  },
+  "Náměšť nad Oslavou": {
+    "lat": 49.2073771,
+    "lon": 16.1577984,
+    "precision": "town",
+    "label": "Náměšť nad Oslavou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442152"
+  },
+  "Ledeč nad Sázavou": {
+    "lat": 49.6950166,
+    "lon": 15.2777763,
+    "precision": "town",
+    "label": "Ledeč nad Sázavou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440675"
+  },
+  "Jaroměřice nad Rokytnou": {
+    "lat": 49.0943503,
+    "lon": 15.8932579,
+    "precision": "town",
+    "label": "Jaroměřice nad Rokytnou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442172"
+  },
+  "Kamenice nad Lipou": {
+    "lat": 49.303118,
+    "lon": 15.0754914,
+    "precision": "town",
+    "label": "Kamenice nad Lipou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441027"
+  },
+  "Měřín": {
+    "lat": 49.393211,
+    "lon": 15.883812,
+    "precision": "town",
+    "label": "Měřín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441739"
+  },
+  "Želiv": {
+    "lat": 49.5375593,
+    "lon": 15.2327361,
+    "precision": "town",
+    "label": "Želiv — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441082"
+  },
+  "Libice nad Doubravou": {
+    "lat": 49.7450095,
+    "lon": 15.7042253,
+    "precision": "town",
+    "label": "Libice nad Doubravou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440678"
+  },
+  "Valeč": {
+    "lat": 49.1443034,
+    "lon": 16.035687,
+    "precision": "town",
+    "label": "Valeč — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/428071"
+  },
+  "Havlíčkova Borová": {
+    "lat": 49.6362769,
+    "lon": 15.7812323,
+    "precision": "town",
+    "label": "Havlíčkova Borová — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440715"
   }
 }

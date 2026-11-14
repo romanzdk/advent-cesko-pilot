@@ -1342,11 +1342,6 @@
       "reason": "Neplatné datum v detailu."
     },
     {
-      "title": "Noc betlémů 2026",
-      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
-      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
-    },
-    {
       "title": "Vánoční truck a vánoční vesnička – WoodTruck Advent Tour 2026",
       "url": "https://www.kudyznudy.cz/akce/vanocni-vesnicka-miri-do-kromerize-woodtruck-adven",
       "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
@@ -1380,11 +1375,6 @@
       "title": "Vánoce na hradě 2026",
       "url": "https://www.ostravainfo.cz/cz/akce/185946-vanoce-na-hrade-2026.html",
       "reason": "Nejednoznačný termín nebo místo akce; ověřte detail."
-    },
-    {
-      "title": "Noc betlémů 2026",
-      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
-      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
     },
     {
       "title": "Rozsvícení vánočního stromečku na Velké Bučině",
@@ -1430,6 +1420,46 @@
       "title": "Rozsvícení vánočního stromu ŽEHUŠICE",
       "url": "https://www.obecvrdy.cz/volny-cas/kalendar-akci-v-okoli/rozsviceni-vanocniho-stromu-zehusice-1845_284cs352.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Sousedský vánoční svařáček v Peršíkově",
+      "url": "https://www.havlickovaborova.cz/pro-obcany/kultura-a-sport/sousedsky-vanocni-svaracek-v-persikove-3146_770cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Sousedský vánoční svařáček v Peršíkově",
+      "url": "https://www.havlickovaborova.cz/pro-obcany/kultura-a-sport/sousedsky-vanocni-svaracek-v-persikove-3146_771cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Sousedský vánoční svařáček v Peršíkově",
+      "url": "https://www.havlickovaborova.cz/pro-obcany/kultura-a-sport/sousedsky-vanocni-svaracek-v-persikove-3146_772cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Noc betlémů 2026",
+      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Staročeský vánoční jarmark v Novém Městě na Moravě 2026",
+      "url": "https://www.kudyznudy.cz/akce/starocesky-vanocni-jarmark",
+      "reason": "Chybí strukturovaný detail jedné události."
+    },
+    {
+      "title": "Noc betlémů 2026",
+      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní odpoledne na zámku Valeč",
+      "url": "https://www.kudyznudy.cz/akce/tradicni-rozsviceni-vanocniho-stromu-na-zamku-vale",
+      "reason": "Chybí strukturovaný detail jedné události."
+    },
+    {
+      "title": "Rozsvícení vánočního stromečku a čerti v Klášteře Želiv 2026",
+      "url": "https://www.kudyznudy.cz/akce/rozsviceni-vanocniho-stromecku-a-mikulas-s-certy-v",
+      "reason": "Chybí strukturovaný detail jedné události."
     }
   ]
 }
