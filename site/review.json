@@ -1342,11 +1342,6 @@
       "reason": "Neplatné datum v detailu."
     },
     {
-      "title": "Vánoční truck a vánoční vesnička – WoodTruck Advent Tour 2026",
-      "url": "https://www.kudyznudy.cz/akce/vanocni-vesnicka-miri-do-kromerize-woodtruck-adven",
-      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
-    },
-    {
       "title": "Adventní trhy na hradě Valečov",
       "url": "https://www.mnhradiste.cz/kalendar/adventni-trhy-na-hrade-valecov/2026-11-21?lang=cs",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -1437,26 +1432,6 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
-      "title": "Staročeský vánoční jarmark v Novém Městě na Moravě 2026",
-      "url": "https://www.kudyznudy.cz/akce/starocesky-vanocni-jarmark",
-      "reason": "Chybí strukturovaný detail jedné události."
-    },
-    {
-      "title": "Adventní odpoledne na zámku Valeč",
-      "url": "https://www.kudyznudy.cz/akce/tradicni-rozsviceni-vanocniho-stromu-na-zamku-vale",
-      "reason": "Chybí strukturovaný detail jedné události."
-    },
-    {
-      "title": "Rozsvícení vánočního stromečku a čerti v Klášteře Želiv 2026",
-      "url": "https://www.kudyznudy.cz/akce/rozsviceni-vanocniho-stromecku-a-mikulas-s-certy-v",
-      "reason": "Chybí strukturovaný detail jedné události."
-    },
-    {
-      "title": "Noc betlémů 2026",
-      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
-      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
-    },
-    {
       "title": "Advent s vůní perníku",
       "url": "https://pardubice.eu/adventsvuniperniku",
       "reason": "Nejednoznačný termín nebo místo akce; ověřte detail."
@@ -1477,9 +1452,189 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Grabštejnské Vánoce",
+      "url": "https://www.chotyne.cz/deni-v-obci/kalendar-akci/grabstejnske-vanoce-718_358cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Andělské vánoční trhy",
+      "url": "https://www.lhenice.cz/aktualne/kalendar-akci/andelske-vanocni-trhy-1671_1173cs2058.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "POZOR - ZMĚNA TERMÍNU - VÝROBA VÁNOČNÍCH VĚNCŮ",
+      "url": "https://www.lhenice.cz/aktualne/kalendar-akci/pozor-zmena-terminu-vyroba-vanocnich-vencu-1470_477cs1377.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Rozsvícení vánočního stromečku 2026",
+      "url": "https://www.lhenice.cz/aktualne/kalendar-akci/rozsviceni-vanocniho-stromecku-2026-1388_391cs2039.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční knižní trhy",
+      "url": "https://www.lhenice.cz/aktualne/kalendar-akci/vanocni-knizni-trhy-2055_909cs2135.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Volarské adventní trhy",
+      "url": "https://www.lhenice.cz/aktualne/kalendar-akci/volarske-adventni-trhy-2041_903cs2135.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Mikulášská nadílka",
+      "url": "https://www.libouchec.cz/volny-cas/akce-v-obci/mikulasska-nadilka-1538_828cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční koncert žáků ZUŠ Chabařovice",
+      "url": "https://www.libouchec.cz/volny-cas/akce-v-obci/vanocni-koncert-zaku-zus-chabarovice-1537_827cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní zájezd",
+      "url": "https://www.pteni.cz/aktualne/kalendar-akci/adventni-zajezd-1508_226cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Rozsvícení vánočního stromku v Milíčevsi 29.11.2026 v 17:00 hodin",
+      "url": "https://www.slatiny.cz/zivot-v-obci/kam-za-kulturou-a-sportem/rozsviceni-vanocniho-stromku-v-milicevsi-29112026-v-1700-hodin-262_226cs.html",
+      "reason": "Rozporná data v těle události vyžadují ověření."
+    },
+    {
+      "title": "Koncert na zahájení doby adventní",
+      "url": "https://www.slavonice-mesto.cz/mesto/aktualni-informace-obcanum/kalendar-akci/koncert-na-zahajeni-doby-adventni-865_513cs4809.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Ježíškova pošta",
+      "url": "https://www.obecunanov.cz/obcan/kultura-a-volny-cas/jeziskova-posta-332_126cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Únanovský adventní kalendář",
+      "url": "https://www.obecunanov.cz/obcan/kultura-a-volny-cas/unanovsky-adventni-kalendar-330_125cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční trhy na zámku Blatná 2026",
+      "url": "https://www.kudyznudy.cz/akce/adventni-prohlidky-na-zamku-blatna",
+      "reason": "Chybí strukturovaný detail jedné události."
+    },
+    {
       "title": "Noc betlémů 2026",
       "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
       "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní a vánoční koncerty Lenky Filipové",
+      "url": "https://www.kudyznudy.cz/akce/koncert-v-kostele-lenka-filipova-a-hoste",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční truck a vánoční vesnička – WoodTruck Advent Tour 2026",
+      "url": "https://www.kudyznudy.cz/akce/vanocni-vesnicka-miri-do-kromerize-woodtruck-adven",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Noc betlémů 2026",
+      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní koncerty v Hustopečích 2026",
+      "url": "https://www.kudyznudy.cz/akce/adventni-koncerty-v-hustopecich",
+      "reason": "Chybí strukturovaný detail jedné události."
+    },
+    {
+      "title": "Adventní Flerjarmark v Ivančicích 2026",
+      "url": "https://www.kudyznudy.cz/akce/adventni-flerjarmark-v-ivancicich",
+      "reason": "Chybí strukturovaný detail jedné události."
+    },
+    {
+      "title": "Vánoční kamion Coca Coly 2026",
+      "url": "https://www.kudyznudy.cz/akce/vanocni-kamion-coca-coly",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Advent v muzeu v Kyjově 2026",
+      "url": "https://www.kudyznudy.cz/akce/advent-v-muzeu-14",
+      "reason": "Chybí strukturovaný detail jedné události."
+    },
+    {
+      "title": "Vánoční truck a vánoční vesnička – WoodTruck Advent Tour 2026",
+      "url": "https://www.kudyznudy.cz/akce/vanocni-vesnicka-miri-do-kromerize-woodtruck-adven",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Noc betlémů 2026",
+      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční truck a vánoční vesnička – WoodTruck Advent Tour 2026",
+      "url": "https://www.kudyznudy.cz/akce/vanocni-vesnicka-miri-do-kromerize-woodtruck-adven",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní trh a rozsvícení vánočního stromu v Nepomuku 2026",
+      "url": "https://www.kudyznudy.cz/akce/adentni-trh-a-rozsviceni-vanocniho-stromu",
+      "reason": "Chybí strukturovaný detail jedné události."
+    },
+    {
+      "title": "Staročeský vánoční jarmark v Novém Městě na Moravě 2026",
+      "url": "https://www.kudyznudy.cz/akce/starocesky-vanocni-jarmark",
+      "reason": "Chybí strukturovaný detail jedné události."
+    },
+    {
+      "title": "Noc betlémů 2026",
+      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Mikulášská jízda na křivoklátský advent",
+      "url": "https://www.kudyznudy.cz/akce/mikulasska-jizda-na-krivoklatsky-advent",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční truck a vánoční vesnička – WoodTruck Advent Tour 2026",
+      "url": "https://www.kudyznudy.cz/akce/vanocni-vesnicka-miri-do-kromerize-woodtruck-adven",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Noc betlémů 2026",
+      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Noc betlémů 2026",
+      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Kouzlo Vánoc na Valdštejně",
+      "url": "https://www.kudyznudy.cz/akce/vanoce-na-valdstejne",
+      "reason": "Chybí strukturovaný detail jedné události."
+    },
+    {
+      "title": "Vánoční truck a vánoční vesnička – WoodTruck Advent Tour 2026",
+      "url": "https://www.kudyznudy.cz/akce/vanocni-vesnicka-miri-do-kromerize-woodtruck-adven",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Noc betlémů 2026",
+      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní odpoledne na zámku Valeč",
+      "url": "https://www.kudyznudy.cz/akce/tradicni-rozsviceni-vanocniho-stromu-na-zamku-vale",
+      "reason": "Chybí strukturovaný detail jedné události."
+    },
+    {
+      "title": "Rozsvícení vánočního stromečku a čerti v Klášteře Želiv 2026",
+      "url": "https://www.kudyznudy.cz/akce/rozsviceni-vanocniho-stromecku-a-mikulas-s-certy-v",
+      "reason": "Chybí strukturovaný detail jedné události."
     }
   ]
 }
