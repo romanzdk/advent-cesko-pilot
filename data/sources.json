@@ -8437,8 +8437,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Horoměřice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Horoměřice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Galerie Orchidea",
         "Happy Faces",
@@ -8463,8 +8463,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Vejprnice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Vejprnice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Obec Vejprnice",
         "Sál restaurace Formanka",
@@ -8488,8 +8488,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Vendryně: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Vendryně: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Czytelnia"
       ]
@@ -8509,8 +8509,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Nehvizdy: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Nehvizdy: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Sokolovna Nehvizdy"
       ]
@@ -8530,8 +8530,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Hlubočky: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Hlubočky: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Amfiteátr Na Letním",
         "Kostel Božského Srdce Páně v Hlubočkách",
@@ -8553,8 +8553,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Baška: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Baška: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Hostinec U Čendy",
         "Obec"
@@ -8575,8 +8575,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Rohatec: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Rohatec: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "KD Rohatec",
         "Muzeum Rohatec"
@@ -8597,8 +8597,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Tlučná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Tlučná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Sluníčko – Tlučenská kolonie 895",
         "hřiště u staré školy",
@@ -8623,8 +8623,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Nivnice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Nivnice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "SD Beseda - velký sál",
         "Společenská místnost pod OÚ",
@@ -8647,8 +8647,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Rapotín: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Rapotín: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Galerie Zámeček",
         "Muzeum rapotínské sklárny",
@@ -8671,8 +8671,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Jirny: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Jirny: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kulturní dům"
       ]
@@ -8692,8 +8692,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Háj ve Slezsku: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Háj ve Slezsku: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Náměstí u Hotelu Pod Hůrkou"
       ]
@@ -8713,8 +8713,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Kobeřice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Kobeřice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kostel Nanebevzetí Panny Marie",
         "Základní škola"
@@ -8735,8 +8735,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Kozlovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Kozlovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Knihovna",
         "Náves Obce Kozlovice"
@@ -8757,8 +8757,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Zbůch: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Zbůch: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Náměstí ve Zbůchu",
         "Občerstvení U Koudelíka, Plzeňská 93",
@@ -8780,8 +8780,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Chotěšov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Chotěšov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kostel Narození Panny Marie",
         "Lesovna",
@@ -8803,8 +8803,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Křemže: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Křemže: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Náměstí Křemže",
         "Parčík před radnicí ve Křemži"
@@ -8825,8 +8825,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Starý Jičín: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Starý Jičín: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "náměstí Starý Jičín"
       ]
@@ -8846,8 +8846,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Postřelmov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Postřelmov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kostel svatého Matouše",
         "Kulturní dům",
@@ -8870,8 +8870,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Vlčnov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Vlčnov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "KSK Vlčnov"
       ]
@@ -8891,8 +8891,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Vnorovy: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Vnorovy: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kostel sv. Alžběty"
       ]
@@ -8912,8 +8912,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Líně: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Líně: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Obecní dům Líně"
       ]
@@ -8933,8 +8933,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Tuchlovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Tuchlovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Náměstí Tuchlovice",
         "Sál nad Ježkovou bašta",
@@ -8956,8 +8956,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Moravská Nová Ves: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Moravská Nová Ves: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Areál u sokolovny"
       ]
@@ -8977,8 +8977,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Dobrá Voda u Českých Budějovic: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Dobrá Voda u Českých Budějovic: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Plocha u kostela",
         "Restaurace Na Stráni"
@@ -8999,8 +8999,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Velký Osek: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Velký Osek: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Dělnický dům",
         "kostel Nejsvětějšího Srdce Ježíšova"
@@ -9021,8 +9021,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Hať: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Hať: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kulturní dům",
         "Obec Hať"
@@ -9043,8 +9043,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Ostravice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Ostravice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Hotel Freud",
         "Kostel Nejsvětější Trojice v Ostravici",
@@ -9067,8 +9067,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Vranovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Vranovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Vzdělávací centrum U Floriánka",
         "ulice U Floriánka"
@@ -9089,8 +9089,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Chlumčany: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Chlumčany: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Hasičská zbrojnice SDH Chlumčany",
         "Obec Chlumčany - Náměstí Bohuslava Kašpara"
@@ -9111,8 +9111,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Velké Březno: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Velké Březno: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Náměstí ve Velkém Březně"
       ]
@@ -9132,8 +9132,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Velká Hleďsebe: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Velká Hleďsebe: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Park u kostela sv. Anny"
       ]
@@ -9153,8 +9153,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Buchlovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Buchlovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Hala Cihelna Buchlovice",
         "Místní knihovna Buchlovice",
@@ -9176,8 +9176,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Velké Karlovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Velké Karlovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Karlovské muzeum",
         "Kulturní dům Velké Karlovice"
@@ -9198,8 +9198,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Štěnovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Štěnovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kostel sv. Prokopa ve Štěnovicích",
         "Lidový dům Štěnovice",
@@ -9221,8 +9221,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Kněžmost: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Kněžmost: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kostel sv. Františka Serafínského",
         "Obec Kněžmost",
@@ -9245,8 +9245,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Luštěnice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Luštěnice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Sokolovna Luštěnice",
         "před sokolovnou"
@@ -9267,8 +9267,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Břasy: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Břasy: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "SOKOLKA"
       ]
@@ -9288,8 +9288,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Brandýsek: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Brandýsek: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Hasičská zbrojnice",
         "„Kino“ a park za „Kinem“"
@@ -9310,8 +9310,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Vikýřovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Vikýřovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Tělocvična u ZŠ"
       ]
@@ -9331,8 +9331,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Blučina: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Blučina: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "REUSE centrum Blučina"
       ]
@@ -9352,8 +9352,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Včelná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Včelná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kulturní centrum Včelná"
       ]
@@ -9373,8 +9373,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Rakvice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Rakvice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Sokolovna"
       ]
@@ -9394,8 +9394,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Škvorec: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Škvorec: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Evangelický kostel ve Škvorci",
         "Kostel sv. Anny ve Škvorci",
@@ -9419,8 +9419,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Staříč: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Staříč: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "KD STAŘÍČ A BETONOVÉ HŘIŠTĚ"
       ]
@@ -9440,8 +9440,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Velim: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Velim: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Evangelická fara -Szalatnayova síň ve Velimi",
         "Sportovní areál Pianka"
@@ -9462,8 +9462,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Nelahozeves: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Nelahozeves: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Fotbalové hřiště Dynamo Nelahozeves",
         "Kostel sv. Ondřeje",
@@ -9488,8 +9488,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Milín: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Milín: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Družina školy",
         "Kulturní dům"
@@ -9510,8 +9510,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Velká Polom: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Velká Polom: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Obec Velká Polom"
       ]
@@ -9531,8 +9531,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Kvasice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Kvasice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kvasice"
       ]
@@ -9552,8 +9552,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Lednice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Lednice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Lednice",
         "Zámecké jízdárny Lednice",
@@ -9576,8 +9576,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Slavkov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Slavkov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Hasičská zbrojnice"
       ]
@@ -9597,8 +9597,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Nižbor: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Nižbor: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Restaurace Zastávka",
         "Zámek Nižbor"
@@ -9619,8 +9619,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Šitbořice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Šitbořice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Společenský dům Orlovna"
       ]
@@ -9640,8 +9640,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Dýšina: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Dýšina: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Dýšina",
         "Dýšina, náves",
@@ -9663,8 +9663,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Píšť: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Píšť: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kulturní centrum obce Píšť"
       ]
@@ -9684,8 +9684,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Lešná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Lešná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Obecní úřad a okolí"
       ]
@@ -9705,8 +9705,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Tvrdonice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Tvrdonice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Areál TNS",
         "Knihovna Tvrdonice",
@@ -9730,8 +9730,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Nýdek: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Nýdek: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Czytelnia",
         "Nýdek - areál Požárník",
@@ -9753,8 +9753,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Červené Pečky: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Červené Pečky: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Červené Pečky"
       ]
@@ -9774,8 +9774,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Lelekovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Lelekovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Areál u sokolovny, Skalka",
         "Náves",
@@ -9797,8 +9797,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Pchery: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Pchery: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "park Pchery"
       ]
@@ -9818,8 +9818,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Troubky: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Troubky: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kulturní dům"
       ]
@@ -9839,8 +9839,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Lužná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Lužná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Obec Lužná",
         "ZŠ Lužná",
@@ -9862,8 +9862,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Dlouhá Loučka: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Dlouhá Loučka: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Knihovna"
       ]
@@ -9883,8 +9883,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Mikulčice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Mikulčice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Chalupa F. Mikuleckého",
         "Kulturní dům",
@@ -9908,8 +9908,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Lysice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Lysice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Hostinec U labutě",
         "Letní kino Lysice",
@@ -9932,8 +9932,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Bystřany: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Bystřany: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Obecní úřad Bystřany",
         "Parkoviště před ZŠ Bystřany"
@@ -9954,8 +9954,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Jeseník nad Odrou: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Jeseník nad Odrou: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Areál TJ Slavoj Jeseník nad Odrou",
         "Jeseník nad Odrou"
@@ -9976,8 +9976,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Kozmice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Kozmice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kozmice"
       ]
@@ -9997,8 +9997,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Milotice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Milotice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Bývalá školka na Rafandě"
       ]
@@ -10018,8 +10018,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Kostice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Kostice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Místní knihovna Kostice",
         "Park na Hlavní ulici"
@@ -10040,8 +10040,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Nový Šaldorf-Sedlešovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Nový Šaldorf-Sedlešovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Areál Modrých sklepů",
         "u kapličky v Novém Šaldorfu a před autobazarem Libor Suchý Autoprodejna",
@@ -10063,8 +10063,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Želechovice nad Dřevnicí: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Želechovice nad Dřevnicí: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Areál školy",
         "Kostel sv. Petra a sv. Pavla v Želechovicích nad Dřevnicí",
@@ -10088,8 +10088,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Horní Branná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Horní Branná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Areál zámku, Horní Branná 1",
         "Sokolovna Horní Branná"
@@ -10110,8 +10110,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Drnholec: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Drnholec: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Areál TJ Dynamo Drnholec",
         "Náměstí Drnholec",
@@ -10133,8 +10133,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Březí: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Březí: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Farní dvůr",
         "Nad Farou",
@@ -10156,8 +10156,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Prostřední Bečva: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Prostřední Bečva: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Náves"
       ]
@@ -10177,8 +10177,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Mníšek: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Mníšek: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kostel sv. Mikuláše",
         "U hasičské zbrojnice",
@@ -10200,8 +10200,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Poličná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Poličná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Hasičská zbrojnice",
         "Základní škola a Mateřská škola"
@@ -10222,8 +10222,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Obříství: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Obříství: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Náves Obříství",
         "Penzion Na Kmíně"
@@ -10244,8 +10244,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Dříteň: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Dříteň: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Hospůdka na hřišti"
       ]
@@ -10265,8 +10265,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Lety: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Lety: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Lety náves",
         "Obecní knihovna Lety",
@@ -10288,8 +10288,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Velemín: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Velemín: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kostel sv. Martina ve Velemíně",
         "pod Obecním úřadem ve Velemíně"
@@ -10310,8 +10310,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Stařeč: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Stařeč: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Víceúčelová hala"
       ]
@@ -10331,8 +10331,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Homole: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Homole: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Homole"
       ]
@@ -10352,8 +10352,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Kvasiny: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Kvasiny: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kulturní dům"
       ]
@@ -10373,8 +10373,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Smržice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Smržice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Areál zahrádkářů",
         "Před obecním úřadem"
@@ -10395,8 +10395,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Stará Huť: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Stará Huť: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Park u vstupu do obce"
       ]
@@ -10416,8 +10416,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Mochov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Mochov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Husovo náměstí"
       ]
@@ -10437,8 +10437,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Zlechov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Zlechov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Spolkový domek"
       ]
@@ -10458,8 +10458,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Velké Heraltice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Velké Heraltice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Společenský dům Velké Heraltice",
         "Zámek",
@@ -10481,8 +10481,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Božice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Božice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "kulturní dům",
         "prostranství před obecním úřadem Božice"
@@ -10503,8 +10503,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Šumice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Šumice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Hasoňova chalupa čp. 102",
         "Kulturní dům Šumice",
@@ -10527,8 +10527,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Statenice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Statenice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "náměstíčko Statenice"
       ]
@@ -10548,8 +10548,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Smidary: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Smidary: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Náměstí Smidary"
       ]
@@ -10569,8 +10569,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Topolná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Topolná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Topolná"
       ]
@@ -10590,8 +10590,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Šilheřovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Šilheřovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Charitní domov sv. Mikuláše",
         "Kostel sv. Mikuláše",
@@ -10613,8 +10613,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Zaječí: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Zaječí: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kostel sv. Jana Křtitele"
       ]
@@ -10634,8 +10634,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Ochoz u Brna: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Ochoz u Brna: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Zákazanec naproti OÚ"
       ]
@@ -10655,8 +10655,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Spořice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Spořice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kostel sv. Bartoloměje",
         "Park, nám. gen. Svobody",
@@ -10678,8 +10678,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Jenštejn: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Jenštejn: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Jenštejn - náves"
       ]
@@ -10699,8 +10699,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Dolní Lhota: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Dolní Lhota: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Kostel sv. Cyrila a Metoděje"
       ]
@@ -10720,8 +10720,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Lipůvka: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Lipůvka: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "Sál OÚ Lipůvka"
       ]
@@ -10741,8 +10741,8 @@
       "seed_urls": [],
       "feed_url": null,
       "max_index_pages": 2,
-      "max_details": 14,
-      "coverage_note": "Čížkovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "max_details": 8,
+      "coverage_note": "Čížkovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
       "allowed_venues": [
         "U rybníka"
       ]
@@ -10874,6 +10874,236 @@
       "allowed_venues": [
         "Hejnice"
       ]
+    },
+    {
+      "id": "bystrice-posazavi-calendar",
+      "town": "Bystřice",
+      "region": "Středočeský kraj",
+      "adapter": "posazavi",
+      "index_urls": [
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=87&From=20.11.2026&To=24.12.2026&PageSize=5&Page=1&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=87&From=20.11.2026&To=24.12.2026&PageSize=5&Page=2&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=87&From=20.11.2026&To=24.12.2026&PageSize=5&Page=3&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=87&From=20.11.2026&To=24.12.2026&PageSize=5&Page=4&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=87&From=20.11.2026&To=24.12.2026&PageSize=5&Page=5&LanguageId=1"
+      ],
+      "detail_prefixes": [
+        "https://tourist.posazavi.com/cz/kalendar-akci/"
+      ],
+      "url_regex": "^https://tourist\\.posazavi\\.com/cz/kalendar-akci/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 5,
+      "max_details": 14,
+      "coverage_note": "Bystřice: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Bystřice, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "tynec-nad-sazavou-posazavi-calendar",
+      "town": "Týnec nad Sázavou",
+      "region": "Středočeský kraj",
+      "adapter": "posazavi",
+      "index_urls": [
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=868&From=20.11.2026&To=24.12.2026&PageSize=5&Page=1&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=868&From=20.11.2026&To=24.12.2026&PageSize=5&Page=2&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=868&From=20.11.2026&To=24.12.2026&PageSize=5&Page=3&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=868&From=20.11.2026&To=24.12.2026&PageSize=5&Page=4&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=868&From=20.11.2026&To=24.12.2026&PageSize=5&Page=5&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=868&From=20.11.2026&To=24.12.2026&PageSize=5&Page=6&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=868&From=20.11.2026&To=24.12.2026&PageSize=5&Page=7&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=868&From=20.11.2026&To=24.12.2026&PageSize=5&Page=8&LanguageId=1"
+      ],
+      "detail_prefixes": [
+        "https://tourist.posazavi.com/cz/kalendar-akci/"
+      ],
+      "url_regex": "^https://tourist\\.posazavi\\.com/cz/kalendar-akci/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 8,
+      "max_details": 14,
+      "coverage_note": "Týnec nad Sázavou: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Týnec nad Sázavou, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "benesov-posazavi-calendar",
+      "town": "Benešov",
+      "region": "Středočeský kraj",
+      "adapter": "posazavi",
+      "index_urls": [
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=17&From=20.11.2026&To=24.12.2026&PageSize=5&Page=1&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=17&From=20.11.2026&To=24.12.2026&PageSize=5&Page=2&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=17&From=20.11.2026&To=24.12.2026&PageSize=5&Page=3&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=17&From=20.11.2026&To=24.12.2026&PageSize=5&Page=4&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=17&From=20.11.2026&To=24.12.2026&PageSize=5&Page=5&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=17&From=20.11.2026&To=24.12.2026&PageSize=5&Page=6&LanguageId=1"
+      ],
+      "detail_prefixes": [
+        "https://tourist.posazavi.com/cz/kalendar-akci/"
+      ],
+      "url_regex": "^https://tourist\\.posazavi\\.com/cz/kalendar-akci/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 6,
+      "max_details": 14,
+      "coverage_note": "Benešov: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Benešov, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "pysely-posazavi-calendar",
+      "town": "Pyšely",
+      "region": "Středočeský kraj",
+      "adapter": "posazavi",
+      "index_urls": [
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=683&From=20.11.2026&To=24.12.2026&PageSize=5&Page=1&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=683&From=20.11.2026&To=24.12.2026&PageSize=5&Page=2&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=683&From=20.11.2026&To=24.12.2026&PageSize=5&Page=3&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=683&From=20.11.2026&To=24.12.2026&PageSize=5&Page=4&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=683&From=20.11.2026&To=24.12.2026&PageSize=5&Page=5&LanguageId=1"
+      ],
+      "detail_prefixes": [
+        "https://tourist.posazavi.com/cz/kalendar-akci/"
+      ],
+      "url_regex": "^https://tourist\\.posazavi\\.com/cz/kalendar-akci/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 5,
+      "max_details": 14,
+      "coverage_note": "Pyšely: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Pyšely, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "netvorice-posazavi-calendar",
+      "town": "Netvořice",
+      "region": "Středočeský kraj",
+      "adapter": "posazavi",
+      "index_urls": [
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=546&From=20.11.2026&To=24.12.2026&PageSize=5&Page=1&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=546&From=20.11.2026&To=24.12.2026&PageSize=5&Page=2&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=546&From=20.11.2026&To=24.12.2026&PageSize=5&Page=3&LanguageId=1"
+      ],
+      "detail_prefixes": [
+        "https://tourist.posazavi.com/cz/kalendar-akci/"
+      ],
+      "url_regex": "^https://tourist\\.posazavi\\.com/cz/kalendar-akci/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 3,
+      "max_details": 14,
+      "coverage_note": "Netvořice: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Netvořice, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "jilove-u-prahy-posazavi-calendar",
+      "town": "Jílové u Prahy",
+      "region": "Středočeský kraj",
+      "adapter": "posazavi",
+      "index_urls": [
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=286&From=20.11.2026&To=24.12.2026&PageSize=5&Page=1&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=286&From=20.11.2026&To=24.12.2026&PageSize=5&Page=2&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=286&From=20.11.2026&To=24.12.2026&PageSize=5&Page=3&LanguageId=1"
+      ],
+      "detail_prefixes": [
+        "https://tourist.posazavi.com/cz/kalendar-akci/"
+      ],
+      "url_regex": "^https://tourist\\.posazavi\\.com/cz/kalendar-akci/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 3,
+      "max_details": 14,
+      "coverage_note": "Jílové u Prahy: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Jílové u Prahy, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "sazava-posazavi-calendar",
+      "town": "Sázava",
+      "region": "Středočeský kraj",
+      "adapter": "posazavi",
+      "index_urls": [
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=738&From=20.11.2026&To=24.12.2026&PageSize=5&Page=1&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=738&From=20.11.2026&To=24.12.2026&PageSize=5&Page=2&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=738&From=20.11.2026&To=24.12.2026&PageSize=5&Page=3&LanguageId=1"
+      ],
+      "detail_prefixes": [
+        "https://tourist.posazavi.com/cz/kalendar-akci/"
+      ],
+      "url_regex": "^https://tourist\\.posazavi\\.com/cz/kalendar-akci/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 3,
+      "max_details": 14,
+      "coverage_note": "Sázava: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Sázava, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "pruhonice-posazavi-calendar",
+      "town": "Průhonice",
+      "region": "Středočeský kraj",
+      "adapter": "posazavi",
+      "index_urls": [
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=666&From=20.11.2026&To=24.12.2026&PageSize=5&Page=1&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=666&From=20.11.2026&To=24.12.2026&PageSize=5&Page=2&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=666&From=20.11.2026&To=24.12.2026&PageSize=5&Page=3&LanguageId=1"
+      ],
+      "detail_prefixes": [
+        "https://tourist.posazavi.com/cz/kalendar-akci/"
+      ],
+      "url_regex": "^https://tourist\\.posazavi\\.com/cz/kalendar-akci/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 3,
+      "max_details": 14,
+      "coverage_note": "Průhonice: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Průhonice, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "cesky-sternberk-posazavi-calendar",
+      "town": "Český Šternberk",
+      "region": "Středočeský kraj",
+      "adapter": "posazavi",
+      "index_urls": [
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=118&From=20.11.2026&To=24.12.2026&PageSize=5&Page=1&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=118&From=20.11.2026&To=24.12.2026&PageSize=5&Page=2&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=118&From=20.11.2026&To=24.12.2026&PageSize=5&Page=3&LanguageId=1"
+      ],
+      "detail_prefixes": [
+        "https://tourist.posazavi.com/cz/kalendar-akci/"
+      ],
+      "url_regex": "^https://tourist\\.posazavi\\.com/cz/kalendar-akci/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 3,
+      "max_details": 14,
+      "coverage_note": "Český Šternberk: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Český Šternberk, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "cercany-posazavi-calendar",
+      "town": "Čerčany",
+      "region": "Středočeský kraj",
+      "adapter": "posazavi",
+      "index_urls": [
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=102&From=20.11.2026&To=24.12.2026&PageSize=5&Page=1&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=102&From=20.11.2026&To=24.12.2026&PageSize=5&Page=2&LanguageId=1"
+      ],
+      "detail_prefixes": [
+        "https://tourist.posazavi.com/cz/kalendar-akci/"
+      ],
+      "url_regex": "^https://tourist\\.posazavi\\.com/cz/kalendar-akci/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Čerčany: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Čerčany, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "stribrna-skalice-posazavi-calendar",
+      "town": "Stříbrná Skalice",
+      "region": "Středočeský kraj",
+      "adapter": "posazavi",
+      "index_urls": [
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=804&From=20.11.2026&To=24.12.2026&PageSize=5&Page=1&LanguageId=1",
+        "https://tourist.posazavi.com/Json/Search/Event.ashx?CityId=804&From=20.11.2026&To=24.12.2026&PageSize=5&Page=2&LanguageId=1"
+      ],
+      "detail_prefixes": [
+        "https://tourist.posazavi.com/cz/kalendar-akci/"
+      ],
+      "url_regex": "^https://tourist\\.posazavi\\.com/cz/kalendar-akci/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Stříbrná Skalice: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Stříbrná Skalice, nikoli úplné obecní ani krajské pokrytí."
     }
   ]
 }

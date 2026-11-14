@@ -2000,5 +2000,82 @@
     "precision": "town",
     "label": "Hejnice — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/439065"
+  },
+  "Bystřice": {
+    "lat": 49.7321319,
+    "lon": 14.667401,
+    "precision": "town",
+    "label": "Bystřice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440778"
+  },
+  "Týnec nad Sázavou": {
+    "lat": 49.8334756,
+    "lon": 14.5899539,
+    "precision": "town",
+    "label": "Týnec nad Sázavou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441509"
+  },
+  "Benešov": {
+    "lat": 49.7828898,
+    "lon": 14.6875926,
+    "precision": "town",
+    "label": "Benešov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440764"
+  },
+  "Pyšely": {
+    "lat": 49.8767807,
+    "lon": 14.6770252,
+    "precision": "town",
+    "label": "Pyšely — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441504"
+  },
+  "Netvořice": {
+    "lat": 49.8091715,
+    "lon": 14.520242,
+    "precision": "town",
+    "label": "Netvořice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441455"
+  },
+  "Jílové u Prahy": {
+    "lat": 49.8952972,
+    "lon": 14.4933502,
+    "precision": "town",
+    "label": "Jílové u Prahy — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442259"
+  },
+  "Sázava": {
+    "lat": 49.8717573,
+    "lon": 14.896712,
+    "precision": "town",
+    "label": "Sázava — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441203"
+  },
+  "Průhonice": {
+    "lat": 50.0017798,
+    "lon": 14.5606434,
+    "precision": "town",
+    "label": "Průhonice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442251"
+  },
+  "Český Šternberk": {
+    "lat": 49.8073201,
+    "lon": 14.9351222,
+    "precision": "town",
+    "label": "Český Šternberk — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440723"
+  },
+  "Čerčany": {
+    "lat": 49.8529293,
+    "lon": 14.7029875,
+    "precision": "town",
+    "label": "Čerčany — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440752"
+  },
+  "Stříbrná Skalice": {
+    "lat": 49.8976632,
+    "lon": 14.8461623,
+    "precision": "town",
+    "label": "Stříbrná Skalice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437131"
   }
 }
