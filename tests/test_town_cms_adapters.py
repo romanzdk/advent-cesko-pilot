@@ -88,6 +88,23 @@ class CultureHouses(unittest.TestCase):
             c.parse_event(self.dko('13. a 14. 12. 2026'), dict(s), url, WINDOW)
 
 
+class PardubiceCity(unittest.TestCase):
+    def page(self, venue, *times):
+        stamp = ''.join(f'<time>{t}</time>' for t in times)
+        return (f'<h1 class="PageHeader-title Alpha">Rozsvícení vánočního stromu</h1><div class="Layout-left">'
+                f'<address class="event-Address">{venue}</address><strong class="article-Detail-date">{stamp}</strong><p>Program.</p></div>')
+
+    def test_pardubice_date_venue_and_other_places(self):
+        s = src('pardubice', 'Pardubice')
+        url = 'https://pardubice.eu/rozsviceni-stromu'
+        e = c.parse_event(self.page('náměstí Dukelských hrdinů Pardubice', 'Ne 29. 11. 2026 16:00'), dict(s), url, WINDOW)
+        self.assertEqual((e['date'], e['startTime']), ('2026-11-29', '16:00'))
+        with self.assertRaises(c.Review):
+            c.parse_event(self.page('Dříteč, náves', 'So 28. 11. 2026 15:00'), dict(s), url, WINDOW)
+        with self.assertRaises(c.Review):
+            c.parse_event(self.page('Pardubice', ), dict(s), url, WINDOW)
+
+
 class RegionalListings(unittest.TestCase):
     def visittrebic(self, day_block, start='15:30'):
         return (f'<h1 class="h1_clanek_akce">Vánoční náměstí</h1><div class="obal_datum_akce">{day_block}</div><div class="obsah_akce">'

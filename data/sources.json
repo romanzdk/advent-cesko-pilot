@@ -15108,6 +15108,404 @@
       "max_details": 14,
       "slug_keywords": true,
       "coverage_note": "Jihlava: omezený sezónní výběr z programu Domu kultury a odborů Jihlava (dko.cz); městský web je pro sběrač blokován robots.txt a není obcházen. Nejde o úplné městské pokrytí."
+    },
+    {
+      "id": "borova-obec-calendar",
+      "town": "Borová",
+      "region": "Pardubický kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.borova.cz/deni-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.borova.cz/deni-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.borova\\.cz/deni-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Borová: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Areál za sokolovnou",
+        "Borovská Sokolovna"
+      ]
+    },
+    {
+      "id": "holetin-obec-calendar",
+      "town": "Holetín",
+      "region": "Pardubický kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obecholetin.cz/pro-obcany/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obecholetin.cz/pro-obcany/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obecholetin\\.cz/pro-obcany/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Holetín: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní centrum Holetín"
+      ]
+    },
+    {
+      "id": "jevicko-calendar",
+      "town": "Jevíčko",
+      "region": "Pardubický kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.jevicko.cz/tic-volny-cas/kulturni-akce-a-kd-astra-jevicko/"
+      ],
+      "detail_prefixes": [
+        "https://www.jevicko.cz/tic-volny-cas/kulturni-akce-a-kd-astra-jevicko/"
+      ],
+      "url_regex": "^https://www\\.jevicko\\.cz/tic-volny-cas/kulturni-akce-a-kd-astra-jevicko/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Jevíčko: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "KD Astra Jevíčko",
+        "Městská knihovna, Jevíčko",
+        "Synagoga",
+        "nám. Palackého"
+      ]
+    },
+    {
+      "id": "mistrovice-obec-calendar",
+      "town": "Mistrovice",
+      "region": "Pardubický kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mistrovice.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mistrovice.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mistrovice\\.cz/zivot-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Mistrovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Náměstí Mistrovice"
+      ]
+    },
+    {
+      "id": "prosetin-obec-calendar",
+      "town": "Prosetín",
+      "region": "Pardubický kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.prosetin.eu/deni-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.prosetin.eu/deni-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.prosetin\\.eu/deni-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Prosetín: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Fotbalové hřiště Prosetín",
+        "Hospoda na hřišti",
+        "Mateřská škola Prosetín"
+      ]
+    },
+    {
+      "id": "rybnik-obec-calendar",
+      "town": "Rybník",
+      "region": "Pardubický kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.rybnik.cz/obec/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.rybnik.cz/obec/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.rybnik\\.cz/obec/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Rybník: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Společenský sál Rybník"
+      ]
+    },
+    {
+      "id": "svincany-obec-calendar",
+      "town": "Svinčany",
+      "region": "Pardubický kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.svincany.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.svincany.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.svincany\\.cz/zivot-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Svinčany: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "KD Svinčany"
+      ]
+    },
+    {
+      "id": "chrudim-kudyznudy",
+      "town": "Chrudim",
+      "region": "Pardubický kraj",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=571164",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=571164&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Chrudim: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Chrudim, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "usti-nad-orlici-kudyznudy",
+      "town": "Ústí nad Orlicí",
+      "region": "Pardubický kraj",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=579891",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=579891&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Ústí nad Orlicí: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Ústí nad Orlicí, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "vysoke-myto-kudyznudy",
+      "town": "Vysoké Mýto",
+      "region": "Pardubický kraj",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=581186",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=581186&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Vysoké Mýto: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Vysoké Mýto, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "litomysl-kudyznudy",
+      "town": "Litomyšl",
+      "region": "Pardubický kraj",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=578347",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=578347&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Litomyšl: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Litomyšl, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "policka-kudyznudy",
+      "town": "Polička",
+      "region": "Pardubický kraj",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=578576",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=578576&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Polička: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Polička, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "chocen-kudyznudy",
+      "town": "Choceň",
+      "region": "Pardubický kraj",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=580350",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=580350&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Choceň: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Choceň, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "letohrad-kudyznudy",
+      "town": "Letohrad",
+      "region": "Pardubický kraj",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=580538",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=580538&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Letohrad: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Letohrad, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "hermanuv-mestec-kudyznudy",
+      "town": "Heřmanův Městec",
+      "region": "Pardubický kraj",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=571385",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=571385&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Heřmanův Městec: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Heřmanův Městec, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "lazne-bohdanec-kudyznudy",
+      "town": "Lázně Bohdaneč",
+      "region": "Pardubický kraj",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=574767",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=574767&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Lázně Bohdaneč: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Lázně Bohdaneč, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "opatovice-nad-labem-kudyznudy",
+      "town": "Opatovice nad Labem",
+      "region": "Pardubický kraj",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=575429",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=575429&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Opatovice nad Labem: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Opatovice nad Labem, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "horni-jeleni-kudyznudy",
+      "town": "Horní Jelení",
+      "region": "Pardubický kraj",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=574996",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=574996&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Horní Jelení: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Horní Jelení, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "ronov-nad-doubravou-kudyznudy",
+      "town": "Ronov nad Doubravou",
+      "region": "Pardubický kraj",
+      "adapter": "kudyznudy",
+      "index_urls": [
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=572161",
+        "https://www.kudyznudy.cz/kalendar-akci?mesto=572161&stranka=2"
+      ],
+      "url_regex": "^https://www\\.kudyznudy\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 10,
+      "town_in_address": true,
+      "coverage_note": "Ronov nad Doubravou: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Ronov nad Doubravou, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "pardubice-mesto-calendar",
+      "town": "Pardubice",
+      "region": "Pardubický kraj",
+      "adapter": "pardubice",
+      "index_urls": [
+        "https://pardubice.eu/kalendar-akci/?range_from=2026-11-20&range_to=2026-11-28",
+        "https://pardubice.eu/kalendar-akci/?range_from=2026-11-29&range_to=2026-12-06",
+        "https://pardubice.eu/kalendar-akci/?range_from=2026-12-07&range_to=2026-12-15",
+        "https://pardubice.eu/kalendar-akci/?range_from=2026-12-16&range_to=2026-12-24"
+      ],
+      "url_regex": "^https://pardubice\\.eu/[a-z0-9-]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 4,
+      "max_details": 30,
+      "slug_keywords": true,
+      "coverage_note": "Pardubice: omezený sezónní výběr z oficiálního městského kalendáře (čtyři týdenní výpisy po nejvýše 12 akcích, stránkování je pro roboty zakázáno); nikoli úplné městské ani krajské pokrytí."
+    },
+    {
+      "id": "praha-benice-calendar",
+      "town": "Praha-Benice",
+      "region": "Hlavní město Praha",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.praha-benice.cz/zpravy/pozvanky-na-akce-2/"
+      ],
+      "detail_prefixes": [
+        "https://www.praha-benice.cz/zpravy/pozvanky-na-akce-2/"
+      ],
+      "url_regex": "^https://www\\.praha-benice\\.cz/zpravy/pozvanky-na-akce-2/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Praha-Benice: omezený sezónní výběr z oficiálního kalendáře městské části; nejvýše dvě stránky a osm detailů, nikoli úplné pokrytí Prahy.",
+      "allowed_venues": [
+        "Naan o Namak",
+        "Náves u zvoničky"
+      ]
     }
   ]
 }
