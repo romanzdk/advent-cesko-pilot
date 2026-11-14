@@ -24,21 +24,14 @@
   <meta name="twitter:image:alt" content="Advent v Česku 2026: sezonní mapa veřejných akcí, 20. listopadu až 24. prosince.">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./vendor/leaflet.css">
-  <link rel="stylesheet" href="./styles.css?v=poloha-2">
-  <script type="module" src="./app.js?v=poloha-2"></script>
+  <link rel="stylesheet" href="./styles.css?v=otaznik-1">
+  <script type="module" src="./app.js?v=otaznik-1"></script>
   <script type="module" src="./feedback.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#results">Přejít na akce</a>
   <header class="masthead wrap">
     <a class="wordmark" href="./" aria-label="Kam na advent, úvod">kam <span>na advent</span><span class="wordmark-star" aria-hidden="true">✳</span></a>
-    <details class="origin-story">
-      <summary aria-label="Proč tahle mapa vznikla" title="Proč tahle mapa vznikla"><span aria-hidden="true">?</span></summary>
-      <div class="origin-story-panel">
-        <h2>Proč tahle mapa vznikla</h2>
-        <p>Moje žena má ráda vánoční atmosféru a trhy. Tahle mapa vznikla, abychom měli po ruce tipy, kam spolu vyrazit.</p>
-      </div>
-    </details>
   </header>
   <main class="wrap">
     <section class="intro" aria-labelledby="page-title">
@@ -119,6 +112,13 @@
         <a id="feedback-result" hidden target="_blank" rel="noopener noreferrer">Zobrazit zveřejněné hlášení</a>
         <a id="feedback-draft" hidden target="_blank" rel="noopener noreferrer">Otevřít připravený návrh na GitHubu</a>
         <a id="feedback-direct-draft" href="https://github.com/romanzdk/advent-cesko-pilot/issues/new?template=tip.md" target="_blank" rel="noopener noreferrer">Napsat tip přímo na GitHubu (i bez JavaScriptu)</a>
+      </div>
+    </details>
+    <details class="origin-story">
+      <summary aria-label="Proč tahle mapa vznikla" title="Proč tahle mapa vznikla"><span aria-hidden="true">?</span></summary>
+      <div class="origin-story-panel">
+        <h2>Proč tahle mapa vznikla</h2>
+        <p>Moje žena má ráda vánoční atmosféru a trhy. Tahle mapa vznikla, abychom měli po ruce tipy, kam spolu vyrazit.</p>
       </div>
     </details>
     <div class="results-toolbar"><div><h2 id="results-heading">Kam vyrazit</h2><p id="result-count" role="status" aria-live="polite">Načítáme přehled…</p></div><div class="view-switch" aria-label="Zobrazení"><button id="show-list" type="button" aria-pressed="true" aria-controls="results">Seznam</button><button id="show-map" type="button" aria-pressed="false" aria-controls="map-panel">Mapa</button></div></div>
