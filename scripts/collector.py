@@ -218,7 +218,7 @@ def parse_event(body, source, url, window):
     title = txt(root.find('h1'))
     adapter = source['adapter']
     structured = structured_event(root, url)
-    if adapter in ('hranice', 'visitzlin', 'lanskroun', 'dre', 'ostravainfo', 'anawe', 'jevents', 'visittrebic', 'dko', 'pardubice') and structured:
+    if adapter in ('hranice', 'visitzlin', 'lanskroun', 'dre', 'ostravainfo', 'anawe', 'jevents', 'visittrebic', 'dko', 'pardubice', 'component', 'kdykde', 'kicvolary') and structured:
         raise Review('Nová strukturovaná data nesmějí obejít ověření označených polí; ověřte formát znovu.')
     wpem_price = None
     if adapter == 'wpem' and structured:
@@ -483,6 +483,50 @@ def parse_event(body, source, url, window):
             raise Review('Nejednoznačný termín nebo místo akce; ověřte detail.')
         date_text = ' '.join(part for part in when.groups() if part)
         venue = places[0]
+    elif adapter in ('kdykde', 'kicvolary'):
+        months = {'listopadu': 11, 'prosince': 12, 'ledna': 1}
+        clock = r'(?:[01]?\d|2[0-3]):[0-5]\d'
+        if adapter == 'kdykde':
+            title = txt(root.find('h1'))
+            labelled = {}
+            for para in root.all('p'):
+                m = re.match(r'(Kdy|Kde):\s*(.+)', txt(para))
+                if m:
+                    labelled.setdefault(m[1], []).append(m[2])
+            when_text = labelled.get('Kdy', [''])[0] if len(labelled.get('Kdy', [])) == 1 else ''
+            venue = labelled.get('Kde', [''])[0] if len(labelled.get('Kde', [])) == 1 else ''
+            when = re.fullmatch(rf'(?:\w+\s+)?(\d{{1,2}})\. ({"|".join(months)}) (20\d{{2}})(?: od ({clock})(?: do {clock})?)?', when_text)
+            day, start = (when and f'{int(when[1])}. {months[when[2]]}. {when[3]}'), (when and when[4])
+            scope = root.find(cls='text') or root
+        else:
+            detail = root.find(id='schedule-detail')
+            title = txt(detail.find('h2')) if detail else ''
+            stamp = detail.find(cls='main-stamp') if detail else None
+            cells = [txt(n) for n in stamp.all('p')] if stamp else []
+            when = re.fullmatch(rf'(\d{{1,2}})\. ({"|".join(months)}) (20\d{{2}})', cells[0]) if cells else None
+            day = when and f'{int(when[1])}. {months[when[2]]}. {when[3]}'
+            start = cells[1] if len(cells) > 1 and re.fullmatch(clock, cells[1]) else None
+            venue = cells[2] if len(cells) > 2 else ''
+            scope = detail or root
+        if not title or not when or not venue:
+            raise Review('Nejednoznačný termín nebo místo akce; ověřte detail.')
+        date_text = day + (f' {start}' if start else '')
+    elif adapter == 'component':
+        title = txt(root.find('h1', cls='component__title'))
+        info = root.find(cls='component__info')
+        stamps = info.all('time') if info else []
+        clock = r'(?:[01]?\d|2[0-3]):[0-5]\d'
+        when = re.fullmatch(rf'(\d{{1,2}}\. \w+ 20\d{{2}})(?: od ({clock})(?: do {clock})?)?', txt(stamps[0])) if len(stamps) == 1 else None
+        place = re.search(r'Místo:\s*([^\n]+?)(?:\s+Organizátor:|$)', txt(info)) if info else None
+        if not title or not when or not stamps[0].attrs.get('datetime', '').startswith(('2026-11', '2026-12')):
+            raise Review('Nejednoznačný termín akce; ověřte detail.')
+        # The machine date is authoritative; the Czech month name is only cross-checked through its day.
+        day = stamps[0].attrs['datetime'][:10]
+        date_text = f'{int(day[8:])}. {int(day[5:7])}. {day[:4]}' + (f' {when[2]}' if when[2] else '')
+        if not when[1].startswith(f'{int(day[8:])}.'):
+            raise Review('Rozporné datum v detailu akce.')
+        venue = place[1].strip() if place else ''
+        scope = root.find(cls='component--detail') or root
     elif adapter == 'pardubice':
         title = txt(root.find('h1', cls='PageHeader-title'))
         stamp = root.find(cls='article-Detail-date')
@@ -605,7 +649,7 @@ def parse_event(body, source, url, window):
         raise Review('Neúplný nebo nejednoznačný interval události.')
     if len(dates) > 1:
         explicit_range = adapter in ('itrebon', 'telc', 'visitzlin', 'lanskroun') and re.match(r'^\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}\s*[-–]\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}(?!\d)', date_text)
-        if (not explicit_range and (adapter not in ('galileo', 'structured', 'drupal', 'dre', 'ostravainfo', 'anawe', 'jevents', 'visittrebic', 'dko', 'pardubice') or not re.search(r'\s[-–]\s', date_text))) or len(dates) > 2 or dates[1][0] < dates[0][0]:
+        if (not explicit_range and (adapter not in ('galileo', 'structured', 'drupal', 'dre', 'ostravainfo', 'anawe', 'jevents', 'visittrebic', 'dko', 'pardubice', 'component', 'kdykde', 'kicvolary') or not re.search(r'\s[-–]\s', date_text))) or len(dates) > 2 or dates[1][0] < dates[0][0]:
             raise Review('Více různých dat vyžaduje ruční kontrolu.')
     narrative_nodes = [scope.find(cls=cls) for cls in ('lead','event-action-lead__body','event-text')]
     narrative_nodes.extend(n for n in scope.children if isinstance(n,Node) and n.tag == 'p')

@@ -10409,6 +10409,62 @@
       }
     },
     {
+      "id": "e-91ab22963640ae563977",
+      "title": "Volarské adventní trhy",
+      "town": "Volary",
+      "region": "Jihočeský kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": null,
+      "venue": "Náměstí, radniční sál Volary",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Volarské adventní trhy. Náměstí, radniční sál Volary",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.kic-volary.cz/program/volarske-adventni-trhy-556",
+      "location": {
+        "lat": 48.9095977,
+        "lon": 13.8883971,
+        "precision": "town",
+        "label": "Volary — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437975"
+      }
+    },
+    {
+      "id": "e-a6683d9a0d0aeb917722",
+      "title": "Vánoční knižní trhy",
+      "town": "Volary",
+      "region": "Jihočeský kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": null,
+      "venue": "Knihovna Volary",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční knižní trhy. Knihovna Volary",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.kic-volary.cz/program/vanocni-knizni-trhy-561",
+      "location": {
+        "lat": 48.9095977,
+        "lon": 13.8883971,
+        "precision": "town",
+        "label": "Volary — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437975"
+      }
+    },
+    {
       "title": "Adventní dílny",
       "town": "Zlín",
       "venue": "1. patro Tyrolského domu, ZOO a zámek Zlín-Lešná (naproti zámku Lešná)",
@@ -10949,6 +11005,34 @@
         "precision": "town",
         "label": "Senomaty — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/440784"
+      }
+    },
+    {
+      "id": "e-484ca7fdfc8c2295b824",
+      "title": "Adventní tvoření - Švýcárna",
+      "town": "Slatiňany",
+      "region": "Pardubický kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "venue": "Švýcárna Slatiňany",
+      "category": "tvoreni",
+      "price": "350 Kč",
+      "registration": "Pořadatel uvádí rezervace / přihlášení; podmínky ověřte přímo u něj.",
+      "registrationUrl": null,
+      "description": "Adventní tvoření - Švýcárna. Švýcárna Slatiňany",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.slatinany.cz/mesto/aktuality/adventni-tvoreni-svycarna",
+      "location": {
+        "lat": 49.9212452,
+        "lon": 15.8132542,
+        "precision": "town",
+        "label": "Slatiňany — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439964"
       }
     },
     {
@@ -16648,6 +16732,36 @@
       }
     },
     {
+      "id": "e-1460a956f963aa789bec",
+      "title": "Rozsvícení vánočního stromu ve Mšeně",
+      "town": "Mšeno",
+      "region": "Středočeský kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "venue": "náměstí Míru ve Mšeně",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu ve Mšeně. náměstí Míru ve Mšeně",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.mestomseno.cz/zivot-ve-meste/kalendar-akci/rozsviceni-vanocniho-stromu-ve-msene/",
+      "location": {
+        "lat": 50.4381922,
+        "lon": 14.6326066,
+        "precision": "town",
+        "label": "Mšeno — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437600"
+      }
+    },
+    {
       "id": "e-1db73f038f406fa6df45",
       "title": "Vánoce na Hrádku 2026",
       "town": "Nechanice",
@@ -21909,6 +22023,34 @@
       }
     },
     {
+      "id": "e-281336221aa5bf9141af",
+      "title": "Adventní koncert ZUŠ Volary, průvod se zvonečky a rozsvícení vánočního stromku",
+      "town": "Volary",
+      "region": "Jihočeský kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Kostel svaté Kateřiny, náměstí Volary",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert ZUŠ Volary, průvod se zvonečky a rozsvícení vánočního stromku. Kostel svaté Kateřiny, náměstí Volary",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.kic-volary.cz/program/adventni-koncert-zus-volary-pruvod-se-zvonecky-a-rozsviceni-vanocniho-stromku-557",
+      "location": {
+        "lat": 48.9095977,
+        "lon": 13.8883971,
+        "precision": "town",
+        "label": "Volary — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437975"
+      }
+    },
+    {
       "title": "Zahájení adventní doby s rozsvícením vánočního stromu",
       "town": "Zlín",
       "venue": "kostel Panny Marie Pomocnice křesťanů, Zlín-Jižní Svahy; dopoledne sál B, odpoledne před kostelem",
@@ -26126,6 +26268,34 @@
       }
     },
     {
+      "id": "e-ada95435260941fb3cb3",
+      "title": "S Vánoci po celém světě - hudební pořad Jana Víznera",
+      "town": "Mšeno",
+      "region": "Středočeský kraj",
+      "date": "2026-12-01",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "venue": "DS Mšeno",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "S Vánoci po celém světě - hudební pořad Jana Víznera. DS Mšeno",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.mestomseno.cz/zivot-ve-meste/kalendar-akci/s-vanoci-po-celem-svete-hudebni-porad-jana-viznera/",
+      "location": {
+        "lat": 50.4381922,
+        "lon": 14.6326066,
+        "precision": "town",
+        "label": "Mšeno — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437600"
+      }
+    },
+    {
       "id": "e-936e767c5be8008f7a4c",
       "title": "Vánoční jarmark",
       "town": "Benešov nad Ploučnicí",
@@ -26181,6 +26351,34 @@
         "precision": "town",
         "label": "České Budějovice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437861"
+      }
+    },
+    {
+      "id": "e-961350f392d2a22111ff",
+      "title": "Školní vánoční trhy",
+      "town": "Volary",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-01",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "Základní škola Volary",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Školní vánoční trhy. Základní škola Volary",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.kic-volary.cz/program/skolni-vanocni-trhy-576",
+      "location": {
+        "lat": 48.9095977,
+        "lon": 13.8883971,
+        "precision": "town",
+        "label": "Volary — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437975"
       }
     },
     {
@@ -27553,6 +27751,34 @@
         "precision": "town",
         "label": "Ostrava — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437354"
+      }
+    },
+    {
+      "id": "e-5d45229596acd2b9daba",
+      "title": "Mikulášská se skupinou Bonus Pavla Pilaře",
+      "town": "Mšeno",
+      "region": "Středočeský kraj",
+      "date": "2026-12-03",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "venue": "DS Mšeno",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášská se skupinou Bonus Pavla Pilaře. DS Mšeno",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.mestomseno.cz/zivot-ve-meste/kalendar-akci/mikulasska-se-skupinou-bonus-pavla-pilare/",
+      "location": {
+        "lat": 50.4381922,
+        "lon": 14.6326066,
+        "precision": "town",
+        "label": "Mšeno — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437600"
       }
     },
     {
@@ -29329,6 +29555,34 @@
         "precision": "town",
         "label": "Starý Plzenec — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438336"
+      }
+    },
+    {
+      "id": "e-7ddf184584af4cc27fcf",
+      "title": "STP: Předvánoční posezení",
+      "town": "Volary",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Radniční sál Volary",
+      "category": "setkani",
+      "price": "dobrovolné",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "STP: Předvánoční posezení. Radniční sál Volary",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.kic-volary.cz/program/stp-predvanocni-posezeni-564",
+      "location": {
+        "lat": 48.9095977,
+        "lon": 13.8883971,
+        "precision": "town",
+        "label": "Volary — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437975"
       }
     },
     {
@@ -33883,6 +34137,34 @@
       }
     },
     {
+      "id": "e-3d644c4af3c0417a5621",
+      "title": "Čertovsko-andělská ohňová show a mikulášská nadílka",
+      "town": "Volary",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Náměstí Volary",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Čertovsko-andělská ohňová show a mikulášská nadílka. Náměstí Volary",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.kic-volary.cz/program/certovsko-andelska-ohnova-show-a-mikulasska-nadilka-565",
+      "location": {
+        "lat": 48.9095977,
+        "lon": 13.8883971,
+        "precision": "town",
+        "label": "Volary — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437975"
+      }
+    },
+    {
       "id": "e-faf0922d295dfbecbf1a",
       "title": "MIKULÁŠSKÁ MERENDA",
       "town": "Česká Skalice",
@@ -38272,6 +38554,34 @@
       }
     },
     {
+      "id": "e-c28c0262130705f18db8",
+      "title": "Šli pastýři do Betléma",
+      "town": "Volary",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-07",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Sál kina Volary",
+      "category": "betlem",
+      "price": "50 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Šli pastýři do Betléma. Sál kina Volary",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.kic-volary.cz/program/sli-pastyri-do-betlema-567",
+      "location": {
+        "lat": 48.9095977,
+        "lon": 13.8883971,
+        "precision": "town",
+        "label": "Volary — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437975"
+      }
+    },
+    {
       "id": "e-76c5182bb78723832b62",
       "title": "Adventní pořad",
       "town": "Dubá",
@@ -40264,6 +40574,34 @@
       }
     },
     {
+      "id": "e-e8374ed813e5ae185e3d",
+      "title": "Česko zpívá koledy",
+      "town": "Volary",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Před infocentrem",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Česko zpívá koledy. Před infocentrem",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.kic-volary.cz/program/cesko-zpiva-koledy-568",
+      "location": {
+        "lat": 48.9095977,
+        "lon": 13.8883971,
+        "precision": "town",
+        "label": "Volary — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437975"
+      }
+    },
+    {
       "id": "e-ecc1d9a3d743c881e3f4",
       "title": "Vánoční koncert Junior Big Band",
       "town": "Červený Kostelec",
@@ -41111,6 +41449,34 @@
       }
     },
     {
+      "id": "e-0492a8924cd8fc20dcf6",
+      "title": "Vánoční koncert",
+      "town": "Volary",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-10",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Sál kina Volary",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert. Sál kina Volary",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.kic-volary.cz/program/vanocni-koncert-577",
+      "location": {
+        "lat": 48.9095977,
+        "lon": 13.8883971,
+        "precision": "town",
+        "label": "Volary — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437975"
+      }
+    },
+    {
       "id": "e-592017b0476534b3ae57",
       "title": "Vánoční koncert žáků ZŠ Škvorec",
       "town": "Škvorec",
@@ -41250,6 +41616,34 @@
         "precision": "town",
         "label": "Židlochovice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441227"
+      }
+    },
+    {
+      "id": "e-8a10b97dcb4126270965",
+      "title": "Adventní koncert Musica Festiva di Praga",
+      "town": "Mšeno",
+      "region": "Středočeský kraj",
+      "date": "2026-12-11",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "venue": "DS Mšeno",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert Musica Festiva di Praga. DS Mšeno",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.mestomseno.cz/zivot-ve-meste/kalendar-akci/adventni-koncert-musica-festiva-di-praga/",
+      "location": {
+        "lat": 50.4381922,
+        "lon": 14.6326066,
+        "precision": "town",
+        "label": "Mšeno — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437600"
       }
     },
     {
@@ -52035,6 +52429,34 @@
         "precision": "town",
         "label": "Týnec nad Sázavou — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441509"
+      }
+    },
+    {
+      "id": "e-26373ce4c7a530d08412",
+      "title": "Vánoční pečení",
+      "town": "Volary",
+      "region": "Jihočeský kraj",
+      "date": "2026-12-20",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "venue": "Muzeum Volary",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční pečení. Muzeum Volary",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T14:56:57+00:00",
+      "sourceUrl": "https://www.kic-volary.cz/program/vanocni-peceni-572",
+      "location": {
+        "lat": 48.9095977,
+        "lon": 13.8883971,
+        "precision": "town",
+        "label": "Volary — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437975"
       }
     },
     {

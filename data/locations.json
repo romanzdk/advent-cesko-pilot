@@ -4828,5 +4828,26 @@
     "precision": "town",
     "label": "Bouzov — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/438805"
+  },
+  "Mšeno": {
+    "lat": 50.4381922,
+    "lon": 14.6326066,
+    "precision": "town",
+    "label": "Mšeno — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437600"
+  },
+  "Slatiňany": {
+    "lat": 49.9212452,
+    "lon": 15.8132542,
+    "precision": "town",
+    "label": "Slatiňany — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439964"
+  },
+  "Volary": {
+    "lat": 48.9095977,
+    "lon": 13.8883971,
+    "precision": "town",
+    "label": "Volary — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437975"
   }
 }

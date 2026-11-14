@@ -18006,6 +18006,54 @@
       "max_details": 10,
       "town_in_address": true,
       "coverage_note": "Bouzov: omezený sezónní výběr z celostátního kalendáře Kudy z nudy (CzechTourism); zveřejňují se jen akce s adresou v obci Bouzov, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "mseno-mesto-calendar",
+      "town": "Mšeno",
+      "region": "Středočeský kraj",
+      "adapter": "component",
+      "index_urls": [
+        "https://www.mestomseno.cz/zivot-ve-meste/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mestomseno\\.cz/zivot-ve-meste/kalendar-akci/[a-z0-9-]+/$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 1,
+      "max_details": 14,
+      "slug_keywords": true,
+      "coverage_note": "Mšeno: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše jedna stránka a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí."
+    },
+    {
+      "id": "slatinany-mesto-calendar",
+      "town": "Slatiňany",
+      "region": "Pardubický kraj",
+      "adapter": "kdykde",
+      "index_urls": [
+        "https://www.slatinany.cz/mesto/kalendar-akci"
+      ],
+      "url_regex": "^https://www\\.slatinany\\.cz/mesto/aktuality/[a-z0-9-]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 1,
+      "max_details": 14,
+      "slug_keywords": true,
+      "coverage_note": "Slatiňany: omezený sezónní výběr z oficiálního městského kalendáře (pole „Kdy“ a „Kde“); nikoli úplné městské ani krajské pokrytí."
+    },
+    {
+      "id": "volary-kic-program",
+      "town": "Volary",
+      "region": "Jihočeský kraj",
+      "adapter": "kicvolary",
+      "index_urls": [
+        "https://www.kic-volary.cz/program?date_from=2026-11-20&date_to=2026-12-24"
+      ],
+      "url_regex": "^https://www\\.kic-volary\\.cz/program/[a-z0-9-]+-\\d+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 1,
+      "max_details": 10,
+      "slug_keywords": true,
+      "coverage_note": "Volary: omezený sezónní výběr z programu Kulturně informačního centra Volary; městský web nemá strojově čitelný kalendář. Nejde o úplné městské pokrytí."
     }
   ]
 }
