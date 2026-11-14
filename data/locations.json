@@ -3428,5 +3428,152 @@
     "precision": "town",
     "label": "Havlíčkova Borová — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/440715"
+  },
+  "Borová": {
+    "lat": 49.7412198,
+    "lon": 16.1627198,
+    "precision": "town",
+    "label": "Borová — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440473"
+  },
+  "Holetín": {
+    "lat": 49.7955928,
+    "lon": 15.9209336,
+    "precision": "town",
+    "label": "Holetín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440000"
+  },
+  "Jevíčko": {
+    "lat": 49.6324875,
+    "lon": 16.7118442,
+    "precision": "town",
+    "label": "Jevíčko — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436647"
+  },
+  "Mistrovice": {
+    "lat": 50.0270744,
+    "lon": 16.5749831,
+    "precision": "town",
+    "label": "Mistrovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436764"
+  },
+  "Prosetín": {
+    "lat": 49.8329624,
+    "lon": 15.957873,
+    "precision": "town",
+    "label": "Prosetín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436778"
+  },
+  "Rybník": {
+    "lat": 49.8886266,
+    "lon": 16.4744207,
+    "precision": "town",
+    "label": "Rybník — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436708"
+  },
+  "Svinčany": {
+    "lat": 49.9765871,
+    "lon": 15.6395103,
+    "precision": "town",
+    "label": "Svinčany — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440308"
+  },
+  "Chrudim": {
+    "lat": 49.9511458,
+    "lon": 15.7947559,
+    "precision": "town",
+    "label": "Chrudim — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439959"
+  },
+  "Ústí nad Orlicí": {
+    "lat": 49.9737603,
+    "lon": 16.3941695,
+    "precision": "town",
+    "label": "Ústí nad Orlicí — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441208"
+  },
+  "Vysoké Mýto": {
+    "lat": 49.9534727,
+    "lon": 16.1616455,
+    "precision": "town",
+    "label": "Vysoké Mýto — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440542"
+  },
+  "Litomyšl": {
+    "lat": 49.8725491,
+    "lon": 16.3101243,
+    "precision": "town",
+    "label": "Litomyšl — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441896"
+  },
+  "Polička": {
+    "lat": 49.7149137,
+    "lon": 16.2653869,
+    "precision": "town",
+    "label": "Polička — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441881"
+  },
+  "Choceň": {
+    "lat": 50.0010925,
+    "lon": 16.2240034,
+    "precision": "town",
+    "label": "Choceň — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440350"
+  },
+  "Letohrad": {
+    "lat": 50.0360932,
+    "lon": 16.4986002,
+    "precision": "town",
+    "label": "Letohrad — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440375"
+  },
+  "Heřmanův Městec": {
+    "lat": 49.9470444,
+    "lon": 15.6646587,
+    "precision": "town",
+    "label": "Heřmanův Městec — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439953"
+  },
+  "Lázně Bohdaneč": {
+    "lat": 50.0764166,
+    "lon": 15.6798078,
+    "precision": "town",
+    "label": "Lázně Bohdaneč — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440111"
+  },
+  "Opatovice nad Labem": {
+    "lat": 50.1454642,
+    "lon": 15.7904201,
+    "precision": "town",
+    "label": "Opatovice nad Labem — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440334"
+  },
+  "Horní Jelení": {
+    "lat": 50.0490103,
+    "lon": 16.0839638,
+    "precision": "town",
+    "label": "Horní Jelení — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440332"
+  },
+  "Ronov nad Doubravou": {
+    "lat": 49.8881855,
+    "lon": 15.531532,
+    "precision": "town",
+    "label": "Ronov nad Doubravou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439962"
+  },
+  "Pardubice": {
+    "lat": 50.0385812,
+    "lon": 15.7791356,
+    "precision": "town",
+    "label": "Pardubice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440145"
+  },
+  "Praha-Benice": {
+    "lat": 50.0138891,
+    "lon": 14.6030724,
+    "precision": "town",
+    "label": "Praha-Benice — orientační bod katastrální části, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/431472"
   }
 }

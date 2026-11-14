@@ -1437,19 +1437,9 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
-      "title": "Noc betlémů 2026",
-      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
-      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
-    },
-    {
       "title": "Staročeský vánoční jarmark v Novém Městě na Moravě 2026",
       "url": "https://www.kudyznudy.cz/akce/starocesky-vanocni-jarmark",
       "reason": "Chybí strukturovaný detail jedné události."
-    },
-    {
-      "title": "Noc betlémů 2026",
-      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
-      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
     },
     {
       "title": "Adventní odpoledne na zámku Valeč",
@@ -1460,6 +1450,36 @@
       "title": "Rozsvícení vánočního stromečku a čerti v Klášteře Želiv 2026",
       "url": "https://www.kudyznudy.cz/akce/rozsviceni-vanocniho-stromecku-a-mikulas-s-certy-v",
       "reason": "Chybí strukturovaný detail jedné události."
+    },
+    {
+      "title": "Noc betlémů 2026",
+      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Advent s vůní perníku",
+      "url": "https://pardubice.eu/adventsvuniperniku",
+      "reason": "Nejednoznačný termín nebo místo akce; ověřte detail."
+    },
+    {
+      "title": "Mikulášská nadílka 2026",
+      "url": "https://pardubice.eu/mikulasska-nadilka-2026",
+      "reason": "Místo konání neuvádí Pardubice; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční jarmark a rozsvícení vánočního stromu ve Dřítči",
+      "url": "https://pardubice.eu/vanocni-jarmark-a-rozsviceni-vanocniho-stromu-ve-dritci",
+      "reason": "Místo konání neuvádí Pardubice; ověřte lokalitu."
+    },
+    {
+      "title": "Výlet - Vánoční Míšeň",
+      "url": "https://www.praha-benice.cz/zpravy/pozvanky-na-akce-2/vylet-vanocni-misen-1205_515cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Noc betlémů 2026",
+      "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
+      "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
     }
   ]
 }
