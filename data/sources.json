@@ -2662,7 +2662,8 @@
       "adapter": "reviewed-public",
       "primary_host": "www.facebook.com",
       "allowed_towns": {
-        "Říčany": "Středočeský kraj"
+        "Říčany": "Středočeský kraj",
+        "Klokočná": "Středočeský kraj"
       },
       "index_urls": [
         "https://www.facebook.com/"
@@ -2678,6 +2679,15 @@
             "precision": "town",
             "label": "Říčany",
             "sourceUrl": "https://www.openstreetmap.org/relation/436100"
+          }
+        ],
+        "Klokočná": [
+          {
+            "lat": 49.9563236,
+            "lon": 14.7195535,
+            "precision": "town",
+            "label": "Klokočná",
+            "sourceUrl": "https://www.openstreetmap.org/relation/437112"
           }
         ]
       }
