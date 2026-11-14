@@ -139,7 +139,7 @@ function updateMap() {
       button.addEventListener('click', () => { map.closePopup(); selectEvent(event.id); });
       popup.append(button);
     }
-    const marker = globalThis.L.circleMarker([group.lat, group.lon], { radius: 22, color: '#fffdf7', weight: 2, fillColor: MAP_COLORS[category], fillOpacity: .87, className: 'map-marker' }).addTo(markerLayer);
+    const marker = globalThis.L.circleMarker([group.lat, group.lon], { radius: matchMedia('(max-width: 820px)').matches ? 12 : 15, color: '#fffdf7', weight: 2, fillColor: MAP_COLORS[category], fillOpacity: .87, className: 'map-marker' }).addTo(markerLayer);
     marker.bindPopup(popup, { maxWidth: 280 });
     const path = marker.getElement();
     path.setAttribute('tabindex', '0');
@@ -463,7 +463,7 @@ function locationFailureDetails(started, outcome, error) {
   } catch { /* Unsupported policy introspection must not decide permission. */ }
   const message = typeof error?.message === 'string' ? error.message.replace(/[\u0000-\u001f\u007f]/g, ' ').slice(0, 300) : '';
   return [
-    'Verze: poloha-2', `Výsledek: ${outcome}`,
+    'Verze: otaznik-1', `Výsledek: ${outcome}`,
     `Kód prohlížeče: ${Number.isFinite(error?.code) ? error.code : 'neuveden'}`,
     `Zpráva prohlížeče: ${message || 'neuvedena'}`,
     `Čekání: ${Math.round((performance.now() - started) / 1000)} s`,
