@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-14T09:08:06+00:00",
+  "generatedAt": "2026-11-14T09:15:04+00:00",
   "season": 2026,
   "region": "Česko – sezonní výběr",
   "events": [
@@ -2047,6 +2047,28 @@
         "label": "Hranice, okres Přerov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438577"
       }
+    },
+    {
+      "id": "e-7c0b0b4b08ada1dd",
+      "title": "Zpívání koled u kavárny",
+      "town": "Jevany",
+      "venue": "U kavárny Café 1888, Jevany",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Společné sousedské zpívání tradičních vánočních koled u Café 1888. Pořadatelé zvou dorazit před 17. hodinou. Vystupují jevanští pěvci pod vedením Anny Chadimové Havlíkové.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T10:12:22.455751+01:00",
+      "sourceUrl": "https://www.obecjevany.cz/aktuality-1/kalendar-akci/zpivani-koled-1905_201cs.html",
+      "location": null,
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-4f15af21f62bd966",
@@ -4260,6 +4282,28 @@
       }
     },
     {
+      "id": "e-db4a3f4d4de8f1d1",
+      "title": "Mikulášská besídka v Čertovské stodole",
+      "town": "Jevany",
+      "venue": "Čertovská stodola, Jevany; přesná ulice neuvedena",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "FK FC Jevany zve na Mikulášskou besídku v Čertovské stodole. Podrobnosti nadílky ani přesná adresa stodoly nejsou zveřejněny.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T10:12:22.455781+01:00",
+      "sourceUrl": "https://www.obecjevany.cz/aktuality-1/kalendar-akci/mikulasska-besidka-1904_200cs.html",
+      "location": null,
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-50ceb9cbf46c138da34d",
       "title": "Vánoční benefiční koncert",
       "town": "Hořovice",
@@ -5382,6 +5426,28 @@
         "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439995"
       }
+    },
+    {
+      "id": "e-d57d4e11aa78826c",
+      "title": "Slavnostní rozsvícení vánočního stromečku",
+      "town": "Jevany",
+      "venue": "U zvoničky, Jevany",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Obec Jevany zve na slavnostní rozsvícení vánočního stromečku u zvoničky. Podrobnější doprovodný program není zveřejněn.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T10:12:22.455791+01:00",
+      "sourceUrl": "https://www.obecjevany.cz/aktuality-1/kalendar-akci/slavnostni-rozsviceni-stromecku-1911_203cs.html",
+      "location": null,
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-ec27b46c867091d988f7",
