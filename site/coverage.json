@@ -670,6 +670,22 @@
       "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
     },
     {
+      "id": "reviewed-www-obecjevany-cz",
+      "town": "Jevany",
+      "region": "Středočeský kraj",
+      "url": "https://www.obecjevany.cz/",
+      "adapter": "reviewed-public",
+      "coverageNote": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": "Nový schválený zdroj čeká na první přenos veřejného výběru.",
+      "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
+    },
+    {
       "id": "reviewed-www-mukarov-cz",
       "town": "Mukařov",
       "region": "Středočeský kraj",

@@ -142,6 +142,21 @@ class ReviewedTests(unittest.TestCase):
                     with self.subTest(change=change), self.assertRaises(ValueError):
                         self.c.reviewed_public.binding(dict(event,**change),sources)
 
+    def test_jevany_reviewed_group_is_bound_to_municipal_calendar_and_null_location(self):
+        sources = self.registry['sources']
+        source = next(s for s in sources if s['id'] == 'reviewed-www-obecjevany-cz')
+        self.assertEqual(source['allowed_towns'], {'Jevany': 'Středočeský kraj'})
+        self.assertEqual(source['allowed_locations'], {'Jevany': []})
+        event = dict(self.snapshot['events'][0], town='Jevany', region='Středočeský kraj',
+                     location=None, sourceUrl='https://www.obecjevany.cz/aktuality-1/kalendar-akci/mikulasska-besidka-1904_200cs.html')
+        self.assertEqual(self.c.reviewed_public.binding(event, sources)['id'], source['id'])
+        for change in [{'town': 'Říčany'}, {'region': 'Praha'},
+                       {'location': self.snapshot['events'][0]['location']},
+                       {'sourceUrl': event['sourceUrl'].replace('www.obecjevany.cz', 'other.obecjevany.cz')},
+                       {'sourceUrl': 'https://www.obecjevany.cz/aktuality-1/novinky/pozvanka.html'}]:
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                self.c.reviewed_public.binding(dict(event, **change), sources)
+
     def test_snapshot_survives_daily_recollection_without_invented_verification(self):
         first = self.collect()
         self.assertEqual(len(self.events()), 51)

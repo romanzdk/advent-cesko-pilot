@@ -2825,6 +2825,19 @@
       }
     },
     {
+      "id": "reviewed-www-obecjevany-cz",
+      "town": "Jevany",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.obecjevany.cz",
+      "allowed_towns": {"Jevany": "Středočeský kraj"},
+      "index_urls": ["https://www.obecjevany.cz/"],
+      "url_regex": "^https://www\\.obecjevany\\.cz/aktuality-1/kalendar-akci/[^\\s/]+\\.html$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {"Jevany": []}
+    },
+    {
       "id": "reviewed-www-mukarov-cz",
       "town": "Mukařov",
       "region": "Středočeský kraj",
