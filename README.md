@@ -52,26 +52,26 @@ Při nejisté odpovědi použijte ověření stavu původního podání, ne dal�
 
 ## Pokrytí a rozsah
 
-**Ověřený sezonní výběr: 1435 akcí ve 14 krajích.** Nejde o úplné pokrytí jednotlivých krajů.
+**Ověřený sezonní výběr: 1589 akcí ve 14 krajích.** Nejde o úplné pokrytí jednotlivých krajů.
 
 | Kraj | Publikované akce |
 | --- | ---: |
 | Plzeňský kraj | 143 |
 | Liberecký kraj | 71 |
 | Jihomoravský kraj | 145 |
-| Středočeský kraj | 326 |
+| Středočeský kraj | 437 |
 | Jihočeský kraj | 101 |
-| Kraj Vysočina | 52 |
+| Kraj Vysočina | 62 |
 | Karlovarský kraj | 50 |
 | Královéhradecký kraj | 74 |
 | Olomoucký kraj | 98 |
 | Ústecký kraj | 79 |
 | Zlínský kraj | 85 |
 | Hlavní město Praha | 29 |
-| Moravskoslezský kraj | 126 |
+| Moravskoslezský kraj | 159 |
 | Pardubický kraj | 56 |
 
-Registr obsahuje **440 zdrojových skupin**: 413 automaticky čtených kalendářů a redakční veřejný výběr od 26 primárních hostitelů. Redakční výběr přidává 60 již veřejných záznamů s původním datem ověření; kontrola jeho přenosu není novým ověřením každé pořadatelské stránky.
+Registr obsahuje **490 zdrojových skupin**: 463 automaticky čtených kalendářů a redakční veřejný výběr od 26 primárních hostitelů. Redakční výběr přidává 60 již veřejných záznamů s původním datem ověření; kontrola jeho přenosu není novým ověřením každé pořadatelské stránky.
 
 Jde o **výběr zdrojů, ne úplný kalendář krajů nebo celé ČR**. Aktuální čas aktualizace, rozsah a chyby načítání najdete na webu v panelu *Zdroje a pokrytí*. Nejasné kandidáty sběrač nepublikuje; [postup kontroly](docs/operations.md#ruční-kontrola-kandidátů) a [pravidla trvalého redakčního přenosu](docs/content-repair.md).
 
@@ -101,7 +101,7 @@ Projekt neobchází blokované kalendáře a neslibuje obecné zpracování vše
 
 ## Kvalita a orientace v kódu
 
-**227 Python testů a 133 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, trvalý redakční přenos, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřenou sadu tohoto snapshotu. CI běží offline; úplné Chromium testy se spouštějí lokálně.
+**234 Python testů a 133 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, trvalý redakční přenos, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřenou sadu tohoto snapshotu. CI běží offline; úplné Chromium testy se spouštějí lokálně.
 
 ```text
 scripts/     sběr, adaptéry, validace a publisher

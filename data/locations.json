@@ -2952,5 +2952,355 @@
     "precision": "town",
     "label": "Žlutava — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/440775"
+  },
+  "Benátky nad Jizerou": {
+    "lat": 50.291767,
+    "lon": 14.8260014,
+    "precision": "town",
+    "label": "Benátky nad Jizerou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436084"
+  },
+  "Bukovno": {
+    "lat": 50.4467617,
+    "lon": 14.8405787,
+    "precision": "town",
+    "label": "Bukovno — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437580"
+  },
+  "Chodouň": {
+    "lat": 49.8940612,
+    "lon": 13.9854712,
+    "precision": "town",
+    "label": "Chodouň — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441153"
+  },
+  "Chotýšany": {
+    "lat": 49.7440999,
+    "lon": 14.8145778,
+    "precision": "town",
+    "label": "Chotýšany — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441465"
+  },
+  "Dobřejovice": {
+    "lat": 49.9818075,
+    "lon": 14.5782861,
+    "precision": "town",
+    "label": "Dobřejovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437158"
+  },
+  "Dolní Kralovice": {
+    "lat": 49.6721559,
+    "lon": 15.157366,
+    "precision": "town",
+    "label": "Dolní Kralovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440761"
+  },
+  "Dřevčice": {
+    "lat": 50.1677519,
+    "lon": 14.62822,
+    "precision": "town",
+    "label": "Dřevčice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437104"
+  },
+  "Knovíz": {
+    "lat": 50.2125605,
+    "lon": 14.1369471,
+    "precision": "town",
+    "label": "Knovíz — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440932"
+  },
+  "Makotřasy": {
+    "lat": 50.1446165,
+    "lon": 14.2148009,
+    "precision": "town",
+    "label": "Makotřasy — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440974"
+  },
+  "Nečín": {
+    "lat": 49.6984409,
+    "lon": 14.2340341,
+    "precision": "town",
+    "label": "Nečín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441338"
+  },
+  "Oleška": {
+    "lat": 49.9715936,
+    "lon": 14.9166803,
+    "precision": "town",
+    "label": "Oleška — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437133"
+  },
+  "Prosenická Lhota": {
+    "lat": 49.6920267,
+    "lon": 14.4934551,
+    "precision": "town",
+    "label": "Prosenická Lhota — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441357"
+  },
+  "Sibřina": {
+    "lat": 50.056644,
+    "lon": 14.669406,
+    "precision": "town",
+    "label": "Sibřina — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437884"
+  },
+  "Sluštice": {
+    "lat": 50.0391038,
+    "lon": 14.6854619,
+    "precision": "town",
+    "label": "Sluštice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437880"
+  },
+  "Tlustice": {
+    "lat": 49.8500272,
+    "lon": 13.8856114,
+    "precision": "town",
+    "label": "Tlustice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440821"
+  },
+  "Tři Dvory": {
+    "lat": 50.0319554,
+    "lon": 15.2564873,
+    "precision": "town",
+    "label": "Tři Dvory — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441258"
+  },
+  "Veltruby": {
+    "lat": 50.0707136,
+    "lon": 15.1862579,
+    "precision": "town",
+    "label": "Veltruby — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441244"
+  },
+  "Velvary": {
+    "lat": 50.2819312,
+    "lon": 14.2361619,
+    "precision": "town",
+    "label": "Velvary — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440996"
+  },
+  "Vrdy": {
+    "lat": 49.9215328,
+    "lon": 15.4724303,
+    "precision": "town",
+    "label": "Vrdy — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441835"
+  },
+  "Zlonín": {
+    "lat": 50.2165515,
+    "lon": 14.5087598,
+    "precision": "town",
+    "label": "Zlonín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437890"
+  },
+  "Zvoleněves": {
+    "lat": 50.2311516,
+    "lon": 14.1822066,
+    "precision": "town",
+    "label": "Zvoleněves — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441010"
+  },
+  "Červené Janovice": {
+    "lat": 49.8346103,
+    "lon": 15.2533327,
+    "precision": "town",
+    "label": "Červené Janovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441806"
+  },
+  "Řepín": {
+    "lat": 50.3670146,
+    "lon": 14.6328681,
+    "precision": "town",
+    "label": "Řepín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437590"
+  },
+  "Libice nad Cidlinou": {
+    "lat": 50.1303289,
+    "lon": 15.1804993,
+    "precision": "town",
+    "label": "Libice nad Cidlinou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441535"
+  },
+  "Vlašim": {
+    "lat": 49.7065863,
+    "lon": 14.8986883,
+    "precision": "town",
+    "label": "Vlašim — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441511"
+  },
+  "Mnichovo Hradiště": {
+    "lat": 50.5229864,
+    "lon": 14.9741022,
+    "precision": "town",
+    "label": "Mnichovo Hradiště — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437717"
+  },
+  "Kladno": {
+    "lat": 50.1466053,
+    "lon": 14.1026398,
+    "precision": "town",
+    "label": "Kladno — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440979"
+  },
+  "Mladá Boleslav": {
+    "lat": 50.4116187,
+    "lon": 14.9031301,
+    "precision": "town",
+    "label": "Mladá Boleslav — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437559"
+  },
+  "Kolín": {
+    "lat": 50.0288894,
+    "lon": 15.2011571,
+    "precision": "town",
+    "label": "Kolín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441253"
+  },
+  "Příbram": {
+    "lat": 49.6901444,
+    "lon": 14.0103663,
+    "precision": "town",
+    "label": "Příbram — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441396"
+  },
+  "Kutná Hora": {
+    "lat": 49.9486561,
+    "lon": 15.2681123,
+    "precision": "town",
+    "label": "Kutná Hora — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441804"
+  },
+  "Brandýs nad Labem-Stará Boleslav": {
+    "lat": 50.1912412,
+    "lon": 14.6649786,
+    "precision": "town",
+    "label": "Brandýs nad Labem-Stará Boleslav — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436110"
+  },
+  "Slaný": {
+    "lat": 50.2306933,
+    "lon": 14.0868501,
+    "precision": "town",
+    "label": "Slaný — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440956"
+  },
+  "Rakovník": {
+    "lat": 50.1041136,
+    "lon": 13.7310462,
+    "precision": "town",
+    "label": "Rakovník — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442374"
+  },
+  "Nymburk": {
+    "lat": 50.1852696,
+    "lon": 15.0414543,
+    "precision": "town",
+    "label": "Nymburk — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441557"
+  },
+  "Poděbrady": {
+    "lat": 50.1430072,
+    "lon": 15.1191453,
+    "precision": "town",
+    "label": "Poděbrady — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437300"
+  },
+  "Čáslav": {
+    "lat": 49.9109171,
+    "lon": 15.3913205,
+    "precision": "town",
+    "label": "Čáslav — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441800"
+  },
+  "Lysá nad Labem": {
+    "lat": 50.2016983,
+    "lon": 14.832757,
+    "precision": "town",
+    "label": "Lysá nad Labem — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441528"
+  },
+  "Dobříš": {
+    "lat": 49.7813749,
+    "lon": 14.1704372,
+    "precision": "town",
+    "label": "Dobříš — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441424"
+  },
+  "Úvaly": {
+    "lat": 50.0740135,
+    "lon": 14.7305192,
+    "precision": "town",
+    "label": "Úvaly — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436105"
+  },
+  "Sedlčany": {
+    "lat": 49.6582258,
+    "lon": 14.4254935,
+    "precision": "town",
+    "label": "Sedlčany — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441351"
+  },
+  "Mníšek pod Brdy": {
+    "lat": 49.8664138,
+    "lon": 14.2609488,
+    "precision": "town",
+    "label": "Mníšek pod Brdy — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442225"
+  },
+  "Votice": {
+    "lat": 49.6403939,
+    "lon": 14.6380296,
+    "precision": "town",
+    "label": "Votice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441514"
+  },
+  "Zruč nad Sázavou": {
+    "lat": 49.740296,
+    "lon": 15.106074,
+    "precision": "town",
+    "label": "Zruč nad Sázavou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441813"
+  },
+  "Dolní Břežany": {
+    "lat": 49.9633609,
+    "lon": 14.4581344,
+    "precision": "town",
+    "label": "Dolní Břežany — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442232"
+  },
+  "Klecany": {
+    "lat": 50.1756713,
+    "lon": 14.4117052,
+    "precision": "town",
+    "label": "Klecany — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437165"
+  },
+  "Líbeznice": {
+    "lat": 50.1921305,
+    "lon": 14.4938986,
+    "precision": "town",
+    "label": "Líbeznice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437190"
+  },
+  "Veltrusy": {
+    "lat": 50.2710734,
+    "lon": 14.3277379,
+    "precision": "town",
+    "label": "Veltrusy — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437632"
+  },
+  "Třebíč": {
+    "lat": 49.2158752,
+    "lon": 15.8810841,
+    "precision": "town",
+    "label": "Třebíč — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442133"
+  },
+  "Ostrava": {
+    "lat": 49.8354045,
+    "lon": 18.292978,
+    "precision": "town",
+    "label": "Ostrava — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437354"
   }
 }

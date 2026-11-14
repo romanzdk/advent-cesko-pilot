@@ -61,7 +61,7 @@ class Node:
 
     def all(self, tag=None, cls=None, id=None):
         out = []
-        if (tag is None or self.tag == tag) and (cls is None or cls in self.attrs.get('class', '').split()) and (id is None or self.attrs.get('id') == id):
+        if (tag is None or self.tag == tag) and (cls is None or cls in (self.attrs.get('class') or '').split()) and (id is None or self.attrs.get('id') == id):
             out.append(self)
         for c in self.children:
             if isinstance(c, Node):
@@ -218,7 +218,7 @@ def parse_event(body, source, url, window):
     title = txt(root.find('h1'))
     adapter = source['adapter']
     structured = structured_event(root, url)
-    if adapter in ('hranice', 'visitzlin', 'lanskroun', 'dre') and structured:
+    if adapter in ('hranice', 'visitzlin', 'lanskroun', 'dre', 'ostravainfo', 'anawe', 'jevents', 'visittrebic') and structured:
         raise Review('Nová strukturovaná data nesmějí obejít ověření označených polí; ověřte formát znovu.')
     wpem_price = None
     if adapter == 'wpem' and structured:
@@ -245,7 +245,7 @@ def parse_event(body, source, url, window):
         wpem_price = clean_public(prices[0]) if prices else None
         if wpem_price and len(wpem_price) > 180:
             raise Review('Cenový údaj je příliš dlouhý; ověřte všechny varianty bez zkrácení.')
-    if adapter in ('structured', 'wpem', 'posazavi') and not structured:
+    if adapter in ('structured', 'wpem', 'posazavi', 'kudyznudy') and not structured:
         raise Review('Chybí strukturovaný detail jedné události.')
     if structured:
         scope = Node('div')
@@ -473,6 +473,64 @@ def parse_event(body, source, url, window):
         date_text = txt(scope)
         venue_match = re.search(r'RAJHRAD\s*/\s*([^/]+)\s*/', date_text, re.I)
         venue = venue_match[1].strip() if venue_match else ''
+    elif adapter == 'jevents':
+        scope = root.find(id='jevents')
+        title = txt(scope.find('h3')) if scope else ''
+        rows = [txt(n) for n in scope.all(cls='ev_detail')] if scope else []
+        when = re.fullmatch(r'(\d{1,2}\.\d{1,2}\.20\d{2}) \(\w{2}\)(?: ((?:[01]?\d|2[0-3]):[0-5]\d))?', rows[0]) if rows else None
+        places = [r[len('Místo:'):].strip() for r in rows if r.startswith('Místo:')]
+        if not title or not when or len(places) != 1:
+            raise Review('Nejednoznačný termín nebo místo akce; ověřte detail.')
+        date_text = ' '.join(part for part in when.groups() if part)
+        venue = places[0]
+    elif adapter == 'visittrebic':
+        title = txt(root.find('h1', cls='h1_clanek_akce'))
+        days = root.all(cls='obal_datum_akce')
+        fields = {}
+        for item in root.all(cls='polozka_parametry'):
+            fields[txt(item.find(cls='polozka_parametry_nazev')).rstrip(':')] = txt(item.find(cls='polozka_parametry_hodnota'))
+        parts = re.findall(r'(\d{1,2})\s*\.\s*(\d{1,2})\s+(20\d{2})', txt(days[0])) if len(days) == 1 else []
+        if not title or len(parts) not in (1, 2) or not all(re.fullmatch(r'\d{1,4}', x) for p in parts for x in p):
+            raise Review('Nejednoznačný termín akce; ověřte detail.')
+        clock = fields.get('Čas od', '')
+        # The calendar prints 00:00 for an unknown start; midnight is never taken as a real start.
+        timed = len(parts) == 1 and re.fullmatch(r'(?:[01]?\d|2[0-3]):[0-5]\d', clock) and clock != '00:00'
+        date_text = ' – '.join('.'.join(p) for p in parts) + (' ' + clock if timed else '')
+        venue = fields.get('Místo události', '')
+        scope = root.find(cls='obsah_akce') or root
+    elif adapter == 'anawe':
+        scope = root.find(cls='Kat-detail')
+        title = txt(scope.find('h1')) if scope else ''
+        term = scope.find(cls='Kal-termin-odo') if scope else None
+        days = [txt(n) for n in term.all(cls='dk-dat')] if term else []
+        clocks = [txt(n) for n in term.all(cls='dk-cas')] if term else []
+        place = scope.find(cls='Kal-misto') if scope else None
+        if not title or not 1 <= len(days) <= 2 or len(clocks) > len(days) or not all(re.fullmatch(r'\d{1,2}\.\d{1,2}\.20\d{2}', d) for d in days):
+            raise Review('Nejednoznačný termín akce; ověřte detail.')
+        date_text = f'{days[0]} – {days[1]}' if len(days) == 2 else ' '.join([days[0]] + clocks[:1])
+        venue = txt(place.find(cls='pod')) if place else ''
+    elif adapter == 'ostravainfo':
+        scope = root.find(cls='akce-detail')
+        title = txt(scope.find('h2')) if scope else ''
+        info = scope.find(cls='akce-info') if scope else None
+        items = [txt(li) for li in info.all('li')] if info else []
+        months = {'listopadu': 11, 'prosince': 12, 'ledna': 1}
+        day = r'(\d{1,2})\. (' + '|'.join(months) + r') (20\d{2})'
+        numeric = lambda m: f'{int(m[1])}. {months[m[2]]}. {m[3]}'
+        clock = r'(?:[01]?\d|2[0-3]):[0-5]\d'
+        single = re.fullmatch(day, items[0]) if items else None
+        span = re.fullmatch(day + r' - ' + day, items[0]) if items else None
+        timed = len(items) == 3 and re.fullmatch(clock, items[1])
+        if not title or not (single or span) or len(items) not in (2, 3) or (len(items) == 3 and not timed):
+            raise Review('Nejednoznačný termín nebo místo akce; ověřte detail.')
+        if span:
+            date_text = numeric(re.match(day, items[0])) + ' – ' + numeric(re.fullmatch(day, items[0][span.end(3) + 3:]))
+        else:
+            date_text = numeric(single) + (' ' + items[1] if timed else '')
+        venue = items[-1]
+        place = venue.rsplit(',', 1)[1].strip() if ',' in venue else ''
+        if place and not place.startswith('Ostrava'):
+            raise Review('Místo konání je mimo Ostravu; ověřte lokalitu.')
     elif adapter == 'dre':
         title = txt(root.find(cls='nadpis_clanku'))
         scope = root.find(cls='kratky_popis_akce')
@@ -524,7 +582,7 @@ def parse_event(body, source, url, window):
         raise Review('Neúplný nebo nejednoznačný interval události.')
     if len(dates) > 1:
         explicit_range = adapter in ('itrebon', 'telc', 'visitzlin', 'lanskroun') and re.match(r'^\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}\s*[-–]\s*\d{1,2}\.\s*\d{1,2}\.\s*20\d{2}(?!\d)', date_text)
-        if (not explicit_range and (adapter not in ('galileo', 'structured', 'drupal', 'dre') or not re.search(r'\s[-–]\s', date_text))) or len(dates) > 2 or dates[1][0] < dates[0][0]:
+        if (not explicit_range and (adapter not in ('galileo', 'structured', 'drupal', 'dre', 'ostravainfo', 'anawe', 'jevents', 'visittrebic') or not re.search(r'\s[-–]\s', date_text))) or len(dates) > 2 or dates[1][0] < dates[0][0]:
             raise Review('Více různých dat vyžaduje ruční kontrolu.')
     narrative_nodes = [scope.find(cls=cls) for cls in ('lead','event-action-lead__body','event-text')]
     narrative_nodes.extend(n for n in scope.children if isinstance(n,Node) and n.tag == 'p')
@@ -693,6 +751,28 @@ def discover(body, base, source):
         # The regional Posázaví calendar lists events only through its JSON search endpoint.
         found = [urljoin(base, e['DetailUrl']) for e in json.loads(body)['Data'] if KEYWORDS.search(fold(e['Title']))]
         return list(dict.fromkeys(u for u in found if safe_url(u) and same_host(u, source['index_urls'][0]))), []
+    if source.get('adapter') == 'kudyznudy':
+        # Town listings also show nearby places; each card names its own town, so others are never fetched.
+        found = []
+        for card in DOM(body).root.all('div', cls='item'):
+            link = next((x for x in card.all('a') if x.attrs.get('href', '').startswith('/akce/')), None)
+            place = card.find(cls='location')
+            if not link or not place:
+                continue
+            url = urljoin(base, link.attrs['href'])
+            town = txt(place).split(',')[0].strip()
+            if exact_label(town) == exact_label(source['town']) and re.match(source['url_regex'], url) and KEYWORDS.search(fold(txt(card) + ' ' + url)):
+                found.append(url)
+        return list(dict.fromkeys(found)), []
+    if source.get('adapter') == 'ostravainfo':
+        # Category paths such as /adventni-akce/ answer HTTP 404 (with content); the bare /cz/akce/<id>-<slug>.html is canonical.
+        found = []
+        for a in DOM(body).root.all('a'):
+            url = urljoin(base, a.attrs.get('href', ''))
+            m = re.match(r'^(https://www\.ostravainfo\.cz/cz/akce/)[a-z0-9-]+/(\d+-[^/?#]+\.html)$', url)
+            if m and KEYWORDS.search(fold(a.text() + ' ' + m[2])):
+                found.append(m[1] + m[2])
+        return list(dict.fromkeys(found)), []
     details, pagination = [], []
     for a in DOM(body).root.all('a'):
         url = urljoin(base, a.attrs.get('href', ''))
@@ -722,7 +802,7 @@ def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewe
     checked = now()
     for source in registry['sources']:
         # Posázaví search pages are small JSON responses capped at five events each.
-        for field, default, ceiling in [('max_index_pages',2,8 if source['adapter'] == 'posazavi' else 4),('max_details',14,40)]:
+        for field, default, ceiling in [('max_index_pages',2,8 if source['adapter'] in ('posazavi', 'ostravainfo') else 4),('max_details',14,40)]:
             value = source.get(field,default)
             if type(value) is not int or not 1 <= value <= ceiling:
                 raise ValueError('Invalid bounded source budget')
@@ -816,6 +896,17 @@ def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewe
                     title_node = detail.find('h2') if detail else None
                 if source['adapter'] == 'dre':
                     title_node = detail_root.find(cls='nadpis_clanku')
+                if source['adapter'] == 'visittrebic':
+                    title_node = detail_root.find('h1', cls='h1_clanek_akce')
+                if source['adapter'] == 'jevents':
+                    detail = detail_root.find(id='jevents')
+                    title_node = detail.find('h3') if detail else None
+                if source['adapter'] == 'anawe':
+                    detail = detail_root.find(cls='Kat-detail')
+                    title_node = detail.find('h1') if detail else None
+                if source['adapter'] == 'ostravainfo':
+                    detail = detail_root.find(cls='akce-detail')
+                    title_node = detail.find('h2') if detail else None
                 title = clean_public(txt(title_node))[:180] or title
                 parsed = parse_event(body, source, url, registry['window'])
                 try:
