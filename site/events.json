@@ -711,6 +711,34 @@
       }
     },
     {
+      "id": "e-c3f97b577dc28c13f1a5",
+      "title": "Předvánoční skláření ve sklárně Tasice 2026",
+      "town": "Ledeč nad Sázavou",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-21",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "venue": "Huť Jakub Tasice",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Předvánoční skláření ve sklárně Tasice 2026. Huť Jakub Tasice",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/3-predvanocni-sklareni-ve-sklarne-tasice",
+      "location": {
+        "lat": 49.6950166,
+        "lon": 15.2777763,
+        "precision": "town",
+        "label": "Ledeč nad Sázavou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440675"
+      }
+    },
+    {
       "id": "e-33c101831f9461a10eac",
       "title": "Vánoční jarmark",
       "town": "Loučeň",
@@ -850,6 +878,36 @@
         "precision": "town",
         "label": "Veltrusy — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437632"
+      }
+    },
+    {
+      "id": "e-b1c7af044a5b79f8c6da",
+      "title": "Vánoce na zámku Žďár nad Sázavou 2026",
+      "town": "Žďár nad Sázavou",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-21",
+      "endDate": "2026-11-22",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "venue": "Zámek Žďár nad Sázavou",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoce na zámku Žďár nad Sázavou 2026. Zámek Žďár nad Sázavou",
+      "notes": [
+        "Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/vanoce-v-muzeu-5",
+      "location": {
+        "lat": 49.5629014,
+        "lon": 15.9391924,
+        "precision": "town",
+        "label": "Žďár nad Sázavou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/428066"
       }
     },
     {
@@ -1470,6 +1528,34 @@
         "precision": "town",
         "label": "Žlutava — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/440775"
+      }
+    },
+    {
+      "id": "e-0f045703f37305407cbf",
+      "title": "Odpoledne s pohádkou",
+      "town": "Havlíčkova Borová",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-21",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "Knihovna",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Odpoledne s pohádkou. Knihovna",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.havlickovaborova.cz/pro-obcany/kultura-a-sport/odpoledne-s-pohadkou-3126_766cs.html",
+      "location": {
+        "lat": 49.6362769,
+        "lon": 15.7812323,
+        "precision": "town",
+        "label": "Havlíčkova Borová — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440715"
       }
     },
     {
@@ -3099,6 +3185,34 @@
         "precision": "town",
         "label": "Brušperk — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437869"
+      }
+    },
+    {
+      "id": "e-ab70a2b338c2a6e38094",
+      "title": "Vánoční dílna – vánoční ozdoby macramé",
+      "town": "Nové Město na Moravě",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-24",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "18:00",
+      "venue": "Kulturní dům - Městská knihovna",
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční dílna – vánoční ozdoby macramé. Kulturní dům - Městská knihovna",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/vanocni-dilna-vanocni-ozdoby-macrame",
+      "location": {
+        "lat": 49.5616916,
+        "lon": 16.0744185,
+        "precision": "town",
+        "label": "Nové Město na Moravě — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441738"
       }
     },
     {
@@ -6754,6 +6868,34 @@
       }
     },
     {
+      "id": "e-1e776fc83ed1d318df8a",
+      "title": "Zahájení adventu v novoměstské nemocnici",
+      "town": "Nové Město na Moravě",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "venue": "Nemocnice NMNM",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Zahájení adventu v novoměstské nemocnici. Nemocnice NMNM",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/zahajeni-adventu-v-novomestske-nemocnici-1",
+      "location": {
+        "lat": 49.5616916,
+        "lon": 16.0744185,
+        "precision": "town",
+        "label": "Nové Město na Moravě — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441738"
+      }
+    },
+    {
       "id": "e-d003942145e6a5f8833f",
       "title": "Rozsvícení vánočního stromu a Mikulášská nadílka",
       "town": "Paskov",
@@ -8455,6 +8597,64 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/437181"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-10b87a4294fce8e4c699",
+      "title": "Advent v Míčově domě v Jaroměřicích nad Rokytnou",
+      "town": "Jaroměřice nad Rokytnou",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-28",
+      "endDate": "2026-12-03",
+      "startTime": "10:00",
+      "endTime": "18:00",
+      "venue": "Mitcha Gallery",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Advent v Míčově domě v Jaroměřicích nad Rokytnou. Mitcha Gallery",
+      "notes": [
+        "Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/advent-v-micove-dome",
+      "location": {
+        "lat": 49.0943503,
+        "lon": 15.8932579,
+        "precision": "town",
+        "label": "Jaroměřice nad Rokytnou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442172"
+      }
+    },
+    {
+      "id": "e-ae97e9c18e7ae08ec852",
+      "title": "Adventní a vánoční čas v Zoo Jihlava 2026",
+      "town": "Jihlava",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "venue": "Zoologická zahrada Jihlava",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní a vánoční čas v Zoo Jihlava 2026. Zoologická zahrada Jihlava",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/adventni-dilny-v-zoo-jihlava-2",
+      "location": {
+        "lat": 49.396064,
+        "lon": 15.5903065,
+        "precision": "town",
+        "label": "Jihlava — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440427"
+      }
     },
     {
       "id": "e-209c47409567ebdb",
@@ -11998,6 +12198,34 @@
       }
     },
     {
+      "id": "e-4c624a659dced8b55b5c",
+      "title": "Zahájení adventu v Novém Městě na Moravě 2026",
+      "town": "Nové Město na Moravě",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": "19:00",
+      "venue": "Vratislavovo náměstí",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Zahájení adventu v Novém Městě na Moravě 2026. Vratislavovo náměstí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/zahajeni-adventu-v-novem-meste-na-morave",
+      "location": {
+        "lat": 49.5616916,
+        "lon": 16.0744185,
+        "precision": "town",
+        "label": "Nové Město na Moravě — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441738"
+      }
+    },
+    {
       "id": "e-09c6f5cfa7ba2c8c1fb7",
       "title": "Rozsvícení vánočního stromečku v Plasích",
       "town": "Plasy",
@@ -14098,6 +14326,34 @@
       }
     },
     {
+      "id": "e-eee94ab3a1936ff80578",
+      "title": "Adventní jarmark s rozsvěcením vánočního stromu",
+      "town": "Havlíčkova Borová",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "venue": "Fara, Havlíčkova Borová",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní jarmark s rozsvěcením vánočního stromu. Fara, Havlíčkova Borová",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.havlickovaborova.cz/pro-obcany/kultura-a-sport/adventni-jarmark-s-rozsvecenim-vanocniho-stromu-3144_768cs.html",
+      "location": {
+        "lat": 49.6362769,
+        "lon": 15.7812323,
+        "precision": "town",
+        "label": "Havlíčkova Borová — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440715"
+      }
+    },
+    {
       "id": "e-1224d3763ab1d08f01b2",
       "title": "VÁNOČNÍ JARMARK",
       "town": "Horní Domaslavice",
@@ -14265,6 +14521,34 @@
         "precision": "town",
         "label": "Nedachlebice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437124"
+      }
+    },
+    {
+      "id": "e-306e6d7263a21b8a7c65",
+      "title": "Adventní dobročinný jarmark v Novém Městě na Moravě",
+      "town": "Nové Město na Moravě",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "venue": "Evangelický kostel",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní dobročinný jarmark v Novém Městě na Moravě. Evangelický kostel",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/adventni-dobrocinny-jarmark",
+      "location": {
+        "lat": 49.5616916,
+        "lon": 16.0744185,
+        "precision": "town",
+        "label": "Nové Město na Moravě — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441738"
       }
     },
     {
@@ -18605,6 +18889,34 @@
       }
     },
     {
+      "id": "e-131e9f8d37717b25854d",
+      "title": "Zámecký adventní koncert v Náměšti nad Oslavou",
+      "town": "Náměšť nad Oslavou",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "18:15",
+      "venue": "Náměšť nad Oslavou",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Zámecký adventní koncert v Náměšti nad Oslavou. Náměšť nad Oslavou",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/zamecky-adventni-koncert-v-namesti-nad-oslavou-1",
+      "location": {
+        "lat": 49.2073771,
+        "lon": 16.1577984,
+        "precision": "town",
+        "label": "Náměšť nad Oslavou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442152"
+      }
+    },
+    {
       "id": "e-e929fe2e5e445d47da2c",
       "title": "Rozsvícení vánočního stromu",
       "town": "Ochoz u Brna",
@@ -19615,6 +19927,34 @@
       "sourceUrl": "https://www.strancice.cz/assets/File.ashx?id_org=15606&id_dokumenty=109684",
       "location": null,
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-55db6bd50b8b94330176",
+      "title": "Václav NOID Bárta a Bek Bek Clan - Vánoční koncert",
+      "town": "Jihlava",
+      "region": "Kraj Vysočina",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "divadelní sál",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Václav NOID Bárta a Bek Bek Clan - Vánoční koncert. divadelní sál",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.dko.cz/program/646-vaclav-noid-barta-a-bek-bek-clan-vanocni-koncert",
+      "location": {
+        "lat": 49.396064,
+        "lon": 15.5903065,
+        "precision": "town",
+        "label": "Jihlava — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440427"
+      }
     },
     {
       "id": "e-013f3307956fe3381eef",
@@ -22590,6 +22930,34 @@
       }
     },
     {
+      "id": "e-7e481f5d4474541e9e22",
+      "title": "Szidi Tobias - Vánoční koncert",
+      "town": "Jihlava",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-03",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "divadelní sál",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Szidi Tobias - Vánoční koncert. divadelní sál",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.dko.cz/program/586-szidi-tobias-vanocni-koncert",
+      "location": {
+        "lat": 49.396064,
+        "lon": 15.5903065,
+        "precision": "town",
+        "label": "Jihlava — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440427"
+      }
+    },
+    {
       "id": "e-5d158c307987902f222b",
       "title": "Christmas show - Travesti revue Techtle Mechtle",
       "town": "Jilemnice",
@@ -23886,6 +24254,34 @@
       }
     },
     {
+      "id": "e-bf5280ba7c9d639ea321",
+      "title": "Pramínek - O Vánoci dlouhý noci",
+      "town": "Jihlava",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "divadelní sál",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Pramínek - O Vánoci dlouhý noci. divadelní sál",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.dko.cz/program/716-praminek-o-vanoci-dlouhy-noci",
+      "location": {
+        "lat": 49.396064,
+        "lon": 15.5903065,
+        "precision": "town",
+        "label": "Jihlava — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440427"
+      }
+    },
+    {
       "id": "e-bf8dc771cdb4ca88a059",
       "title": "Vánoční koncert v kostele sv. Mikuláše s Magdou Malou a Sboráčkem ZŠ Mníšek",
       "town": "Mníšek",
@@ -24314,6 +24710,36 @@
         "precision": "town",
         "label": "Horoměřice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442228"
+      }
+    },
+    {
+      "id": "e-d9bc29302774b86af9f5",
+      "title": "Vánoce na zámku Jaroměřice nad Rokytnou 2026",
+      "town": "Jaroměřice nad Rokytnou",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-05",
+      "endDate": "2026-12-06",
+      "startTime": "09:00",
+      "endTime": "16:30",
+      "venue": "Jaroměřice nad Rokytnou",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoce na zámku Jaroměřice nad Rokytnou 2026. Jaroměřice nad Rokytnou",
+      "notes": [
+        "Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/vanoce-na-zamku-jaromerice-nad-rokytnou-2026",
+      "location": {
+        "lat": 49.0943503,
+        "lon": 15.8932579,
+        "precision": "town",
+        "label": "Jaroměřice nad Rokytnou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/442172"
       }
     },
     {
@@ -25473,6 +25899,34 @@
       }
     },
     {
+      "id": "e-5628e5e68f532fb9844c",
+      "title": "Tradiční slet Mikulášů, čertů a andělů v Havlíčkově Brodě 2026",
+      "town": "Havlíčkův Brod",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "19:00",
+      "venue": "Město Havlíčkův Brod",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tradiční slet Mikulášů, čertů a andělů v Havlíčkově Brodě 2026. Město Havlíčkův Brod",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/tradicni-slet-mikulasu-certu-a-andelu-v-havlickov",
+      "location": {
+        "lat": 49.606942,
+        "lon": 15.5795748,
+        "precision": "town",
+        "label": "Havlíčkův Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440699"
+      }
+    },
+    {
       "id": "e-6a592bac0d6d4f06b109",
       "title": "Mikulášské řádění 2026",
       "town": "Hlučín",
@@ -25668,6 +26122,34 @@
         "precision": "town",
         "label": "Ludgeřovice — orientační střed obce či místní části, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437640"
+      }
+    },
+    {
+      "id": "e-2787b767c96902df3ff9",
+      "title": "Mikulášské čertohrátky",
+      "town": "Nové Město na Moravě",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "18:00",
+      "venue": "Horácké muzeum",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášské čertohrátky. Horácké muzeum",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/mikulasske-certohratky",
+      "location": {
+        "lat": 49.5616916,
+        "lon": 16.0744185,
+        "precision": "town",
+        "label": "Nové Město na Moravě — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441738"
       }
     },
     {
@@ -26509,6 +26991,34 @@
         "precision": "town",
         "label": "Trnávka — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437530"
+      }
+    },
+    {
+      "id": "e-677844973f60978f3e2b",
+      "title": "Setkání s Mikulášem ve Žďáru nad Sázavou 2026",
+      "town": "Žďár nad Sázavou",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "20:00",
+      "venue": "Zámek Žďár nad Sázavou",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Setkání s Mikulášem ve Žďáru nad Sázavou 2026. Zámek Žďár nad Sázavou",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/setkani-s-mikulasem-2",
+      "location": {
+        "lat": 49.5629014,
+        "lon": 15.9391924,
+        "precision": "town",
+        "label": "Žďár nad Sázavou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/428066"
       }
     },
     {
@@ -29114,6 +29624,34 @@
         "precision": "town",
         "label": "Valtice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442303"
+      }
+    },
+    {
+      "id": "e-eae0ba825b9661796e96",
+      "title": "Adventní prohlídka v klášteře Želiv 2026",
+      "town": "Želiv",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "venue": "Klášter Želiv",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní prohlídka v klášteře Želiv 2026. Klášter Želiv",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/adventni-prohlidky-s-premonstratem",
+      "location": {
+        "lat": 49.5375593,
+        "lon": 15.2327361,
+        "precision": "town",
+        "label": "Želiv — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441082"
       }
     },
     {
@@ -32566,6 +33104,34 @@
       }
     },
     {
+      "id": "e-ca9da450238b61b09b5a",
+      "title": "Vernisáž výstavy Skleněné Vánoce",
+      "town": "Nové Město na Moravě",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "19:00",
+      "venue": "Horácká galerie v Novém Městě na Moravě",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vernisáž výstavy Skleněné Vánoce. Horácká galerie v Novém Městě na Moravě",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/vernisaz-vystavy-jak-nahore-tak-dole-irena-armutid",
+      "location": {
+        "lat": 49.5616916,
+        "lon": 16.0744185,
+        "precision": "town",
+        "label": "Nové Město na Moravě — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441738"
+      }
+    },
+    {
       "id": "e-7ee8ac004b7a5c88458a",
       "title": "Aromaterapie: vůně pro zimní a vánoční pohodu",
       "town": "Týnec nad Sázavou",
@@ -34001,6 +34567,34 @@
       }
     },
     {
+      "id": "e-021f84ae9addf6b34e29",
+      "title": "Tančírna v Kulturáku – vánoční speciál",
+      "town": "Nové Město na Moravě",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-10",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "22:00",
+      "venue": "Kulturní dům",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tančírna v Kulturáku – vánoční speciál. Kulturní dům",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/tancirna-v-kulturaku-vanocni-special",
+      "location": {
+        "lat": 49.5616916,
+        "lon": 16.0744185,
+        "precision": "town",
+        "label": "Nové Město na Moravě — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441738"
+      }
+    },
+    {
       "id": "e-0307258c69232199118c",
       "title": "Vánoce 2026",
       "town": "Vlašim",
@@ -34937,6 +35531,62 @@
       }
     },
     {
+      "id": "e-e72fa4f160671cef05cf",
+      "title": "Vánoční trh na Vratislavově náměstí v Novém Městě na Moravě",
+      "town": "Nové Město na Moravě",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "08:00",
+      "endTime": "12:00",
+      "venue": "Hlavní Vratislavovo náměstí",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční trh na Vratislavově náměstí v Novém Městě na Moravě. Hlavní Vratislavovo náměstí",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/vanocni-trh-3",
+      "location": {
+        "lat": 49.5616916,
+        "lon": 16.0744185,
+        "precision": "town",
+        "label": "Nové Město na Moravě — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441738"
+      }
+    },
+    {
+      "id": "e-71096d673fb65a4854d5",
+      "title": "Vánoční minijarmark",
+      "town": "Pelhřimov",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "08:30",
+      "endTime": "13:00",
+      "venue": "Kulturní zařízení města Pelhřimova",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční minijarmark. Kulturní zařízení města Pelhřimova",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/vanocni-mini-jarmark",
+      "location": {
+        "lat": 49.4308737,
+        "lon": 15.2232341,
+        "precision": "town",
+        "label": "Pelhřimov — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441095"
+      }
+    },
+    {
       "id": "e-2017c6ec4d646254909e",
       "title": "PŘEDVÁNOČNÍ JARMARK",
       "town": "Brumov-Bylnice",
@@ -35160,6 +35810,34 @@
         "precision": "town",
         "label": "Mnichovo Hradiště — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437717"
+      }
+    },
+    {
+      "id": "e-275ca28f988f8275564f",
+      "title": "Stříbrný jarmark v Chotěboři 2026",
+      "town": "Chotěboř",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "venue": "T. J. Sokol Chotěboř",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Stříbrný jarmark v Chotěboři 2026. T. J. Sokol Chotěboř",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/stribrny-jarmark",
+      "location": {
+        "lat": 49.7202055,
+        "lon": 15.6704437,
+        "precision": "town",
+        "label": "Chotěboř — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440712"
       }
     },
     {
@@ -35612,6 +36290,34 @@
         "precision": "town",
         "label": "Šumice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437494"
+      }
+    },
+    {
+      "id": "e-04519f41bd78198d91a9",
+      "title": "Co dělá Vánoce Vánocemi",
+      "town": "Havlíčkova Borová",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "venue": "Sokolovna",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Co dělá Vánoce Vánocemi. Sokolovna",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.havlickovaborova.cz/pro-obcany/kultura-a-sport/co-dela-vanoce-vanocemi-3145_769cs.html",
+      "location": {
+        "lat": 49.6362769,
+        "lon": 15.7812323,
+        "precision": "town",
+        "label": "Havlíčkova Borová — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440715"
       }
     },
     {
@@ -37367,6 +38073,34 @@
       }
     },
     {
+      "id": "e-b8d06dd682a3bfcbf3ff",
+      "title": "Vánoční jarmark na hradě Ledeč nad Sázavou 2026",
+      "town": "Ledeč nad Sázavou",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "11:00",
+      "endTime": "16:00",
+      "venue": "Hrad Ledeč",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční jarmark na hradě Ledeč nad Sázavou 2026. Hrad Ledeč",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/muzejni-noc-na-ledecskem-hrade",
+      "location": {
+        "lat": 49.6950166,
+        "lon": 15.2777763,
+        "precision": "town",
+        "label": "Ledeč nad Sázavou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440675"
+      }
+    },
+    {
       "id": "e-9afb684236c2c90e0f4f",
       "title": "Vánoční jarmark s výtvarnými dílnami",
       "town": "Nové Strašecí",
@@ -38857,6 +39591,34 @@
       }
     },
     {
+      "id": "e-c165add0050f64450543",
+      "title": "Vánoční koncert - Filharmonie G. Mahlera",
+      "town": "Jihlava",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "divadelní sál",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert - Filharmonie G. Mahlera. divadelní sál",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.dko.cz/program/656-vanocni-koncert-filharmonie-g-mahlera",
+      "location": {
+        "lat": 49.396064,
+        "lon": 15.5903065,
+        "precision": "town",
+        "label": "Jihlava — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440427"
+      }
+    },
+    {
       "id": "e-5a53e9f8a0458ba2c85b",
       "title": "3. adventní koncert: Dagmar Pecková",
       "town": "Kadaň",
@@ -39650,6 +40412,36 @@
         "precision": "town",
         "label": "Praha-Uhříněves — orientační bod katastrální části, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/429225"
+      }
+    },
+    {
+      "id": "e-0786183aa7510816dd83",
+      "title": "Živý betlém ve Žďáru nad Sázavou 2026",
+      "town": "Žďár nad Sázavou",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-15",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "venue": "Římskokatolická farnost Žďár nad Sázavou",
+      "category": "betlem",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Živý betlém ve Žďáru nad Sázavou 2026. Římskokatolická farnost Žďár nad Sázavou",
+      "notes": [
+        "Čas zahájení není potvrzen; půlnoc se nepovažuje za skutečný začátek."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.kudyznudy.cz/akce/zivy-betlem-ve-zdaru-nad-sazavou-2026",
+      "location": {
+        "lat": 49.5629014,
+        "lon": 15.9391924,
+        "precision": "town",
+        "label": "Žďár nad Sázavou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/428066"
       }
     },
     {
@@ -40510,6 +41302,34 @@
       "status": "confirmed"
     },
     {
+      "id": "e-f2560c3e1b42d13576f7",
+      "title": "Vysočina sobě - Vánoční koncert",
+      "town": "Jihlava",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-17",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "divadelní sál",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vysočina sobě - Vánoční koncert. divadelní sál",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.dko.cz/program/672-vysocina-sobe-vanocni-koncert",
+      "location": {
+        "lat": 49.396064,
+        "lon": 15.5903065,
+        "precision": "town",
+        "label": "Jihlava — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440427"
+      }
+    },
+    {
       "id": "e-0ff9f0483714bc03083d",
       "title": "Adventní koncert Ivana Ženatého",
       "town": "Plzeň",
@@ -40815,6 +41635,34 @@
         "precision": "town",
         "label": "Humpolec — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441024"
+      }
+    },
+    {
+      "id": "e-f16e5e2d64325fe5dd0c",
+      "title": "Kouzlo Vánoc - Grande Moravia Ladislava Pavluše",
+      "town": "Jihlava",
+      "region": "Kraj Vysočina",
+      "date": "2026-12-18",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "venue": "divadelní sál",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Kouzlo Vánoc - Grande Moravia Ladislava Pavluše. divadelní sál",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-14T11:29:02+00:00",
+      "sourceUrl": "https://www.dko.cz/program/574-kouzlo-vanoc-grande-moravia-ladislava-pavluse",
+      "location": {
+        "lat": 49.396064,
+        "lon": 15.5903065,
+        "precision": "town",
+        "label": "Jihlava — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440427"
       }
     },
     {

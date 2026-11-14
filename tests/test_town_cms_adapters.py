@@ -73,6 +73,21 @@ class TownCmsAdapters(unittest.TestCase):
                          ['https://www.ostravainfo.cz/cz/akce/184845-ostravske-vanoce-2026.html'])
 
 
+class CultureHouses(unittest.TestCase):
+    def dko(self, when):
+        return ('<h1>Vánoční koncert</h1><div class="description">Koledy.</div><div class="icons">'
+                f'<div class="icon-col"><div class="icon-title">Datum a čas konání</div><div class="icon-text">{when}</div></div>'
+                '<div class="icon-col"><div class="icon-title">Místo konání</div><div class="icon-text">divadelní sál</div></div></div>')
+
+    def test_dko_date_time_and_ambiguous_dates(self):
+        s = src('dko', 'Jihlava')
+        url = 'https://www.dko.cz/program/656-vanocni-koncert'
+        e = c.parse_event(self.dko('13. 12. 2026 od 19:00'), dict(s), url, WINDOW)
+        self.assertEqual((e['date'], e['startTime'], e['venue']), ('2026-12-13', '19:00', 'divadelní sál'))
+        with self.assertRaises(c.Review):
+            c.parse_event(self.dko('13. a 14. 12. 2026'), dict(s), url, WINDOW)
+
+
 class RegionalListings(unittest.TestCase):
     def visittrebic(self, day_block, start='15:30'):
         return (f'<h1 class="h1_clanek_akce">Vánoční náměstí</h1><div class="obal_datum_akce">{day_block}</div><div class="obsah_akce">'
