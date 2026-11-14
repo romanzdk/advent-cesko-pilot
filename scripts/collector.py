@@ -132,7 +132,7 @@ def clean_public(text):
     return norm(text)
 
 
-def structured_event(root):
+def structured_event(root, url=None):
     candidates = []
     def walk(value):
         if isinstance(value, list):
@@ -140,7 +140,7 @@ def structured_event(root):
                 walk(v)
         elif isinstance(value, dict):
             types = value.get('@type', [])
-            if 'Event' in ([types] if isinstance(types, str) else types):
+            if any(str(t).endswith('Event') for t in ([types] if isinstance(types, str) else types)):
                 candidates.append(value)
             if '@graph' in value:
                 walk(value['@graph'])
@@ -150,6 +150,10 @@ def structured_event(root):
                 walk(json.loads(''.join(c for c in script.children if isinstance(c,str))))
             except (ValueError, TypeError):
                 continue
+    if len(candidates) > 1 and url:
+        # Detail pages may append "related events"; only the event describing this very page counts.
+        own = [e for e in candidates if urlsplit(urljoin(url, str(e.get('url', '')))).path.rstrip('/') == urlsplit(url).path.rstrip('/')]
+        candidates = own if len(own) == 1 else candidates
     if len(candidates) > 1:
         raise Review('Strukturovaný detail obsahuje více událostí; ověřte jednotlivé termíny.')
     return candidates[0] if candidates else None
@@ -213,7 +217,7 @@ def parse_event(body, source, url, window):
     scope = root.find(cls='event-detail')
     title = txt(root.find('h1'))
     adapter = source['adapter']
-    structured = structured_event(root)
+    structured = structured_event(root, url)
     if adapter in ('hranice', 'visitzlin', 'lanskroun', 'dre') and structured:
         raise Review('Nová strukturovaná data nesmějí obejít ověření označených polí; ověřte formát znovu.')
     wpem_price = None
@@ -241,7 +245,7 @@ def parse_event(body, source, url, window):
         wpem_price = clean_public(prices[0]) if prices else None
         if wpem_price and len(wpem_price) > 180:
             raise Review('Cenový údaj je příliš dlouhý; ověřte všechny varianty bez zkrácení.')
-    if adapter in ('structured', 'wpem') and not structured:
+    if adapter in ('structured', 'wpem', 'posazavi') and not structured:
         raise Review('Chybí strukturovaný detail jedné události.')
     if structured:
         scope = Node('div')
@@ -258,17 +262,27 @@ def parse_event(body, source, url, window):
                 continue
             try:
                 stamp = datetime.fromisoformat(value)
-                if stamp.tzinfo:
+                # A bare midnight (often UTC) marks a date without a time; converting it would invent 01:00.
+                timed = 'T' in value and (stamp.hour, stamp.minute, stamp.second) != (0, 0, 0)
+                if stamp.tzinfo and timed:
                     stamp = stamp.astimezone(ZoneInfo('Europe/Prague'))
             except (ValueError, TypeError):
                 raise Review('Neplatné strukturované datum.')
-            date_text += (' – ' if date_text else '') + stamp.strftime('%d. %m. %Y') + (stamp.strftime(' %H:%M') if 'T' in value else '')
+            date_text += (' – ' if date_text else '') + stamp.strftime('%d. %m. %Y') + (stamp.strftime(' %H:%M') if timed else '')
         place = structured.get('location', {})
         venue = place.get('name', '') if isinstance(place,dict) else str(place)
         address = place.get('address', {}) if isinstance(place,dict) else {}
+        venue = venue or (address if isinstance(address, str) else '')
         locality = address.get('addressLocality') if isinstance(address,dict) else None
         if locality and exact_label(str(locality)) != exact_label(source['town']):
             raise Review('Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu.')
+        if source.get('town_in_address'):
+            # City portals also list events in nearby villages; publish only what names the city itself.
+            address_text = ' '.join(map(str, address.values())) if isinstance(address, dict) else str(address)
+            if not str(venue or '').strip() or not re.search(r'\b' + re.escape(fold(source['town'])) + r'\b', fold(f'{venue} {address_text}')):
+                raise Review('Místo konání neuvádí obec zdroje; ověřte lokalitu.')
+        if source['adapter'] == 'posazavi' and not (locality and str(venue or '').strip()):
+            raise Review('Regionální kalendář neuvádí obec nebo místo konání; ověřte lokalitu.')
     elif adapter == 'lanskroun':
         tops = root.all(cls='festival-top__content')
         if len(tops) != 1:
@@ -675,12 +689,19 @@ def same_host(a, b):
 
 
 def discover(body, base, source):
+    if source.get('adapter') == 'posazavi':
+        # The regional Posázaví calendar lists events only through its JSON search endpoint.
+        found = [urljoin(base, e['DetailUrl']) for e in json.loads(body)['Data'] if KEYWORDS.search(fold(e['Title']))]
+        return list(dict.fromkeys(u for u in found if safe_url(u) and same_host(u, source['index_urls'][0]))), []
     details, pagination = [], []
     for a in DOM(body).root.all('a'):
         url = urljoin(base, a.attrs.get('href', ''))
         if not safe_url(url) or not same_host(url, source['index_urls'][0]):
             continue
         label = a.text() + ' ' + a.attrs.get('title', '')
+        if source.get('slug_keywords'):
+            # Some listings only link a generic "detail" label; the event title survives in the URL slug.
+            label += ' ' + urlsplit(url).path
         if re.match(source['url_regex'], url) and KEYWORDS.search(fold(label)):
             details.append(url)
         if ('next' in a.attrs.get('rel', '').split() or re.search(r'(?:[?&](?:page|stranka)=\d+|/page/\d+/?)$', url)):
@@ -700,7 +721,8 @@ def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewe
     started = time.monotonic()
     checked = now()
     for source in registry['sources']:
-        for field, default, ceiling in [('max_index_pages',2,4),('max_details',14,40)]:
+        # Posázaví search pages are small JSON responses capped at five events each.
+        for field, default, ceiling in [('max_index_pages',2,8 if source['adapter'] == 'posazavi' else 4),('max_details',14,40)]:
             value = source.get(field,default)
             if type(value) is not int or not 1 <= value <= ceiling:
                 raise ValueError('Invalid bounded source budget')

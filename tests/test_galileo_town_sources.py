@@ -16,7 +16,7 @@ from test_three_source_expansion import fragment, WINDOW
 REGISTRY = json.loads((ROOT / 'data/sources.json').read_text())
 LOCATIONS = json.loads((ROOT / 'data/locations.json').read_text())
 NOTE = '{}: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.'
-OBEC_NOTE = '{}: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.'
+OBEC_NOTE = '{}: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.'
 TOWN_SOURCES = [s for s in REGISTRY['sources'] if s['adapter'] == 'galileo' and s.get('coverage_note') in (NOTE.format(s['town']), OBEC_NOTE.format(s['town']))]
 
 
@@ -27,7 +27,8 @@ class GalileoTownSources(unittest.TestCase):
         for source in TOWN_SOURCES:
             with self.subTest(source=source['id']):
                 self.assertEqual(towns.count(source['town']), 1)
-                self.assertEqual((source.get('max_index_pages', 2), source.get('max_details', 14)), (2, 14))
+                village = source['coverage_note'] == OBEC_NOTE.format(source['town'])
+                self.assertEqual((source.get('max_index_pages', 2), source.get('max_details', 14)), (2, 8 if village else 14))
                 self.assertFalse(source['seed_urls'])
                 self.assertTrue(source['allowed_venues'])
                 self.assertEqual(LOCATIONS[source['town']]['precision'], 'town')
