@@ -105,6 +105,40 @@ class PardubiceCity(unittest.TestCase):
             c.parse_event(self.page('Pardubice', ), dict(s), url, WINDOW)
 
 
+class ComponentCms(unittest.TestCase):
+    def page(self, iso, text):
+        return ('<h1 class="component__title">Adventní koncert</h1><section class="component component--detail"><div class="component__info">'
+                f'<strong><time datetime="{iso}">{text}</time></strong><br /> Místo: <strong>DS Mšeno</strong><br /> Organizátor: <strong>DS Mšeno</strong></div></section>')
+
+    def test_component_machine_date_time_and_venue(self):
+        s = src('component', 'Mšeno')
+        url = 'https://www.mestomseno.cz/zivot-ve-meste/kalendar-akci/adventni-koncert/'
+        e = c.parse_event(self.page('2026-12-11', '11. prosince 2026 od 10:00 do 12:00'), dict(s), url, WINDOW)
+        self.assertEqual((e['date'], e['startTime'], e['venue']), ('2026-12-11', '10:00', 'DS Mšeno'))
+        with self.assertRaises(c.Review):
+            c.parse_event(self.page('2026-12-11', '12. prosince 2026 od 10:00'), dict(s), url, WINDOW)
+
+
+class LabelledTownPages(unittest.TestCase):
+    def test_kdy_kde_paragraphs(self):
+        s = src('kdykde', 'Slatiňany')
+        url = 'https://www.slatinany.cz/mesto/aktuality/adventni-tvoreni'
+        body = ('<h1>Adventní tvoření</h1><div class="text"><p>Přijďte.</p><p><strong>Kdy:</strong> Sobota 28. listopadu 2026 od 10:00 do 16:00</p>'
+                '<p><strong>Kde:</strong> Švýcárna Slatiňany</p></div>')
+        e = c.parse_event(body, dict(s), url, WINDOW)
+        self.assertEqual((e['date'], e['startTime'], e['venue']), ('2026-11-28', '10:00', 'Švýcárna Slatiňany'))
+        with self.assertRaises(c.Review):
+            c.parse_event('<h1>Rozsvícení stromu</h1><div class="text"><p>V sobotu 28. listopadu.</p></div>', dict(s), url, WINDOW)
+
+    def test_kic_volary_stamp(self):
+        s = src('kicvolary', 'Volary')
+        url = 'https://www.kic-volary.cz/program/volarske-adventni-trhy-556'
+        body = ('<section id="schedule-detail"><h2>Volarské adventní trhy</h2><div class="main-stamp"><div class="date-stamp"><p>28. listopadu 2026</p></div>'
+                '<div><p>09:00</p></div><div><p>Náměstí, radniční sál Volary</p></div></div></section>')
+        e = c.parse_event(body, dict(s), url, WINDOW)
+        self.assertEqual((e['date'], e['startTime'], e['venue']), ('2026-11-28', '09:00', 'Náměstí, radniční sál Volary'))
+
+
 class RegionalListings(unittest.TestCase):
     def visittrebic(self, day_block, start='15:30'):
         return (f'<h1 class="h1_clanek_akce">Vánoční náměstí</h1><div class="obal_datum_akce">{day_block}</div><div class="obsah_akce">'
