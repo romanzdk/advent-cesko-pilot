@@ -2077,5 +2077,47 @@
     "precision": "town",
     "label": "Stříbrná Skalice — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/437131"
+  },
+  "Plzeň": {
+    "lat": 49.7477415,
+    "lon": 13.3775249,
+    "precision": "town",
+    "label": "Plzeň — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438344"
+  },
+  "Brno": {
+    "lat": 49.1922443,
+    "lon": 16.6113382,
+    "precision": "town",
+    "label": "Brno — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438171"
+  },
+  "Jablonec nad Nisou": {
+    "lat": 50.7240899,
+    "lon": 15.1710958,
+    "precision": "town",
+    "label": "Jablonec nad Nisou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438931"
+  },
+  "Sedlec-Prčice": {
+    "lat": 49.5726082,
+    "lon": 14.5326911,
+    "precision": "town",
+    "label": "Sedlec-Prčice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436678"
+  },
+  "Hořice": {
+    "lat": 50.3682317,
+    "lon": 15.6323368,
+    "precision": "town",
+    "label": "Hořice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440006"
+  },
+  "Česká Třebová": {
+    "lat": 49.9021593,
+    "lon": 16.4472039,
+    "precision": "town",
+    "label": "Česká Třebová — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441216"
   }
 }

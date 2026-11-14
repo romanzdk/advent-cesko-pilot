@@ -2830,12 +2830,18 @@
       "region": "Středočeský kraj",
       "adapter": "reviewed-public",
       "primary_host": "www.obecjevany.cz",
-      "allowed_towns": {"Jevany": "Středočeský kraj"},
-      "index_urls": ["https://www.obecjevany.cz/"],
+      "allowed_towns": {
+        "Jevany": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.obecjevany.cz/"
+      ],
       "url_regex": "^https://www\\.obecjevany\\.cz/aktuality-1/kalendar-akci/[^\\s/]+\\.html$",
       "seed_urls": [],
       "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
-      "allowed_locations": {"Jevany": []}
+      "allowed_locations": {
+        "Jevany": []
+      }
     },
     {
       "id": "reviewed-www-mukarov-cz",
@@ -11104,6 +11110,111 @@
       "max_index_pages": 2,
       "max_details": 14,
       "coverage_note": "Stříbrná Skalice: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Stříbrná Skalice, nikoli úplné obecní ani krajské pokrytí."
+    },
+    {
+      "id": "plzen-akce-portal",
+      "town": "Plzeň",
+      "region": "Plzeňský kraj",
+      "adapter": "structured",
+      "index_urls": [
+        "https://akce.plzen.eu/?date=kdykoliv"
+      ],
+      "url_regex": "^https://akce\\.plzen\\.eu/akce/[^/?#]+/$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 1,
+      "max_details": 24,
+      "slug_keywords": true,
+      "town_in_address": true,
+      "coverage_note": "Plzeň: omezený sezónní výběr z městského portálu akcí akce.plzen.eu; jen akce s místem v Plzni, nikoli úplné městské ani krajské pokrytí."
+    },
+    {
+      "id": "brno-gotobrno",
+      "town": "Brno",
+      "region": "Jihomoravský kraj",
+      "adapter": "structured",
+      "index_urls": [
+        "https://www.gotobrno.cz/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.gotobrno\\.cz/akce/[^/?#]+/$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 1,
+      "max_details": 14,
+      "slug_keywords": true,
+      "town_in_address": true,
+      "coverage_note": "Brno: omezený sezónní výběr z turistického portálu TIC Brno (gotobrno.cz); výpis ukazuje jen aktuální tipy, nikoli úplné městské ani krajské pokrytí."
+    },
+    {
+      "id": "jablonec-365",
+      "town": "Jablonec nad Nisou",
+      "region": "Liberecký kraj",
+      "adapter": "structured",
+      "index_urls": [
+        "https://www.365jablonec.cz/kategorie/advent",
+        "https://www.365jablonec.cz/kategorie/fair"
+      ],
+      "url_regex": "^https://www\\.365jablonec\\.cz/udalosti-v-jablonci/\\d+/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "slug_keywords": true,
+      "coverage_note": "Jablonec nad Nisou: omezený sezónní výběr z městského portálu 365jablonec.cz (Kultura Jablonec); jen akce s adresou v Jablonci, nikoli úplné městské ani krajské pokrytí."
+    },
+    {
+      "id": "sedlec-prcice-calendar",
+      "town": "Sedlec-Prčice",
+      "region": "Středočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.sedlec-prcice.cz/volny-cas-a-turismus/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.sedlec-prcice.cz/volny-cas-a-turismus/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.sedlec-prcice\\.cz/volny-cas-a-turismus/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Sedlec-Prčice: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "náměstí 7. května",
+        "Vítkovo náměstí v Prčici"
+      ]
+    },
+    {
+      "id": "horice-akce",
+      "town": "Hořice",
+      "region": "Královéhradecký kraj",
+      "adapter": "structured",
+      "index_urls": [
+        "https://akcehorice.cz/"
+      ],
+      "url_regex": "^https://akcehorice\\.cz/akce/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 1,
+      "max_details": 14,
+      "slug_keywords": true,
+      "coverage_note": "Hořice: omezený sezónní výběr z městského kalendáře akcí akcehorice.cz; jen akce se strukturovanou adresou v Hořicích, nikoli úplné městské ani krajské pokrytí."
+    },
+    {
+      "id": "ceska-trebova-kcct",
+      "town": "Česká Třebová",
+      "region": "Pardubický kraj",
+      "adapter": "structured",
+      "index_urls": [
+        "https://www.kcct.cz/program"
+      ],
+      "url_regex": "^https://www\\.kcct\\.cz/program/[^/?#]+$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 1,
+      "max_details": 14,
+      "slug_keywords": true,
+      "coverage_note": "Česká Třebová: omezený sezónní výběr z programu Kulturního centra Česká Třebová (kcct.cz); městský web je pro sběrač blokován robots.txt a není obcházen. Nejde o úplné městské pokrytí."
     }
   ]
 }

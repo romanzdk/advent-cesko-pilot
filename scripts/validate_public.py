@@ -124,6 +124,9 @@ def validate_directory(path, registry=None):
         require(source['status'] in ['ok','partial','error'] and https(source['url']),'Invalid source status/URL')
     for event in data['events']:
         matches=[s for s in sources if re.fullmatch(s['url_regex'],event['sourceUrl'])]
+        # Regional calendars (Posázaví) serve several town sources from one URL space; the town picks the owner.
+        if len(matches)>1:
+            matches=[s for s in matches if s['town']==event['town']]
         require(len(matches)==1,'Event URL must identify one registered source')
         source=matches[0]
         require(event['region']==source['region'],'Event region disagrees with source')
