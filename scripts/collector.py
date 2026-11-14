@@ -790,7 +790,7 @@ def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewe
     for source in live:
         by_server.setdefault(server(source), []).append(source)
     prefetched = {}
-    with ThreadPoolExecutor(max_workers=8) as pool:
+    with ThreadPoolExecutor(max_workers=16) as pool:
         for batch in pool.map(lambda group: [(s['id'], fetch_source(s)) for s in group], by_server.values()):
             prefetched.update(batch)
     for source in live:
