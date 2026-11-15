@@ -463,7 +463,7 @@ function locationFailureDetails(started, outcome, error) {
   } catch { /* Unsupported policy introspection must not decide permission. */ }
   const message = typeof error?.message === 'string' ? error.message.replace(/[\u0000-\u001f\u007f]/g, ' ').slice(0, 300) : '';
   return [
-    'Verze: otaznik-1', `Výsledek: ${outcome}`,
+    'Verze: mapa-1', `Výsledek: ${outcome}`,
     `Kód prohlížeče: ${Number.isFinite(error?.code) ? error.code : 'neuveden'}`,
     `Zpráva prohlížeče: ${message || 'neuvedena'}`,
     `Čekání: ${Math.round((performance.now() - started) / 1000)} s`,
@@ -525,6 +525,16 @@ $('locate-user').addEventListener('click', event => {
 });
 $('show-list').addEventListener('click', () => setView('list'));
 $('show-map').addEventListener('click', () => setView('map'));
+$('view-fab').addEventListener('click', () => {
+  setView($('explore').dataset.view === 'map' ? 'list' : 'map');
+  document.querySelector('.results-toolbar').scrollIntoView({ block: 'start' });
+});
+let lastScrollY = scrollY;
+addEventListener('scroll', () => {
+  if (Math.abs(scrollY - lastScrollY) < 8) return;
+  $('view-fab').classList.toggle('scrolled-away', scrollY > lastScrollY && scrollY > 120);
+  lastScrollY = scrollY;
+}, { passive: true });
 $('filters').addEventListener('submit', event => event.preventDefault());
 $('clear-search').addEventListener('click', () => {
   $('search').value = '';
