@@ -4856,5 +4856,12 @@
     "precision": "town",
     "label": "Kaliště — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/437175"
+  },
+  "kaliste-lensedly-kd": {
+    "lat": 49.8947663,
+    "lon": 14.753825,
+    "precision": "venue",
+    "label": "Kulturní dům, Lensedly č.p. 52 (obec Kaliště) — adresní bod",
+    "sourceUrl": "https://www.openstreetmap.org/node/1432784324"
   }
 }

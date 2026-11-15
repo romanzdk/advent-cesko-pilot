@@ -622,14 +622,14 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-15T08:41:50+00:00",
+      "verifiedAt": "2026-11-15T09:21:03+00:00",
       "sourceUrl": "https://www.kaliste.eu/nase-obec/kalendar-akci/lensedelsky-predadventni-trzik-912_173cs.html",
       "location": {
-        "lat": 49.8864749,
-        "lon": 14.7626199,
-        "precision": "town",
-        "label": "Kaliště — orientační střed obce, nikoli přesné místo akce",
-        "sourceUrl": "https://www.openstreetmap.org/relation/437175"
+        "lat": 49.8947663,
+        "lon": 14.753825,
+        "precision": "venue",
+        "label": "Kulturní dům, Lensedly č.p. 52 (obec Kaliště) — adresní bod",
+        "sourceUrl": "https://www.openstreetmap.org/node/1432784324"
       }
     },
     {
