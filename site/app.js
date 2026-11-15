@@ -1,5 +1,5 @@
 import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs, distanceKm, nearbyEvents, MAP_COLORS, markerCategory } from './helpers.js';
-import { dayHighlight, townSuggestions, eventPermalink, eventIdFromHash } from './helpers.js';
+import { dayHighlight, eventPermalink, eventIdFromHash } from './helpers.js';
 
 const $ = id => document.getElementById(id);
 const categories = { strom: 'Rozsvícení stromu', mikulas: 'Mikuláš', trhy: 'Trhy a jarmarky', tvoreni: 'Tvoření', setkani: 'Setkání', betlem: 'Betlémy' };
@@ -86,7 +86,7 @@ function openPermalink() {
   permalinkStatus.hidden = !message;
   if (target) {
     let changed = false;
-    for (const [control, key] of [['search', 'query'], ['region', 'region'], ['town', 'town'], ['category', 'category']]) {
+    for (const [control, key] of [['search', 'query'], ['region', 'region'], ['category', 'category']]) {
       if (!filterEvents([target], { [key]: $(control).value }).length) { $(control).value = ''; changed = true; }
     }
     let dateMatches = false;
@@ -104,7 +104,6 @@ function openPermalink() {
       clearLocation();
       changed = true;
     } else locationGeneration++; // Invalidate an awaited map continuation, not ordinary map clicks.
-    closeTowns();
     if (changed) render();
     selectEvent(id);
   } else for (const card of document.querySelectorAll('.event-card.selected')) card.classList.remove('selected');
@@ -339,60 +338,9 @@ function updateRegions() {
     if (option.value && !published.has(option.value)) option.textContent = `${option.value} · zatím bez akcí`;
   }
 }
-function closeTowns() {
-  $('town-options').hidden = true;
-  $('town').setAttribute('aria-expanded', 'false');
-  $('town').removeAttribute('aria-activedescendant');
-}
-function updateTowns() {
-  const options = townSuggestions(events, $('region').value, $('town').value).map((town, index) => {
-    const option = el('li', town);
-    option.id = `town-option-${index}`;
-    option.setAttribute('role', 'option');
-    option.setAttribute('aria-selected', 'false');
-    option.addEventListener('click', () => {
-      $('town').value = town;
-      $('town').focus({ preventScroll: true });
-      render();
-      closeTowns();
-    });
-    return option;
-  });
-  $('town-options').replaceChildren(...options);
-  $('town').removeAttribute('aria-activedescendant');
-  const open = options.length > 0 && document.activeElement === $('town');
-  $('town-options').hidden = !open;
-  $('town').setAttribute('aria-expanded', String(open));
-}
-$('town').addEventListener('focus', updateTowns);
-$('town').addEventListener('click', updateTowns);
-$('town').addEventListener('keydown', event => {
-  if (event.isComposing) return;
-  if (event.key === 'Escape' || event.key === 'Tab') {
-    if (event.key === 'Escape' && !$('town-options').hidden) event.preventDefault();
-    closeTowns();
-  } else if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-    event.preventDefault();
-    if ($('town-options').hidden) updateTowns();
-    const options = [...$('town-options').children];
-    if (!options.length) return;
-    const active = options.findIndex(option => option.id === $('town').getAttribute('aria-activedescendant'));
-    const index = active < 0 ? (event.key === 'ArrowDown' ? 0 : options.length - 1) : (active + (event.key === 'ArrowDown' ? 1 : -1) + options.length) % options.length;
-    options.forEach((option, i) => option.setAttribute('aria-selected', String(i === index)));
-    $('town').setAttribute('aria-activedescendant', options[index].id);
-    options[index].scrollIntoView({ block: 'nearest' });
-  } else if (event.key === 'Enter' && !$('town-options').hidden) {
-    const active = $($('town').getAttribute('aria-activedescendant'));
-    if (active) { event.preventDefault(); active.click(); }
-  }
-});
-for (const type of ['pointerdown', 'focusin']) document.addEventListener(type, event => {
-  if (!event.target.closest('.town-field')) closeTowns();
-});
 function render() {
   if (!eventsLoaded) return;
   $('clear-search').hidden = !$('search').value;
-  $('clear-town').hidden = !$('town').value;
   const customDates = $('period').value === 'custom';
   $('date-range').hidden = !customDates;
   for (const id of ['date-from', 'date-to']) $(id).disabled = !customDates;
@@ -428,7 +376,7 @@ function render() {
   appendCards();
   $('results').setAttribute('aria-busy', 'false');
   const period = bounds ? `${dateFormat.format(dateValue(bounds[0]))}–${dateFormat.format(dateValue(bounds[1]))}` : 'všechny termíny';
-  const scope = [filters.region, filters.town].filter(Boolean);
+  const scope = [filters.region].filter(Boolean);
   $('result-count').textContent = rangeError ? 'Opravte rozsah dat.' : `${visible.length} ${visible.length === 1 ? 'akce' : visible.length < 5 ? 'akce' : 'akcí'} · ${[...scope, period].join(' · ')}`;
   updateMap();
 }
@@ -463,7 +411,7 @@ function locationFailureDetails(started, outcome, error) {
   } catch { /* Unsupported policy introspection must not decide permission. */ }
   const message = typeof error?.message === 'string' ? error.message.replace(/[\u0000-\u001f\u007f]/g, ' ').slice(0, 300) : '';
   return [
-    'Verze: mapa-1', `Výsledek: ${outcome}`,
+    'Verze: hledat-1', `Výsledek: ${outcome}`,
     `Kód prohlížeče: ${Number.isFinite(error?.code) ? error.code : 'neuveden'}`,
     `Zpráva prohlížeče: ${message || 'neuvedena'}`,
     `Čekání: ${Math.round((performance.now() - started) / 1000)} s`,
@@ -541,21 +489,8 @@ $('clear-search').addEventListener('click', () => {
   render();
   $('search').focus({ preventScroll: true });
 });
-$('clear-town').addEventListener('click', () => {
-  $('town').value = '';
-  render();
-  $('town').focus({ preventScroll: true });
-  updateTowns();
-});
-$('region').addEventListener('change', () => {
-  if (!townSuggestions(events, $('region').value, $('town').value).length) $('town').value = '';
-  updateTowns();
-});
-$('filters').addEventListener('input', event => {
-  render();
-  if (event.target === $('town')) updateTowns(); else closeTowns();
-});
-$('filters').addEventListener('change', event => { if (event.target !== $('town')) { closeTowns(); render(); } });
+$('filters').addEventListener('input', render);
+$('filters').addEventListener('change', render);
 $('filters').addEventListener('reset', event => {
   event.preventDefault();
   $('search').value = '';
@@ -564,8 +499,6 @@ $('filters').addEventListener('reset', event => {
   $('date-to').value = '';
   $('category').value = '';
   $('region').value = '';
-  $('town').value = '';
-  closeTowns();
   clearLocation();
   lastFilterKey = undefined;
   render();

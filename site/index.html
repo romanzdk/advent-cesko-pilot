@@ -24,8 +24,8 @@
   <meta name="twitter:image:alt" content="Advent v Česku 2026: sezonní mapa veřejných akcí, 20. listopadu až 24. prosince.">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./vendor/leaflet.css">
-  <link rel="stylesheet" href="./styles.css?v=mapa-1">
-  <script type="module" src="./app.js?v=mapa-1"></script>
+  <link rel="stylesheet" href="./styles.css?v=hledat-1">
+  <script type="module" src="./app.js?v=hledat-1"></script>
   <script type="module" src="./feedback.js"></script>
 </head>
 <body>
@@ -39,11 +39,10 @@
       <p class="editor-note">U každé akce najdete veřejný zdroj i to, co ještě není jisté.</p>
     </section>
     <form class="filters" id="filters" aria-label="Filtrovat akce">
-      <div class="search-field"><label for="search">Hledat</label><div class="search-control"><input type="search" id="search" name="query" placeholder="Název, místo nebo obec…" autocomplete="off"><button type="button" id="clear-search" class="clear-search" aria-label="Vymazat hledání" title="Vymazat hledání" hidden><span aria-hidden="true">×</span></button></div></div>
+      <div class="search-field"><label for="search">Hledat</label><div class="search-control"><input type="search" id="search" name="query" placeholder="Akce, obec nebo místo…" autocomplete="off"><button type="button" id="clear-search" class="clear-search" aria-label="Vymazat hledání" title="Vymazat hledání" hidden><span aria-hidden="true">×</span></button></div></div>
       <label>Termín<select id="period" name="period" aria-controls="date-range"><option value="all">Všechny termíny</option><option value="today">Dnes</option><option value="weekend">Tento víkend</option><option value="custom">Vlastní rozsah</option></select></label>
       <label>Co vás láká<select id="category" name="category"><option value="">Všechny typy</option><option value="strom">Rozsvícení stromu</option><option value="mikulas">Mikuláš</option><option value="trhy">Trhy a jarmarky</option><option value="tvoreni">Tvoření</option><option value="setkani">Setkání</option><option value="betlem">Betlémy</option></select></label>
       <label>Kraj<select id="region" name="region"><option value="">Všechny kraje</option></select></label>
-      <div class="town-field"><label for="town">Obec</label><div class="town-control"><input id="town" name="town" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="town-options" autocomplete="off" placeholder="Začněte psát obec…"><button type="button" id="clear-town" class="clear-search" aria-label="Vymazat obec" title="Vymazat obec" hidden><span aria-hidden="true">×</span></button><ul id="town-options" role="listbox" aria-label="Návrhy obcí" hidden></ul></div></div>
       <button class="reset-button" type="reset">Zrušit filtry</button>
       <fieldset id="date-range" class="date-range" hidden>
         <legend>Vlastní rozsah dat</legend>
