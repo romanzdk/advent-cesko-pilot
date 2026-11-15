@@ -150,7 +150,7 @@ export function filterEvents(events, filters = {}, now = new Date()) {
     (!filters.region || event.region === filters.region) &&
     (!normalize(filters.town).trim() || normalize(event.town).includes(normalize(filters.town).trim())) &&
     (!filters.category || event.category === filters.category) &&
-    (!query || normalize([event.title, event.town, event.venue, event.description].join(' ')).includes(query)) &&
+    (!query || normalize([event.title, event.town, event.venue, event.description, ...(event.notes || [])].join(' ')).includes(query)) &&
     (!bounds || (event.date <= bounds[1] && (event.endDate || event.date) >= bounds[0]))
   ).sort((a, b) => `${a.date} ${a.startTime || '99:99'}`.localeCompare(`${b.date} ${b.startTime || '99:99'}`) || a.title.localeCompare(b.title, 'cs'));
 }

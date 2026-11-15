@@ -45,6 +45,8 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(e['audience'], 'dospělí')
         self.assertEqual(parse(title='Předadventní tržík')['category'], 'trhy')
         self.assertEqual(parse(title='Vánoční tržiště')['category'], 'trhy')
+        part = parse(venue='Kulturní dům', extra='<div id="action-address">Kulturní dům, Lensedly č.p. 52</div>')
+        self.assertEqual((part['venue'], part['description']), ('Kulturní dům', 'Mikulášská besídka. Kulturní dům, Lensedly č.p. 52'))
         self.assertTrue(e['registration'])
         self.assertNotIn('@', json.dumps(e))
         self.assertEqual(parse('24. 12. 2026 0:00')['startTime'], None)

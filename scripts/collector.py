@@ -252,7 +252,7 @@ def parse_event(body, source, url, window):
         title = str(structured.get('name', ''))
         scope.children = [title, txt(DOM(str(structured.get('description',''))).root)]
         adapter = 'structured'
-    venue = ''
+    venue = galileo_address = ''
     fields = {}
     if adapter == 'structured':
         date_text = ''
@@ -321,6 +321,7 @@ def parse_event(body, source, url, window):
         date_node = scope.find(cls='event-action__date-start-text') or scope.find(cls='action-date')
         date_text = txt(date_node)
         venue = txt(scope.find(cls='event-action__venue-text') or scope.find(cls='venue'))
+        galileo_address = txt(root.find(id='action-address'))
     elif adapter == 'itrebon':
         scope = root.find(cls='kalendarDetail')
         table = scope.find('table', cls='kal-info-detail') if scope else None
@@ -754,13 +755,16 @@ def parse_event(body, source, url, window):
                 break
     title = clean_public(title)[:180]
     venue = clean_public(venue)[:180]
+    galileo_address = clean_public(galileo_address)[:180]
+    # Galileo keeps the village part (e.g. Lensedly) only in the address; search reads the description.
+    place = galileo_address if galileo_address and fold(venue) in fold(galileo_address) else ', '.join(filter(None, [venue, galileo_address]))
     if not title:
         raise Review('Chybí název události.')
     event = {'id': 'e-' + digest(url)[:20], 'title': title, 'town': town, 'region': source['region'],
             'date': dates[0][0], 'endDate': dates[-1][0] if len(dates) > 1 else None,
             'startTime': start, 'endTime': times[1] if len(times) > 1 else None,
             'venue': venue or None, 'category': category, 'price': price, 'registration': registration,
-            'registrationUrl': registration_url, 'description': f"{title}. {venue}"[:200], 'notes': notes,
+            'registrationUrl': registration_url, 'description': f"{title}. {place}"[:200], 'notes': notes,
             'audience': audience, 'status': 'cancelled' if (structured and str(structured.get('eventStatus','')).rstrip('/').split('/')[-1] == 'EventCancelled') or re.search(r'\bzrusen', text) else ('confirmed' if start else 'time-unconfirmed'),
             'verifiedAt': now(), 'sourceUrl': url, 'location': None}
     if review:

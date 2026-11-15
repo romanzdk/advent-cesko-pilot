@@ -84,6 +84,7 @@ test('combined filters use accent-insensitive search and overlap multiday events
   assert.equal(helpers.filterEvents(events, { town: 'Říčany' }).length, 0);
   assert.equal(helpers.filterEvents(events, { category: 'betlem' }).length, 0);
   assert.equal(helpers.filterEvents(events, { query: 'nonsense' }).length, 0);
+  assert.deepEqual(helpers.filterEvents([event('Výšlap', '2026-11-28', null, { notes: ['Start u Tyršova stadionu'] })], { query: 'tyrsova' }).map(e => e.id), ['Výšlap']);
 });
 test('town suggestions are local, scoped, sorted, deduplicated, normalized and bounded to eight', () => {
   assert.equal(typeof helpers.townSuggestions, 'function');
