@@ -12062,6 +12062,24 @@
       "eventCount": 10,
       "reviewCount": 0,
       "lastError": null
+    },
+    {
+      "id": "kaliste-obec-calendar",
+      "town": "Kaliště",
+      "region": "Středočeský kraj",
+      "url": "https://www.kaliste.eu/nase-obec/kalendar-akci/",
+      "adapter": "galileo",
+      "coverageNote": "Kaliště (okres Praha-východ): omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí. Limit sběru: 2 stránek a 8 detailů.",
+      "maxIndexPages": 2,
+      "maxDetails": 8,
+      "excludedCount": 0,
+      "sourceNote": "Programový výběr: pouze sledované období a místní akce; známé termíny mimo období a zájezdy se nezapočítávají do ruční kontroly.",
+      "status": "ok",
+      "lastChecked": "2026-11-15T07:39:46+00:00",
+      "lastSuccess": "2026-11-15T07:39:46+00:00",
+      "eventCount": 1,
+      "reviewCount": 0,
+      "lastError": null
     }
   ],
   "metrics": {
@@ -12073,7 +12091,7 @@
     "eventsNew": 3,
     "eventsChanged": 0,
     "eventsUnchanged": 60,
-    "eventsPublished": 1944,
+    "eventsPublished": 1945,
     "reviewCount": 329,
     "excludedCount": 0,
     "aiCalls": 0
