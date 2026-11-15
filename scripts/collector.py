@@ -731,7 +731,7 @@ def parse_event(body, source, url, window):
         programme = clean_public(txt(DOM(str(structured.get('description', ''))).root))
         if programme:
             notes.append(programme[:500])
-    if mapping:
+    if mapping and town != source['town']:
         notes.append(f"{town} je část Plas; mapa ukazuje jen orientační střed místní části, nikoli přesné místo akce.")
     if len(dates) > 1:
         notes.append('Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření.')

@@ -52,6 +52,9 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(parse('24. 12. 2026 0:00')['startTime'], None)
         self.assertTrue(parse('20. 11. 2026 10:00 – 22. 11. 2026 18:00')['notes'])
         with self.assertRaises(c.Review): parse('5. 12. 2026 17:00 a 6. 12. 2026 18:00')
+        url = s['seed_urls'][0]
+        s = dict(s, event_locations={url: dict(sourceId=s['id'], sourceTown=s['town'], sourceUrl=url, expectedVenue='Kulturní dům', expectedDate='2026-12-05', town=s['town'], locationKey='x')})
+        self.assertEqual(parse(venue='Kulturní dům')['notes'], [])
 
     def test_jsonld_event_preferred_and_sanitized(self):
         c = collector()

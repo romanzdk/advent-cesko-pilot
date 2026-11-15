@@ -18081,7 +18081,23 @@
       "feed_url": null,
       "max_index_pages": 2,
       "max_details": 8,
-      "coverage_note": "Kaliště (okres Praha-východ): omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí."
+      "coverage_note": "Kaliště (okres Praha-východ): omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "event_locations": {
+        "https://www.kaliste.eu/nase-obec/kalendar-akci/lensedelsky-predadventni-trzik-912_173cs.html": {
+          "sourceId": "kaliste-obec-calendar",
+          "sourceTown": "Kaliště",
+          "sourceUrl": "https://www.kaliste.eu/nase-obec/kalendar-akci/lensedelsky-predadventni-trzik-912_173cs.html",
+          "expectedVenue": "Kulturní dům",
+          "expectedDate": "2026-11-21",
+          "town": "Kaliště",
+          "locationKey": "kaliste-lensedly-kd",
+          "verifiedAt": "2026-11-15T10:00:00+00:00",
+          "supportingSourceUrls": [
+            "https://www.kaliste.eu/nase-obec/kalendar-akci/lensedelsky-predadventni-trzik-912_173cs.html",
+            "https://www.openstreetmap.org/node/1432784324"
+          ]
+        }
+      }
     }
   ]
 }
