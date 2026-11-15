@@ -18064,6 +18064,24 @@
       "max_details": 10,
       "slug_keywords": true,
       "coverage_note": "Volary: omezený sezónní výběr z programu Kulturně informačního centra Volary; městský web nemá strojově čitelný kalendář. Nejde o úplné městské pokrytí."
+    },
+    {
+      "id": "kaliste-obec-calendar",
+      "town": "Kaliště",
+      "region": "Středočeský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.kaliste.eu/nase-obec/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.kaliste.eu/nase-obec/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.kaliste\\.eu/nase-obec/kalendar-akci/[^/?]+_\\d+cs\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Kaliště (okres Praha-východ): omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí."
     }
   ]
 }

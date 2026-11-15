@@ -4849,5 +4849,12 @@
     "precision": "town",
     "label": "Volary — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/437975"
+  },
+  "Kaliště": {
+    "lat": 49.8864749,
+    "lon": 14.7626199,
+    "precision": "town",
+    "label": "Kaliště — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437175"
   }
 }

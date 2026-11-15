@@ -43,6 +43,8 @@ class ParserTests(unittest.TestCase):
         e = parse(extra='Na akci je nutné přihlášení. osobni@example.cz', title='Vánoční tvoření pro dospělé')
         self.assertEqual(e['category'], 'tvoreni')
         self.assertEqual(e['audience'], 'dospělí')
+        self.assertEqual(parse(title='Předadventní tržík')['category'], 'trhy')
+        self.assertEqual(parse(title='Vánoční tržiště')['category'], 'trhy')
         self.assertTrue(e['registration'])
         self.assertNotIn('@', json.dumps(e))
         self.assertEqual(parse('24. 12. 2026 0:00')['startTime'], None)
