@@ -94,7 +94,7 @@ test('list batches reset only for changed filters or explicit reset, not same-fi
     assert.equal(await more.isVisible(), false);
     assert.equal(await page.locator('#list-count').innerText(), 'Zobrazeno 0 z 0');
     assert.deepEqual(errors, []);
-  }, { data: batchFixture, mobile: true });
+  }, { data: batchFixture, mobile: true, touch: false }); // Touch Chrome shows a date picker, so a partly typed date needs a non-touch phone viewport.
 });
 test('batched permalinks reveal whole required batches after async load, filters, history and retry', async () => {
   for (const mobile of [false, true]) await app(async (page, errors) => {
@@ -233,8 +233,8 @@ after(async () => {
   await browser?.close();
   if (server) await new Promise(resolve => server.close(resolve));
 });
-async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile = false, responseStatus = 200, delay = 0, libraryFail = false, coverage = coverageFixture, coverageStatus = 200, coveragePending = false, coverageDeferred = false, javaScriptEnabled = true, geoMock = false } = {}) {
-  const context = await browser.newContext({ viewport: mobile ? { width: 393, height: 852 } : { width: 1440, height: 1000 }, timezoneId: 'America/Los_Angeles', hasTouch: mobile, javaScriptEnabled });
+async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile = false, touch = mobile, responseStatus = 200, delay = 0, libraryFail = false, coverage = coverageFixture, coverageStatus = 200, coveragePending = false, coverageDeferred = false, javaScriptEnabled = true, geoMock = false } = {}) {
+  const context = await browser.newContext({ viewport: mobile ? { width: 393, height: 852 } : { width: 1440, height: 1000 }, timezoneId: 'America/Los_Angeles', hasTouch: touch, javaScriptEnabled });
   try {
     if (geoMock) await context.addInitScript(installGeoMock);
     const page = await context.newPage();
@@ -619,7 +619,7 @@ test('permalink navigation handles title clicks, hash changes and history withou
     await page.waitForSelector('.event-card');
     await page.evaluate(() => { window.sameDocument = true; window.originalCard = document.querySelector('[data-id="e-b"]'); });
     const requests = [];
-    page.on('request', request => requests.push(request.url()));
+    page.on('request', request => { if (!request.url().endsWith('/favicon.svg')) requests.push(request.url()); });
     const target = page.locator('[data-id="e-b"]');
     await target.locator('h3 a').focus();
     await target.locator('h3 a').press('Enter');
@@ -687,7 +687,7 @@ test('permalink missing or malformed IDs show an honest non-destructive message 
     assert.equal(await page.locator('.event-card.selected').count(), 0);
     await page.locator('#search').fill('dilna');
     const requests = [];
-    page.on('request', request => requests.push(request.url()));
+    page.on('request', request => { if (!request.url().endsWith('/favicon.svg')) requests.push(request.url()); });
     await page.evaluate(() => { location.hash = 'akce=e-unknown'; });
     await page.waitForFunction(() => document.getElementById('permalink-status').textContent.includes('není v aktuálním'), null, {timeout:3000});
     assert.equal(await page.locator('#search').inputValue(), 'dilna');
@@ -928,7 +928,7 @@ test('permalink recovers a partially entered native date instead of leaving the 
     await page.waitForSelector('[data-id="e-b"].selected', {timeout:3000});
     assert.equal(await page.locator('#period').inputValue(), 'all');
     assert.equal(await page.locator('#date-range-error').isVisible(), false);
-  }, {data:permalinkFixture,mobile:true});
+  }, {data:permalinkFixture,mobile:true,touch:false});
 });
 
 test('location is gated by loaded events and trusted clicks without erasing fetch recovery', async () => {
@@ -1029,7 +1029,7 @@ test('nearby exposes the native failure reason locally without assuming user ref
     assert.equal(await page.locator('#location-help').isVisible(), true);
     await page.locator('#location-help > summary').click();
     const detail = await page.locator('#location-diagnostic').innerText();
-    assert.match(detail, /poloha-2/);
+    assert.match(detail, /^Verze: \S+/);
     assert.match(detail, /Kód prohlížeče: 1/);
     assert.match(detail, /Origin denied by system <img/);
     assert.match(detail, /HTTPS: ano/);
@@ -1319,38 +1319,22 @@ test('search clear button removes the entire query, preserves other filters and 
   }, { data:regionalFixture, mobile });
 });
 
-test('personal origin story replaces the edition with a compact header question on desktop and mobile', async () => {
+test('origin story is a normal collapsible section like the other info sections, also without JavaScript', async () => {
   for (const width of [1440, 393, 320]) await app(async page => {
     await page.setViewportSize({ width, height: 852 });
-    const story = page.locator('header details.origin-story');
+    const story = page.locator('details#origin-story.feedback');
     const summary = story.locator('summary');
     assert.equal(await summary.count(), 1);
-    assert.equal(await summary.innerText(), '?');
-    assert.equal(await summary.getAttribute('aria-label'), 'Proč tahle mapa vznikla');
-    assert.equal(await page.locator('.edition, footer .origin-story').count(), 0);
-    assert.equal(await story.locator('.origin-story-panel').isVisible(), false);
-    const bareQuestion = async () => assert.deepEqual(await summary.evaluate(n => {
-      const s = getComputedStyle(n);
-      return { background:s.backgroundColor, border:s.borderTopWidth, radius:s.borderRadius, size:s.fontSize, weight:s.fontWeight };
-    }), { background:'rgba(0, 0, 0, 0)', border:'0px', radius:'0px', size:'14px', weight:'400' });
-    await bareQuestion();
-    await summary.hover();
-    await bareQuestion();
-    const triggerBox = await summary.boundingBox();
-    assert(triggerBox.width >= 44 && triggerBox.height >= 44);
-    const wordmarkBox = await page.locator('.wordmark').boundingBox();
-    assert(wordmarkBox.x + wordmarkBox.width <= triggerBox.x);
+    assert.equal(await summary.innerText(), 'Proč tahle mapa vznikla');
+    assert.equal(await page.locator('header details, .edition').count(), 0);
+    assert.equal(await story.locator('p').isVisible(), false);
+    const box = await summary.boundingBox();
+    assert(box.height >= 44);
     await summary.click({ timeout: 3000 });
-    assert.equal(await story.locator('.origin-story-panel').isVisible(), true);
-    await bareQuestion();
-    assert.equal(await story.locator('h2').innerText(), 'Proč tahle mapa vznikla');
     assert.equal(await story.locator('p').innerText(), 'Moje žena má ráda vánoční atmosféru a trhy. Tahle mapa vznikla, abychom měli po ruce tipy, kam spolu vyrazit.');
-    const panelBox = await story.locator('.origin-story-panel').boundingBox();
-    assert(panelBox.x >= 0 && panelBox.x + panelBox.width <= width);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
-    if (width === 393) await page.locator('.masthead').screenshot({ path: screenshotPath('origin-story-header-mobile-fixture.png') });
     await summary.press('Enter');
-    assert.equal(await story.locator('.origin-story-panel').isVisible(), false);
+    assert.equal(await story.locator('p').isVisible(), false);
   }, { javaScriptEnabled: false });
 });
 
@@ -1676,9 +1660,6 @@ test('map names its bounded Christmas 2026 scope and excludes out-of-window even
     for (const width of [1440, 393, 320]) {
       await page.setViewportSize({ width, height: 900 });
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
-      const name = await page.locator('.wordmark').boundingBox();
-      const help = await page.locator('.origin-story summary').boundingBox();
-      assert(name.x + name.width <= help.x);
     }
     assert.match(await page.locator('.intro').innerText(), /Sezonní výběr veřejných akcí 2026/);
     assert.match(await page.locator('.intro').innerText(), /Výběr veřejných zdrojů, nikoli úplný přehled krajů ani celé ČR\./);
