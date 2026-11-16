@@ -12080,6 +12080,22 @@
       "eventCount": 1,
       "reviewCount": 0,
       "lastError": null
+    },
+    {
+      "id": "reviewed-centrum-pecka-cz",
+      "town": "Kostelec nad Černými lesy",
+      "region": "Středočeský kraj",
+      "url": "https://centrum-pecka.cz/",
+      "adapter": "reviewed-public",
+      "coverageNote": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "status": "ok",
+      "lastChecked": "2026-11-14T09:15:04+00:00",
+      "lastSuccess": "2026-11-14T09:15:04+00:00",
+      "eventCount": 1,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": null,
+      "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
     }
   ],
   "metrics": {
@@ -12091,7 +12107,7 @@
     "eventsNew": 3,
     "eventsChanged": 0,
     "eventsUnchanged": 60,
-    "eventsPublished": 1945,
+    "eventsPublished": 1946,
     "reviewCount": 329,
     "excludedCount": 0,
     "aiCalls": 0

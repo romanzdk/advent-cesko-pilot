@@ -18098,6 +18098,33 @@
           ]
         }
       }
+    },
+    {
+      "id": "reviewed-centrum-pecka-cz",
+      "town": "Kostelec nad Černými lesy",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "centrum-pecka.cz",
+      "allowed_towns": {
+        "Kostelec nad Černými lesy": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://centrum-pecka.cz/"
+      ],
+      "url_regex": "^https://centrum\\-pecka\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Kostelec nad Černými lesy": [
+          {
+            "lat": 49.9947827,
+            "lon": 14.8608657,
+            "precision": "venue",
+            "label": "Náměstí Smiřických, Kostelec nad Černými lesy",
+            "sourceUrl": "https://www.openstreetmap.org/way/32252508"
+          }
+        ]
+      }
     }
   ]
 }
