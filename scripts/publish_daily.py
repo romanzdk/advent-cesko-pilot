@@ -140,7 +140,7 @@ def collect_projection(root, *, reviewed_only=False):
 
 def verify_deployment(root, head):
     """Require this commit's successful Pages workflow, then compare all public JSON."""
-    deadline = time.monotonic() + 180
+    deadline = time.monotonic() + 900
     while time.monotonic() < deadline:
         remaining = max(1, deadline - time.monotonic())
         runs = json.loads(command(root, ['gh', 'run', 'list', '--repo',

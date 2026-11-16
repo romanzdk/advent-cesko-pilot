@@ -261,6 +261,155 @@ class ProductionBoundaryTests(unittest.TestCase):
                 with self.assertRaises(pub.PublicationError): pub.verify_deployment(root,'a'*40)
 
 
+class DeploymentDeadlineTests(unittest.TestCase):
+    """Virtual time; no real CI, HTTP, subprocesses or sleeping."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(dir=os.environ.get('TMPDIR'))
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        (self.root/'site').mkdir()
+        self.documents = {}
+        for filename in pub.FILES:
+            document = {'file': filename, 'version': 2}
+            (self.root/filename).write_text(json.dumps(document))
+            self.documents[Path(filename).name] = document
+        self.head = 'a'*40
+        self.now = 0.0
+        self.sleeps = []
+        self.commands = []
+        self.requests = []
+        # Replace only the publisher's time dependency, not global time.
+        clock = type('Clock', (), {'monotonic': lambda _: self.now,
+                                  'sleep': lambda _, seconds: self.sleep(seconds)})()
+        for name, replacement in [('time', clock), ('command', self.command),
+                                  ('urlopen', self.urlopen)]:
+            patcher = patch.object(pub, name, replacement)
+            patcher.start()
+            self.addCleanup(patcher.stop)
+        patcher = patch.object(pub.subprocess, 'run', side_effect=AssertionError('real process'))
+        patcher.start()
+        self.addCleanup(patcher.stop)
+        self.runs_at = lambda: [self.ci_run()]
+        self.document_at = lambda name: self.documents[name]
+
+    def sleep(self, seconds):
+        self.assertGreater(seconds, 0)
+        self.assertLessEqual(seconds, 3)
+        self.sleeps.append(seconds)
+        self.now += seconds
+        self.assertLessEqual(self.now, 900, 'verification exceeded its bounded budget')
+
+    def ci_run(self, status='completed', conclusion='success', head=None):
+        return {'headSha': head or self.head, 'status': status, 'conclusion': conclusion}
+
+    def command(self, root, args, *, timeout):
+        self.assertEqual(root, self.root)
+        self.assertEqual(args, ['gh', 'run', 'list', '--repo',
+            'romanzdk/advent-cesko-pilot', '--workflow', 'deploy.yml', '--commit', self.head,
+            '--limit', '10', '--json', 'headSha,status,conclusion'])
+        self.assertGreaterEqual(timeout, 1)
+        self.assertLessEqual(timeout, 30)
+        self.commands.append((self.now, timeout))
+        return json.dumps(self.runs_at())
+
+    def urlopen(self, request, *, timeout):
+        self.assertEqual(timeout, max(1, min(15, 900-self.now)))
+        self.assertEqual(request.get_header('Cache-control'), 'no-cache')
+        prefix, separator, query = request.full_url.partition('?')
+        self.assertEqual(query, 'commit='+self.head)
+        self.assertTrue(separator)
+        name = prefix.removeprefix(pub.PUBLIC)
+        self.assertIn(name, self.documents)
+        self.requests.append((self.now, name, timeout))
+        response = json.dumps(self.document_at(name)).encode()
+        return contextlib.closing(io.BytesIO(response))
+
+    def test_delayed_ci_then_readback_succeeds_after_240_seconds(self):
+        self.runs_at = lambda: [self.ci_run('in_progress', '') if self.now < 243 else self.ci_run()]
+        self.document_at = lambda name: {} if self.now < 246 else self.documents[name]
+        try:
+            result = pub.verify_deployment(self.root, self.head)
+        except pub.PublicationError as error:
+            self.fail(f'delayed deployment rejected at {self.now}s: {error}')
+        self.assertIsNone(result)
+        self.assertEqual(self.now, 246)
+        self.assertEqual([name for _, name, _ in self.requests[-3:]],
+                         [Path(filename).name for filename in pub.FILES])
+        self.assertEqual(self.requests[0][0], 243)
+
+    def assert_timeout_at_900(self):
+        with self.assertRaisesRegex(pub.PublicationError, '^pages-readback-timeout$'):
+            pub.verify_deployment(self.root, self.head)
+        self.assertEqual(self.now, 900)
+        self.assertEqual(len(self.commands), 300)
+        self.assertEqual(sum(self.sleeps), 900)
+        for started, timeout in self.commands:
+            self.assertLess(started, 900)
+            self.assertEqual(timeout, max(1, min(30, 900-started)))
+
+    def test_no_ci_run_expires_at_900_seconds(self):
+        self.runs_at = lambda: []
+        self.assert_timeout_at_900()
+        self.assertEqual(self.requests, [])
+
+    def test_queued_ci_cannot_pass_even_with_success_conclusion(self):
+        self.runs_at = lambda: [self.ci_run('queued')]
+        self.assert_timeout_at_900()
+        self.assertEqual(self.requests, [])
+
+    def test_successful_wrong_head_ci_cannot_pass(self):
+        self.runs_at = lambda: [self.ci_run(head='b'*40)]
+        self.assert_timeout_at_900()
+        self.assertEqual(self.requests, [])
+
+    def test_each_public_json_mismatch_prevents_success_until_deadline(self):
+        for wrong in self.documents:
+            with self.subTest(wrong=wrong):
+                self.now = 0.0
+                self.sleeps.clear(); self.commands.clear(); self.requests.clear()
+                self.document_at = lambda name: {} if name == wrong else self.documents[name]
+                self.assert_timeout_at_900()
+                self.assertEqual(self.requests[-1][1], wrong)
+                self.assertEqual(sum(name == wrong for _, name, _ in self.requests), 300)
+
+    def test_failed_ci_rejects_immediately_without_sleep_or_http(self):
+        for conclusion in ('failure', 'cancelled', 'timed_out'):
+            with self.subTest(conclusion=conclusion):
+                self.commands.clear()
+                self.runs_at = lambda: [self.ci_run(conclusion=conclusion)]
+                with self.assertRaisesRegex(pub.PublicationError, '^pages-ci$'):
+                    pub.verify_deployment(self.root, self.head)
+                self.assertEqual(self.now, 0)
+                self.assertEqual(len(self.commands), 1)
+                self.assertEqual(self.sleeps, [])
+                self.assertEqual(self.requests, [])
+
+    def test_command_http_and_sleep_timeouts_keep_caps_and_remaining_clamps(self):
+        def runs_at():
+            if self.now == 0:
+                self.now = 895
+                return [self.ci_run('in_progress', '')]
+            return [self.ci_run()]
+        def document_at(name):
+            if name != 'review.json':
+                self.now += 0.75
+            return self.documents[name]
+        self.runs_at = runs_at
+        self.document_at = document_at
+        self.assertIsNone(pub.verify_deployment(self.root, self.head))
+        self.assertEqual(self.commands, [(0, 30), (898, 2)])
+        self.assertEqual([timeout for _, _, timeout in self.requests], [2, 1.25, 1])
+        self.assertEqual(self.sleeps, [3])
+        self.assertEqual(self.now, 899.5)
+
+    def test_immediate_success_keeps_30_second_command_and_15_second_http_caps(self):
+        self.assertIsNone(pub.verify_deployment(self.root, self.head))
+        self.assertEqual(self.commands, [(0, 30)])
+        self.assertEqual([timeout for _, _, timeout in self.requests], [15, 15, 15])
+        self.assertEqual(self.sleeps, [])
+
+
 class SeasonTests(unittest.TestCase):
     def test_inclusive_season_and_inert_outside(self):
         self.assertIsNotNone(pub, 'publisher module must exist')
