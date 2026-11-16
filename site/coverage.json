@@ -583,7 +583,7 @@
       "status": "ok",
       "lastChecked": "2026-11-14T09:15:04+00:00",
       "lastSuccess": "2026-11-14T09:15:04+00:00",
-      "eventCount": 4,
+      "eventCount": 5,
       "reviewCount": 0,
       "excludedCount": 0,
       "lastError": null,
@@ -12107,7 +12107,7 @@
     "eventsNew": 3,
     "eventsChanged": 0,
     "eventsUnchanged": 60,
-    "eventsPublished": 1946,
+    "eventsPublished": 1947,
     "reviewCount": 329,
     "excludedCount": 0,
     "aiCalls": 0
