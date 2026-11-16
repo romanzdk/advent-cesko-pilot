@@ -170,6 +170,19 @@ class ReviewedTests(unittest.TestCase):
             self.assertGreater(con.execute('SELECT count(*) FROM provenance').fetchone()[0], self.n)
         self.assertEqual(module('validate_public').validate_directory(self.out, self.registry), self.n)
 
+    def test_committed_snapshot_edit_replaces_older_snapshot_state(self):
+        self.collect()
+        edited = copy.deepcopy(self.snapshot)
+        changed, dropped = edited['events'][0], edited['events'].pop(1)['id']
+        changed['startTime'] = '07:45'
+        path = Path(self.tmp.name)/'edited.json'
+        path.write_text(json.dumps(edited, ensure_ascii=False))
+        self.collect(reviewed_snapshot=path)
+        events = {e['id']:e for e in self.events()}
+        self.assertEqual(events[changed['id']]['startTime'], '07:45')
+        self.assertNotIn(dropped, events)
+        self.assertEqual(len(events), len(edited['events']))
+
     def test_successful_feed_removal_is_durable_even_after_feed_outage_or_config_loss(self):
         self.collect()
         data = self.feed_data(generatedAt='2026-11-13T11:00:00+01:00')

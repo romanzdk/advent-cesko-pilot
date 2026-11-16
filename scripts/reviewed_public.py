@@ -97,8 +97,10 @@ def refresh(con, registry, fetcher, checked, metrics, source_id=None, snapshot=N
         old = con.execute('SELECT payload FROM source_state WHERE id=?',(sid,)).fetchone()
         previous = json.loads(old[0]) if old else {}
         origin = 'feed' if body is not None else 'snapshot'
-        active = body is not None or not prior
-        raw = body if body is not None else Path(snapshot or SNAPSHOT).read_bytes() if active else None
+        committed = Path(snapshot or SNAPSHOT).read_bytes() if body is None else None
+        # A newly committed snapshot replaces snapshot-loaded state; state accepted from a feed outranks any snapshot.
+        active = body is not None or not prior or (prior.get('origin') == 'snapshot' and hashlib.sha256(committed).hexdigest() != prior.get('bodyHash'))
+        raw = body if body is not None else committed if active else None
         invalid_root = False
         if active:
             assert raw is not None
