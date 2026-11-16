@@ -2663,7 +2663,8 @@
       "primary_host": "www.facebook.com",
       "allowed_towns": {
         "Říčany": "Středočeský kraj",
-        "Klokočná": "Středočeský kraj"
+        "Klokočná": "Středočeský kraj",
+        "Světice": "Středočeský kraj"
       },
       "index_urls": [
         "https://www.facebook.com/"
@@ -2688,6 +2689,15 @@
             "precision": "town",
             "label": "Klokočná",
             "sourceUrl": "https://www.openstreetmap.org/relation/437112"
+          }
+        ],
+        "Světice": [
+          {
+            "lat": 49.9699449,
+            "lon": 14.6639365,
+            "precision": "town",
+            "label": "Světice",
+            "sourceUrl": "https://www.openstreetmap.org/relation/436103"
           }
         ]
       }
