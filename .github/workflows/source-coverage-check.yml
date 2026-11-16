@@ -22,3 +22,15 @@ jobs:
           node --check site/helpers.js
           node --check site/feedback.js
           node --check site/feedback-helpers.js
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: tests-ui
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Install Playwright
+        run: npm install --no-audit --no-fund && npx playwright install --with-deps chromium
+      - name: Browser tests (Chromium)
+        run: node --test ui.test.mjs
