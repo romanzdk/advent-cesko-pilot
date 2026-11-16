@@ -32,6 +32,7 @@ class ReviewedTests(unittest.TestCase):
     def setUp(self):
         self.c = module('collector')
         self.snapshot = json.loads((ROOT/'data/reviewed-events.json').read_text())
+        self.n = len(self.snapshot['events'])
         registry = json.loads((ROOT/'data/sources.json').read_text())
         self.registry = dict(registry, sources=[s for s in registry['sources'] if s['adapter']=='reviewed-public'])
         self.tmp = tempfile.TemporaryDirectory()
@@ -159,15 +160,15 @@ class ReviewedTests(unittest.TestCase):
 
     def test_snapshot_survives_daily_recollection_without_invented_verification(self):
         first = self.collect()
-        self.assertEqual(len(self.events()), 51)
+        self.assertEqual(len(self.events()), self.n)
         self.assertEqual({e['id']:e for e in self.events()}, {e['id']:e for e in self.snapshot['events']})
         second = self.collect()
-        self.assertEqual(second['metrics']['eventsPublished'], 51)
+        self.assertEqual(second['metrics']['eventsPublished'], self.n)
         self.assertTrue(all(s['status']=='partial' and s['lastSuccess'] is None for s in first['sources']))
         with closing(sqlite3.connect(self.db)) as con:
-            self.assertEqual(con.execute('SELECT count(*) FROM events').fetchone()[0], 51)
-            self.assertGreater(con.execute('SELECT count(*) FROM provenance').fetchone()[0], 51)
-        self.assertEqual(module('validate_public').validate_directory(self.out, self.registry), 51)
+            self.assertEqual(con.execute('SELECT count(*) FROM events').fetchone()[0], self.n)
+            self.assertGreater(con.execute('SELECT count(*) FROM provenance').fetchone()[0], self.n)
+        self.assertEqual(module('validate_public').validate_directory(self.out, self.registry), self.n)
 
     def test_successful_feed_removal_is_durable_even_after_feed_outage_or_config_loss(self):
         self.collect()
@@ -176,14 +177,14 @@ class ReviewedTests(unittest.TestCase):
         feed = Feed(data)
         result = self.collect(feed, reviewed_feed={'url':'https://owned.example.cz/events.json'})
         self.assertEqual(len(feed.urls), 1)
-        self.assertEqual(len(self.events()), 50)
+        self.assertEqual(len(self.events()), self.n-1)
         self.assertNotIn(removed, {e['id'] for e in self.events()})
         self.assertTrue(all(s['status']=='ok' and s['lastSuccess'] for s in result['sources']))
         self.collect(Feed(), reviewed_feed={'url':'https://owned.example.cz/events.json'})
-        self.assertEqual(len(self.events()), 50)
+        self.assertEqual(len(self.events()), self.n-1)
         self.collect()
-        self.assertEqual(len(self.events()), 50)
-        self.assertEqual(module('validate_public').validate_directory(self.out, self.registry), 50)
+        self.assertEqual(len(self.events()), self.n-1)
+        self.assertEqual(module('validate_public').validate_directory(self.out, self.registry), self.n-1)
 
     def test_invalid_changed_record_withdraws_only_affected_id_and_never_leaks_private_fields(self):
         settings = {'url':'https://owned.example.cz/events.json'}
@@ -192,7 +193,7 @@ class ReviewedTests(unittest.TestCase):
         bad = data['events'][0]
         bad['attendees'] = [{'email':'secret@example.cz'}]
         result = self.collect(Feed(data), reviewed_feed=settings)
-        self.assertEqual(len(self.events()), 50)
+        self.assertEqual(len(self.events()), self.n-1)
         self.assertNotIn(bad['id'], {e['id'] for e in self.events()})
         self.assertEqual(result['metrics']['reviewCount'], 1)
         self.assertTrue(any(s['status']=='partial' for s in result['sources']))
@@ -202,10 +203,10 @@ class ReviewedTests(unittest.TestCase):
             self.assertNotIn('attendees', text)
             self.assertNotIn('owned.example', text)
         self.collect(Feed(), reviewed_feed=settings)
-        self.assertEqual(len(self.events()), 50)
+        self.assertEqual(len(self.events()), self.n-1)
         self.collect()
-        self.assertEqual(len(self.events()), 50)
-        self.assertEqual(module('validate_public').validate_directory(self.out, self.registry), 50)
+        self.assertEqual(len(self.events()), self.n-1)
+        self.assertEqual(module('validate_public').validate_directory(self.out, self.registry), self.n-1)
 
     def assert_encoded_description_is_withdrawn(self, description):
         settings = {'url':'https://owned.example.cz/events.json'}
@@ -220,14 +221,14 @@ class ReviewedTests(unittest.TestCase):
         self.assertEqual(result['metrics']['reviewCount'], 1)
         with closing(sqlite3.connect(self.db)) as con:
             self.assertIsNone(con.execute('SELECT id FROM events WHERE id=?', (bad['id'],)).fetchone())
-            self.assertEqual(con.execute('SELECT count(*) FROM events').fetchone()[0], 50)
+            self.assertEqual(con.execute('SELECT count(*) FROM events').fetchone()[0], self.n-1)
         for name in ['events','coverage','review']:
             self.assertNotIn(description, (self.out/f'{name}.json').read_text())
-        self.assertEqual(module('validate_public').validate_directory(self.out, self.registry), 50)
+        self.assertEqual(module('validate_public').validate_directory(self.out, self.registry), self.n-1)
         self.collect(Feed(), reviewed_feed=settings)
         self.collect()
         self.assertEqual({e['id']:e for e in self.events()}, before)
-        self.assertEqual(module('validate_public').validate_directory(self.out, self.registry), 50)
+        self.assertEqual(module('validate_public').validate_directory(self.out, self.registry), self.n-1)
 
     def test_triple_encoded_contact_is_withdrawn_through_feed_lifecycle(self):
         self.assert_encoded_description_is_withdrawn('contact%252540example.cz')
@@ -293,7 +294,7 @@ class ReviewedTests(unittest.TestCase):
         data = self.feed_data()
         data['events'][0]['location']['lat'] = 50.5
         result = self.collect(Feed(data), reviewed_feed={'url':'https://owned.example.cz/events.json'})
-        self.assertEqual(len(self.events()), 50)
+        self.assertEqual(len(self.events()), self.n-1)
         self.assertEqual(result['metrics']['reviewCount'], 1)
 
     def test_older_feed_cannot_resurrect_removed_records_and_high_water_survives_rejection(self):
@@ -310,7 +311,7 @@ class ReviewedTests(unittest.TestCase):
         self.collect()
         self.assertEqual(self.events(), [])
         self.collect(Feed(latest), reviewed_feed=settings)
-        self.assertEqual(len(self.events()), 50)
+        self.assertEqual(len(self.events()), self.n-1)
 
     def test_duplicate_ids_withdraw_both_candidates_without_dropping_unrelated_records(self):
         data = self.feed_data()
@@ -318,7 +319,7 @@ class ReviewedTests(unittest.TestCase):
         duplicate['title'] = 'Jiná vánoční akce'
         data['events'].append(duplicate)
         result = self.collect(Feed(data), reviewed_feed={'url':'https://owned.example.cz/events.json'})
-        self.assertEqual(len(self.events()), 50)
+        self.assertEqual(len(self.events()), self.n-1)
         self.assertNotIn(duplicate['id'], {e['id'] for e in self.events()})
         self.assertEqual(result['metrics']['reviewCount'], 1)
 
@@ -338,8 +339,8 @@ class ReviewedTests(unittest.TestCase):
                '--reviewed-feed-config',str(settings),'--offline-fixtures',str(tmp/'manifest.json')]
         result = subprocess.run(cmd,capture_output=True,text=True)
         self.assertEqual(result.returncode,0,result.stdout+result.stderr)
-        self.assertEqual(json.loads(result.stdout)['metrics']['eventsPublished'],51)
-        self.assertEqual(module('validate_public').validate_directory(self.out,self.registry),51)
+        self.assertEqual(json.loads(result.stdout)['metrics']['eventsPublished'],self.n)
+        self.assertEqual(module('validate_public').validate_directory(self.out,self.registry),self.n)
         pub = module('publish_daily')
         calls = []
         def command(root,args,timeout=60):
@@ -365,7 +366,7 @@ class ReviewedTests(unittest.TestCase):
                 case = Path(self.tmp.name)/str(abs(hash((field,str(value)))))
                 result = self.c.collect(self.registry,case/'db',case/'out',{},Feed(data),reviewed_feed={'url':'https://owned.example.cz/events.json'})
                 events = json.loads((case/'out/events.json').read_text())['events']
-                self.assertEqual(len(events),50)
+                self.assertEqual(len(events),self.n-1)
                 self.assertGreaterEqual(result['metrics']['reviewCount'],1)
 
     def test_root_privacy_failure_withdraws_all_and_empty_feed_never_bootstraps_again(self):
@@ -393,7 +394,7 @@ class ReviewedTests(unittest.TestCase):
         settings = {'url':'https://owned.example.cz/events.json'}
         self.collect(Feed(data),reviewed_feed=settings)
         result = self.collect(Feed(data),reviewed_feed=settings)
-        self.assertEqual(result['metrics']['eventsUnchanged'],51)
+        self.assertEqual(result['metrics']['eventsUnchanged'],self.n)
         self.assertEqual(data,original)
         self.assertEqual({e['id']:e['verifiedAt'] for e in self.events()}, {e['id']:e['verifiedAt'] for e in data['events']})
         with closing(sqlite3.connect(self.db)) as con:
@@ -417,7 +418,7 @@ class ReviewedTests(unittest.TestCase):
             con.execute('DROP TRIGGER fail')
             con.commit()
         self.collect()
-        self.assertEqual(len(self.events()),51)
+        self.assertEqual(len(self.events()),self.n)
 
     def test_existing_unrelated_id_cannot_be_overwritten_and_collision_is_reviewed(self):
         self.collect()
@@ -428,7 +429,7 @@ class ReviewedTests(unittest.TestCase):
         data = self.feed_data()
         data['events'][0]['id'] = legacy['id']
         result = self.collect(Feed(data),reviewed_feed={'url':'https://owned.example.cz/events.json'})
-        self.assertEqual(len(self.events()),50)
+        self.assertEqual(len(self.events()),self.n-1)
         self.assertEqual(result['metrics']['reviewCount'],1)
         with closing(sqlite3.connect(self.db)) as con:
             self.assertEqual(con.execute('SELECT source_id,fingerprint FROM events WHERE id=?',(legacy['id'],)).fetchone(),('legacy-source','legacy-fingerprint'))
