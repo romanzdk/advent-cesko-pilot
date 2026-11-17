@@ -5549,5 +5549,313 @@
     "precision": "town",
     "label": "Počedělice — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/439285"
+  },
+  "Rebešovice": {
+    "lat": 49.1043792,
+    "lon": 16.6364612,
+    "precision": "town",
+    "label": "Rebešovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442007"
+  },
+  "Železné": {
+    "lat": 49.3596176,
+    "lon": 16.4504447,
+    "precision": "town",
+    "label": "Železné — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441997"
+  },
+  "Říčky": {
+    "lat": 49.2329241,
+    "lon": 16.355841,
+    "precision": "town",
+    "label": "Říčky — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436858"
+  },
+  "Závist": {
+    "lat": 49.3747826,
+    "lon": 16.5711736,
+    "precision": "town",
+    "label": "Závist — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438167"
+  },
+  "Jiříkovice": {
+    "lat": 49.1671269,
+    "lon": 16.7584954,
+    "precision": "town",
+    "label": "Jiříkovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442058"
+  },
+  "Blažovice": {
+    "lat": 49.165706,
+    "lon": 16.7858382,
+    "precision": "town",
+    "label": "Blažovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442021"
+  },
+  "Cetkovice": {
+    "lat": 49.5793477,
+    "lon": 16.7255175,
+    "precision": "town",
+    "label": "Cetkovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438105"
+  },
+  "Tvarožná": {
+    "lat": 49.1917701,
+    "lon": 16.7714571,
+    "precision": "town",
+    "label": "Tvarožná — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442002"
+  },
+  "Biskoupky": {
+    "lat": 49.1037552,
+    "lon": 16.2696967,
+    "precision": "town",
+    "label": "Biskoupky — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442027"
+  },
+  "Vratěnín": {
+    "lat": 48.9046042,
+    "lon": 15.5962059,
+    "precision": "town",
+    "label": "Vratěnín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438849"
+  },
+  "Žerotice": {
+    "lat": 48.92671,
+    "lon": 16.1687444,
+    "precision": "town",
+    "label": "Žerotice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438755"
+  },
+  "Vojkovice": {
+    "lat": 49.056206,
+    "lon": 16.5966503,
+    "precision": "town",
+    "label": "Vojkovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442490"
+  },
+  "Vrbovec": {
+    "lat": 48.7774989,
+    "lon": 16.1281326,
+    "precision": "town",
+    "label": "Vrbovec — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438841"
+  },
+  "Dobřínsko": {
+    "lat": 49.054605,
+    "lon": 16.2629503,
+    "precision": "town",
+    "label": "Dobřínsko — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437135"
+  },
+  "Chvalatice": {
+    "lat": 48.9480243,
+    "lon": 15.7505244,
+    "precision": "town",
+    "label": "Chvalatice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437240"
+  },
+  "Plenkovice": {
+    "lat": 48.9161019,
+    "lon": 16.0105603,
+    "precision": "town",
+    "label": "Plenkovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437195"
+  },
+  "Šafov": {
+    "lat": 48.8660697,
+    "lon": 15.7431902,
+    "precision": "town",
+    "label": "Šafov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438716"
+  },
+  "Krásensko": {
+    "lat": 49.3645346,
+    "lon": 16.8298713,
+    "precision": "town",
+    "label": "Krásensko — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441982"
+  },
+  "Pavlov": {
+    "lat": 48.8743696,
+    "lon": 16.6710217,
+    "precision": "town",
+    "label": "Pavlov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442522"
+  },
+  "Lančov": {
+    "lat": 48.9158196,
+    "lon": 15.7725296,
+    "precision": "town",
+    "label": "Lančov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438745"
+  },
+  "Hnanice": {
+    "lat": 48.7993563,
+    "lon": 15.9766877,
+    "precision": "town",
+    "label": "Hnanice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437159"
+  },
+  "Horní Dubňany": {
+    "lat": 49.0640263,
+    "lon": 16.2016362,
+    "precision": "town",
+    "label": "Horní Dubňany — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437170"
+  },
+  "Bítov": {
+    "lat": 48.9365145,
+    "lon": 15.7290268,
+    "precision": "town",
+    "label": "Bítov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437278"
+  },
+  "Rešice": {
+    "lat": 49.0549862,
+    "lon": 16.160046,
+    "precision": "town",
+    "label": "Rešice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437250"
+  },
+  "Hrušky": {
+    "lat": 49.1292237,
+    "lon": 16.8334882,
+    "precision": "town",
+    "label": "Hrušky — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441598"
+  },
+  "Drnovice": {
+    "lat": 49.2763141,
+    "lon": 16.9514818,
+    "precision": "town",
+    "label": "Drnovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440766"
+  },
+  "Bořetice": {
+    "lat": 48.9130249,
+    "lon": 16.8530627,
+    "precision": "town",
+    "label": "Bořetice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441068"
+  },
+  "Kuchařovice": {
+    "lat": 48.8759568,
+    "lon": 16.0769696,
+    "precision": "town",
+    "label": "Kuchařovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438741"
+  },
+  "Nový Přerov": {
+    "lat": 48.8080976,
+    "lon": 16.4937281,
+    "precision": "town",
+    "label": "Nový Přerov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442291"
+  },
+  "Podomí": {
+    "lat": 49.3447183,
+    "lon": 16.8332127,
+    "precision": "town",
+    "label": "Podomí — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442279"
+  },
+  "Chvalovice": {
+    "lat": 48.7781034,
+    "lon": 16.0636327,
+    "precision": "town",
+    "label": "Chvalovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437245"
+  },
+  "Nevojice": {
+    "lat": 49.1304299,
+    "lon": 17.050288,
+    "precision": "town",
+    "label": "Nevojice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440845"
+  },
+  "Milonice": {
+    "lat": 49.1593875,
+    "lon": 17.0711308,
+    "precision": "town",
+    "label": "Milonice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440848"
+  },
+  "Vřesovice": {
+    "lat": 49.0590827,
+    "lon": 17.2150066,
+    "precision": "town",
+    "label": "Vřesovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442478"
+  },
+  "Horní Věstonice": {
+    "lat": 48.8748042,
+    "lon": 16.6257661,
+    "precision": "town",
+    "label": "Horní Věstonice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441452"
+  },
+  "Horní Kounice": {
+    "lat": 49.0281709,
+    "lon": 16.1527152,
+    "precision": "town",
+    "label": "Horní Kounice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437229"
+  },
+  "Svatobořice-Mistřín": {
+    "lat": 48.9777681,
+    "lon": 17.0915368,
+    "precision": "town",
+    "label": "Svatobořice-Mistřín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436908"
+  },
+  "Blatnice pod Svatým Antonínkem": {
+    "lat": 48.9467242,
+    "lon": 17.4659603,
+    "precision": "town",
+    "label": "Blatnice pod Svatým Antonínkem — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441126"
+  },
+  "Louka": {
+    "lat": 48.9151742,
+    "lon": 17.48927,
+    "precision": "town",
+    "label": "Louka — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441125"
+  },
+  "Čejkovice": {
+    "lat": 48.9059403,
+    "lon": 16.9423019,
+    "precision": "town",
+    "label": "Čejkovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/442527"
+  },
+  "Lesná": {
+    "lat": 48.9080029,
+    "lon": 15.8770467,
+    "precision": "town",
+    "label": "Lesná — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438721"
+  },
+  "Němčany": {
+    "lat": 49.1680577,
+    "lon": 16.9207357,
+    "precision": "town",
+    "label": "Němčany — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440812"
+  },
+  "Kojátky": {
+    "lat": 49.1735477,
+    "lon": 17.0270913,
+    "precision": "town",
+    "label": "Kojátky — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441985"
+  },
+  "Hýsly": {
+    "lat": 49.0432254,
+    "lon": 17.1866658,
+    "precision": "town",
+    "label": "Hýsly — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/441112"
   }
 }
