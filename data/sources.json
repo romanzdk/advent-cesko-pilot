@@ -23188,6 +23188,1002 @@
         "Chomýž",
         "Náves obce Chomýž"
       ]
+    },
+    {
+      "id": "brniste-obec-calendar",
+      "town": "Brniště",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.brniste.cz/volny-cas/aktualne/kalendar-akci/17-listopad-656_109cs.html"
+      ],
+      "detail_prefixes": [
+        "https://www.brniste.cz/volny-cas/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.brniste\\.cz/volny-cas/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Brniště: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kostel BJB Brniště",
+        "Obec Brniště"
+      ]
+    },
+    {
+      "id": "mricna-obec-calendar",
+      "town": "Mříčná",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mricna.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mricna.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mricna\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Mříčná: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Mříčná"
+      ]
+    },
+    {
+      "id": "prysk-obec-calendar",
+      "town": "Prysk",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.prysk.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.prysk.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.prysk\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Prysk: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "kostel sv. Petra a Pavla v Horním Prysku",
+        "náves Dolní Prysk"
+      ]
+    },
+    {
+      "id": "radvanec-obec-calendar",
+      "town": "Radvanec",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.radvanec.cz/obec-1/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.radvanec.cz/obec-1/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.radvanec\\.cz/obec-1/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Radvanec: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Obecní sál, Hospoda U Mlejna"
+      ]
+    },
+    {
+      "id": "pertoltice-pod-ralskem-obec-calendar",
+      "town": "Pertoltice pod Ralskem",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.pertoltice.cz/zivot-v-obci/akce/"
+      ],
+      "detail_prefixes": [
+        "https://www.pertoltice.cz/zivot-v-obci/akce/"
+      ],
+      "url_regex": "^https://www\\.pertoltice\\.cz/zivot-v-obci/akce/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Pertoltice pod Ralskem: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "KD Pertoltice pod Ralskem",
+        "Kaple sv. Prokopa",
+        "U Kostela"
+      ]
+    },
+    {
+      "id": "ponikla-obec-calendar",
+      "town": "Poniklá",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.ponikla.cz/obec/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.ponikla.cz/obec/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.ponikla\\.cz/obec/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Poniklá: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "ZŠ a Tuláčkova náves",
+        "hřiště Na Vršku"
+      ]
+    },
+    {
+      "id": "zdislava-obec-calendar",
+      "town": "Zdislava",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mestyszdislava.cz/zivot-v-mestysi/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mestyszdislava.cz/zivot-v-mestysi/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mestyszdislava\\.cz/zivot-v-mestysi/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Zdislava: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Budova bývalé školy",
+        "park naproti kulturnímu domu"
+      ]
+    },
+    {
+      "id": "svor-obec-calendar",
+      "town": "Svor",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obecsvor.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obecsvor.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obecsvor\\.cz/zivot-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Svor: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Obecní úřad Svor"
+      ]
+    },
+    {
+      "id": "hermanice-obec-calendar",
+      "town": "Heřmanice",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.hermanice.com/zivot-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.hermanice.com/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.hermanice\\.com/zivot-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Heřmanice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Heřmanické peklo",
+        "Sousedská klubovna v budově OÚ Heřmanice",
+        "náves u místní prodejny"
+      ]
+    },
+    {
+      "id": "hruba-skala-obec-calendar",
+      "town": "Hrubá Skála",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obechrubaskala.cz/obec/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obechrubaskala.cz/obec/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obechrubaskala\\.cz/obec/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Hrubá Skála: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Bistro Tenis Hrubá Skála",
+        "Obecní úřad Hrubá Skála"
+      ]
+    },
+    {
+      "id": "dolni-rasnice-obec-calendar",
+      "town": "Dolní Řasnice",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.dolni-rasnice.cz/obec/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.dolni-rasnice.cz/obec/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.dolni-rasnice\\.cz/obec/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Dolní Řasnice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Dolní Řasnice"
+      ]
+    },
+    {
+      "id": "josefuv-dul-obec-calendar",
+      "town": "Josefův Důl",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.josefuvdul.eu/obec/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.josefuvdul.eu/obec/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.josefuvdul\\.eu/obec/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Josefův Důl: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Muzeum místní historie"
+      ]
+    },
+    {
+      "id": "ktova-obec-calendar",
+      "town": "Ktová",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.ktova.cz/obec/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.ktova.cz/obec/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.ktova\\.cz/obec/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Ktová: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Ktová 42- budova bývalé školy"
+      ]
+    },
+    {
+      "id": "krystofovo-udoli-obec-calendar",
+      "town": "Kryštofovo Údolí",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.krystofovoudoli.eu/obec/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.krystofovoudoli.eu/obec/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.krystofovoudoli\\.eu/obec/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Kryštofovo Údolí: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Fara Kryštofovo Údolí",
+        "Kryštofovo Údolí - centrum"
+      ]
+    },
+    {
+      "id": "velke-hamry-obec-calendar",
+      "town": "Velké Hamry",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.velke-hamry.cz/kultura-a-sport/kalendar-akci-ve-velkych-hamrech/"
+      ],
+      "detail_prefixes": [
+        "https://www.velke-hamry.cz/kultura-a-sport/kalendar-akci-ve-velkych-hamrech/"
+      ],
+      "url_regex": "^https://www\\.velke-hamry\\.cz/kultura-a-sport/kalendar-akci-ve-velkych-hamrech/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Velké Hamry: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Hamrska - hasičárna",
+        "Kulturní dům"
+      ]
+    },
+    {
+      "id": "pencin-obec-calendar",
+      "town": "Pěnčín",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.pencin.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.pencin.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.pencin\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Pěnčín: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Pěnčín u ZŠ"
+      ]
+    },
+    {
+      "id": "louznice-obec-calendar",
+      "town": "Loužnice",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.louznice.com/obec/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.louznice.com/obec/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.louznice\\.com/obec/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Loužnice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní dům - sokolovna"
+      ]
+    },
+    {
+      "id": "dlouhy-most-obec-calendar",
+      "town": "Dlouhý Most",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.dlouhy-most.cz/obec/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.dlouhy-most.cz/obec/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.dlouhy-most\\.cz/obec/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Dlouhý Most: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Sál restaurace U Loterie"
+      ]
+    },
+    {
+      "id": "lisny-obec-calendar",
+      "town": "Líšný",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.lisny.cz/obec/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.lisny.cz/obec/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.lisny\\.cz/obec/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Líšný: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Hasičská zbrojnice",
+        "Park u vodníka",
+        "Sokolovna Líšný"
+      ]
+    },
+    {
+      "id": "mala-skala-obec-calendar",
+      "town": "Malá Skála",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mala-skala.cz/obec/obcan/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mala-skala.cz/obec/obcan/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mala-skala\\.cz/obec/obcan/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Malá Skála: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Boučkův statek",
+        "Nádvoří u Boučkova statku",
+        "Sokolovna Malá Skála",
+        "Vinárna Boučkova statku"
+      ]
+    },
+    {
+      "id": "rynoltice-obec-calendar",
+      "town": "Rynoltice",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.rynoltice.cz/deni-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.rynoltice.cz/deni-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.rynoltice\\.cz/deni-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Rynoltice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Na Staré Pekárně",
+        "Park Jítrava"
+      ]
+    },
+    {
+      "id": "straz-nad-nisou-dre-calendar",
+      "town": "Stráž nad Nisou",
+      "region": "Liberecký kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.straznadnisou.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.straznadnisou.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.straznadnisou\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Stráž nad Nisou: omezený sezónní výběr z oficiálního kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Bergerovo náměstí, Bergerovo nám., Stráž nad Nisou 463 03",
+        "Hasičárna SDH Stráž nad Nisou, Schwarzova 783, Stráž nad Nisou 46303"
+      ]
+    },
+    {
+      "id": "skrivany-obec-calendar",
+      "town": "Skřivany",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.skrivany.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.skrivany.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.skrivany\\.cz/zivot-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Skřivany: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Budova základní školy",
+        "Kostel sv. Anny"
+      ]
+    },
+    {
+      "id": "libel-obec-calendar",
+      "town": "Libel",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obeclibel.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obeclibel.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obeclibel\\.cz/zivot-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Libel: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Libel"
+      ]
+    },
+    {
+      "id": "bartosovice-v-orlickych-horach-obec-calendar",
+      "town": "Bartošovice v Orlických horách",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.bartosovice.eu/deni-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.bartosovice.eu/deni-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.bartosovice\\.eu/deni-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Bartošovice v Orlických horách: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Komunitní centrum"
+      ]
+    },
+    {
+      "id": "chomutice-obec-calendar",
+      "town": "Chomutice",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obec-chomutice.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obec-chomutice.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obec-chomutice\\.cz/zivot-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Chomutice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kostel sv.Diviše v Chomuticích",
+        "Obecní úřad"
+      ]
+    },
+    {
+      "id": "volanice-obec-calendar",
+      "town": "Volanice",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.volanice.cz/obec-7/udalosti/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.volanice.cz/obec-7/udalosti/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.volanice\\.cz/obec-7/udalosti/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Volanice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Hospoda U Špejcharu, Volanice č.p.9"
+      ]
+    },
+    {
+      "id": "lodin-obec-calendar",
+      "town": "Lodín",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.lodin.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.lodin.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.lodin\\.cz/zivot-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Lodín: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Na návsi - Lodín",
+        "Sál Obecního hostince Lodín"
+      ]
+    },
+    {
+      "id": "semechnice-obec-calendar",
+      "town": "Semechnice",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.semechnice.cz/zivot-v-obci/kulturni-kalendar/"
+      ],
+      "detail_prefixes": [
+        "https://www.semechnice.cz/zivot-v-obci/kulturni-kalendar/"
+      ],
+      "url_regex": "^https://www\\.semechnice\\.cz/zivot-v-obci/kulturni-kalendar/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Semechnice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kaple Panny Marie Bolestné"
+      ]
+    },
+    {
+      "id": "zernov-obec-calendar",
+      "town": "Žernov",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.zernov.cz/pro-obcany/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.zernov.cz/pro-obcany/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.zernov\\.cz/pro-obcany/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Žernov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Velká náves na Žernově"
+      ]
+    },
+    {
+      "id": "holohlavy-obec-calendar",
+      "town": "Holohlavy",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.holohlavy.cz/info-obcanum/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.holohlavy.cz/info-obcanum/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.holohlavy\\.cz/info-obcanum/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Holohlavy: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Park u Altánku"
+      ]
+    },
+    {
+      "id": "nepolisy-obec-calendar",
+      "town": "Nepolisy",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.nepolisy.cz/zivot-v-obci/akce-v-obci/"
+      ],
+      "detail_prefixes": [
+        "https://www.nepolisy.cz/zivot-v-obci/akce-v-obci/"
+      ],
+      "url_regex": "^https://www\\.nepolisy\\.cz/zivot-v-obci/akce-v-obci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Nepolisy: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kostel sv. Maří Magdalény",
+        "Pohostinství Na Nové",
+        "ZŠ Nepolisy"
+      ]
+    },
+    {
+      "id": "ceska-metuje-obec-calendar",
+      "town": "Česká Metuje",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.ceskametuje.cz/zivot-v-obci/akce/"
+      ],
+      "detail_prefixes": [
+        "https://www.ceskametuje.cz/zivot-v-obci/akce/"
+      ],
+      "url_regex": "^https://www\\.ceskametuje\\.cz/zivot-v-obci/akce/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Česká Metuje: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kaplička"
+      ]
+    },
+    {
+      "id": "adrspach-obec-calendar",
+      "town": "Adršpach",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obecadrspach.cz/zamek-adrspach/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obecadrspach.cz/zamek-adrspach/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obecadrspach\\.cz/zamek-adrspach/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Adršpach: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Zámek Adršpach"
+      ]
+    },
+    {
+      "id": "bohuslavice-obec-calendar",
+      "town": "Bohuslavice",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.bohuslavice.com/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.bohuslavice.com/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.bohuslavice\\.com/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Bohuslavice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "náměstíčko u OÚ"
+      ]
+    },
+    {
+      "id": "bozanov-obec-calendar",
+      "town": "Božanov",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obecbozanov.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obecbozanov.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obecbozanov\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Božanov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Obecní dům"
+      ]
+    },
+    {
+      "id": "pecka-obec-calendar",
+      "town": "Pecka",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mestys-pecka.cz/volny-cas/kalendar-akci-1/"
+      ],
+      "detail_prefixes": [
+        "https://www.mestys-pecka.cz/volny-cas/kalendar-akci-1/"
+      ],
+      "url_regex": "^https://www\\.mestys-pecka\\.cz/volny-cas/kalendar-akci-1/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Pecka: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "KD v Bělé u Pecky",
+        "Knihovna Kryštofa Haranta",
+        "Kostel sv. Bartoloměje",
+        "Pecka - náměstí",
+        "Sál hasičské zbrojnice v Pecce"
+      ]
+    },
+    {
+      "id": "zdarky-obec-calendar",
+      "town": "Žďárky",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obeczdarky.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obeczdarky.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obeczdarky\\.cz/zivot-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Žďárky: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Před budovou obecního úřadu"
+      ]
+    },
+    {
+      "id": "bilsko-u-horic-obec-calendar",
+      "town": "Bílsko u Hořic",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.bilskouhoric.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.bilskouhoric.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.bilskouhoric\\.cz/zivot-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Bílsko u Hořic: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Náves"
+      ]
+    },
+    {
+      "id": "svidnice-obec-calendar",
+      "town": "Svídnice",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.svidnice.cz/deni-u-nas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.svidnice.cz/deni-u-nas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.svidnice\\.cz/deni-u-nas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Svídnice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Autobusová zastávka Svídnice",
+        "Společenská místnost"
+      ]
+    },
+    {
+      "id": "studnice-obec-calendar",
+      "town": "Studnice",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obecstudnicena.cz/zivot-v-obci/akce-v-obci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obecstudnicena.cz/zivot-v-obci/akce-v-obci/"
+      ],
+      "url_regex": "^https://www\\.obecstudnicena\\.cz/zivot-v-obci/akce-v-obci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Studnice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Studnice"
+      ]
+    },
+    {
+      "id": "provodov-sonov-obec-calendar",
+      "town": "Provodov-Šonov",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.provodovsonov.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.provodovsonov.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.provodovsonov\\.cz/zivot-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Provodov-Šonov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Areál pod Orelnou"
+      ]
+    },
+    {
+      "id": "vrbice-obec-calendar",
+      "town": "Vrbice",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.vrbice.info/obec/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.vrbice.info/obec/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.vrbice\\.info/obec/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Vrbice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Obecní sál Vrbice"
+      ]
+    },
+    {
+      "id": "krinice-obec-calendar",
+      "town": "Křinice",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.krinice.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.krinice.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.krinice\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Křinice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "sál Kulturního domu",
+        "zahrada obecního úřadu Křinice"
+      ]
+    },
+    {
+      "id": "machov-obec-calendar",
+      "town": "Machov",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.machov-obec.cz/mestys/aktualne/akce-v-obci/"
+      ],
+      "detail_prefixes": [
+        "https://www.machov-obec.cz/mestys/aktualne/akce-v-obci/"
+      ],
+      "url_regex": "^https://www\\.machov-obec\\.cz/mestys/aktualne/akce-v-obci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Machov: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kostel sv. Václava",
+        "Náměstí v Machově",
+        "Obecní dům Machov",
+        "Venkovní prostor u hasičské zbrojnice Machovská Lhota"
+      ]
+    },
+    {
+      "id": "mezileci-obec-calendar",
+      "town": "Mezilečí",
+      "region": "Královéhradecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mezileci.cz/aktuality/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mezileci.cz/aktuality/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mezileci\\.cz/aktuality/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Mezilečí: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kiosek u požární nádrže"
+      ]
     }
   ]
 }
