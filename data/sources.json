@@ -18278,6 +18278,33 @@
       "allowed_locations": {
         "Radějovice": []
       }
+    },
+    {
+      "id": "reviewed-www-adventvpisku-cz",
+      "town": "Písek",
+      "region": "Jihočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.adventvpisku.cz",
+      "allowed_towns": {
+        "Písek": "Jihočeský kraj"
+      },
+      "index_urls": [
+        "https://www.adventvpisku.cz/program"
+      ],
+      "url_regex": "^https://www\\.adventvpisku\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Písek": [
+          {
+            "lat": 49.3083431,
+            "lon": 14.147618,
+            "precision": "venue",
+            "label": "Velké náměstí, Písek",
+            "sourceUrl": "https://www.openstreetmap.org/way/553631923"
+          }
+        ]
+      }
     }
   ]
 }
