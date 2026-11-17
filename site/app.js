@@ -380,10 +380,16 @@ function render() {
   $('result-count').textContent = rangeError ? 'Opravte rozsah dat.' : `${visible.length} ${visible.length === 1 ? 'akce' : visible.length < 5 ? 'akce' : 'akcí'} · ${[...scope, period].join(' · ')}`;
   updateMap();
 }
+let scrollBeforeExpand = 0;
 function expandMap(expanded) {
+  if (expanded === $('map-panel').classList.contains('map-expanded')) return;
+  if (expanded) scrollBeforeExpand = scrollY;
   $('map-panel').classList.toggle('map-expanded', expanded);
-  $('map-expand').setAttribute('aria-pressed', String(expanded));
   $('map-expand').querySelector('span').textContent = expanded ? 'Zmenšit mapu' : 'Zvětšit mapu';
+  for (let node = $('map-panel'); node !== document.body; node = node.parentElement) {
+    for (const sibling of node.parentElement.children) if (sibling !== node) sibling.inert = expanded;
+  }
+  if (!expanded) scrollTo(0, scrollBeforeExpand);
   if (map) { map.invalidateSize(); updateMap(); }
 }
 $('map-expand').addEventListener('click', () => expandMap(!$('map-panel').classList.contains('map-expanded')));
@@ -395,7 +401,7 @@ function setView(view) {
   $('show-map').setAttribute('aria-pressed', String(view === 'map'));
   if (view === 'map' || desktop.matches) ensureMap();
 }
-desktop.addEventListener('change', () => { if (desktop.matches) ensureMap(); });
+desktop.addEventListener('change', () => { expandMap(false); if (desktop.matches) ensureMap(); });
 function clearLocation() {
   locationGeneration++;
   clearTimeout(locationTimer);
