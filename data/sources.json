@@ -18305,6 +18305,303 @@
           }
         ]
       }
+    },
+    {
+      "id": "reviewed-www-praha-kunratice-cz",
+      "town": "Praha-Kunratice",
+      "region": "Hlavní město Praha",
+      "adapter": "reviewed-public",
+      "primary_host": "www.praha-kunratice.cz",
+      "allowed_towns": {
+        "Praha-Kunratice": "Hlavní město Praha"
+      },
+      "index_urls": [
+        "https://www.praha-kunratice.cz/kunraticky-kalendar"
+      ],
+      "url_regex": "^https://www\\.praha\\-kunratice\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Praha-Kunratice": [
+          {
+            "lat": 50.0116362,
+            "lon": 14.4845747,
+            "precision": "town",
+            "label": "Praha-Kunratice — orientační střed městské části, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/431593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-prahapetrovice-cz",
+      "town": "Praha-Petrovice",
+      "region": "Hlavní město Praha",
+      "adapter": "reviewed-public",
+      "primary_host": "www.prahapetrovice.cz",
+      "allowed_towns": {
+        "Praha-Petrovice": "Hlavní město Praha"
+      },
+      "index_urls": [
+        "https://www.prahapetrovice.cz/"
+      ],
+      "url_regex": "^https://www\\.prahapetrovice\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Praha-Petrovice": [
+          {
+            "lat": 50.0366935,
+            "lon": 14.5576336,
+            "precision": "town",
+            "label": "Praha-Petrovice — orientační střed městské části, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/19999097"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-satalice-cz",
+      "town": "Praha-Satalice",
+      "region": "Hlavní město Praha",
+      "adapter": "reviewed-public",
+      "primary_host": "www.satalice.cz",
+      "allowed_towns": {
+        "Praha-Satalice": "Hlavní město Praha"
+      },
+      "index_urls": [
+        "https://www.satalice.cz/kalendar-akci"
+      ],
+      "url_regex": "^https://www\\.satalice\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Praha-Satalice": [
+          {
+            "lat": 50.1255484,
+            "lon": 14.5717874,
+            "precision": "town",
+            "label": "Praha-Satalice — orientační střed městské části, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/19999096"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-praha-suchdol-cz",
+      "town": "Praha-Suchdol",
+      "region": "Hlavní město Praha",
+      "adapter": "reviewed-public",
+      "primary_host": "praha-suchdol.cz",
+      "allowed_towns": {
+        "Praha-Suchdol": "Hlavní město Praha"
+      },
+      "index_urls": [
+        "https://praha-suchdol.cz/kalendar/"
+      ],
+      "url_regex": "^https://praha\\-suchdol\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Praha-Suchdol": [
+          {
+            "lat": 50.1386836,
+            "lon": 14.377106,
+            "precision": "town",
+            "label": "Praha-Suchdol — orientační střed městské části, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/19999118"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-praha-vinor-cz",
+      "town": "Praha-Vinoř",
+      "region": "Hlavní město Praha",
+      "adapter": "reviewed-public",
+      "primary_host": "www.praha-vinor.cz",
+      "allowed_towns": {
+        "Praha-Vinoř": "Hlavní město Praha"
+      },
+      "index_urls": [
+        "https://www.praha-vinor.cz/akce/"
+      ],
+      "url_regex": "^https://www\\.praha\\-vinor\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Praha-Vinoř": [
+          {
+            "lat": 50.1409853,
+            "lon": 14.5749283,
+            "precision": "town",
+            "label": "Praha-Vinoř — orientační střed městské části, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/426970"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-praha5-cz",
+      "town": "Praha 5",
+      "region": "Hlavní město Praha",
+      "adapter": "reviewed-public",
+      "primary_host": "www.praha5.cz",
+      "allowed_towns": {
+        "Praha 5": "Hlavní město Praha"
+      },
+      "index_urls": [
+        "https://www.praha5.cz/udalosti/kategorie/akce-mc/"
+      ],
+      "url_regex": "^https://www\\.praha5\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Praha 5": [
+          {
+            "lat": 50.0519182,
+            "lon": 14.3839303,
+            "precision": "town",
+            "label": "Praha 5 — orientační střed městské části, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/19999086"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-praha8-cz",
+      "town": "Praha 8",
+      "region": "Hlavní město Praha",
+      "adapter": "reviewed-public",
+      "primary_host": "www.praha8.cz",
+      "allowed_towns": {
+        "Praha 8": "Hlavní město Praha"
+      },
+      "index_urls": [
+        "https://www.praha8.cz/kalendar"
+      ],
+      "url_regex": "^https://www\\.praha8\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Praha 8": [
+          {
+            "lat": 50.1191317,
+            "lon": 14.4551595,
+            "precision": "town",
+            "label": "Praha 8 — orientační střed městské části, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/19999109"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-repy-cz",
+      "town": "Praha 17",
+      "region": "Hlavní město Praha",
+      "adapter": "reviewed-public",
+      "primary_host": "www.repy.cz",
+      "allowed_towns": {
+        "Praha 17": "Hlavní město Praha"
+      },
+      "index_urls": [
+        "https://www.repy.cz/kalendar-akci"
+      ],
+      "url_regex": "^https://www\\.repy\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Praha 17": [
+          {
+            "lat": 50.068877,
+            "lon": 14.3073501,
+            "precision": "town",
+            "label": "Praha 17 — orientační střed městské části, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/19999117"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-praha19-cz",
+      "town": "Praha 19",
+      "region": "Hlavní město Praha",
+      "adapter": "reviewed-public",
+      "primary_host": "www.praha19.cz",
+      "allowed_towns": {
+        "Praha 19": "Hlavní město Praha"
+      },
+      "index_urls": [
+        "https://www.praha19.cz/akce/"
+      ],
+      "url_regex": "^https://www\\.praha19\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Praha 19": [
+          {
+            "lat": 50.1319574,
+            "lon": 14.5493202,
+            "precision": "town",
+            "label": "Praha 19 — orientační střed městské části, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/19999081"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-cakovice-cz",
+      "town": "Praha-Čakovice",
+      "region": "Hlavní město Praha",
+      "adapter": "reviewed-public",
+      "primary_host": "www.cakovice.cz",
+      "allowed_towns": {
+        "Praha-Čakovice": "Hlavní město Praha"
+      },
+      "index_urls": [
+        "https://www.cakovice.cz/Kalendar-akci"
+      ],
+      "url_regex": "^https://www\\.cakovice\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Praha-Čakovice": [
+          {
+            "lat": 50.1523646,
+            "lon": 14.5205763,
+            "precision": "town",
+            "label": "Praha-Čakovice — orientační střed městské části, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/19999085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-dolnimecholupy-cz",
+      "town": "Praha-Dolní Měcholupy",
+      "region": "Hlavní město Praha",
+      "adapter": "reviewed-public",
+      "primary_host": "www.dolnimecholupy.cz",
+      "allowed_towns": {
+        "Praha-Dolní Měcholupy": "Hlavní město Praha"
+      },
+      "index_urls": [
+        "https://www.dolnimecholupy.cz/sport-a-volny-cas/akce-v-dolnich-mecholupech/"
+      ],
+      "url_regex": "^https://www\\.dolnimecholupy\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Praha-Dolní Měcholupy": [
+          {
+            "lat": 50.0590584,
+            "lon": 14.5591003,
+            "precision": "town",
+            "label": "Praha-Dolní Měcholupy — orientační střed městské části, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/19999107"
+          }
+        ]
+      }
     }
   ]
 }
