@@ -48,7 +48,7 @@ function appendCards() {
   listCount.textContent = `Zobrazeno ${renderedCount} z ${visibleEvents.length}`;
   loadMore.hidden = renderedCount >= visibleEvents.length;
 }
-let map, markerLayer, mapPromise;
+let map, markerLayer, mapPromise, fitMap, autoView = true;
 let tileFailed = false;
 let userPosition = null, userMarker, locationTimer, locationSlowTimer;
 let locationGeneration = 0;
@@ -151,8 +151,12 @@ function updateMap() {
     bounds.push([group.lat, group.lon]);
   }
   userMarker?.bringToFront();
-  if (userPosition && !groups.length) map.setView(bounds[0], 10, { animate: false });
-  else if (bounds.length) map.fitBounds(bounds, { padding: [48, 48], maxZoom: 13, animate: false });
+  fitMap = () => {
+    if (userPosition && !groups.length) map.setView(bounds[0], 10, { animate: false });
+    else if (bounds.length) map.fitBounds(bounds, { padding: [48, 48], maxZoom: 13, animate: false });
+    autoView = true;
+  };
+  fitMap();
   const unmapped = visibleEvents.length - mappedCount;
   $('map-notice').textContent = tileFailed ? 'Mapový podklad se nepodařilo načíst. Body a seznam akcí zůstávají dostupné.' : unmapped ? `${unmapped} akcí nemá polohu; najdete je v seznamu.` : 'Vyberte bod pro akce v daném místě.';
 }
@@ -175,6 +179,7 @@ async function ensureMap() {
       });
       tiles.addTo(map);
       markerLayer = L.layerGroup().addTo(map);
+      map.on('dragstart zoomstart', () => { autoView = false; });
       const observer = new ResizeObserver(() => map.invalidateSize());
       observer.observe($('map'));
       updateMap();
@@ -380,13 +385,35 @@ function render() {
   $('result-count').textContent = rangeError ? 'Opravte rozsah dat.' : `${visible.length} ${visible.length === 1 ? 'akce' : visible.length < 5 ? 'akce' : 'akcí'} · ${[...scope, period].join(' · ')}`;
   updateMap();
 }
+let scrollBeforeExpand = 0;
+function expandMap(expanded) {
+  if (expanded === $('map-panel').classList.contains('map-expanded')) return;
+  if (expanded) scrollBeforeExpand = scrollY;
+  $('map-panel').classList.toggle('map-expanded', expanded);
+  $('map-expand').querySelector('span').textContent = expanded ? 'Zmenšit mapu' : 'Zvětšit mapu';
+  for (let node = $('map-panel'); node !== document.body; node = node.parentElement) {
+    for (const sibling of node.parentElement.children) if (sibling !== node) sibling.inert = expanded;
+  }
+  if (!expanded) scrollTo(0, scrollBeforeExpand);
+  if (!map) return;
+  const refit = autoView;
+  map.invalidateSize();
+  if (refit) fitMap();
+}
+$('map-expand').addEventListener('click', () => expandMap(!$('map-panel').classList.contains('map-expanded')));
+addEventListener('keydown', event => {
+  if (event.key !== 'Escape' || !$('map-panel').classList.contains('map-expanded')) return;
+  if (document.querySelector('#map .leaflet-popup')) map.closePopup();
+  else expandMap(false);
+}, true);
 function setView(view) {
+  if (view === 'list') expandMap(false);
   $('explore').dataset.view = view;
   $('show-list').setAttribute('aria-pressed', String(view === 'list'));
   $('show-map').setAttribute('aria-pressed', String(view === 'map'));
   if (view === 'map' || desktop.matches) ensureMap();
 }
-desktop.addEventListener('change', () => { if (desktop.matches) ensureMap(); });
+desktop.addEventListener('change', () => { expandMap(false); if (desktop.matches) ensureMap(); });
 function clearLocation() {
   locationGeneration++;
   clearTimeout(locationTimer);

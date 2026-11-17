@@ -122,6 +122,93 @@ test('batched permalinks reveal whole required batches after async load, filters
     assert.deepEqual(errors, []);
   }, { data: batchFixture, responseStatus: 503, mobile: true, base: '/#akce=e-batch-21' });
 });
+for (const mobile of [true, false]) test(`map expands to the whole window, keeps focus and scroll, and collapses by button, Escape, list view and breakpoint (${mobile ? 'phone' : 'desktop'})`, async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    if (mobile) await page.locator('#show-map').click();
+    await page.waitForSelector('.leaflet-container');
+    const toggle = page.locator('#map-expand');
+    const expanded = () => page.locator('#map-panel').evaluate(n => n.classList.contains('map-expanded'));
+    assert.equal(await toggle.getAttribute('aria-pressed'), null);
+    assert.equal(await toggle.innerText(), 'Zvětšit mapu');
+    const small = await page.locator('#map').boundingBox();
+    const spread = () => page.evaluate(() => { const xs = [...document.querySelectorAll('.map-marker')].map(n => n.getBoundingClientRect().x); return Math.max(...xs) - Math.min(...xs); });
+    const smallSpread = await spread();
+    const box = await toggle.boundingBox();
+    assert.ok(box.width >= 44 && box.height >= 44);
+    await page.evaluate(() => scrollTo(0, document.documentElement.scrollHeight));
+    const y = await page.evaluate(() => scrollY);
+    assert.ok(y > 0);
+    await toggle.evaluate(n => n.click());
+    await toggle.focus();
+    const viewport = page.viewportSize();
+    assert.equal(await expanded(), true);
+    assert.equal(await toggle.innerText(), 'Zmenšit mapu');
+    assert.deepEqual(await page.locator('#map-panel').boundingBox(), { x: 0, y: 0, width: viewport.width, height: viewport.height });
+    const big = await page.locator('#map').boundingBox();
+    assert.ok(big.height > small.height + 150);
+    if (!mobile) assert.ok(await spread() > smallSpread * 1.5, 'expanded map refits to the markers');
+    assert.equal(await page.evaluate(() => document.elementFromPoint(innerWidth / 2, innerHeight - 30).closest('#map-panel') !== null), true);
+    assert.equal(await page.evaluate(() => document.activeElement.id), 'map-expand');
+    await page.keyboard.press('Shift+Tab');
+    assert.equal(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement.closest('#map-panel')), true, 'focus stays in the expanded map');
+    assert.equal(await page.evaluate(() => !!document.querySelector('.event-card').closest('[inert]')), true);
+    await toggle.focus();
+    await page.keyboard.press('Escape');
+    assert.equal(await expanded(), false);
+    assert.equal(await page.evaluate(() => document.querySelector('[inert]')), null);
+    assert.equal(await page.evaluate(() => scrollY), y, 'collapse returns to the same scroll position');
+    assert.equal((await page.locator('#map').boundingBox()).height, small.height);
+    await toggle.click();
+    await toggle.click();
+    assert.equal(await expanded(), false);
+    if (mobile) {
+      await toggle.click();
+      await page.evaluate(() => document.getElementById('show-list').click());
+      assert.equal(await expanded(), false);
+      assert.equal(await page.locator('.event-card').first().isVisible(), true);
+    } else {
+      await toggle.click();
+      await page.setViewportSize({ width: 800, height: 900 });
+      await page.waitForFunction(() => !document.querySelector('.map-expanded'));
+      assert.equal(await page.evaluate(() => getComputedStyle(document.body).overflow), 'visible');
+      assert.equal(await page.evaluate(() => document.querySelector('[inert]')), null);
+    }
+    assert.deepEqual(errors, []);
+  }, { mobile });
+});
+test('expanded map keeps legend, caveats and counts, and never discards the user view, popup or marker focus', async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.map-marker');
+    const toggle = page.locator('#map-expand');
+    const expanded = () => page.locator('#map-panel').evaluate(n => n.classList.contains('map-expanded'));
+    const spread = () => page.evaluate(() => { const xs = [...document.querySelectorAll('.map-marker')].map(n => n.getBoundingClientRect().x); return Math.max(...xs) - Math.min(...xs); });
+    const count = await page.locator('#map-count').innerText(), markers = await page.locator('.map-marker').count();
+    const smallSpread = await spread();
+    await toggle.click();
+    for (const selector of ['#map-legend', '#map-notice', '.map-caption']) assert.equal(await page.locator(selector).isVisible(), true, `${selector} stays visible`);
+    assert.equal(await page.locator('#map-count').innerText(), count);
+    assert.equal(await page.locator('.map-marker').count(), markers);
+    const fitted = await spread();
+    await page.locator('.leaflet-control-zoom-in').click();
+    await page.waitForFunction(fitted => { const xs = [...document.querySelectorAll('.map-marker')].map(n => n.getBoundingClientRect().x); return Math.max(...xs) - Math.min(...xs) > fitted * 1.5; }, fitted);
+    await toggle.click();
+    assert.ok(await spread() > smallSpread * 2.5, 'collapse keeps the zoom the user chose');
+    await toggle.click();
+    await page.locator('.map-marker').first().focus();
+    await page.keyboard.press('Enter');
+    await page.waitForSelector('.leaflet-popup');
+    await page.keyboard.press('Escape');
+    await page.clock.runFor(300);
+    assert.equal(await page.locator('.leaflet-popup').count(), 0);
+    assert.equal(await expanded(), true, 'first Escape only closes the popup');
+    await page.locator('.map-marker').first().focus();
+    await page.keyboard.press('Escape');
+    assert.equal(await expanded(), false);
+    assert.equal(await page.evaluate(() => document.activeElement.classList.contains('map-marker') && document.activeElement.isConnected), true, 'marker keeps focus after collapse');
+    assert.deepEqual(errors, []);
+  });
+});
 test('all batched matches stay on the map; popup reveals a late card and appending preserves selection and markers', async () => {
   await app(async (page, errors) => {
     await page.waitForSelector('.map-marker');
