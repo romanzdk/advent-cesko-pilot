@@ -22487,6 +22487,385 @@
       "allowed_venues": [
         "Šupina"
       ]
+    },
+    {
+      "id": "mladejovice-obec-calendar",
+      "town": "Mladějovice",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mladejovice.cz/obec/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mladejovice.cz/obec/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mladejovice\\.cz/obec/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Mladějovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní dům Mladějovice",
+        "Základní škola Mladějovice",
+        "kostel sv. Máří Magdalény"
+      ]
+    },
+    {
+      "id": "olsovec-obec-calendar",
+      "town": "Olšovec",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obecolsovec.cz/cs/obec/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obecolsovec.cz/cs/obec/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obecolsovec\\.cz/cs/obec/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Olšovec: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Sál OÚ, Na Návsi"
+      ]
+    },
+    {
+      "id": "spicky-obec-calendar",
+      "town": "Špičky",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obec-spicky.eu/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obec-spicky.eu/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obec-spicky\\.eu/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Špičky: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "u obecního úřadu"
+      ]
+    },
+    {
+      "id": "mesto-libava-obec-calendar",
+      "town": "Město Libavá",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.mesto-libava.eu/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.mesto-libava.eu/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.mesto-libava\\.eu/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Město Libavá: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Náměstí, Město Libavá"
+      ]
+    },
+    {
+      "id": "detkovice-obec-calendar",
+      "town": "Dětkovice",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.detkoviceupv.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.detkoviceupv.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.detkoviceupv\\.cz/zivot-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Dětkovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Dětkovice"
+      ]
+    },
+    {
+      "id": "strazisko-obec-calendar",
+      "town": "Stražisko",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obecstrazisko.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obecstrazisko.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obecstrazisko\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Stražisko: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "OBECNÍ RYBNÍK STRAŽISKO",
+        "OÚ"
+      ]
+    },
+    {
+      "id": "velke-kunetice-obec-calendar",
+      "town": "Velké Kunětice",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.velkekunetice.cz/o-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.velkekunetice.cz/o-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.velkekunetice\\.cz/o-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Velké Kunětice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní dům"
+      ]
+    },
+    {
+      "id": "oskava-obec-calendar",
+      "town": "Oskava",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.ou-oskava.cz/pro-obcany/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.ou-oskava.cz/pro-obcany/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.ou-oskava\\.cz/pro-obcany/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Oskava: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Obec"
+      ]
+    },
+    {
+      "id": "senice-na-hane-obec-calendar",
+      "town": "Senice na Hané",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.senicenahane.cz/cs/obec/udalosti-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.senicenahane.cz/cs/obec/udalosti-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.senicenahane\\.cz/cs/obec/udalosti-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Senice na Hané: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "kinosál KD"
+      ]
+    },
+    {
+      "id": "postrelmuvek-obec-calendar",
+      "town": "Postřelmůvek",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.postrelmuvek.cz/volny-cas/kulturni-akce/"
+      ],
+      "detail_prefixes": [
+        "https://www.postrelmuvek.cz/volny-cas/kulturni-akce/"
+      ],
+      "url_regex": "^https://www\\.postrelmuvek\\.cz/volny-cas/kulturni-akce/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Postřelmůvek: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Prostor před obecním úřadem"
+      ]
+    },
+    {
+      "id": "zvole-obec-calendar",
+      "town": "Zvole",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obec-zvole.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obec-zvole.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obec-zvole\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Zvole: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Obecní úřad Zvole"
+      ]
+    },
+    {
+      "id": "mala-morava-obec-calendar",
+      "town": "Malá Morava",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obecmalamorava.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obecmalamorava.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obecmalamorava\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Malá Morava: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Obecní úřad Malá Morava - Vysoký Potok 2"
+      ]
+    },
+    {
+      "id": "hustopece-nad-becvou-obec-calendar",
+      "town": "Hustopeče nad Bečvou",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.ihustopece.cz/mestys/aktuality/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.ihustopece.cz/mestys/aktuality/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.ihustopece\\.cz/mestys/aktuality/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Hustopeče nad Bečvou: omezený sezónní výběr z oficiálního městského kalendáře; nejvýše dvě stránky a čtrnáct detailů, nikoli úplné městské ani krajské pokrytí.",
+      "allowed_venues": [
+        "Zámek"
+      ]
+    },
+    {
+      "id": "maletin-obec-calendar",
+      "town": "Maletín",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.maletin.cz/aktuality/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.maletin.cz/aktuality/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.maletin\\.cz/aktuality/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Maletín: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Víceúčelový areál obce Maletín"
+      ]
+    },
+    {
+      "id": "malhotice-obec-calendar",
+      "town": "Malhotice",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.malhotice.cz/obec-169/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.malhotice.cz/obec-169/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.malhotice\\.cz/obec-169/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Malhotice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Malhotice - náves"
+      ]
+    },
+    {
+      "id": "milotice-nad-becvou-obec-calendar",
+      "town": "Milotice nad Bečvou",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.miloticenadbecvou.cz/obec/spolky-a-zajmove-organizace/sdh-milotice-nad-becvou/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.miloticenadbecvou.cz/obec/spolky-a-zajmove-organizace/sdh-milotice-nad-becvou/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.miloticenadbecvou\\.cz/obec/spolky-a-zajmove-organizace/sdh-milotice-nad-becvou/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Milotice nad Bečvou: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "V sále sokolovny"
+      ]
+    },
+    {
+      "id": "parsovice-obec-calendar",
+      "town": "Paršovice",
+      "region": "Olomoucký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obecparsovice.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obecparsovice.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obecparsovice\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Paršovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Sokolovna"
+      ]
+    },
+    {
+      "id": "sumperk-dre-calendar",
+      "town": "Šumperk",
+      "region": "Olomoucký kraj",
+      "adapter": "dre",
+      "index_urls": [
+        "https://www.sumperk.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=11",
+        "https://www.sumperk.cz/redakce/index.php?lanG=cs&subakce=events&rok=2026&mesic=12"
+      ],
+      "url_regex": "^https://www\\.sumperk\\.cz/dre-cs/\\d+-[^/?#]+\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 14,
+      "coverage_note": "Šumperk: omezený sezónní výběr z oficiálního kalendáře (listopad a prosinec); nejvýše čtrnáct detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Náměstí Míru (u radnice)"
+      ]
     }
   ]
 }

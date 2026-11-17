@@ -609,7 +609,7 @@ def parse_event(body, source, url, window):
         day = r'\d{1,2}\.\d{1,2}\.20\d{2}'
         clock = r'(?:[01]?\d|2[0-3]):[0-5]\d'
         raw = fields.get('Datum konání', '')
-        single = re.fullmatch(rf'({day})(?: od ({clock})(?: do ({clock}))? hodin)?', raw)
+        single = re.fullmatch(rf'({day})(?: od ({clock})(?: do ({clock}))?(?: hodin)?)?', raw)
         span = re.fullmatch(rf'({day}) až ({day})', raw)
         if single:
             date_text = ' '.join(part for part in single.groups() if part)

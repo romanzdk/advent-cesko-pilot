@@ -51,6 +51,11 @@ class DreAdapter(unittest.TestCase):
         self.assertEqual(event['category'], 'strom')
         self.assertNotIn('Zobrazit na mapě', event['venue'])
 
+    def test_start_without_trailing_hodin(self):
+        # Šumperk writes '29.11.2026 od 17:00' without the closing 'hodin'.
+        event = self.parse('29.11.2026 od 17:00')
+        self.assertEqual((event['date'], event['startTime'], event['endTime']), ('2026-11-29', '17:00', None))
+
     def test_day_without_time_is_time_unconfirmed(self):
         event = self.parse('5.12.2026')
         self.assertEqual((event['startTime'], event['status']), (None, 'time-unconfirmed'))

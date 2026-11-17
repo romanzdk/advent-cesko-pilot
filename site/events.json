@@ -61,6 +61,34 @@
       }
     },
     {
+      "id": "e-e04de1132eca44ba11db",
+      "title": "Vánoční výstava",
+      "town": "Zvole",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-20",
+      "endDate": null,
+      "startTime": "08:00",
+      "endTime": null,
+      "venue": "Obecní úřad Zvole",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční výstava. Obecní úřad Zvole, Zvole, 78901",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.obec-zvole.cz/aktualne/kalendar-akci/vanocni-vystava-767_274cs.html",
+      "location": {
+        "lat": 49.8398169,
+        "lon": 16.9143399,
+        "precision": "town",
+        "label": "Zvole — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439428"
+      }
+    },
+    {
       "id": "e-5826110ebb80a918da39",
       "title": "Kreativ Vánoce a zima - Soběslav 2026",
       "town": "Soběslav",
@@ -489,6 +517,36 @@
       }
     },
     {
+      "id": "e-67f97d5b77fa30d68534",
+      "title": "VÁNOČNÍ PRODEJNÍ VÝSTAVA",
+      "town": "Stražisko",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-21",
+      "endDate": "2026-11-24",
+      "startTime": "08:00",
+      "endTime": "17:00",
+      "venue": "OÚ",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "VÁNOČNÍ PRODEJNÍ VÝSTAVA. OÚ, Stražisko",
+      "notes": [
+        "Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.obecstrazisko.cz/aktualne/kalendar-akci/vanocni-prodejni-vystava-1389_185cs.html",
+      "location": {
+        "lat": 49.5456252,
+        "lon": 16.918751,
+        "precision": "town",
+        "label": "Stražisko — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438265"
+      }
+    },
+    {
       "id": "e-bb9977a2e6154f28fa9d",
       "title": "Kateřinský jarmark v Třebechovicích pod Orebem 2026",
       "town": "Třebechovice pod Orebem",
@@ -544,6 +602,34 @@
         "precision": "town",
         "label": "Veltrusy — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437632"
+      }
+    },
+    {
+      "id": "e-f0aff56fbf76fb00bbb4",
+      "title": "Vánoční výstava",
+      "town": "Zvole",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-21",
+      "endDate": null,
+      "startTime": "08:00",
+      "endTime": null,
+      "venue": "Obecní úřad Zvole",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční výstava. Obecní úřad Zvole, Zvole, 78901",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.obec-zvole.cz/aktualne/kalendar-akci/vanocni-vystava-767_275cs.html",
+      "location": {
+        "lat": 49.8398169,
+        "lon": 16.9143399,
+        "precision": "town",
+        "label": "Zvole — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439428"
       }
     },
     {
@@ -1924,6 +2010,34 @@
         "precision": "town",
         "label": "Libišany — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/440358"
+      }
+    },
+    {
+      "id": "e-c89514a8662cd55974df",
+      "title": "Vánoční prodejní výstava",
+      "town": "Mladějovice",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-21",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "venue": "Kulturní dům Mladějovice",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční prodejní výstava. Kulturní dům Mladějovice",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.mladejovice.cz/obec/kalendar-akci/vanocni-prodejni-vystava-362_51cs.html",
+      "location": {
+        "lat": 49.7526064,
+        "lon": 17.2309543,
+        "precision": "town",
+        "label": "Mladějovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438788"
       }
     },
     {
@@ -3322,6 +3436,34 @@
         "precision": "town",
         "label": "Javorník — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437059"
+      }
+    },
+    {
+      "id": "e-eae1bc9446259ea530e9",
+      "title": "Vánoční tvořivé dílničky",
+      "town": "Malá Morava",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-22",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": "17:00",
+      "venue": "Obecní úřad Malá Morava - Vysoký Potok 2",
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční tvořivé dílničky. Obecní úřad Malá Morava - Vysoký Potok 2",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:14+00:00",
+      "sourceUrl": "https://www.obecmalamorava.cz/volny-cas/kalendar-akci/vanocni-tvorive-dilnicky-642_169cs.html",
+      "location": {
+        "lat": 50.0998345,
+        "lon": 16.8510108,
+        "precision": "town",
+        "label": "Malá Morava — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438313"
       }
     },
     {
@@ -8998,6 +9140,34 @@
       }
     },
     {
+      "id": "e-621b80875e0d7f0fcb54",
+      "title": "Vánoční jarmark ZŠ a MŠ",
+      "town": "Mladějovice",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Základní škola Mladějovice",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční jarmark ZŠ a MŠ. Základní škola Mladějovice",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.mladejovice.cz/obec/kalendar-akci/vanocni-jarmark-zs-a-ms-774_92cs.html",
+      "location": {
+        "lat": 49.7526064,
+        "lon": 17.2309543,
+        "precision": "town",
+        "label": "Mladějovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438788"
+      }
+    },
+    {
       "id": "e-d208078001ea98fa80d1",
       "title": "ROZSVĚCENÍ VÁNOČNÍHO STROMEČKU",
       "town": "Nemojany",
@@ -9107,6 +9277,34 @@
         "precision": "town",
         "label": "Ostravice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/436998"
+      }
+    },
+    {
+      "id": "e-14b6059f992e36701a60",
+      "title": "Vánoce tvoříme společně",
+      "town": "Paršovice",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "venue": "Sokolovna",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoce tvoříme společně. Sokolovna, Paršovice",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:14+00:00",
+      "sourceUrl": "https://www.obecparsovice.cz/aktualne/kalendar-akci/vanoce-tvorime-spolecne-868_241cs.html",
+      "location": {
+        "lat": 49.5084774,
+        "lon": 17.6908615,
+        "precision": "town",
+        "label": "Paršovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438373"
       }
     },
     {
@@ -9221,6 +9419,34 @@
         "precision": "town",
         "label": "Uherské Hradiště — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437438"
+      }
+    },
+    {
+      "id": "e-5d5e5826442e4f80fcd8",
+      "title": "Vánoční tvoření",
+      "town": "Velké Kunětice",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "18:00",
+      "venue": "Kulturní dům",
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční tvoření. Kulturní dům",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.velkekunetice.cz/o-obci/kalendar-akci/vanocni-tvoreni-455_47cs.html",
+      "location": {
+        "lat": 50.3165765,
+        "lon": 17.265929,
+        "precision": "town",
+        "label": "Velké Kunětice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438683"
       }
     },
     {
@@ -11025,6 +11251,34 @@
         "precision": "town",
         "label": "Beroun — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442333"
+      }
+    },
+    {
+      "id": "e-dba98ab166dbc75b43b5",
+      "title": "Rozsvícení vánočního stromu",
+      "town": "Dětkovice",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "17:30",
+      "endTime": null,
+      "venue": "Dětkovice",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu. Dětkovice",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.detkoviceupv.cz/zivot-v-obci/kalendar-akci/rozsviceni-vanocniho-stromu-349_27cs.html",
+      "location": {
+        "lat": 49.4127177,
+        "lon": 17.0924143,
+        "precision": "town",
+        "label": "Dětkovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438587"
       }
     },
     {
@@ -16966,6 +17220,34 @@
       }
     },
     {
+      "id": "e-1d1310d9dc0e94409d47",
+      "title": "Mikulášská nadílka",
+      "town": "Maletín",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "15:30",
+      "endTime": null,
+      "venue": "Víceúčelový areál obce Maletín",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášská nadílka. Víceúčelový areál obce Maletín, Maletín",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:14+00:00",
+      "sourceUrl": "https://www.maletin.cz/aktuality/kalendar-akci/mikulasska-nadilka-312_125cs.html",
+      "location": {
+        "lat": 49.7988651,
+        "lon": 16.782843,
+        "precision": "town",
+        "label": "Maletín — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436831"
+      }
+    },
+    {
       "id": "e-ebaa6e4f56c45dad35a1",
       "title": "Adventní ladění",
       "town": "Milotice",
@@ -18732,6 +19014,34 @@
         "precision": "town",
         "label": "Libkov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/440037"
+      }
+    },
+    {
+      "id": "e-0f263103c80cb5bc55ec",
+      "title": "Vánoční koncert dětí ZŠ, rozsvícení vánočního stromu",
+      "town": "Mladějovice",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "venue": "kostel sv. Máří Magdalény",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert dětí ZŠ, rozsvícení vánočního stromu. kostel sv. Máří Magdalény",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.mladejovice.cz/obec/kalendar-akci/vanocni-koncert-deti-zs-rozsviceni-vanocniho-stromu-773_91cs.html",
+      "location": {
+        "lat": 49.7526064,
+        "lon": 17.2309543,
+        "precision": "town",
+        "label": "Mladějovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438788"
       }
     },
     {
@@ -20527,6 +20837,34 @@
       }
     },
     {
+      "id": "e-14909cbdcae02aa12f24",
+      "title": "Rozsvícení vánočního stromečku a první adventní svíčky",
+      "town": "Hustopeče nad Bečvou",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Zámek",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromečku a první adventní svíčky. Zámek , Hustopeče nad Bečvou, 75366",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:14+00:00",
+      "sourceUrl": "https://www.ihustopece.cz/mestys/aktuality/kalendar-akci/rozsviceni-vanocniho-stromecku-a-prvni-adventni-svicky-3265_1225cs.html",
+      "location": {
+        "lat": 49.5302107,
+        "lon": 17.8703421,
+        "precision": "town",
+        "label": "Hustopeče nad Bečvou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438333"
+      }
+    },
+    {
       "id": "e-bf67ef65a7f9fa8391e1",
       "title": "Adventus",
       "town": "Kadaň",
@@ -20805,6 +21143,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/439618"
       },
       "region": "Ústecký kraj"
+    },
+    {
+      "id": "e-1b621b9d99cca5264176",
+      "title": "Rozsvícení vánočního stromu",
+      "town": "Špičky",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "u obecního úřadu",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu. u obecního úřadu",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.obec-spicky.eu/aktualne/kalendar-akci/rozsviceni-vanocniho-stromu-574_61cs.html",
+      "location": {
+        "lat": 49.5448072,
+        "lon": 17.8056461,
+        "precision": "town",
+        "label": "Špičky — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438071"
+      }
     },
     {
       "title": "Adventní koncerty Koletovy hornické hudby",
@@ -25076,6 +25442,34 @@
       }
     },
     {
+      "id": "e-03297f9fae279692a30c",
+      "title": "Rozsvícení vánočního stromu",
+      "town": "Malhotice",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "Malhotice - náves",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu. Malhotice - náves",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:14+00:00",
+      "sourceUrl": "https://www.malhotice.cz/obec-169/kalendar-akci/rozsviceni-vanocniho-stromu-599_81cs.html",
+      "location": {
+        "lat": 49.4896682,
+        "lon": 17.7645093,
+        "precision": "town",
+        "label": "Malhotice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438355"
+      }
+    },
+    {
       "id": "e-4412515f83f6f05d08c4",
       "title": "Rozsvěcení vánočního stromu v Málkově",
       "town": "Málkov",
@@ -25157,6 +25551,34 @@
         "precision": "town",
         "label": "Nová Včelnice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438414"
+      }
+    },
+    {
+      "id": "e-508d8aa756c26f79dd04",
+      "title": "Rozsvícení vánočního stromu",
+      "town": "Oskava",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "venue": "Obec",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu. Obec, Oskava",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.ou-oskava.cz/pro-obcany/kalendar-akci/rozsviceni-vanocniho-stromu-2735_258cs.html",
+      "location": {
+        "lat": 49.8952316,
+        "lon": 17.1321432,
+        "precision": "town",
+        "label": "Oskava — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438309"
       }
     },
     {
@@ -30202,6 +30624,34 @@
       }
     },
     {
+      "id": "e-d86547ffcd1370abe4a1",
+      "title": "ROZSVÍCENÍ VÁNOČNÍHO STROMU VE STRAŽISKU",
+      "town": "Stražisko",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "OBECNÍ RYBNÍK STRAŽISKO",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "ROZSVÍCENÍ VÁNOČNÍHO STROMU VE STRAŽISKU. OBECNÍ RYBNÍK STRAŽISKO",
+      "notes": [],
+      "audience": "dospělí",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.obecstrazisko.cz/aktualne/kalendar-akci/rozsviceni-vanocniho-stromu-ve-strazisku-1390_186cs.html",
+      "location": {
+        "lat": 49.5456252,
+        "lon": 16.918751,
+        "precision": "town",
+        "label": "Stražisko — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438265"
+      }
+    },
+    {
       "id": "e-c7d0b020062302501b5a",
       "title": "Rozsvícení vánočního stromu",
       "town": "Stárkov",
@@ -30706,6 +31156,34 @@
         "precision": "town",
         "label": "Šumice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437494"
+      }
+    },
+    {
+      "id": "e-86ef02ffdff940670c45",
+      "title": "SLAVNOSTNÍ ROZSVĚCENÍ VÁNOČNÍHO STROMU",
+      "town": "Šumperk",
+      "region": "Olomoucký kraj",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Náměstí Míru (u radnice)",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "SLAVNOSTNÍ ROZSVĚCENÍ VÁNOČNÍHO STROMU. Náměstí Míru (u radnice)",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:14+00:00",
+      "sourceUrl": "https://www.sumperk.cz/dre-cs/22615-slavnostni-rozsveceni-vanocniho-stromu.html",
+      "location": {
+        "lat": 49.9655521,
+        "lon": 16.9705651,
+        "precision": "town",
+        "label": "Šumperk — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438047"
       }
     },
     {
@@ -36813,6 +37291,62 @@
       }
     },
     {
+      "id": "e-5e6196ab98b5a8f67d70",
+      "title": "ROZSVÍCENÍ VÁNOČNÍHO STROMEČKU a MIKULÁŠSKÁ NADÍLKA",
+      "town": "Město Libavá",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "venue": "Náměstí, Město Libavá",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "ROZSVÍCENÍ VÁNOČNÍHO STROMEČKU a MIKULÁŠSKÁ NADÍLKA. Náměstí, Město Libavá, Náměstí, Město Libavá, 783 07",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.mesto-libava.eu/aktualne/kalendar-akci/rozsviceni-vanocniho-stromecku-a-mikulasska-nadilka-1230_370cs.html",
+      "location": {
+        "lat": 49.721889,
+        "lon": 17.520088,
+        "precision": "town",
+        "label": "Město Libavá — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/5834179"
+      }
+    },
+    {
+      "id": "e-82d32f61cdebf2847a53",
+      "title": "Vánoční ladění 2026",
+      "town": "Olšovec",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "venue": "Sál OÚ, Na Návsi",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční ladění 2026. Sál OÚ, Na Návsi",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.obecolsovec.cz/cs/obec/kalendar-akci/vanocni-ladeni-2026-207_44cs.html",
+      "location": {
+        "lat": 49.5963737,
+        "lon": 17.7071328,
+        "precision": "town",
+        "label": "Olšovec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438016"
+      }
+    },
+    {
       "id": "e-bbb9b65a86110af41d8f",
       "title": "MIKULÁŠOVÁNÍ",
       "town": "Studénka",
@@ -37143,6 +37677,34 @@
       }
     },
     {
+      "id": "e-1208c1632a4ca11e295a",
+      "title": "VÁNOČNÍ KONCERT _ Zlaté tóny Vánoc - 4.12.2026 Sokolovna",
+      "town": "Milotice nad Bečvou",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "venue": "V sále sokolovny",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "VÁNOČNÍ KONCERT _ Zlaté tóny Vánoc - 4.12.2026 Sokolovna. V sále sokolovny",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:14+00:00",
+      "sourceUrl": "https://www.miloticenadbecvou.cz/obec/spolky-a-zajmove-organizace/sdh-milotice-nad-becvou/kalendar-akci/vanocni-koncert-zlate-tony-vanoc-4122026-sokolovna-296_14cs.html",
+      "location": {
+        "lat": 49.5353429,
+        "lon": 17.838583,
+        "precision": "town",
+        "label": "Milotice nad Bečvou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438337"
+      }
+    },
+    {
       "id": "e-88f9efd60b5f6a9d2d4c",
       "title": "Mikuláš",
       "town": "Miřejovice",
@@ -37224,6 +37786,34 @@
         "precision": "town",
         "label": "Oleška — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437133"
+      }
+    },
+    {
+      "id": "e-eb8d5947559253f7dc42",
+      "title": "ROZSVÍCENÍ VÁNOČNÍHO STROMU",
+      "town": "Postřelmůvek",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Prostor před obecním úřadem",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "ROZSVÍCENÍ VÁNOČNÍHO STROMU. Prostor před obecním úřadem, Postřelmůvek",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.postrelmuvek.cz/volny-cas/kulturni-akce/rozsviceni-vanocniho-stromu-580_83cs.html",
+      "location": {
+        "lat": 49.9226036,
+        "lon": 16.8790279,
+        "precision": "town",
+        "label": "Postřelmůvek — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439424"
       }
     },
     {
@@ -42284,6 +42874,34 @@
         "precision": "town",
         "label": "Drahlín — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441433"
+      }
+    },
+    {
+      "id": "e-ed2818f568bdd3ae7b77",
+      "title": "Mikulášská nadílka",
+      "town": "Dětkovice",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "Dětkovice",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášská nadílka. Dětkovice",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.detkoviceupv.cz/zivot-v-obci/kalendar-akci/mikulasska-nadilka-347_26cs.html",
+      "location": {
+        "lat": 49.4127177,
+        "lon": 17.0924143,
+        "precision": "town",
+        "label": "Dětkovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438587"
       }
     },
     {
@@ -50582,6 +51200,34 @@
       }
     },
     {
+      "id": "e-e5c3b0571ea3e9c6d410",
+      "title": "Česko zpívá koledy",
+      "town": "Hustopeče nad Bečvou",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "Zámek",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Česko zpívá koledy. Zámek , Hustopeče nad Bečvou, 75366",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:14+00:00",
+      "sourceUrl": "https://www.ihustopece.cz/mestys/aktuality/kalendar-akci/cesko-zpiva-koledy-3266_1226cs.html",
+      "location": {
+        "lat": 49.5302107,
+        "lon": 17.8703421,
+        "precision": "town",
+        "label": "Hustopeče nad Bečvou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438333"
+      }
+    },
+    {
       "id": "e-adcc9e0bcd797559d5c7",
       "title": "Husopas - skutečný příběh muže, který létal s divokými husami Vánoční speciál",
       "town": "Jilemnice",
@@ -57429,6 +58075,34 @@
       }
     },
     {
+      "id": "e-fa6d351d00e9e1e7c034",
+      "title": "Vánoce na zámku",
+      "town": "Hustopeče nad Bečvou",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "09:30",
+      "endTime": null,
+      "venue": "Zámek",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoce na zámku. Zámek , Hustopeče nad Bečvou, 75366",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:14+00:00",
+      "sourceUrl": "https://www.ihustopece.cz/mestys/aktuality/kalendar-akci/vanoce-na-zamku-3267_1227cs.html",
+      "location": {
+        "lat": 49.5302107,
+        "lon": 17.8703421,
+        "precision": "town",
+        "label": "Hustopeče nad Bečvou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438333"
+      }
+    },
+    {
       "id": "e-751b25ed66f4a395cb52",
       "title": "Adventní trh na zámku Děčín 2026",
       "town": "Děčín",
@@ -60192,6 +60866,34 @@
         "precision": "town",
         "label": "Libice nad Cidlinou — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441535"
+      }
+    },
+    {
+      "id": "e-d528fa682e1ce0fcfa25",
+      "title": "Vánoční koncert",
+      "town": "Senice na Hané",
+      "region": "Olomoucký kraj",
+      "date": "2026-12-14",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "venue": "kinosál KD",
+      "category": "setkani",
+      "price": "250 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert. kinosál KD, Senice na Hané",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T18:22:13+00:00",
+      "sourceUrl": "https://www.senicenahane.cz/cs/obec/udalosti-v-obci/kalendar-akci/vanocni-koncert-3507_276cs.html",
+      "location": {
+        "lat": 49.6240114,
+        "lon": 17.0857754,
+        "precision": "town",
+        "label": "Senice na Hané — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438526"
       }
     },
     {
