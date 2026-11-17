@@ -19530,6 +19530,168 @@
       "allowed_venues": [
         "Sportovní hala"
       ]
+    },
+    {
+      "id": "reviewed-www-svitavy-cz",
+      "town": "Svitavy",
+      "region": "Pardubický kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.svitavy.cz",
+      "allowed_towns": {
+        "Svitavy": "Pardubický kraj"
+      },
+      "index_urls": [
+        "https://www.svitavy.cz/kalendar-akci"
+      ],
+      "url_regex": "^https://www\\.svitavy\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Svitavy": [
+          {
+            "lat": 49.7562053,
+            "lon": 16.4688995,
+            "precision": "town",
+            "label": "Svitavy — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/436703"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-velkemezirici-cz",
+      "town": "Velké Meziříčí",
+      "region": "Kraj Vysočina",
+      "adapter": "reviewed-public",
+      "primary_host": "www.velkemezirici.cz",
+      "allowed_towns": {
+        "Velké Meziříčí": "Kraj Vysočina"
+      },
+      "index_urls": [
+        "https://www.velkemezirici.cz/udalosti"
+      ],
+      "url_regex": "^https://www\\.velkemezirici\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Velké Meziříčí": [
+          {
+            "lat": 49.3554996,
+            "lon": 16.0121507,
+            "precision": "town",
+            "label": "Velké Meziříčí — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/441623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-pribyslav-cz",
+      "town": "Přibyslav",
+      "region": "Kraj Vysočina",
+      "adapter": "reviewed-public",
+      "primary_host": "www.pribyslav.cz",
+      "allowed_towns": {
+        "Přibyslav": "Kraj Vysočina"
+      },
+      "index_urls": [
+        "https://www.pribyslav.cz/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.pribyslav\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Přibyslav": [
+          {
+            "lat": 49.5768385,
+            "lon": 15.7385463,
+            "precision": "town",
+            "label": "Přibyslav — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/440452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-zdirec-cz",
+      "town": "Ždírec nad Doubravou",
+      "region": "Kraj Vysočina",
+      "adapter": "reviewed-public",
+      "primary_host": "www.zdirec.cz",
+      "allowed_towns": {
+        "Ždírec nad Doubravou": "Kraj Vysočina"
+      },
+      "index_urls": [
+        "https://www.zdirec.cz/kalendar-mesta"
+      ],
+      "url_regex": "^https://www\\.zdirec\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Ždírec nad Doubravou": [
+          {
+            "lat": 49.6963617,
+            "lon": 15.8133338,
+            "precision": "town",
+            "label": "Ždírec nad Doubravou — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/440430"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-cervenavoda-cz",
+      "town": "Červená Voda",
+      "region": "Pardubický kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.cervenavoda.cz",
+      "allowed_towns": {
+        "Červená Voda": "Pardubický kraj"
+      },
+      "index_urls": [
+        "https://www.cervenavoda.cz/kalendar-akci"
+      ],
+      "url_regex": "^https://www\\.cervenavoda\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Červená Voda": [
+          {
+            "lat": 50.0402721,
+            "lon": 16.7428976,
+            "precision": "town",
+            "label": "Červená Voda — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/441204"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-dolnidobrouc-cz",
+      "town": "Dolní Dobrouč",
+      "region": "Pardubický kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.dolnidobrouc.cz",
+      "allowed_towns": {
+        "Dolní Dobrouč": "Pardubický kraj"
+      },
+      "index_urls": [
+        "https://www.dolnidobrouc.cz/kulturni-akce"
+      ],
+      "url_regex": "^https://www\\.dolnidobrouc\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Dolní Dobrouč": [
+          {
+            "lat": 49.9925741,
+            "lon": 16.4976581,
+            "precision": "town",
+            "label": "Dolní Dobrouč — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/440352"
+          }
+        ]
+      }
     }
   ]
 }

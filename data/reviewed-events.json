@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T13:38:14+00:00",
+  "generatedAt": "2026-11-17T15:59:23+00:00",
   "season": 2026,
   "region": "Česko — redakčně ověřený výběr",
   "events": [
@@ -25,6 +25,36 @@
       "sourceUrl": "https://zamekkostelec.cz/adventni-pripravy-v-zahradnictvi-jevany/",
       "location": null,
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-8f387c2d2b04dc40",
+      "title": "Kašpárek se ani čerta nebojí (14:00)",
+      "town": "Velké Meziříčí",
+      "venue": "Malá scéna Jupiter clubu, Náměstí 17",
+      "date": "2026-11-21",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": "Online rezervace; vstupenky bez místenky se prodávají na místě před představením.",
+      "registrationUrl": null,
+      "description": "Loutkové divadlo pro rodiče a děti.",
+      "notes": [
+        "Téhož dne se hraje také v 16:00."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.velkemezirici.cz/udalosti/divadlo/173056-kasparek-se-ani-certa-neboji",
+      "location": {
+        "lat": 49.3554996,
+        "lon": 16.0121507,
+        "precision": "town",
+        "label": "Velké Meziříčí — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441623"
+      },
+      "region": "Kraj Vysočina"
     },
     {
       "id": "e-4e713b2aa43f441f",
@@ -55,6 +85,36 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/437951"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-d84a7af2e5558918",
+      "title": "Kašpárek se ani čerta nebojí (16:00)",
+      "town": "Velké Meziříčí",
+      "venue": "Malá scéna Jupiter clubu, Náměstí 17",
+      "date": "2026-11-21",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": "Online rezervace; vstupenky bez místenky se prodávají na místě před představením.",
+      "registrationUrl": null,
+      "description": "Loutkové divadlo pro rodiče a děti.",
+      "notes": [
+        "Téhož dne se hraje také ve 14:00."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.velkemezirici.cz/udalosti/divadlo/173057-kasparek-se-ani-certa-neboji",
+      "location": {
+        "lat": 49.3554996,
+        "lon": 16.0121507,
+        "precision": "town",
+        "label": "Velké Meziříčí — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441623"
+      },
+      "region": "Kraj Vysočina"
     },
     {
       "id": "e-c3fcd9679a39470c",
@@ -309,6 +369,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-541cac96f581290f",
+      "title": "Trio Inspiro – to nejlepší z klasiky v záři stovek svící",
+      "town": "Velké Meziříčí",
+      "venue": "Jupiter club, koncertní sál, Náměstí 17",
+      "date": "2026-11-25",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Večer klasické hudby při svíčkách naladěný na advent (hoboj, klarinet, fagot) v cyklu Kruhu přátel hudby.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.velkemezirici.cz/udalosti/koncerty/173084-trio-inspiro-to-nejlepsi-z-klasiky-v-zari-stovek-svici",
+      "location": {
+        "lat": 49.3554996,
+        "lon": 16.0121507,
+        "precision": "town",
+        "label": "Velké Meziříčí — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441623"
+      },
+      "region": "Kraj Vysočina"
+    },
+    {
       "id": "e-9ac6b4055c0a8ddb",
       "title": "Fleret a Zuzana Šuláková – Vánoce na Valašsku",
       "town": "Říčany",
@@ -415,6 +503,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-17cd0fdadb59f7b8",
+      "title": "Vánoční trhy „Na dvorku“",
+      "town": "Velké Meziříčí",
+      "venue": "Nový Svit restaurant a caffé, Náměstí 13/15",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční trhy se stánky s výrobky, jídlem a pitím.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.velkemezirici.cz/udalosti/zabavne-odpoledne/173133-vanocni-trhy-na-dvorku",
+      "location": {
+        "lat": 49.3554996,
+        "lon": 16.0121507,
+        "precision": "town",
+        "label": "Velké Meziříčí — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441623"
+      },
+      "region": "Kraj Vysočina"
+    },
+    {
       "id": "e-bb4935b94a5f6af6",
       "title": "Adventní dílna – výroba věnců",
       "town": "Praha-Suchdol",
@@ -441,6 +557,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/19999118"
       },
       "region": "Hlavní město Praha"
+    },
+    {
+      "id": "e-1635f7564583f342",
+      "title": "Předvánoční jarmark a rozsvícení vánočního stromu",
+      "town": "Červená Voda",
+      "venue": "Pod kostelem v Červené Vodě",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Předvánoční jarmark s vystoupením dětí, rozsvícením vánočního stromu, vánočními výrobky, hudbou a občerstvením.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.cervenavoda.cz/kalendar-akci/predvanocni-jarmark-6",
+      "location": {
+        "lat": 50.0402721,
+        "lon": 16.7428976,
+        "precision": "town",
+        "label": "Červená Voda — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441204"
+      },
+      "region": "Pardubický kraj"
     },
     {
       "id": "e-a5bf77965a630684",
@@ -497,6 +641,92 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/19999107"
       },
       "region": "Hlavní město Praha"
+    },
+    {
+      "id": "e-a936ab272329fbf6",
+      "title": "Adventní věncování",
+      "town": "Velké Meziříčí",
+      "venue": "Dóza, Komenského 10/2",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "19:00",
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Workshop tradičního věncování s lektorem: výroba vlastního adventního věnce.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.velkemezirici.cz/udalosti/prednasky-vzdelavaci-porady/173139-adventni-vencovani",
+      "location": {
+        "lat": 49.3554996,
+        "lon": 16.0121507,
+        "precision": "town",
+        "label": "Velké Meziříčí — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441623"
+      },
+      "region": "Kraj Vysočina"
+    },
+    {
+      "id": "e-5ac14569c20ff1cf",
+      "title": "Slavnostní rozsvícení vánočního stromu",
+      "town": "Dolní Dobrouč",
+      "venue": null,
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Slavnostní rozsvícení vánočního stromu v Dolní Dobrouči.",
+      "notes": [
+        "Stránka obce uvádí jen datum; čas ani místo zatím nejsou zveřejněny."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.dolnidobrouc.cz/kulturni-akce/slavnostni-rozsviceni-vanocniho-stromu_2026",
+      "location": {
+        "lat": 49.9925741,
+        "lon": 16.4976581,
+        "precision": "town",
+        "label": "Dolní Dobrouč — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440352"
+      },
+      "region": "Pardubický kraj"
+    },
+    {
+      "id": "e-bfb942b310d91851",
+      "title": "Workshop adventních věnců",
+      "town": "Svitavy",
+      "venue": "Městské muzeum a galerie ve Svitavách, Máchova alej 1",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": "13:00",
+      "category": "tvoreni",
+      "price": "Bez vstupného",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Výroba adventního věnce nebo přírodního věnce na dveře pod vedením floristky Moniky Šudomové.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.svitavy.cz/kalendar-akci/workshop-adventnich-vencu-0",
+      "location": {
+        "lat": 49.7562053,
+        "lon": 16.4688995,
+        "precision": "town",
+        "label": "Svitavy — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436703"
+      },
+      "region": "Pardubický kraj"
     },
     {
       "id": "e-fee9560851858f4d",
@@ -635,6 +865,36 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/436104"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-16e91436bd51fb95",
+      "title": "Spanilá jízda sv. Mikuláše",
+      "town": "Ždírec nad Doubravou",
+      "venue": null,
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "14:30",
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Spanilá jízda svatého Mikuláše ve Ždírci nad Doubravou.",
+      "notes": [
+        "Přesné místo konání zatím nebylo zveřejněno."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.zdirec.cz/kalendar-mesta/spanila-jizda-sv-mikulase-2",
+      "location": {
+        "lat": 49.6963617,
+        "lon": 15.8133338,
+        "precision": "town",
+        "label": "Ždírec nad Doubravou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440430"
+      },
+      "region": "Kraj Vysočina"
     },
     {
       "id": "e-87bad706b8381d1b",
@@ -799,6 +1059,36 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-d3c7d2a04e84f7d8",
+      "title": "Slavnostní rozsvícení vánočního stromu",
+      "town": "Ždírec nad Doubravou",
+      "venue": null,
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Slavnostní rozsvícení vánočního stromu ve Ždírci nad Doubravou.",
+      "notes": [
+        "Přesné místo konání zatím nebylo zveřejněno."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.zdirec.cz/kalendar-mesta/slavnostni-rozsviceni-vanocniho-stromu-1",
+      "location": {
+        "lat": 49.6963617,
+        "lon": 15.8133338,
+        "precision": "town",
+        "label": "Ždírec nad Doubravou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440430"
+      },
+      "region": "Kraj Vysočina"
+    },
+    {
       "id": "e-50c658fbcc70e2fb",
       "title": "Předvečer adventu a rozsvícení stromku v Miškovicích",
       "town": "Praha-Čakovice",
@@ -825,6 +1115,36 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/19999085"
       },
       "region": "Hlavní město Praha"
+    },
+    {
+      "id": "e-4c41cbfc27ba2e94",
+      "title": "Předvánoční trhy",
+      "town": "Dolní Dobrouč",
+      "venue": null,
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Předvánoční trhy v Dolní Dobrouči.",
+      "notes": [
+        "Stránka obce uvádí jen datum; čas ani místo zatím nejsou zveřejněny."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.dolnidobrouc.cz/kulturni-akce/predvanocni-trhy_2026",
+      "location": {
+        "lat": 49.9925741,
+        "lon": 16.4976581,
+        "precision": "town",
+        "label": "Dolní Dobrouč — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440352"
+      },
+      "region": "Pardubický kraj"
     },
     {
       "id": "e-b712547cfe8fd2e6",
@@ -1108,6 +1428,34 @@
       "region": "Hlavní město Praha"
     },
     {
+      "id": "e-7b8773acbc9c84e0",
+      "title": "Vernisáž vánoční výstavy a zpřístupnění Velkého svitavského mechanického betlému",
+      "town": "Svitavy",
+      "venue": "Městské muzeum a galerie ve Svitavách, Máchova alej 1",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "category": "betlem",
+      "price": "Bez vstupného",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Otevření výstavy S hračkou kolem světa a opětovné zpřístupnění Velkého svitavského mechanického betlému s adventní hernou; zazpívá dětský sbor ZUŠ Svitavy.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.svitavy.cz/kalendar-akci/vernisaz-vanocni-vystavy-zpristupneni-velkeho-svitavskeho-mechanickeho-betlemu-s",
+      "location": {
+        "lat": 49.7562053,
+        "lon": 16.4688995,
+        "precision": "town",
+        "label": "Svitavy — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436703"
+      },
+      "region": "Pardubický kraj"
+    },
+    {
       "id": "e-204064026ba744be",
       "title": "Vánoční jarmark a rozsvícení vánočního stromu",
       "town": "Tehov",
@@ -1162,6 +1510,36 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/437866"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-cda48ee8822daecd",
+      "title": "1. adventní neděle s rozsvícením vánočního stromu a skupinou Jablkoň",
+      "town": "Svitavy",
+      "venue": "Náměstí Míru",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "category": "strom",
+      "price": "Bez vstupného",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Program na náměstí Míru: v 16:00 a 17:00 koncert skupiny Jablkoň, v 17:00 rozsvícení vánočního stromu, v 17:30 Čertovská jízda.",
+      "notes": [
+        "Rozsvícení stromu: 17:00."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.svitavy.cz/kalendar-akci/1-adventni-nedele-s-hudebni-skupinou-jablkon-0",
+      "location": {
+        "lat": 49.7562053,
+        "lon": 16.4688995,
+        "precision": "town",
+        "label": "Svitavy — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436703"
+      },
+      "region": "Pardubický kraj"
     },
     {
       "id": "e-f5959f2305ed486e",
@@ -1332,6 +1710,37 @@
       "region": "Hlavní město Praha"
     },
     {
+      "id": "e-c0b8f646ca9a8b6b",
+      "title": "Rozsvícení vánočního stromu",
+      "town": "Přibyslav",
+      "venue": null,
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "19:00",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu v Přibyslavi.",
+      "notes": [
+        "Čas je uveden v přehledu kalendáře města.",
+        "Přesné místo konání zatím nebylo zveřejněno."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.pribyslav.cz/kalendar-akci/vanocni-strom-rozsviceni.html",
+      "location": {
+        "lat": 49.5768385,
+        "lon": 15.7385463,
+        "precision": "town",
+        "label": "Přibyslav — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440452"
+      },
+      "region": "Kraj Vysočina"
+    },
+    {
       "id": "e-34db39276ab6e4ab",
       "title": "Adventní koncert ve Spojovně",
       "town": "Praha-Kunratice",
@@ -1410,6 +1819,34 @@
       "sourceUrl": "https://www.strancice.cz/assets/File.ashx?id_org=15606&id_dokumenty=109684",
       "location": null,
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-3ec3e0960b8b6ea4",
+      "title": "Adventní koncert ZUŠ Svitavy",
+      "town": "Svitavy",
+      "venue": "Kostel Navštívení Panny Marie, náměstí Míru",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "Bez vstupného",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tradiční vystoupení žáků a učitelů ZUŠ Svitavy na úvod adventu: varhaníci, soubory, orchestry i pěvecké sbory.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.svitavy.cz/kalendar-akci/adventni-koncert-3",
+      "location": {
+        "lat": 49.7562053,
+        "lon": 16.4688995,
+        "precision": "town",
+        "label": "Svitavy — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436703"
+      },
+      "region": "Pardubický kraj"
     },
     {
       "id": "e-0fb2f41488c817a8",
@@ -2028,6 +2465,36 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-a43065c5a9ad4d7c",
+      "title": "Krampuslauf Šanov – čertí průvod",
+      "town": "Červená Voda",
+      "venue": "Šanov, od penzionu Ovčárna na šanovské náměstíčko",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "14:30",
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Od 14:30 čertovské trhy a kolotoč pro děti, v 17:00 průvod čertů s hosty Legion of Hell od penzionu Ovčárna na šanovské náměstíčko.",
+      "notes": [
+        "Průvod čertů: 17:00."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.cervenavoda.cz/kalendar-akci/krampuslauf-sanov-certi-pruvod-2",
+      "location": {
+        "lat": 50.0402721,
+        "lon": 16.7428976,
+        "precision": "town",
+        "label": "Červená Voda — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441204"
+      },
+      "region": "Pardubický kraj"
+    },
+    {
       "id": "e-7d2e9f1dfbd28064",
       "title": "Čertobraní 2026",
       "town": "Praha-Suchdol",
@@ -2523,6 +2990,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-81a6f01a1cae6fa6",
+      "title": "Druhá adventní neděle na náměstí Míru",
+      "town": "Svitavy",
+      "venue": "Náměstí Míru",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "Bez vstupného",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vystoupení Dětského folklorního souboru Dolinečka za doprovodu Cimbálové muziky Dolinka.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.svitavy.cz/kalendar-akci/druha-adventni-nedele-na-namesti-miru-detsky-folklorni-soubor-dolinecka",
+      "location": {
+        "lat": 49.7562053,
+        "lon": 16.4688995,
+        "precision": "town",
+        "label": "Svitavy — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436703"
+      },
+      "region": "Pardubický kraj"
+    },
+    {
       "id": "e-018bc35dca78f334",
       "title": "Mikuláš na Šeberáku",
       "town": "Praha-Kunratice",
@@ -2850,6 +3345,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/426970"
       },
       "region": "Hlavní město Praha"
+    },
+    {
+      "id": "e-db4b9f08a1d92d81",
+      "title": "Vánoční Čechomor",
+      "town": "Svitavy",
+      "venue": "Fabrika, Wolkerova alej 92/18",
+      "date": "2026-12-10",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "750–950 Kč podle místa",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Sváteční koncert skupiny Čechomor: lidové písně, oblíbené hity a vánoční koledy.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.svitavy.cz/kalendar-akci/vanocni-cechomor",
+      "location": {
+        "lat": 49.7562053,
+        "lon": 16.4688995,
+        "precision": "town",
+        "label": "Svitavy — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436703"
+      },
+      "region": "Pardubický kraj"
     },
     {
       "id": "e-a7b2119a0cdec49d",
@@ -3346,6 +3869,36 @@
       "sourceUrl": "https://www.strancice.cz/assets/File.ashx?id_org=15606&id_dokumenty=109684",
       "location": null,
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-b2ac87aac0bbe448",
+      "title": "Vánoční koncert BIGBAND Letohrad",
+      "town": "Dolní Dobrouč",
+      "venue": null,
+      "date": "2026-12-18",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert big bandu z Letohradu.",
+      "notes": [
+        "Stránka obce uvádí jen datum; čas ani místo zatím nejsou zveřejněny."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.dolnidobrouc.cz/kulturni-akce/vanocni-koncert-bigband-letohrad",
+      "location": {
+        "lat": 49.9925741,
+        "lon": 16.4976581,
+        "precision": "town",
+        "label": "Dolní Dobrouč — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440352"
+      },
+      "region": "Pardubický kraj"
     },
     {
       "id": "e-0c166530e5e6506a",
