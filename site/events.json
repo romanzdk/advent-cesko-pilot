@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T08:42:39+00:00",
+  "generatedAt": "2026-11-17T10:47:08+00:00",
   "season": 2026,
   "region": "Česko – sezonní výběr",
   "events": [
@@ -603,6 +603,28 @@
         "label": "Chlumec nad Cidlinou — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439247"
       }
+    },
+    {
+      "id": "e-98d52c9a3c5645f5",
+      "title": "Adventní přípravy v zahradnictví Jevany",
+      "town": "Jevany",
+      "venue": "Zahradnictví Jevany – Okrasné a lesní školky, V Lánech 214, 28166 Jevany",
+      "date": "2026-11-21",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": "15:00",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní dílna: vlastní věnce, svícny a aranžmá; dětský koutek, živé stromky z univerzitních lesů a cesmíny. Cena a případná registrace nejsou zveřejněny.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-15T09:51:06.393081+01:00",
+      "sourceUrl": "https://zamekkostelec.cz/adventni-pripravy-v-zahradnictvi-jevany/",
+      "location": null,
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-e2cb258ea29c02ce5c0a",
@@ -2150,7 +2172,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-17T10:21:07+00:00",
+      "verifiedAt": "2026-11-17T10:47:18+00:00",
       "sourceUrl": "https://www.radejoviceobec.cz/aktualne/kalendar-akci/vanocni-atelier-betlemy-1017_141cs.html",
       "location": {
         "lat": 49.9472248,
@@ -4961,6 +4983,34 @@
       "status": "confirmed"
     },
     {
+      "id": "e-f78a73e79d7fc700",
+      "title": "První vánoční koncert žáků a zahájení výtvarné výstavy",
+      "town": "Velké Popovice",
+      "venue": "Vzorná lidová knihovna, Velké Popovice",
+      "date": "2026-11-25",
+      "endDate": null,
+      "startTime": "17:30",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "První vánoční koncert žáků a zahájení výtvarné výstavy.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:16:03.948015+00:00",
+      "sourceUrl": "https://www.zus-popo.net/wp-content/uploads/2026/10/VANOCNI-AKCE-2026.jpg",
+      "location": {
+        "lat": 49.9224718,
+        "lon": 14.6390582,
+        "precision": "town",
+        "label": "Velké Popovice",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437951"
+      },
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-08a4209916b00453ed03",
       "title": "VÁCLAV NOID BÁRTA - Vánoční koncert",
       "town": "Jilemnice",
@@ -5046,6 +5096,28 @@
         "label": "Nový Bor — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/440188"
       }
+    },
+    {
+      "id": "e-9ac6b4055c0a8ddb",
+      "title": "Fleret a Zuzana Šuláková – Vánoce na Valašsku",
+      "town": "Říčany",
+      "venue": "KC Labuť, ul. 17. listopadu 214, Říčany, 25101",
+      "date": "2026-11-25",
+      "endDate": null,
+      "startTime": "20:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "450 Kč; adresní stolky",
+      "registration": null,
+      "registrationUrl": "https://www.kclabut.cz/vstupenky?id=79534",
+      "description": "Tradice pokračuje. Kapela Fleret společně s dcerou Valašské královny Jarmily Šulákové – Zuzanou.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T14:09:58.028512+01:00",
+      "sourceUrl": "https://www.ricany.cz/udalost/fleret-a-zuzana-sulakova-vanoce-na-valassku-3/",
+      "location": null,
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-c5c90aef533556396ae0",
@@ -12166,6 +12238,28 @@
       }
     },
     {
+      "id": "e-4d4d8f09de4262f8",
+      "title": "Předvánoční sousedské setkání a volba Osadního výboru Nová Hospoda",
+      "town": "Kamenice",
+      "venue": "Dětské hřiště, Na Vyhlídce/Návršní, Nová Hospoda",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Předvánoční sousedské setkání místních obyvatel s občerstvením a dětským punčem. Součástí je volba osadního výboru: ve 14:00 přihlášky kandidátů, v 15:00 hlasování, v 16:00 výsledky. Hlasují jen dospělí s ověřeným bydlištěm.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:16:03.948015+00:00",
+      "sourceUrl": "https://www.kamenice.cz/volba-do-osadniho-vyboru-nova-hospoda-a-predvanocni-sousedske-setkani",
+      "location": null,
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-e720f290f23807e237ed",
       "title": "Rozsvícení vánočního stromečku v Klecanech 2026",
       "town": "Klecany",
@@ -12192,6 +12286,36 @@
         "label": "Klecany — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437165"
       }
+    },
+    {
+      "id": "e-6791dd58fe264edc",
+      "title": "Perníčkování a tvorba vánočních dekorací",
+      "town": "Klokočná",
+      "venue": "Sál Hostince na Klokočné",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Materiál na výrobu věnců, svícnů a dalších dekorací bude připraven. Na zdobení perníčků si přineste vlastní napečené perníčky.",
+      "notes": [
+        "Datum potvrzuje obecní plán; podrobný program a hodinu upřesňuje aktuální pořadatelský plakát: https://www.facebook.com/photo.php?fbid=10236442938439810&set=p.10236442938439810&type=3"
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:10:44.101468+00:00",
+      "sourceUrl": "https://www.klokocna.eu/e_download.php?file=/data/editor/19cs_1.pdf&original=Akce%202026%20.pdf",
+      "location": {
+        "lat": 49.9563236,
+        "lon": 14.7195535,
+        "precision": "town",
+        "label": "Klokočná",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437112"
+      },
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-524239611469b02f0549",
@@ -16751,37 +16875,6 @@
       }
     },
     {
-      "id": "e-6791dd58fe264edc",
-      "title": "Vánoční dílny",
-      "town": "Klokočná",
-      "venue": null,
-      "date": "2026-11-28",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "category": "tvoreni",
-      "price": null,
-      "registration": null,
-      "registrationUrl": null,
-      "description": "",
-      "notes": [
-        "Čas programu zatím nebyl zveřejněn. Nejde o celodenní program.",
-        "Přesné místo konání zatím nebylo zveřejněno."
-      ],
-      "audience": "všichni",
-      "status": "time-unconfirmed",
-      "verifiedAt": "2026-11-12",
-      "sourceUrl": "https://www.klokocna.eu/e_download.php?file=/data/editor/19cs_1.pdf&original=Akce%202026%20.pdf",
-      "location": {
-        "lat": 49.9563236,
-        "lon": 14.7195535,
-        "precision": "town",
-        "label": "Klokočná",
-        "sourceUrl": "https://www.openstreetmap.org/relation/437112"
-      },
-      "region": "Středočeský kraj"
-    },
-    {
       "id": "e-c2b408ec559b186d1ead",
       "title": "Advent – design – Gask 2026",
       "town": "Kutná Hora",
@@ -16993,6 +17086,31 @@
         "label": "Nový Jičín — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/436988"
       }
+    },
+    {
+      "id": "e-346804cfac28d7d2",
+      "title": "Rozsvěcení stromečku",
+      "town": "Radějovice",
+      "venue": null,
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Obecní zpravodaj Listy04/2026, str.8, Program akcí/listopad2026:28.list. Rozsvěcení stromečku. Přesné místo v obci Radějovice (včetně Olešek) zatím není zveřejněno. Jde o termín obecního plánu, který se může změnit; nejde o celodenní program.",
+      "notes": [
+        "Čas programu zatím nebyl zveřejněn. Nejde o celodenní program.",
+        "Přesné místo konání zatím nebylo zveřejněno."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-15T09:53:11.433554+01:00",
+      "sourceUrl": "https://www.radejoviceobec.cz/evt_file.php?file=2326&original=Listy+4_2026.pdf",
+      "location": null,
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-4b6f3ba2f5a355dc199c",
@@ -19913,6 +20031,28 @@
       }
     },
     {
+      "id": "e-4eb551f1ca26af1a",
+      "title": "Mikulášská párty a rozsvícení vánočního stromečku",
+      "town": "Lensedly",
+      "venue": "Hasičárna – kulturní dům, Lensedly",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "category": "mikulas",
+      "price": "100 Kč/dítě",
+      "registration": "Nutná včasná rezervace SMS u pořadatele; počet míst omezen. Kontakt je ve veřejném příspěvku.",
+      "registrationUrl": null,
+      "description": "Čertovská diskotéka, soutěže, mikulášské a andělské putování, tvoření, nadílka od Mikuláše, čerta a anděla a společné rozsvícení vánočního stromečku. Přesná hodina samotného rozsvícení není uvedena.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T09:49:08.737529+01:00",
+      "sourceUrl": "https://www.facebook.com/groups/103557059678141/posts/29544867108453746/",
+      "location": null,
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-a18ad4e36d57d557796d",
       "title": "Vánoční jarmark náměstí Luže",
       "town": "Luže",
@@ -22652,6 +22792,36 @@
       }
     },
     {
+      "id": "e-f5959f2305ed486e",
+      "title": "Rozsvícení Vánočního stromu s lampionovým průvodem",
+      "town": "Hrusice",
+      "venue": null,
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": "18:00",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "V 16:30 příběh o narození Ježíška, potom lampionový průvod k MŠ a rozsvícení stromu. Místo srazu se liší: obecní kalendář uvádí Park Josefa Lady, plakát prostor u obecního úřadu. Hodina samotného rozsvícení není zveřejněna.",
+      "notes": [
+        "Místo srazu není sjednoceno: kalendář uvádí Park Josefa Lady, pořadatelský plakát prostor u obecního úřadu. 16:30 začíná doprovodný příběh, nikoli potvrzeně samotné rozsvícení."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:16:03.948015+00:00",
+      "sourceUrl": "https://obec-hrusice.cz/kalendar-akci?validFrom=2026-11-01&validTo=2026-11-30",
+      "location": {
+        "lat": 49.9114356,
+        "lon": 14.7395227,
+        "precision": "town",
+        "label": "Hrusice",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437181"
+      },
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-16c14ffa7fdfb4c5ee8e",
       "title": "Sváteční rozsvícení vánočního stromu",
       "town": "Klobouky u Brna",
@@ -23408,34 +23578,6 @@
       }
     },
     {
-      "id": "e-f5959f2305ed486e",
-      "title": "Rozsvícení Vánočního stromu s lampionovým průvodem",
-      "town": "Hrusice",
-      "venue": "Park Josefa Lady (sraz)",
-      "date": "2026-11-29",
-      "endDate": null,
-      "startTime": "17:00",
-      "endTime": "18:00",
-      "category": "strom",
-      "price": null,
-      "registration": null,
-      "registrationUrl": null,
-      "description": "",
-      "notes": [],
-      "audience": "všichni",
-      "status": "confirmed",
-      "verifiedAt": "2026-11-12",
-      "sourceUrl": "https://obec-hrusice.cz/event-calendar/kalendar-akci",
-      "location": {
-        "lat": 49.9114356,
-        "lon": 14.7395227,
-        "precision": "town",
-        "label": "Hrusice",
-        "sourceUrl": "https://www.openstreetmap.org/relation/437181"
-      },
-      "region": "Středočeský kraj"
-    },
-    {
       "id": "e-9207102eb2027eae04b3",
       "title": "ADVENTNÍ KONCERT",
       "town": "Ivanovice na Hané",
@@ -23518,6 +23660,36 @@
         "label": "Kadaň — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439593"
       }
+    },
+    {
+      "id": "e-bf84417b4fd765bb",
+      "title": "Rozsvěcení vánočního stromu",
+      "town": "Klokočná",
+      "venue": "Dolní náves, Klokočná",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Společné zpívání koled, tradiční občerstvení a možnost pořízení vánočních dekorací a adventních věnců od místních hasičů.",
+      "notes": [
+        "Datum potvrzuje obecní plán; podrobný program a hodinu upřesňuje aktuální pořadatelský plakát: https://www.facebook.com/photo.php?fbid=10236442938439810&set=p.10236442938439810&type=3"
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:10:44.101468+00:00",
+      "sourceUrl": "https://www.klokocna.eu/e_download.php?file=/data/editor/19cs_1.pdf&original=Akce%202026%20.pdf",
+      "location": {
+        "lat": 49.9563236,
+        "lon": 14.7195535,
+        "precision": "town",
+        "label": "Klokočná",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437112"
+      },
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-6ead1524f028a43cd989",
@@ -25462,37 +25634,6 @@
       }
     },
     {
-      "id": "e-bf84417b4fd765bb",
-      "title": "Rozsvěcení vánočního stromu",
-      "town": "Klokočná",
-      "venue": null,
-      "date": "2026-11-29",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "category": "strom",
-      "price": null,
-      "registration": null,
-      "registrationUrl": null,
-      "description": "Datum potvrzuje obecní roční plán. Pořádají obec a SDH Klokočná; hodina a přesné místo zatím nezveřejněny.",
-      "notes": [
-        "Čas programu zatím nebyl zveřejněn. Nejde o celodenní program.",
-        "Přesné místo konání zatím nebylo zveřejněno."
-      ],
-      "audience": "všichni",
-      "status": "time-unconfirmed",
-      "verifiedAt": "2026-11-12",
-      "sourceUrl": "https://www.klokocna.eu/e_download.php?file=/data/editor/19cs_1.pdf&original=Akce%202026%20.pdf",
-      "location": {
-        "lat": 49.9563236,
-        "lon": 14.7195535,
-        "precision": "town",
-        "label": "Klokočná",
-        "sourceUrl": "https://www.openstreetmap.org/relation/437112"
-      },
-      "region": "Středočeský kraj"
-    },
-    {
       "id": "e-38274db99201a064af1c",
       "title": "PRVNÍ ADVENT A ROZSVÍCENÍ VÁNOČNÍHO STROMU",
       "town": "Kraslice",
@@ -26812,6 +26953,28 @@
       }
     },
     {
+      "id": "e-1b5d557f5141890d",
+      "title": "Tradiční koncert orchestru – vánoční koncerty ZUŠ Josefa Lady",
+      "town": "Kostelec u Křížků",
+      "venue": "Kostel sv. Martina, Kostelec u Křížků 28",
+      "date": "2026-12-01",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tradiční koncert orchestru v rámci školního programu Vánoční koncerty 2026 ZUŠ Josefa Lady. Podrobnější repertoár není uveden.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T09:17:17.109772+01:00",
+      "sourceUrl": "https://www.zus-popo.net/wp-content/uploads/2026/10/VANOCNI-AKCE-2026.jpg",
+      "location": null,
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-9bacd1a237d6ba608343",
       "title": "Adventní hra Libercem – Půjdem spolu do Betléma",
       "town": "Liberec",
@@ -27926,6 +28089,34 @@
         "label": "Šternberk — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438507"
       }
+    },
+    {
+      "id": "e-3b7a6293c1c97353",
+      "title": "Druhý vánoční koncert žáků ZUŠ Josefa Lady",
+      "town": "Velké Popovice",
+      "venue": "Vzorná lidová knihovna, Velké Popovice",
+      "date": "2026-12-02",
+      "endDate": null,
+      "startTime": "17:30",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Druhý vánoční koncert žáků ZUŠ Josefa Lady.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:16:03.948015+00:00",
+      "sourceUrl": "https://www.zus-popo.net/wp-content/uploads/2026/10/VANOCNI-AKCE-2026.jpg",
+      "location": {
+        "lat": 49.9224718,
+        "lon": 14.6390582,
+        "precision": "town",
+        "label": "Velké Popovice",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437951"
+      },
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-5a817af193e8dbd90884",
@@ -30469,6 +30660,34 @@
         "label": "Vysoké nad Jizerou — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439038"
       }
+    },
+    {
+      "id": "e-7449e450d5eb8d25",
+      "title": "Mammas ve velkolepém románu – adventní koncert s koledami",
+      "town": "Velké Popovice",
+      "venue": "Vzorná lidová knihovna Velké Popovice",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "21:00",
+      "category": "setkani",
+      "price": "250 Kč",
+      "registration": "Předběžná rezervace vstupenek doporučena, nikoli povinná.",
+      "registrationUrl": null,
+      "description": "Mammas ve velkolepém románu – adventní koncert s koledami.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:16:03.948015+00:00",
+      "sourceUrl": "https://velkepopovice.uradvmobilu.cz/default/report/499207_pozvanka-na-koncert-mammas-mammas",
+      "location": {
+        "lat": 49.9224718,
+        "lon": 14.6390582,
+        "precision": "town",
+        "label": "Velké Popovice",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437951"
+      },
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-89b2883a7e4b8dddc0bb",
@@ -34239,6 +34458,64 @@
       }
     },
     {
+      "id": "e-fe2188cf907d5a69",
+      "title": "Mikulášská nadílka a čertovský rej",
+      "town": "Klokočná",
+      "venue": "Na obci, Klokočná",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": "Mikulášský balíček lze předem objednat za 300 Kč/ks; počet omezený, kontakt na plakátu.",
+      "registrationUrl": null,
+      "description": "Pohádkový program a občerstvení venku; teple se oblečte. Mikulášské balíčky lze předem objednat za 300 Kč/ks, počet balíčků je omezen. Kontakt je na plakátu.",
+      "notes": [
+        "Datum potvrzuje obecní plán; podrobný program a hodinu upřesňuje aktuální pořadatelský plakát: https://www.facebook.com/photo.php?fbid=10236442938439810&set=p.10236442938439810&type=3"
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:10:44.101468+00:00",
+      "sourceUrl": "https://www.klokocna.eu/e_download.php?file=/data/editor/19cs_1.pdf&original=Akce%202026%20.pdf",
+      "location": {
+        "lat": 49.9563236,
+        "lon": 14.7195535,
+        "precision": "town",
+        "label": "Klokočná",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437112"
+      },
+      "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-9fc560d009441d49",
+      "title": "Adventní koncert – Sylva Čmugrová a Ladislav Horák",
+      "town": "Kunice",
+      "venue": "Zámecký sál, Hotel zámek Berchtold, Hlavní 6, Kunice",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "450 Kč/osoba; 350 Kč pro ubytované hosty",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert – Sylva Čmugrová a Ladislav Horák.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:16:03.948015+00:00",
+      "sourceUrl": "https://www.kunice.cz/nase-obec/kalendar-akci/adventni-koncert-1584_286cs.html",
+      "location": {
+        "lat": 49.9260951,
+        "lon": 14.6776948,
+        "precision": "town",
+        "label": "Kunice",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437185"
+      },
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-7123f893e087a4edd6dd",
       "title": "Mikuláš na hasičce",
       "town": "Lednice",
@@ -35610,37 +35887,6 @@
       }
     },
     {
-      "id": "e-fe2188cf907d5a69",
-      "title": "Mikulášská",
-      "town": "Klokočná",
-      "venue": null,
-      "date": "2026-12-05",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "category": "mikulas",
-      "price": null,
-      "registration": null,
-      "registrationUrl": null,
-      "description": "Datum potvrzuje obecní roční plán. Pořádají obec a Klokajda; hodina a přesné místo zatím nezveřejněny.",
-      "notes": [
-        "Čas programu zatím nebyl zveřejněn. Nejde o celodenní program.",
-        "Přesné místo konání zatím nebylo zveřejněno."
-      ],
-      "audience": "všichni",
-      "status": "time-unconfirmed",
-      "verifiedAt": "2026-11-12",
-      "sourceUrl": "https://www.klokocna.eu/e_download.php?file=/data/editor/19cs_1.pdf&original=Akce%202026%20.pdf",
-      "location": {
-        "lat": 49.9563236,
-        "lon": 14.7195535,
-        "precision": "town",
-        "label": "Klokočná",
-        "sourceUrl": "https://www.openstreetmap.org/relation/437112"
-      },
-      "region": "Středočeský kraj"
-    },
-    {
       "id": "e-6c133d708a10e00ec90f",
       "title": "Adventní trhy v Krnově 2026",
       "town": "Krnov",
@@ -35790,6 +36036,31 @@
         "label": "Mariánské Lázně — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439458"
       }
+    },
+    {
+      "id": "e-b35e93cd4c179ffa",
+      "title": "Mikuláš",
+      "town": "Radějovice",
+      "venue": null,
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Obecní zpravodaj Listy04/2026, str.8, Program akcí/prosinec2026:5.pros. Mikuláš. Přesné místo v obci Radějovice (včetně Olešek) zatím není zveřejněno. Jde o termín obecního plánu, který se může změnit; nejde o celodenní program.",
+      "notes": [
+        "Čas programu zatím nebyl zveřejněn. Nejde o celodenní program.",
+        "Přesné místo konání zatím nebylo zveřejněno."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-15T09:53:11.433554+01:00",
+      "sourceUrl": "https://www.radejoviceobec.cz/evt_file.php?file=2326&original=Listy+4_2026.pdf",
+      "location": null,
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-6b04b99e22a535565828",
@@ -36742,6 +37013,34 @@
         "label": "Stará Lysá — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437260"
       }
+    },
+    {
+      "id": "e-3db839caa99515e9",
+      "title": "Tradiční vánoční setkání",
+      "town": "Struhařov",
+      "venue": "Požární dům Struhařov",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mimo roli live s Alešem Cibulkou; moderuje Petra Zajíčková.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:05:26.602043+00:00",
+      "sourceUrl": "https://www.struharov.cz/zivot-v-obci/kalendar-akci/tradicni-vanocni-setkani-831_212cs.html",
+      "location": {
+        "lat": 49.9519235,
+        "lon": 14.7444342,
+        "precision": "town",
+        "label": "Struhařov",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436104"
+      },
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-b12b1eb406922d593194",
@@ -38799,36 +39098,6 @@
       }
     },
     {
-      "id": "e-3db839caa99515e9",
-      "title": "Vánoční setkání struhařovských občanů",
-      "town": "Struhařov",
-      "venue": "Požární dům, Struhařov",
-      "date": "2026-12-06",
-      "endDate": null,
-      "startTime": null,
-      "endTime": null,
-      "category": "setkani",
-      "price": null,
-      "registration": null,
-      "registrationUrl": null,
-      "description": "Obecní roční plán akcí 2026 potvrzuje 6.12. vánoční setkání v požárním domě. Podrobná aktuální pozvánka s hodinou dosud nenalezena; obec si vyhrazuje změny programu.",
-      "notes": [
-        "Čas programu zatím nebyl zveřejněn. Nejde o celodenní program."
-      ],
-      "audience": "všichni",
-      "status": "time-unconfirmed",
-      "verifiedAt": "2026-11-12T09:37:38.065338+01:00",
-      "sourceUrl": "https://www.struharov.cz/zivot-v-obci/planovane-akce/",
-      "location": {
-        "lat": 49.9519235,
-        "lon": 14.7444342,
-        "precision": "town",
-        "label": "Struhařov",
-        "sourceUrl": "https://www.openstreetmap.org/relation/436104"
-      },
-      "region": "Středočeský kraj"
-    },
-    {
       "id": "e-1bd34273dbf18531",
       "title": "PODIVUHODNÉ VÁNOCE / Mikulášská a 5. pohádka",
       "town": "Všechromy",
@@ -40079,6 +40348,28 @@
         "label": "Ostrava — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437354"
       }
+    },
+    {
+      "id": "e-4d58bfbd52a14705",
+      "title": "Adventní koncert Říčanského komorního orchestru",
+      "town": "Říčany",
+      "venue": "KC Labuť, ul. 17. listopadu 214, Říčany, 25101",
+      "date": "2026-12-08",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": "https://www.kclabut.cz/vstupenky?id=83463",
+      "description": "Tradiční adventní koncert Říčanského komorního orchestru. Julie Svěcená; A. Salieri, J.S.Bach, J.Bologne, W.A.Mozart.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T14:09:58.028512+01:00",
+      "sourceUrl": "https://www.ricany.cz/udalost/adventni-koncert-ricanskeho-komorniho-orchestru-3/",
+      "location": null,
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-67bcd77031d5a1d9e937",
@@ -41460,6 +41751,28 @@
       }
     },
     {
+      "id": "e-ad45e1e393ec54d5",
+      "title": "Richard Pachman & Dita Hořínková",
+      "town": "Říčany",
+      "venue": "KC Labuť, ul. 17. listopadu 214, Říčany, 25101",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "300 Kč předprodej / 350 Kč na místě; neadresní stolky",
+      "registration": null,
+      "registrationUrl": "https://www.kclabut.cz/vstupenky?id=82659",
+      "description": "Adventní koncert ... plný adventních melodií, koled i povídání o vánočních zvycích.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T14:09:58.028512+01:00",
+      "sourceUrl": "https://www.ricany.cz/udalost/richard-pachman-dita-horinkova-2/",
+      "location": null,
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-75365bba5271b0cc249d",
       "title": "Koledy",
       "town": "Leskovec",
@@ -42532,6 +42845,34 @@
       }
     },
     {
+      "id": "e-a7b2119a0cdec49d",
+      "title": "Vánoční koncert žáků pěvecké třídy Dity Stromko",
+      "town": "Velké Popovice",
+      "venue": "Vzorná lidová knihovna, Komenského 5, Velké Popovice",
+      "date": "2026-12-11",
+      "endDate": null,
+      "startTime": "17:30",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert žáků pěvecké třídy Dity Stromko.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:16:03.948015+00:00",
+      "sourceUrl": "https://www.zus-popo.net/wp-content/uploads/2026/11/plakat_11_12_2026-DitaS.jpg",
+      "location": {
+        "lat": 49.9224718,
+        "lon": 14.6390582,
+        "precision": "town",
+        "label": "Velké Popovice",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437951"
+      },
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-2224084d70207de3c0f7",
       "title": "Adventní vyprávění s Františkem Kreuzmannem",
       "town": "Benešov",
@@ -43118,6 +43459,56 @@
         "label": "Dobruška — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/440632"
       }
+    },
+    {
+      "id": "e-7802484334ca4a2f",
+      "title": "´80s–´90s RETRO DANCE PÁRTY – tradiční vánoční disco ples",
+      "town": "Říčany",
+      "venue": "KC Labuť, ul. 17. listopadu 214, Říčany",
+      "date": "2026-12-11",
+      "endDate": "2026-12-12",
+      "startTime": "20:00",
+      "endTime": "02:00",
+      "category": "setkani",
+      "price": "290 Kč v předprodeji; 350 Kč na místě.",
+      "registration": "Prodej vstupenek přes odkaz KC Labuť; dostupnost ani počet zbývajících vstupenek neověřen.",
+      "registrationUrl": "https://www.kclabut.cz/vstupenky?id=81568",
+      "description": "Tradiční vánoční disco ples hitů od 70. let po milénium, soutěž o retro oblek a vánoční fotokoutek. Vstup od 19:30, program od 20:00, konec následující den 02:00.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T09:21:18.679116+01:00",
+      "sourceUrl": "https://www.ricany.cz/udalost/80s-90s-retro-dance-party-8/",
+      "location": null,
+      "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-5729e7ec39969c8a",
+      "title": "Nemytá Bambule – tradiční předvánoční koncert",
+      "town": "Kunice",
+      "venue": "Restaurace Na Staré faře, Kunice",
+      "date": "2026-12-11",
+      "endDate": null,
+      "startTime": "20:30",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Nemytá Bambule – tradiční předvánoční koncert.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:16:03.948015+00:00",
+      "sourceUrl": "https://www.kunice.cz/nase-obec/kalendar-akci/nemyta-bambule-1595_291cs.html",
+      "location": {
+        "lat": 49.9260951,
+        "lon": 14.6776948,
+        "precision": "town",
+        "label": "Kunice",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437185"
+      },
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-67ef81d273b35632fadc",
@@ -46476,6 +46867,28 @@
       }
     },
     {
+      "id": "e-c0b3fe5bf3346fb4",
+      "title": "Hasičský Mikulášský ples – Okrsek č. 2",
+      "town": "Senohraby",
+      "venue": "Hotel SEN, kongresový sál, Malostranská 344, Senohraby",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "20:00",
+      "endTime": null,
+      "category": "mikulas",
+      "price": "300 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Hasičský Mikulášský ples – Okrsek č. 2.",
+      "notes": [],
+      "audience": "dospělí",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:16:03.948015+00:00",
+      "sourceUrl": "https://www.senohraby.cz/aktualne/kultura-a-sport/hasicsky-mikulassky-ples-12-12-2927cs.html",
+      "location": null,
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-018250ccc27dca0a7431",
       "title": "Adventní koncert - Lesovna",
       "town": "Chotěšov",
@@ -48544,6 +48957,34 @@
       }
     },
     {
+      "id": "e-594cee48d34e8080",
+      "title": "Vánoční koncert – Ladův národopisný soubor, host duo 42GRAMU",
+      "town": "Hrusice",
+      "venue": "Sokolovna Hrusice, Josefa Lady 140",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": "19:30",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert – Ladův národopisný soubor, host duo 42GRAMU.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:16:03.948015+00:00",
+      "sourceUrl": "https://obec-hrusice.cz/kalendar-akci?validFrom=2026-12-01&validTo=2026-12-31",
+      "location": {
+        "lat": 49.9114356,
+        "lon": 14.7395227,
+        "precision": "town",
+        "label": "Hrusice",
+        "sourceUrl": "https://www.openstreetmap.org/relation/437181"
+      },
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-3b81c2e5a3f2a5761b67",
       "title": "Adventní koncert",
       "town": "Kaznějov",
@@ -49542,6 +49983,34 @@
       }
     },
     {
+      "id": "e-e15244b78e4bf5cd",
+      "title": "Cheer Academy – Vánoční cheerování",
+      "town": "Kamenice",
+      "venue": "KC Kamenice, Ringhofferovo nám. 434",
+      "date": "2026-12-15",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": "20:00",
+      "category": "setkani",
+      "price": "100 Kč dospělí; děti zdarma; prodej na místě před akcí",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Cheer Academy – Vánoční cheerování.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:16:03.948015+00:00",
+      "sourceUrl": "https://kckamenice.cz/akce/cheer-academy-vanocni-cheerovani/",
+      "location": {
+        "lat": 49.9015074,
+        "lon": 14.5825485,
+        "precision": "town",
+        "label": "Kamenice",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436114"
+      },
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-4c91ed5dbda866dc7ebb",
       "title": "Vánoční hudební divadlo",
       "town": "Mnichovo Hradiště",
@@ -49711,6 +50180,28 @@
         "label": "Skuteč — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439965"
       }
+    },
+    {
+      "id": "e-a17f3a0315bd463f",
+      "title": "Jazzové Vánoce",
+      "town": "Říčany",
+      "venue": "KC Labuť, ul. 17. listopadu 214, Říčany, 25101",
+      "date": "2026-12-15",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": null,
+      "category": "setkani",
+      "price": "380 Kč; adresní stolky",
+      "registration": null,
+      "registrationUrl": "https://www.kclabut.cz/vstupenky?id=80927",
+      "description": "Pražská dixielandová společnost & Lee Andrew Davison a Metropolitan Jazz Band.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T14:09:58.028512+01:00",
+      "sourceUrl": "https://www.ricany.cz/udalost/jazzove-vanoce-4/",
+      "location": null,
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-a1caf5e58939ca5eaf3c",
@@ -50222,6 +50713,28 @@
         "label": "Česká Třebová — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441216"
       }
+    },
+    {
+      "id": "e-87080108dcbe92c6",
+      "title": "Adventní koncert ZUŠ Folklorika",
+      "town": "Říčany",
+      "venue": "KC Labuť, ul. 17. listopadu 214, Říčany, 25101",
+      "date": "2026-12-16",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "dobrovolné",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Představí se žáci hudebního, tanečního a literárně-dramatického oboru. Výtvarný obor ... výstavy v předsálí.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T14:09:58.028512+01:00",
+      "sourceUrl": "https://www.ricany.cz/udalost/adventni-koncert-zus-folklorika-2/",
+      "location": null,
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-5987c9030f6fb6674e12",
@@ -50880,6 +51393,28 @@
       }
     },
     {
+      "id": "e-3f62d523487ba52e",
+      "title": "Vánoční akademie FUEGO",
+      "town": "Říčany",
+      "venue": "KC Labuť, ul. 17. listopadu 214, Říčany, 25101",
+      "date": "2026-12-17",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "dobrovolné",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Veřejná přehlídka vystoupení žáků TK Fuego.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T14:09:58.028512+01:00",
+      "sourceUrl": "https://www.ricany.cz/udalost/vanocni-akademie-fuego/",
+      "location": null,
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-898732e571b665dc1dca",
       "title": "Evangelium podle Bohumila Hrabala",
       "town": "Železnice",
@@ -51274,6 +51809,31 @@
       }
     },
     {
+      "id": "e-2dfffac433bb06fd0a82",
+      "title": "Vánoční koncert",
+      "town": "Olešky",
+      "region": "Středočeský kraj",
+      "date": "2026-12-18",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "venue": "kostel Narození Panny Marie",
+      "category": "setkani",
+      "price": "dobrovolné",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert. kostel Narození Panny Marie",
+      "notes": [
+        "Ověřená lokalita akce: Olešky; obec vydavatele kalendáře není automaticky místem konání. Poloha může zůstat nevyplněná.",
+        "Česká mše vánoční J. J. Ryby, výtěžek na obnovu kostelních varhan. Konec a registrace nejsou uvedeny. Pořadatelský plakát: https://www.radejoviceobec.cz/evt_image.php?img=2357&v=1794518850"
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17T10:47:18+00:00",
+      "sourceUrl": "https://www.radejoviceobec.cz/aktualne/kalendar-akci/vanocni-koncert-1019_142cs.html",
+      "location": null
+    },
+    {
       "id": "e-61f5284c013f14e2e50b",
       "title": "Zkrácená vánoční prohlídka Opočna – podvečerní",
       "town": "Opočno",
@@ -51300,31 +51860,6 @@
         "label": "Opočno — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/436528"
       }
-    },
-    {
-      "id": "e-2dfffac433bb06fd0a82",
-      "title": "Vánoční koncert",
-      "town": "Olešky",
-      "region": "Středočeský kraj",
-      "date": "2026-12-18",
-      "endDate": null,
-      "startTime": "18:00",
-      "endTime": null,
-      "venue": "kostel Narození Panny Marie",
-      "category": "setkani",
-      "price": "dobrovolné",
-      "registration": null,
-      "registrationUrl": null,
-      "description": "Vánoční koncert. kostel Narození Panny Marie",
-      "notes": [
-        "Ověřená lokalita akce: Olešky; obec vydavatele kalendáře není automaticky místem konání. Poloha může zůstat nevyplněná.",
-        "Česká mše vánoční J. J. Ryby, výtěžek na obnovu kostelních varhan. Konec a registrace nejsou uvedeny. Pořadatelský plakát: https://www.radejoviceobec.cz/evt_image.php?img=2357&v=1794518850"
-      ],
-      "audience": "všichni",
-      "status": "confirmed",
-      "verifiedAt": "2026-11-17T10:21:10+00:00",
-      "sourceUrl": "https://www.radejoviceobec.cz/aktualne/kalendar-akci/vanocni-koncert-1019_142cs.html",
-      "location": null
     },
     {
       "id": "e-818edce0c8eb1add0568",
@@ -51549,6 +52084,30 @@
         "label": "Týniště nad Orlicí — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/440087"
       }
+    },
+    {
+      "id": "e-dccb7fa31a152a4b",
+      "title": "Vánoční posezení Všechromy – plán Osadního výboru",
+      "town": "Všechromy",
+      "venue": null,
+      "date": "2026-12-18",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční posezení podle obecního ročního plánu akcí 2026. Přesná budova není zveřejněna. Jde o 18. prosinec, nikoli koncert PANCHARTI 19. prosince.",
+      "notes": [
+        "Přesné místo konání zatím nebylo zveřejněno."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:16:03.948015+00:00",
+      "sourceUrl": "https://www.strancice.cz/assets/File.ashx?id_org=15606&id_dokumenty=109684",
+      "location": null,
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-59e6a19af6816d5d1aba",
@@ -52877,6 +53436,34 @@
         "label": "Úštěk — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439175"
       }
+    },
+    {
+      "id": "e-974ddb98cf7e13de",
+      "title": "Jakub Jan Ryba – Česká mše vánoční",
+      "town": "Kamenice",
+      "venue": "KC Kamenice, Ringhofferovo nám. 434",
+      "date": "2026-12-19",
+      "endDate": null,
+      "startTime": "19:30",
+      "endTime": "20:30",
+      "category": "setkani",
+      "price": "390–450 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Jakub Jan Ryba – Česká mše vánoční.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-16T13:16:03.948015+00:00",
+      "sourceUrl": "https://kckamenice.cz/akce/jakub-jan-ryba-ceska-mse-vanocni-2/",
+      "location": {
+        "lat": 49.9015074,
+        "lon": 14.5825485,
+        "precision": "town",
+        "label": "Kamenice",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436114"
+      },
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-98837241c738a1a606aa",
