@@ -732,7 +732,10 @@ def parse_event(body, source, url, window):
         if programme:
             notes.append(programme[:500])
     if mapping and town != source['town']:
-        notes.append(f"{town} je část Plas; mapa ukazuje jen orientační střed místní části, nikoli přesné místo akce.")
+        if source['town'] == 'Plasy':
+            notes.append(f"{town} je část Plas; mapa ukazuje jen orientační střed místní části, nikoli přesné místo akce.")
+        else:
+            notes.append(f"Ověřená lokalita akce: {town}; obec vydavatele kalendáře není automaticky místem konání. Poloha může zůstat nevyplněná.")
     if len(dates) > 1:
         notes.append('Uvedeny jsou krajní termíny; nejde o potvrzení nepřetržitého ani každodenního otevření.')
     if 'predbezny' in text:

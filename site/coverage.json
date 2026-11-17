@@ -12096,6 +12096,58 @@
       "excludedCount": 0,
       "lastError": "Přenos veřejného výběru se nepodařil; poslední dobrá data jsou zachována.",
       "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
+    },
+    {
+      "id": "reviewed-zamekkostelec-cz-jevany",
+      "town": "Jevany",
+      "region": "Středočeský kraj",
+      "url": "https://zamekkostelec.cz/adventni-pripravy-v-zahradnictvi-jevany/",
+      "adapter": "reviewed-public",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "lastError": "Nový redakční zdroj čeká na ověřený přenos."
+    },
+    {
+      "id": "reviewed-www-senohraby-cz-ples",
+      "town": "Senohraby",
+      "region": "Středočeský kraj",
+      "url": "https://www.senohraby.cz/aktualne/kultura-a-sport/hasicsky-mikulassky-ples-12-12-2927cs.html",
+      "adapter": "reviewed-public",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "lastError": "Nový redakční zdroj čeká na ověřený přenos."
+    },
+    {
+      "id": "reviewed-www-kamenice-cz-setkani",
+      "town": "Kamenice",
+      "region": "Středočeský kraj",
+      "url": "https://www.kamenice.cz/volba-do-osadniho-vyboru-nova-hospoda-a-predvanocni-sousedske-setkani",
+      "adapter": "reviewed-public",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "lastError": "Nový redakční zdroj čeká na ověřený přenos."
+    },
+    {
+      "id": "reviewed-www-radejoviceobec-cz-plan",
+      "town": "Radějovice",
+      "region": "Středočeský kraj",
+      "url": "https://www.radejoviceobec.cz/evt_file.php?file=2326&original=Listy+4_2026.pdf",
+      "adapter": "reviewed-public",
+      "status": "partial",
+      "lastChecked": null,
+      "lastSuccess": null,
+      "eventCount": 0,
+      "reviewCount": 0,
+      "lastError": "Nový redakční zdroj čeká na ověřený přenos."
     }
   ],
   "metrics": {

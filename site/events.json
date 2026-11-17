@@ -2142,13 +2142,15 @@
       "venue": "Podkroví v 1.patře hasičské zbrojnice",
       "category": "betlem",
       "price": null,
-      "registration": null,
+      "registration": "Nutná přihláška přes kontakt na stránce pořadatele; konání podmíněno dostatečným zájmem. Kapacita neověřena.",
       "registrationUrl": null,
       "description": "Vánoční ateliér - BETLÉMY. Podkroví v 1.patře hasičské zbrojnice",
-      "notes": [],
+      "notes": [
+        "Dětské tvoření betlémů; konání závisí na dostatečném zájmu. Cena ani konec nejsou uvedeny. Aktuální plakát: https://www.radejoviceobec.cz/evt_image.php?img=2355&v=1794427706"
+      ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-17T07:49:47+00:00",
+      "verifiedAt": "2026-11-17T10:21:07+00:00",
       "sourceUrl": "https://www.radejoviceobec.cz/aktualne/kalendar-akci/vanocni-atelier-betlemy-1017_141cs.html",
       "location": {
         "lat": 49.9472248,
@@ -51302,7 +51304,7 @@
     {
       "id": "e-2dfffac433bb06fd0a82",
       "title": "Vánoční koncert",
-      "town": "Radějovice",
+      "town": "Olešky",
       "region": "Středočeský kraj",
       "date": "2026-12-18",
       "endDate": null,
@@ -51314,18 +51316,15 @@
       "registration": null,
       "registrationUrl": null,
       "description": "Vánoční koncert. kostel Narození Panny Marie",
-      "notes": [],
+      "notes": [
+        "Ověřená lokalita akce: Olešky; obec vydavatele kalendáře není automaticky místem konání. Poloha může zůstat nevyplněná.",
+        "Česká mše vánoční J. J. Ryby, výtěžek na obnovu kostelních varhan. Konec a registrace nejsou uvedeny. Pořadatelský plakát: https://www.radejoviceobec.cz/evt_image.php?img=2357&v=1794518850"
+      ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-17T07:49:47+00:00",
+      "verifiedAt": "2026-11-17T10:21:10+00:00",
       "sourceUrl": "https://www.radejoviceobec.cz/aktualne/kalendar-akci/vanocni-koncert-1019_142cs.html",
-      "location": {
-        "lat": 49.9472248,
-        "lon": 14.564771,
-        "precision": "town",
-        "label": "Radějovice — orientační střed obce, nikoli přesné místo akce",
-        "sourceUrl": "https://www.openstreetmap.org/relation/437877"
-      }
+      "location": null
     },
     {
       "id": "e-818edce0c8eb1add0568",
