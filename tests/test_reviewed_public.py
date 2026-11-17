@@ -32,6 +32,12 @@ class ReviewedTests(unittest.TestCase):
     def setUp(self):
         self.c = module('collector')
         self.snapshot = json.loads((ROOT/'data/reviewed-events.json').read_text())
+        # Lifecycle fixtures need a stable initial feed revision, independent of
+        # the real release date. Keep every actual event and its evidence date.
+        self.snapshot['generatedAt'] = '2026-11-12T10:00:00+01:00'
+        # Mutation tests deliberately change an existing coordinate; newly
+        # appended null-location events must not turn that case into a no-op.
+        self.snapshot['events'].sort(key=lambda event: event['location'] is None)
         self.n = len(self.snapshot['events'])
         registry = json.loads((ROOT/'data/sources.json').read_text())
         self.registry = dict(registry, sources=[s for s in registry['sources'] if s['adapter']=='reviewed-public'])
@@ -133,8 +139,15 @@ class ReviewedTests(unittest.TestCase):
                 matches = [s for s in sources if s['primary_host']==host]
                 self.assertEqual(len(matches),1)
                 source = matches[0]
-                self.assertEqual(source['allowed_towns'],{town:'Středočeský kraj'})
-                self.assertEqual(source['allowed_locations'],{town:[location] if location else []})
+                expected_towns = {town:'Středočeský kraj'}
+                expected_locations = {town:[location] if location else []}
+                additions = {'www.zus-popo.net':'Kostelec u Křížků',
+                             'www.strancice.cz':'Všechromy'}
+                if host in additions:
+                    expected_towns[additions[host]] = 'Středočeský kraj'
+                    expected_locations[additions[host]] = []
+                self.assertEqual(source['allowed_towns'],expected_towns)
+                self.assertEqual(source['allowed_locations'],expected_locations)
                 event = dict(self.snapshot['events'][0],sourceUrl=f'https://{host}/program',
                              town=town,region='Středočeský kraj',location=location)
                 self.assertEqual(self.c.reviewed_public.binding(event,sources)['id'],source['id'])

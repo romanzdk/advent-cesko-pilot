@@ -23,7 +23,10 @@ TOWN_SOURCES = [s for s in REGISTRY['sources'] if s['adapter'] == 'galileo' and 
 class GalileoTownSources(unittest.TestCase):
     def test_town_sources_are_bounded_seedless_and_located(self):
         self.assertGreaterEqual(len(TOWN_SOURCES), 40)
-        towns = [s['town'] for s in REGISTRY['sources']]
+        # An exact editorial PDF may share a town with its municipal calendar;
+        # only duplicate live calendars violate this invariant. URL ownership
+        # remains unique and is checked independently by the public validator.
+        towns = [s['town'] for s in REGISTRY['sources'] if s['adapter'] != 'reviewed-public']
         for source in TOWN_SOURCES:
             with self.subTest(source=source['id']):
                 self.assertEqual(towns.count(source['town']), 1)

@@ -2395,7 +2395,8 @@
       "adapter": "reviewed-public",
       "primary_host": "www.zus-popo.net",
       "allowed_towns": {
-        "Velké Popovice": "Středočeský kraj"
+        "Velké Popovice": "Středočeský kraj",
+        "Kostelec u Křížků": "Středočeský kraj"
       },
       "index_urls": [
         "https://www.zus-popo.net/"
@@ -2412,7 +2413,8 @@
             "label": "Velké Popovice",
             "sourceUrl": "https://www.openstreetmap.org/relation/437951"
           }
-        ]
+        ],
+        "Kostelec u Křížků": []
       }
     },
     {
@@ -2441,7 +2443,8 @@
       "adapter": "reviewed-public",
       "primary_host": "www.strancice.cz",
       "allowed_towns": {
-        "Strančice": "Středočeský kraj"
+        "Strančice": "Středočeský kraj",
+        "Všechromy": "Středočeský kraj"
       },
       "index_urls": [
         "https://www.strancice.cz/"
@@ -2450,7 +2453,8 @@
       "seed_urls": [],
       "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
       "allowed_locations": {
-        "Strančice": []
+        "Strančice": [],
+        "Všechromy": []
       }
     },
     {
@@ -2664,7 +2668,8 @@
       "allowed_towns": {
         "Říčany": "Středočeský kraj",
         "Klokočná": "Středočeský kraj",
-        "Světice": "Středočeský kraj"
+        "Světice": "Středočeský kraj",
+        "Lensedly": "Středočeský kraj"
       },
       "index_urls": [
         "https://www.facebook.com/"
@@ -2699,7 +2704,8 @@
             "label": "Světice",
             "sourceUrl": "https://www.openstreetmap.org/relation/436103"
           }
-        ]
+        ],
+        "Lensedly": []
       }
     },
     {
@@ -12771,7 +12777,60 @@
       "allowed_venues": [
         "Podkroví v 1.patře hasičské zbrojnice",
         "kostel Narození Panny Marie"
-      ]
+      ],
+      "event_reviews": {
+        "https://www.radejoviceobec.cz/aktualne/kalendar-akci/vanocni-atelier-betlemy-1017_141cs.html": {
+          "sourceId": "radejovice-obec-calendar",
+          "sourceUrl": "https://www.radejoviceobec.cz/aktualne/kalendar-akci/vanocni-atelier-betlemy-1017_141cs.html",
+          "sourceTown": "Radějovice",
+          "expectedTitle": "Vánoční ateliér - BETLÉMY",
+          "expectedDate": "2026-11-21",
+          "expectedEndDate": null,
+          "expectedVenue": "Podkroví v 1.patře hasičské zbrojnice",
+          "contentHash": "29cf4bcf320d311789f2696d3a6502dad5b4e514f74613be8146848ecb7de6d5",
+          "decision": "accept",
+          "reason": "Aktuální obecní detail a pořadatelský plakát byly ověřeny; úprava je vázaná na jedinou URL, obec, datum, původní místo a obsah.",
+          "overrides": {
+            "registration": "Nutná přihláška přes kontakt na stránce pořadatele; konání podmíněno dostatečným zájmem. Kapacita neověřena.",
+            "notes": [
+              "Dětské tvoření betlémů; konání závisí na dostatečném zájmu. Cena ani konec nejsou uvedeny. Aktuální plakát: https://www.radejoviceobec.cz/evt_image.php?img=2355&v=1794427706"
+            ]
+          }
+        },
+        "https://www.radejoviceobec.cz/aktualne/kalendar-akci/vanocni-koncert-1019_142cs.html": {
+          "sourceId": "radejovice-obec-calendar",
+          "sourceUrl": "https://www.radejoviceobec.cz/aktualne/kalendar-akci/vanocni-koncert-1019_142cs.html",
+          "sourceTown": "Radějovice",
+          "expectedTitle": "Vánoční koncert",
+          "expectedDate": "2026-12-18",
+          "expectedEndDate": null,
+          "expectedVenue": "kostel Narození Panny Marie",
+          "contentHash": "06fc2cf3daf11e24db528728f4b2bd30d659acd0f875d3d3b116129f70f58fda",
+          "decision": "accept",
+          "reason": "Aktuální obecní detail a pořadatelský plakát byly ověřeny; úprava je vázaná na jedinou URL, obec, datum, původní místo a obsah.",
+          "overrides": {
+            "notes": [
+              "Česká mše vánoční J. J. Ryby, výtěžek na obnovu kostelních varhan. Konec a registrace nejsou uvedeny. Pořadatelský plakát: https://www.radejoviceobec.cz/evt_image.php?img=2357&v=1794518850"
+            ]
+          }
+        }
+      },
+      "event_locations": {
+        "https://www.radejoviceobec.cz/aktualne/kalendar-akci/vanocni-koncert-1019_142cs.html": {
+          "sourceId": "radejovice-obec-calendar",
+          "sourceTown": "Radějovice",
+          "sourceUrl": "https://www.radejoviceobec.cz/aktualne/kalendar-akci/vanocni-koncert-1019_142cs.html",
+          "expectedVenue": "kostel Narození Panny Marie",
+          "expectedDate": "2026-12-18",
+          "town": "Olešky",
+          "locationKey": "olesky-unmapped-reviewed",
+          "verifiedAt": "2026-11-17T09:17:16.589141+01:00",
+          "supportingSourceUrls": [
+            "https://www.radejoviceobec.cz/aktualne/kalendar-akci/vanocni-koncert-1019_142cs.html",
+            "https://www.radejoviceobec.cz/evt_image.php?img=2357&v=1794518850"
+          ]
+        }
+      }
     },
     {
       "id": "rataje-nad-sazavou-obec-calendar",
@@ -18134,6 +18193,90 @@
             "sourceUrl": "https://www.openstreetmap.org/way/32252508"
           }
         ]
+      }
+    },
+    {
+      "id": "reviewed-zamekkostelec-cz-jevany",
+      "town": "Jevany",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "index_urls": [
+        "https://zamekkostelec.cz/adventni-pripravy-v-zahradnictvi-jevany/"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^(?:https://zamekkostelec\\.cz/adventni\\-pripravy\\-v\\-zahradnictvi\\-jevany/)$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřené primární podklady; výběr akcí, nikoli úplné obecní pokrytí. Časy přenosu nejsou novým ověřením pořadatele.",
+      "primary_host": "zamekkostelec.cz",
+      "allowed_towns": {
+        "Jevany": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Jevany": []
+      }
+    },
+    {
+      "id": "reviewed-www-senohraby-cz-ples",
+      "town": "Senohraby",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "index_urls": [
+        "https://www.senohraby.cz/aktualne/kultura-a-sport/hasicsky-mikulassky-ples-12-12-2927cs.html"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^(?:https://www\\.senohraby\\.cz/aktualne/kultura\\-a\\-sport/hasicsky\\-mikulassky\\-ples\\-12\\-12\\-2927cs\\.html)$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřené primární podklady; výběr akcí, nikoli úplné obecní pokrytí. Časy přenosu nejsou novým ověřením pořadatele.",
+      "primary_host": "www.senohraby.cz",
+      "allowed_towns": {
+        "Senohraby": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Senohraby": []
+      }
+    },
+    {
+      "id": "reviewed-www-kamenice-cz-setkani",
+      "town": "Kamenice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "index_urls": [
+        "https://www.kamenice.cz/volba-do-osadniho-vyboru-nova-hospoda-a-predvanocni-sousedske-setkani"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^(?:https://www\\.kamenice\\.cz/volba\\-do\\-osadniho\\-vyboru\\-nova\\-hospoda\\-a\\-predvanocni\\-sousedske\\-setkani)$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřené primární podklady; výběr akcí, nikoli úplné obecní pokrytí. Časy přenosu nejsou novým ověřením pořadatele.",
+      "primary_host": "www.kamenice.cz",
+      "allowed_towns": {
+        "Kamenice": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Kamenice": []
+      }
+    },
+    {
+      "id": "reviewed-www-radejoviceobec-cz-plan",
+      "town": "Radějovice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "index_urls": [
+        "https://www.radejoviceobec.cz/evt_file.php?file=2326&original=Listy+4_2026.pdf"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^(?:https://www\\.radejoviceobec\\.cz/evt_file\\.php\\?file=2326\\&original=Listy\\+4_2026\\.pdf)$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřené primární podklady; výběr akcí, nikoli úplné obecní pokrytí. Časy přenosu nejsou novým ověřením pořadatele.",
+      "primary_host": "www.radejoviceobec.cz",
+      "allowed_towns": {
+        "Radějovice": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Radějovice": []
       }
     }
   ]
