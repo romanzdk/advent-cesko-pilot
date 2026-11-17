@@ -5857,5 +5857,166 @@
     "precision": "town",
     "label": "Hýsly — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/441112"
+  },
+  "Krasov": {
+    "lat": 50.0952465,
+    "lon": 17.5159196,
+    "precision": "town",
+    "label": "Krasov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439392"
+  },
+  "Leskovec nad Moravicí": {
+    "lat": 49.9059904,
+    "lon": 17.5778293,
+    "precision": "town",
+    "label": "Leskovec nad Moravicí — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437778"
+  },
+  "Lhotka": {
+    "lat": 49.5972489,
+    "lon": 18.2982364,
+    "precision": "town",
+    "label": "Lhotka — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437889"
+  },
+  "Košařiska": {
+    "lat": 49.590086,
+    "lon": 18.6946435,
+    "precision": "town",
+    "label": "Košařiska — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437791"
+  },
+  "Svobodné Heřmanice": {
+    "lat": 49.942998,
+    "lon": 17.6662913,
+    "precision": "town",
+    "label": "Svobodné Heřmanice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437760"
+  },
+  "Mikolajice": {
+    "lat": 49.8771605,
+    "lon": 17.7933184,
+    "precision": "town",
+    "label": "Mikolajice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437667"
+  },
+  "Bílá": {
+    "lat": 49.4420083,
+    "lon": 18.4531685,
+    "precision": "town",
+    "label": "Bílá — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437863"
+  },
+  "Soběšovice": {
+    "lat": 49.7248905,
+    "lon": 18.4661906,
+    "precision": "town",
+    "label": "Soběšovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436981"
+  },
+  "Velká Štáhle": {
+    "lat": 49.9295982,
+    "lon": 17.3567927,
+    "precision": "town",
+    "label": "Velká Štáhle — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439406"
+  },
+  "Dětřichov nad Bystřicí": {
+    "lat": 49.8343133,
+    "lon": 17.4015875,
+    "precision": "town",
+    "label": "Dětřichov nad Bystřicí — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439383"
+  },
+  "Kružberk": {
+    "lat": 49.843366,
+    "lon": 17.6748503,
+    "precision": "town",
+    "label": "Kružberk — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437711"
+  },
+  "Melč": {
+    "lat": 49.8499267,
+    "lon": 17.7577991,
+    "precision": "town",
+    "label": "Melč — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437650"
+  },
+  "Petrovice u Karviné": {
+    "lat": 49.8958672,
+    "lon": 18.5477896,
+    "precision": "town",
+    "label": "Petrovice u Karviné — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437924"
+  },
+  "Heřmanice u Oder": {
+    "lat": 49.7101559,
+    "lon": 17.7995067,
+    "precision": "town",
+    "label": "Heřmanice u Oder — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437550"
+  },
+  "Nové Lublice": {
+    "lat": 49.8604547,
+    "lon": 17.6818208,
+    "precision": "town",
+    "label": "Nové Lublice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437628"
+  },
+  "Uhlířov": {
+    "lat": 49.8924584,
+    "lon": 17.842899,
+    "precision": "town",
+    "label": "Uhlířov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437671"
+  },
+  "Jezdkovice": {
+    "lat": 49.9230321,
+    "lon": 17.7748053,
+    "precision": "town",
+    "label": "Jezdkovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437698"
+  },
+  "Hrabyně": {
+    "lat": 49.8815877,
+    "lon": 18.0543817,
+    "precision": "town",
+    "label": "Hrabyně — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437597"
+  },
+  "Mankovice": {
+    "lat": 49.6374611,
+    "lon": 17.8801402,
+    "precision": "town",
+    "label": "Mankovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437541"
+  },
+  "Jakubčovice nad Odrou": {
+    "lat": 49.6950401,
+    "lon": 17.7876732,
+    "precision": "town",
+    "label": "Jakubčovice nad Odrou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437956"
+  },
+  "Kateřinice": {
+    "lat": 49.6691896,
+    "lon": 18.188175,
+    "precision": "town",
+    "label": "Kateřinice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437543"
+  },
+  "Tísek": {
+    "lat": 49.7927259,
+    "lon": 18.0142788,
+    "precision": "town",
+    "label": "Tísek — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437603"
+  },
+  "Těškovice": {
+    "lat": 49.8140913,
+    "lon": 18.0209023,
+    "precision": "town",
+    "label": "Těškovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437582"
   }
 }
