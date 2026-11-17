@@ -6018,5 +6018,131 @@
     "precision": "town",
     "label": "Těškovice — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/437582"
+  },
+  "Mladějovice": {
+    "lat": 49.7526064,
+    "lon": 17.2309543,
+    "precision": "town",
+    "label": "Mladějovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438788"
+  },
+  "Olšovec": {
+    "lat": 49.5963737,
+    "lon": 17.7071328,
+    "precision": "town",
+    "label": "Olšovec — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438016"
+  },
+  "Špičky": {
+    "lat": 49.5448072,
+    "lon": 17.8056461,
+    "precision": "town",
+    "label": "Špičky — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438071"
+  },
+  "Město Libavá": {
+    "lat": 49.721889,
+    "lon": 17.520088,
+    "precision": "town",
+    "label": "Město Libavá — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/5834179"
+  },
+  "Dětkovice": {
+    "lat": 49.4127177,
+    "lon": 17.0924143,
+    "precision": "town",
+    "label": "Dětkovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438587"
+  },
+  "Stražisko": {
+    "lat": 49.5456252,
+    "lon": 16.918751,
+    "precision": "town",
+    "label": "Stražisko — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438265"
+  },
+  "Velké Kunětice": {
+    "lat": 50.3165765,
+    "lon": 17.265929,
+    "precision": "town",
+    "label": "Velké Kunětice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438683"
+  },
+  "Oskava": {
+    "lat": 49.8952316,
+    "lon": 17.1321432,
+    "precision": "town",
+    "label": "Oskava — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438309"
+  },
+  "Senice na Hané": {
+    "lat": 49.6240114,
+    "lon": 17.0857754,
+    "precision": "town",
+    "label": "Senice na Hané — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438526"
+  },
+  "Postřelmůvek": {
+    "lat": 49.9226036,
+    "lon": 16.8790279,
+    "precision": "town",
+    "label": "Postřelmůvek — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439424"
+  },
+  "Zvole": {
+    "lat": 49.8398169,
+    "lon": 16.9143399,
+    "precision": "town",
+    "label": "Zvole — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439428"
+  },
+  "Malá Morava": {
+    "lat": 50.0998345,
+    "lon": 16.8510108,
+    "precision": "town",
+    "label": "Malá Morava — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438313"
+  },
+  "Hustopeče nad Bečvou": {
+    "lat": 49.5302107,
+    "lon": 17.8703421,
+    "precision": "town",
+    "label": "Hustopeče nad Bečvou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438333"
+  },
+  "Maletín": {
+    "lat": 49.7988651,
+    "lon": 16.782843,
+    "precision": "town",
+    "label": "Maletín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436831"
+  },
+  "Malhotice": {
+    "lat": 49.4896682,
+    "lon": 17.7645093,
+    "precision": "town",
+    "label": "Malhotice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438355"
+  },
+  "Milotice nad Bečvou": {
+    "lat": 49.5353429,
+    "lon": 17.838583,
+    "precision": "town",
+    "label": "Milotice nad Bečvou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438337"
+  },
+  "Paršovice": {
+    "lat": 49.5084774,
+    "lon": 17.6908615,
+    "precision": "town",
+    "label": "Paršovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438373"
+  },
+  "Šumperk": {
+    "lat": 49.9655521,
+    "lon": 16.9705651,
+    "precision": "town",
+    "label": "Šumperk — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438047"
   }
 }
