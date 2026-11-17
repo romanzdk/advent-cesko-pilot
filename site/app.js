@@ -48,7 +48,7 @@ function appendCards() {
   listCount.textContent = `Zobrazeno ${renderedCount} z ${visibleEvents.length}`;
   loadMore.hidden = renderedCount >= visibleEvents.length;
 }
-let map, markerLayer, mapPromise;
+let map, markerLayer, mapPromise, fitMap, autoView = true;
 let tileFailed = false;
 let userPosition = null, userMarker, locationTimer, locationSlowTimer;
 let locationGeneration = 0;
@@ -151,8 +151,12 @@ function updateMap() {
     bounds.push([group.lat, group.lon]);
   }
   userMarker?.bringToFront();
-  if (userPosition && !groups.length) map.setView(bounds[0], 10, { animate: false });
-  else if (bounds.length) map.fitBounds(bounds, { padding: [48, 48], maxZoom: 13, animate: false });
+  fitMap = () => {
+    if (userPosition && !groups.length) map.setView(bounds[0], 10, { animate: false });
+    else if (bounds.length) map.fitBounds(bounds, { padding: [48, 48], maxZoom: 13, animate: false });
+    autoView = true;
+  };
+  fitMap();
   const unmapped = visibleEvents.length - mappedCount;
   $('map-notice').textContent = tileFailed ? 'Mapový podklad se nepodařilo načíst. Body a seznam akcí zůstávají dostupné.' : unmapped ? `${unmapped} akcí nemá polohu; najdete je v seznamu.` : 'Vyberte bod pro akce v daném místě.';
 }
@@ -175,6 +179,7 @@ async function ensureMap() {
       });
       tiles.addTo(map);
       markerLayer = L.layerGroup().addTo(map);
+      map.on('dragstart zoomstart', () => { autoView = false; });
       const observer = new ResizeObserver(() => map.invalidateSize());
       observer.observe($('map'));
       updateMap();
@@ -390,10 +395,17 @@ function expandMap(expanded) {
     for (const sibling of node.parentElement.children) if (sibling !== node) sibling.inert = expanded;
   }
   if (!expanded) scrollTo(0, scrollBeforeExpand);
-  if (map) { map.invalidateSize(); updateMap(); }
+  if (!map) return;
+  const refit = autoView;
+  map.invalidateSize();
+  if (refit) fitMap();
 }
 $('map-expand').addEventListener('click', () => expandMap(!$('map-panel').classList.contains('map-expanded')));
-addEventListener('keydown', event => { if (event.key === 'Escape' && $('map-panel').classList.contains('map-expanded')) expandMap(false); });
+addEventListener('keydown', event => {
+  if (event.key !== 'Escape' || !$('map-panel').classList.contains('map-expanded')) return;
+  if (document.querySelector('#map .leaflet-popup')) map.closePopup();
+  else expandMap(false);
+}, true);
 function setView(view) {
   if (view === 'list') expandMap(false);
   $('explore').dataset.view = view;
