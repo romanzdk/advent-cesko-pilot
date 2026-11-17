@@ -21934,6 +21934,60 @@
         "Obecní dům Hýsly",
         "U vánočního stromku"
       ]
+    },
+    {
+      "id": "reviewed-www-slapanice-cz",
+      "town": "Šlapanice",
+      "region": "Jihomoravský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.slapanice.cz",
+      "allowed_towns": {
+        "Šlapanice": "Jihomoravský kraj"
+      },
+      "index_urls": [
+        "https://www.slapanice.cz/akce"
+      ],
+      "url_regex": "^https://www\\.slapanice\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Šlapanice": [
+          {
+            "lat": 49.1688974,
+            "lon": 16.7272687,
+            "precision": "town",
+            "label": "Šlapanice — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/436872"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-bzenec-cz",
+      "town": "Bzenec",
+      "region": "Jihomoravský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.bzenec.cz",
+      "allowed_towns": {
+        "Bzenec": "Jihomoravský kraj"
+      },
+      "index_urls": [
+        "https://www.bzenec.cz/kalendar-udalosti"
+      ],
+      "url_regex": "^https://www\\.bzenec\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Bzenec": [
+          {
+            "lat": 48.9736321,
+            "lon": 17.2668112,
+            "precision": "town",
+            "label": "Bzenec — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/441143"
+          }
+        ]
+      }
     }
   ]
 }

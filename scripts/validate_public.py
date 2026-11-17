@@ -76,8 +76,10 @@ def validate_directory(path, registry=None):
     sources=registry['sources'];regions={s['region'] for s in sources}
     by_id={s['id']:s for s in sources}
     require(bool(sources) and len(by_id)==len(sources) and regions<=REGIONS,'Invalid registry scope')
+    # Over 512 sources overflow re's pattern cache; compile each once instead of on every lookup.
+    rx={s['id']:re.compile(s['url_regex']) for s in sources}
     path=Path(path);data=json.loads((path/'events.json').read_text())
-    reviewed_ids={e['id'] for e in data['events'] if any(s.get('adapter')=='reviewed-public' and re.fullmatch(s['url_regex'],e['sourceUrl']) for s in sources)}
+    reviewed_ids={e['id'] for e in data['events'] if any(s.get('adapter')=='reviewed-public' and rx[s['id']].fullmatch(e['sourceUrl']) for s in sources)}
     audited = {}
     for event in data['events']:
         require(isinstance(event, dict) and set(event) == FIELDS, 'Unexpected public event fields')
@@ -86,7 +88,7 @@ def validate_directory(path, registry=None):
         candidates = []
         for source in sources:
             records = source.get('audited_events', {})
-            require(isinstance(records, dict) or not re.fullmatch(source['url_regex'], url), 'Invalid audited receipt map')
+            require(isinstance(records, dict) or not rx[source['id']].fullmatch(url), 'Invalid audited receipt map')
             if isinstance(records, dict) and url in records:
                 candidates.append(source)
         require(len(candidates) <= 1, 'Ambiguous audited URL')
@@ -123,7 +125,7 @@ def validate_directory(path, registry=None):
                 and source['url']==expected['index_urls'][0],'Source identity disagrees with registry')
         require(source['status'] in ['ok','partial','error'] and https(source['url']),'Invalid source status/URL')
     for event in data['events']:
-        matches=[s for s in sources if re.fullmatch(s['url_regex'],event['sourceUrl'])]
+        matches=[s for s in sources if rx[s['id']].fullmatch(event['sourceUrl'])]
         # Regional calendars (Posázaví) serve several town sources from one URL space; the town picks the owner.
         if len(matches)>1:
             matches=[s for s in matches if s['town']==event['town']]
