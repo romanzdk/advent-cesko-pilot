@@ -3841,6 +3841,34 @@
       }
     },
     {
+      "id": "e-2ca1a63d95e1daee",
+      "title": "Slavnostní rozsvěcení vánočního stromu – Karlínské náměstí",
+      "town": "Praha 8",
+      "venue": "Karlínské náměstí",
+      "date": "2026-11-23",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Městská část Praha 8 zve na slavnostní rozsvěcení vánočních stromů; program zajistí studenti ZUŠ Klapkova a Taussigova.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha8.cz/Slavnostni-rozsveceni-vanocnich-stromu-2026.html",
+      "location": {
+        "lat": 50.1191317,
+        "lon": 14.4551595,
+        "precision": "town",
+        "label": "Praha 8 — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999109"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-3fead62bf341b6b9ce93",
       "title": "KURZ VÁZÁNÍ ADVENTNÍCH VĚNCŮ",
       "town": "Nejdek",
@@ -4215,6 +4243,34 @@
       }
     },
     {
+      "id": "e-209489d9ee47d78d",
+      "title": "Slavnostní rozsvěcení vánočního stromu – Libeňské podzámčí",
+      "town": "Praha 8",
+      "venue": "Libeňské podzámčí",
+      "date": "2026-11-24",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Městská část Praha 8 zve na slavnostní rozsvěcení vánočních stromů; program zajistí studenti ZUŠ Klapkova a Taussigova.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha8.cz/Slavnostni-rozsveceni-vanocnich-stromu-2026.html",
+      "location": {
+        "lat": 50.1191317,
+        "lon": 14.4551595,
+        "precision": "town",
+        "label": "Praha 8 — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999109"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-b6e758835121bdb59642",
       "title": "Vázání adventních věnců",
       "town": "Dlouhá Loučka",
@@ -4467,6 +4523,34 @@
         "label": "Neveklov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441470"
       }
+    },
+    {
+      "id": "e-2d9d23addf293358",
+      "title": "Adventní koncert v Libeňském zámku",
+      "town": "Praha 8",
+      "venue": "Libeňský zámek, obřadní síň, Zenklova 35",
+      "date": "2026-11-24",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "150 Kč (platba pouze v hotovosti)",
+      "registration": "Předprodej každou středu v Libeňském zámku, kanc. č. 39; v den koncertu od 18:00 do 18:30 v obřadní síni.",
+      "registrationUrl": null,
+      "description": "Jeden ze čtyř adventních koncertů MČ Praha 8 v obřadní síni Libeňského zámku.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha8.cz/Adventni-koncerty-v-Libenskem-zamku-2026.html",
+      "location": {
+        "lat": 50.1191317,
+        "lon": 14.4551595,
+        "precision": "town",
+        "label": "Praha 8 — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999109"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-71c9497e16fa55207c9c",
@@ -4866,6 +4950,34 @@
         "label": "Vejprnice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439759"
       }
+    },
+    {
+      "id": "e-3feed7e5b2a0c6cf",
+      "title": "Slavnostní rozsvěcení vánočního stromu – Ládví",
+      "town": "Praha 8",
+      "venue": "Ládví",
+      "date": "2026-11-25",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Městská část Praha 8 zve na slavnostní rozsvěcení vánočních stromů; program zajistí studenti ZUŠ Klapkova a Taussigova.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha8.cz/Slavnostni-rozsveceni-vanocnich-stromu-2026.html",
+      "location": {
+        "lat": 50.1191317,
+        "lon": 14.4551595,
+        "precision": "town",
+        "label": "Praha 8 — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999109"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-cfd3c9582f567f7631bd",
@@ -5940,6 +6052,34 @@
         "label": "Kostice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441327"
       }
+    },
+    {
+      "id": "e-bf23c25cb9a4b6dd",
+      "title": "Slavnostní rozsvěcení vánočního stromu – Čimice",
+      "town": "Praha 8",
+      "venue": "Čimice",
+      "date": "2026-11-26",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Městská část Praha 8 zve na slavnostní rozsvěcení vánočních stromů; program zajistí studenti ZUŠ Klapkova a Taussigova.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha8.cz/Slavnostni-rozsveceni-vanocnich-stromu-2026.html",
+      "location": {
+        "lat": 50.1191317,
+        "lon": 14.4551595,
+        "precision": "town",
+        "label": "Praha 8 — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999109"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-aec283204c28c71106d0",
@@ -7810,6 +7950,34 @@
       }
     },
     {
+      "id": "e-bb4935b94a5f6af6",
+      "title": "Adventní dílna – výroba věnců",
+      "town": "Praha-Suchdol",
+      "venue": "Radnice Praha-Suchdol, velká zasedací místnost (3. NP)",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "19:00",
+      "category": "tvoreni",
+      "price": null,
+      "registration": "Nutná předchozí rezervace e-mailem u KC Půda.",
+      "registrationUrl": null,
+      "description": "KC Půda zve na adventní dílnu – výrobu věnců a dekorací.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://praha-suchdol.cz/akce/adventni-dilna-vyroba-vencu/",
+      "location": {
+        "lat": 50.1386836,
+        "lon": 14.377106,
+        "precision": "town",
+        "label": "Praha-Suchdol — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999118"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-578c483002bee51513e4",
       "title": "Vánoční akce v ZŠ Jandusů",
       "town": "Praha-Uhříněves",
@@ -8146,6 +8314,34 @@
         "label": "Osek — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439341"
       }
+    },
+    {
+      "id": "e-a5bf77965a630684",
+      "title": "Slavnostní rozsvěcení vánočního stromu – Krakov",
+      "town": "Praha 8",
+      "venue": "Krakov",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Městská část Praha 8 zve na slavnostní rozsvěcení vánočních stromů; program zajistí studenti ZUŠ Klapkova a Taussigova.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha8.cz/Slavnostni-rozsveceni-vanocnich-stromu-2026.html",
+      "location": {
+        "lat": 50.1191317,
+        "lon": 14.4551595,
+        "precision": "town",
+        "label": "Praha 8 — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999109"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-cbd55cacba7ce48cb427",
@@ -8738,6 +8934,34 @@
         "label": "Pohořelice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/436886"
       }
+    },
+    {
+      "id": "e-d861847195b63ccd",
+      "title": "Vánoční vázání adventních věnců, tvoření a tradice",
+      "town": "Praha-Dolní Měcholupy",
+      "venue": "Komunitní centrum, Na Paloučku 11",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "category": "tvoreni",
+      "price": "400 Kč za věnec (dotovaná cena pro občany MČ)",
+      "registration": "Rezervace místa e-mailem u komunitního centra.",
+      "registrationUrl": null,
+      "description": "Vázání vlastních adventních věnců, vánoční tvoření, zdobení perníčků a příprava nepečeného cukroví.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.dolnimecholupy.cz/2026/11/02/vanocni-vazani-adventnich-vencu-tvoreni-a-tradice/",
+      "location": {
+        "lat": 50.0590584,
+        "lon": 14.5591003,
+        "precision": "town",
+        "label": "Praha-Dolní Měcholupy — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999107"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-ee690dfe541f45ab825a",
@@ -13838,6 +14062,34 @@
       }
     },
     {
+      "id": "e-87bad706b8381d1b",
+      "title": "Jak se peče čert",
+      "town": "Praha 19",
+      "venue": "KKCK (Kulturní a kreativní centrum Kbely)",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "17:00",
+      "category": "setkani",
+      "price": "80 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční pohádka divadla PRIMA DEN. Bezbariérový přístup.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha19.cz/akce/jak-se-pece-cert/",
+      "location": {
+        "lat": 50.1319574,
+        "lon": 14.5493202,
+        "precision": "town",
+        "label": "Praha 19 — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999081"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-8ae3842a03659178a1e4",
       "title": "Rozsvěcení vánočního stromu",
       "town": "Prostřední Bečva",
@@ -16611,6 +16863,34 @@
       }
     },
     {
+      "id": "e-50c658fbcc70e2fb",
+      "title": "Předvečer adventu a rozsvícení stromku v Miškovicích",
+      "town": "Praha-Čakovice",
+      "venue": "Miškovice, u bývalé hasičárny",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Sousedské setkání v Miškovicích a rozsvícení vánočního stromku.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.cakovice.cz/Slavnostni-rozsviceni-vanocnich-stromku-10.html",
+      "location": {
+        "lat": 50.1523646,
+        "lon": 14.5205763,
+        "precision": "town",
+        "label": "Praha-Čakovice — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999085"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-76621afbf453d25b7cc6",
       "title": "Adventní koncert - sobota 28. listopadu",
       "town": "Sedlice",
@@ -17086,6 +17366,36 @@
         "label": "Nový Jičín — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/436988"
       }
+    },
+    {
+      "id": "e-b712547cfe8fd2e6",
+      "title": "Kunratická adventní dílna",
+      "town": "Praha-Kunratice",
+      "venue": "Úřad MČ Praha-Kunratice, K Libuši 7",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tvořivá adventní dílna: výroba adventního věnce, dekorace na dveře, proutěného srdce, zvonku nebo svícínku s pomocí floristů. Materiál a připravené věnce na místě.",
+      "notes": [
+        "Čas programu zatím nebyl zveřejněn. Nejde o celodenní program."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha-kunratice.cz/akce-kalendar/8115-kunraticka-adventni-dilna",
+      "location": {
+        "lat": 50.0116362,
+        "lon": 14.4845747,
+        "precision": "town",
+        "label": "Praha-Kunratice — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/431593"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-346804cfac28d7d2",
@@ -18081,6 +18391,36 @@
         "label": "Plzeň — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438344"
       }
+    },
+    {
+      "id": "e-31038d9b41ca1dfd",
+      "title": "Rozsvícení vánočního stromu a vánoční jarmark",
+      "town": "Praha-Dolní Měcholupy",
+      "venue": "Park za školou",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Od 13:00 tvořivé dílny v ZŠ, v 15:00 vyhlášení Běhatlonu, v 15:40 otevření vánočního jarmarku skupiny ARTpark, 16–17 h vystoupení ZŠ, MŠ a Leonarda, v 17:00 rozsvícení vánočního stromu.",
+      "notes": [
+        "Rozsvícení stromu: 17:00."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.dolnimecholupy.cz/2026/11/09/rozsvitime-spolecne-vanocni-strom/",
+      "location": {
+        "lat": 50.0590584,
+        "lon": 14.5591003,
+        "precision": "town",
+        "label": "Praha-Dolní Měcholupy — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999107"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-3ed343c791d71d7c2f0f",
@@ -20305,6 +20645,90 @@
         "label": "Podivín — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442290"
       }
+    },
+    {
+      "id": "e-b0f4db770817f4bf",
+      "title": "Rozsvícení vánočního stromu ve Kbelích",
+      "town": "Praha 19",
+      "venue": "Centrální park Kbely",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "19:00",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Program od 15:00: vystoupení dětí z MŠ a ZŠ Kbely, zpěv Tereza Dlouhá, hudba a občerstvení do 19:00, čertovské peklo a světelná show.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha19.cz/akce/rozsviceni-vanocniho-stromu-4/",
+      "location": {
+        "lat": 50.1319574,
+        "lon": 14.5493202,
+        "precision": "town",
+        "label": "Praha 19 — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999081"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
+      "id": "e-15a5b5a2c7294908",
+      "title": "Rozsvícení vánočního stromu",
+      "town": "Praha-Satalice",
+      "venue": "Komunitní centrum Satalice",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "18:00",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Odpolední program a v 17:00 společné rozsvícení stromečku v komunitním centru.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.satalice.cz/akce/6895-rozsviceni-vanocniho-stromu",
+      "location": {
+        "lat": 50.1255484,
+        "lon": 14.5717874,
+        "precision": "town",
+        "label": "Praha-Satalice — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999096"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
+      "id": "e-10b42c474eec0dda",
+      "title": "Zahájení obecního betléma a rozsvícení vánočního stromu",
+      "town": "Praha-Suchdol",
+      "venue": "Suchdolské náměstí",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "17:00",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Slavnostní zahájení obecního betléma a rozsvícení stromu: vystoupení žáků ZUŠ Jana Hanuše, souboru MIKEŠ, dětí z DDM Suchdol a Muziky Radosti; prodej rukodělných výrobků, vánoční dekorace, jmelí a teplé nápoje.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://praha-suchdol.cz/akce/zahajeni-obecniho-betlema-3/",
+      "location": {
+        "lat": 50.1386836,
+        "lon": 14.377106,
+        "precision": "town",
+        "label": "Praha-Suchdol — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999118"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-e393c2acd88aae1d2a44",
@@ -23048,6 +23472,36 @@
       }
     },
     {
+      "id": "e-3ffcd70771cb9331",
+      "title": "Rozsvěcení vánočních stromů",
+      "town": "Praha 5",
+      "venue": "Náměstí 14. října před kostelem sv. Václava (Smíchov)",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvěcení vánočních stromů Prahy 5: od 16:30 na náměstí 14. října na Smíchově a od 18:00 na Tilleho náměstí na Barrandově.",
+      "notes": [
+        "Druhé rozsvícení začíná v 18:00 na Tilleho náměstí na Barrandově."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha5.cz/udalosti/rozsveceni-vanocnich-stromu/",
+      "location": {
+        "lat": 50.0519182,
+        "lon": 14.3839303,
+        "precision": "town",
+        "label": "Praha 5 — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999086"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-17940abdcce86a85255d",
       "title": "Oslavte začátek adventu při rozsvícení vánočního stromu",
       "town": "Skalná",
@@ -24082,6 +24536,34 @@
       }
     },
     {
+      "id": "e-b3c8425539d1fb9f",
+      "title": "Rozsvícení vánočního stromu v Řepích",
+      "town": "Praha 17",
+      "venue": "Ulice Makovského u tramvajové zastávky Slánská, naproti OC Řepy",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "19:00",
+      "category": "strom",
+      "price": "Zdarma",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu s vystoupením pěveckých sborů řepských MŠ, ZŠ a ZUŠ a s občerstvením. Pořádá MČ Praha 17.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.repy.cz/kalendar-akci/rozsviceni-vanocniho-stromu-2026-ulice-makovskeho-tramvajova-zastavka-slanska",
+      "location": {
+        "lat": 50.068877,
+        "lon": 14.3073501,
+        "precision": "town",
+        "label": "Praha 17 — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999117"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-37b5b1f0219fd14fc46d",
       "title": "I. adventní koncert",
       "town": "Praha-Radotín",
@@ -25072,6 +25554,64 @@
       }
     },
     {
+      "id": "e-34db39276ab6e4ab",
+      "title": "Adventní koncert ve Spojovně",
+      "town": "Praha-Kunratice",
+      "venue": "Pivovar Spojovna, U Kunratického lesa 1801",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": "Rezervace míst online na webu pivovaru, telefonicky nebo u obsluhy.",
+      "registrationUrl": null,
+      "description": "Zahájení adventu s koncertem zpěvačky Nikoly Mais a jejího tria, vánočním speciálem, horkým punčem a tematickým menu.",
+      "notes": [
+        "Kalendář uvádí datum 12. 11. 2026, text pozvánky 29. 11. 2026 od 18:00; zveřejněno podle textu pozvánky."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha-kunratice.cz/akce-kalendar/8168-adventni-koncert-ve-spojovne",
+      "location": {
+        "lat": 50.0116362,
+        "lon": 14.4845747,
+        "precision": "town",
+        "label": "Praha-Kunratice — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/431593"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
+      "id": "e-c8429a48d56c2c27",
+      "title": "1. adventní neděle a rozsvícení stromku v Třeboradicích",
+      "town": "Praha-Čakovice",
+      "venue": "Třeboradice, u kostela",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Doprovodný program s „princeznou ze mlejna a jejím Jindrou“ (Andrea Černá a Radek Valenta), vystoupení dětí z MŠ a rozsvícení vánočního stromku.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.cakovice.cz/Slavnostni-rozsviceni-vanocnich-stromku-11.html",
+      "location": {
+        "lat": 50.1523646,
+        "lon": 14.5205763,
+        "precision": "town",
+        "label": "Praha-Čakovice — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999085"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-000d6b4cf25a509dd632",
       "title": "Rozsvícení vánočního stromu",
       "town": "Pustá Polom",
@@ -26001,6 +26541,69 @@
       }
     },
     {
+      "id": "e-a57ebf8a0d85b784",
+      "title": "Rozsvícení vánočního stromu",
+      "town": "Praha-Kunratice",
+      "venue": null,
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tradiční rozsvícení vánočního stromu v Kunraticích.",
+      "notes": [
+        "Čas programu zatím nebyl zveřejněn. Nejde o celodenní program.",
+        "Přesné místo konání zatím nebylo zveřejněno."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha-kunratice.cz/akce-kalendar/8138-rozsviceni-vanocniho-stromu-2911",
+      "location": {
+        "lat": 50.0116362,
+        "lon": 14.4845747,
+        "precision": "town",
+        "label": "Praha-Kunratice — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/431593"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
+      "id": "e-6f491786e76e94a1",
+      "title": "Rozsvícení vánočního stromu s koncertem KrisKros a cappella",
+      "town": "Praha-Vinoř",
+      "venue": null,
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromu ve Vinoři s koncertem skupiny KrisKros a cappella.",
+      "notes": [
+        "Datum je uvedeno v přehledu akcí městské části; detail akce ho neuvádí.",
+        "Čas programu zatím nebyl zveřejněn. Nejde o celodenní program.",
+        "Přesné místo konání zatím nebylo zveřejněno."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha-vinor.cz/akce/rozsviceni-vanocniho-stromu-2026/",
+      "location": {
+        "lat": 50.1409853,
+        "lon": 14.5749283,
+        "precision": "town",
+        "label": "Praha-Vinoř — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/426970"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-47e3c1ba35b7ee42727b",
       "title": "Rakovnický advent 2026",
       "town": "Rakovník",
@@ -26523,6 +27126,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/437188"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-81417fb401731eaa",
+      "title": "Rozsvícení vánočního stromu a adventní trhy v Čakovicích",
+      "town": "Praha-Čakovice",
+      "venue": "U čakovického zámku a náměstí 25. března",
+      "date": "2026-11-30",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "20:30",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "V 17:00 rozsvícení vánočního stromu u zámku, v 18:00 rozsvícení „Kouzelného náměstíčka“ a adventní trhy se stánkovým prodejem; od 17:00 výstava, charitativní prodej a pečení v KC Sýpka.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.cakovice.cz/Slavnostni-rozsviceni-vanocnich-stromku-12.html",
+      "location": {
+        "lat": 50.1523646,
+        "lon": 14.5205763,
+        "precision": "town",
+        "label": "Praha-Čakovice — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999085"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-32d4015f16a2ff22ca08",
@@ -27490,6 +28121,34 @@
       "status": "confirmed"
     },
     {
+      "id": "e-69d416bbb98ed16f",
+      "title": "Adventní koncert v Libeňském zámku",
+      "town": "Praha 8",
+      "venue": "Libeňský zámek, obřadní síň, Zenklova 35",
+      "date": "2026-12-01",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "150 Kč (platba pouze v hotovosti)",
+      "registration": "Předprodej každou středu v Libeňském zámku, kanc. č. 39; v den koncertu od 18:00 do 18:30 v obřadní síni.",
+      "registrationUrl": null,
+      "description": "Jeden ze čtyř adventních koncertů MČ Praha 8 v obřadní síni Libeňského zámku.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha8.cz/Adventni-koncerty-v-Libenskem-zamku-2026.html",
+      "location": {
+        "lat": 50.1191317,
+        "lon": 14.4551595,
+        "precision": "town",
+        "label": "Praha 8 — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999109"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-b934564776a57ac43e0c",
       "title": "Vánoční dílničky v Kroměříži 2026",
       "town": "Kroměříž",
@@ -28007,6 +28666,34 @@
         "label": "Jilemnice — orientační poloha obce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439145"
       }
+    },
+    {
+      "id": "e-6af5efb313b0cb75",
+      "title": "Zpívání pod vánočním stromem",
+      "town": "Praha-Petrovice",
+      "venue": "Prostranství před úřadem MČ Praha-Petrovice, Edisonova 429",
+      "date": "2026-12-02",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tradiční setkání se zpíváním pod vánočním stromem. Pořádá MČ Praha-Petrovice.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.prahapetrovice.cz/akce/5316-zpivani-pod-vanocnim-stromem",
+      "location": {
+        "lat": 50.0366935,
+        "lon": 14.5576336,
+        "precision": "town",
+        "label": "Praha-Petrovice — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999097"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-17ac23bd89b81e8549f8",
@@ -30214,6 +30901,62 @@
         "label": "Oleška — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437133"
       }
+    },
+    {
+      "id": "e-5ddd2ab0f49e833c",
+      "title": "Mikulášská nadílka",
+      "town": "Praha-Petrovice",
+      "venue": "Společenský sál Domu občanské vybavenosti, Edisonova 429",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "19:00",
+      "category": "mikulas",
+      "price": "Vstup zdarma",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášská nadílka s dílničkami pro děti. Pořádá DDM Dům Um ve spolupráci s MČ Praha-Petrovice.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.prahapetrovice.cz/akce/5315-mikulasska-nadilka",
+      "location": {
+        "lat": 50.0366935,
+        "lon": 14.5576336,
+        "precision": "town",
+        "label": "Praha-Petrovice — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999097"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
+      "id": "e-777fbf498c15bbab",
+      "title": "Mikuláš v Centru Mariapoli",
+      "town": "Praha-Vinoř",
+      "venue": "Centrum Mariapoli",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": "Mikulášský balíček je třeba objednat e-mailem do 30. 11.",
+      "registrationUrl": null,
+      "description": "Setkání se svatým Mikulášem a anděly, příběh o svatém Mikuláši a překvapení pro děti.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha-vinor.cz/akce/mikulas-v-centru-mariapoli/",
+      "location": {
+        "lat": 50.1409853,
+        "lon": 14.5749283,
+        "precision": "town",
+        "label": "Praha-Vinoř — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/426970"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-3e0a54ae54545c20828a",
@@ -33029,6 +33772,34 @@
       }
     },
     {
+      "id": "e-7d2e9f1dfbd28064",
+      "title": "Čertobraní 2026",
+      "town": "Praha-Suchdol",
+      "venue": "Suchdolské náměstí a KC Půda",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "20:00",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Setkání čertů: v 15:00 pohádka v sále KC Půda, 16–18 h čertovská diskotéka a dílna, v 18:00 ohnivá show na náměstí, v 18:30 příchod Mikuláše s anděly a nadílka. Stánky s občerstvením. Pořádá MČ Praha-Suchdol a KC Půda.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://praha-suchdol.cz/akce/certobrani-2026/",
+      "location": {
+        "lat": 50.1386836,
+        "lon": 14.377106,
+        "precision": "town",
+        "label": "Praha-Suchdol — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999118"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-45a7ca03ccf4c6474e30",
       "title": "Do Pravčic opět zavítá Mikuláš i se svou družinou",
       "town": "Pravčice",
@@ -33756,6 +34527,34 @@
         "label": "Nový Jáchymov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441317"
       }
+    },
+    {
+      "id": "e-a0aed354f382ff77",
+      "title": "Čertovský rej s mikulášskou pohádkou a nadílkou",
+      "town": "Praha-Vinoř",
+      "venue": "Sokolovna, Klenovská 35",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Čertovský rej s mikulášskou pohádkou a nadílkou. Zve TJ Sokol a Divadýlko Na konečný.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha-vinor.cz/akce/certovsky-rej-s-mikulasskou-pohadkou-a-nadilkou/",
+      "location": {
+        "lat": 50.1409853,
+        "lon": 14.5749283,
+        "precision": "town",
+        "label": "Praha-Vinoř — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/426970"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-68279594a63b8e5e9264",
@@ -34881,6 +35680,34 @@
         "label": "Praha-Uhříněves — orientační bod katastrální části, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/429225"
       }
+    },
+    {
+      "id": "e-44482e489cf87d95",
+      "title": "Mikulášská na zámku",
+      "town": "Praha-Čakovice",
+      "venue": "Čakovický zámek",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Pohádka pro děti v 17:00 a 18:00, Mikuláš a andělé, peklo s čerty v přízemí zámku.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.cakovice.cz/Mikulasska-na-zamku-7.html",
+      "location": {
+        "lat": 50.1523646,
+        "lon": 14.5205763,
+        "precision": "town",
+        "label": "Praha-Čakovice — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999085"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-ef06de944dcf6c7ad1fd",
@@ -36068,6 +36895,38 @@
       }
     },
     {
+      "id": "e-b04087bd6c7af19c",
+      "title": "Mikuláš jde Vinoří",
+      "town": "Praha-Vinoř",
+      "venue": null,
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášská obchůzka Vinoří. Pořádá Kultura Vinoř, z.s.",
+      "notes": [
+        "Datum je uvedeno v přehledu akcí městské části; detail akce ho neuvádí.",
+        "Čas programu zatím nebyl zveřejněn. Nejde o celodenní program.",
+        "Přesné místo konání zatím nebylo zveřejněno."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha-vinor.cz/akce/mikulas-jde-vinori-5/",
+      "location": {
+        "lat": 50.1409853,
+        "lon": 14.5749283,
+        "precision": "town",
+        "label": "Praha-Vinoř — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/426970"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-b35e93cd4c179ffa",
       "title": "Mikuláš",
       "town": "Radějovice",
@@ -36425,6 +37284,34 @@
       }
     },
     {
+      "id": "e-a5ce2c251ed62057",
+      "title": "Vánoční jarmark",
+      "town": "Praha-Petrovice",
+      "venue": "Společenský sál Domu občanské vybavenosti, Edisonova 429/28",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": "17:00",
+      "category": "trhy",
+      "price": "Vstupné dobrovolné",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční jarmark v přízemí Domu občanské vybavenosti; od 15:00 dětské divadelní představení „Včelí medvídci zpívají“.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.prahapetrovice.cz/akce/5317-vanocni-jarmark",
+      "location": {
+        "lat": 50.0366935,
+        "lon": 14.5576336,
+        "precision": "town",
+        "label": "Praha-Petrovice — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999097"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-efd0dd40ef03e0d8e2e8",
       "title": "Vánoční jarmark",
       "town": "Dačice",
@@ -36763,6 +37650,34 @@
         "label": "Zbůch — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439755"
       }
+    },
+    {
+      "id": "e-4d45d08da4a0886e",
+      "title": "16. Starobohnické vánoční těšení",
+      "town": "Praha 8",
+      "venue": "Náměstí ve Starých Bohnicích",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "13:30",
+      "endTime": "18:00",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Předvánoční odpoledne pro celou rodinu: hudební vystoupení, pohádka, ražba pamětní mince, živý betlém, tombola, vánoční trhy a občerstvení. Pořádá spolek Bohnice žijí a MČ Praha 8.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha8.cz/16-Starobohnicke-vanocni-teseni.html",
+      "location": {
+        "lat": 50.1191317,
+        "lon": 14.4551595,
+        "precision": "town",
+        "label": "Praha 8 — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999109"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-f91422750a5f2838a312",
@@ -37863,6 +38778,36 @@
         "label": "Pohořelice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/436886"
       }
+    },
+    {
+      "id": "e-018bc35dca78f334",
+      "title": "Mikuláš na Šeberáku",
+      "town": "Praha-Kunratice",
+      "venue": "Restaurace Šeberák",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "18:00",
+      "category": "mikulas",
+      "price": "270 Kč za dítě",
+      "registration": "Vstupenky předem v e-shopu Šeberáku; při koupi se uvádí jméno dítěte a jeho dobré vlastnosti i hříchy.",
+      "registrationUrl": null,
+      "description": "Mikulášská nadílka s programem KURNIK Petra Nedvěda; dárečky pro děti nadělí Mikuláš.",
+      "notes": [
+        "Vstupenka nezahrnuje rezervaci místa k sezení; tu je vhodné zajistit předem v restauraci."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha-kunratice.cz/akce-kalendar/8172-mikulas-na-seberaku",
+      "location": {
+        "lat": 50.0116362,
+        "lon": 14.4845747,
+        "precision": "town",
+        "label": "Praha-Kunratice — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/431593"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-2baee71618ed75760fd8",
@@ -39128,6 +40073,37 @@
       }
     },
     {
+      "id": "e-d3a542d88bd96c99",
+      "title": "Výstava betlémů v Kunraticích",
+      "town": "Praha-Kunratice",
+      "venue": null,
+      "date": "2026-12-06",
+      "endDate": "2026-12-07",
+      "startTime": null,
+      "endTime": null,
+      "category": "betlem",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Výstava betlémů v Kunraticích.",
+      "notes": [
+        "Čas programu zatím nebyl zveřejněn. Nejde o celodenní program.",
+        "Přesné místo konání zatím nebylo zveřejněno."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha-kunratice.cz/akce-kalendar/8169-vystava-betlemu-v-kunraticich-612",
+      "location": {
+        "lat": 50.0116362,
+        "lon": 14.4845747,
+        "precision": "town",
+        "label": "Praha-Kunratice — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/431593"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-1bd34273dbf18531",
       "title": "PODIVUHODNÉ VÁNOCE / Mikulášská a 5. pohádka",
       "town": "Všechromy",
@@ -40378,6 +41354,34 @@
         "label": "Ostrava — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437354"
       }
+    },
+    {
+      "id": "e-b60e57233e1eb05e",
+      "title": "Adventní koncert v Libeňském zámku",
+      "town": "Praha 8",
+      "venue": "Libeňský zámek, obřadní síň, Zenklova 35",
+      "date": "2026-12-08",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "150 Kč (platba pouze v hotovosti)",
+      "registration": "Předprodej každou středu v Libeňském zámku, kanc. č. 39; v den koncertu od 18:00 do 18:30 v obřadní síni.",
+      "registrationUrl": null,
+      "description": "Jeden ze čtyř adventních koncertů MČ Praha 8 v obřadní síni Libeňského zámku.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha8.cz/Adventni-koncerty-v-Libenskem-zamku-2026.html",
+      "location": {
+        "lat": 50.1191317,
+        "lon": 14.4551595,
+        "precision": "town",
+        "label": "Praha 8 — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999109"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-4d58bfbd52a14705",
@@ -41831,6 +42835,38 @@
         "label": "Leskovec — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442430"
       }
+    },
+    {
+      "id": "e-8e383601d30c7166",
+      "title": "Česko zpívá koledy",
+      "town": "Praha-Vinoř",
+      "venue": null,
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Společné zpívání koled ve Vinoři. Pořádá Kultura Vinoř, z.s.",
+      "notes": [
+        "Datum je uvedeno v přehledu akcí městské části; detail akce ho neuvádí.",
+        "Čas programu zatím nebyl zveřejněn. Nejde o celodenní program.",
+        "Přesné místo konání zatím nebylo zveřejněno."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha-vinor.cz/akce/cesko-zpiva-koledy-3/",
+      "location": {
+        "lat": 50.1409853,
+        "lon": 14.5749283,
+        "precision": "town",
+        "label": "Praha-Vinoř — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/426970"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-868892a1846f89f57e10",
@@ -45971,6 +47007,34 @@
       }
     },
     {
+      "id": "e-2200d2a9c6e240a2",
+      "title": "Adventní trhy na Kouzelném náměstíčku",
+      "town": "Praha-Čakovice",
+      "venue": "Náměstí 25. března",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": "20:00",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Stánkový prodej občerstvení a vánočního sortimentu, kapela Dany Band, andělé na chůdách a svatolucijské jízdy vlakem.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.cakovice.cz/Adventni-trhy-na-kouzelnem-namesticku-13.html",
+      "location": {
+        "lat": 50.1523646,
+        "lon": 14.5205763,
+        "precision": "town",
+        "label": "Praha-Čakovice — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999085"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-35fa0cdfb62cf2128934",
       "title": "Vánoční koncert",
       "town": "Bechyně",
@@ -49099,6 +50163,34 @@
       }
     },
     {
+      "id": "e-8fe4251d579358c2",
+      "title": "Adventní koncert – písničkářka Marie Tilšarová",
+      "town": "Praha-Vinoř",
+      "venue": "Kostel Povýšení sv. Kříže",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert písničkářky Marie Tilšarové s kapelou.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha-vinor.cz/akce/adventni-koncert-pisnickarka-marie-tilsarova/",
+      "location": {
+        "lat": 50.1409853,
+        "lon": 14.5749283,
+        "precision": "town",
+        "label": "Praha-Vinoř — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/426970"
+      },
+      "region": "Hlavní město Praha"
+    },
+    {
       "id": "e-c165add0050f64450543",
       "title": "Vánoční koncert - Filharmonie G. Mahlera",
       "town": "Jihlava",
@@ -50182,6 +51274,34 @@
         "label": "Nové Město nad Metují — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/440694"
       }
+    },
+    {
+      "id": "e-f9ecc09dce5a6ef2",
+      "title": "Adventní koncert v Libeňském zámku",
+      "town": "Praha 8",
+      "venue": "Libeňský zámek, obřadní síň, Zenklova 35",
+      "date": "2026-12-15",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "150 Kč (platba pouze v hotovosti)",
+      "registration": "Předprodej každou středu v Libeňském zámku, kanc. č. 39; v den koncertu od 18:00 do 18:30 v obřadní síni.",
+      "registrationUrl": null,
+      "description": "Jeden ze čtyř adventních koncertů MČ Praha 8 v obřadní síni Libeňského zámku.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.praha8.cz/Adventni-koncerty-v-Libenskem-zamku-2026.html",
+      "location": {
+        "lat": 50.1191317,
+        "lon": 14.4551595,
+        "precision": "town",
+        "label": "Praha 8 — orientační střed městské části, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/19999109"
+      },
+      "region": "Hlavní město Praha"
     },
     {
       "id": "e-c28dd16a379ba346ffb8",
