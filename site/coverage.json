@@ -12160,6 +12160,22 @@
       "excludedCount": 0,
       "lastError": null,
       "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
+    },
+    {
+      "id": "reviewed-www-adventvpisku-cz",
+      "town": "Písek",
+      "region": "Jihočeský kraj",
+      "url": "https://www.adventvpisku.cz/program",
+      "adapter": "reviewed-public",
+      "coverageNote": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "status": "ok",
+      "lastChecked": "2026-11-17T10:47:06+00:00",
+      "lastSuccess": "2026-11-17T10:47:06+00:00",
+      "eventCount": 0,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": null,
+      "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
     }
   ],
   "metrics": {
@@ -12171,7 +12187,7 @@
     "eventsNew": 0,
     "eventsChanged": 0,
     "eventsUnchanged": 2,
-    "eventsPublished": 2000,
+    "eventsPublished": 2001,
     "reviewCount": 423,
     "excludedCount": 0,
     "aiCalls": 0
