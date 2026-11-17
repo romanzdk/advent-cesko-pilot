@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T16:32:02+00:00",
+  "generatedAt": "2026-11-17T17:08:09+00:00",
   "season": 2026,
   "region": "Česko — redakčně ověřený výběr",
   "events": [
@@ -171,6 +171,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/436114"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-4cbd8560306ce788",
+      "title": "Vánoční výstava prací a řemesel",
+      "town": "Bzenec",
+      "venue": "Kulturní dům Bzenec, hlavní sál",
+      "date": "2026-11-22",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": "17:00",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tradiční výstava prací a řemesel s tvořivými vánočními dílničkami pro děti a doprovodným programem. Pořádá SRPŠ při ZŠ Bzenec.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.bzenec.cz/kalendar-udalosti/828-vanocni-vystava-praci-a-remesel",
+      "location": {
+        "lat": 48.9736321,
+        "lon": 17.2668112,
+        "precision": "town",
+        "label": "Bzenec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441143"
+      },
+      "region": "Jihomoravský kraj"
     },
     {
       "id": "e-2ca1a63d95e1daee",
@@ -445,6 +473,36 @@
       "sourceUrl": "https://www.ricany.cz/udalost/fleret-a-zuzana-sulakova-vanoce-na-valassku-3/",
       "location": null,
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-ebb88d0c8a569c16",
+      "title": "Adventní koncert: Lenka Filipová",
+      "town": "Bzenec",
+      "venue": "Kulturní dům Bzenec",
+      "date": "2026-11-25",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": "Předprodej vstupenek přes Ticketportal.",
+      "registrationUrl": null,
+      "description": "Adventní koncert Lenky Filipové s hosty Járou Bártou (klavír) a Seanem Barrym (keltská harfa) a smyčcovým oktetem Brno Strings; náhradní termín koncertu z 25. 11. 2025.",
+      "notes": [
+        "Čas koncertu stránka akce neuvádí."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.bzenec.cz/kalendar-udalosti/512-adventni-koncert-lenka-filipova",
+      "location": {
+        "lat": 48.9736321,
+        "lon": 17.2668112,
+        "precision": "town",
+        "label": "Bzenec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441143"
+      },
+      "region": "Jihomoravský kraj"
     },
     {
       "id": "e-bf23c25cb9a4b6dd",
@@ -953,6 +1011,34 @@
       "region": "Kraj Vysočina"
     },
     {
+      "id": "e-6d64ebb8c8d09a42",
+      "title": "Adventní motání",
+      "town": "Bzenec",
+      "venue": "Kasárna 500, Bzenec",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "category": "tvoreni",
+      "price": "590 Kč",
+      "registration": "Nutné předchozí přihlášení e-mailem nebo telefonicky u Bzeneckého klubíku.",
+      "registrationUrl": null,
+      "description": "Workshop výroby adventního věnce s lektorkou Mirkou Vrbenskou; v ceně korpus a materiál. Pořádá Bzenecký klubík.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.bzenec.cz/kalendar-udalosti/827-adventni-motani",
+      "location": {
+        "lat": 48.9736321,
+        "lon": 17.2668112,
+        "precision": "town",
+        "label": "Bzenec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441143"
+      },
+      "region": "Jihomoravský kraj"
+    },
+    {
       "id": "e-87bad706b8381d1b",
       "title": "Jak se peče čert",
       "town": "Praha 19",
@@ -1007,6 +1093,36 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/437958"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-5f284a1d01b6bea2",
+      "title": "Rozsvěcení vánočního stromu",
+      "town": "Šlapanice",
+      "venue": "Masarykovo náměstí",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "15:30",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "V 15:30 hudební program Ahoj Děti, v 16:55 zahájení Šlapanických Vánoc, v 17:00 rozsvícení vánočního stromu a náměstí, poté vystoupí Petr Kautheil.",
+      "notes": [
+        "Rozsvícení stromu: 17:00."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.slapanice.cz/akce/poradane-akce/8276-rozsveceni-vanocniho-stromu/",
+      "location": {
+        "lat": 49.1688974,
+        "lon": 16.7272687,
+        "precision": "town",
+        "label": "Šlapanice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436872"
+      },
+      "region": "Jihomoravský kraj"
     },
     {
       "id": "e-c03f5e83a5330fbf",
@@ -1284,6 +1400,34 @@
       "sourceUrl": "https://www.radejoviceobec.cz/evt_file.php?file=2326&original=Listy+4_2026.pdf",
       "location": null,
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-30c09c01db491286",
+      "title": "Vánoční jarmark",
+      "town": "Šlapanice",
+      "venue": "Masarykovo náměstí a orlovna",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": "18:00",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční jarmark na Masarykově náměstí a v orlovně s programem na pódiu: Šlapanická SCHOLA, hudební škola, mateřské školy, ZŠ, gymnázium a ZUŠ a vánoční show kouzelnice Radany.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.slapanice.cz/akce/poradane-akce/8278-vanocni-jarmark/",
+      "location": {
+        "lat": 49.1688974,
+        "lon": 16.7272687,
+        "precision": "town",
+        "label": "Šlapanice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436872"
+      },
+      "region": "Jihomoravský kraj"
     },
     {
       "id": "e-a1f42ab086bda398",
@@ -1680,6 +1824,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/437866"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-57c944149a78d8de",
+      "title": "Rozsvícení stromečku",
+      "town": "Bzenec",
+      "venue": "Náměstí Svobody",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromečku s vystoupením žáků a učitelů ZUŠ Bzenec a stánky s občerstvením.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.bzenec.cz/kalendar-udalosti/833-rozviceni-stromecku",
+      "location": {
+        "lat": 48.9736321,
+        "lon": 17.2668112,
+        "precision": "town",
+        "label": "Bzenec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441143"
+      },
+      "region": "Jihomoravský kraj"
     },
     {
       "id": "e-cda48ee8822daecd",
@@ -2141,6 +2313,37 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/426970"
       },
       "region": "Hlavní město Praha"
+    },
+    {
+      "id": "e-5b2213a1b275cf02",
+      "title": "Rozsvěcení vánočního stromu v Bedřichovicích",
+      "town": "Šlapanice",
+      "venue": "Bedřichovice",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvěcení vánočního stromu v místní části Bedřichovice.",
+      "notes": [
+        "Čas programu zatím nebyl zveřejněn. Nejde o celodenní program.",
+        "Přesné místo v Bedřichovicích zatím nebylo zveřejněno."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.slapanice.cz/akce/poradane-akce/8277-rozsveceni-vanocniho-stromu-v-bedrichovicich/",
+      "location": {
+        "lat": 49.1688974,
+        "lon": 16.7272687,
+        "precision": "town",
+        "label": "Šlapanice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436872"
+      },
+      "region": "Jihomoravský kraj"
     },
     {
       "id": "e-c2348a901e9c9a4c",
@@ -2719,6 +2922,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/441204"
       },
       "region": "Pardubický kraj"
+    },
+    {
+      "id": "e-a6282933b2a27a1e",
+      "title": "Mikulášský maškarní rej",
+      "town": "Šlapanice",
+      "venue": "Sál sokolovny",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "14:30",
+      "endTime": "16:00",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášská maškarní zábava v sále sokolovny. Zve Kulturní spolek Hrbatý hrozen; masky nejsou podmínkou.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.slapanice.cz/akce/poradane-akce/8279-mikulassky-maskarni-rej/",
+      "location": {
+        "lat": 49.1688974,
+        "lon": 16.7272687,
+        "precision": "town",
+        "label": "Šlapanice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436872"
+      },
+      "region": "Jihomoravský kraj"
     },
     {
       "id": "e-7d2e9f1dfbd28064",

@@ -15052,6 +15052,38 @@
       "eventCount": 6,
       "reviewCount": 0,
       "lastError": null
+    },
+    {
+      "id": "reviewed-www-slapanice-cz",
+      "town": "Šlapanice",
+      "region": "Jihomoravský kraj",
+      "url": "https://www.slapanice.cz/akce",
+      "adapter": "reviewed-public",
+      "coverageNote": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "status": "ok",
+      "lastChecked": "2026-11-17T10:47:06+00:00",
+      "lastSuccess": "2026-11-17T10:47:06+00:00",
+      "eventCount": 4,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": null,
+      "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
+    },
+    {
+      "id": "reviewed-www-bzenec-cz",
+      "town": "Bzenec",
+      "region": "Jihomoravský kraj",
+      "url": "https://www.bzenec.cz/kalendar-udalosti",
+      "adapter": "reviewed-public",
+      "coverageNote": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "status": "ok",
+      "lastChecked": "2026-11-17T10:47:06+00:00",
+      "lastSuccess": "2026-11-17T10:47:06+00:00",
+      "eventCount": 4,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": null,
+      "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
     }
   ],
   "metrics": {
@@ -15063,7 +15095,7 @@
     "eventsNew": 0,
     "eventsChanged": 0,
     "eventsUnchanged": 2,
-    "eventsPublished": 2371,
+    "eventsPublished": 2379,
     "reviewCount": 498,
     "excludedCount": 0,
     "aiCalls": 0
