@@ -22866,6 +22866,328 @@
       "allowed_venues": [
         "Náměstí Míru (u radnice)"
       ]
+    },
+    {
+      "id": "castkov-obec-calendar",
+      "town": "Částkov",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.castkovuh.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.castkovuh.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.castkovuh\\.cz/zivot-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Částkov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Sportovní areál"
+      ]
+    },
+    {
+      "id": "drzkova-obec-calendar",
+      "town": "Držková",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.drzkova.cz/aktuality-1/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.drzkova.cz/aktuality-1/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.drzkova\\.cz/aktuality-1/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Držková: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "U dřevěné zvonice"
+      ]
+    },
+    {
+      "id": "stribrnice-obec-calendar",
+      "town": "Stříbrnice",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.stribrnice.cz/cs/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.stribrnice.cz/cs/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.stribrnice\\.cz/cs/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Stříbrnice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kostel sv. Prokopa",
+        "Sportovní hřiště",
+        "Zasedací místnost OÚ Stříbrnice"
+      ]
+    },
+    {
+      "id": "nedasov-obec-calendar",
+      "town": "Nedašov",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.nedasov.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.nedasov.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.nedasov\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Nedašov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní dům"
+      ]
+    },
+    {
+      "id": "vlachovice-obec-calendar",
+      "town": "Vlachovice",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.vlachovice.cz/aktualne/kam-za-kulturou/"
+      ],
+      "detail_prefixes": [
+        "https://www.vlachovice.cz/aktualne/kam-za-kulturou/"
+      ],
+      "url_regex": "^https://www\\.vlachovice\\.cz/aktualne/kam-za-kulturou/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Vlachovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Knihovna Vrbětice"
+      ]
+    },
+    {
+      "id": "brezova-obec-calendar",
+      "town": "Březová",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obecbrezova.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obecbrezova.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obecbrezova\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Březová: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Březová"
+      ]
+    },
+    {
+      "id": "neubuz-obec-calendar",
+      "town": "Neubuz",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.neubuz.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.neubuz.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.neubuz\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Neubuz: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Komunitní centrum",
+        "Náves Neubuz"
+      ]
+    },
+    {
+      "id": "lipa-obec-calendar",
+      "town": "Lípa",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.obeclipa.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.obeclipa.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.obeclipa\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Lípa: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Pohostinství U Kubínů",
+        "Sokolovna Lípa areál"
+      ]
+    },
+    {
+      "id": "komarov-obec-calendar",
+      "town": "Komárov",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.komarov-ou.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.komarov-ou.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.komarov-ou\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Komárov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Vývěsky Komárov"
+      ]
+    },
+    {
+      "id": "vitonice-obec-calendar",
+      "town": "Vítonice",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.vitonice.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.vitonice.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.vitonice\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Vítonice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Vítonice 154"
+      ]
+    },
+    {
+      "id": "kudlovice-obec-calendar",
+      "town": "Kudlovice",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.kudlovice.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.kudlovice.cz/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.kudlovice\\.cz/zivot-v-obci/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Kudlovice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Kulturní dům",
+        "Kulturní dům Kudlovice"
+      ]
+    },
+    {
+      "id": "stitna-nad-vlari-popov-obec-calendar",
+      "town": "Štítná nad Vláří-Popov",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.stitna-popov.cz/obcan/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.stitna-popov.cz/obcan/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.stitna-popov\\.cz/obcan/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Štítná nad Vláří-Popov: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Popov",
+        "V KD"
+      ]
+    },
+    {
+      "id": "nova-dedina-obec-calendar",
+      "town": "Nová Dědina",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.novadedina.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.novadedina.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.novadedina\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Nová Dědina: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Sklep Sokolovny"
+      ]
+    },
+    {
+      "id": "babice-obec-calendar",
+      "town": "Babice",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.babice.eu/aktuality/kalendar-akci-pozvanky/"
+      ],
+      "detail_prefixes": [
+        "https://www.babice.eu/aktuality/kalendar-akci-pozvanky/"
+      ],
+      "url_regex": "^https://www\\.babice\\.eu/aktuality/kalendar-akci-pozvanky/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Babice: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Krájanka"
+      ]
+    },
+    {
+      "id": "chomyz-obec-calendar",
+      "town": "Chomýž",
+      "region": "Zlínský kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.chomyz.cz/aktualne/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.chomyz.cz/aktualne/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.chomyz\\.cz/aktualne/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Chomýž: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "Chomýž",
+        "Náves obce Chomýž"
+      ]
     }
   ]
 }

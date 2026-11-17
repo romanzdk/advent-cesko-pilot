@@ -6144,5 +6144,110 @@
     "precision": "town",
     "label": "Šumperk — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/438047"
+  },
+  "Částkov": {
+    "lat": 49.104126,
+    "lon": 17.6195553,
+    "precision": "town",
+    "label": "Částkov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437516"
+  },
+  "Držková": {
+    "lat": 49.3322773,
+    "lon": 17.7937197,
+    "precision": "town",
+    "label": "Držková — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440733"
+  },
+  "Stříbrnice": {
+    "lat": 49.057496,
+    "lon": 17.3088025,
+    "precision": "town",
+    "label": "Stříbrnice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437473"
+  },
+  "Nedašov": {
+    "lat": 49.1077847,
+    "lon": 18.0703558,
+    "precision": "town",
+    "label": "Nedašov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440879"
+  },
+  "Vlachovice": {
+    "lat": 49.1236156,
+    "lon": 17.9401829,
+    "precision": "town",
+    "label": "Vlachovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440773"
+  },
+  "Březová": {
+    "lat": 48.9254308,
+    "lon": 17.7398541,
+    "precision": "town",
+    "label": "Březová — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437511"
+  },
+  "Neubuz": {
+    "lat": 49.265408,
+    "lon": 17.8293272,
+    "precision": "town",
+    "label": "Neubuz — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440828"
+  },
+  "Lípa": {
+    "lat": 49.1974324,
+    "lon": 17.7736283,
+    "precision": "town",
+    "label": "Lípa — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440897"
+  },
+  "Komárov": {
+    "lat": 49.1507357,
+    "lon": 17.5688728,
+    "precision": "town",
+    "label": "Komárov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/440904"
+  },
+  "Vítonice": {
+    "lat": 49.4486782,
+    "lon": 17.6903241,
+    "precision": "town",
+    "label": "Vítonice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437022"
+  },
+  "Kudlovice": {
+    "lat": 49.1437437,
+    "lon": 17.4518593,
+    "precision": "town",
+    "label": "Kudlovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437434"
+  },
+  "Štítná nad Vláří-Popov": {
+    "lat": 49.0697672,
+    "lon": 17.9752145,
+    "precision": "town",
+    "label": "Štítná nad Vláří-Popov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/435559"
+  },
+  "Nová Dědina": {
+    "lat": 49.21042,
+    "lon": 17.4480877,
+    "precision": "town",
+    "label": "Nová Dědina — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437345"
+  },
+  "Babice": {
+    "lat": 49.1216778,
+    "lon": 17.4807543,
+    "precision": "town",
+    "label": "Babice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437436"
+  },
+  "Chomýž": {
+    "lat": 49.3595426,
+    "lon": 17.649311,
+    "precision": "town",
+    "label": "Chomýž — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437389"
   }
 }
