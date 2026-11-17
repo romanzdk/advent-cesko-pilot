@@ -20899,6 +20899,87 @@
         "Sál obecního úřadu Počedělice",
         "U kapličky ve Volenicích"
       ]
+    },
+    {
+      "id": "reviewed-www-mestosluknov-cz",
+      "town": "Šluknov",
+      "region": "Ústecký kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.mestosluknov.cz",
+      "allowed_towns": {
+        "Šluknov": "Ústecký kraj"
+      },
+      "index_urls": [
+        "https://www.mestosluknov.cz/cz/kalendar-akci.html"
+      ],
+      "url_regex": "^https://www\\.mestosluknov\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Šluknov": [
+          {
+            "lat": 51.003217,
+            "lon": 14.4530321,
+            "precision": "town",
+            "label": "Šluknov — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/439618"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-mujilove-cz",
+      "town": "Jílové",
+      "region": "Ústecký kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.mujilove.cz",
+      "allowed_towns": {
+        "Jílové": "Ústecký kraj"
+      },
+      "index_urls": [
+        "https://www.mujilove.cz/kalendar-akci"
+      ],
+      "url_regex": "^https://www\\.mujilove\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Jílové": [
+          {
+            "lat": 50.7610971,
+            "lon": 14.1041986,
+            "precision": "town",
+            "label": "Jílové — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/436953"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-ceska-kamenice-cz",
+      "town": "Česká Kamenice",
+      "region": "Ústecký kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "ceska-kamenice.cz",
+      "allowed_towns": {
+        "Česká Kamenice": "Ústecký kraj"
+      },
+      "index_urls": [
+        "https://ceska-kamenice.cz/kalendar-akci"
+      ],
+      "url_regex": "^https://ceska\\-kamenice\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Česká Kamenice": [
+          {
+            "lat": 50.7994117,
+            "lon": 14.4165592,
+            "precision": "town",
+            "label": "Česká Kamenice — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/439576"
+          }
+        ]
+      }
     }
   ]
 }

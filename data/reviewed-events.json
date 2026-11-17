@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T15:59:23+00:00",
+  "generatedAt": "2026-11-17T16:32:02+00:00",
   "season": 2026,
   "region": "Česko — redakčně ověřený výběr",
   "events": [
@@ -115,6 +115,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/441623"
       },
       "region": "Kraj Vysočina"
+    },
+    {
+      "id": "e-908d4efa32ec2a67",
+      "title": "Koncert na piano Barbory Kopecké",
+      "town": "Jílové",
+      "venue": "Jílovský zámek, hlavní sál",
+      "date": "2026-11-21",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "Vstupné zdarma",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Klavírní koncert: Janáček, Mozart, Dvořák, filmové a muzikálové melodie i šansony; délka 90 minut.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.mujilove.cz/kalendar-akci/koncert-na-piano-21112026-od-1700",
+      "location": {
+        "lat": 50.7610971,
+        "lon": 14.1041986,
+        "precision": "town",
+        "label": "Jílové — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436953"
+      },
+      "region": "Ústecký kraj"
     },
     {
       "id": "e-c3fcd9679a39470c",
@@ -529,6 +557,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/441623"
       },
       "region": "Kraj Vysočina"
+    },
+    {
+      "id": "e-9ad5de4fa53e94ca",
+      "title": "Rozsvícení vánočního stromu",
+      "town": "Šluknov",
+      "venue": "Náměstí Míru",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Zahájení adventu: vánoční písně dětí z MŠ, ZŠ a ZUŠ, vystoupení mažoretek Berušky, slavnostní rozsvícení stromu a na závěr vystoupení Ivany Jirešové.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.mestosluknov.cz/cz/akce/kalendar-akci.html?id_akce=1795",
+      "location": {
+        "lat": 51.003217,
+        "lon": 14.4530321,
+        "precision": "town",
+        "label": "Šluknov — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439618"
+      },
+      "region": "Ústecký kraj"
     },
     {
       "id": "e-bb4935b94a5f6af6",
@@ -1117,6 +1173,34 @@
       "region": "Hlavní město Praha"
     },
     {
+      "id": "e-0b7a64ec53930ff7",
+      "title": "Varhanní koncert v kostele sv. Václava",
+      "town": "Šluknov",
+      "venue": "Kostel sv. Václava",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "Dobrovolné vstupné",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Na varhany zahrají Tatiana a Daniel Knut Pernetovi v rámci 20. ročníku Českého varhanního festivalu.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.mestosluknov.cz/cz/akce/kalendar-akci.html?id_akce=1797",
+      "location": {
+        "lat": 51.003217,
+        "lon": 14.4530321,
+        "precision": "town",
+        "label": "Šluknov — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439618"
+      },
+      "region": "Ústecký kraj"
+    },
+    {
       "id": "e-4c41cbfc27ba2e94",
       "title": "Předvánoční trhy",
       "town": "Dolní Dobrouč",
@@ -1262,6 +1346,34 @@
       "region": "Hlavní město Praha"
     },
     {
+      "id": "e-9ff275055be336de",
+      "title": "Adventní tvoření a divadelní pohádka pro děti",
+      "town": "Šluknov",
+      "venue": "Šluknovský zámek",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": null,
+      "category": "tvoreni",
+      "price": "100 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční tvoření pro děti i rodiče a poté divadelní představení „O pejskovi a kočičce“.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.mestosluknov.cz/cz/akce/kalendar-akci.html?id_akce=1802",
+      "location": {
+        "lat": 51.003217,
+        "lon": 14.4530321,
+        "precision": "town",
+        "label": "Šluknov — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439618"
+      },
+      "region": "Ústecký kraj"
+    },
+    {
       "id": "e-e56cbece9c3c2819",
       "title": "Kamenické vánoční trhy s mikulášskou nadílkou",
       "town": "Kamenice",
@@ -1292,6 +1404,36 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-19d3e180ad5af911",
+      "title": "První adventní neděle a rozsvěcení vánočního stromečku",
+      "town": "Česká Kamenice",
+      "venue": "Náměstí Míru",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Od 14:00 adventní trhy a v 17:00 rozsvěcení vánočního stromu na náměstí Míru.",
+      "notes": [
+        "Rozsvícení stromu: 17:00."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://ceska-kamenice.cz/kalendar-akci/prvni-adventni-nedele-a-rozsveceni-vanocniho-stromecku/",
+      "location": {
+        "lat": 50.7994117,
+        "lon": 14.4165592,
+        "precision": "town",
+        "label": "Česká Kamenice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439576"
+      },
+      "region": "Ústecký kraj"
+    },
+    {
       "id": "e-d5cfe3ee172f9f18",
       "title": "Vánoční jarmark ZUŠ Josefa Lady a rozsvícení stromečku s koledou",
       "town": "Velké Popovice",
@@ -1320,6 +1462,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/437951"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-f0464d01fdac10c3",
+      "title": "Rozsvícení stromečku na zámku",
+      "town": "Jílové",
+      "venue": "Nádvoří Jílovského zámku",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení stromečku první adventní neděli: stánky na nádvoří zámku, svařák, vystoupení dua FóPá, Matěje Koudelky, dětí ze školky a školy a Jílovského pěveckého sboru.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.mujilove.cz/kalendar-akci/rozsviceni-stromecku-29112026-od-1500",
+      "location": {
+        "lat": 50.7610971,
+        "lon": 14.1041986,
+        "precision": "town",
+        "label": "Jílové — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436953"
+      },
+      "region": "Ústecký kraj"
     },
     {
       "id": "e-4eb551f1ca26af1a",
@@ -2297,6 +2467,34 @@
       "region": "Hlavní město Praha"
     },
     {
+      "id": "e-ff256be1022b0a50",
+      "title": "Adventní koncert v zámku – Petr Cieplý",
+      "town": "Jílové",
+      "venue": "Jílovský zámek, vstupní hala",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční písně v podání muzikanta Petra Cieplého s kytarou.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.mujilove.cz/kalendar-akci/adventni-koncert-v-zamku-dne-04122026-od-1800",
+      "location": {
+        "lat": 50.7610971,
+        "lon": 14.1041986,
+        "precision": "town",
+        "label": "Jílové — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436953"
+      },
+      "region": "Ústecký kraj"
+    },
+    {
       "id": "e-516fb2361359b060",
       "title": "Rozsvícení vánočního stromu v Samechově",
       "town": "Samechov",
@@ -2379,6 +2577,34 @@
         "sourceUrl": "https://www.openstreetmap.org/node/1427535441"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-a6ba5645df074aa7",
+      "title": "Čertovská zábava",
+      "town": "Šluknov",
+      "venue": "Dům kultury",
+      "date": "2026-12-04",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "category": "mikulas",
+      "price": "100 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Čertovská zábava s DJ Pepe a pekelným programem místních čertů; masky vítány.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.mestosluknov.cz/cz/akce/kalendar-akci.html?id_akce=1798",
+      "location": {
+        "lat": 51.003217,
+        "lon": 14.4530321,
+        "precision": "town",
+        "label": "Šluknov — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439618"
+      },
+      "region": "Ústecký kraj"
     },
     {
       "id": "e-891622c6b542b9f5",
@@ -2683,6 +2909,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/426970"
       },
       "region": "Hlavní město Praha"
+    },
+    {
+      "id": "e-9589f080195dc964",
+      "title": "Mikuláš na zahradě CDM",
+      "town": "Česká Kamenice",
+      "venue": "Zahrada CDM Česká Kamenice",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": "18:30",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tradiční Mikulášská akce CDM a SHŠ Řád Černých rytířů: soutěže u čertíků, Mikuláš s andílky a odměnami, peklo s čerty a drakem, dílničky a malování na obličej.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://ceska-kamenice.cz/kalendar-akci/mikulas-2/",
+      "location": {
+        "lat": 50.7994117,
+        "lon": 14.4165592,
+        "precision": "town",
+        "label": "Česká Kamenice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439576"
+      },
+      "region": "Ústecký kraj"
     },
     {
       "id": "e-fe2188cf907d5a69",
@@ -3018,6 +3272,62 @@
       "region": "Pardubický kraj"
     },
     {
+      "id": "e-5d74db531e4eac8a",
+      "title": "Druhá adventní neděle u orloje a Čertovské podzemí",
+      "town": "Česká Kamenice",
+      "venue": "Náměstíčko u českokamenického orloje",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Od 14:00 druhá adventní neděle u českokamenického orloje, od 15:00 Čertovské podzemí a od 16:00 živé koledy v poutní kapli Narození Panny Marie.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://ceska-kamenice.cz/kalendar-akci/druha-adventni-nedele-u-ceskokamenickeho-orloje-a-certovske-podzemi/",
+      "location": {
+        "lat": 50.7994117,
+        "lon": 14.4165592,
+        "precision": "town",
+        "label": "Česká Kamenice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439576"
+      },
+      "region": "Ústecký kraj"
+    },
+    {
+      "id": "e-d06e7a7b4fdffabb",
+      "title": "Mikulášská nadílka",
+      "town": "Šluknov",
+      "venue": "Dům kultury",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "category": "mikulas",
+      "price": "10 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikuláš, anděl a čert s nadílkou a loutková pohádka „O zlobivé Mařence“ souboru Rolnička.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.mestosluknov.cz/cz/akce/kalendar-akci.html?id_akce=1800",
+      "location": {
+        "lat": 51.003217,
+        "lon": 14.4530321,
+        "precision": "town",
+        "label": "Šluknov — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439618"
+      },
+      "region": "Ústecký kraj"
+    },
+    {
       "id": "e-018bc35dca78f334",
       "title": "Mikuláš na Šeberáku",
       "town": "Praha-Kunratice",
@@ -3068,6 +3378,34 @@
       "sourceUrl": "https://www.obecjevany.cz/aktuality-1/kalendar-akci/slavnostni-rozsviceni-stromecku-1911_203cs.html",
       "location": null,
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-7f2abff84cf384c1",
+      "title": "Adventní koncert v kostele",
+      "town": "Jílové",
+      "venue": "Kostel Nejsvětější Trojice",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "Vstupné zdarma",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tradiční vánoční koncert Renaty Mužíkové Vrátné na druhou adventní neděli.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.mujilove.cz/kalendar-akci/adventni-koncert-v-kostele-dne-06122026-od-1800",
+      "location": {
+        "lat": 50.7610971,
+        "lon": 14.1041986,
+        "precision": "town",
+        "label": "Jílové — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436953"
+      },
+      "region": "Ústecký kraj"
     },
     {
       "id": "e-d3a542d88bd96c99",
@@ -3159,6 +3497,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-5f7dac345c27a494",
+      "title": "Za betlémským světlem se Světlanou Nálepkovou",
+      "town": "Jílové",
+      "venue": "Jílovský zámek",
+      "date": "2026-12-08",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert herečky a zpěvačky Světlany Nálepkové: tradiční i nové vánoční písně a šansony.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.mujilove.cz/kalendar-akci/za-betlemskym-svetlem-se-svetlanou-nalepkovou-dne-08122026-od-1800",
+      "location": {
+        "lat": 50.7610971,
+        "lon": 14.1041986,
+        "precision": "town",
+        "label": "Jílové — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436953"
+      },
+      "region": "Ústecký kraj"
+    },
+    {
       "id": "e-38bcb49d0b4f7e70",
       "title": "Andělé z vlny",
       "town": "Říčany",
@@ -3213,6 +3579,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/19999109"
       },
       "region": "Hlavní město Praha"
+    },
+    {
+      "id": "e-aea0eb5d759356e2",
+      "title": "Rybova mše vánoční – Děčínský pěvecký sbor",
+      "town": "Česká Kamenice",
+      "venue": "Kostel sv. Jakuba Staršího",
+      "date": "2026-12-08",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "Vstup zdarma",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rybova mše vánoční v podání Děčínského pěveckého sboru.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://ceska-kamenice.cz/kalendar-akci/rybova-mse-vanocni-v-podani-decinskeho-peveckeho-sboru-2/",
+      "location": {
+        "lat": 50.7994117,
+        "lon": 14.4165592,
+        "precision": "town",
+        "label": "Česká Kamenice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439576"
+      },
+      "region": "Ústecký kraj"
     },
     {
       "id": "e-4d58bfbd52a14705",
@@ -3291,6 +3685,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/436114"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-afd69f5a1db6a2f6",
+      "title": "Česko zpívá koledy",
+      "town": "Česká Kamenice",
+      "venue": "Náměstíčko U Orloje",
+      "date": "2026-12-09",
+      "endDate": null,
+      "startTime": "18:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Společné zpívání vánočních koled. Pořádá Iva Mihová.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://ceska-kamenice.cz/kalendar-akci/cesko-zpiva-koledy-4/",
+      "location": {
+        "lat": 50.7994117,
+        "lon": 14.4165592,
+        "precision": "town",
+        "label": "Česká Kamenice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439576"
+      },
+      "region": "Ústecký kraj"
     },
     {
       "id": "e-ad45e1e393ec54d5",
@@ -3555,6 +3977,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-4b25e0274776633b",
+      "title": "Vánoční koncert Jílovského pěveckého sboru",
+      "town": "Jílové",
+      "venue": "Jílovský zámek, hlavní sál",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "Vstupné zdarma",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert Jílovského pěveckého sboru.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.mujilove.cz/kalendar-akci/vanocni-koncert-jilovskeho-peveckeho-sboru-dne-13122026-od-1600",
+      "location": {
+        "lat": 50.7610971,
+        "lon": 14.1041986,
+        "precision": "town",
+        "label": "Jílové — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436953"
+      },
+      "region": "Ústecký kraj"
+    },
+    {
       "id": "e-d4a5dd5f568f5268",
       "title": "Zvonění Ježíškovi",
       "town": "Velké Popovice",
@@ -3583,6 +4033,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/437951"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-cb6e51de27d429ad",
+      "title": "Adventní koncert ve Šluknovském zámku",
+      "town": "Šluknov",
+      "venue": "Šluknovský zámek",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert pěveckého sboru Náhodou z Varnsdorfu.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.mestosluknov.cz/cz/akce/kalendar-akci.html?id_akce=1799",
+      "location": {
+        "lat": 51.003217,
+        "lon": 14.4530321,
+        "precision": "town",
+        "label": "Šluknov — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439618"
+      },
+      "region": "Ústecký kraj"
     },
     {
       "id": "e-594cee48d34e8080",
@@ -4011,6 +4489,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/436114"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-5293b05022989b78",
+      "title": "Vánoční recitál Jitky Hercikové a jejích hostů",
+      "town": "Šluknov",
+      "venue": "Šluknovský zámek",
+      "date": "2026-12-20",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": "150 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Slavnostní vánoční recitál Jitky Hercikové a jejích hostů.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-17",
+      "sourceUrl": "https://www.mestosluknov.cz/cz/akce/kalendar-akci.html?id_akce=1801",
+      "location": {
+        "lat": 51.003217,
+        "lon": 14.4530321,
+        "precision": "town",
+        "label": "Šluknov — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439618"
+      },
+      "region": "Ústecký kraj"
     },
     {
       "id": "e-9bc35e710b638637",
