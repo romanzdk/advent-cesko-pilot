@@ -6571,5 +6571,859 @@
     "precision": "town",
     "label": "Mezilečí — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/440691"
+  },
+  "Černava": {
+    "lat": 50.2912537,
+    "lon": 12.710967,
+    "precision": "town",
+    "label": "Černava — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439497"
+  },
+  "Čichalov": {
+    "lat": 50.1242512,
+    "lon": 13.171077,
+    "precision": "town",
+    "label": "Čichalov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439449"
+  },
+  "Lázně Kynžvart": {
+    "lat": 50.0091635,
+    "lon": 12.6256333,
+    "precision": "town",
+    "label": "Lázně Kynžvart — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439462"
+  },
+  "Prameny": {
+    "lat": 50.0500726,
+    "lon": 12.7327934,
+    "precision": "town",
+    "label": "Prameny — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439461"
+  },
+  "Nové Hamry": {
+    "lat": 50.3600749,
+    "lon": 12.7200206,
+    "precision": "town",
+    "label": "Nové Hamry — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439450"
+  },
+  "Bečov nad Teplou": {
+    "lat": 50.0835097,
+    "lon": 12.8386736,
+    "precision": "town",
+    "label": "Bečov nad Teplou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439489"
+  },
+  "Tuřany": {
+    "lat": 50.0840075,
+    "lon": 12.5219849,
+    "precision": "town",
+    "label": "Tuřany — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439455"
+  },
+  "Hory": {
+    "lat": 50.2133907,
+    "lon": 12.7900181,
+    "precision": "town",
+    "label": "Hory — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436954"
+  },
+  "Odrava": {
+    "lat": 50.1030573,
+    "lon": 12.4841325,
+    "precision": "town",
+    "label": "Odrava — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439460"
+  },
+  "Stará Voda": {
+    "lat": 49.9917765,
+    "lon": 12.5951136,
+    "precision": "town",
+    "label": "Stará Voda — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438963"
+  },
+  "Josefov": {
+    "lat": 50.2117812,
+    "lon": 12.5793606,
+    "precision": "town",
+    "label": "Josefov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439507"
+  },
+  "Děpoltovice": {
+    "lat": 50.2944568,
+    "lon": 12.8140968,
+    "precision": "town",
+    "label": "Děpoltovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439492"
+  },
+  "Vitín": {
+    "lat": 49.0894825,
+    "lon": 14.5456478,
+    "precision": "town",
+    "label": "Vitín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437757"
+  },
+  "Dívčice": {
+    "lat": 49.1095672,
+    "lon": 14.3083099,
+    "precision": "town",
+    "label": "Dívčice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437854"
+  },
+  "Sedlec": {
+    "lat": 49.0726124,
+    "lon": 14.2865424,
+    "precision": "town",
+    "label": "Sedlec — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437649"
+  },
+  "Nákří": {
+    "lat": 49.1162738,
+    "lon": 14.3308857,
+    "precision": "town",
+    "label": "Nákří — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437788"
+  },
+  "Čepřovice": {
+    "lat": 49.1552322,
+    "lon": 13.9750784,
+    "precision": "town",
+    "label": "Čepřovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438773"
+  },
+  "Číčenice": {
+    "lat": 49.1532744,
+    "lon": 14.2306293,
+    "precision": "town",
+    "label": "Číčenice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438801"
+  },
+  "Skály": {
+    "lat": 49.1834654,
+    "lon": 13.9928782,
+    "precision": "town",
+    "label": "Skály — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436500"
+  },
+  "Předslavice": {
+    "lat": 49.1326505,
+    "lon": 13.9355596,
+    "precision": "town",
+    "label": "Předslavice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438852"
+  },
+  "Myslkovice": {
+    "lat": 49.2988897,
+    "lon": 14.7478472,
+    "precision": "town",
+    "label": "Myslkovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438751"
+  },
+  "Dřešín": {
+    "lat": 49.1555793,
+    "lon": 13.7736959,
+    "precision": "town",
+    "label": "Dřešín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438776"
+  },
+  "Předmíř": {
+    "lat": 49.4943463,
+    "lon": 13.7721104,
+    "precision": "town",
+    "label": "Předmíř — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438850"
+  },
+  "Jankov": {
+    "lat": 48.9666373,
+    "lon": 14.2975871,
+    "precision": "town",
+    "label": "Jankov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437828"
+  },
+  "Libějovice": {
+    "lat": 49.1071585,
+    "lon": 14.2066494,
+    "precision": "town",
+    "label": "Libějovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438004"
+  },
+  "Záhoří": {
+    "lat": 49.3497884,
+    "lon": 14.2138257,
+    "precision": "town",
+    "label": "Záhoří — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437218"
+  },
+  "Zbytiny": {
+    "lat": 48.9425962,
+    "lon": 13.9785303,
+    "precision": "town",
+    "label": "Zbytiny — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438068"
+  },
+  "Nová Ves nad Lužnicí": {
+    "lat": 48.8107069,
+    "lon": 14.9253702,
+    "precision": "town",
+    "label": "Nová Ves nad Lužnicí — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437471"
+  },
+  "Drahonice": {
+    "lat": 49.2008028,
+    "lon": 14.0755724,
+    "precision": "town",
+    "label": "Drahonice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438780"
+  },
+  "Strunkovice nad Blanicí": {
+    "lat": 49.0842781,
+    "lon": 14.0548747,
+    "precision": "town",
+    "label": "Strunkovice nad Blanicí — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438078"
+  },
+  "Popelín": {
+    "lat": 49.2135198,
+    "lon": 15.1840905,
+    "precision": "town",
+    "label": "Popelín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438451"
+  },
+  "Peč": {
+    "lat": 49.0599953,
+    "lon": 15.3855593,
+    "precision": "town",
+    "label": "Peč — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438465"
+  },
+  "Heřmaň": {
+    "lat": 49.2325544,
+    "lon": 14.1354712,
+    "precision": "town",
+    "label": "Heřmaň — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437358"
+  },
+  "Benešov nad Černou": {
+    "lat": 48.7294146,
+    "lon": 14.6270669,
+    "precision": "town",
+    "label": "Benešov nad Černou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438504"
+  },
+  "Lužnice": {
+    "lat": 49.0687044,
+    "lon": 14.7550345,
+    "precision": "town",
+    "label": "Lužnice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438503"
+  },
+  "Miloňovice": {
+    "lat": 49.2204913,
+    "lon": 13.9585784,
+    "precision": "town",
+    "label": "Miloňovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438026"
+  },
+  "Ktiš": {
+    "lat": 48.916976,
+    "lon": 14.1326527,
+    "precision": "town",
+    "label": "Ktiš — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437221"
+  },
+  "Malenice": {
+    "lat": 49.1241867,
+    "lon": 13.8889376,
+    "precision": "town",
+    "label": "Malenice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438030"
+  },
+  "Nová Pec": {
+    "lat": 48.7893877,
+    "lon": 13.95249,
+    "precision": "town",
+    "label": "Nová Pec — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438072"
+  },
+  "Lčovice": {
+    "lat": 49.1145317,
+    "lon": 13.8506097,
+    "precision": "town",
+    "label": "Lčovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437991"
+  },
+  "Tálín": {
+    "lat": 49.2476115,
+    "lon": 14.2269384,
+    "precision": "town",
+    "label": "Tálín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437211"
+  },
+  "Chvalšiny": {
+    "lat": 48.8540143,
+    "lon": 14.2111405,
+    "precision": "town",
+    "label": "Chvalšiny — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438534"
+  },
+  "Velká Turná": {
+    "lat": 49.3398925,
+    "lon": 13.9591203,
+    "precision": "town",
+    "label": "Velká Turná — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438050"
+  },
+  "Pohorovice": {
+    "lat": 49.1912575,
+    "lon": 14.1430495,
+    "precision": "town",
+    "label": "Pohorovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438829"
+  },
+  "Paseky": {
+    "lat": 49.2518565,
+    "lon": 14.2550688,
+    "precision": "town",
+    "label": "Paseky — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436465"
+  },
+  "Roseč": {
+    "lat": 49.1288764,
+    "lon": 14.9106992,
+    "precision": "town",
+    "label": "Roseč — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438480"
+  },
+  "Písečné": {
+    "lat": 48.9648055,
+    "lon": 15.4622323,
+    "precision": "town",
+    "label": "Písečné — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438435"
+  },
+  "Přední Výtoň": {
+    "lat": 48.6312159,
+    "lon": 14.1666534,
+    "precision": "town",
+    "label": "Přední Výtoň — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438551"
+  },
+  "Probulov": {
+    "lat": 49.4920627,
+    "lon": 14.1447756,
+    "precision": "town",
+    "label": "Probulov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437198"
+  },
+  "Chlumany": {
+    "lat": 49.0665627,
+    "lon": 13.9653602,
+    "precision": "town",
+    "label": "Chlumany — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437225"
+  },
+  "Paračov": {
+    "lat": 49.2009896,
+    "lon": 14.0010197,
+    "precision": "town",
+    "label": "Paračov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438017"
+  },
+  "Ražice": {
+    "lat": 49.2412362,
+    "lon": 14.1018686,
+    "precision": "town",
+    "label": "Ražice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437347"
+  },
+  "Nevězice": {
+    "lat": 49.4707404,
+    "lon": 14.1455204,
+    "precision": "town",
+    "label": "Nevězice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437336"
+  },
+  "Dunajovice": {
+    "lat": 49.0350449,
+    "lon": 14.6952479,
+    "precision": "town",
+    "label": "Dunajovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437302"
+  },
+  "Studená": {
+    "lat": 49.184688,
+    "lon": 15.286762,
+    "precision": "town",
+    "label": "Studená — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/437492"
+  },
+  "Rožmitál na Šumavě": {
+    "lat": 48.7019495,
+    "lon": 14.3879485,
+    "precision": "town",
+    "label": "Rožmitál na Šumavě — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438444"
+  },
+  "Kamenný Újezd": {
+    "lat": 49.7186729,
+    "lon": 13.6123563,
+    "precision": "town",
+    "label": "Kamenný Újezd — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439775"
+  },
+  "Dolní Bělá": {
+    "lat": 49.896155,
+    "lon": 13.273258,
+    "precision": "town",
+    "label": "Dolní Bělá — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439692"
+  },
+  "Ejpovice": {
+    "lat": 49.7461062,
+    "lon": 13.5141577,
+    "precision": "town",
+    "label": "Ejpovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439832"
+  },
+  "Kozojedy": {
+    "lat": 49.9312765,
+    "lon": 13.5439405,
+    "precision": "town",
+    "label": "Kozojedy — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439732"
+  },
+  "Výrov": {
+    "lat": 49.9644481,
+    "lon": 13.4587693,
+    "precision": "town",
+    "label": "Výrov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436627"
+  },
+  "Lochousice": {
+    "lat": 49.6750932,
+    "lon": 13.0904447,
+    "precision": "town",
+    "label": "Lochousice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439748"
+  },
+  "Kbelany": {
+    "lat": 49.7367529,
+    "lon": 13.1254095,
+    "precision": "town",
+    "label": "Kbelany — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439688"
+  },
+  "Skořice": {
+    "lat": 49.6647351,
+    "lon": 13.7289238,
+    "precision": "town",
+    "label": "Skořice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439795"
+  },
+  "Hůrky": {
+    "lat": 49.7458753,
+    "lon": 13.683099,
+    "precision": "town",
+    "label": "Hůrky — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439828"
+  },
+  "Hlince": {
+    "lat": 49.9482274,
+    "lon": 13.6250237,
+    "precision": "town",
+    "label": "Hlince — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439751"
+  },
+  "Mladotice": {
+    "lat": 49.9853194,
+    "lon": 13.3642638,
+    "precision": "town",
+    "label": "Mladotice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439721"
+  },
+  "Mrtník": {
+    "lat": 49.8955373,
+    "lon": 13.3118901,
+    "precision": "town",
+    "label": "Mrtník — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439720"
+  },
+  "Úterý": {
+    "lat": 49.9399942,
+    "lon": 13.0038338,
+    "precision": "town",
+    "label": "Úterý — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439763"
+  },
+  "Tatiná": {
+    "lat": 49.8487525,
+    "lon": 13.2995805,
+    "precision": "town",
+    "label": "Tatiná — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439800"
+  },
+  "Jarov": {
+    "lat": 49.8725601,
+    "lon": 13.4743381,
+    "precision": "town",
+    "label": "Jarov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439741"
+  },
+  "Řenče": {
+    "lat": 49.5801641,
+    "lon": 13.4170696,
+    "precision": "town",
+    "label": "Řenče — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439710"
+  },
+  "Životice": {
+    "lat": 49.4686474,
+    "lon": 13.6888947,
+    "precision": "town",
+    "label": "Životice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436216"
+  },
+  "Loza": {
+    "lat": 49.8937996,
+    "lon": 13.2903616,
+    "precision": "town",
+    "label": "Loza — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439756"
+  },
+  "Štichov": {
+    "lat": 49.5849081,
+    "lon": 13.0488597,
+    "precision": "town",
+    "label": "Štichov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438331"
+  },
+  "Podmokly": {
+    "lat": 49.9433253,
+    "lon": 13.7044333,
+    "precision": "town",
+    "label": "Podmokly — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439804"
+  },
+  "Žihle": {
+    "lat": 50.0448245,
+    "lon": 13.3753545,
+    "precision": "town",
+    "label": "Žihle — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439793"
+  },
+  "Krašovice": {
+    "lat": 49.8723393,
+    "lon": 13.3052395,
+    "precision": "town",
+    "label": "Krašovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439736"
+  },
+  "Všeruby": {
+    "lat": 49.8417849,
+    "lon": 13.229176,
+    "precision": "town",
+    "label": "Všeruby — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436628"
+  },
+  "Zahrádka": {
+    "lat": 49.8807468,
+    "lon": 13.2116344,
+    "precision": "town",
+    "label": "Zahrádka — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439791"
+  },
+  "Díly": {
+    "lat": 49.4462609,
+    "lon": 12.7863878,
+    "precision": "town",
+    "label": "Díly — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439257"
+  },
+  "Spáňov": {
+    "lat": 49.4145127,
+    "lon": 12.9873068,
+    "precision": "town",
+    "label": "Spáňov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439185"
+  },
+  "Kdyně": {
+    "lat": 49.3910021,
+    "lon": 13.0392655,
+    "precision": "town",
+    "label": "Kdyně — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439157"
+  },
+  "Horní Kamenice": {
+    "lat": 49.5695909,
+    "lon": 13.1010532,
+    "precision": "town",
+    "label": "Horní Kamenice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439174"
+  },
+  "Hvozd": {
+    "lat": 49.9481651,
+    "lon": 13.2555161,
+    "precision": "town",
+    "label": "Hvozd — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439740"
+  },
+  "Babylon": {
+    "lat": 49.3975285,
+    "lon": 12.8617005,
+    "precision": "town",
+    "label": "Babylon — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438630"
+  },
+  "Brnířov": {
+    "lat": 49.3825866,
+    "lon": 13.0495821,
+    "precision": "town",
+    "label": "Brnířov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438329"
+  },
+  "Nevid": {
+    "lat": 49.6883065,
+    "lon": 13.6167721,
+    "precision": "town",
+    "label": "Nevid — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439781"
+  },
+  "Dnešice": {
+    "lat": 49.6048203,
+    "lon": 13.2645445,
+    "precision": "town",
+    "label": "Dnešice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438249"
+  },
+  "Terešov": {
+    "lat": 49.8967589,
+    "lon": 13.6997878,
+    "precision": "town",
+    "label": "Terešov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438900"
+  },
+  "Svojkovice": {
+    "lat": 49.7599942,
+    "lon": 13.6480334,
+    "precision": "town",
+    "label": "Svojkovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439776"
+  },
+  "Mířkov": {
+    "lat": 49.5893761,
+    "lon": 12.8807652,
+    "precision": "town",
+    "label": "Mířkov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439167"
+  },
+  "Smědčice": {
+    "lat": 49.7989232,
+    "lon": 13.5124991,
+    "precision": "town",
+    "label": "Smědčice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439789"
+  },
+  "Líšná": {
+    "lat": 49.8850612,
+    "lon": 13.8048569,
+    "precision": "town",
+    "label": "Líšná — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439806"
+  },
+  "Sedliště": {
+    "lat": 49.5322933,
+    "lon": 13.6207021,
+    "precision": "town",
+    "label": "Sedliště — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436220"
+  },
+  "Tlumačov": {
+    "lat": 49.4038879,
+    "lon": 12.9290054,
+    "precision": "town",
+    "label": "Tlumačov — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436451"
+  },
+  "Otěšice": {
+    "lat": 49.5440274,
+    "lon": 13.2202432,
+    "precision": "town",
+    "label": "Otěšice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438184"
+  },
+  "Kotovice": {
+    "lat": 49.6740464,
+    "lon": 13.1450099,
+    "precision": "town",
+    "label": "Kotovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438175"
+  },
+  "Litohlavy": {
+    "lat": 49.7664348,
+    "lon": 13.5645816,
+    "precision": "town",
+    "label": "Litohlavy — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439823"
+  },
+  "Mladý Smolivec": {
+    "lat": 49.5060904,
+    "lon": 13.7351283,
+    "precision": "town",
+    "label": "Mladý Smolivec — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438242"
+  },
+  "Bušovice": {
+    "lat": 49.7955215,
+    "lon": 13.5346574,
+    "precision": "town",
+    "label": "Bušovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439821"
+  },
+  "Zvíkovec": {
+    "lat": 49.9542784,
+    "lon": 13.6881348,
+    "precision": "town",
+    "label": "Zvíkovec — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439780"
+  },
+  "Mlečice": {
+    "lat": 49.9201921,
+    "lon": 13.6950276,
+    "precision": "town",
+    "label": "Mlečice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439805"
+  },
+  "Merklín": {
+    "lat": 49.5604916,
+    "lon": 13.1980396,
+    "precision": "town",
+    "label": "Merklín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436214"
+  },
+  "Liblín": {
+    "lat": 49.9057251,
+    "lon": 13.5593664,
+    "precision": "town",
+    "label": "Liblín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439826"
+  },
+  "Soběkury": {
+    "lat": 49.5761288,
+    "lon": 13.2392526,
+    "precision": "town",
+    "label": "Soběkury — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439656"
+  },
+  "Třebčice": {
+    "lat": 49.4834174,
+    "lon": 13.6194303,
+    "precision": "town",
+    "label": "Třebčice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439706"
+  },
+  "Malý Bor": {
+    "lat": 49.3305122,
+    "lon": 13.6522519,
+    "precision": "town",
+    "label": "Malý Bor — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438297"
+  },
+  "Soběšice": {
+    "lat": 49.2077969,
+    "lon": 13.6841018,
+    "precision": "town",
+    "label": "Soběšice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438283"
+  },
+  "Ošelín": {
+    "lat": 49.7720036,
+    "lon": 12.8561491,
+    "precision": "town",
+    "label": "Ošelín — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438907"
+  },
+  "Dražovice": {
+    "lat": 49.2246667,
+    "lon": 13.6070095,
+    "precision": "town",
+    "label": "Dražovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438350"
+  },
+  "Kostelec": {
+    "lat": 49.6743403,
+    "lon": 13.0261974,
+    "precision": "town",
+    "label": "Kostelec — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438909"
+  },
+  "Skapce": {
+    "lat": 49.6569632,
+    "lon": 12.9903438,
+    "precision": "town",
+    "label": "Skapce — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438950"
+  },
+  "Cebiv": {
+    "lat": 49.8293384,
+    "lon": 12.9790633,
+    "precision": "town",
+    "label": "Cebiv — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438868"
+  },
+  "Chodová Planá": {
+    "lat": 49.8944618,
+    "lon": 12.729449,
+    "precision": "town",
+    "label": "Chodová Planá — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438861"
+  },
+  "Vřeskovice": {
+    "lat": 49.5254345,
+    "lon": 13.2711077,
+    "precision": "town",
+    "label": "Vřeskovice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438352"
+  },
+  "Prostiboř": {
+    "lat": 49.6537783,
+    "lon": 12.8988328,
+    "precision": "town",
+    "label": "Prostiboř — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438913"
+  },
+  "Sulislav": {
+    "lat": 49.7487315,
+    "lon": 13.0727608,
+    "precision": "town",
+    "label": "Sulislav — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438949"
+  },
+  "Buková": {
+    "lat": 49.5369923,
+    "lon": 13.1591328,
+    "precision": "town",
+    "label": "Buková — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436218"
+  },
+  "Kokašice": {
+    "lat": 49.8784922,
+    "lon": 12.9471498,
+    "precision": "town",
+    "label": "Kokašice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438872"
+  },
+  "Chrastavice": {
+    "lat": 49.4535515,
+    "lon": 12.9568115,
+    "precision": "town",
+    "label": "Chrastavice — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/439176"
+  },
+  "Milíře": {
+    "lat": 49.7807421,
+    "lon": 12.5249695,
+    "precision": "town",
+    "label": "Milíře — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/436631"
   }
 }
