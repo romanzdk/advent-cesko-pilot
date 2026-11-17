@@ -122,6 +122,44 @@ test('batched permalinks reveal whole required batches after async load, filters
     assert.deepEqual(errors, []);
   }, { data: batchFixture, responseStatus: 503, mobile: true, base: '/#akce=e-batch-21' });
 });
+for (const mobile of [true, false]) test(`map expands to the whole window and collapses by button, Escape and list view (${mobile ? 'phone' : 'desktop'})`, async () => {
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    if (mobile) await page.locator('#show-map').click();
+    await page.waitForSelector('.leaflet-container');
+    const toggle = page.locator('#map-expand');
+    assert.equal(await toggle.getAttribute('aria-pressed'), 'false');
+    assert.equal(await toggle.innerText(), 'Zvětšit mapu');
+    const small = await page.locator('#map').boundingBox();
+    const spread = () => page.evaluate(() => { const xs = [...document.querySelectorAll('.map-marker')].map(n => n.getBoundingClientRect().x); return Math.max(...xs) - Math.min(...xs); });
+    const smallSpread = await spread();
+    const box = await toggle.boundingBox();
+    assert.ok(box.width >= 44 && box.height >= 44);
+    await toggle.click();
+    const viewport = page.viewportSize();
+    assert.equal(await toggle.getAttribute('aria-pressed'), 'true');
+    assert.equal(await toggle.innerText(), 'Zmenšit mapu');
+    assert.deepEqual(await page.locator('#map-panel').boundingBox(), { x: 0, y: 0, width: viewport.width, height: viewport.height });
+    const big = await page.locator('#map').boundingBox();
+    assert.ok(big.height > small.height + 150 && big.y + big.height === viewport.height);
+    if (!mobile) assert.ok(await spread() > smallSpread * 1.5, 'expanded map refits to the markers');
+    assert.equal(await page.evaluate(() => document.elementFromPoint(innerWidth / 2, innerHeight - 30).closest('#map-panel') !== null), true);
+    assert.equal(await page.evaluate(() => document.activeElement.id), 'map-expand');
+    await page.keyboard.press('Escape');
+    assert.equal(await toggle.getAttribute('aria-pressed'), 'false');
+    assert.equal((await page.locator('#map').boundingBox()).height, small.height);
+    await toggle.click();
+    await toggle.click();
+    assert.equal(await toggle.getAttribute('aria-pressed'), 'false');
+    if (mobile) {
+      await toggle.click();
+      await page.evaluate(() => document.getElementById('show-list').click());
+      assert.equal(await toggle.getAttribute('aria-pressed'), 'false');
+      assert.equal(await page.locator('.event-card').first().isVisible(), true);
+    }
+    assert.deepEqual(errors, []);
+  }, { mobile });
+});
 test('all batched matches stay on the map; popup reveals a late card and appending preserves selection and markers', async () => {
   await app(async (page, errors) => {
     await page.waitForSelector('.map-marker');

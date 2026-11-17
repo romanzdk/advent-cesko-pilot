@@ -114,3 +114,5 @@
 .share-status[hidden]{display:none}
 .share-url{display:block;min-height:44px;max-width:100%;overflow-wrap:anywhere;user-select:all}
 .permalink-status{font-size:.85rem;color:var(--warning)}
+.map-heading span{margin-left:auto}.map-expand{display:inline-flex;align-items:center;gap:7px;font-size:.72rem;padding:8px 12px;color:var(--forest);flex:none}.map-expand span{margin:0;font-size:inherit;color:inherit}.map-expand .icon-shrink,.map-expanded .map-expand .icon-grow{display:none}.map-expanded .map-expand .icon-shrink{display:inline}
+.map-panel.map-expanded{position:fixed;inset:0;z-index:2000;display:flex;flex-direction:column;border:0;border-radius:0}.map-expanded #map{flex:1;height:auto;min-height:0}.map-expanded .map-legend,.map-expanded .map-notice,.map-expanded .map-caption{display:none}body:has(.map-expanded){overflow:hidden}

@@ -380,7 +380,16 @@ function render() {
   $('result-count').textContent = rangeError ? 'Opravte rozsah dat.' : `${visible.length} ${visible.length === 1 ? 'akce' : visible.length < 5 ? 'akce' : 'akcí'} · ${[...scope, period].join(' · ')}`;
   updateMap();
 }
+function expandMap(expanded) {
+  $('map-panel').classList.toggle('map-expanded', expanded);
+  $('map-expand').setAttribute('aria-pressed', String(expanded));
+  $('map-expand').querySelector('span').textContent = expanded ? 'Zmenšit mapu' : 'Zvětšit mapu';
+  if (map) { map.invalidateSize(); updateMap(); }
+}
+$('map-expand').addEventListener('click', () => expandMap(!$('map-panel').classList.contains('map-expanded')));
+addEventListener('keydown', event => { if (event.key === 'Escape' && $('map-panel').classList.contains('map-expanded')) expandMap(false); });
 function setView(view) {
+  if (view === 'list') expandMap(false);
   $('explore').dataset.view = view;
   $('show-list').setAttribute('aria-pressed', String(view === 'list'));
   $('show-map').setAttribute('aria-pressed', String(view === 'map'));
