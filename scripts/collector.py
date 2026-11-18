@@ -871,6 +871,22 @@ def json_write(path, value):
     tmp.replace(path)
 
 
+def clear_unassigned_review(con, url):
+    if con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='published_orphan_reviews'").fetchone():
+        con.execute('DELETE FROM published_orphan_reviews WHERE url=?', (url,))
+
+
+def projected_reviews(con, allowed_ids):
+    """Keep published unresolved items without inventing a source owner."""
+    review = [dict(title=title,url=url,reason=reason) for sid,url,title,reason in
+              con.execute('SELECT source_id,url,title,reason FROM reviews ORDER BY source_id,url')
+              if sid in allowed_ids]
+    if con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='published_orphan_reviews'").fetchone():
+        review.extend(dict(title=title,url=url,reason=reason) for url,title,reason in
+                      con.execute('SELECT url,title,reason FROM published_orphan_reviews ORDER BY url,title,reason'))
+    return review
+
+
 def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewed_snapshot=None, reviewed_feed=None, reviewed_only=False):
     started = time.monotonic()
     checked = now()
@@ -999,6 +1015,7 @@ def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewe
                         season=registry['season'], region='Česko', events=events), audited[3] if audited else ())
                 except (ValueError, TypeError, KeyError, AttributeError) as exc:
                     raise Review('Neplatná veřejná pole události; ověřte znovu.') from exc
+                clear_unassigned_review(con, url)
                 # Every occurrence is validated before the first event/provenance write.
                 for event in events:
                     semantic = {k:v for k,v in event.items() if k != 'verifiedAt'}
@@ -1019,12 +1036,14 @@ def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewe
                 con.execute('DELETE FROM reviews WHERE source_id=? AND url=?', (sid,url))
                 con.execute('DELETE FROM exclusions WHERE source_id=? AND url=?', (sid,url))
             except Excluded as exc:
+                clear_unassigned_review(con, url)
                 excluded_count += 1
                 metrics['excludedCount'] += 1
                 con.execute('DELETE FROM events WHERE source_id=? AND url=?', (sid,url))
                 con.execute('DELETE FROM reviews WHERE source_id=? AND url=?', (sid,url))
                 con.execute('INSERT OR REPLACE INTO exclusions VALUES (?,?,?,?)', (sid,url,str(exc),checked))
             except Review as exc:
+                clear_unassigned_review(con, url)
                 review_count += 1
                 # A changed, ambiguous detail must not silently keep advertising prior facts.
                 con.execute('DELETE FROM events WHERE source_id=? AND url=?', (sid,url))
@@ -1063,7 +1082,7 @@ def collect(registry, db, output, locations, fetcher, source_id=None, *, reviewe
         dedupe.add(key)
         events.append(event)
     events.sort(key=lambda e: (e['date'],e['startTime'] or '99:99',e['town'],e['title']))
-    review = [dict(title=title,url=url,reason=reason) for sid,url,title,reason in con.execute('SELECT source_id,url,title,reason FROM reviews ORDER BY source_id,url') if sid in allowed_ids]
+    review = projected_reviews(con, allowed_ids)
     states = {sid:json.loads(p) for sid,p in con.execute('SELECT id,payload FROM source_state')}
     metrics.update({k:fetcher.stats.get(k,0) for k in ('requestCount','http304','cacheUnchanged')})
     metrics.update(eventsPublished=len(events), reviewCount=len(review), durationSeconds=round(time.monotonic()-started,3))

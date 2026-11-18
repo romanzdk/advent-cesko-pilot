@@ -106,9 +106,14 @@ Skript:
 
 1. Zkontroluje letošní sezonní limit ještě před procesy a síťovými operacemi a získá neblokující lokální zámek.
 2. Vyžaduje větev `main`, čistý checkout a přesný nakonfigurovaný vzdálený repozitář.
-3. Provede sběr a validaci veřejných dat.
-4. Vytvoří commit pouze ze `site/events.json`, `site/coverage.json` a `site/review.json` a odešle ho.
-5. Ověří vzdálený HEAD, úspěšný Pages workflow pro daný commit a shodu všech tří skutečně publikovaných JSON s lokálními soubory.
+3. Bez rozpracované publikace stáhne `main` pouze posunem vpřed. Ověří skutečně nasazený commit i všechny tři veřejné JSON a před sběrem transakčně převezme chybějící zveřejněné záznamy do SQLite. Před změnou vzniká neveřejná databázová záloha. Samotné převzetí nemění veřejné soubory ani původní datum ověření pořadatele.
+4. Provede sběr a validaci veřejných dat.
+5. Vytvoří commit pouze ze `site/events.json`, `site/coverage.json` a `site/review.json` a odešle ho.
+6. Ověří vzdálený HEAD, úspěšný Pages workflow pro daný commit a shodu všech tří skutečně publikovaných JSON s lokálními soubory.
+
+Převzetí rozlišuje zveřejněná data od rozpracovaných soukromých změn. Neodstraňuje staré databázové řádky ani nepřepisuje neznámé konflikty nebo vlastníky. Neočekávané zmizení zveřejněných ID, změna vlastníka, nejasná lokální změna či neshoda nasazení aktualizaci zastaví. Změny schválené vlastní předchozí publikací mají samostatný ověřený doklad. Pokud stažení změní kód, příkaz se po uvolnění zámku nejvýše jednou spustí znovu s novým kódem.
+
+Zveřejněný kandidát bez známého vlastníka zůstává ve zvláštní nezařazené kontrolní frontě. Nepovažuje se za přijatou akci a vlastník se neodhaduje. Tím neblokuje převzetí ostatních řádně přiřazených akcí. Převzetí snapshotu se eviduje odděleně od skutečného HTTP ověření primárního zdroje; nenahrazuje je a neoslabuje časové pojistky živého redakčního feedu.
 
 Úspěšný běh záměrně nic nevypisuje. Při chybě vrací nenulový kód a stručnou zprávu bez syrových výjimek či přihlašovacích údajů. Plánovač chybu doručí správci.
 
