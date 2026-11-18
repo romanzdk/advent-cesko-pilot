@@ -147,16 +147,19 @@ class LocalAdventReviewedUpdate(unittest.TestCase):
                            (kunice, 'reviewed-www-kunice-cz'), (museum, 'reviewed-muzeumricany-cz')]:
             self.assertEqual(reviewed_public.binding(event, self.sources)['id'], sid)
 
-    def test_committed_public_directory_remains_valid_before_feed_transfer(self):
+    def test_committed_public_directory_matches_verified_feed_transfer(self):
         count = validate_public.validate_directory(ROOT / 'site', self.registry)
         self.assertEqual(count, len(json.loads((ROOT / 'site/events.json').read_text())['events']))
         coverage = json.loads((ROOT / 'site/coverage.json').read_text())
         for source in coverage['sources']:
             if source['id'] in NEW_SOURCES:
-                self.assertEqual(source['status'], 'partial')
-                self.assertEqual(source['eventCount'], 0)
-                self.assertIsNone(source['lastSuccess'])
-                self.assertIsNone(source['lastChecked'])
+                expected = sum(reviewed_public.binding(event, self.sources)['id'] == source['id']
+                               for event in self.events.values())
+                self.assertEqual(source['status'], 'ok')
+                self.assertEqual(source['eventCount'], expected)
+                self.assertIsNone(source['lastError'])
+                self.assertIsNotNone(source['lastSuccess'])
+                self.assertIsNotNone(source['lastChecked'])
 
 
 if __name__ == '__main__':

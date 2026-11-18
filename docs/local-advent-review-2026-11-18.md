@@ -2,12 +2,12 @@
 
 ## Rozsah návrhu
 
-Výchozí verze je `df70aeef448a6e090293771fc22c03e6ff703ffe` (`origin/main`). Jde pouze o izolovaný návrh: žádný push, sloučení ani nasazení; žádné změny produkční databáze, plánovače, kalendářů nebo pozvánek.
+Výchozí verze je `df70aeef448a6e090293771fc22c03e6ff703ffe` (`origin/main`). Jde o izolovaný, nezávisle zkontrolovaný návrh s ověřeným veřejným přenosem. Sloučení a kontrola skutečného nasazení jsou samostatný krok; žádné změny plánovače, kalendářů nebo pozvánek.
 
 - `data/reviewed-events.json`: 172 → 186 záznamů; 14 nových, tři doložené opravy, žádné odstranění. Všech 169 nedotčených záznamů je shodných včetně původního `verifiedAt`.
 - Zachovány kanonické identity, primární URL a vlastníci všech původních záznamů. Doplňující podklady patří do poznámek, nikoli do migrace primárního zdroje.
 - Čtyři nové vazby jsou omezené na přesné dokumenty/stránky PDF a schválené obce. Žádný existující zdroj ani ochrana soukromí se nemění. Nové záznamy mají polohu `null`.
-- `site/events.json` a `site/review.json` zůstávají bajtově shodné s výchozí verzí. `site/coverage.json` pouze přidává čtyři čekající zdroje s nulovými počty a bez časů kontroly; staré zdroje i celkové metriky zůstávají shodné. Registrace není dokladem nasazení nových akcí.
+- Tři veřejné projekce pocházejí z druhého skutečného přenosu níže: 2 789 akcí, 14 přírůstků, tři opravy, žádné odstranění. Všech 2 772 ostatních úplných záznamů včetně dat ověření zůstává shodných. Všech 592 položek revizní fronty i 1 012 neredakčních stavů zdrojů zůstává beze změny. Publikační čas není novým ověřením pořadatele.
 - Nové `generatedAt` označuje revizi feedu. Jednotlivé `verifiedAt` vycházejí z konkrétních ověření, nikoli z času přenosu.
 
 ## Nové kanonické záznamy
@@ -57,7 +57,7 @@ Kapacity jsou označené jako časové snímky, nikoli záruka budoucí dostupno
 - `python3 -m unittest discover -s tests -v`: **294 testů prošlo**; čistý izolovaný worktree bez produkčního `private/`.
 - Samostatné zaměřené sady: šest nových faktických testů, 22 lifecycle/feed testů a čtyři testy obecních registrací prošly.
 - `node --test tests-ui/helpers.test.mjs tests-ui/pilot.test.mjs tests-ui/feedback.test.mjs`: **33 testů prošlo**.
-- `python3 scripts/validate_public.py site`: platná výchozí projekce **2 775 akcí**, včetně nových čekajících registrací.
+- `python3 scripts/validate_public.py site`: výchozí projekce **2 775 akcí** a následně skutečně přenesená projekce **2 789 akcí** prošly validací.
 - Dva průchody skutečným sběračem a validátorem s plným registrem a izolovanou zálohou synchronizované SQLite: **2 789 akcí**, **14 přidáno**, **3 opraveny**, **0 odstraněno**, **2 772 kompletních původních payloadů i dat ověření zachováno**. Druhý průchod: žádná další nová ani změněná akce. Všechny původní DB identity/vlastníci a nadbytečný nepoužitý řádek zůstávají zachované; 1 012 neredakčních stavů zdrojů a jejich původní evidence beze změny. Fronta nadále obsahuje 592 kandidátů.
 
-Tyto dva průchody jsou **offline zkouškou přenosu přesných místních bajtů**, nikoli skutečným HTTP přenosem ze zveřejněné SHA-pinned URL. Nenahrazují schválení změny, následné dva veřejné přenosy téže zmrazené revize a kontrolu nasazených dat pod publikačním zámkem. Tyto kroky zůstávají před publikací neprovedené; návrh nemá technický integrační blokátor.
+První dva průchody byly **offline zkouškou přesných místních bajtů**. Následovaly **dva skutečné HTTP přenosy** dne 18.11.2026 ve 12:11:59 a 12:12:05 UTC z neměnné veřejné URL `https://raw.githubusercontent.com/romanzdk/advent-cesko-pilot/c767c09d8fc7fef93a8021d17544ba3956cf0e23/data/reviewed-events.json`, se stejným plným registrem a izolovanou aktuální kopií produkční SQLite. Oba přenosy ověřily SHA-256 `ef35411370f5693bbac56c744daee5b23b0ec08ad2e73e6179d83232a7ce4c99`, stejných 2 789 úplných záznamů, 14 přírůstků, tři opravy a žádné odstranění. Všech 59 redakčních zdrojů mělo `ok`, čerstvé `lastSuccess` a prázdné `lastError`; neredakční evidence zůstala nedotčená. Druhý přenos nepřidal ani nezměnil žádnou další akci. Zdrojové dokumenty, registr a feed byly po dobu těchto přenosů zmrazené. Produkční SQLite zůstala beze změny; nativní převzetí publikovaného stavu a následný `--reviewed-only` zůstávají pod publikačním zámkem. Kontrola skutečného nasazení bude provedena až po schváleném sloučení.
