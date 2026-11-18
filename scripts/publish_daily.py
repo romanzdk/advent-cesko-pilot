@@ -3,9 +3,11 @@ from datetime import date, datetime
 from pathlib import Path
 import argparse
 import fcntl
+import hashlib
 import importlib.util
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -20,6 +22,14 @@ def in_season(day):
 REMOTE = 'https://github.com/romanzdk/advent-cesko-pilot.git'
 PUBLIC = 'https://romanzdk.github.io/advent-cesko-pilot/'
 FILES = ('site/events.json', 'site/coverage.json', 'site/review.json')
+
+
+def runtime_code():
+    return hashlib.sha256(b''.join(p.name.encode()+p.read_bytes()
+        for p in sorted(Path(__file__).parent.glob('*.py')))).hexdigest()
+
+
+LOADED_CODE = runtime_code()
 
 
 class PublicationError(RuntimeError):
@@ -58,7 +68,54 @@ def validate_projection(path):
     spec = importlib.util.spec_from_file_location('public_validator', Path(__file__).with_name('validate_public.py'))
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    return module.validate_directory(path)
+    return module.validate_directory(path, Path(path).parent/'data/sources.json')
+
+
+def sync_preflight(root, head, upstream, verify):
+    if runtime_code() != LOADED_CODE:
+        raise PublicationError('reload-required')
+    spec = importlib.util.spec_from_file_location('published_sync', Path(__file__).with_name('sync_published.py'))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    baseline = module.documents(root)
+    baseline['_commit'] = head
+    fence = root/'private/published-base.json'
+    if fence.exists():
+        saved = json.loads(fence.read_text())
+        if set(saved)!={'base'} or not re.fullmatch(r'[0-9a-f]{40}',saved['base']):
+            raise PublicationError('sync-baseline')
+        try:
+            git(root, 'merge-base', '--is-ancestor', saved['base'], head)
+            baseline = {Path(f).stem:json.loads(git(root,'show',saved['base']+':'+f)) for f in FILES}
+            baseline['_commit'] = saved['base']
+        except (subprocess.CalledProcessError,ValueError):
+            raise PublicationError('sync-baseline') from None
+    if upstream != head:
+        git(root, 'fetch', 'origin', 'refs/heads/main')
+        if git(root, 'rev-parse', 'FETCH_HEAD') != upstream:
+            raise PublicationError('remote-head')
+        try:
+            git(root, 'merge-base', '--is-ancestor', head, upstream)
+        except subprocess.CalledProcessError:
+            raise PublicationError('divergence') from None
+        changed_code = git(root, 'diff', '--name-only', head, upstream, '--', 'scripts')
+        if not fence.exists():
+            atomic_private(fence, {'base':head})
+        git(root, 'merge', '--ff-only', upstream)
+        if changed_code:
+            raise PublicationError('reload-required')
+    verify(root, upstream)
+    if remote_head(root) != upstream or git(root, 'rev-parse', 'HEAD') != upstream:
+        raise PublicationError('remote-head')
+    if runtime_code() != LOADED_CODE:
+        raise PublicationError('reload-required')
+    if git(root, 'status', '--porcelain', '--untracked-files=all'):
+        raise PublicationError('dirty-checkout')
+    try:
+        module.adopt_published(root, upstream, baseline=baseline)
+    except module.SyncError as error:
+        raise PublicationError(str(error)) from None
+    fence.unlink(missing_ok=True)
 
 
 def publish(root, *, today=None, remote=REMOTE, collect=None, validate=None, verify=None, reviewed_only=False):
@@ -97,9 +154,8 @@ def _locked(root, remote, collect, validate, verify, *, reviewed_only=False):
             raise PublicationError('pending-state')
         validate(root/'site')
         return _deliver(root, head, state, verify, upstream != head)
-    if upstream != head:
-        raise PublicationError('divergence')
-    base = head
+    sync_preflight(root, head, upstream, verify)
+    base = upstream
     if reviewed_only:
         collect(root, reviewed_only=True)
     else:
@@ -123,6 +179,8 @@ def _deliver(root, head, state, verify, push):
     if remote_head(root) != head:
         raise PublicationError('remote-head')
     verify(root, head)
+    # Only our fenced, deployment-verified delivery may acknowledge removals.
+    atomic_private(root/'private/published-owned.json', {'head':head})
     state.unlink()
     return 'published'
 
@@ -172,7 +230,7 @@ def main(argv=None):
     args = parser.parse_args(argv)
     root = Path(__file__).resolve().parents[1]
     if args.check:
-        for filename in ('collector.py', 'validate_public.py'):
+        for filename in ('collector.py', 'validate_public.py', 'sync_published.py'):
             if not Path(__file__).with_name(filename).is_file():
                 print(f'Chyba denní aktualizace (pripravenost): {PUBLIC}')
                 return 1
@@ -184,10 +242,24 @@ def main(argv=None):
             publish(root)
         return 0
     except Exception as error:
+        if (isinstance(error, PublicationError) and str(error) == 'reload-required'
+                and os.environ.get('_ADVENT_PUBLISHER_RELOADED') != '1'):
+            # The lock has unwound. Restart exactly once so code installed by a
+            # fast-forward is loaded before any adoption/collection can run.
+            arguments = list(sys.argv[1:] if argv is None else argv)
+            try:
+                os.execve(sys.executable, [sys.executable, str(Path(__file__).resolve()), *arguments],
+                          dict(os.environ, _ADVENT_PUBLISHER_RELOADED='1'))
+            except OSError:
+                pass  # Keep the controlled error below; never loop on a failed exec.
         stage = str(error) if isinstance(error, PublicationError) else 'aktualizace'
         # Only controlled stage identifiers reach scheduler stdout; never subprocess output.
         if stage not in {'branch','remote','dirty-checkout','divergence','collector-scope',
-                         'pending-state','remote-head','pages-ci','pages-readback-timeout'}:
+                         'pending-state','remote-head','pages-ci','pages-readback-timeout',
+                         'reload-required','sync-baseline','sync-schema','sync-validation','sync-owner',
+                         'sync-conflict','sync-projection','sync-state-conflict','sync-review-owner',
+                         'sync-review-conflict','sync-review-projection','sync-removal',
+                         'sync-reviewed-snapshot','sync-reviewed-stale'}:
             stage = 'aktualizace'
         try:
             private = root/'private'; private.mkdir(mode=0o700, exist_ok=True)

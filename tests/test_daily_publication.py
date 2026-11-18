@@ -10,6 +10,7 @@ import subprocess
 import tempfile
 import unittest
 from unittest.mock import patch
+from test_runtime_sync import fixture, write_projection
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('publish_daily', ROOT/'scripts/publish_daily.py')
@@ -36,21 +37,26 @@ class PublicationTests(unittest.TestCase):
         subprocess.run(['git','init','-b','main',str(self.repo)], check=True, capture_output=True)
         git(self.repo,'config','user.name','Publisher Test')
         git(self.repo,'config','user.email','test@example.invalid')
-        (self.repo/'site').mkdir()
+        self.registry, _ = fixture(self.repo)
         (self.repo/'.gitignore').write_text('private/\n')
-        for name in ['events','coverage','review']:
-            (self.repo/f'site/{name}.json').write_text('{}\n')
+        write_projection(self.repo,self.registry,[])
         git(self.repo,'add','.')
         git(self.repo,'commit','-m','Initial')
         git(self.repo,'remote','add','origin',str(self.remote))
         git(self.repo,'push','origin','main')
+        self.initial = git(self.repo,'rev-parse','HEAD')
         self.verified = []
         self.collected = 0
 
     def collect(self, root):
         self.collected += 1
         for name in ['events','coverage','review']:
-            (root/f'site/{name}.json').write_text(json.dumps({'version': 2})+'\n')
+            path = root/f'site/{name}.json'
+            path.write_text(json.dumps(dict(json.loads(path.read_text()),generatedAt='2026-11-13T10:00:00+01:00'))+'\n')
+
+    def failed_delivery(self, root, commit):
+        if commit != self.initial:
+            raise RuntimeError('CI failed')
 
     def verify(self, root, commit):
         self.assertEqual(git(self.remote,'rev-parse','refs/heads/main'),commit)
@@ -61,12 +67,32 @@ class PublicationTests(unittest.TestCase):
                            collect=self.collect, validate=lambda path: True,
                            verify=self.verify, **kwargs)
 
+    def test_cli_reexecutes_once_after_fast_forwarded_code_change(self):
+        argv = ['--reviewed-only']
+        script = str(self.repo/'scripts/publish_daily.py')
+        with patch.object(pub,'__file__',script), patch.object(pub,'publish',side_effect=pub.PublicationError('reload-required')), \
+             patch.dict(os.environ,{'KEEP':'kept'},clear=True), patch.object(pub.os,'execve',side_effect=SystemExit(0)) as restart:
+            with self.assertRaises(SystemExit):
+                pub.main(argv)
+            args = restart.call_args.args
+            self.assertEqual(args[:2],(pub.sys.executable,[pub.sys.executable,script,*argv]))
+            self.assertEqual(args[2]['_ADVENT_PUBLISHER_RELOADED'],'1')
+            self.assertEqual(args[2]['KEEP'],'kept')
+
+    def test_cli_does_not_restart_forever_when_main_changes_repeatedly(self):
+        with patch.object(pub,'__file__',str(self.repo/'scripts/publish_daily.py')), \
+             patch.object(pub,'publish',side_effect=pub.PublicationError('reload-required')), \
+             patch.dict(os.environ,{'_ADVENT_PUBLISHER_RELOADED':'1'}), patch.object(pub.os,'execve') as restart, \
+             contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(pub.main([]),1)
+            restart.assert_not_called()
+
     def test_reviewed_only_is_forwarded_under_lock_and_pending_retry_never_recollects(self):
         def collect(root, *, reviewed_only=False):
             self.assertTrue(reviewed_only)
             self.collect(root)
         with patch.object(pub,'collect_projection',side_effect=collect) as run:
-            with patch.object(self,'verify',side_effect=RuntimeError('CI failed')):
+            with patch.object(self,'verify',side_effect=self.failed_delivery):
                 with self.assertRaisesRegex(RuntimeError,'CI failed'):
                     pub.publish(self.repo,today=date(2026,11,12),remote=str(self.remote),
                                 validate=lambda path: True,verify=self.verify,reviewed_only=True)
@@ -118,11 +144,11 @@ class PublicationTests(unittest.TestCase):
         calls = []
         def head(root):
             calls.append(1)
-            return original(root) if len(calls)==1 else '0'*40
+            return original(root) if len(calls)<=2 else '0'*40
         with patch.object(pub,'remote_head',side_effect=head):
             with self.assertRaisesRegex(pub.PublicationError,'remote-head'): self.run_publish()
         self.assertTrue((self.repo/'private/publish-state.json').exists())
-        self.assertEqual(self.verified,[])
+        self.assertEqual(self.verified,[self.initial])
         self.assertEqual(self.run_publish(),'published')
         self.assertEqual(self.collected,1)
 
@@ -143,7 +169,7 @@ class PublicationTests(unittest.TestCase):
                                     collect=collect,validate=lambda path: validator.validate_directory(path,registry),verify=self.verify),'published')
 
     def test_pending_state_cannot_authorize_foreign_head(self):
-        with patch.object(self,'verify',side_effect=RuntimeError('CI failed')):
+        with patch.object(self,'verify',side_effect=self.failed_delivery):
             with self.assertRaises(Exception): self.run_publish()
         git(self.repo,'commit','--allow-empty','-m','foreign')
         with self.assertRaisesRegex(pub.PublicationError,'pending-state'): self.run_publish()
@@ -153,7 +179,7 @@ class PublicationTests(unittest.TestCase):
         with patch.object(self,'collect',side_effect=RuntimeError('secret-token')):
             with self.assertRaises(Exception): self.run_publish()
         self.assertEqual(git(self.repo,'diff','--cached','--name-only'),'')
-        self.assertEqual(self.verified,[])
+        self.assertEqual(self.verified,[self.initial])
 
     def test_push_failure_retries_only_owned_commit_with_private_state(self):
         hook = self.remote/'hooks/pre-receive'
@@ -170,7 +196,7 @@ class PublicationTests(unittest.TestCase):
         self.assertFalse(state.exists())
 
     def test_failed_verification_retains_state_and_retry_does_not_collect(self):
-        with patch.object(self,'verify',side_effect=RuntimeError('CI failed')):
+        with patch.object(self,'verify',side_effect=self.failed_delivery):
             with self.assertRaises(Exception): self.run_publish()
         self.assertTrue((self.repo/'private/publish-state.json').exists())
         self.assertEqual(self.run_publish(),'published')
@@ -178,7 +204,7 @@ class PublicationTests(unittest.TestCase):
 
     def test_lock_skips_without_subprocess(self):
         import fcntl
-        (self.repo/'private').mkdir()
+        (self.repo/'private').mkdir(exist_ok=True)
         with (self.repo/'private/publish.lock').open('w') as lock:
             fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
             with patch.object(pub.subprocess,'run',side_effect=AssertionError('busy')):
@@ -196,10 +222,10 @@ class PublicationTests(unittest.TestCase):
     def test_collect_validate_commit_push_readback_then_nochange(self):
         self.assertEqual(self.run_publish(), 'published')
         self.assertEqual(self.collected, 1)
-        self.assertEqual(self.verified, [git(self.repo,'rev-parse','HEAD')])
+        self.assertEqual(self.verified, [self.initial,git(self.repo,'rev-parse','HEAD')])
         self.assertEqual(set(git(self.repo,'diff-tree','--no-commit-id','--name-only','-r','HEAD').splitlines()), set(pub.FILES))
         self.assertEqual(self.run_publish(), 'unchanged')
-        self.assertEqual(len(self.verified), 1)
+        self.assertEqual(len(self.verified), 3)
         self.assertEqual(git(self.repo,'status','--porcelain'), '')
 
 
