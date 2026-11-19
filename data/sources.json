@@ -26901,6 +26901,49 @@
       "allowed_locations": {
         "Louňovice": []
       }
+    },
+    {
+      "id": "reviewed-lounovice-december-2026",
+      "town": "Louňovice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "index_urls": [
+        "https://www.lounovice.cz/volny-cas/kalendar-akci/vanocni-zpivani-pod-zvonickou-982_409cs.html",
+        "https://www.lounovice.cz/volny-cas/kalendar-akci/betlemske-svetlo-983_410cs.html"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^(?:https://www\\.lounovice\\.cz/volny\\-cas/kalendar\\-akci/vanocni\\-zpivani\\-pod\\-zvonickou\\-982_409cs\\.html|https://www\\.lounovice\\.cz/volny\\-cas/kalendar\\-akci/betlemske\\-svetlo\\-983_410cs\\.html)$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřený prosincový výběr 2026, nikoli úplné obecní pokrytí. Kontrola přenosu není novým ověřením pořadatele.",
+      "primary_host": "www.lounovice.cz",
+      "allowed_towns": {
+        "Louňovice": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Louňovice": []
+      }
+    },
+    {
+      "id": "reviewed-senohraby-concert-2026",
+      "town": "Senohraby",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "index_urls": [
+        "https://www.senohraby.cz/aktualne/kalendar-akci/vanocni-koncert-19-12-2930_755cs.html"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^(?:https://www\\.senohraby\\.cz/aktualne/kalendar\\-akci/vanocni\\-koncert\\-19\\-12\\-2930_755cs\\.html)$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřený prosincový výběr 2026, nikoli úplné obecní pokrytí. Kontrola přenosu není novým ověřením pořadatele.",
+      "primary_host": "www.senohraby.cz",
+      "allowed_towns": {
+        "Senohraby": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Senohraby": []
+      }
     }
   ]
 }
