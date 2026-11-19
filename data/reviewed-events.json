@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T11:53:56+00:00",
+  "generatedAt": "2026-11-19T09:04:09.479780+00:00",
   "season": 2026,
   "region": "Česko — redakčně ověřený výběr",
   "events": [
@@ -3684,18 +3684,21 @@
       "date": "2026-12-06",
       "endDate": null,
       "startTime": null,
-      "endTime": null,
+      "endTime": "18:00",
       "category": "mikulas",
       "price": "150 Kč/osoba; nadílka 100 Kč/dítě (nejde o potvrzenou cenu balíčku)",
       "registration": "Nutná rezervace divadla přes Webooker; rodiče mají dodat pochvaly a hříchy pro Mikuláše. Kapacita 30/40 je rozporná.",
       "registrationUrl": null,
       "description": "Nově ověřený plakát uvádí: 15:00 divadlo, 16:00 oslava, 16:30 Mikulášská, 17:30 čertí disko, konec 18:00. Obecní text a starší text Webookeru stále píší začátek 16:00, proto zatím bez pevné hodiny. Vstup 150 Kč/osoba, nadílka 100 Kč/dítě; kombinovaná cena není potvrzena. Rezervace divadla přes Webooker; kapacita pořadatel 30 versus Webooker 40 zůstává rozporná.",
       "notes": [
-        "Čas programu zatím nebyl zveřejněn. Nejde o celodenní program."
+        "Začátek je rozporný: pořadatelský detail, plakát a rozpis Webookeru 15:00; obecní text a opakovaně použitý text Webookeru 16:00. Konec je shodně 18:00. Nejde o celodenní program.",
+        "Kapacita zůstává rozporná: pořadatel 30, Webooker 40.",
+        "Doplňující primární zdroj: https://www.strancice.cz/podivuhodne-vanoce/a-1951",
+        "Primární plakát: https://www.strancice.cz/assets/Image.ashx?id_org=15606&id_obrazky=5848"
       ],
       "audience": "všichni",
       "status": "time-unconfirmed",
-      "verifiedAt": "2026-11-13T10:28:43.922819+01:00",
+      "verifiedAt": "2026-11-19T09:54:15.020133+01:00",
       "sourceUrl": "https://www.rclodicka.eu/akce-v-klubu/divadelkovy-podzim-mikulasska-a-5-pohadka-podivuhodne-vanoce",
       "location": {
         "lat": 49.9490963,
@@ -5102,6 +5105,103 @@
       "status": "confirmed",
       "verifiedAt": "2026-11-18T11:36:30.536559+00:00",
       "sourceUrl": "https://www.lounovice.cz/aktuality/aktuality-1/pozvanka-na-adventni-akce-978cs.html",
+      "location": null,
+      "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-683c7a9a1c1174a4",
+      "title": "Struhařovské peklo u Františka",
+      "town": "Struhařov",
+      "venue": "Hřiště u Františka, u Hliněného rybníka, Struhařov",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "17:30",
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Setkání pro děti a rodiče na hřišti u Františka u Hliněného rybníka. Pořádá Kiosek U Františka. Podrobný program ani případná mikulášská nadílka nejsou zveřejněny.",
+      "notes": [
+        "Čertovská akce podle názvu a termínu 5. prosince; konkrétní náplň ani nadílka nejsou v obecní pozvánce upřesněny."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-19T09:52:34.804094+01:00",
+      "sourceUrl": "https://www.struharov.cz/zivot-v-obci/kalendar-akci/struharovske-peklo-u-frantiska-835_214cs.html",
+      "location": null,
+      "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-d7e32ec4d5dfef31",
+      "title": "Vánoční zpívání pod Zvoničkou",
+      "town": "Louňovice",
+      "venue": "Pod Zvoničkou / na zvoničce, Louňovice",
+      "date": "2026-12-19",
+      "endDate": null,
+      "startTime": "17:30",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Společné vánoční zpívání, kaštany a svařené víno.",
+      "notes": [
+        "Obecní detail označuje místo Pod Zvoničkou, plakát na zvoničce; ponechána obě označení.",
+        "Primární plakát: https://www.lounovice.cz/evt_image.php?img=1671&v=1795008751"
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-19T09:53:17.428230+01:00",
+      "sourceUrl": "https://www.lounovice.cz/volny-cas/kalendar-akci/vanocni-zpivani-pod-zvonickou-982_409cs.html",
+      "location": null,
+      "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-81e0c2a1addb44e1",
+      "title": "Betlémské světlo",
+      "town": "Louňovice",
+      "venue": "Před obecním úřadem Louňovice, Horní náves 6",
+      "date": "2026-12-23",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "category": "betlem",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Betlémské světlo přinesou skautští dobrovolníci před obecní úřad.",
+      "notes": [
+        "Primární plakát: https://www.lounovice.cz/evt_image.php?img=1672&v=1795008921"
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-19T09:53:17.496017+01:00",
+      "sourceUrl": "https://www.lounovice.cz/volny-cas/kalendar-akci/betlemske-svetlo-983_410cs.html",
+      "location": null,
+      "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-223a99d529e3deaf",
+      "title": "Vánoční koncert – Lucie Majerová a Simona Rohlíčková",
+      "town": "Senohraby",
+      "venue": "Francouzský sál hotelu SEN, Malostranská 344, Senohraby",
+      "date": "2026-12-19",
+      "endDate": null,
+      "startTime": "18:30",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert Lucie Majerové a Simony Rohlíčkové. České i světové hity napříč generacemi. Obecní kalendář označuje akci pro veřejnost, nikoli ubytovací balíček.",
+      "notes": [
+        "Primární plakát: https://www.senohraby.cz/evt_image.php?img=4640&v=1795009501"
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-19T08:53:51.387447+00:00",
+      "sourceUrl": "https://www.senohraby.cz/aktualne/kalendar-akci/vanocni-koncert-19-12-2930_755cs.html",
       "location": null,
       "region": "Středočeský kraj"
     }
