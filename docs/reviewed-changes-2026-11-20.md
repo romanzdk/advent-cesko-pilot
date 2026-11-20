@@ -51,3 +51,44 @@ všechny tři sběračem vytvořené veřejné projekce.
 PR samo není souhlas ke sloučení či publikaci. Až po schváleném sloučení a
 ověření přesného nasazení lze pod zámkem použít nativní preflight a následně
 publisher `--reviewed-only`; nikdy před nasazením schváleného PR.
+
+## Provedené integrační ověření
+
+- Výchozí commit `4d6d2016fde3c848c528647bab98c7c7e9e49411`: nativní
+  ověření úspěšného Pages workflow a přesná shoda všech tří nasazených JSON.
+  Produkční SQLite otevřena read-only pod `publish.lock`; úplná projekce
+  všech 2 865 akcí a multiset všech 897 kandidátů přesně odpovídaly publikaci.
+  Pending publikační stav nebyl přítomen. Nebyla nutná změna produkční DB.
+- Zmrazený veřejný feed z feature větve:
+  `https://raw.githubusercontent.com/romanzdk/advent-cesko-pilot/1ae1217e3b5a6175d449925e2efd1b5897452ac9/data/reviewed-events.json`
+  (SHA-256 `1960700bbcdbb788532aa4f30f65f1607ad1c3515bb1471a79fe18fd425ec7b7`).
+  Obsahuje 191 záznamů proti původním 190.
+- Dva závěrečné skutečné cykly pod celým registrem **1 074 zdrojů**
+  (původně 1 073), z toho 62 redakčních (původně 61). Každý cyklus používá
+  nezměněný CLI sběrač `--reviewed-only --source-id` jednou pro Berchtold a
+  jednou pro stávajícího struhařovského vlastníka. Ostatní zdroje se nečtou.
+  Oddělené čerstvé HTTP cache doložily **HTTP 200 těla feedu v obou cyklech**;
+  druhý zdroj v každém cyklu provedl skutečnou podmíněnou kontrolu HTTP 304.
+  Starší předběžné průchody se společnou cache jsou zachovány samostatně.
+- Obě úplné výsledné projekce souhlasí: **2 866 akcí, 897 kandidátů**.
+  Přidáno přesně `e-0e0e431b8c528740`, změněno přesně
+  `e-683c7a9a1c1174a4` pouze v `description`, `notes`, `verifiedAt`,
+  odstraněno **0 ID**. Zbývajících **2 864** původních akcí má beze změny
+  všechna pole včetně původního `verifiedAt`.
+- Zachován úplný multiset kontrolní fronty, všechny nedotčené definice a
+  stavy zdrojů, vlastnictví i původní soukromá provenance. Oba dotčené zdroje
+  mají `status: ok`, `lastError: null` a aktuální `lastSuccess`; Berchtold
+  má jednu akci, stávající Struhařov tři. Kontrola přenosu není nové ověření
+  těchto dvou dalších struhařovských akcí.
+- Veřejný validátor přijal oba výstupy. Časy 11,348 s a 16,456 s zahrnují
+  sběr, validaci a kontroly zachování; nejde o dobu celostátního crawlu.
+  Všechny tři veřejné JSON pocházejí beze změny z druhého cyklu. Souhrnné
+  metriky v coverage popisují poslední cílený průchod, ne celý uložený katalog.
+- Nové čtyři regresní testy projdou; na výchozích datech tři z nich správně
+  selžou. Dřívější test požadující neznámou nadílku byl úzce aktualizován na
+  nyní doložený plakát; striktní pojistky a implementace zůstaly nezměněny.
+- Celá sada **302 Python testů** prošla v čisté přenositelné kopii bez
+  adresáře `private/` (219,987 s včetně spuštění). Dále prošlo **33 čistých
+  JavaScript testů**, veřejný validátor pro 2 866 akcí, syntaktické kontroly
+  čtyř browser modulů a místní publisher `--check --reviewed-only`.
+  Poslední volba je pouze kontrolou připravenosti, nikoli publikací.

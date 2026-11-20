@@ -1,5 +1,4 @@
 """Exact editorial bindings for two independently checked November 20 findings."""
-import copy
 import json
 from pathlib import Path
 import re
