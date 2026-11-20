@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T07:58:20+00:00",
+  "generatedAt": "2026-11-20T09:14:58+00:00",
   "window": {
     "from": "2026-11-20",
     "through": "2026-12-24"
@@ -773,8 +773,8 @@
       "adapter": "reviewed-public",
       "coverageNote": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
       "status": "ok",
-      "lastChecked": "2026-11-20T07:58:20+00:00",
-      "lastSuccess": "2026-11-20T07:58:20+00:00",
+      "lastChecked": "2026-11-20T09:14:58+00:00",
+      "lastSuccess": "2026-11-20T09:14:58+00:00",
       "eventCount": 3,
       "reviewCount": 0,
       "excludedCount": 0,
@@ -19212,20 +19212,36 @@
       "excludedCount": 0,
       "lastError": null,
       "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
+    },
+    {
+      "id": "reviewed-berchtold-charity-2026",
+      "town": "Kunice–Vidovice",
+      "region": "Středočeský kraj",
+      "url": "https://zamekberchtold.cz/aktuality/kalendar-akci/",
+      "adapter": "reviewed-public",
+      "coverageNote": "Redakčně ověřený charitativní vánoční koncert na zámku Berchtold 12. prosince 2026, nikoli úplný program zámku. Kontrola přenosu není novým ověřením pořadatele.",
+      "status": "ok",
+      "lastChecked": "2026-11-20T09:14:56+00:00",
+      "lastSuccess": "2026-11-20T09:14:56+00:00",
+      "eventCount": 1,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": null,
+      "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
     }
   ],
   "metrics": {
-    "runId": "11e51cc9-2559-4402-9af0-8ff8fdef490c",
-    "durationSeconds": 1704.708,
-    "requestCount": 5894,
+    "runId": "9e0f6436-bfcc-4f53-a825-6629ce2913c5",
+    "durationSeconds": 1.407,
+    "requestCount": 2,
     "http304": 1,
-    "cacheUnchanged": 286,
-    "eventsNew": 24,
-    "eventsChanged": 11,
-    "eventsUnchanged": 2787,
-    "eventsPublished": 2865,
+    "cacheUnchanged": 1,
+    "eventsNew": 0,
+    "eventsChanged": 0,
+    "eventsUnchanged": 3,
+    "eventsPublished": 2866,
     "reviewCount": 897,
-    "excludedCount": 288,
+    "excludedCount": 0,
     "aiCalls": 0
   },
   "complete": false,

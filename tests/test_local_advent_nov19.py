@@ -62,8 +62,14 @@ class LocalAdventNovember19(unittest.TestCase):
         self.assertIn('30', e['registration'])
         self.assertIn('40', e['registration'])
 
-    def test_no_detailed_invented_devil_program_and_no_hotel_guest_restriction(self):
-        self.assertIn('nejsou zveřejněny', self.events['e-683c7a9a1c1174a4']['description'])
+    def test_poster_backed_devil_program_and_no_hotel_guest_restriction(self):
+        # November 20: the linked municipal poster now verifies these facts.
+        event = self.events['e-683c7a9a1c1174a4']
+        self.assertIn('s nadílkou', event['description'])
+        self.assertIn('Mikuláš', event['description'])
+        self.assertTrue(any('evt_image.php?img=5099&v=1795014611' in note for note in event['notes']))
+        self.assertIsNone(event['price'])
+        self.assertIsNone(event['registration'])
         self.assertIn('pro veřejnost', self.events['e-223a99d529e3deaf']['description'])
         self.assertIn('na zvoničce', self.events['e-d7e32ec4d5dfef31']['venue'])
 

@@ -26944,6 +26944,27 @@
       "allowed_locations": {
         "Senohraby": []
       }
+    },
+    {
+      "id": "reviewed-berchtold-charity-2026",
+      "town": "Kunice–Vidovice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "index_urls": [
+        "https://zamekberchtold.cz/aktuality/kalendar-akci/"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^https://zamekberchtold\\.cz/aktuality/kalendar-akci/$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřený charitativní vánoční koncert na zámku Berchtold 12. prosince 2026, nikoli úplný program zámku. Kontrola přenosu není novým ověřením pořadatele.",
+      "primary_host": "zamekberchtold.cz",
+      "allowed_towns": {
+        "Kunice–Vidovice": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Kunice–Vidovice": []
+      }
     }
   ]
 }
