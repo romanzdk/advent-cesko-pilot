@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T09:32:00+00:00",
+  "generatedAt": "2026-11-20T07:58:20+00:00",
   "candidates": [
     {
       "title": "Den otevřených dveří a vánoční jarmark v ZŠ a MŠ Damníkov",
@@ -202,6 +202,11 @@
       "reason": "Chybí strukturovaný detail jedné události."
     },
     {
+      "title": "Pozvánka na vánoční setkání",
+      "url": "https://www.obec-blatno.cz/zivot-v-obci/kalendar-akci-1/pozvanka-na-vanocni-setkani-592_308cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Adventní odpoledne",
       "url": "https://www.mestysblizkovice.cz/mestys/kulturni-a-sportovni-akce/adventni-odpoledne-1334_239cs.html",
       "reason": "Rozporná data v těle události vyžadují ověření."
@@ -222,6 +227,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Předvánoční jarmark",
+      "url": "https://www.obecblucina.cz/zivot-v-obci/kalendar-akci/predvanocni-jarmark-1405_141cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Slavnostní rozsvícení vánočního stromu",
       "url": "https://www.obecblucina.cz/zivot-v-obci/kalendar-akci/slavnostni-rozsviceni-vanocniho-stromu-1309_128cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -234,6 +244,11 @@
     {
       "title": "Vánoční koncert folklorního souboru",
       "url": "https://www.obecblucina.cz/zivot-v-obci/kalendar-akci/vanocni-koncert-folklorniho-souboru-1387_135cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Od adventu po tři krále",
+      "url": "https://www.boleradice.cz/prakticke-informace/kalendar-akci/od-adventu-po-tri-krale-1384_159cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -255,6 +270,11 @@
       "title": "Noc betlémů 2026",
       "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
       "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "OU Cvrčovice - Vánoční jarmark",
+      "url": "https://www.branisovice.cz/obec/kalendar-akci/ou-cvrcovice-vanocni-jarmark-738_321cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
       "title": "Bratřejovský jarmark",
@@ -282,6 +302,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Půjdem spolu do Betléma",
+      "url": "https://www.brumov-bylnice.cz/cs/aktuality/kalendar-akci/pujdem-spolu-do-betlema-5861_1377cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Rozsvícení vánočního stromečku v Sidonii",
       "url": "https://www.brumov-bylnice.cz/cs/aktuality/kalendar-akci/rozsviceni-vanocniho-stromecku-v-sidonii-5802_1368cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -289,6 +314,56 @@
     {
       "title": "Rozsvícení vánočního stromu ve Svatém Štěpáně",
       "url": "https://www.brumov-bylnice.cz/cs/aktuality/kalendar-akci/rozsviceni-vanocniho-stromu-ve-svatem-stepane-5794_1359cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní stánek",
+      "url": "https://www.budisov.eu/aktuality/prehled-akci/adventni-stanek-1708_709cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní stánek",
+      "url": "https://www.budisov.eu/aktuality/prehled-akci/adventni-stanek-1708_710cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní stánek",
+      "url": "https://www.budisov.eu/aktuality/prehled-akci/adventni-stanek-1708_711cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní stánek",
+      "url": "https://www.budisov.eu/aktuality/prehled-akci/adventni-stanek-1708_712cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Budišovské Vánoce",
+      "url": "https://www.budisov.eu/aktuality/prehled-akci/budisovske-vanoce-1701_702cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Budišovské Vánoce",
+      "url": "https://www.budisov.eu/aktuality/prehled-akci/budisovske-vanoce-1702_703cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Budišovské Vánoce",
+      "url": "https://www.budisov.eu/aktuality/prehled-akci/budisovske-vanoce-1704_705cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Budišovské Vánoce",
+      "url": "https://www.budisov.eu/aktuality/prehled-akci/budisovske-vanoce-1705_706cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Budišovské Vánoce",
+      "url": "https://www.budisov.eu/aktuality/prehled-akci/budisovske-vanoce-1706_707cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Budišovské Vánoce",
+      "url": "https://www.budisov.eu/aktuality/prehled-akci/budisovske-vanoce-1707_708cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -384,6 +459,11 @@
     {
       "title": "Vánoční jarmark a rozsvícení vánočního stromečku",
       "url": "https://www.cechypk.cz/aktualne/kalendar-akci/akce-u-nas/vanocni-jarmark-a-rozsviceni-vanocniho-stromecku-2096_583cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Nadělíme zvířátkům",
+      "url": "https://www.cejkovice.cz/obec/kalendar-akci-2/nadelime-zviratkum-10589_334cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -567,6 +647,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Vánoční soutěž",
+      "url": "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/vanocni-soutez-18996_15178cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Workshop tvoření vánočních macramé dekorací",
       "url": "https://www.novemestonm.cz/volny-cas/kalendar-akci-1/workshop-tvoreni-vanocnich-macrame-dekoraci-18990_15172cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -587,6 +672,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Požehnání v kostele, adventní zamyšlení a farní kavárna",
+      "url": "https://www.dacice.cz/mesto/kalendar-akci-1/pozehnani-v-kostele-adventni-zamysleni-a-farni-kavarna-5593_599cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Zvonkový průvod",
       "url": "https://www.dacice.cz/mesto/kalendar-akci-1/zvonkovy-pruvod-4809_335cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -597,6 +687,16 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Adventní koncert Myslejovice",
+      "url": "https://www.detkoviceupv.cz/zivot-v-obci/kalendar-akci/adventni-koncert-myslejovice-356_32cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Mikulášská zábava pro rodiny s dítětem ZTP/P",
+      "url": "https://www.detkoviceupv.cz/zivot-v-obci/kalendar-akci/mikulasska-zabava-pro-rodiny-s-ditetem-ztp-p-355_31cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Rozsvícení vánočního stromu a jarmark Myslejovice",
       "url": "https://www.detkoviceupv.cz/zivot-v-obci/kalendar-akci/rozsviceni-vanocniho-stromu-a-jarmark-myslejovice-353_30cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -604,6 +704,11 @@
     {
       "title": "Rozsvícení vánočního stromu",
       "url": "https://www.dlouhaloucka.cz/cs/zivot-v-obci/kalendar-akci/rozsviceni-vanocniho-stromu-3816_712cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "1. Adventní neděle - 29.11.2026",
+      "url": "https://www.dlouhy-most.cz/obec/kalendar-akci/1-adventni-nedele-29112026-732_313cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -722,6 +827,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Vánoční posezení pro seniory",
+      "url": "https://www.drzkov.cz/volny-cas/kulturni-akce/vanocni-posezeni-pro-seniory-457_218cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Vánoční tvořivé dílničky",
       "url": "https://www.drzkov.cz/volny-cas/kulturni-akce/vanocni-tvorive-dilnicky-953_313cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -730,6 +840,11 @@
       "title": "Mikulášská obchůzka v Držkové 2026",
       "url": "https://www.drzkova.cz/aktuality-1/kalendar-akci/mikulasska-obchuzka-v-drzkove-2026-2409_220cs.html",
       "reason": "Rozporná data v těle události vyžadují ověření."
+    },
+    {
+      "title": "Vánoční dílna",
+      "url": "https://www.mestoduba.cz/o-meste/informace-pro-obcany/kalendar-akci/vanocni-dilna-1690_473cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
       "title": "Adventní koncert v kostele na Cínovci 8. 12. 2026",
@@ -872,6 +987,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Vánoční tvoření pro děti",
+      "url": "https://www.obechnanice.cz/zivot-v-obci/kalendar-akci/akce-v-obci/vanocni-tvoreni-pro-deti-452_94cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Adventní putování s hádankou",
       "url": "https://www.obecholetin.cz/pro-obcany/kalendar-akci/adventni-putovani-s-hadankou-334_60cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -915,6 +1035,11 @@
       "title": "Vánoční tvoření pro rodiče s dětmi",
       "url": "https://www.horomerice.cz/zivot-v-obci/kalendar-akci-1/akce-v-obci/vanocni-tvoreni-pro-rodice-s-detmi-2662_667cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní kalendář - děti dětem i dospělým",
+      "url": "https://www.mesto-horovice.eu/volny-cas/kam-za-kulturou-a-kdy/adventni-kalendar-deti-detem-i-dospelym-3417_1944cs.html",
+      "reason": "Rozporná data v těle události vyžadují ověření."
     },
     {
       "title": "Adventní koncert",
@@ -1052,6 +1177,16 @@
       "reason": "Chybí strukturovaný detail jedné události."
     },
     {
+      "title": "ROZSVÍCENÍ VÁNOČNÍHO STROMEČKU",
+      "url": "https://www.ivanovicenahane.cz/volny-cas/kalendar-jednodennich-akci/rozsviceni-vanocniho-stromecku-5861_896cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Betlémské světlo",
+      "url": "https://www.mestojachymov.cz/volny-cas/kalendar-akci-2/betlemske-svetlo-1340_1235cs.html",
+      "reason": "Rozporná data v těle události vyžadují ověření."
+    },
+    {
       "title": "Mikulášská nadílka v Jáchymově",
       "url": "https://www.mestojachymov.cz/volny-cas/kalendar-akci-2/mikulasska-nadilka-v-jachymove-1323_1212cs.html",
       "reason": "Rozporná data v těle události vyžadují ověření."
@@ -1074,6 +1209,11 @@
     {
       "title": "Vánoční tvoření s knihovnou v Bohdanovicích - 21. 11. 2026",
       "url": "https://www.jakartovice.cz/cs/aktualne/kalendar-akci/vanocni-tvoreni-s-knihovnou-v-bohdanovicich-21-11-2026-499_42cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Základní škola Mladecko - Tvořivé adventní dílničky - 1. 12. 2026",
+      "url": "https://www.jakartovice.cz/cs/aktualne/kalendar-akci/zakladni-skola-mladecko-tvorive-adventni-dilnicky-1-12-2026-505_46cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -1132,6 +1272,16 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "DEN OTEVŘENÝCH DVEŘÍ A VÁNOČNÍ DÍLNY",
+      "url": "https://www.jaromer-josefov.cz/volny-cas/akce/akce-v-obci/den-otevrenych-dveri-a-vanocni-dilny-8613_10759cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "DEN OTEVŘENÝCH DVEŘÍ A VÁNOČNÍ DÍLNY",
+      "url": "https://www.jaromer-josefov.cz/volny-cas/akce/akce-v-obci/den-otevrenych-dveri-a-vanocni-dilny-8613_10760cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "MIKULÁŠSKÁ NADÍLKA",
       "url": "https://www.jaromer-josefov.cz/volny-cas/akce/akce-v-obci/mikulasska-nadilka-8501_10620cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -1139,6 +1289,11 @@
     {
       "title": "MIKULÁŠSKÁ NADÍLKA",
       "url": "https://www.jaromer-josefov.cz/volny-cas/akce/akce-v-obci/mikulasska-nadilka-8501_10621cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "MIKULÁŠSKÉ ODPOLEDNE",
+      "url": "https://www.jaromer-josefov.cz/volny-cas/akce/akce-v-obci/mikulasske-odpoledne-8608_10754cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -1297,6 +1452,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Svatojiřetínský advent",
+      "url": "https://www.jiretin.cz/aktuality-a-dulezita-upozorneni/kalendar-akci/svatojiretinsky-advent-294_36cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Vánoční koncert Lenky Filipové",
       "url": "https://www.jirikovice.cz/aktualne/kalendar-akci/vanocni-koncert-lenky-filipove-2302_130cs.html",
       "reason": "Rozporná data v těle události vyžadují ověření."
@@ -1332,6 +1492,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Vánoční koncert",
+      "url": "https://www.obeckamyk.cz/obcan/kalendar-akci/vanocni-koncert-840_359cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Rozsvícení vánočního stromu - nám. J. Hrubého",
       "url": "https://www.kardasova-recice.cz/volny-cas/kalendar-akci/rozsviceni-vanocniho-stromu-nam-j-hrubeho-3426_586cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -1340,6 +1505,11 @@
       "title": "Vánoční Gala Balet",
       "url": "https://www.kudyznudy.cz/akce/vanocni-gala-balet-1",
       "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Rukodělný jarmark \"Šikovné ručičky nejen naší vesničky\" a vánoční workshop",
+      "url": "https://www.katerinice.cz/aktualne/kalendar-akci/rukodelny-jarmark-sikovne-rucicky-nejen-nasi-vesnicky-a-vanocni-workshop-1194_155cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
       "title": "Vánoční workshop (tvorba vánoční dekorace) a rukodělný jarmark \"Šikovné ručičky nejen naší vesničky\"",
@@ -1382,6 +1552,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Česko zpívá koledy 2026 v Klimkovicích",
+      "url": "https://www.mesto-klimkovice.cz/akce-ve-meste/cesko-zpiva-koledy-2026-v-klimkovicich-2876_623cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Adventní okenka",
       "url": "https://www.kloboukyubrna.eu/aktualne/kalendar-akci/adventni-okenka-3067_449cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -1402,7 +1577,12 @@
       "reason": "Rozporná data v těle události vyžadují ověření."
     },
     {
-      "title": "Pochůzka Mikuláše, Anděla a Čertů po Bezdružicích",
+      "title": "Mikulášská na náměstí",
+      "url": "https://www.kokasice.cz/aktualne/kalendar-akci/mikulasska-na-namesti-2017_571cs354.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Pochůzka Mikuláše, anděla a čertů po Bezdružicích",
       "url": "https://www.kokasice.cz/aktualne/kalendar-akci/pochuzka-mikulase-andela-a-certu-po-bezdruzicich-2011_567cs354.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
@@ -1497,6 +1677,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "ADVENTNÍ ZASTAVENÍ V ČASE",
+      "url": "https://www.kraslice.cz/volny-cas/kalendar-akci/adventni-zastaveni-v-case-3118_1975cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Mikulášská nadílka na Novém Dvoře",
       "url": "https://www.kravare.cz/aktualne/kalendar-kravarskych-akci/mikulasska-nadilka-na-novem-dvore-9118_6924cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -1529,6 +1714,11 @@
     {
       "title": "Setkání u vánočního punče v Koutech",
       "url": "https://www.kravare.cz/aktualne/kalendar-kravarskych-akci/setkani-u-vanocniho-punce-v-koutech-9135_6935cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní setkání u betléma",
+      "url": "https://www.obec-kravsko.cz/obec-kravsko/kalendar-akci/adventni-setkani-u-betlema-855_150cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -1642,6 +1832,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "XVII. Zastavení na Rybničním zámečku v Lednici \"Vyšla hvězda nad betlémem\"",
+      "url": "https://www.lednice.cz/aktualne/kulturni-kalendar/xvii-zastaveni-na-rybnicnim-zamecku-v-lednici-vysla-hvezda-nad-betlemem-1813_1471cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Adventní koncert",
       "url": "https://www.obec-lesna.cz/dulezite-informace/kalendar-akci/adventni-koncert-1861_128cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -1654,6 +1849,11 @@
     {
       "title": "Zpívání u vánočního stromu",
       "url": "https://www.obec-lesna.eu/zivot-v-obci/kalendar-akci/zpivani-u-vanocniho-stromu-72_8cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Mikulášská slavnost na Mořince",
+      "url": "https://www.obec-lety.cz/zivot-v-obci/pozvanky-na-akce/mikulasska-slavnost-na-morince-2061_605cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -1707,6 +1907,11 @@
       "reason": "Rozporná data v těle události vyžadují ověření."
     },
     {
+      "title": "Vánoční ladění 2026",
+      "url": "https://www.libkovicepodripem.cz/o-obci/informace-pro-obcany/pozvanka-na-akce/akce-obce/vanocni-ladeni-2026-1251_264cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Mikulášská nadílka",
       "url": "https://www.libouchec.cz/volny-cas/akce-v-obci/mikulasska-nadilka-1538_828cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -1752,6 +1957,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "ROZSVÍCENÍ VÁNOČNÍHO STROMU",
+      "url": "https://www.litovel.eu/dre-cs/71879-rozsviceni-vanocniho-stromu.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "MIKULÁŠ S PARTIČKOU",
       "url": "https://www.litovel.eu/dre-cs/72818-mikulas-s-partickou.html",
       "reason": "Více termínů nebo nejednoznačný termín události; ověřte jednotlivé termíny."
@@ -1774,6 +1984,16 @@
     {
       "title": "ADVENTNÍ KONCERT",
       "url": "https://www.litovel.eu/dre-cs/81321-adventni-koncert.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "KOUZELNÉ PŘEDVÁNOČNÍ ODPOLEDNE",
+      "url": "https://www.litovel.eu/dre-cs/81563-kouzelne-predvanocni-odpoledne.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "VÁNOČNÍ JARMARK",
+      "url": "https://www.litovel.eu/dre-cs/81566-vanocni-jarmark.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -1872,6 +2092,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Vánoční besídka MŠ Malá Morava",
+      "url": "https://www.obecmalamorava.cz/volny-cas/kalendar-akci/vanocni-besidka-ms-mala-morava-646_173cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Vánoční výstava",
       "url": "https://www.obecmalamorava.cz/volny-cas/kalendar-akci/vanocni-vystava-644_171cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -1907,6 +2132,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Vánoční gymnastické závody – Hvězdy a svíčky",
+      "url": "https://www.mesto-albrechtice.cz/volny-cas/kalendar-akci/vanocni-gymnasticke-zavody-hvezdy-a-svicky-4532_551cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Vánoční jarmark na zámku Linhartovy",
       "url": "https://www.mesto-albrechtice.cz/volny-cas/kalendar-akci/vanocni-jarmark-na-zamku-linhartovy-4523_548cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -1919,6 +2149,16 @@
     {
       "title": "Mikulášská nadílka",
       "url": "https://www.obecmikulovice.cz/zivot-v-obci/kalendar-akci/mikulasska-nadilka-735_346cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Rozsvícení vánočního stromu",
+      "url": "https://www.obec-milire.cz/aktualne-1/kalendar-akci/rozsviceni-vanocniho-stromu-308_49cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční expres",
+      "url": "https://www.milotice.cz/aktualne/kalendar-akci/vanocni-expres-2337_770cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -1957,8 +2197,23 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Mikulášská party v Mochově!",
+      "url": "https://www.mochov.cz/aktuality/akce-v-obci/mikulasska-party-v-mochove-1359_349cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Mochovský motoráček - mikulášský vlak",
       "url": "https://www.mochov.cz/aktuality/akce-v-obci/mochovsky-motoracek-mikulassky-vlak-1355_347cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční jarmark",
+      "url": "https://www.moravskatrebova.cz/dre-cs/78483-vanocni-jarmark.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Výroba vánoční dekorace",
+      "url": "https://www.moravskatrebova.cz/dre-cs/81146-vyroba-vanocni-dekorace.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -1989,6 +2244,11 @@
     {
       "title": "O čtvrtém mudrci",
       "url": "https://www.nedachlebice.cz/aktualne/kalendar-akci/o-ctvrtem-mudrci-224_122cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Předvánoční posezení pro seniory",
+      "url": "https://www.nehvizdy.cz/mestys/udalosti-v-mestysu/kalendar-akci/predvanocni-posezeni-pro-seniory-2546_543cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -2037,6 +2297,16 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Mikuláš v Nevojicích",
+      "url": "https://www.nevojice.cz/zivot-v-obci/kalendar-akci/mikulas-v-nevojicich-1970_66cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční drátkování",
+      "url": "https://www.nevojice.cz/zivot-v-obci/kalendar-akci/vanocni-dratkovani-1971_67cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Advent na Lísku",
       "url": "https://www.obecnizbor.cz/aktualne/kalendar-akci/advent-na-lisku-1661_336cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -2054,6 +2324,11 @@
     {
       "title": "Slavnostní rozsvícení vánočního stromku",
       "url": "https://www.obecnizbor.cz/aktualne/kalendar-akci/slavnostni-rozsviceni-vanocniho-stromku-1659_333cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Advent je tady - Lesní dílna Stožec 26.11.2026 od 17:00",
+      "url": "https://www.novapec.eu/aktualne/kalendar-akci/advent-je-tady-lesni-dilna-stozec-26112026-od-1700-790_149cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -2092,6 +2367,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Ukončení adventu a vánoční lampionový průvod",
+      "url": "https://www.mestonovesedlo.cz/udalosti-ve-meste/kulturni-akce/ukonceni-adventu-a-vanocni-lampionovy-pruvod-1891_901cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Vánoční trhy v Bamberku | zájezd",
       "url": "https://www.mestonovesedlo.cz/udalosti-ve-meste/kulturni-akce/vanocni-trhy-v-bamberku-zajezd-1883_896cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -2099,6 +2379,16 @@
     {
       "title": "Adventní koncert - Recitál Vojtěcha Dingy",
       "url": "https://www.novestraseci.cz/volny-cas/kulturni-prehled/adventni-koncert-recital-vojtecha-dingy-6787_3866cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní pondělky",
+      "url": "https://www.novestraseci.cz/volny-cas/kulturni-prehled/adventni-pondelky-6789_3868cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní pondělky",
+      "url": "https://www.novestraseci.cz/volny-cas/kulturni-prehled/adventni-pondelky-6790_3869cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -2114,6 +2404,26 @@
     {
       "title": "5. Vánoční jarmark",
       "url": "https://www.obecnovyjachymov.cz/obec/kultura/kulturni-akce/5-vanocni-jarmark-1931_164cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Betlémy v Muzeu zlata v Novém Kníně",
+      "url": "https://www.mestonovyknin.cz/obcan/kalendar-akci/betlemy-v-muzeu-zlata-v-novem-knine-1191_497cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Betlémy v Muzeu zlata v Novém Kníně",
+      "url": "https://www.mestonovyknin.cz/obcan/kalendar-akci/betlemy-v-muzeu-zlata-v-novem-knine-1191_498cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Betlémy v Muzeu zlata v Novém Kníně",
+      "url": "https://www.mestonovyknin.cz/obcan/kalendar-akci/betlemy-v-muzeu-zlata-v-novem-knine-1191_499cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Betlémy v Muzeu zlata v Novém Kníně",
+      "url": "https://www.mestonovyknin.cz/obcan/kalendar-akci/betlemy-v-muzeu-zlata-v-novem-knine-1191_500cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -2149,6 +2459,11 @@
     {
       "title": "Předvánoční prodejní výstava v Černovicích",
       "url": "https://www.obecobratan.cz/volny-cas/kalendar-akci/predvanocni-prodejni-vystava-v-cernovicich-1279_770cs1152.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Rozsvěcení vánočního stromku v Obratani",
+      "url": "https://www.obecobratan.cz/volny-cas/kalendar-akci/rozsveceni-vanocniho-stromku-v-obratani-389_138cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -2257,6 +2572,11 @@
       "reason": "Nejednoznačný termín nebo místo akce; ověřte detail."
     },
     {
+      "title": "17. adventní koncert",
+      "url": "https://www.ostresany.cz/aktuality-1/kalendar-akci/17-adventni-koncert-1370_162cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Adventní putování obcí",
       "url": "https://www.otesice.cz/aktualne/kalendar-akci/adventni-putovani-obci-15_2cs.html",
       "reason": "Rozporná data v těle události vyžadují ověření."
@@ -2278,8 +2598,23 @@
     },
     {
       "title": "Hledaná akce již není k dispozici.",
+      "url": "https://pardubice.eu/richard-mueller-vanoce-2026-43519",
+      "reason": "Nejednoznačný termín nebo místo akce; ověřte detail."
+    },
+    {
+      "title": "Hledaná akce již není k dispozici.",
       "url": "https://pardubice.eu/vanocni-koncert-marie-tilsarova-a-kdo-jsme-my",
       "reason": "Nejednoznačný termín nebo místo akce; ověřte detail."
+    },
+    {
+      "title": "Rozsvícení vánočního stromu - neděle 29.11.2026",
+      "url": "https://www.obecparsovice.cz/aktualne/kalendar-akci/rozsviceni-vanocniho-stromu-nedele-29112026-881_280cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční jarmark v Hrdlívě",
+      "url": "https://www.obecpchery.cz/zivot-v-obci/kalendar-akci/vanocni-jarmark-v-hrdlive-541_136cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
       "title": "Mikulášská nadílka",
@@ -2402,6 +2737,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Adventní ekumenická bohoslužba",
+      "url": "https://www.praha-bechovice.cz/zivot-v-mestske-casti/pozvanka-na-akce/adventni-ekumenicka-bohosluzba-1814_312cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Výlet - Vánoční Míšeň",
       "url": "https://www.praha-benice.cz/zpravy/pozvanky-na-akce-2/vylet-vanocni-misen-1205_515cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -2457,6 +2797,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Advent je tady - Lesní dílna Stožec 26.11.2026 od 17:00",
+      "url": "https://www.prednivyton.cz/aktuality/kalendar-akci/advent-je-tady-lesni-dilna-stozec-26112026-od-1700-790_149cs3886.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Adventní tvoření a prodej vánočních dekorací",
       "url": "https://www.prednivyton.cz/aktuality/kalendar-akci/adventni-tvoreni-a-prodej-vanocnich-dekoraci-781_354cs2281.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -2489,6 +2834,11 @@
     {
       "title": "Rozsvícení vánočního stromu v Loučovicích",
       "url": "https://www.prednivyton.cz/aktuality/kalendar-akci/rozsviceni-vanocniho-stromu-v-loucovicich-763_353cs2281.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční tvoření",
+      "url": "https://www.prednivyton.cz/aktuality/kalendar-akci/vanocni-tvoreni-383_77cs2187.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -2530,6 +2880,11 @@
       "title": "Noc betlémů 2026",
       "url": "https://www.kudyznudy.cz/akce/noc-betlemu",
       "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní otevírání kapliček",
+      "url": "https://www.mestoprimda.cz/aktuality/kalendar-akci/adventni-otevirani-kaplicek-1314_324cs.html",
+      "reason": "Rozporná data v těle události vyžadují ověření."
     },
     {
       "title": "Rozsvícení vánočního stromu",
@@ -2582,6 +2937,21 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Adventní kavárna pro Mary´s Meals",
+      "url": "https://www.provodov.cz/obec/kalendar-akci-1/adventni-kavarna-pro-marys-meals-1012_357cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní kavárna pro Mary´s Meals",
+      "url": "https://www.provodov.cz/obec/kalendar-akci-1/adventni-kavarna-pro-marys-meals-1012_358cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní kavárna pro Mary´s Meals",
+      "url": "https://www.provodov.cz/obec/kalendar-akci-1/adventni-kavarna-pro-marys-meals-1012_359cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "MezzoCimbalom - Andrea Kalivodová & Petr Pavlinec",
       "url": "https://www.provodov.cz/obec/kalendar-akci-1/mezzocimbalom-andrea-kalivodova-petr-pavlinec-1005_356cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -2594,6 +2964,11 @@
     {
       "title": "Provodovský jarmark",
       "url": "https://www.provodov.cz/obec/kalendar-akci-1/provodovsky-jarmark-977_345cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Rozsvícení vánočního stromku ve Slatině nad Úpou",
+      "url": "https://www.provodovsonov.cz/zivot-v-obci/kalendar-akci/rozsviceni-vanocniho-stromku-ve-slatine-nad-upou-1895_1230cs1670.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -2712,9 +3087,29 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Adventní koncert",
+      "url": "https://www.rohovladovabela.cz/cs/zivot-v-obci/kalendar-akci/adventni-koncert-1150_84cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční koncert ZUŠ Přelouč",
+      "url": "https://www.rohovladovabela.cz/cs/zivot-v-obci/kalendar-akci/vanocni-koncert-zus-prelouc-1151_85cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Mikulášská jízda na křivoklátský advent",
       "url": "https://www.kudyznudy.cz/akce/mikulasska-jizda-na-krivoklatsky-advent",
       "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Česko zpívá koledy",
+      "url": "https://www.rosec.cz/zivot-v-obci/kalendar-akci/cesko-zpiva-koledy-688_296cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Mikuláš,čert a anděl k vám domů.",
+      "url": "https://www.obecroudnice.cz/volny-cas-1/kalendar-akci/mikulascert-a-andel-k-vam-domu-1280_456cs.html",
+      "reason": "Rozporná data v těle události vyžadují ověření."
     },
     {
       "title": "Zahrádkářský vandr - Vánoční trhy do Drážďan",
@@ -2797,6 +3192,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Adventní jarmark pod hvězdami",
+      "url": "https://www.rybi.cz/zivot-v-obci/kalendar-akci/adventni-jarmark-pod-hvezdami-209_62cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Vánoční dílničky",
       "url": "https://www.rynoltice.cz/deni-v-obci/kalendar-akci/vanocni-dilnicky-389_157cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -2817,6 +3217,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Mikulášským vlakem z Prahy do Rakovníka, Čisté a Kralovic",
+      "url": "https://www.senomaty.cz/aktualne/kalendar-akci/mikulasskym-vlakem-z-prahy-do-rakovnika-ciste-a-kralovic-1855_789cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Rozsvícení vánočního stromečku",
       "url": "https://www.senomaty.cz/aktualne/kalendar-akci/rozsviceni-vanocniho-stromecku-1847_787cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -2824,6 +3229,11 @@
     {
       "title": "Rozsvícení vánočního stromečku v Nouzově",
       "url": "https://www.senomaty.cz/aktualne/kalendar-akci/rozsviceni-vanocniho-stromecku-v-nouzove-1849_788cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Líšnický advent",
+      "url": "https://www.sepekov.eu/kultura/kalendar-akci/lisnicky-advent-1570_503cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -2849,6 +3259,11 @@
     {
       "title": "Vánoční jarmark v Tworkově",
       "url": "https://www.silherovice.cz/aktualne/kalendar-akci/vanocni-jarmark-v-tworkove-1196_662cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "ADVENTNÍ TVOŘENÍ",
+      "url": "https://www.skotnice.cz/volny-cas/kalendar-akci/adventni-tvoreni-516_116cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -3017,6 +3432,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Prodejní Vánoční výstava",
+      "url": "https://www.musobeslav.cz/infocentrum/kalendar-akci/kulturni-akce/prodejni-vanocni-vystava-5516_1559cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Obec Soběšovice - Vánoční jarmark a rozsvěcování vánočního stromečku",
       "url": "https://www.sobesovice.cz/info/kalendar-akci/obec-sobesovice-vanocni-jarmark-a-rozsvecovani-vanocniho-stromecku-421_106cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -3025,6 +3445,11 @@
       "title": "Adventní Vídeň - zájezd",
       "url": "https://www.sobotin.cz/zivot-v-obci/kalendar-akci/adventni-viden-zajezd-1625_252cs.html",
       "reason": "Rozporná data v těle události vyžadují ověření."
+    },
+    {
+      "title": "Rozsvěcení vánočního stromu",
+      "url": "https://www.solnice.cz/volny-cas/kalendar-akci/rozsveceni-vanocniho-stromu-3816_1223cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
       "title": "Vánoční koncert Věra Martinová",
@@ -3044,6 +3469,16 @@
     {
       "title": "Srnojedské věncování",
       "url": "https://www.srnojedy.cz/aktualne/kalendar-akci/srnojedske-vencovani-1198_107cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Až poletí andělé - Jiří Langmajer nejstarší",
+      "url": "https://www.mestostankov.cz/informace-pro-obcany/kalendar-akci/az-poleti-andele-jiri-langmajer-nejstarsi-1472_1135cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční posezení s V. Žákovcem a A. Volínovou",
+      "url": "https://www.mestostankov.cz/informace-pro-obcany/kalendar-akci/vanocni-posezeni-s-v-zakovcem-a-a-volinovou-1473_1136cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -3132,6 +3567,11 @@
       "reason": "Rozporná data v těle události vyžadují ověření."
     },
     {
+      "title": "Svěcení adventního věnce",
+      "url": "https://www.stitna-popov.cz/obcan/kalendar-akci/sveceni-adventniho-vence-805_108cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Vánoční divadlo U Hasičů - Herec do domu, hůl do ruky!",
       "url": "https://www.straznadnisou.cz/dre-cs/76949-vanocni-divadlo-u-hasicu-herec-do-domu-hul-do-ruky.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -3182,6 +3622,16 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "PRODEJ VÁNOČNÍCH STROMKŮ",
+      "url": "https://www.mesto-studenka.cz/aktualne/kalendar-akci/prodej-vanocnich-stromku-7752_3662cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "VÁNOČNÍ PRODEJ RYB",
+      "url": "https://www.mesto-studenka.cz/aktualne/kalendar-akci/vanocni-prodej-ryb-7753_3663cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Rozsvícení vánočního stromu ve Starkoči",
       "url": "https://www.obecstudnicena.cz/zivot-v-obci/akce-v-obci/rozsviceni-vanocniho-stromu-ve-starkoci-572_337cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -3194,6 +3644,16 @@
     {
       "title": "Vánoční trhy ve Štítkově",
       "url": "https://www.svatamari.cz/aktualne/kalendar-akci/vanocni-trhy-ve-stitkove-214_102cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční koncert sboru Bonbon",
+      "url": "https://www.svata.cz/aktualne/kalendar-akci/vanocni-koncert-sboru-bonbon-498_205cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční turnaj v pingpongu",
+      "url": "https://www.svata.cz/aktualne/kalendar-akci/vanocni-turnaj-v-pingpongu-499_206cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -3267,6 +3727,41 @@
       "reason": "Ověřené rozhodnutí již neodpovídá detailu; ověřte znovu."
     },
     {
+      "title": "Noční vánoční prohlídky zámku",
+      "url": "https://www.telc.eu/kalendar/4287",
+      "reason": "Rozporná data v těle události vyžadují ověření."
+    },
+    {
+      "title": "Noční vánoční prohlídky zámku",
+      "url": "https://www.telc.eu/kalendar/4288",
+      "reason": "Rozporná data v těle události vyžadují ověření."
+    },
+    {
+      "title": "Noční vánoční prohlídky zámku",
+      "url": "https://www.telc.eu/kalendar/4289",
+      "reason": "Rozporná data v těle události vyžadují ověření."
+    },
+    {
+      "title": "Noční vánoční prohlídky zámku",
+      "url": "https://www.telc.eu/kalendar/4290",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Adventní řemeslné trhy na nádvoří zámku v Telči",
+      "url": "https://www.telc.eu/kalendar/4291",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční prohlídky na zámku",
+      "url": "https://www.telc.eu/kalendar/4292",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční prodej ryb",
+      "url": "https://www.telc.eu/kalendar/4294",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Převánoční pohádka pro nejmenší - Radujme se, veselme se",
       "url": "https://www.teplicenadmetuji.cz/volny-cas-a-turistika/akce-u-nas/prevanocni-pohadka-pro-nejmensi-radujme-se-veselme-se-2107_1271cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -3299,6 +3794,11 @@
     {
       "title": "Vánoce s klubem Mája",
       "url": "https://www.itrebon.cz/kalendar/-vanoce-s-klubem-maja_21018.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční koncert Konzervatoře České Budějovice",
+      "url": "https://www.itrebon.cz/kalendar/-vanocni-koncert-konzervatore-ceske-budejovice_20905.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -3422,6 +3922,11 @@
       "reason": "Strukturovaná adresa neodpovídá obci zdroje; ověřte lokalitu."
     },
     {
+      "title": "Vánoce pro ulici aneb advent je již za dveřmi",
+      "url": "https://www.tyniste.cz/dre-cs/81588-vanoce-pro-ulici-aneb-advent-je-jiz-za-dvermi.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Ježíškova pošta",
       "url": "https://www.obecunanov.cz/obcan/kultura-a-volny-cas/jeziskova-posta-332_126cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -3459,6 +3964,11 @@
     {
       "title": "Vánoční jarmark",
       "url": "https://www.valtice.eu/aktuality/kalendar-akci/vanocni-jarmark-1696_1848cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční výstava",
+      "url": "https://www.valtice.eu/aktuality/kalendar-akci/vanocni-vystava-1706_1855cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -3597,8 +4107,18 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Vánoční jarmárek 28.11. před domem č.81 - na návsi od 16:00 hodin",
+      "url": "https://www.veselyzdar.cz/zivot-v-obci/kalendar-akci/vanocni-jarmarek-2811-pred-domem-c81-na-navsi-od-1600-hodin-194_44cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Adventní jarmark a Rozsvícení vánočního stromu",
       "url": "https://www.vetrkovice.cz/aktualne/kalendar-akci/adventni-jarmark-a-rozsviceni-vanocniho-stromu-771_237cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Budišovské Vánoce",
+      "url": "https://www.vetrkovice.cz/aktualne/kalendar-akci/budisovske-vanoce-1701_702cs1322.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -3657,6 +4177,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Adventní koncert",
+      "url": "https://www.vitkov.info/aktualne/kalendar-akci/adventni-koncert-2526_2390cs2512.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Vánoční dílna s rozsvícením vánočního stromu",
       "url": "https://www.vitkov.info/aktualne/kalendar-akci/vanocni-dilna-s-rozsvicenim-vanocniho-stromu-2523_2387cs2512.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -3677,8 +4202,18 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Rozsvěcováni vánočního stromu ve Vrběticích",
+      "url": "https://www.vlachovice.cz/aktualne/kam-za-kulturou/rozsvecovani-vanocniho-stromu-ve-vrbeticich-1726_518cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Tvořivá dílnička s vůní perníku",
       "url": "https://www.vlachovice.cz/aktualne/kam-za-kulturou/tvoriva-dilnicka-s-vuni-perniku-1724_517cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Vánoční jarmark v ZŠ Vlachovice",
+      "url": "https://www.vlachovice.cz/aktualne/kam-za-kulturou/vanocni-jarmark-v-zs-vlachovice-1727_519cs.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
@@ -3772,6 +4307,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Vánoční posezení s tvořením Bílé Podolí",
+      "url": "https://www.obecvrdy.cz/volny-cas/kalendar-akci-v-okoli/vanocni-posezeni-s-tvorenim-bile-podoli-272_76cs984.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Vánoční tvoření Bílé Podolí",
       "url": "https://www.obecvrdy.cz/volny-cas/kalendar-akci-v-okoli/vanocni-tvoreni-bile-podoli-271_75cs984.html",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -3862,6 +4402,16 @@
       "reason": "Chybí strukturovaný detail jedné události."
     },
     {
+      "title": "Vánoční koncert",
+      "url": "https://www.zernov.cz/pro-obcany/kalendar-akci/vanocni-koncert-358_34cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Zahájení adventu 29. 11. 2026 od 17:00 u KD v Žeroticích",
+      "url": "https://www.zerotice.cz/volny-cas/kalendar-akci/zahajeni-adventu-29-11-2026-od-1700-u-kd-v-zeroticich-550_215cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Rozsvícení vánočního stromu",
       "url": "https://www.zichovice.cz/informace-pro-obcany/kalendar-akci/rozsviceni-vanocniho-stromu-625_95cs.html",
       "reason": "Rozporná data v těle události vyžadují ověření."
@@ -3882,6 +4432,11 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Mikulášská nadílka a rozsvěcování vánočního stromu",
+      "url": "https://www.obeczlechov.cz/aktualne/kalendar-akci/mikulasska-nadilka-a-rozsvecovani-vanocniho-stromu-713_189cs.html",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Adventní benefiční koncert",
       "url": "https://visitzlin.eu/kalendar-akci/adventni-beneficni-koncert",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
@@ -3892,9 +4447,19 @@
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
     },
     {
+      "title": "Mezigenerační aktivita – výroba adventních věnců",
+      "url": "https://visitzlin.eu/kalendar-akci/mezigeneracni-aktivita-vyroba-adventnich-vencu",
+      "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
       "title": "Tvoření adventních věnců",
       "url": "https://visitzlin.eu/kalendar-akci/tvoreni-adventnich-vencu",
       "reason": "Místo konání není v ověřeném seznamu zdroje; ověřte lokalitu."
+    },
+    {
+      "title": "Zahájení adventní doby s rozsvícením vánočního stromu",
+      "url": "https://visitzlin.eu/kalendar-akci/zahajeni-adventni-doby-s-rozsvicenim-vanocniho-stromu",
+      "reason": "Neplatné nebo změněné ověřené rozhodnutí; ověřte znovu."
     },
     {
       "title": "Adventní koncert sboru ROSA COELI",
