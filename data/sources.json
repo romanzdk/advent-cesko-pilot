@@ -18202,21 +18202,13 @@
         "Kostelec nad Černými lesy": "Středočeský kraj"
       },
       "index_urls": [
-        "https://centrum-pecka.cz/"
+        "https://centrum-pecka.cz/wp-content/uploads/2026_VANOCE_fb-1024x577.jpg"
       ],
-      "url_regex": "^https://centrum\\-pecka\\.cz/[^\\s]*$",
+      "url_regex": "^https://centrum\\-pecka\\.cz/wp\\-content/uploads/2026_VANOCE_fb\\-1024x577\\.jpg$",
       "seed_urls": [],
       "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
       "allowed_locations": {
-        "Kostelec nad Černými lesy": [
-          {
-            "lat": 49.9947827,
-            "lon": 14.8608657,
-            "precision": "venue",
-            "label": "Náměstí Smiřických, Kostelec nad Černými lesy",
-            "sourceUrl": "https://www.openstreetmap.org/way/32252508"
-          }
-        ]
+        "Kostelec nad Černými lesy": []
       }
     },
     {
