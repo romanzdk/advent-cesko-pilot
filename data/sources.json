@@ -2801,7 +2801,7 @@
       "index_urls": [
         "https://www.mirosovice.cz/"
       ],
-      "url_regex": "^https://www\\.mirosovice\\.cz/[^\\s]*$",
+      "url_regex": "^(?!https://www\\.mirosovice\\.cz/cs/obec/aktuality/kulturni\\-a\\-sportovni\\-akce\\-v\\-pyselich\\-a\\-okoli\\-1247cs\\.html$)https://www\\.mirosovice\\.cz/[^\\s]*$",
       "seed_urls": [],
       "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
       "allowed_locations": {
@@ -11116,7 +11116,31 @@
       "feed_url": null,
       "max_index_pages": 2,
       "max_details": 14,
-      "coverage_note": "Čerčany: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Čerčany, nikoli úplné obecní ani krajské pokrytí."
+      "coverage_note": "Čerčany: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Čerčany, nikoli úplné obecní ani krajské pokrytí.",
+      "event_reviews": {
+        "https://tourist.posazavi.com/cz/kalendar-akci/46727-vanocni-trziste-ve-prospech-hospic-dobreho-pastyre.html": {
+          "sourceId": "cercany-posazavi-calendar",
+          "sourceUrl": "https://tourist.posazavi.com/cz/kalendar-akci/46727-vanocni-trziste-ve-prospech-hospic-dobreho-pastyre.html",
+          "sourceTown": "Čerčany",
+          "expectedTitle": "Vánoční tržiště ve prospěch Hospic Dobrého Pastýře",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Kulturní dům Čerčany",
+          "contentHash": "a2081e6413d2f01126dd681adff16ce6b820a3f1344a6bf4e3118be72f1df52a",
+          "decision": "accept",
+          "reason": "Konec a přesná adresa podle plakátu pořadatele Hospice Dobrého Pastýře ověřeného 21.11.2026; rozpor vedlejší pozvánky ponechán v poznámce.",
+          "overrides": {
+            "endTime": "18:00",
+            "venue": "Kulturní dům, Sokolská 28, Čerčany",
+            "notes": [
+              "Plakát pořadatele ověřen 21.11.2026 potvrzuje 29.11.2026 13:00–18:00 a adresu Sokolská 28: https://tri-cercany.cz/wp-content/uploads/2026/10/trziste.png",
+              "Primární pozvánka pořadatele: https://tri-cercany.cz/vanocni-trziste/",
+              "Rozpor v konci: vedlejší bulletin infocentra Pyšely na webu Mirošovic uvádí 16:00, plakát pořadatele 18:00. Ponechán údaj pořadatele; rozpor není vyřešen: https://www.mirosovice.cz/cs/obec/aktuality/kulturni-a-sportovni-akce-v-pyselich-a-okoli-1247cs.html",
+              "Údaj 0 Kč pochází z regionálního kalendáře Posázaví; plakát pořadatele vstupné ani rezervaci neuvádí."
+            ]
+          }
+        }
+      }
     },
     {
       "id": "stribrna-skalice-posazavi-calendar",
@@ -18178,21 +18202,13 @@
         "Kostelec nad Černými lesy": "Středočeský kraj"
       },
       "index_urls": [
-        "https://centrum-pecka.cz/"
+        "https://centrum-pecka.cz/wp-content/uploads/2026_VANOCE_fb-1024x577.jpg"
       ],
-      "url_regex": "^https://centrum\\-pecka\\.cz/[^\\s]*$",
+      "url_regex": "^https://centrum\\-pecka\\.cz/wp\\-content/uploads/2026_VANOCE_fb\\-1024x577\\.jpg$",
       "seed_urls": [],
       "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
       "allowed_locations": {
-        "Kostelec nad Černými lesy": [
-          {
-            "lat": 49.9947827,
-            "lon": 14.8608657,
-            "precision": "venue",
-            "label": "Náměstí Smiřických, Kostelec nad Černými lesy",
-            "sourceUrl": "https://www.openstreetmap.org/way/32252508"
-          }
-        ]
+        "Kostelec nad Černými lesy": []
       }
     },
     {
@@ -26964,6 +26980,91 @@
       },
       "allowed_locations": {
         "Kunice–Vidovice": []
+      }
+    },
+    {
+      "id": "reviewed-prestavlky-advent-2026",
+      "town": "Přestavlky u Čerčan",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.prestavlkyucercan.cz",
+      "index_urls": [
+        "https://www.prestavlkyucercan.cz/zivot-v-obci/kalendar-akci/adventni-setkani-s-mikulasem-1996_417cs.html"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^(?:https://www\\.prestavlkyucercan\\.cz/zivot\\-v\\-obci/kalendar\\-akci/adventni\\-setkani\\-s\\-mikulasem\\-1996_417cs\\.html)$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřený místní výběr 2026 z přesných veřejných pozvánek, nikoli úplné obecní pokrytí. Kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_towns": {
+        "Přestavlky u Čerčan": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Přestavlky u Čerčan": []
+      }
+    },
+    {
+      "id": "reviewed-lsteni-advent-2026",
+      "town": "Lštění",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.lsteni-zlenice.cz",
+      "index_urls": [
+        "https://www.lsteni-zlenice.cz/zivot-v-obci/kalendar-akci/rozsviceni-vanocniho-stromku-401_149cs.html",
+        "https://www.lsteni-zlenice.cz/zivot-v-obci/kalendar-akci/xxii-adventni-koncert-344_131cs.html"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^(?:https://www\\.lsteni\\-zlenice\\.cz/zivot\\-v\\-obci/kalendar\\-akci/rozsviceni\\-vanocniho\\-stromku\\-401_149cs\\.html|https://www\\.lsteni\\-zlenice\\.cz/zivot\\-v\\-obci/kalendar\\-akci/xxii\\-adventni\\-koncert\\-344_131cs\\.html)$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřený místní výběr 2026 z přesných veřejných pozvánek, nikoli úplné obecní pokrytí. Kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_towns": {
+        "Lštění": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Lštění": []
+      }
+    },
+    {
+      "id": "reviewed-borova-lhota-2026",
+      "town": "Borová Lhota (Pyšely)",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.mirosovice.cz",
+      "index_urls": [
+        "https://www.mirosovice.cz/cs/obec/aktuality/kulturni-a-sportovni-akce-v-pyselich-a-okoli-1247cs.html"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^(?:https://www\\.mirosovice\\.cz/cs/obec/aktuality/kulturni\\-a\\-sportovni\\-akce\\-v\\-pyselich\\-a\\-okoli\\-1247cs\\.html)$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřený místní výběr 2026 z přesných veřejných pozvánek, nikoli úplné obecní pokrytí. Kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_towns": {
+        "Borová Lhota (Pyšely)": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Borová Lhota (Pyšely)": []
+      }
+    },
+    {
+      "id": "reviewed-cercany-bessoni-2026",
+      "town": "Čerčany",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.lsteni-zlenice.cz",
+      "index_urls": [
+        "https://www.lsteni-zlenice.cz/zivot-v-obci/kalendar-akci/vanocni-bessidka-se-skupinou-bessoni-474_172cs.html"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^(?:https://www\\.lsteni\\-zlenice\\.cz/zivot\\-v\\-obci/kalendar\\-akci/vanocni\\-bessidka\\-se\\-skupinou\\-bessoni\\-474_172cs\\.html)$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřený místní výběr 2026 z přesných veřejných pozvánek, nikoli úplné obecní pokrytí. Kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_towns": {
+        "Čerčany": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Čerčany": []
       }
     }
   ]

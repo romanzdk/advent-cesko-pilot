@@ -2,6 +2,7 @@
 from copy import deepcopy
 import json
 from pathlib import Path
+import re
 import sys
 import unittest
 
@@ -28,8 +29,14 @@ class PosazaviAdapter(unittest.TestCase):
 
     def test_registered_sources_are_bounded_seedless_and_located(self):
         self.assertGreaterEqual(len(POSAZAVI), 10)
-        towns = [s['town'] for s in REGISTRY['sources']]
+        # Municipality and a separately reviewed invitation may share a town;
+        # live calendars still remain unique and reviewed URLs cannot overlap.
+        towns = [s['town'] for s in REGISTRY['sources'] if s['adapter'] != 'reviewed-public']
         for s in POSAZAVI:
+            for reviewed in REGISTRY['sources']:
+                if reviewed['adapter'] == 'reviewed-public' and reviewed['town'] == s['town']:
+                    for url in reviewed['index_urls']:
+                        self.assertIsNone(re.fullmatch(s['url_regex'], url))
             with self.subTest(source=s['id']):
                 self.assertEqual(towns.count(s['town']), 1)
                 self.assertFalse(s['seed_urls'])

@@ -179,6 +179,15 @@ def structured_price(event):
 def review_fingerprint(body, adapter):
     """SHA256 of whitespace-normalized semantic event text, never page chrome."""
     root = DOM(body).root
+    if adapter == 'posazavi':
+        # These details are parsed exclusively from one JSON-LD Event. Bind the
+        # complete object (including offers, locality and asset URLs) plus h1;
+        # do not hash navigation or silently choose among multiple Events.
+        event = structured_event(root)
+        heading = txt(root.find('h1'))
+        if not event or not heading:
+            raise Review('Chybí jednoznačný strukturovaný rozsah ověřovaného detailu.')
+        return digest(json.dumps([heading, event], ensure_ascii=False, sort_keys=True))
     scope = root.find(cls={'galileo': 'event-detail', 'itrebon': 'kalendarDetail', 'telc': 'clanek_levy_sloupec'}.get(adapter, '__unsupported__'))
     if adapter == 'humpolec':
         content = root.find('section', id='content')

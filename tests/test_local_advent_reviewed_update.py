@@ -127,7 +127,7 @@ class LocalAdventReviewedUpdate(unittest.TestCase):
         wreath = self.events['e-2a25cd0b98ed6aba']
         kunice = self.events['e-4f15af21f62bd966']
         museum = self.events['e-d01bbc0c574b613c']
-        self.assertIn('6 volných z 15', wreath['registration'])
+        self.assertIn('4 volná z 15', wreath['registration'])
         self.assertNotIn('8 volných', wreath['registration'])
         self.assertIn('chvojí', wreath['description'])
         self.assertIn('Hrnečky', kunice['description'])
@@ -140,7 +140,7 @@ class LocalAdventReviewedUpdate(unittest.TestCase):
         self.assertEqual(museum['sourceUrl'], 'https://muzeumricany.cz/akce-udalost/betlemy-ze-susti-2026/')
         self.assertIn('evt_image.php?img=11336', ' '.join(kunice['notes']))
         self.assertIn(museum['registrationUrl'], ' '.join(museum['notes']))
-        self.assertEqual(wreath['verifiedAt'], '2026-11-18T09:43:38+01:00')
+        self.assertEqual(wreath['verifiedAt'], '2026-11-21T08:32:42.733562+00:00')
         self.assertEqual(kunice['verifiedAt'], '2026-11-18T09:43:38+01:00')
         self.assertEqual(museum['verifiedAt'], '2026-11-18T11:39:36.398335+00:00')
         for event, sid in [(wreath, 'reviewed-lodicka-webooker-eu'),

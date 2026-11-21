@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T07:48:27+00:00",
+  "generatedAt": "2026-11-21T09:07:14+00:00",
   "season": 2026,
   "region": "Česko – sezonní výběr",
   "events": [
@@ -5277,6 +5277,31 @@
       }
     },
     {
+      "id": "e-b1af12e0a050d855",
+      "title": "Mikulášská stezka",
+      "town": "Přestavlky u Čerčan",
+      "region": "Středočeský kraj",
+      "venue": null,
+      "date": "2026-11-22",
+      "endDate": null,
+      "startTime": null,
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášská stezka od 22. listopadu po celý týden; nejde o potvrzení jednodenního programu ani nepřetržitého provozu.",
+      "notes": [
+        "Datum označuje zahájení stezky. Doslovné konečné datum, denní hodiny, trasa a přesné místo nebyly zveřejněny; konec není domyšlen.",
+        "Doplňující veřejný podklad ověřen 21.11.2026: https://www.prestavlkyucercan.cz/evt_image.php?img=10184&v=1794259142"
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-21T09:29:28.841991+01:00",
+      "sourceUrl": "https://www.prestavlkyucercan.cz/zivot-v-obci/kalendar-akci/adventni-setkani-s-mikulasem-1996_417cs.html",
+      "location": null
+    },
+    {
       "id": "e-2dff02721173e4e82c79",
       "title": "Vánoční sbírka pro Azyl Pes",
       "town": "Chrastava",
@@ -7104,7 +7129,7 @@
       "endTime": "19:00",
       "category": "tvoreni",
       "price": "300 Kč/věnec; 150 Kč/větvička; svíčky navíc podle výběru. Platba až na místě.",
-      "registration": "Veřejná registrace Webooker otevřena, event 50457; při kontrole 18.11.2026 bylo 6 volných z 15 míst. Dostupnost se může změnit; rezervace nebyla provedena.",
+      "registration": "Veřejná registrace Webooker otevřena, event 50457; při kontrole 21.11.2026 byla 4 volná z 15 míst. Dostupnost se může změnit; rezervace nebyla provedena.",
       "registrationUrl": null,
       "description": "Zdobení adventního věnce nebo větvičky. Přinést chvojí; děti mohou tvořit s pomocí rodičů.",
       "notes": [
@@ -7112,7 +7137,7 @@
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-18T09:43:38+01:00",
+      "verifiedAt": "2026-11-21T08:32:42.733562+00:00",
       "sourceUrl": "https://lodicka.webooker.eu/flutter/#/events",
       "location": {
         "lat": 49.9490963,
@@ -20853,16 +20878,20 @@
       "date": "2026-11-28",
       "endDate": null,
       "startTime": "16:00",
-      "endTime": null,
+      "endTime": "19:00",
       "category": "strom",
       "price": null,
       "registration": null,
       "registrationUrl": null,
-      "description": "",
-      "notes": [],
+      "description": "Doprovodný program od 16:00, společné rozsvícení stromu v 17:00 a ukončení v 19:00. Dětské sbory, ZUŠ, tanec, Ježíškova pošta, dílničky a stánky.",
+      "notes": [
+        "Časy jsou podle programu orientační a jednotlivá vystoupení se mohou posunout. Program probíhá na návsi, koncerty také v kostele.",
+        "Doplňující obecní podklad ověřen 21.11.2026: https://www.chocerady.cz/evt_image.php?img=5597&v=1795165973",
+        "Doplňující obecní podklad ověřen 21.11.2026: https://www.chocerady.cz/evt_file.php?file=5598&original=PROGRAM%20ROZSV%C3%8DCEN%C3%8D%20V%C3%81NO%C4%8CN%C3%8DHO%20STROMU%20CHOCERADY%202026.pdf"
+      ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-12",
+      "verifiedAt": "2026-11-21",
       "sourceUrl": "https://www.chocerady.cz/zivot-v-obci-1/aktualne/akce-poradane-v-nasi-obci/rozsviceni-vanocniho-stromu-v-choceradech-2198_514cs.html",
       "location": {
         "lat": 49.8729023,
@@ -21409,6 +21438,28 @@
       }
     },
     {
+      "id": "e-510740de107f7398",
+      "title": "Rozsvícení Vánočního stromku",
+      "town": "Lštění",
+      "region": "Středočeský kraj",
+      "venue": "Zahrada obecního úřadu, Lštění",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "19:00",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Občerstvení a prodej vánočních dárků od 16:00; vlastní rozsvícení stromku v 17:00. Pořádají obec a SDH Lštění.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-21T09:29:27.348910+01:00",
+      "sourceUrl": "https://www.lsteni-zlenice.cz/zivot-v-obci/kalendar-akci/rozsviceni-vanocniho-stromku-401_149cs.html",
+      "location": null
+    },
+    {
       "id": "e-346af1844db21e3d1d86",
       "title": "Advent po našemu",
       "town": "Mikolajice",
@@ -21575,6 +21626,31 @@
         "label": "Pyšely — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441504"
       }
+    },
+    {
+      "id": "e-05a4eaf823581eb1",
+      "title": "Adventní setkání s Mikulášem",
+      "town": "Přestavlky u Čerčan",
+      "region": "Středočeský kraj",
+      "venue": null,
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Společné rozsvícení stromu, koledy, Mikuláš s čertem a andělem, svařák, vánoční dílničky a zdobení perníčků. Pořádají obec a SDH.",
+      "notes": [
+        "Začátek programu 16:00; přesná hodina rozsvícení, místo a konec nejsou uvedeny.",
+        "Doplňující veřejný podklad ověřen 21.11.2026: https://www.prestavlkyucercan.cz/evt_image.php?img=10184&v=1794259142"
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-21T09:29:28.841991+01:00",
+      "sourceUrl": "https://www.prestavlkyucercan.cz/zivot-v-obci/kalendar-akci/adventni-setkani-s-mikulasem-1996_417cs.html",
+      "location": null
     },
     {
       "id": "e-4786dfa0f5b9a5442017",
@@ -22471,6 +22547,30 @@
         "label": "Brušperk — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437869"
       }
+    },
+    {
+      "id": "e-bb4c321bbaaa07b6",
+      "title": "Rozsvícení stromečku na Borovce",
+      "town": "Borová Lhota (Pyšely)",
+      "region": "Středočeský kraj",
+      "venue": "Borová Lhota",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení stromečku na Borovce podle listopadové pozvánky Kulturního a informačního centra města Pyšely zveřejněné obcí Mirošovice.",
+      "notes": [
+        "Konec a podrobný program nejsou uvedeny. Adresu ani bezplatný vstup nepotvrdil primární obecní bulletin."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-21T09:27:08.400284+01:00",
+      "sourceUrl": "https://www.mirosovice.cz/cs/obec/aktuality/kulturni-a-sportovni-akce-v-pyselich-a-okoli-1247cs.html",
+      "location": null
     },
     {
       "id": "e-6520f4a6d092211ab724",
@@ -27707,17 +27807,22 @@
       "date": "2026-11-29",
       "endDate": null,
       "startTime": "13:00",
-      "endTime": null,
-      "venue": "Kulturní dům Čerčany",
+      "endTime": "18:00",
+      "venue": "Kulturní dům, Sokolská 28, Čerčany",
       "category": "trhy",
       "price": "0 Kč",
       "registration": null,
       "registrationUrl": null,
-      "description": "Vánoční tržiště ve prospěch Hospic Dobrého Pastýře. Kulturní dům Čerčany",
-      "notes": [],
+      "description": "Vánoční tržiště ve prospěch Hospic Dobrého Pastýře. Kulturní dům, Sokolská 28, Čerčany",
+      "notes": [
+        "Plakát pořadatele ověřen 21.11.2026 potvrzuje 29.11.2026 13:00–18:00 a adresu Sokolská 28: https://tri-cercany.cz/wp-content/uploads/2026/10/trziste.png",
+        "Primární pozvánka pořadatele: https://tri-cercany.cz/vanocni-trziste/",
+        "Rozpor v konci: vedlejší bulletin infocentra Pyšely na webu Mirošovic uvádí 16:00, plakát pořadatele 18:00. Ponechán údaj pořadatele; rozpor není vyřešen: https://www.mirosovice.cz/cs/obec/aktuality/kulturni-a-sportovni-akce-v-pyselich-a-okoli-1247cs.html",
+        "Údaj 0 Kč pochází z regionálního kalendáře Posázaví; plakát pořadatele vstupné ani rezervaci neuvádí."
+      ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-21T08:16:39+00:00",
+      "verifiedAt": "2026-11-21T09:07:19+00:00",
       "sourceUrl": "https://tourist.posazavi.com/cz/kalendar-akci/46727-vanocni-trziste-ve-prospech-hospic-dobreho-pastyre.html",
       "location": {
         "lat": 49.8529293,
@@ -28491,6 +28596,31 @@
         "label": "Líšná — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439806"
       }
+    },
+    {
+      "id": "e-12735559062e1155",
+      "title": "XXII. adventní koncert",
+      "town": "Lštění",
+      "region": "Středočeský kraj",
+      "venue": "Kostel sv. Klimenta na Hradišti, Lštění",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": "16:00",
+      "category": "setkani",
+      "price": "Vstupné dobrovolné",
+      "registration": "Pořadatel nabízí rezervace míst; povinnost rezervace ani aktuální kapacita nejsou potvrzeny. Kontakt na zdrojové stránce.",
+      "registrationUrl": null,
+      "description": "FAMIREDO a žáci smyčcového oddělení ZUŠ J. Suka Benešov v Choceradech s hosty. Pořádají obec Lštění a Farnost Poříčí nad Sázavou.",
+      "notes": [
+        "Konec 16:00 uvádí obecní kalendář; plakát potvrzuje začátek 14:00.",
+        "Doplňující veřejný podklad ověřen 21.11.2026: https://www.lsteni-zlenice.cz/evt_file.php?file=2360"
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-21T09:29:27.823457+01:00",
+      "sourceUrl": "https://www.lsteni-zlenice.cz/zivot-v-obci/kalendar-akci/xxii-adventni-koncert-344_131cs.html",
+      "location": null
     },
     {
       "id": "e-ab80594161581b76ff24",
@@ -53429,6 +53559,31 @@
       }
     },
     {
+      "id": "e-3993e134c57ca543",
+      "title": "Vánoční BESSÍDKA se skupinou BESSONI",
+      "town": "Čerčany",
+      "region": "Středočeský kraj",
+      "venue": "Kulturní dům Čerčany, vchod přes pizzerii",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "20:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční besídka a taneční večer se skupinou BESSONI. Plakát uvádí „Možná přijde Mikuláš“; účast Mikuláše ani nadílka nejsou zaručeny.",
+      "notes": [
+        "Doplňující veřejný podklad ověřen 21.11.2026: https://www.ctyrkoly.cz/evt_image.php?img=3566&v=1794902361",
+        "Doplňující veřejný podklad ověřen 21.11.2026: https://www.senohraby.cz/aktualne/kalendar-akci/vanocni-besidka-se-skupinou-bessoni-512-1112_576cs96.html"
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-21T09:29:28.330921+01:00",
+      "sourceUrl": "https://www.lsteni-zlenice.cz/zivot-v-obci/kalendar-akci/vanocni-bessidka-se-skupinou-bessoni-474_172cs.html",
+      "location": null
+    },
+    {
       "id": "e-be35fe5e72a6ca6865ce",
       "title": "Mikulášská nadílka v Bělčicích",
       "town": "Bělčice",
@@ -64822,6 +64977,30 @@
       }
     },
     {
+      "id": "e-78a9eb4f782e55f5",
+      "title": "Kostelecké trhy adventní",
+      "town": "Kostelec nad Černými lesy",
+      "region": "Středočeský kraj",
+      "venue": "Náměstí Smiřických, Kostelec nad Černými lesy",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní trhy: farmářské a řemeslné produkty, občerstvení a doprovodný program.",
+      "notes": [
+        "Plakát pořadatele ověřen 21.11.2026 na https://centrum-pecka.cz/ potvrzuje sobotu 12.12.2026 a čas 9–16. Vstupné ani povinnost rezervace návštěvníků nejsou uvedeny."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-21T09:04:58.480794+00:00",
+      "sourceUrl": "https://centrum-pecka.cz/wp-content/uploads/2026_VANOCE_fb-1024x577.jpg",
+      "location": null
+    },
+    {
       "id": "e-b18d5d5ae7034b072ec6",
       "title": "MF Souznění 2026",
       "town": "Kozlovice",
@@ -68997,7 +69176,7 @@
       "notes": [],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-21T08:16:39+00:00",
+      "verifiedAt": "2026-11-21T09:07:19+00:00",
       "sourceUrl": "https://tourist.posazavi.com/cz/kalendar-akci/46883-slavnosti-dobra-a-radosti-treti-adventni-setkani.html",
       "location": {
         "lat": 49.8529293,
