@@ -31,7 +31,7 @@ NEW_FACTS = {
     'e-b1af12e0a050d855': ('Přestavlky u Čerčan', '2026-11-22', None, None, 'reviewed-prestavlky-advent-2026'),
     'e-05a4eaf823581eb1': ('Přestavlky u Čerčan', '2026-11-28', '16:00', None, 'reviewed-prestavlky-advent-2026'),
     'e-510740de107f7398': ('Lštění', '2026-11-28', '16:00', '19:00', 'reviewed-lsteni-advent-2026'),
-    'e-bb4c321bbaaa07b6': ('Borová Lhota (Pyšely)', '2026-11-28', '16:30', None, 'reviewed-borova-lhota-2026'),
+    'e-bb4c321bbaaa07b6': ('Borová Lhota (Pyšely)', '2026-11-28', '15:00', None, 'reviewed-borova-lhota-2026'),
     'e-12735559062e1155': ('Lštění', '2026-11-29', '14:00', '16:00', 'reviewed-lsteni-advent-2026'),
     'e-3993e134c57ca543': ('Čerčany', '2026-12-05', '20:00', None, 'reviewed-cercany-bessoni-2026'),
 }

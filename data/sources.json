@@ -10997,7 +10997,62 @@
       "feed_url": null,
       "max_index_pages": 5,
       "max_details": 14,
-      "coverage_note": "Pyšely: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Pyšely, nikoli úplné obecní ani krajské pokrytí."
+      "coverage_note": "Pyšely: omezený sezónní výběr z regionálního kalendáře destinační společnosti Posázaví; jen akce s adresou v obci Pyšely, nikoli úplné obecní ani krajské pokrytí.",
+      "event_reviews": {
+        "https://tourist.posazavi.com/cz/kalendar-akci/46827-vanocni-vystava.html": {
+          "sourceId": "pysely-posazavi-calendar",
+          "sourceUrl": "https://tourist.posazavi.com/cz/kalendar-akci/46827-vanocni-vystava.html",
+          "sourceTown": "Pyšely",
+          "expectedTitle": "VÁNOČNÍ VÝSTAVA",
+          "expectedDate": "2026-11-29",
+          "expectedEndDate": null,
+          "expectedVenue": "Infocentrum a knihovna",
+          "contentHash": "fb76cc2768b9a8127cb9ea15ba617c7bb9ad28694f2222d1931f3ac3316656a0",
+          "decision": "accept",
+          "reason": "Přesné doplnění z primárního plakátu ověřeného 22.11.2026; zachována identita a živý vlastník zdroje.",
+          "overrides": {
+            "venue": "Informační centrum a knihovna Pyšely, Náměstí T. G. Masaryka 4",
+            "price": "Vstup zdarma",
+            "category": "setkani",
+            "notes": [
+              "Neprodejní výstava, nikoli trh. Samostatná nedělní otevření 29.11., 6.12., 13.12. a 20.12. od 16:00; konec není uveden. Jinak návštěva během provozní doby infocentra a knihovny. Plakát ověřen 22.11.2026: https://static.posazavi.com/Pictures/RelatedEventImages/2026/11/3/40293.png"
+            ]
+          }
+        },
+        "https://tourist.posazavi.com/cz/kalendar-akci/46903-slavnostni-rozsviceni-vanocniho-stromu-na-navsi-v-kovarovicich.html": {
+          "sourceId": "pysely-posazavi-calendar",
+          "sourceUrl": "https://tourist.posazavi.com/cz/kalendar-akci/46903-slavnostni-rozsviceni-vanocniho-stromu-na-navsi-v-kovarovicich.html",
+          "sourceTown": "Pyšely",
+          "expectedTitle": "SLAVNOSTNÍ ROZSVÍCENÍ VÁNOČNÍHO STROMU NA NÁVSI V KOVÁŘOVICÍCH",
+          "expectedDate": "2026-11-28",
+          "expectedEndDate": null,
+          "expectedVenue": "náměstí T. G. Masaryka",
+          "contentHash": "34977e2a0be88792994546e8f40c5ac9293940fd645c20e5c3067d874a8d02d9",
+          "decision": "accept",
+          "reason": "Přesné doplnění z primárního plakátu ověřeného 22.11.2026; zachována identita a živý vlastník zdroje.",
+          "overrides": {
+            "venue": "Náves v Kovářovicích",
+            "notes": [
+              "Obecní plakát potvrzuje 28.11.2026 od 16:00 na návsi v Kovářovicích; údaj náměstí T. G. Masaryka v regionálním kalendáři není místem této akce. Ověřeno 22.11.2026: https://static.posazavi.com/Pictures/RelatedEventImages/2026/11/4/40310.jpg"
+            ]
+          }
+        }
+      },
+      "event_locations": {
+        "https://tourist.posazavi.com/cz/kalendar-akci/46903-slavnostni-rozsviceni-vanocniho-stromu-na-navsi-v-kovarovicich.html": {
+          "sourceId": "pysely-posazavi-calendar",
+          "sourceTown": "Pyšely",
+          "sourceUrl": "https://tourist.posazavi.com/cz/kalendar-akci/46903-slavnostni-rozsviceni-vanocniho-stromu-na-navsi-v-kovarovicich.html",
+          "expectedVenue": "náměstí T. G. Masaryka",
+          "expectedDate": "2026-11-28",
+          "town": "Pyšely – Kovářovice",
+          "locationKey": "pysely-kovarovice-unlocated",
+          "verifiedAt": "2026-11-22T09:58:56.248426+01:00",
+          "supportingSourceUrls": [
+            "https://static.posazavi.com/Pictures/RelatedEventImages/2026/11/4/40310.jpg"
+          ]
+        }
+      }
     },
     {
       "id": "netvorice-posazavi-calendar",
@@ -11137,6 +11192,25 @@
               "Primární pozvánka pořadatele: https://tri-cercany.cz/vanocni-trziste/",
               "Rozpor v konci: vedlejší bulletin infocentra Pyšely na webu Mirošovic uvádí 16:00, plakát pořadatele 18:00. Ponechán údaj pořadatele; rozpor není vyřešen: https://www.mirosovice.cz/cs/obec/aktuality/kulturni-a-sportovni-akce-v-pyselich-a-okoli-1247cs.html",
               "Údaj 0 Kč pochází z regionálního kalendáře Posázaví; plakát pořadatele vstupné ani rezervaci neuvádí."
+            ]
+          }
+        },
+        "https://tourist.posazavi.com/cz/kalendar-akci/46883-slavnosti-dobra-a-radosti-treti-adventni-setkani.html": {
+          "sourceId": "cercany-posazavi-calendar",
+          "sourceUrl": "https://tourist.posazavi.com/cz/kalendar-akci/46883-slavnosti-dobra-a-radosti-treti-adventni-setkani.html",
+          "sourceTown": "Čerčany",
+          "expectedTitle": "Slavnosti dobra a radosti - třetí adventní setkání",
+          "expectedDate": "2026-12-13",
+          "expectedEndDate": null,
+          "expectedVenue": "Hospic Dobrého Pastýře a Centrum Péče Čerčany",
+          "contentHash": "4e2931fd03796d878fe26c9b14d4b591673ab52458ccd713fbd21f63776a470a",
+          "decision": "accept",
+          "reason": "Přesné doplnění z primárního plakátu ověřeného 22.11.2026; zachována identita a živý vlastník zdroje.",
+          "overrides": {
+            "endTime": "15:00",
+            "venue": "Hospic Dobrého Pastýře a Centrum Péče Čerčany, Sokolská 584",
+            "notes": [
+              "Interval 13.12.2026 10:00–15:00 a adresu Sokolská 584 potvrzuje plakát pořadatele ověřený 22.11.2026: https://tri-cercany.cz/wp-content/uploads/2026/11/LOKall-prosinec26-plakat.jpg"
             ]
           }
         }
@@ -27011,10 +27085,11 @@
       "primary_host": "www.lsteni-zlenice.cz",
       "index_urls": [
         "https://www.lsteni-zlenice.cz/zivot-v-obci/kalendar-akci/rozsviceni-vanocniho-stromku-401_149cs.html",
-        "https://www.lsteni-zlenice.cz/zivot-v-obci/kalendar-akci/xxii-adventni-koncert-344_131cs.html"
+        "https://www.lsteni-zlenice.cz/zivot-v-obci/kalendar-akci/xxii-adventni-koncert-344_131cs.html",
+        "https://www.lsteni-zlenice.cz/evt_file.php?file=2294"
       ],
       "detail_prefixes": [],
-      "url_regex": "^(?:https://www\\.lsteni\\-zlenice\\.cz/zivot\\-v\\-obci/kalendar\\-akci/rozsviceni\\-vanocniho\\-stromku\\-401_149cs\\.html|https://www\\.lsteni\\-zlenice\\.cz/zivot\\-v\\-obci/kalendar\\-akci/xxii\\-adventni\\-koncert\\-344_131cs\\.html)$",
+      "url_regex": "^(?:https://www\\.lsteni\\-zlenice\\.cz/zivot\\-v\\-obci/kalendar\\-akci/rozsviceni\\-vanocniho\\-stromku\\-401_149cs\\.html|https://www\\.lsteni\\-zlenice\\.cz/zivot\\-v\\-obci/kalendar\\-akci/xxii\\-adventni\\-koncert\\-344_131cs\\.html|https://www\\.lsteni\\-zlenice\\.cz/evt_file\\.php\\?file=2294)$",
       "seed_urls": [],
       "feed_url": null,
       "coverage_note": "Redakčně ověřený místní výběr 2026 z přesných veřejných pozvánek, nikoli úplné obecní pokrytí. Kontrola přenosu není novým ověřením pořadatele.",
@@ -27065,6 +27140,93 @@
       },
       "allowed_locations": {
         "Čerčany": []
+      }
+    },
+    {
+      "id": "reviewed-todelamja-cercany-2026",
+      "town": "Čerčany",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "todelamja.webooker.eu",
+      "index_urls": [
+        "https://todelamja.webooker.eu/flutter/#/events"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^https://todelamja\\.webooker\\.eu/flutter/\\#/events$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřené přesné primární podklady 2026; výběr, nikoli úplné obecní pokrytí. Kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_towns": {
+        "Čerčany": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Čerčany": []
+      },
+      "allowed_fragment_urls": [
+        "https://todelamja.webooker.eu/flutter/#/events"
+      ]
+    },
+    {
+      "id": "reviewed-cercany-tree-poster-2026",
+      "town": "Čerčany",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "static.posazavi.com",
+      "index_urls": [
+        "https://static.posazavi.com/Pictures/RelatedEventImages/2026/10/26/40146.jpeg"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^https://static\\.posazavi\\.com/Pictures/RelatedEventImages/2026/10/26/40146\\.jpeg$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřené přesné primární podklady 2026; výběr, nikoli úplné obecní pokrytí. Kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_towns": {
+        "Čerčany": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Čerčany": []
+      }
+    },
+    {
+      "id": "reviewed-pysely-exhibition-poster-2026",
+      "town": "Pyšely",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "static.posazavi.com",
+      "index_urls": [
+        "https://static.posazavi.com/Pictures/RelatedEventImages/2026/11/3/40293.png"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^https://static\\.posazavi\\.com/Pictures/RelatedEventImages/2026/11/3/40293\\.png$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřené přesné primární podklady 2026; výběr, nikoli úplné obecní pokrytí. Kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_towns": {
+        "Pyšely": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Pyšely": []
+      }
+    },
+    {
+      "id": "reviewed-kostelec-castle-2026",
+      "town": "Kostelec nad Černými lesy",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "zamekkostelec.cz",
+      "index_urls": [
+        "https://zamekkostelec.cz/kalendar-akci-na-rok-2026/"
+      ],
+      "detail_prefixes": [],
+      "url_regex": "^https://zamekkostelec\\.cz/kalendar\\-akci\\-na\\-rok\\-2026/$",
+      "seed_urls": [],
+      "feed_url": null,
+      "coverage_note": "Redakčně ověřené přesné primární podklady 2026; výběr, nikoli úplné obecní pokrytí. Kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_towns": {
+        "Kostelec nad Černými lesy": "Středočeský kraj"
+      },
+      "allowed_locations": {
+        "Kostelec nad Černými lesy": []
       }
     }
   ]
