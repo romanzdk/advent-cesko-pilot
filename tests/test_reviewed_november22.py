@@ -126,6 +126,42 @@ class MappedPosazaviCorrection(unittest.TestCase):
                 dst.close()
             adoption=sync_published.adopt_published(base,'a'*40)
             self.assertEqual((adoption['inserted'],adoption['updated']),(0,0))
+            # The directory and native adopter must reject the same incomplete
+            # identity receipts as the real parser, without fetching the detail.
+            malformed = [('unrelated title', dict(receipt, expectedTitle='UNRELATED EVENT'))]
+            malformed += [('missing '+key, {k:v for k,v in receipt.items() if k != key})
+                          for key in receipt]
+            malformed += [('bad hash', dict(receipt, contentHash=value))
+                          for value in (None, '', 'not-a-hash', 'a'*63, 123)]
+            malformed += [('bad reason', dict(receipt, reason=None)),
+                          ('title override', dict(receipt, overrides=dict(receipt['overrides'], title=receipt['expectedTitle']))),
+                          ('bad overrides', dict(receipt, overrides=[])),
+                          ('bad venue', dict(receipt, overrides={'venue':123})),
+                          ('null record', None), ('list record', [])]
+            for label, bad_receipt in malformed:
+                invalid = deepcopy(registry)
+                invalid_source = next(s for s in invalid['sources'] if s['id']==source['id'])
+                invalid_source['event_reviews'][url] = bad_receipt
+                with self.subTest(receipt=label, path='collector'), self.assertRaises(c.Review):
+                    c.parse_event(body,invalid_source,url,registry['window'])
+                with self.subTest(receipt=label, path='directory'), self.assertRaises(ValueError):
+                    validate_public.validate_directory(base/'out',invalid)
+                (base/'data/sources.json').write_text(json.dumps(invalid))
+                with self.subTest(receipt=label, path='native'), self.assertRaises(sync_published.SyncError):
+                    sync_published.adopt_published(base,'b'*40)
+            for records in (None, [], 'invalid'):
+                invalid = deepcopy(registry)
+                invalid_source = next(s for s in invalid['sources'] if s['id']==source['id'])
+                invalid_source['event_reviews'] = records
+                with self.subTest(container=records, path='collector'), self.assertRaises(c.Review):
+                    c.parse_event(body,invalid_source,url,registry['window'])
+                with self.subTest(container=records, path='directory'), self.assertRaises(ValueError):
+                    validate_public.validate_directory(base/'out',invalid)
+                (base/'data/sources.json').write_text(json.dumps(invalid))
+                with self.subTest(container=records, path='native'), self.assertRaises(sync_published.SyncError):
+                    sync_published.adopt_published(base,'b'*40)
+            (base/'data/sources.json').write_text(json.dumps(registry))
+            self.assertEqual(sync_published.adopt_published(base,'a'*40)['updated'],0)
             for field,value in [('sourceId','foreign'),('sourceTown','Praha'),('sourceUrl',url+'?x=1'),('expectedDate','2026-11-29'),('expectedVenue','Foreign venue')]:
                 invalid = deepcopy(registry)
                 next(s for s in invalid['sources'] if s['id']==source['id'])['event_locations'][url][field] = value
