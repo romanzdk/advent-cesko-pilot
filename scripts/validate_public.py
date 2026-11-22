@@ -128,7 +128,8 @@ def validate_directory(path, registry=None):
         matches=[s for s in sources if rx[s['id']].fullmatch(event['sourceUrl'])]
         # Regional calendars (Posázaví) serve several town sources from one URL space; the town picks the owner.
         if len(matches)>1:
-            matches=[s for s in matches if s['town']==event['town']]
+            matches=[s for s in matches if s['town']==event['town']
+                     or s.get('event_locations',{}).get(event['sourceUrl'],{}).get('town')==event['town']]
         require(len(matches)==1,'Event URL must identify one registered source')
         source=matches[0]
         require(event['region']==source['region'],'Event region disagrees with source')
@@ -143,9 +144,24 @@ def validate_directory(path, registry=None):
         mapping=source.get('event_locations',{}).get(event['sourceUrl'])
         town=source['town']
         if mapping:
+            venue=mapping['expectedVenue']
+            receipt=source.get('event_reviews',{}).get(event['sourceUrl'])
+            if receipt and 'venue' in receipt.get('overrides',{}):
+                # The mapping binds the original CMS venue; an exact-content
+                # review may separately correct the public venue. Keep both
+                # identities closed instead of comparing the corrected value
+                # against the original and rejecting an honest locality.
+                require(receipt.get('decision')=='accept'
+                        and receipt.get('sourceId')==source['id']
+                        and receipt.get('sourceTown')==source['town']
+                        and receipt.get('sourceUrl')==event['sourceUrl']
+                        and receipt.get('expectedDate')==event['date']
+                        and receipt.get('expectedEndDate')==event['endDate']
+                        and receipt.get('expectedVenue')==venue,'Invalid mapped venue receipt')
+                venue=receipt['overrides']['venue']
             require(mapping['sourceId']==source['id'] and mapping['sourceTown']==source['town']
                     and mapping['sourceUrl']==event['sourceUrl'] and mapping['expectedDate']==event['date']
-                    and mapping['expectedVenue']==event['venue'],'Invalid event location override')
+                    and venue==event['venue'],'Invalid event location override')
             town=mapping['town']
         require(event['town']==town,'Event town disagrees with source')
     for candidate in review['candidates']:

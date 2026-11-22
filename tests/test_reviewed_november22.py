@@ -1,10 +1,13 @@
 """Primary-evidence facts for the November 22 editorial publication."""
 from copy import deepcopy
+from contextlib import closing
 import json
 from pathlib import Path
 import re
 import sys
 import unittest
+import sqlite3
+import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'scripts'))
@@ -81,6 +84,58 @@ class November22Facts(unittest.TestCase):
             self.assertFalse(any(e['sourceUrl']==url for e in self.feed['events']))
         mapping = next(s for s in self.registry['sources'] if s['id']=='pysely-posazavi-calendar')['event_locations']
         self.assertEqual(next(iter(mapping.values()))['town'], 'Pyšely – Kovářovice')
+
+
+class MappedPosazaviCorrection(unittest.TestCase):
+    def test_exact_receipt_mapping_validates_and_changed_detail_withdraws_in_sqlite(self):
+        import validate_public
+        registry = json.loads((ROOT/'data/sources.json').read_text())
+        registry['sources'] = [s for s in registry['sources'] if s['id'] in ('pysely-posazavi-calendar','cercany-posazavi-calendar')]
+        source = next(s for s in registry['sources'] if s['id']=='pysely-posazavi-calendar')
+        url, mapping = next(iter(source['event_locations'].items()))
+        receipt = source['event_reviews'][url]
+        obj = {'@type':'Event','name':receipt['expectedTitle'],
+               'startDate':'2026-11-28T16:00:00+01:00', 'image':'https://example.cz/poster.png',
+               'location':{'name':receipt['expectedVenue'],'address':{'addressLocality':'Pyšely'}}}
+        body = '<h1>Kovářovice</h1><script type="application/ld+json">'+json.dumps(obj)+'</script>'
+        receipt['contentHash'] = c.review_fingerprint(body,'posazavi')
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp)
+            (base/'detail.html').write_text(body)
+            (base/'index.json').write_text(json.dumps({'Data':[{'Title':'Rozsvícení vánočního stromu','DetailUrl':url}]}))
+            manifest = {u:'index.json' for u in source['index_urls']}
+            manifest[url] = 'detail.html'
+            (base/'manifest.json').write_text(json.dumps(manifest))
+            client = c.FixtureClient(base/'manifest.json')
+            c.collect(registry,base/'events.sqlite',base/'out',{'Pyšely':{'lat':49.8,'lon':14.6,'precision':'town','label':'Pyšely','sourceUrl':'https://www.openstreetmap.org/relation/441504'}},client,source_id=source['id'])
+            self.assertEqual(validate_public.validate_directory(base/'out',registry),1)
+            event = json.loads((base/'out/events.json').read_text())['events'][0]
+            self.assertEqual(event['id'],'e-61ea2f4ecac214e47e22')
+            self.assertEqual(event['town'],'Pyšely – Kovářovice')
+            self.assertEqual(event['venue'],'Náves v Kovářovicích')
+            self.assertIsNone(event['location'])
+            import sync_published
+            (base/'data').mkdir()
+            (base/'data/sources.json').write_text(json.dumps(registry))
+            (base/'private').mkdir()
+            import shutil
+            shutil.copytree(base/'out',base/'site')
+            with closing(sqlite3.connect(base/'events.sqlite')) as src:
+                dst=sqlite3.connect(base/'private/events.sqlite')
+                src.backup(dst)
+                dst.close()
+            adoption=sync_published.adopt_published(base,'a'*40)
+            self.assertEqual((adoption['inserted'],adoption['updated']),(0,0))
+            for field,value in [('sourceId','foreign'),('sourceTown','Praha'),('sourceUrl',url+'?x=1'),('expectedDate','2026-11-29'),('expectedVenue','Foreign venue')]:
+                invalid = deepcopy(registry)
+                next(s for s in invalid['sources'] if s['id']==source['id'])['event_locations'][url][field] = value
+                with self.subTest(field=field),self.assertRaises(ValueError):
+                    validate_public.validate_directory(base/'out',invalid)
+            (base/'detail.html').write_text(body.replace('poster.png','changed.png'))
+            c.collect(registry,base/'events.sqlite',base/'out',{},client,source_id=source['id'])
+            with closing(sqlite3.connect(base/'events.sqlite')) as con:
+                self.assertEqual(con.execute('select count(*) from events').fetchone()[0],0)
+                self.assertEqual(con.execute('select source_id,url from reviews').fetchall(),[(source['id'],url)])
 
 
 if __name__ == '__main__':
