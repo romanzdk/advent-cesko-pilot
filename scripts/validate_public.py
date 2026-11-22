@@ -128,7 +128,8 @@ def validate_directory(path, registry=None):
         matches=[s for s in sources if rx[s['id']].fullmatch(event['sourceUrl'])]
         # Regional calendars (Posázaví) serve several town sources from one URL space; the town picks the owner.
         if len(matches)>1:
-            matches=[s for s in matches if s['town']==event['town']]
+            matches=[s for s in matches if s['town']==event['town']
+                     or s.get('event_locations',{}).get(event['sourceUrl'],{}).get('town')==event['town']]
         require(len(matches)==1,'Event URL must identify one registered source')
         source=matches[0]
         require(event['region']==source['region'],'Event region disagrees with source')
@@ -143,9 +144,49 @@ def validate_directory(path, registry=None):
         mapping=source.get('event_locations',{}).get(event['sourceUrl'])
         town=source['town']
         if mapping:
+            venue=mapping['expectedVenue']
+            reviews=source.get('event_reviews',{})
+            require(isinstance(reviews,dict),'Invalid mapped venue receipt map')
+            if event['sourceUrl'] in reviews:
+                receipt=reviews[event['sourceUrl']]
+                # Match parse_event's complete original-CMS identity. Title is
+                # never an allowed review override; only venue may differ from
+                # the mapping. This validates a receipt, not a fresh page fetch.
+                identities=dict(sourceId=source['id'],sourceTown=source['town'],
+                                sourceUrl=event['sourceUrl'],expectedTitle=event['title'],
+                                expectedDate=event['date'],expectedEndDate=event['endDate'],
+                                expectedVenue=venue)
+                require(isinstance(receipt,dict)
+                        and all(k in receipt and receipt[k]==v for k,v in identities.items())
+                        and receipt.get('decision')=='accept'
+                        and isinstance(receipt.get('reason'),str)
+                        and isinstance(receipt.get('contentHash'),str)
+                        and re.fullmatch(r'[0-9a-f]{64}',receipt['contentHash']),
+                        'Invalid mapped venue receipt')
+                overrides=receipt.get('overrides')
+                require(isinstance(overrides,dict) and not set(overrides)-{
+                    'startTime','endTime','price','audience','notes','venue','category','registration'},
+                    'Invalid mapped venue receipt overrides')
+                for key,value in overrides.items():
+                    if key in ('startTime','endTime'):
+                        valid=value is None or isinstance(value,str) and re.fullmatch(r'(?:[01]\d|2[0-3]):[0-5]\d',value)
+                        valid=valid and not (source['adapter']=='telc' and event['endDate'] is not None and value is not None)
+                    elif key=='venue':
+                        valid=isinstance(value,str) and 0<len(value)<=180 and bool(value.strip())
+                    elif key=='audience':
+                        valid=value in ('všichni','dospělí','senioři / omezené zaměření','omezené zaměření')
+                    elif key=='category':
+                        valid=value in ('strom','mikulas','trhy','tvoreni','setkani','betlem')
+                    elif key=='notes':
+                        valid=isinstance(value,list) and all(isinstance(n,str) for n in value)
+                    else:
+                        valid=value is None or isinstance(value,str)
+                    require(valid,'Invalid mapped venue receipt override value')
+                if 'venue' in overrides:
+                    venue=overrides['venue']
             require(mapping['sourceId']==source['id'] and mapping['sourceTown']==source['town']
                     and mapping['sourceUrl']==event['sourceUrl'] and mapping['expectedDate']==event['date']
-                    and mapping['expectedVenue']==event['venue'],'Invalid event location override')
+                    and venue==event['venue'],'Invalid event location override')
             town=mapping['town']
         require(event['town']==town,'Event town disagrees with source')
     for candidate in review['candidates']:

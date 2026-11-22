@@ -166,7 +166,8 @@ def adopt_published(root, commit, *, baseline=None):
         for event in docs['events']['events']:
             matches = [s for s in sources if patterns[s['id']].fullmatch(event['sourceUrl'])]
             if len(matches)>1:
-                matches = [s for s in matches if s['town']==event['town']]
+                matches = [s for s in matches if s['town']==event['town']
+                           or s.get('event_locations',{}).get(event['sourceUrl'],{}).get('town')==event['town']]
             require(len(matches)==1, 'sync-owner')
             sid = matches[0]['id']
             row = con.execute('SELECT source_id,payload FROM events WHERE id=?',(event['id'],)).fetchone()
