@@ -7425,5 +7425,12 @@
     "precision": "town",
     "label": "Milíře — orientační střed obce, nikoli přesné místo akce",
     "sourceUrl": "https://www.openstreetmap.org/relation/436631"
+  },
+  "Lučany nad Nisou": {
+    "lat": 50.7413554,
+    "lon": 15.2204627,
+    "precision": "town",
+    "label": "Lučany nad Nisou — orientační střed obce, nikoli přesné místo akce",
+    "sourceUrl": "https://www.openstreetmap.org/relation/438921"
   }
 }

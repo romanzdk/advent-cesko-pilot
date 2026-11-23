@@ -27291,6 +27291,131 @@
           }
         ]
       }
+    },
+    {
+      "id": "reviewed-www-plavy-cz",
+      "town": "Tanvald",
+      "region": "Liberecký kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.plavy.cz",
+      "allowed_towns": {
+        "Tanvald": "Liberecký kraj",
+        "Desná": "Liberecký kraj",
+        "Smržovka": "Liberecký kraj"
+      },
+      "index_urls": [
+        "https://www.plavy.cz/obec-7/aktuality/kalendar-akci-v-obci-a-okoli/"
+      ],
+      "url_regex": "^https://www\\.plavy\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Tanvald": [
+          {
+            "lat": 50.7379882,
+            "lon": 15.3038421,
+            "precision": "town",
+            "label": "Tanvald — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/438925"
+          }
+        ],
+        "Desná": [
+          {
+            "lat": 50.760138,
+            "lon": 15.3027864,
+            "precision": "town",
+            "label": "Desná — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/436602"
+          }
+        ],
+        "Smržovka": [
+          {
+            "lat": 50.7384678,
+            "lon": 15.2463402,
+            "precision": "town",
+            "label": "Smržovka — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/438926"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-simonovice-cz",
+      "town": "Šimonovice",
+      "region": "Liberecký kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.simonovice.cz",
+      "allowed_towns": {
+        "Šimonovice": "Liberecký kraj"
+      },
+      "index_urls": [
+        "https://www.simonovice.cz/kultura-a-sport/"
+      ],
+      "url_regex": "^https://www\\.simonovice\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Šimonovice": [
+          {
+            "lat": 50.7063759,
+            "lon": 15.052623,
+            "precision": "town",
+            "label": "Šimonovice — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/438972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-zeleznybrod-cz",
+      "town": "Železný Brod",
+      "region": "Liberecký kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.zeleznybrod.cz",
+      "allowed_towns": {
+        "Železný Brod": "Liberecký kraj"
+      },
+      "index_urls": [
+        "https://www.zeleznybrod.cz/cz/kalendar-akci/kalendar-akci/kalendar-akci-ke-stazeni/"
+      ],
+      "url_regex": "^https://www\\.zeleznybrod\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Železný Brod": [
+          {
+            "lat": 50.6430652,
+            "lon": 15.2539851,
+            "precision": "town",
+            "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+          }
+        ]
+      },
+      "allowed_fragment_urls": [
+        "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf#page=3"
+      ]
+    },
+    {
+      "id": "lucany-nad-nisou-obec-calendar",
+      "town": "Lučany nad Nisou",
+      "region": "Liberecký kraj",
+      "adapter": "galileo",
+      "index_urls": [
+        "https://www.lucany.cz/volny-cas/kalendar-akci/"
+      ],
+      "detail_prefixes": [
+        "https://www.lucany.cz/volny-cas/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.lucany\\.cz/volny-cas/kalendar-akci/[^/?#]+-\\d+_\\d+cs\\d*\\.html$",
+      "seed_urls": [],
+      "feed_url": null,
+      "max_index_pages": 2,
+      "max_details": 8,
+      "coverage_note": "Lučany nad Nisou: omezený sezónní výběr z oficiálního obecního kalendáře; nejvýše dvě stránky a osm detailů, nikoli úplné obecní ani krajské pokrytí.",
+      "allowed_venues": [
+        "městský úřad"
+      ]
     }
   ]
 }
