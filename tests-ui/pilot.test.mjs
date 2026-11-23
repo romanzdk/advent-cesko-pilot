@@ -9,3 +9,9 @@ test('region filter isolates the selected region',()=>{
  assert.deepEqual(filterEvents(events,{region:'Plzeňský kraj'}).map(e=>e.id),['a']);
  assert.equal(filterEvents(events,{}).length,2);
 });
+test('intro explains daily catalogue checks and ongoing updates',async()=>{
+ const html=await readFile(new URL('../site/index.html',import.meta.url),'utf8');
+ const intro=html.match(/<section class="intro"[\s\S]*?<\/section>/)?.[0];
+ assert.ok(intro,'The homepage intro must be present');
+ assert.match(intro,/<p class="scope-note" id="update-note">Seznam akcí denně kontrolujeme a průběžně aktualizujeme\.<\/p>/);
+});
