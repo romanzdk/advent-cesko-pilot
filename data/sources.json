@@ -27228,6 +27228,60 @@
       "allowed_locations": {
         "Kostelec nad Černými lesy": []
       }
+    },
+    {
+      "id": "reviewed-www-trhyvliberci-cz",
+      "town": "Liberec",
+      "region": "Liberecký kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.trhyvliberci.cz",
+      "allowed_towns": {
+        "Liberec": "Liberecký kraj"
+      },
+      "index_urls": [
+        "https://www.trhyvliberci.cz/advent/program-adventu"
+      ],
+      "url_regex": "^https://www\\.trhyvliberci\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Liberec": [
+          {
+            "lat": 50.7702648,
+            "lon": 15.0583947,
+            "precision": "town",
+            "label": "Liberec — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/439073"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-cl-kultura-cz",
+      "town": "Česká Lípa",
+      "region": "Liberecký kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.cl-kultura.cz",
+      "allowed_towns": {
+        "Česká Lípa": "Liberecký kraj"
+      },
+      "index_urls": [
+        "https://www.cl-kultura.cz/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.cl\\-kultura\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Česká Lípa": [
+          {
+            "lat": 50.6865452,
+            "lon": 14.5372974,
+            "precision": "town",
+            "label": "Česká Lípa — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/440197"
+          }
+        ]
+      }
     }
   ]
 }
