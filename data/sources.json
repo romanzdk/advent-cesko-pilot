@@ -172,7 +172,16 @@
       "feed_url": null,
       "coverage_note": "Výběr měst a omezený počet stránek, nikoli úplný soupis kraje.",
       "max_details": 14,
-      "max_index_pages": 4
+      "max_index_pages": 4,
+      "allowed_venues": [
+        "Erbovní sál, čp. 1",
+        "Knihovna Jaroslava Havlíčka",
+        "Masarykovo náměstí",
+        "SD Jilm",
+        "Sloupová síň č.p. 1",
+        "Tržnice řemesel, čp.1",
+        "ZUŠ, budova VO"
+      ]
     },
     {
       "id": "christmas2026-jihomoravsky-rajhrad",

@@ -56,6 +56,37 @@ class GalileoTownSources(unittest.TestCase):
         c.parse_event(body.replace('soukromá akce', 'veřejná akce'), deepcopy(source), url, WINDOW)
 
 
+class GalileoRecordTimes(unittest.TestCase):
+    def parse(self, clock):
+        source = TOWN_SOURCES[0]
+        url = source['detail_prefixes'][0] + 'rozsviceni-stromu-9999_9999cs.html'
+        body = fragment('Rozsvícení vánočního stromu', '2026-11-29', source['allowed_venues'][0]).replace('15:30 - 18:00', clock)
+        return c.parse_event(body, deepcopy(source), url, WINDOW)
+
+    def test_save_minute_is_not_a_start_time(self):
+        # Dubí listed its advent market at 07:47: the minute the record was saved.
+        for clock in ('07:47', '13:33', '11:59 - 18:00'):
+            with self.subTest(clock=clock):
+                event = self.parse(clock)
+                self.assertEqual((event['startTime'], event['endTime'], event['status']), (None, None, 'time-unconfirmed'))
+
+    def test_announced_times_are_kept(self):
+        for clock, expected in (('09:50', ('09:50', None)), ('15:30 - 18:00', ('15:30', '18:00')), ('17:05', ('17:05', None))):
+            with self.subTest(clock=clock):
+                event = self.parse(clock)
+                self.assertEqual((event['startTime'], event['endTime'], event['status']), (*expected, 'confirmed'))
+
+
+class JilemniceVenues(unittest.TestCase):
+    def test_cinema_screenings_are_not_published(self):
+        source = deepcopy(next(s for s in REGISTRY['sources'] if s['id'] == 'cz-jilemnice-calendar'))
+        url = 'https://www.mestojilemnice.cz/zivot-ve-meste/kalendar-akci/silena-noc-2-titulky-4053_2984cs.html'
+        with self.assertRaises(c.Review):
+            c.parse_event(fragment('Šílená noc 2 - vánoční film', '2026-12-13', 'Kino 70'), deepcopy(source), url, WINDOW)
+        event = c.parse_event(fragment('Rozsvícení vánočního stromečku', '2026-11-29', 'Masarykovo náměstí'), source, url, WINDOW)
+        self.assertEqual((event['town'], event['venue']), ('Jilemnice', 'Masarykovo náměstí'))
+
+
 class ConcurrentHosts(unittest.TestCase):
     def test_each_host_stays_on_one_thread_and_order_is_kept(self):
         base = TOWN_SOURCES[0]
