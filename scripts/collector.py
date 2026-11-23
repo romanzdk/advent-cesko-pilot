@@ -683,6 +683,10 @@ def parse_event(body, source, url, window):
     times = [f'{int(h):02d}:{m}' for h, m in times]
     if adapter == 'telc' and len(dates) > 1:
         times = []
+    # Galileo fills an empty time field with the minute the record was saved (07:47, 13:33);
+    # organisers announce whole five-minute marks, so treat anything else as unknown.
+    if adapter == 'galileo' and times and int(times[0][-2:]) % 5:
+        times = []
     start = times[0] if times and times[0] != '00:00' else None
     venue = re.sub(r'^Kde:\s*', '', venue)
     reviews = source.get('event_reviews', {})
