@@ -1598,7 +1598,8 @@ test('scope summary counts six coverage regions and twelve sources, not event to
     await page.waitForSelector('.event-card');
     await page.waitForFunction(() => document.getElementById('coverage-content').textContent.includes('Pokrytí zdrojů se nepodařilo'));
     assert.equal(await page.locator('#scope-summary').innerText(), '');
-    assert.match(await page.locator('.scope-note:not(#scope-summary)').innerText(), /Výběr veřejných zdrojů/);
+    assert.match(await page.locator('.scope-note').filter({ hasText: 'Výběr veřejných zdrojů' }).innerText(), /Výběr veřejných zdrojů/);
+    assert.equal(await page.locator('#update-note').isVisible(), true);
   }, { data, coverageStatus: 503, mobile: true });
 });
 
