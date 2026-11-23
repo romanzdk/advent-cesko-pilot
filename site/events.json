@@ -8398,6 +8398,36 @@
       }
     },
     {
+      "id": "e-97c2a5ab67763c7f",
+      "title": "Mikulášský pětiboj",
+      "town": "Železný Brod",
+      "venue": "Sokolovna Železný Brod",
+      "date": "2026-11-26",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Sportovní pětiboj s čertovskou nadílkou. Pořádá FSA Jany Boučkové.",
+      "notes": [
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-56c11494e659786daa2e",
       "title": "Adventní tvoření - malování domečku",
       "town": "Kostice",
@@ -9990,6 +10020,34 @@
         "precision": "town",
         "label": "Litovel — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438809"
+      }
+    },
+    {
+      "id": "e-b173b91ca096dbfd9174",
+      "title": "Tvořivé odpoledne adventní věnce",
+      "town": "Lučany nad Nisou",
+      "region": "Liberecký kraj",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "17:00",
+      "venue": "městský úřad",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tvořivé odpoledne adventní věnce. městský úřad, Lučany nad Nisou 333, Lučany nad Nisou, 468 71",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23T12:30:40+00:00",
+      "sourceUrl": "https://www.lucany.cz/volny-cas/kalendar-akci/tvorive-odpoledne-adventni-vence-1264_169cs.html",
+      "location": {
+        "lat": 50.7413554,
+        "lon": 15.2204627,
+        "precision": "town",
+        "label": "Lučany nad Nisou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438921"
       }
     },
     {
@@ -11622,6 +11680,36 @@
         "label": "Želechovice nad Dřevnicí — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/440825"
       }
+    },
+    {
+      "id": "e-19b8241fd06c1f75",
+      "title": "Výroba adventních věnců",
+      "town": "Železný Brod",
+      "venue": "RC Andílek, Poštovní ulice",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": null,
+      "category": "tvoreni",
+      "price": "50 Kč (větve a nápoj)",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Výroba adventních věnců v RC Andílek.",
+      "notes": [
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-7f27df2c086070187a75",
@@ -15540,6 +15628,36 @@
       }
     },
     {
+      "id": "e-0b265b59b22793fa",
+      "title": "Vánoční výstava",
+      "town": "Železný Brod",
+      "venue": "Městská galerie Vlastimila Rady",
+      "date": "2026-11-28",
+      "endDate": "2026-12-30",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční výstava v městské galerii. Pořádá IKS Železný Brod.",
+      "notes": [
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-bfaf20e28b0e8921c4a2",
       "title": "Adventní workshop pro děti",
       "town": "Praha-Uhříněves",
@@ -16306,6 +16424,36 @@
         "label": "Český Krumlov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438508"
       }
+    },
+    {
+      "id": "e-cc87ddbec775d98a",
+      "title": "Vánoční trhy na náměstí",
+      "town": "Železný Brod",
+      "venue": "Náměstí 3. května",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Prodej vánočních dekorací s hudebním programem. Pořádá IKS Železný Brod.",
+      "notes": [
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-9e7213d83ed583ef7766",
@@ -22718,6 +22866,34 @@
       }
     },
     {
+      "id": "e-9cc6bc97879ed8d7",
+      "title": "Rozsvícení vánočního stromu v Šimonovicích",
+      "town": "Šimonovice",
+      "venue": "Šimipark u požární zbrojnice v Minkovicích",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "16:00",
+      "endTime": "19:30",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tradiční zahájení adventu s vystoupením šimonovických muzikantů, svařeným vínem, teplými nápoji pro děti, cukrovím a vánočkami. Po setmění rozsvícení stromu u požární nádrže.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.simonovice.cz/kultura-a-sport/rozsviceni-vanocniho-stromu-v-simonovicich-1081_390cs.html",
+      "location": {
+        "lat": 50.7063759,
+        "lon": 15.052623,
+        "precision": "town",
+        "label": "Šimonovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438972"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-3abd3f5c0487943ce3c0",
       "title": "Rozsvícení vánočního stromu v Želenicích",
       "town": "Želenice",
@@ -23384,6 +23560,36 @@
         "label": "Spomyšl — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437585"
       }
+    },
+    {
+      "id": "e-d1d6548b4a02ea95",
+      "title": "Rozsvícení vánočního stromu v Tanvaldě",
+      "town": "Tanvald",
+      "venue": "Centrální parkoviště Tanvald",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vystoupí děti MŠ a studenti ZUŠ Tanvald – pěvecké sbory Hlásky a Melodia, saxofonový kvartet a sólisté. Občerstvení, živý betlém a tradiční vánoční dílničky SVČ Tanvald.",
+      "notes": [
+        "Záznam Mikroregionu Tanvaldsko ve sdíleném kalendáři obcí (zveřejněno na webu obce Plavy)."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.plavy.cz/obec-7/aktuality/kalendar-akci-v-obci-a-okoli/rozsviceni-vanocniho-stromu-v-tanvalde-2015_1258cs3649.html",
+      "location": {
+        "lat": 50.7379882,
+        "lon": 15.3038421,
+        "precision": "town",
+        "label": "Tanvald — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438925"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-673f6cac1146e2173941",
@@ -27470,6 +27676,37 @@
       }
     },
     {
+      "id": "e-8e4a6cb14577a419",
+      "title": "Advent s tanvaldskými kostely – adventní věnce",
+      "town": "Tanvald",
+      "venue": "Kostel sv. Františka z Assisi na Šumburku",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Prodej adventních věnců v kostele sv. Františka z Assisi na Šumburku; výtěžek jde na Papežské misijní dílo.",
+      "notes": [
+        "Na Štědrý den 10:00–12:00 Betlémské světlo v obou tanvaldských kostelích; 26. 12. v 16:30 Svatoštěpánský benefiční koncert v kostele sv. Petra a Pavla v Horním Tanvaldu.",
+        "Záznam Mikroregionu Tanvaldsko ve sdíleném kalendáři obcí (zveřejněno na webu obce Plavy)."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.plavy.cz/obec-7/aktuality/kalendar-akci-v-obci-a-okoli/advent-s-tanvaldskymi-kostely-2017_1260cs3649.html",
+      "location": {
+        "lat": 50.7379882,
+        "lon": 15.3038421,
+        "precision": "town",
+        "label": "Tanvald — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438925"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-ed5f9610ece1f1a4f375",
       "title": "Adventní trhy Čejkovice 2026",
       "town": "Čejkovice",
@@ -28404,6 +28641,67 @@
         "label": "Chrudim — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439959"
       }
+    },
+    {
+      "id": "e-73b19b456c46e8f5",
+      "title": "Nad Betlémem svítí hvězda",
+      "town": "Desná",
+      "venue": "Riedlova vila",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční pohádka pro děti v podání Divadla Dokola z Tábora.",
+      "notes": [
+        "Záznam Mikroregionu Tanvaldsko ve sdíleném kalendáři obcí (zveřejněno na webu obce Plavy)."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.plavy.cz/obec-7/aktuality/kalendar-akci-v-obci-a-okoli/nad-betlemem-sviti-hvezda-2018_1261cs3649.html",
+      "location": {
+        "lat": 50.760138,
+        "lon": 15.3027864,
+        "precision": "town",
+        "label": "Desná — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436602"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
+      "id": "e-d3391379f5016c6a",
+      "title": "První adventní neděle s rozsvícením vánočního stromu",
+      "town": "Desná",
+      "venue": "Riedlova vila",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Zahájení adventu v Desné s programem, vánočním občerstvením a rozsvícením vánočního stromu.",
+      "notes": [
+        "Ve 14:00 je ve vile také pohádka Nad Betlémem svítí hvězda.",
+        "Záznam Mikroregionu Tanvaldsko ve sdíleném kalendáři obcí (zveřejněno na webu obce Plavy)."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.plavy.cz/obec-7/aktuality/kalendar-akci-v-obci-a-okoli/prvni-adventni-nedele-s-rozsvicenim-vanocniho-stromu-v-desne-2016_1259cs3649.html",
+      "location": {
+        "lat": 50.760138,
+        "lon": 15.3027864,
+        "precision": "town",
+        "label": "Desná — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/436602"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-86234bd4730d71bc9104",
@@ -31910,6 +32208,36 @@
       }
     },
     {
+      "id": "e-33e742417f91730b",
+      "title": "Mikulášské odpoledne s Popelkou",
+      "town": "Železný Brod",
+      "venue": "Sokolovna Železný Brod",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "category": "mikulas",
+      "price": "200 Kč, balíček pro dítě v ceně vstupu",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášské odpoledne pro děti. Pořádá RC Andílek.",
+      "notes": [
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-ee3c7867131639e554f6",
       "title": "DOPIS JEŽÍŠKOVI",
       "town": "Žlutice",
@@ -35130,6 +35458,37 @@
       }
     },
     {
+      "id": "e-aa52855b88155814",
+      "title": "Advent u ovečkového betléma ve Střední Smržovce",
+      "town": "Smržovka",
+      "venue": "Ovečkový betlém, rozhraní ulic Občanská a Vřesová",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "category": "betlem",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení betléma a vánočního stromku, ochutnávka domácího cukroví a pokus o rekord v délce vánočky. Svařené víno, grog, čaj a opékání buřtů. Pořádá Spolek Malé Polsko.",
+      "notes": [
+        "Další adventní neděle vždy od 16:30: 6. 12. čert s Mikulášem, 13. 12. možná sv. Lucie, 20. 12. skauti přivezou Betlémské světlo; 2. 1. zhasínání betléma.",
+        "Záznam Mikroregionu Tanvaldsko ve sdíleném kalendáři obcí (zveřejněno na webu obce Plavy)."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.plavy.cz/obec-7/aktuality/kalendar-akci-v-obci-a-okoli/advent-u-oveckoveho-betlema-ve-smrzovce-2021_1264cs3649.html",
+      "location": {
+        "lat": 50.7384678,
+        "lon": 15.2463402,
+        "precision": "town",
+        "label": "Smržovka — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438926"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-ec231cf1cd478680693f",
       "title": "✨ ROZSVÍCENÍ VÁNOČNÍHO STROMU VE STATENICÍCH ✨",
       "town": "Statenice",
@@ -38210,6 +38569,66 @@
       }
     },
     {
+      "id": "e-15f2ec43626c7d70",
+      "title": "Rozsvěcení vánočního stromečku na Hrubé Horce",
+      "town": "Železný Brod",
+      "venue": "Hrubá Horka, malá Mozaika",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Koledy, svařák a rozsvícení stromečku. Pořádá SVČ Mozaika.",
+      "notes": [
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf#page=3",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
+      "id": "e-c52dbbc876286cb2",
+      "title": "Varhany a žestě – I. adventní koncert",
+      "town": "Železný Brod",
+      "venue": "Kostel sv. Jakuba Většího",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "První adventní koncert ZUŠ Železný Brod.",
+      "notes": [
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-f920c67a94bf479f5949",
       "title": "Rozsvícení vánočního stromu v Dobroslavicích",
       "town": "Dobroslavice",
@@ -38881,6 +39300,37 @@
         "label": "Šumperk — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/438047"
       }
+    },
+    {
+      "id": "e-d2c76eca84512215",
+      "title": "Rozsvícení vánočního stromečku ve Smržovce",
+      "town": "Smržovka",
+      "venue": "Náměstí T. G. Masaryka",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "18:30",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Koledy a vánoční písně dětského pěveckého sboru Smržováček a Veroniky Bělonožníkové, občerstvení a schránka na dopisy pro Ježíška (18:15–19:30).",
+      "notes": [
+        "Vlastní hrneček na teplé nápoje vítán.",
+        "Záznam Mikroregionu Tanvaldsko ve sdíleném kalendáři obcí (zveřejněno na webu obce Plavy)."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.plavy.cz/obec-7/aktuality/kalendar-akci-v-obci-a-okoli/rozsviceni-vanocniho-stromecku-ve-smrzovce-2019_1262cs3649.html",
+      "location": {
+        "lat": 50.7384678,
+        "lon": 15.2463402,
+        "precision": "town",
+        "label": "Smržovka — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438926"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-55db6bd50b8b94330176",
@@ -43538,6 +43988,37 @@
       }
     },
     {
+      "id": "e-2befc55fcd92a848",
+      "title": "Peklo v Mozaice",
+      "town": "Železný Brod",
+      "venue": "Zahrada SVČ Mozaika",
+      "date": "2026-12-03",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Cesta z pekla do nebe s nadílkou. Pořádá SVČ Mozaika.",
+      "notes": [
+        "Balíčky je třeba objednat do 30. 11.",
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-cd514fda138647828cad",
       "title": "PŘEDNÁŠKA: NEAPOLSKÝ BETLÉM VČERA A DNES",
       "town": "Jaroměř",
@@ -43994,6 +44475,36 @@
         "label": "Valtice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442303"
       }
+    },
+    {
+      "id": "e-b7322fea36898ba7",
+      "title": "Vánoční trhy na Bělišti",
+      "town": "Železný Brod",
+      "venue": "Běliště",
+      "date": "2026-12-04",
+      "endDate": "2026-12-06",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Prodej vánočních dekorací v národopisné expozici Běliště. Pořádá Městské muzeum.",
+      "notes": [
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-3d6e9bee49e6e885393a",
@@ -49622,6 +50133,34 @@
       }
     },
     {
+      "id": "e-19207b2cdd43f446ff49",
+      "title": "Čertovský rej s Mikulášem a anděly v Lučanech",
+      "town": "Lučany nad Nisou",
+      "region": "Liberecký kraj",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": "18:00",
+      "venue": "městský úřad",
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Čertovský rej s Mikulášem a anděly v Lučanech. městský úřad, Lučany nad Nisou 333, Lučany nad Nisou, 468 71",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23T12:30:40+00:00",
+      "sourceUrl": "https://www.lucany.cz/volny-cas/kalendar-akci/certovsky-rej-s-mikulasem-a-andely-v-lucanech-1265_170cs.html",
+      "location": {
+        "lat": 50.7413554,
+        "lon": 15.2204627,
+        "precision": "town",
+        "label": "Lučany nad Nisou — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438921"
+      }
+    },
+    {
       "id": "e-386768da118dc59fb76f",
       "title": "MANKOVICE Rozsvícení vánočního stromu s Mikulášskou nadílkou a jarmarkem 5.12.2026",
       "town": "Mankovice",
@@ -53492,6 +54031,36 @@
         "label": "Štítná nad Vláří-Popov — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/435559"
       }
+    },
+    {
+      "id": "e-82af47137c7b9501",
+      "title": "Pastorální hudba českých kantorů – II. adventní koncert",
+      "town": "Železný Brod",
+      "venue": "Jednota ČCE na Brodci",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert ZUŠ Železný Brod.",
+      "notes": [
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-3273bcc178e60989bc46",
@@ -59430,6 +59999,36 @@
         "label": "Studénka — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/437003"
       }
+    },
+    {
+      "id": "e-47ec9899e4e7dbc0",
+      "title": "Kapelníci a Modrotisk – adventní koncert",
+      "town": "Železný Brod",
+      "venue": "Městské divadlo Železný Brod",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert v městském divadle. Pořádá IKS Železný Brod.",
+      "notes": [
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-2cd5ab2f135f2ac92786",
@@ -68362,6 +68961,37 @@
       }
     },
     {
+      "id": "e-afa316e5f5d5631e",
+      "title": "Adventní spirála",
+      "town": "Železný Brod",
+      "venue": "Běliště",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní spirála s anděly a svícínky. Pořádá RC Andílek.",
+      "notes": [
+        "Svícny se vyrábějí 8. 12. v RC Andílek.",
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-35fa0cdfb62cf2128934",
       "title": "Vánoční koncert",
       "town": "Bechyně",
@@ -68920,6 +69550,36 @@
         "label": "Český Dub — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439062"
       }
+    },
+    {
+      "id": "e-a90c407ea31f29af",
+      "title": "VIVO – adventní koncert",
+      "town": "Železný Brod",
+      "venue": "Kostel sv. Jakuba Většího",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "17:30",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert železnobrodského hudebního uskupení VIVO.",
+      "notes": [
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-d7269379694cb14f028e",
@@ -72291,6 +72951,36 @@
         "label": "Štěnovice — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439667"
       }
+    },
+    {
+      "id": "e-c95a25d8698978cc",
+      "title": "Železnobrodské děti – III. adventní koncert",
+      "town": "Železný Brod",
+      "venue": "Jednota ČCE na Brodci",
+      "date": "2026-12-13",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert ZUŠ Železný Brod.",
+      "notes": [
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-481a5e17c1edda1315e6",
@@ -77303,6 +77993,36 @@
       }
     },
     {
+      "id": "e-91cd69d89ff9dfe3",
+      "title": "Živý Betlém",
+      "town": "Železný Brod",
+      "venue": "Sraz na náměstí 3. května",
+      "date": "2026-12-19",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "category": "betlem",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Pochod za Betlémskou hvězdou za zpěvu koled. Pořádá ČCE Železný Brod.",
+      "notes": [
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-79e0d967139ddfe8fb67",
       "title": "Adventní a vánoční koncert CHAIRÉ",
       "town": "Albrechtice nad Vltavou",
@@ -80091,6 +80811,36 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/439618"
       },
       "region": "Ústecký kraj"
+    },
+    {
+      "id": "e-aaf2f88a5451711c",
+      "title": "Jazzové inspirace – IV. adventní koncert",
+      "town": "Železný Brod",
+      "venue": "Jednota ČCE na Brodci",
+      "date": "2026-12-20",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní koncert ZUŠ Železný Brod.",
+      "notes": [
+        "Podle ročního kalendáře akcí města Železný Brod na rok 2026; případné změny ověřte u pořadatele."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.zeleznybrod.cz/files/iks/kalendar-akci-rok-2026.pdf",
+      "location": {
+        "lat": 50.6430652,
+        "lon": 15.2539851,
+        "precision": "town",
+        "label": "Železný Brod — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/438957"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-ffed8c6c3defdd8850e1",
