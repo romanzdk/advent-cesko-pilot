@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-22T09:06:48+00:00",
+  "generatedAt": "2026-11-23T12:12:13+00:00",
   "season": 2026,
   "region": "Česko — redakčně ověřený výběr",
   "events": [
@@ -313,6 +313,34 @@
       "region": "Hlavní město Praha"
     },
     {
+      "id": "e-3f2f6e47cfc77f30",
+      "title": "Vánoční koncert Fešáků s hostem a vzpomínkou na Josefa Aloise Náhlovského",
+      "town": "Česká Lípa",
+      "venue": "Jiráskovo divadlo",
+      "date": "2026-11-24",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "21:00",
+      "category": "setkani",
+      "price": "450 Kč hlavní sál, 390 Kč balkony",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tradiční vánoční koncert skupiny Fešáci v Jiráskově divadle; hostem je Petr Martinák.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.cl-kultura.cz/akce/?id=vanocni-koncert-fesaku-s-hostem-a-vzpominkou-na-josefa-aloise-nahlovskeho",
+      "location": {
+        "lat": 50.6865452,
+        "lon": 14.5372974,
+        "precision": "town",
+        "label": "Česká Lípa — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440197"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-6153c6e2e09481d9",
       "title": "Andílci a svícny se Zdeňkou — Klub Koloběh",
       "town": "Říčany",
@@ -589,6 +617,68 @@
         "sourceUrl": "https://www.openstreetmap.org/way/61856099"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-7959d0eaa37917c3",
+      "title": "Adventní trh před Libereckou radnicí",
+      "town": "Liberec",
+      "venue": "Náměstí Dr. E. Beneše před Libereckou radnicí",
+      "date": "2026-11-26",
+      "endDate": "2026-12-23",
+      "startTime": null,
+      "endTime": null,
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní trh před Libereckou radnicí trvá od 26. 11. do 23. 12. První den v 17:30 hraje LEDL JAZZ Q.",
+      "notes": [
+        "Otevírací doba trhu není v programu uvedena.",
+        "Adventní trh na Soukenném náměstí běží již od 20. 11.",
+        "Program Libereckého adventu 2026; změna programu vyhrazena."
+      ],
+      "audience": "všichni",
+      "status": "time-unconfirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.trhyvliberci.cz/advent/program-adventu",
+      "location": {
+        "lat": 50.7702648,
+        "lon": 15.0583947,
+        "precision": "town",
+        "label": "Liberec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439073"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
+      "id": "e-874855de80958ed2",
+      "title": "Zdobení vánočního stromu na Soukenném náměstí",
+      "town": "Liberec",
+      "venue": "Soukenné náměstí",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Zdobení vánočního stromu na Soukenném náměstí v rámci Libereckého adventu.",
+      "notes": [
+        "Program Libereckého adventu 2026; změna programu vyhrazena."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.trhyvliberci.cz/advent/program-adventu",
+      "location": {
+        "lat": 50.7702648,
+        "lon": 15.0583947,
+        "precision": "town",
+        "label": "Liberec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439073"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-17cd0fdadb59f7b8",
@@ -1212,6 +1302,37 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-210acac493a3f312",
+      "title": "Zpívání s Davidem Watzlem na Soukenném náměstí",
+      "town": "Liberec",
+      "venue": "Soukenné náměstí",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Společné adventní zpívání s Davidem Watzlem na Soukenném náměstí.",
+      "notes": [
+        "Další termíny: 4., 5., 12. a 18. prosince vždy v 17:00.",
+        "Program Libereckého adventu 2026; změna programu vyhrazena."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.trhyvliberci.cz/advent/program-adventu",
+      "location": {
+        "lat": 50.7702648,
+        "lon": 15.0583947,
+        "precision": "town",
+        "label": "Liberec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439073"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-51ee6b32b7bff41c",
       "title": "Slavnostní rozsvícení vánočního stromu v Ondřejově",
       "town": "Ondřejov",
@@ -1557,6 +1678,37 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-792ec92997f1c352",
+      "title": "Vyrábíme pro Ježíška",
+      "town": "Liberec",
+      "venue": "Náměstí Dr. E. Beneše před Libereckou radnicí",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Adventní tvoření „Vyrábíme pro Ježíška“ na Libereckém adventu.",
+      "notes": [
+        "Další termíny: 28. 11. v 10:30, 13. 12. v 10:30 a 19. 12. ve 14:00.",
+        "Program Libereckého adventu 2026; změna programu vyhrazena."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.trhyvliberci.cz/advent/program-adventu",
+      "location": {
+        "lat": 50.7702648,
+        "lon": 15.0583947,
+        "precision": "town",
+        "label": "Liberec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439073"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-19d3e180ad5af911",
       "title": "První adventní neděle a rozsvěcení vánočního stromečku",
       "town": "Česká Kamenice",
@@ -1585,6 +1737,36 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/439576"
       },
       "region": "Ústecký kraj"
+    },
+    {
+      "id": "e-78a59912524bad99",
+      "title": "Rozsvícení vánočního stromu",
+      "town": "Česká Lípa",
+      "venue": "Náměstí T. G. Masaryka",
+      "date": "2026-11-29",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": "19:00",
+      "category": "strom",
+      "price": "Vstup zdarma",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tradiční zahájení adventu s vánočním jarmarkem: ve 14:00 Jitka Boho, v 15:30 Radka Fišarová, v 17:00 Fleret a v 18:00 rozsvícení vánočního stromu. Pořádá město Česká Lípa a Kultura Česká Lípa.",
+      "notes": [
+        "Rozsvícení stromu: 18:00."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.cl-kultura.cz/akce/?id=rozsviceni-vanocniho-stromu-1-1",
+      "location": {
+        "lat": 50.6865452,
+        "lon": 14.5372974,
+        "precision": "town",
+        "label": "Česká Lípa — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440197"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-d5cfe3ee172f9f18",
@@ -2824,6 +3006,37 @@
       "region": "Ústecký kraj"
     },
     {
+      "id": "e-14fffd7a44223679",
+      "title": "Broučci a vánočně vyzdobený hrad",
+      "town": "Česká Lípa",
+      "venue": "Vodní hrad Lipý",
+      "date": "2026-12-05",
+      "endDate": "2026-12-30",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Výstava ilustrací Jiřího Trnky ke knize Broučci s výtvory dětí z českolipských škol ve vánočně vyzdobené hradní expozici.",
+      "notes": [
+        "Termín konání: 5.–22. 12. a 27.–30. 12.",
+        "Vstupné bude upřesněno."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.cl-kultura.cz/akce/?id=broucci-a-vanocne-vyzdobeny-hrad",
+      "location": {
+        "lat": 50.6865452,
+        "lon": 14.5372974,
+        "precision": "town",
+        "label": "Česká Lípa — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440197"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-891622c6b542b9f5",
       "title": "Adventní tvoření 2026",
       "town": "Hrusice",
@@ -3042,6 +3255,36 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/437951"
       },
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-4701978dfbde7302",
+      "title": "Rej čertů a andělů před radnicí",
+      "town": "Liberec",
+      "venue": "Náměstí Dr. E. Beneše před Libereckou radnicí",
+      "date": "2026-12-05",
+      "endDate": null,
+      "startTime": "15:30",
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rej čertů a andělů před Libereckou radnicí; dopoledne v 11:00 je na programu Čertovská pohádka.",
+      "notes": [
+        "Program Libereckého adventu 2026; změna programu vyhrazena."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.trhyvliberci.cz/advent/program-adventu",
+      "location": {
+        "lat": 50.7702648,
+        "lon": 15.0583947,
+        "precision": "town",
+        "label": "Liberec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439073"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-768d27168aa3c59a",
@@ -3403,6 +3646,37 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/19999097"
       },
       "region": "Hlavní město Praha"
+    },
+    {
+      "id": "e-eed45e95db391bad",
+      "title": "Mikulášský běh Libercem",
+      "town": "Liberec",
+      "venue": null,
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": null,
+      "category": "mikulas",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Mikulášský běh Libercem v programu Libereckého adventu.",
+      "notes": [
+        "Místo startu program neuvádí.",
+        "Program Libereckého adventu 2026; změna programu vyhrazena."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.trhyvliberci.cz/advent/program-adventu",
+      "location": {
+        "lat": 50.7702648,
+        "lon": 15.0583947,
+        "precision": "town",
+        "label": "Liberec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439073"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-4d45d08da4a0886e",
@@ -4045,6 +4319,36 @@
       "region": "Pardubický kraj"
     },
     {
+      "id": "e-aecfa741cf9e9936",
+      "title": "Hejtmanský vánoční mošt",
+      "town": "Liberec",
+      "venue": "Náměstí Dr. E. Beneše před Libereckou radnicí",
+      "date": "2026-12-11",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": "17:00",
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Hejtmanský vánoční mošt na Libereckém adventu před radnicí.",
+      "notes": [
+        "Program Libereckého adventu 2026; změna programu vyhrazena."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.trhyvliberci.cz/advent/program-adventu",
+      "location": {
+        "lat": 50.7702648,
+        "lon": 15.0583947,
+        "precision": "town",
+        "label": "Liberec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439073"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-a7b2119a0cdec49d",
       "title": "Vánoční koncert žáků pěvecké třídy Dity Stromko",
       "town": "Velké Popovice",
@@ -4149,6 +4453,34 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/19999085"
       },
       "region": "Hlavní město Praha"
+    },
+    {
+      "id": "e-ddc08ec0a22c16e8",
+      "title": "Vánoční koncert Big'O'Bandu Marka Ottla",
+      "town": "Česká Lípa",
+      "venue": "Jiráskovo divadlo",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "21:00",
+      "category": "setkani",
+      "price": "600 Kč hlavní sál, 500 Kč balkon střed, 450 Kč balkony",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert Big'O'Bandu Marka Ottla se smyčcovým kvartetem Gadrew Way: vánoční melodie a swing.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.cl-kultura.cz/akce/?id=vanocni-koncert-big-o-bandu-marka-ottla",
+      "location": {
+        "lat": 50.6865452,
+        "lon": 14.5372974,
+        "precision": "town",
+        "label": "Česká Lípa — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440197"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-c0b3fe5bf3346fb4",
@@ -4451,6 +4783,34 @@
       "region": "Hlavní město Praha"
     },
     {
+      "id": "e-2018611ea860851d",
+      "title": "Jakub Smolík „40 let s vámi“ i o Vánocích",
+      "town": "Česká Lípa",
+      "venue": "Kulturní dům Crystal",
+      "date": "2026-12-15",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "21:00",
+      "category": "setkani",
+      "price": "750 Kč / 690 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Koncert Jakuba Smolíka a kapely s vánočními písněmi; speciální host Heidi Janků.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.cl-kultura.cz/akce/?id=jakub-smolik-40-let-s-vami-i-o-vanocich",
+      "location": {
+        "lat": 50.6865452,
+        "lon": 14.5372974,
+        "precision": "town",
+        "label": "Česká Lípa — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440197"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-a17f3a0315bd463f",
       "title": "Jazzové Vánoce",
       "town": "Říčany",
@@ -4521,6 +4881,64 @@
       "sourceUrl": "https://www.ricany.cz/udalost/adventni-koncert-zus-folklorika-2/",
       "location": null,
       "region": "Středočeský kraj"
+    },
+    {
+      "id": "e-8a2bc9a538ca02f5",
+      "title": "Vánoční koncert Big Bandu CL a hostů",
+      "town": "Česká Lípa",
+      "venue": "Jiráskovo divadlo",
+      "date": "2026-12-16",
+      "endDate": null,
+      "startTime": "19:00",
+      "endTime": "21:00",
+      "category": "setkani",
+      "price": "200 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tradiční vánoční koncert Big Bandu CL a hostů: od swingu po jazzrock s vánoční atmosférou.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.cl-kultura.cz/akce/?id=vanocni-koncert-big-bandu-cl-a-hostu",
+      "location": {
+        "lat": 50.6865452,
+        "lon": 14.5372974,
+        "precision": "town",
+        "label": "Česká Lípa — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440197"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
+      "id": "e-ddddd325891de47a",
+      "title": "Živé vánoční koledy",
+      "town": "Liberec",
+      "venue": "Náměstí Dr. E. Beneše před Libereckou radnicí",
+      "date": "2026-12-17",
+      "endDate": null,
+      "startTime": "16:30",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Živé vánoční koledy na Libereckém adventu před radnicí.",
+      "notes": [
+        "Program Libereckého adventu 2026; změna programu vyhrazena."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.trhyvliberci.cz/advent/program-adventu",
+      "location": {
+        "lat": 50.7702648,
+        "lon": 15.0583947,
+        "precision": "town",
+        "label": "Liberec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439073"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-3f62d523487ba52e",
@@ -4655,6 +5073,34 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-f5ae3011ddc210d6",
+      "title": "Vánoční jarmark na Vodním hradě Lipý",
+      "town": "Česká Lípa",
+      "venue": "Vodní hrad Lipý",
+      "date": "2026-12-19",
+      "endDate": null,
+      "startTime": "13:00",
+      "endTime": "18:00",
+      "category": "trhy",
+      "price": "Vstupné dobrovolné",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční jarmark v dobovém duchu na nádvoří hradu: pohádka Jak Herodes do pekla přišel, prohlídky vyzdobené expozice s pečením perníčků, historická hudba, řemeslné stánky a výstava Broučci.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.cl-kultura.cz/akce/?id=vanocni-jarmark-na-vodnim-hrade-lipy",
+      "location": {
+        "lat": 50.6865452,
+        "lon": 14.5372974,
+        "precision": "town",
+        "label": "Česká Lípa — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440197"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-33439583d6f7dca5",
       "title": "Betlémské světlo",
       "town": "Mnichovice",
@@ -4739,6 +5185,64 @@
       "region": "Středočeský kraj"
     },
     {
+      "id": "e-f04899dc1ba39642",
+      "title": "Vánoční prohlídky Vodního hradu Lipý",
+      "town": "Česká Lípa",
+      "venue": "Vodní hrad Lipý",
+      "date": "2026-12-20",
+      "endDate": null,
+      "startTime": "09:00",
+      "endTime": "15:00",
+      "category": "setkani",
+      "price": "150 Kč dospělí, 70 Kč děti",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční prohlídky vyzdobené hradní expozice s průvodci v dobových kostýmech, každou celou hodinu od 9:00 do 15:00.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.cl-kultura.cz/akce/?id=vanocni-prohlidky-vodniho-hradu-lipy",
+      "location": {
+        "lat": 50.6865452,
+        "lon": 14.5372974,
+        "precision": "town",
+        "label": "Česká Lípa — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440197"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
+      "id": "e-5a642aaf01152ba9",
+      "title": "Oživlý betlém",
+      "town": "Liberec",
+      "venue": "Náměstí Dr. E. Beneše před Libereckou radnicí",
+      "date": "2026-12-20",
+      "endDate": null,
+      "startTime": "10:30",
+      "endTime": null,
+      "category": "betlem",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Oživlý betlém v podání sdružení V.O.R.E.L. na Libereckém adventu.",
+      "notes": [
+        "Program Libereckého adventu 2026; změna programu vyhrazena."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.trhyvliberci.cz/advent/program-adventu",
+      "location": {
+        "lat": 50.7702648,
+        "lon": 15.0583947,
+        "precision": "town",
+        "label": "Liberec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439073"
+      },
+      "region": "Liberecký kraj"
+    },
+    {
       "id": "e-5293b05022989b78",
       "title": "Vánoční recitál Jitky Hercikové a jejích hostů",
       "town": "Šluknov",
@@ -4765,6 +5269,36 @@
         "sourceUrl": "https://www.openstreetmap.org/relation/439618"
       },
       "region": "Ústecký kraj"
+    },
+    {
+      "id": "e-13475e13cf9aa0f9",
+      "title": "KRISKROS A CAPELLA",
+      "town": "Liberec",
+      "venue": "Náměstí Dr. E. Beneše před Libereckou radnicí",
+      "date": "2026-12-22",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Vánoční koncert skupiny KrisKros a cappella na Libereckém adventu před radnicí.",
+      "notes": [
+        "Program Libereckého adventu 2026; změna programu vyhrazena."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-23",
+      "sourceUrl": "https://www.trhyvliberci.cz/advent/program-adventu",
+      "location": {
+        "lat": 50.7702648,
+        "lon": 15.0583947,
+        "precision": "town",
+        "label": "Liberec — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/439073"
+      },
+      "region": "Liberecký kraj"
     },
     {
       "id": "e-9bc35e710b638637",

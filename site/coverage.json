@@ -19356,6 +19356,38 @@
       "excludedCount": 0,
       "lastError": null,
       "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
+    },
+    {
+      "id": "reviewed-www-trhyvliberci-cz",
+      "town": "Liberec",
+      "region": "Liberecký kraj",
+      "url": "https://www.trhyvliberci.cz/advent/program-adventu",
+      "adapter": "reviewed-public",
+      "coverageNote": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "status": "ok",
+      "lastChecked": "2026-11-22T10:08:58+00:00",
+      "lastSuccess": "2026-11-22T10:08:58+00:00",
+      "eventCount": 10,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": null,
+      "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
+    },
+    {
+      "id": "reviewed-www-cl-kultura-cz",
+      "town": "Česká Lípa",
+      "region": "Liberecký kraj",
+      "url": "https://www.cl-kultura.cz/kalendar-akci/",
+      "adapter": "reviewed-public",
+      "coverageNote": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "status": "ok",
+      "lastChecked": "2026-11-22T10:08:58+00:00",
+      "lastSuccess": "2026-11-22T10:08:58+00:00",
+      "eventCount": 8,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": null,
+      "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
     }
   ],
   "metrics": {
@@ -19367,7 +19399,7 @@
     "eventsNew": 0,
     "eventsChanged": 0,
     "eventsUnchanged": 205,
-    "eventsPublished": 2919,
+    "eventsPublished": 2937,
     "reviewCount": 999,
     "excludedCount": 0,
     "aiCalls": 0

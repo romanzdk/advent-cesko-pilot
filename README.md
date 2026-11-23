@@ -52,26 +52,26 @@ Při nejisté odpovědi použijte ověření stavu původního podání, ne dal�
 
 ## Pokrytí a rozsah
 
-**Ověřený sezonní výběr: 2775 akcí ve 14 krajích.** Nejde o úplné pokrytí jednotlivých krajů.
+**Ověřený sezonní výběr: 2937 akcí ve 14 krajích.** Nejde o úplné pokrytí jednotlivých krajů.
 
 | Kraj | Publikované akce |
 | --- | ---: |
-| Plzeňský kraj | 280 |
-| Liberecký kraj | 143 |
-| Jihomoravský kraj | 278 |
-| Středočeský kraj | 467 |
-| Jihočeský kraj | 225 |
-| Kraj Vysočina | 116 |
-| Karlovarský kraj | 100 |
-| Královéhradecký kraj | 166 |
-| Olomoucký kraj | 138 |
-| Ústecký kraj | 254 |
-| Zlínský kraj | 137 |
+| Plzeňský kraj | 284 |
+| Liberecký kraj | 171 |
+| Jihomoravský kraj | 287 |
+| Středočeský kraj | 517 |
+| Jihočeský kraj | 235 |
+| Kraj Vysočina | 123 |
+| Karlovarský kraj | 107 |
+| Královéhradecký kraj | 172 |
+| Olomoucký kraj | 147 |
+| Ústecký kraj | 265 |
+| Zlínský kraj | 141 |
 | Hlavní město Praha | 72 |
-| Moravskoslezský kraj | 229 |
-| Pardubický kraj | 170 |
+| Moravskoslezský kraj | 241 |
+| Pardubický kraj | 175 |
 
-Registr obsahuje **1067 zdrojových skupin**: 1012 automaticky čtených kalendářů a 55 redakčních zdrojových skupin. Redakční výběr obsahuje 172 schválených záznamů s původním datem ověření; kontrola jeho přenosu není novým ověřením každé pořadatelské stránky. [Pravidla redakčního přenosu](docs/reviewed-publication.md) vysvětlují zachování kanonických ID a jednoznačného přiřazení zdrojů.
+Registr obsahuje **1084 zdrojových skupin**: 1012 automaticky čtených kalendářů a 72 redakčních zdrojových skupin. Redakční výběr obsahuje 223 schválených záznamů s původním datem ověření; kontrola jeho přenosu není novým ověřením každé pořadatelské stránky. [Pravidla redakčního přenosu](docs/reviewed-publication.md) vysvětlují zachování kanonických ID a jednoznačného přiřazení zdrojů.
 
 Jde o **výběr zdrojů, ne úplný kalendář krajů nebo celé ČR**. Aktuální čas aktualizace, rozsah a chyby načítání najdete na webu v panelu *Zdroje a pokrytí*. Nejasné kandidáty sběrač nepublikuje; [postup kontroly](docs/operations.md#ruční-kontrola-kandidátů) a [pravidla trvalého redakčního přenosu](docs/content-repair.md).
 
@@ -101,7 +101,7 @@ Projekt neobchází blokované kalendáře a neslibuje obecné zpracování vše
 
 ## Kvalita a orientace v kódu
 
-**255 Python testů a 127 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, trvalý redakční přenos, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřenou sadu tohoto snapshotu. Testy dat běží v CI offline; kontrola každého PR spouští i testy v Chromiu.
+**315 Python testů a 127 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, trvalý redakční přenos, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřenou sadu tohoto snapshotu. Testy dat běží v CI offline; kontrola každého PR spouští i testy v Chromiu.
 
 ```text
 scripts/     sběr, adaptéry, validace a publisher
