@@ -87,4 +87,4 @@ Výchozí snapshot se do SQLite vloží jen jednou pro každý registrovaný red
 
 Pouze tato registrovaná větev dovoluje veřejné delší kurátorské popisy do 1000 znaků a zachování konce již schváleného prosincového intervalu až do 31. prosince; začátek musí zůstat v sezonním okně. HTML adaptéry mají dál původní 200znakový popis a termíny uvnitř okna. Důvodem je nezkrátit důležité podmínky ani nevymyslet dřívější konec výstavy.
 
-Konfiguraci a offline regresní příkazy popisuje [oprava trvalého obsahu](../docs/content-repair.md). Publikační podproces má pro rozšířený, stále sekvenční sběr timeout 1800 s; zámek, Git ochrany, HTTPS/robots politika a plánovač se nemění.
+Konfiguraci a offline regresní příkazy popisuje [oprava trvalého obsahu](../docs/content-repair.md). Publikační podproces má pro rozšířený, stále sekvenční sběr timeout 3600 s (1800 s přestalo od 23. 11. stačit); zámek, Git ochrany, HTTPS/robots politika a plánovač se nemění.

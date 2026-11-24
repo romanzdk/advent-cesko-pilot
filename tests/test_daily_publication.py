@@ -259,7 +259,7 @@ class ProductionBoundaryTests(unittest.TestCase):
                     args = run.call_args.args[1]
                     self.assertEqual('--reviewed-only' in args,enabled)
                     self.assertEqual(args[args.index('--reviewed-feed-config')+1],str(settings))
-                    self.assertEqual(run.call_args.kwargs['timeout'],1800)
+                    self.assertEqual(run.call_args.kwargs['timeout'],3600)
 
     def test_collector_exact_arguments_timeout_and_private_capture(self):
         with tempfile.TemporaryDirectory(dir=os.environ.get('TMPDIR')) as directory:
@@ -269,7 +269,7 @@ class ProductionBoundaryTests(unittest.TestCase):
             args = run.call_args.args[1]
             self.assertIn('--locations',args)
             self.assertIn('--registry',args)
-            self.assertEqual(run.call_args.kwargs['timeout'],1800)
+            self.assertEqual(run.call_args.kwargs['timeout'],3600)
             self.assertEqual((root/'private/collector-last.json').stat().st_mode & 0o777,0o600)
 
     def test_deploy_success_requires_actions_and_all_public_json(self):

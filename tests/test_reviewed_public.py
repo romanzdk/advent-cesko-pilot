@@ -375,7 +375,7 @@ class ReviewedTests(unittest.TestCase):
         with patch.object(pub,'command',side_effect=command):
             pub.collect_projection(tmp)
         args,timeout = calls[0]
-        self.assertEqual(timeout,1800)
+        self.assertEqual(timeout,3600)
         self.assertEqual(args[args.index('--reviewed-feed-config')+1],str(settings))
 
     def test_strict_reviewed_values_are_fail_closed_per_record(self):

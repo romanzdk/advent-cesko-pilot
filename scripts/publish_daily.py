@@ -192,7 +192,7 @@ def collect_projection(root, *, reviewed_only=False):
     output = command(root, [sys.executable, str(Path(__file__).with_name('collector.py')),
         '--registry', str(root/'data/sources.json'), '--db', str(root/'private/events.sqlite'),
         '--cache', str(root/'private/http-cache'), '--output', str(root/'site'),
-        '--locations', str(root/'data/locations.json'), *feed_args, *mode_args], timeout=1800)
+        '--locations', str(root/'data/locations.json'), *feed_args, *mode_args], timeout=3600)
     atomic_private(root/'private/collector-last.json', json.loads(output))
 
 
