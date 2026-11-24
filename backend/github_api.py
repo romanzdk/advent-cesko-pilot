@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import subprocess
 
-REPO_PATH = "repos/romanzdk/advent-cesko-pilot/issues"
+REPO_PATH = "repos/romanzdk/kam-na-advent/issues"
 DEFAULT_GH = "/home/romanzdk/.local/bin/gh"
 
 

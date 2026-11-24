@@ -30,8 +30,8 @@ test('source accepts public http/https only and never silently normalizes payloa
 });
 test('issue views ignore PRs, wrong repositories and malformed links and cap at ten', () => {
   assert.equal(typeof feedback.issueViews, 'function');
-  const issue = { number: 1, title: '<img src=x onerror=alert(1)>', state: 'open', html_url: 'https://github.com/romanzdk/advent-cesko-pilot/issues/1' };
-  const invalid = [{ ...issue, pull_request: {} }, ...['javascript:alert(1)', 'https://github.com/other/repo/issues/1', 'https://github.com/romanzdk/advent-cesko-pilot/issues/1?x=1', 'https://user@github.com/romanzdk/advent-cesko-pilot/issues/1'].map(html_url => ({ ...issue, html_url })), { ...issue, state: 'bogus' }];
+  const issue = { number: 1, title: '<img src=x onerror=alert(1)>', state: 'open', html_url: 'https://github.com/romanzdk/kam-na-advent/issues/1' };
+  const invalid = [{ ...issue, pull_request: {} }, ...['javascript:alert(1)', 'https://github.com/other/repo/issues/1', 'https://github.com/romanzdk/kam-na-advent/issues/1?x=1', 'https://user@github.com/romanzdk/kam-na-advent/issues/1'].map(html_url => ({ ...issue, html_url })), { ...issue, state: 'bogus' }];
   assert.deepEqual(feedback.issueViews([...invalid, issue, { ...issue, state: 'closed' }]).map(i => i.state), ['open', 'closed']);
   assert.equal(feedback.issueViews([issue])[0].title, issue.title);
   assert.equal(feedback.issueViews(Array(15).fill(issue)).length, 10);
@@ -95,7 +95,7 @@ test('draft preserves trimmed Unicode and special characters with only official 
   assert.equal(typeof feedback.draftURL, 'function');
   const draft = new URL(feedback.draftURL(valid));
   assert.equal(draft.origin, 'https://github.com');
-  assert.equal(draft.pathname, '/romanzdk/advent-cesko-pilot/issues/new');
+  assert.equal(draft.pathname, '/romanzdk/kam-na-advent/issues/new');
   assert.deepEqual([...draft.searchParams.keys()].sort(), ['body', 'template', 'title']);
   assert.equal(draft.searchParams.get('template'), 'tip.md');
   assert.equal(draft.searchParams.get('title'), '[Tip] Říčany & okolí? #1');

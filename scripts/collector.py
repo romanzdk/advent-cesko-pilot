@@ -1120,7 +1120,7 @@ class NoRedirect(HTTPRedirectHandler):
 
 class HTTPClient:
     MAX_BYTES = 2 * 1024 * 1024
-    USER_AGENT = 'AdventCeskoPilot/1.0 (+https://github.com/romanzdk/advent-cesko-pilot)'
+    USER_AGENT = 'AdventCeskoPilot/1.0 (+https://github.com/romanzdk/kam-na-advent)'
 
     def __init__(self, cache, send=None, min_interval=1.05):
         self.cache = Path(cache)

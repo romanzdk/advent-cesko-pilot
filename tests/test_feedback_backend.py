@@ -142,7 +142,7 @@ class BackendTests(unittest.TestCase):
         store = Store(self.base / "state", clock=lambda: self.now[0])
         with store.connection() as conn:
             conn.execute("UPDATE jobs SET status='submitted',issue_url=? WHERE id=?",
-                         ("https://github.com/romanzdk/advent-cesko-pilot/issues/7", report["requestId"]))
+                         ("https://github.com/romanzdk/kam-na-advent/issues/7", report["requestId"]))
         expected = store.status(report["requestId"])
         for retry in (report, alias):
             code, _, result = self.request("/api/submissions", retry)
@@ -507,7 +507,7 @@ class BackendTests(unittest.TestCase):
         worker = Worker(store, self.catalogue, remote)
         self.assertEqual(worker.run_once(), 1)
         status = self.request("/api/submissions/" + payload["requestId"])[2]
-        self.assertEqual(status, {"requestId": payload["requestId"], "status": "submitted", "issueURL": "https://github.com/romanzdk/advent-cesko-pilot/issues/1"})
+        self.assertEqual(status, {"requestId": payload["requestId"], "status": "submitted", "issueURL": "https://github.com/romanzdk/kam-na-advent/issues/1"})
         self.assertEqual(remote.calls, ["list", "create", "get:1"])
         self.assertEqual(worker.run_once(), 0)
         self.assertEqual(remote.created, 1)
@@ -644,7 +644,7 @@ data = json.load(sys.stdin) if "--input" in args else None
 with (base / "gh-calls.jsonl").open("a") as f:
     f.write(json.dumps({"args": args, "input": data, "debug": os.environ.get("GH_DEBUG")}) + "\\n")
 if method == "POST":
-    issue = dict(data, number=len(issues)+1, html_url="https://github.com/romanzdk/advent-cesko-pilot/issues/" + str(len(issues)+1))
+    issue = dict(data, number=len(issues)+1, html_url="https://github.com/romanzdk/kam-na-advent/issues/" + str(len(issues)+1))
     issues.append(issue)
     state.write_text(json.dumps(issues))
     trigger = base / "kill-after-create"
@@ -675,7 +675,7 @@ else:
         self.assertEqual(len(calls), 3)
         for call in calls:
             self.assertEqual(call["args"][:3], ["api", "--hostname", "github.com"])
-            self.assertTrue(call["args"][5].startswith("repos/romanzdk/advent-cesko-pilot/issues"))
+            self.assertTrue(call["args"][5].startswith("repos/romanzdk/kam-na-advent/issues"))
             self.assertIsNone(call["debug"])
         self.assertEqual(calls[1]["input"]["labels"], [])
         self.assertEqual(calls[1]["input"]["assignees"], [])
@@ -744,7 +744,7 @@ else:
         script = self.fake_gh()
         remote_state = self.base / "remote-issues.json"
         remote_state.write_text(json.dumps([{"number": 1, "title": "Unrelated", "body": "Unrelated issue",
-                                           "html_url": "https://github.com/romanzdk/advent-cesko-pilot/issues/1"}]))
+                                           "html_url": "https://github.com/romanzdk/kam-na-advent/issues/1"}]))
         (self.base / "kill-after-create").touch()
         command = [sys.executable, "-m", "backend.worker", "--state-dir", str(store.directory),
                    "--catalogue", str(self.catalogue), "--gh", str(script), "--once"]
@@ -763,13 +763,13 @@ else:
         second = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, timeout=10)
         self.assertEqual(second.returncode, 0, second.stderr)
         self.assertEqual(store.status(request_id), {"requestId": request_id, "status": "submitted",
-                         "issueURL": "https://github.com/romanzdk/advent-cesko-pilot/issues/2"})
+                         "issueURL": "https://github.com/romanzdk/kam-na-advent/issues/2"})
         issues = json.loads(remote_state.read_text())
         self.assertEqual(len(issues), 2)
         self.assertEqual((issues[1]["title"], issues[1]["body"]), (original["issue_title"], original["issue_body"]))
         calls = [json.loads(line) for line in (self.base / "gh-calls.jsonl").read_text().splitlines()]
         self.assertEqual([call["args"][4] for call in calls], ["GET", "POST", "GET", "GET"])
-        self.assertEqual(calls[-1]["args"][5], "repos/romanzdk/advent-cesko-pilot/issues/2")
+        self.assertEqual(calls[-1]["args"][5], "repos/romanzdk/kam-na-advent/issues/2")
 
     def test_worker_error_postcreate_crash_reconciles_after_event_removal(self):
         self.assert_error_crash_reconciles_after_catalogue_change("removed")
@@ -898,7 +898,7 @@ class FakeGitHub:
         self.calls.append("create")
         self.created += 1
         issue = {"number": self.created, "title": title, "body": body,
-                 "html_url": "https://github.com/romanzdk/advent-cesko-pilot/issues/" + str(self.created)}
+                 "html_url": "https://github.com/romanzdk/kam-na-advent/issues/" + str(self.created)}
         self.issues.append(issue)
         return issue
 

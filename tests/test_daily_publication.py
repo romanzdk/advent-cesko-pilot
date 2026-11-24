@@ -332,7 +332,7 @@ class DeploymentDeadlineTests(unittest.TestCase):
     def command(self, root, args, *, timeout):
         self.assertEqual(root, self.root)
         self.assertEqual(args, ['gh', 'run', 'list', '--repo',
-            'romanzdk/advent-cesko-pilot', '--workflow', 'deploy.yml', '--commit', self.head,
+            'romanzdk/kam-na-advent', '--workflow', 'deploy.yml', '--commit', self.head,
             '--limit', '10', '--json', 'headSha,status,conclusion'])
         self.assertGreaterEqual(timeout, 1)
         self.assertLessEqual(timeout, 30)

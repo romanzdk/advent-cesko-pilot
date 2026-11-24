@@ -6,7 +6,7 @@ try { helpers = await import('../site/helpers.js'); } catch (error) { if (error.
 const event = (id, date, startTime = null, extra = {}) => ({ id, title: id, date, startTime, town: 'Beroun', category: 'strom', status: 'confirmed', ...extra });
 test('event permalinks preserve literal IDs and only share the current origin and base path', () => {
   assert.equal(typeof helpers.eventPermalink, 'function');
-  for (const path of ['/', '/advent-cesko-pilot/', '/advent-cesko-pilot/index.html']) {
+  for (const path of ['/', '/kam-na-advent/', '/kam-na-advent/index.html']) {
     assert.equal(helpers.eventPermalink('e-Ab_19-0', `https://example.cz${path}?query=secret&lat=49.123#other`), `https://example.cz${path}#akce=e-Ab_19-0`);
   }
   for (const id of ['', 'e-evil<script>', ' e-123', 'e-123 ', 'e-a/b', 'e-%61', null]) assert.equal(helpers.eventPermalink(id, 'https://example.cz/'), null);
@@ -60,7 +60,7 @@ test('social metadata describes the current project with a full-size local PNG p
     'og:site_name': 'Kam na advent',
     'og:locale': 'cs_CZ',
     'og:type': 'website',
-    'og:image': 'https://raw.githubusercontent.com/romanzdk/advent-cesko-pilot/main/site/social-preview.png',
+    'og:image': 'https://raw.githubusercontent.com/romanzdk/kam-na-advent/main/site/social-preview.png',
     'og:image:width': '1280',
     'og:image:height': '640',
     'twitter:card': 'summary_large_image'

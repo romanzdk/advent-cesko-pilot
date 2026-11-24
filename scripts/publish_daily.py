@@ -19,8 +19,8 @@ def in_season(day):
     return date(2026, 11, 12) <= day <= date(2026, 12, 24)
 
 
-REMOTE = 'https://github.com/romanzdk/advent-cesko-pilot.git'
-PUBLIC = 'https://romanzdk.github.io/advent-cesko-pilot/'
+REMOTE = 'https://github.com/romanzdk/kam-na-advent.git'
+PUBLIC = 'https://romanzdk.github.io/kam-na-advent/'
 FILES = ('site/events.json', 'site/coverage.json', 'site/review.json')
 
 
@@ -202,7 +202,7 @@ def verify_deployment(root, head):
     while time.monotonic() < deadline:
         remaining = max(1, deadline - time.monotonic())
         runs = json.loads(command(root, ['gh', 'run', 'list', '--repo',
-            'romanzdk/advent-cesko-pilot', '--workflow', 'deploy.yml', '--commit', head,
+            'romanzdk/kam-na-advent', '--workflow', 'deploy.yml', '--commit', head,
             '--limit', '10', '--json', 'headSha,status,conclusion'], timeout=min(30, remaining)))
         matching = [run for run in runs if run['headSha'] == head]
         if matching and matching[0]['status'] == 'completed':

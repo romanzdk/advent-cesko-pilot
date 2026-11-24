@@ -8,9 +8,9 @@
 
 Sezonní mapa adventních a vánočních akcí pro **20. listopadu – 24. prosince 2026**. Rozsvěcení stromků, mikulášské nadílky, jarmarky, koncerty i tvoření na jednom místě — s přiznanými nejistotami a ověřitelným původem údajů.
 
-[**Otevřít mapu**](https://kamnaadvent.cz/) · [Přidat akci nebo tip](https://kamnaadvent.cz/#feedback) · [Veřejná hlášení](https://github.com/romanzdk/advent-cesko-pilot/issues?q=is%3Aissue) · [Provozní dokumentace](docs/operations.md)
+[**Otevřít mapu**](https://kamnaadvent.cz/) · [Přidat akci nebo tip](https://kamnaadvent.cz/#feedback) · [Veřejná hlášení](https://github.com/romanzdk/kam-na-advent/issues?q=is%3Aissue) · [Provozní dokumentace](docs/operations.md)
 
-[![Kontroly a nasazení](https://github.com/romanzdk/advent-cesko-pilot/actions/workflows/deploy.yml/badge.svg)](https://github.com/romanzdk/advent-cesko-pilot/actions/workflows/deploy.yml)
+[![Kontroly a nasazení](https://github.com/romanzdk/kam-na-advent/actions/workflows/deploy.yml/badge.svg)](https://github.com/romanzdk/kam-na-advent/actions/workflows/deploy.yml)
 ![Sezóna 2026](https://img.shields.io/badge/sez%C3%B3na-2026-244b3c?style=flat)
 [![Proprietární licence](https://img.shields.io/badge/licence-propriet%C3%A1rn%C3%AD-62695e?style=flat)](LICENSE)
 

@@ -8,8 +8,8 @@ from .errors import APIError
 from .store import private_fd
 from .validation import load_catalogue, render_issue, validate
 
-REPO = "romanzdk/advent-cesko-pilot"
-ISSUE_URL = re.compile(r"https://github\.com/romanzdk/advent-cesko-pilot/issues/([1-9][0-9]*)\Z")
+REPO = "romanzdk/kam-na-advent"
+ISSUE_URL = re.compile(r"https://github\.com/romanzdk/kam-na-advent/issues/([1-9][0-9]*)\Z")
 
 
 class Worker:

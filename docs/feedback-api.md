@@ -19,7 +19,7 @@ Pro odeslání přes web **nepotřebujete účet na GitHubu**. Před odesláním
 3. Oddělený neveřejný odesílatel vytvoří hlášení v pevném repozitáři. Potvrzený odkaz formulář zobrazí až po zpětném ověření konkrétního hlášení a jeho obsahu.
 4. Podnět zůstává neověřeným návrhem. Před zařazením nebo opravou se kontroluje pořadatel, rok, datum, skutečné místo a případné duplicity. **Podání samo nemění mapu, zdroje sběrače, kalendáře ani pozvánky.**
 
-[Veřejná hlášení](https://github.com/romanzdk/advent-cesko-pilot/issues?q=is%3Aissue) pomáhají předcházet duplicitám. Panel na webu ukazuje jen omezený nedávný výběr otevřených i uzavřených podnětů; není to úplná kontrola celé historie. U podání není slíbená konkrétní doba vyřízení.
+[Veřejná hlášení](https://github.com/romanzdk/kam-na-advent/issues?q=is%3Aissue) pomáhají předcházet duplicitám. Panel na webu ukazuje jen omezený nedávný výběr otevřených i uzavřených podnětů; není to úplná kontrola celé historie. U podání není slíbená konkrétní doba vyřízení.
 
 ## Přijetí, chyba a opakování
 
@@ -28,7 +28,7 @@ Pro odeslání přes web **nepotřebujete účet na GitHubu**. Před odesláním
 - **Zveřejněno:** existuje zpětně ověřený odkaz na konkrétní hlášení na GitHubu; nejde ještě o schválení do mapy.
 - **Odmítnutý vstup:** opravte uvedené pole nebo chybějící souhlas podle zprávy formuláře.
 
-Po přijetí nebo nejisté odpovědi použijte ověření stavu, které zachovává identitu původního podání. Nevytvářejte další kopii jen proto, že odpověď trvá. Ruční [návrh přímo na GitHubu](https://github.com/romanzdk/advent-cesko-pilot/issues/new?template=tip.md) je záloha před přijetím; vyžaduje vlastní účet a konečné potvrzení na GitHubu. Formulář tuto zálohu po přijetí či nejednoznačném odeslání blokuje kvůli duplicitám.
+Po přijetí nebo nejisté odpovědi použijte ověření stavu, které zachovává identitu původního podání. Nevytvářejte další kopii jen proto, že odpověď trvá. Ruční [návrh přímo na GitHubu](https://github.com/romanzdk/kam-na-advent/issues/new?template=tip.md) je záloha před přijetím; vyžaduje vlastní účet a konečné potvrzení na GitHubu. Formulář tuto zálohu po přijetí či nejednoznačném odeslání blokuje kvůli duplicitám.
 
 ## Soukromí a obsah
 

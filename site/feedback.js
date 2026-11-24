@@ -76,7 +76,7 @@ function sender(prefix, build, manual) {
     state.status = data.status;
     state.result = '';
     if (data.status === 'submitted') {
-      if (!/^https:\/\/github\.com\/romanzdk\/advent-cesko-pilot\/issues\/[1-9]\d*$/.test(data.issueURL || '')) throw new Error('Zveřejnění nelze potvrdit.');
+      if (!/^https:\/\/github\.com\/romanzdk\/kam-na-advent\/issues\/[1-9]\d*$/.test(data.issueURL || '')) throw new Error('Zveřejnění nelze potvrdit.');
       state.result = data.issueURL;
       state.message = 'Zveřejněno na GitHubu. Zařazení do mapy není automatické.';
     } else if (data.status === 'pending') state.message = 'Přijato do fronty. Zveřejnění na GitHubu zatím není potvrzeno.';

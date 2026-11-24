@@ -110,7 +110,7 @@ test('batched permalinks reveal whole required batches after async load, filters
     await page.waitForSelector('[data-id="e-batch-42"].selected', { timeout: 3000 });
     assert.equal(await page.locator('.event-card').count(), 47);
     assert.deepEqual(errors, []);
-  }, { data: batchFixture, mobile, delay: 100, base: '/advent-cesko-pilot/#akce=e-batch-42' });
+  }, { data: batchFixture, mobile, delay: 100, base: '/kam-na-advent/#akce=e-batch-42' });
   await app(async (page, errors) => {
     await page.waitForSelector('.load-error');
     assert.equal(await page.locator('#load-more').isVisible(), false);
@@ -301,7 +301,7 @@ before(async () => {
   }
   browser = await chromium.launch({ executablePath, headless: true, args: ['--no-sandbox'] });
   server = createServer(async (req, res) => {
-    let path = new URL(req.url, 'http://local').pathname.replace(/^\/advent-cesko-pilot\//, '/');
+    let path = new URL(req.url, 'http://local').pathname.replace(/^\/kam-na-advent\//, '/');
     if (path === '/') path = '/index.html';
     // An explicit asset allowlist prevents accidentally reading live data.
     if (!/^\/(index\.html|app\.js|helpers\.js|feedback\.js|feedback-helpers\.js|styles\.css|favicon\.svg|vendor\/leaflet\.(js|css))$/.test(path)) { res.writeHead(404).end(); return; }
@@ -320,7 +320,7 @@ after(async () => {
   await browser?.close();
   if (server) await new Promise(resolve => server.close(resolve));
 });
-async function app(run, { data = fixture, base = '/advent-cesko-pilot/', mobile = false, touch = mobile, responseStatus = 200, delay = 0, libraryFail = false, coverage = coverageFixture, coverageStatus = 200, coveragePending = false, coverageDeferred = false, javaScriptEnabled = true, geoMock = false } = {}) {
+async function app(run, { data = fixture, base = '/kam-na-advent/', mobile = false, touch = mobile, responseStatus = 200, delay = 0, libraryFail = false, coverage = coverageFixture, coverageStatus = 200, coveragePending = false, coverageDeferred = false, javaScriptEnabled = true, geoMock = false } = {}) {
   const context = await browser.newContext({ viewport: mobile ? { width: 393, height: 852 } : { width: 1440, height: 1000 }, timezoneId: 'America/Los_Angeles', hasTouch: touch, javaScriptEnabled });
   try {
     if (geoMock) await context.addInitScript(installGeoMock);
@@ -385,7 +385,7 @@ test('anonymous tip primary submit accepts then follows canonical ID without ope
       calls.push([path, payload]);
       if (path === '/api/challenge') return { challenge: 'fixture-token' };
       if (payload) return { requestId: acceptedID, status: 'pending' };
-      return { requestId: acceptedID, status: 'submitted', issueURL: 'https://github.com/romanzdk/advent-cesko-pilot/issues/42' };
+      return { requestId: acceptedID, status: 'submitted', issueURL: 'https://github.com/romanzdk/kam-na-advent/issues/42' };
     });
     await page.waitForSelector('.event-card');
     assert.equal(calls.length, 0);
@@ -396,7 +396,7 @@ test('anonymous tip primary submit accepts then follows canonical ID without ope
     assert.equal(await page.locator('#feedback-fallback').isEnabled(), false);
     await page.clock.fastForward(1100);
     await page.waitForFunction(() => document.getElementById('feedback-message').textContent.includes('Zveřejněno'));
-    assert.equal(await page.locator('#feedback-result').getAttribute('href'), 'https://github.com/romanzdk/advent-cesko-pilot/issues/42');
+    assert.equal(await page.locator('#feedback-result').getAttribute('href'), 'https://github.com/romanzdk/kam-na-advent/issues/42');
     assert(calls.some(([path]) => path === `/api/submissions/${acceptedID}`));
     const payload = calls.find(([, payload]) => payload)?.[1];
     assert.equal(payload.mode, 'tip'); assert.equal(payload.consent, true);
@@ -411,7 +411,7 @@ test('reports preserve event-scoped drafts, accepted locks and accessible native
     await receiver(page, (path, payload) => {
       if (path === '/api/challenge') return { challenge: 'fixture-token' };
       if (payload) posts.push(payload);
-      return { requestId: acceptedID, status: 'submitted', issueURL: 'https://github.com/romanzdk/advent-cesko-pilot/issues/42' };
+      return { requestId: acceptedID, status: 'submitted', issueURL: 'https://github.com/romanzdk/kam-na-advent/issues/42' };
     });
     await page.waitForSelector('.event-card');
     const action = id => page.locator(`[data-id="fixture-${id}"] .report-button`);
@@ -464,7 +464,7 @@ for (const stage of ['readiness', 'refresh-success', 'refresh-failure']) test(`r
         return { challenge: 'fixture-token' };
       }
       if (payload?.eventId === 'fixture-a') return { http:400, error:'challenge', message:'Obnovte ověření.' };
-      return { requestId: acceptedID, status:'submitted', issueURL:'https://github.com/romanzdk/advent-cesko-pilot/issues/42' };
+      return { requestId: acceptedID, status:'submitted', issueURL:'https://github.com/romanzdk/kam-na-advent/issues/42' };
     });
     await page.waitForSelector('.report-button');
     const open = id => page.locator(`[data-id="fixture-${id}"] .report-button`).click();
@@ -506,7 +506,7 @@ test('unknown POST locks fallback after edits and retries GET with original ID, 
       if (payload) { posts++; sent=payload; await route.abort(); return; }
       gets++;
       assert.equal(path, `/api/submissions/${gets === 1 ? sent.requestId : acceptedID}`);
-      return {requestId:acceptedID,status:gets === 1 ? 'uncertain' : 'submitted',issueURL:'https://github.com/romanzdk/advent-cesko-pilot/issues/42'};
+      return {requestId:acceptedID,status:gets === 1 ? 'uncertain' : 'submitted',issueURL:'https://github.com/romanzdk/kam-na-advent/issues/42'};
     });
     await readyTip(page); await page.clock.fastForward(2200);
     await page.locator('#feedback-fallback').click();
@@ -537,7 +537,7 @@ for (const status of ['pending', 'uncertain']) {
           if (path === '/api/challenge') { challenges++; return { challenge: 'fixture-token' }; }
           if (payload) { posts.push(payload); return { requestId: acceptedID, status }; }
           gets.push(path);
-          return complete ? { requestId: acceptedID, status: 'submitted', issueURL: 'https://github.com/romanzdk/advent-cesko-pilot/issues/42' }
+          return complete ? { requestId: acceptedID, status: 'submitted', issueURL: 'https://github.com/romanzdk/kam-na-advent/issues/42' }
             : { http, error: code, message: 'Status lookup rejected.' };
         });
         await readyTip(page);
@@ -581,7 +581,7 @@ for (const status of ['pending','uncertain']) test(`anonymous ${status} polling 
     await receiver(page, async (path, payload) => {
       if (path === '/api/challenge') return {challenge:'fixture-token'};
       if (payload) posts++; else { gets++; await new Promise(resolve => setTimeout(resolve,5)); }
-      return {requestId:acceptedID,status:complete ? 'submitted' : status,issueURL:'https://github.com/romanzdk/advent-cesko-pilot/issues/42'};
+      return {requestId:acceptedID,status:complete ? 'submitted' : status,issueURL:'https://github.com/romanzdk/kam-na-advent/issues/42'};
     });
     await readyTip(page); await page.clock.fastForward(2200);
     await page.locator('#feedback-form button[type=submit]').click();
@@ -603,7 +603,7 @@ test('challenge rejection refresh keeps original UUID and server validation keep
     await receiver(page, (path,payload) => {
       if (path === '/api/challenge') return {challenge:'fixture-token'};
       posts.push(payload);
-      return posts.length===1 ? {http:400,error:rejection,message:'Opravte návrh.'} : {requestId:acceptedID,status:'submitted',issueURL:'https://github.com/romanzdk/advent-cesko-pilot/issues/42'};
+      return posts.length===1 ? {http:400,error:rejection,message:'Opravte návrh.'} : {requestId:acceptedID,status:'submitted',issueURL:'https://github.com/romanzdk/kam-na-advent/issues/42'};
     });
     await readyTip(page); await page.clock.fastForward(2200);
     await page.locator('#feedback-form button[type=submit]').click();
@@ -633,7 +633,7 @@ test('similar catalogue events use inert safe local permalinks without fetching 
   });
 });
 test('malformed submitted links never become confirmed or release the duplicate lock', async () => {
-  for (const issueURL of ['https://github.com/romanzdk/advent-cesko-pilot/issues/42\n','https://github.com/other/repo/issues/42','javascript:alert(1)']) await app(async (page, errors) => {
+  for (const issueURL of ['https://github.com/romanzdk/kam-na-advent/issues/42\n','https://github.com/other/repo/issues/42','javascript:alert(1)']) await app(async (page, errors) => {
     await receiver(page, path => path==='/api/challenge' ? {challenge:'fixture-token'} : {requestId:acceptedID,status:'submitted',issueURL});
     await readyTip(page); await page.clock.fastForward(2200);
     await page.locator('#feedback-form button[type=submit]').click();
@@ -649,7 +649,7 @@ test('full anonymous form transports every optional field, then unknown dates om
     let sent;
     await receiver(page,(path,payload)=>{
       if(path==='/api/challenge') return {challenge:'fixture-token'};
-      sent=payload; return {requestId:acceptedID,status:'submitted',issueURL:'https://github.com/romanzdk/advent-cesko-pilot/issues/42'};
+      sent=payload; return {requestId:acceptedID,status:'submitted',issueURL:'https://github.com/romanzdk/kam-na-advent/issues/42'};
     });
     await page.locator('#feedback > summary').click();
     const fields={title:'Dílna',town:'Beroun',date:'2026-11-28',sourceURL:'https://example.cz/event',region:'Středočeský kraj',category:'tvoreni',venue:'Klub',endDate:'2026-11-29',startTime:'16:00',endTime:'18:00',price:'150 Kč',registration:'Rezervace',registrationURL:'https://example.cz/booking',audience:'Dospělí',description:'Popis',notes:'Poznámka'};
@@ -688,7 +688,7 @@ test('permalink titles are real safe links; initial deep link selects, focuses a
     await page.waitForSelector('.event-card');
     const target = page.locator('[data-id="e-c"]');
     assert.equal(await target.locator('h3 a').count(), 1);
-    assert.equal(await target.locator('h3 a').getAttribute('href'), `${origin}/advent-cesko-pilot/#akce=e-c`);
+    assert.equal(await target.locator('h3 a').getAttribute('href'), `${origin}/kam-na-advent/#akce=e-c`);
     assert.equal(await target.locator('h3 a').textContent(), permalinkFixture.events[2].title);
     assert.equal(await target.locator('h3 img').count(), 0);
     await page.waitForSelector('[data-id="e-c"].selected', { timeout:3000 });
@@ -698,7 +698,7 @@ test('permalink titles are real safe links; initial deep link selects, focuses a
     assert(box.y >= 0 && box.y < (await page.viewportSize()).height - 100, JSON.stringify(box));
     assert.equal(await page.evaluate(() => window.geoCalls.length), 0);
     assert.deepEqual(errors, []);
-  }, { data:permalinkFixture, base:'/advent-cesko-pilot/?query=secret&lat=49.123#akce=e-c', delay:300, mobile, geoMock:true });
+  }, { data:permalinkFixture, base:'/kam-na-advent/?query=secret&lat=49.123#akce=e-c', delay:300, mobile, geoMock:true });
 });
 
 test('permalink navigation handles title clicks, hash changes and history without reloading or rerendering visible cards', async () => {
@@ -726,7 +726,7 @@ test('permalink navigation handles title clicks, hash changes and history withou
     assert.equal(await page.evaluate(() => window.sameDocument), true);
     assert.deepEqual(requests, []);
     assert.deepEqual(errors, []);
-  }, {data:permalinkFixture, mobile:true, base:'/advent-cesko-pilot/?query=private'});
+  }, {data:permalinkFixture, mobile:true, base:'/kam-na-advent/?query=private'});
 });
 
 test('permalink reveals a filtered target, clears only incompatible filters and fences pending GPS', async () => {
@@ -795,7 +795,7 @@ test('permalink missing or malformed IDs show an honest non-destructive message 
 
 test('sharing copies one canonical own-site link from a trusted click without navigation, filters or source queries', async () => {
   const data = {...permalinkFixture, events:permalinkFixture.events.map(event => ({...event, title:`Upravený název ${event.id}`,sourceUrl:'https://organizer.example/event?token=source-secret'}))};
-  for (const base of ['/?lat=49.123&lon=14.123', '/advent-cesko-pilot/?query=private']) await app(async (page, errors) => {
+  for (const base of ['/?lat=49.123&lon=14.123', '/kam-na-advent/?query=private']) await app(async (page, errors) => {
     await page.waitForSelector('.event-card');
     const target = page.locator('[data-id="e-b"]'), button = target.getByRole('button',{name:'Sdílet: Upravený název e-b',exact:true});
     assert.equal(await button.count(), 1);
@@ -838,7 +838,7 @@ test('sharing prefers native share in the trusted activation with only the own-s
     });
     const card = page.locator('[data-id="e-c"]'), button = card.locator('.share-button');
     await button.click();
-    assert.deepEqual(await page.evaluate(() => window.shares), [{data:{title:permalinkFixture.events[2].title,url:`${origin}/advent-cesko-pilot/#akce=e-c`},active:true}]);
+    assert.deepEqual(await page.evaluate(() => window.shares), [{data:{title:permalinkFixture.events[2].title,url:`${origin}/kam-na-advent/#akce=e-c`},active:true}]);
     assert.deepEqual(await page.evaluate(() => window.copies), []);
     assert.match(await card.locator('.share-status').innerText(), /předán ke sdílení/);
     assert.equal(new URL(page.url()).hash, '');
@@ -877,7 +877,7 @@ test('sharing denied or unavailable APIs expose a real selectable own-site URL, 
     const card = page.locator('[data-id="e-b"]');
     await card.locator('.share-button').click();
     assert.equal(await card.locator('.share-status a').count(), 1);
-    const link = card.locator('.share-status a'), expected = `${origin}/advent-cesko-pilot/#akce=e-b`;
+    const link = card.locator('.share-status a'), expected = `${origin}/kam-na-advent/#akce=e-b`;
     assert.equal(await link.getAttribute('href'), expected);
     assert.equal(await link.textContent(), expected);
     assert.match(await card.locator('.share-status').innerText(), /Zkopírujte odkaz ručně/);
@@ -889,7 +889,7 @@ test('sharing denied or unavailable APIs expose a real selectable own-site URL, 
     await page.waitForSelector('[data-id="e-b"].selected', {timeout:3000});
     assert.equal(await page.evaluate(() => window.sameDocument), true);
     assert.deepEqual(errors, []);
-  }, {data:permalinkFixture,mobile:true,base:'/advent-cesko-pilot/?query=secret&lat=49.123'});
+  }, {data:permalinkFixture,mobile:true,base:'/kam-na-advent/?query=secret&lat=49.123'});
 });
 
 test('sharing keeps only the latest per-card feedback active even when promises finish out of order', async () => {
@@ -994,12 +994,12 @@ test('permalink canonical base is the static app directory even when opened thro
   await app(async page => {
     await page.waitForSelector('.event-card');
     const link = page.locator('[data-id="e-b"] h3 a');
-    assert.equal(await link.getAttribute('href'), `${origin}/advent-cesko-pilot/#akce=e-b`);
+    assert.equal(await link.getAttribute('href'), `${origin}/kam-na-advent/#akce=e-b`);
     await page.evaluate(() => { window.sameDocument = true; });
     await link.click();
     await page.waitForSelector('[data-id="e-b"].selected', {timeout:3000});
     assert.equal(await page.evaluate(() => window.sameDocument), true);
-  }, {data:permalinkFixture,mobile:true,base:'/advent-cesko-pilot/index.html?query=private'});
+  }, {data:permalinkFixture,mobile:true,base:'/kam-na-advent/index.html?query=private'});
 });
 
 test('permalink recovers a partially entered native date instead of leaving the target hidden', async () => {
@@ -1453,7 +1453,7 @@ test('feedback fallback template anchor works without JavaScript', async () => {
     await page.locator('#feedback > summary').click();
     const link = page.getByRole('link', { name: 'Napsat tip přímo na GitHubu (i bez JavaScriptu)' });
     assert.equal(await link.isVisible(), true);
-    assert.equal(await link.getAttribute('href'), 'https://github.com/romanzdk/advent-cesko-pilot/issues/new?template=tip.md');
+    assert.equal(await link.getAttribute('href'), 'https://github.com/romanzdk/kam-na-advent/issues/new?template=tip.md');
     assert.equal(await page.locator('#feedback-form').isVisible(), false);
   }, { javaScriptEnabled: false, mobile: true });
 });
@@ -1478,11 +1478,11 @@ test('feedback lazily fetches once, renders safe open/closed fixture issues and 
     let calls = 0;
     await page.route('https://api.github.com/**', async route => {
       calls++;
-      assert.equal(route.request().url(), 'https://api.github.com/repos/romanzdk/advent-cesko-pilot/issues?state=all&sort=updated&direction=desc&per_page=10');
+      assert.equal(route.request().url(), 'https://api.github.com/repos/romanzdk/kam-na-advent/issues?state=all&sort=updated&direction=desc&per_page=10');
       assert.equal(route.request().method(), 'GET');
       await route.fulfill({ contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify([
-        { number: 42, title: '<img src=x onerror="window.injected=true"> Říčany', state: 'open', html_url: 'https://github.com/romanzdk/advent-cesko-pilot/issues/42' },
-        { number: 43, title: 'Vyřešený testovací tip', state: 'closed', html_url: 'https://github.com/romanzdk/advent-cesko-pilot/issues/43' },
+        { number: 42, title: '<img src=x onerror="window.injected=true"> Říčany', state: 'open', html_url: 'https://github.com/romanzdk/kam-na-advent/issues/42' },
+        { number: 43, title: 'Vyřešený testovací tip', state: 'closed', html_url: 'https://github.com/romanzdk/kam-na-advent/issues/43' },
         { number: 44, title: 'Unsafe', state: 'open', html_url: 'javascript:alert(1)' }
       ]) });
     });
@@ -1510,7 +1510,7 @@ test('feedback lazily fetches once, renders safe open/closed fixture issues and 
     const search = new URL(await page.locator('#feedback-search-link').getAttribute('href'));
     assert.equal(search.origin, 'https://github.com');
     assert.equal(search.searchParams.get('q'), 'is:issue Říčany & dílna? #1');
-    assert.equal(await page.getByRole('link', { name: 'Všechny tipy a hlášení na GitHubu' }).getAttribute('href'), 'https://github.com/romanzdk/advent-cesko-pilot/issues?q=is%3Aissue');
+    assert.equal(await page.getByRole('link', { name: 'Všechny tipy a hlášení na GitHubu' }).getAttribute('href'), 'https://github.com/romanzdk/kam-na-advent/issues?q=is%3Aissue');
     assert.deepEqual(errors, []);
   }, { mobile });
 });
@@ -1538,7 +1538,7 @@ test('feedback draft requires input and consent, preserves fields and only GETs 
     await popup.waitForLoadState();
     const target = new URL(popup.url());
     assert.equal(target.origin, 'https://github.com');
-    assert.equal(target.pathname, '/romanzdk/advent-cesko-pilot/issues/new');
+    assert.equal(target.pathname, '/romanzdk/kam-na-advent/issues/new');
     assert.deepEqual([...target.searchParams.keys()].sort(), ['body', 'template', 'title']);
     assert.equal(target.searchParams.get('title'), '[Tip] Říčany & okolí? #1');
     assert(target.searchParams.get('body').includes('<img src=x onerror=alert(1)> & text'));
@@ -1710,7 +1710,7 @@ test('footer credits Roman and links his website, GitHub and project', async () 
       const footer = page.locator('footer');
       await footer.scrollIntoViewIfNeeded();
       assert.match(await footer.innerText(), /Autor: Roman Žydyk/);
-      for (const [name, href] of [['romanzdk.com', 'https://romanzdk.com/'], ['GitHub autora', 'https://github.com/romanzdk'], ['Kód projektu', 'https://github.com/romanzdk/advent-cesko-pilot']]) {
+      for (const [name, href] of [['romanzdk.com', 'https://romanzdk.com/'], ['GitHub autora', 'https://github.com/romanzdk'], ['Kód projektu', 'https://github.com/romanzdk/kam-na-advent']]) {
         const link = footer.getByRole('link', {name, exact: true});
         assert.equal(await link.getAttribute('href'), href);
         assert.equal(await link.isVisible(), true);
@@ -1718,7 +1718,7 @@ test('footer credits Roman and links his website, GitHub and project', async () 
         assert(box && box.height >= 44);
       }
       assert.equal(await footer.getByRole('link').count(), 3);
-      assert.deepEqual(await footer.getByRole('link').evaluateAll(links => links.map(link => link.href)), ['https://romanzdk.com/', 'https://github.com/romanzdk', 'https://github.com/romanzdk/advent-cesko-pilot']);
+      assert.deepEqual(await footer.getByRole('link').evaluateAll(links => links.map(link => link.href)), ['https://romanzdk.com/', 'https://github.com/romanzdk', 'https://github.com/romanzdk/kam-na-advent']);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     }, {mobile});
   }
