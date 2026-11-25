@@ -27928,6 +27928,33 @@
           }
         ]
       }
+    },
+    {
+      "id": "reviewed-www-miretice-eu",
+      "town": "Miřetice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.miretice.eu",
+      "allowed_towns": {
+        "Miřetice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.miretice.eu/zivot-v-obci/kalendar-akci/"
+      ],
+      "url_regex": "^https://www\\.miretice\\.eu/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Miřetice": [
+          {
+            "lat": 49.6589345,
+            "lon": 14.9767461,
+            "precision": "town",
+            "label": "Miřetice — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/441439"
+          }
+        ]
+      }
     }
   ]
 }

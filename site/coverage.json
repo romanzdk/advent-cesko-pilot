@@ -19870,6 +19870,22 @@
       "excludedCount": 0,
       "lastError": null,
       "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
+    },
+    {
+      "id": "reviewed-www-miretice-eu",
+      "town": "Miřetice",
+      "region": "Středočeský kraj",
+      "url": "https://www.miretice.eu/zivot-v-obci/kalendar-akci/",
+      "adapter": "reviewed-public",
+      "coverageNote": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "status": "ok",
+      "lastChecked": "2026-11-25T09:11:42+00:00",
+      "lastSuccess": "2026-11-25T09:11:42+00:00",
+      "eventCount": 1,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": null,
+      "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
     }
   ],
   "metrics": {
@@ -19881,7 +19897,7 @@
     "eventsNew": 0,
     "eventsChanged": 0,
     "eventsUnchanged": 302,
-    "eventsPublished": 3117,
+    "eventsPublished": 3118,
     "reviewCount": 1302,
     "excludedCount": 0,
     "aiCalls": 0
