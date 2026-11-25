@@ -27416,6 +27416,464 @@
       "allowed_venues": [
         "městský úřad"
       ]
+    },
+    {
+      "id": "reviewed-2026-dolni-jircany-5ea01ce2",
+      "town": "Dolní Jirčany",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "psary.cz",
+      "allowed_towns": {
+        "Dolní Jirčany": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://psary.cz/udalosti/krampus/"
+      ],
+      "url_regex": "^(?:https://psary\\.cz/udalosti/krampus/|https://psary\\.cz/udalosti/starocesky\\-advent\\-3/|https://psary\\.cz/udalosti/vanocni\\-podvecer\\-v\\-knihovne\\-a\\-rozsviceni\\-stromu\\-v\\-zs\\-amos/)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Dolní Jirčany": []
+      }
+    },
+    {
+      "id": "reviewed-2026-psary-5ea01ce2",
+      "town": "Psáry",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "psary.cz",
+      "allowed_towns": {
+        "Psáry": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://psary.cz/udalosti/betlemske-svetlo-2/"
+      ],
+      "url_regex": "^(?:https://psary\\.cz/udalosti/betlemske\\-svetlo\\-2/|https://psary\\.cz/udalosti/mikulasska\\-psary/|https://psary\\.cz/udalosti/vyroba\\-adventnich\\-vencu\\-2/)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Psáry": []
+      }
+    },
+    {
+      "id": "reviewed-2026-cercany-c1af1fba",
+      "town": "Čerčany",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "shop.entradio.cz",
+      "allowed_towns": {
+        "Čerčany": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://shop.entradio.cz/event/135445/eventInfo"
+      ],
+      "url_regex": "^(?:https://shop\\.entradio\\.cz/event/135445/eventInfo)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Čerčany": []
+      }
+    },
+    {
+      "id": "reviewed-2026-ledce-u-nespek-6e2e6a18",
+      "town": "Ledce u Nespek",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "static.posazavi.com",
+      "allowed_towns": {
+        "Ledce u Nespek": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://static.posazavi.com/Pictures/RelatedEventImages/2026/10/26/c40176.jpg"
+      ],
+      "url_regex": "^(?:https://static\\.posazavi\\.com/Pictures/RelatedEventImages/2026/10/26/c40176\\.jpg)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Ledce u Nespek": []
+      }
+    },
+    {
+      "id": "reviewed-2026-vyzlovka-63716abe",
+      "town": "Vyžlovka",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "vyzlovka.cz",
+      "allowed_towns": {
+        "Vyžlovka": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://vyzlovka.cz/2026/11/12/mikulasska-druzina/"
+      ],
+      "url_regex": "^(?:https://vyzlovka\\.cz/2026/11/12/mikulasska\\-druzina/|https://vyzlovka\\.cz/2026/11/23/mikulasska\\-s\\-pisnickou\\-3/|https://vyzlovka\\.cz/2026/11/23/vanocni\\-jarmark\\-2/|https://vyzlovka\\.cz/2026/11/23/vanocni\\-koncert\\-s\\-pohostenim\\-2/|https://vyzlovka\\.cz/2026/11/23/vyzlovsky\\-jezisek\\-6/)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Vyžlovka": []
+      }
+    },
+    {
+      "id": "reviewed-2026-babice-u-rican-0fc3dca0",
+      "town": "Babice u Říčan",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.babiceurican.cz",
+      "allowed_towns": {
+        "Babice u Říčan": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.babiceurican.cz/aktuality/mikulasska-nadilka-4-12-2026"
+      ],
+      "url_regex": "^(?:https://www\\.babiceurican\\.cz/aktuality/mikulasska\\-nadilka\\-4\\-12\\-2026|https://www\\.babiceurican\\.cz/aktuality/vanocni\\-setkani\\-na\\-navsi\\-29\\-11\\-2026)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Babice u Říčan": []
+      }
+    },
+    {
+      "id": "reviewed-2026-cerne-voderady-79cd0b1b",
+      "town": "Černé Voděrady",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.cernevoderady.cz",
+      "allowed_towns": {
+        "Černé Voděrady": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.cernevoderady.cz/zivot-v-obci/kalendar-akci/adventni-dilny-457_45cs.html"
+      ],
+      "url_regex": "^(?:https://www\\.cernevoderady\\.cz/zivot\\-v\\-obci/kalendar\\-akci/adventni\\-dilny\\-457_45cs\\.html|https://www\\.cernevoderady\\.cz/zivot\\-v\\-obci/kalendar\\-akci/mikulas\\-458_46cs\\.html|https://www\\.cernevoderady\\.cz/zivot\\-v\\-obci/kalendar\\-akci/setkani\\-senioru\\-460_48cs\\.html|https://www\\.cernevoderady\\.cz/zivot\\-v\\-obci/kalendar\\-akci/zpivani\\-pod\\-stromeckem\\-459_47cs\\.html)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Černé Voděrady": []
+      }
+    },
+    {
+      "id": "reviewed-2026-ostredek-8ec4d0b7",
+      "town": "Ostředek",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.chopos.cz",
+      "allowed_towns": {
+        "Ostředek": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.chopos.cz/upload/media/document/0001/24/a405ee497cebc541e617811fb94b4a77761d3915.pdf"
+      ],
+      "url_regex": "^(?:https://www\\.chopos\\.cz/upload/media/document/0001/24/a405ee497cebc541e617811fb94b4a77761d3915\\.pdf)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Ostředek": []
+      }
+    },
+    {
+      "id": "reviewed-2026-ostredek-a-mzizovice-8ec4d0b7",
+      "town": "Ostředek a Mžižovice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.chopos.cz",
+      "allowed_towns": {
+        "Ostředek a Mžižovice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.chopos.cz/upload/media/document/0001/24/0bafcc474ec590106fbdd635f91e531d6d6fe9b2.pdf"
+      ],
+      "url_regex": "^(?:https://www\\.chopos\\.cz/upload/media/document/0001/24/0bafcc474ec590106fbdd635f91e531d6d6fe9b2\\.pdf)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Ostředek a Mžižovice": []
+      }
+    },
+    {
+      "id": "reviewed-2026-vranov-8ec4d0b7",
+      "town": "Vranov",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.chopos.cz",
+      "allowed_towns": {
+        "Vranov": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.chopos.cz/upload/media/document/0001/21/ad1b7cce151d4a769e6102a89a6c3b48679600bc.pdf"
+      ],
+      "url_regex": "^(?:https://www\\.chopos\\.cz/upload/media/document/0001/21/ad1b7cce151d4a769e6102a89a6c3b48679600bc\\.pdf)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Vranov": []
+      }
+    },
+    {
+      "id": "reviewed-2026-hvezdonice-c79bac9f",
+      "town": "Hvězdonice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.hvezdonice.cz",
+      "allowed_towns": {
+        "Hvězdonice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.hvezdonice.cz/pro-obcany/aktuality/rozsviceni-vanocniho-stromu-335cs.html"
+      ],
+      "url_regex": "^(?:https://www\\.hvezdonice\\.cz/pro\\-obcany/aktuality/rozsviceni\\-vanocniho\\-stromu\\-335cs\\.html)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Hvězdonice": []
+      }
+    },
+    {
+      "id": "reviewed-2026-ricany-a3b28c34",
+      "town": "Říčany",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.kclabut.cz",
+      "allowed_towns": {
+        "Říčany": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.kclabut.cz/program/mikulassky-koncert-zus"
+      ],
+      "url_regex": "^(?:https://www\\.kclabut\\.cz/program/mikulassky\\-koncert\\-zus|https://www\\.kclabut\\.cz/program/misa\\-ruzickova\\-vanoce\\-plne\\-pisnicek)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Říčany": []
+      }
+    },
+    {
+      "id": "reviewed-2026-uvaly-3280095e",
+      "town": "Úvaly",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.mestouvaly.cz",
+      "allowed_towns": {
+        "Úvaly": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.mestouvaly.cz/udalosti/ceska-mse-vanocni-hej-mistre-jakub-jan-ryba/"
+      ],
+      "url_regex": "^(?:https://www\\.mestouvaly\\.cz/udalosti/ceska\\-mse\\-vanocni\\-hej\\-mistre\\-jakub\\-jan\\-ryba/|https://www\\.mestouvaly\\.cz/udalosti/koncert\\-koulo\\-adventu\\-musica\\-dolce\\-vita/|https://www\\.mestouvaly\\.cz/udalosti/mddm\\-vanocni\\-koncert\\-2/|https://www\\.mestouvaly\\.cz/udalosti/predvanocni\\-posezeni\\-pro\\-seniory\\-3/|https://www\\.mestouvaly\\.cz/udalosti/ukd\\-vanocni\\-tvoreni/|https://www\\.mestouvaly\\.cz/udalosti/vanocni\\-koncert\\-taylor\\-scott\\-davis\\-magnificat/)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Úvaly": []
+      }
+    },
+    {
+      "id": "reviewed-2026-modletice-bbb9de9b",
+      "town": "Modletice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.modletice.cz",
+      "allowed_towns": {
+        "Modletice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.modletice.cz/zivot-v-obci/aktuality/rozsviceni-vanocniho-stromu-v-modleticich-724cs.html"
+      ],
+      "url_regex": "^(?:https://www\\.modletice\\.cz/zivot\\-v\\-obci/aktuality/rozsviceni\\-vanocniho\\-stromu\\-v\\-modleticich\\-724cs\\.html)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Modletice": []
+      }
+    },
+    {
+      "id": "reviewed-2026-jilove-u-prahy-c3fc5edc",
+      "town": "Jílové u Prahy",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.muzeumjilove.cz",
+      "allowed_towns": {
+        "Jílové u Prahy": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.muzeumjilove.cz/akce-a-vystavy/ceska-mse-vanocni"
+      ],
+      "url_regex": "^(?:https://www\\.muzeumjilove\\.cz/akce\\-a\\-vystavy/ceska\\-mse\\-vanocni|https://www\\.muzeumjilove\\.cz/akce\\-a\\-vystavy/když\\-vánoční\\-dárky\\-vyprávějí|https://www\\.muzeumjilove\\.cz/akce\\-a\\-vystavy/yvetta\\-blanarovicova)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Jílové u Prahy": []
+      }
+    },
+    {
+      "id": "reviewed-2026-turkovice-4db4401d",
+      "town": "Turkovice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.naseturkovice.cz",
+      "allowed_towns": {
+        "Turkovice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.naseturkovice.cz/wp-content/uploads/rozsviceni_stromecku_2026-1024x724.jpg"
+      ],
+      "url_regex": "^(?:https://www\\.naseturkovice\\.cz/wp\\-content/uploads/rozsviceni_stromecku_2026\\-1024x724\\.jpg)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Turkovice": []
+      }
+    },
+    {
+      "id": "reviewed-2026-nespeky-d211fa03",
+      "town": "Nespeky",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.nespeky.com",
+      "allowed_towns": {
+        "Nespeky": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.nespeky.com/obec-1/aktuality/adventni-trhy-v-nespekach-570cs.html"
+      ],
+      "url_regex": "^(?:https://www\\.nespeky\\.com/obec\\-1/aktuality/adventni\\-trhy\\-v\\-nespekach\\-570cs\\.html)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Nespeky": []
+      }
+    },
+    {
+      "id": "reviewed-2026-petrikov-c00d49aa",
+      "town": "Petříkov",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.obecpetrikov.cz",
+      "allowed_towns": {
+        "Petříkov": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.obecpetrikov.cz/zivot-v-obci/kalendar-akci/petrikovsky-mikulas-768_181cs.html"
+      ],
+      "url_regex": "^(?:https://www\\.obecpetrikov\\.cz/zivot\\-v\\-obci/kalendar\\-akci/petrikovsky\\-mikulas\\-768_181cs\\.html)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Petříkov": []
+      }
+    },
+    {
+      "id": "reviewed-2026-porici-nad-sazavou-545b7a07",
+      "town": "Poříčí nad Sázavou",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.poricinadsazavou.cz",
+      "allowed_towns": {
+        "Poříčí nad Sázavou": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.poricinadsazavou.cz/evt_image.php?img=5256&v=1794470028"
+      ],
+      "url_regex": "^(?:https://www\\.poricinadsazavou\\.cz/evt_image\\.php\\?img=5256\\&v=1794470028|https://www\\.poricinadsazavou\\.cz/obec\\-1/aktuality/mikulas\\-na\\-navsi\\-500cs\\.html|https://www\\.poricinadsazavou\\.cz/obec\\-1/kalendar\\-akci/vanocni\\-koncert\\-agnatha\\-497_209cs\\.html|https://www\\.poricinadsazavou\\.cz/obec\\-1/kalendar\\-akci/zahajeni\\-adventu\\-v\\-porici\\-496_208cs\\.html)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Poříčí nad Sázavou": []
+      }
+    },
+    {
+      "id": "reviewed-2026-liber-c5b5dcc3",
+      "town": "Libeř",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.sborkamenice.cz",
+      "allowed_towns": {
+        "Libeř": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.sborkamenice.cz/akce/j-j-ryba-ceska-mse-vanocni-2026-2/"
+      ],
+      "url_regex": "^(?:https://www\\.sborkamenice\\.cz/akce/j\\-j\\-ryba\\-ceska\\-mse\\-vanocni\\-2026\\-2/)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Libeř": []
+      }
+    },
+    {
+      "id": "reviewed-2026-hradove-strimelice-bc0ceaaa",
+      "town": "Hradové Střimelice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.senohraby.cz",
+      "allowed_towns": {
+        "Hradové Střimelice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.senohraby.cz/aktualne/kalendar-akci/rozsviceni-vanocniho-stromu-583_101cs811.html"
+      ],
+      "url_regex": "^(?:https://www\\.senohraby\\.cz/aktualne/kalendar\\-akci/rozsviceni\\-vanocniho\\-stromu\\-583_101cs811\\.html)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Hradové Střimelice": []
+      }
+    },
+    {
+      "id": "reviewed-2026-stihlice-d8de60dc",
+      "town": "Štíhlice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.stihlice.cz",
+      "allowed_towns": {
+        "Štíhlice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.stihlice.cz/mikulasska-2026/"
+      ],
+      "url_regex": "^(?:https://www\\.stihlice\\.cz/mikulasska\\-2026/)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Štíhlice": []
+      }
+    },
+    {
+      "id": "reviewed-2026-dolni-brezany-72fd8549",
+      "town": "Dolní Břežany",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.vigvam-db.cz",
+      "allowed_towns": {
+        "Dolní Břežany": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.vigvam-db.cz/"
+      ],
+      "url_regex": "^(?:https://www\\.vigvam\\-db\\.cz/)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Dolní Břežany": []
+      }
+    },
+    {
+      "id": "reviewed-2026-ostredek-8ec4d0b7-plan",
+      "town": "Ostředek",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.chopos.cz",
+      "allowed_towns": {
+        "Ostředek": "Středočeský kraj",
+        "Třemošnice u Ostředku": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.chopos.cz/upload/media/document/0001/20/93472ade1857c91002854e854f1de0a5eba01f7e.pdf"
+      ],
+      "url_regex": "^(?:https://www\\.chopos\\.cz/upload/media/document/0001/20/93472ade1857c91002854e854f1de0a5eba01f7e\\.pdf)$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřené jednotlivé veřejné pozvánky. Čas kontroly přenosu neznamená novou kontrolu pořadatele.",
+      "allowed_locations": {
+        "Ostředek": [],
+        "Třemošnice u Ostředku": []
+      }
     }
   ]
 }
