@@ -12589,6 +12589,34 @@
       }
     },
     {
+      "id": "e-bca1b0c25e756fa0",
+      "title": "Rozsvícení vánočního stromečku a betléma v Miřeticích",
+      "town": "Miřetice",
+      "venue": "Kaplička",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Rozsvícení vánočního stromečku a betléma u kapličky. Na zahřátí čaj a svařené víno, drobné občerstvení zajištěno; vítané je přinést něco dobrého na ochutnání.",
+      "notes": [],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-25",
+      "sourceUrl": "https://www.miretice.eu/zivot-v-obci/kalendar-akci/rozsviceni-vanocniho-stromecku-a-betlema-v-mireticich-229_99cs.html",
+      "location": {
+        "lat": 49.6589345,
+        "lon": 14.9767461,
+        "precision": "town",
+        "label": "Miřetice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441439"
+      },
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-c3ea7009a841056e77a8",
       "title": "ADVENTNÍ SPIRÁLA",
       "town": "Mnichovo Hradiště",
