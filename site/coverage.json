@@ -19838,6 +19838,38 @@
       "excludedCount": 0,
       "lastError": null,
       "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
+    },
+    {
+      "id": "reviewed-www-zamek-konopiste-cz",
+      "town": "Benešov",
+      "region": "Středočeský kraj",
+      "url": "https://www.zamek-konopiste.cz/cs/akce",
+      "adapter": "reviewed-public",
+      "coverageNote": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "status": "ok",
+      "lastChecked": "2026-11-25T09:11:42+00:00",
+      "lastSuccess": "2026-11-25T09:11:42+00:00",
+      "eventCount": 1,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": null,
+      "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
+    },
+    {
+      "id": "reviewed-www-vrchotovyjanovice-eu",
+      "town": "Vrchotovy Janovice",
+      "region": "Středočeský kraj",
+      "url": "https://www.vrchotovyjanovice.eu/",
+      "adapter": "reviewed-public",
+      "coverageNote": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "status": "ok",
+      "lastChecked": "2026-11-25T09:11:42+00:00",
+      "lastSuccess": "2026-11-25T09:11:42+00:00",
+      "eventCount": 3,
+      "reviewCount": 0,
+      "excludedCount": 0,
+      "lastError": null,
+      "sourceNote": "Časy kontroly zdroje označují kontrolu přenosu veřejného výběru, ne nové načtení pořadatelského webu; u akce zůstává původní datum ověření."
     }
   ],
   "metrics": {
@@ -19849,7 +19881,7 @@
     "eventsNew": 0,
     "eventsChanged": 0,
     "eventsUnchanged": 302,
-    "eventsPublished": 3113,
+    "eventsPublished": 3117,
     "reviewCount": 1302,
     "excludedCount": 0,
     "aiCalls": 0

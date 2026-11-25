@@ -9829,6 +9829,37 @@
       "region": "Kraj Vysočina"
     },
     {
+      "id": "e-c05c72b1eca54974",
+      "title": "Adventní tvorba",
+      "town": "Vrchotovy Janovice",
+      "venue": "Sokolovna Vrchotovy Janovice",
+      "date": "2026-11-27",
+      "endDate": "2026-11-28",
+      "startTime": "14:00",
+      "endTime": "18:00",
+      "category": "tvoreni",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tradiční společné adventní tvoření, které pořádá Spolek žen Vrchotovy Janovice. Letos v nových prostorách sokolovny.",
+      "notes": [
+        "Druhý termín: sobota 28. 11. 9:00–11:00.",
+        "Podle plakátu na oficiálním webu městyse Vrchotovy Janovice."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-25",
+      "sourceUrl": "https://www.vrchotovyjanovice.eu/media/adventn%C3%AD%20tvorba2.pdf",
+      "location": {
+        "lat": 49.6668152,
+        "lon": 14.5778042,
+        "precision": "town",
+        "label": "Vrchotovy Janovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441515"
+      },
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-7e5ee563f4427ee5757a",
       "title": "Slavnostní rozsvěcení vánočního stromu v Ivančicích 2026",
       "town": "Ivančice",
@@ -16590,6 +16621,37 @@
       "location": null
     },
     {
+      "id": "e-35eb7e520cce9091",
+      "title": "Čerti a Mikuláš v konopišťském sklepení a adventní skleníky v Růžové zahradě",
+      "town": "Benešov",
+      "venue": "Zámek Konopiště",
+      "date": "2026-11-28",
+      "endDate": "2026-11-29",
+      "startTime": "11:00",
+      "endTime": "18:00",
+      "category": "mikulas",
+      "price": "Čerti 280/220/80 Kč, skleníky 100 Kč",
+      "registration": "Nutná rezervace předem pro jednotlivce i skupiny.",
+      "registrationUrl": null,
+      "description": "V zámeckém sklepení řádí čerti, Mikuláš s anděly čeká na děti i rodiče na zámeckém kůru. V Růžové zahradě jsou naposledy v roce otevřené skleníky s adventními dekoracemi na prodej. Na nádvoří stánek s občerstvením.",
+      "notes": [
+        "Prohlídky s čerty je nutné předem rezervovat (jednotlivci i skupiny).",
+        "Skleníky v Růžové zahradě jsou otevřené do 16:00."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-25",
+      "sourceUrl": "https://www.zamek-konopiste.cz/cs/akce/40392-certi-a-mikulas-v-konopistskem-sklepeni-a-adventni-skleniky-v-ruzove-zahrade",
+      "location": {
+        "lat": 49.7828898,
+        "lon": 14.6875926,
+        "precision": "town",
+        "label": "Benešov — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/440764"
+      },
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-ef100435d6293a3d0ea6",
       "title": "Dunajovický advent sobota 28.11.2026",
       "town": "Dunajovice",
@@ -20980,6 +21042,36 @@
         "label": "Vladislav — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/442091"
       }
+    },
+    {
+      "id": "e-cdeef8dda216c789",
+      "title": "Rozsvícení vánočního stromu a vánoční jarmark",
+      "town": "Vrchotovy Janovice",
+      "venue": "Předdvoří zámku Vrchotovy Janovice",
+      "date": "2026-11-28",
+      "endDate": null,
+      "startTime": "15:00",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Tradiční vánoční jarmark městyse a ZŠ a MŠ Vrchotovy Janovice s vystoupením žáků. Po setmění slavnostní rozsvícení vánočního stromu.",
+      "notes": [
+        "Podle plakátu na oficiálním webu městyse Vrchotovy Janovice."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-25",
+      "sourceUrl": "https://www.vrchotovyjanovice.eu/media/rozsv%C4%9Bcen%C3%AD%20strome%C4%8Dku%20a%20v%C3%A1no%C4%8Dn%C3%AD%20jarmark.pdf",
+      "location": {
+        "lat": 49.6668152,
+        "lon": 14.5778042,
+        "precision": "town",
+        "label": "Vrchotovy Janovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441515"
+      },
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-9ed9eeec35fd450ed1f0",
@@ -70505,6 +70597,36 @@
         "label": "Týniště nad Orlicí — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/440087"
       }
+    },
+    {
+      "id": "e-eb715f3781c2be47",
+      "title": "Adventní koncert seskupení Prskavka",
+      "town": "Vrchotovy Janovice",
+      "venue": "Kostel sv. Martina",
+      "date": "2026-12-12",
+      "endDate": null,
+      "startTime": "14:00",
+      "endTime": null,
+      "category": "setkani",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Městys Vrchotovy Janovice zve na adventní koncert seskupení Prskavka.",
+      "notes": [
+        "Podle plakátu na oficiálním webu městyse Vrchotovy Janovice."
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-25",
+      "sourceUrl": "https://www.vrchotovyjanovice.eu/media/prskavka.png",
+      "location": {
+        "lat": 49.6668152,
+        "lon": 14.5778042,
+        "precision": "town",
+        "label": "Vrchotovy Janovice — orientační střed obce, nikoli přesné místo akce",
+        "sourceUrl": "https://www.openstreetmap.org/relation/441515"
+      },
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-d5ec83118a09fd093546",

@@ -27874,6 +27874,60 @@
         "Ostředek": [],
         "Třemošnice u Ostředku": []
       }
+    },
+    {
+      "id": "reviewed-www-zamek-konopiste-cz",
+      "town": "Benešov",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.zamek-konopiste.cz",
+      "allowed_towns": {
+        "Benešov": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.zamek-konopiste.cz/cs/akce"
+      ],
+      "url_regex": "^https://www\\.zamek\\-konopiste\\.cz/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Benešov": [
+          {
+            "lat": 49.7828898,
+            "lon": 14.6875926,
+            "precision": "town",
+            "label": "Benešov — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/440764"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reviewed-www-vrchotovyjanovice-eu",
+      "town": "Vrchotovy Janovice",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.vrchotovyjanovice.eu",
+      "allowed_towns": {
+        "Vrchotovy Janovice": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.vrchotovyjanovice.eu/"
+      ],
+      "url_regex": "^https://www\\.vrchotovyjanovice\\.eu/[^\\s]*$",
+      "seed_urls": [],
+      "coverage_note": "Redakčně ověřený veřejný výběr; datum ověření u akce pochází z původního podkladu, kontrola přenosu není novým ověřením pořadatele.",
+      "allowed_locations": {
+        "Vrchotovy Janovice": [
+          {
+            "lat": 49.6668152,
+            "lon": 14.5778042,
+            "precision": "town",
+            "label": "Vrchotovy Janovice — orientační střed obce, nikoli přesné místo akce",
+            "sourceUrl": "https://www.openstreetmap.org/relation/441515"
+          }
+        ]
+      }
     }
   ]
 }
