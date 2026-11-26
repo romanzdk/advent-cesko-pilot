@@ -27955,6 +27955,44 @@
           }
         ]
       }
+    },
+    {
+      "id": "reviewed-2026-nupaky-1187cff6",
+      "town": "Nupaky",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.im.rgpo.cz",
+      "allowed_towns": {
+        "Nupaky": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.im.rgpo.cz/im/4f1073203f41b1be417ed3958040649a383fdfa1ef34e14d2209f2d00abd3f42/mikulasska-26.png"
+      ],
+      "url_regex": "^https://www\\.im\\.rgpo\\.cz/im/4f1073203f41b1be417ed3958040649a383fdfa1ef34e14d2209f2d00abd3f42/mikulasska\\-26\\.png$",
+      "seed_urls": [],
+      "coverage_note": "Jednotlivá redakčně ověřená veřejná pozvánka. Čas kontroly přenosu není časem ověření u pořadatele.",
+      "allowed_locations": {
+        "Nupaky": []
+      }
+    },
+    {
+      "id": "reviewed-2026-senohraby-bc0ceaaa",
+      "town": "Senohraby",
+      "region": "Středočeský kraj",
+      "adapter": "reviewed-public",
+      "primary_host": "www.senohraby.cz",
+      "allowed_towns": {
+        "Senohraby": "Středočeský kraj"
+      },
+      "index_urls": [
+        "https://www.senohraby.cz/aktualne/kultura-a-sport/predvanocni-posezeni-s-jarmarkem-6-12-2934cs.html"
+      ],
+      "url_regex": "^https://www\\.senohraby\\.cz/aktualne/kultura\\-a\\-sport/predvanocni\\-posezeni\\-s\\-jarmarkem\\-6\\-12\\-2934cs\\.html$",
+      "seed_urls": [],
+      "coverage_note": "Jednotlivá redakčně ověřená veřejná pozvánka. Čas kontroly přenosu není časem ověření u pořadatele.",
+      "allowed_locations": {
+        "Senohraby": []
+      }
     }
   ]
 }
