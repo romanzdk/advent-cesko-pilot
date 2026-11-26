@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T09:11:42+00:00",
+  "generatedAt": "2026-11-26T13:37:42+00:00",
   "season": 2026,
   "region": "Česko – sezonní výběr",
   "events": [
@@ -14411,6 +14411,30 @@
         "label": "Telč — orientační střed obce, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/441173"
       }
+    },
+    {
+      "id": "e-local-24de70b8354fb059ce16",
+      "title": "Mikulášská Retro Music Party",
+      "town": "Nupaky",
+      "venue": "Společenské centrum Nupaky",
+      "date": "2026-11-27",
+      "endDate": null,
+      "startTime": "20:00",
+      "endTime": null,
+      "category": "mikulas",
+      "price": "200 Kč",
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Retro diskotéka s písničkami na přání, tombolou a soutěžemi. Kostýmy jsou vítány.",
+      "notes": [
+        "Doplňující podklad: https://www.regionricansko.cz/kalendar-akci/obec/852-nupaky/72125-mikulasska-disco-party-nupaky.html"
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-26T14:31:40.414552+01:00",
+      "sourceUrl": "https://www.im.rgpo.cz/im/4f1073203f41b1be417ed3958040649a383fdfa1ef34e14d2209f2d00abd3f42/mikulasska-26.png",
+      "location": null,
+      "region": "Středočeský kraj"
     },
     {
       "id": "e-b5bbed1eb3ec454ce7cc",
@@ -29821,7 +29845,7 @@
       "id": "e-9bde7f6532006ae0",
       "title": "Vánoční setkání a rozsvícení vánočního stromu",
       "town": "Louňovice",
-      "venue": "Kamenický skanzen naproti obecnímu úřadu; plakát rozsvícení uvádí Horní náves",
+      "venue": "Kamenický skanzen, Horní náves",
       "date": "2026-11-29",
       "endDate": null,
       "startTime": "14:00",
@@ -29832,14 +29856,15 @@
       "registrationUrl": null,
       "description": "Od 14:00 výroba vánočních dekorací, pečení trdelníků a zdobení perníčků, domácí dobroty a punč; sklářská dílna – vyfouknutí a ozdobení vlastní ozdoby, vhodné i pro děti. Charitativní jarmark pro Zvířátek ráj. V 17:00 rozsvícení stromu s doprovodem MŠ Louňovice.",
       "notes": [
-        "Článek uvádí pro rozsvícení Kamenický skanzen, druhý plakát Horní náves; označení místa nejsou sjednocena. Souřadnice nejsou potvrzeny.",
         "Plakáty neuvádějí rok; rok 2026 potvrzuje aktuální obecní pozvánka zveřejněná 18.11.2026.",
         "Primární plakát: https://www.lounovice.cz/evt_image.php?img=1667&v=1794995208",
-        "Primární plakát: https://www.lounovice.cz/evt_image.php?img=1668&v=1794995226"
+        "Primární plakát: https://www.lounovice.cz/evt_image.php?img=1668&v=1794995226",
+        "Doplňující podklad: https://www.lounovice.cz/volny-cas/kalendar-akci/vanocni-setkani-980_407cs.html",
+        "Doplňující podklad: https://www.lounovice.cz/volny-cas/kalendar-akci/rozsviceni-vanocniho-stromu-981_408cs.html"
       ],
       "audience": "všichni",
       "status": "confirmed",
-      "verifiedAt": "2026-11-18T11:36:30.536559+00:00",
+      "verifiedAt": "2026-11-26T14:34:33.203770+01:00",
       "sourceUrl": "https://www.lounovice.cz/aktuality/aktuality-1/pozvanka-na-adventni-akce-978cs.html",
       "location": null,
       "region": "Středočeský kraj"
@@ -58022,6 +58047,31 @@
       }
     },
     {
+      "id": "e-local-78e99dbf9d93c17a7427",
+      "title": "Předvánoční posezení s jarmarkem",
+      "town": "Senohraby",
+      "venue": "Spolkovna TJ Sokol na louce pod bývalým skokanským můstkem",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "category": "trhy",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Sousedské setkání s prohlídkou vznikající Spolkovny, medovinou, perníčky, keramickými domečky a drobnými dárky.",
+      "notes": [
+        "Doplňující podklad: https://www.tjsokolsenohraby.cz/nadchazejici/kalendar/predvanocni-posezeni-2026-60_41cs.html",
+        "Doplňující podklad: https://www.senohraby.cz/evt_image.php?img=4642&v=1795693581"
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-26T14:31:33.071751+01:00",
+      "sourceUrl": "https://www.senohraby.cz/aktualne/kultura-a-sport/predvanocni-posezeni-s-jarmarkem-6-12-2934cs.html",
+      "location": null,
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-c608064b04e9c4fa33d5",
       "title": "1. ROČNÍK KOMORNÍCH ADVENTNÍCH TRHŮ ZA VODOU",
       "town": "Řevnice",
@@ -60066,6 +60116,31 @@
       }
     },
     {
+      "id": "e-d57d4e11aa78826c",
+      "title": "Slavnostní rozsvícení vánočního stromečku",
+      "town": "Jevany",
+      "venue": "U zvoničky, Jevany",
+      "date": "2026-12-06",
+      "endDate": null,
+      "startTime": "15:30",
+      "endTime": null,
+      "category": "strom",
+      "price": null,
+      "registration": null,
+      "registrationUrl": null,
+      "description": "Program u zvoničky začíná koledami v 15:30, v 16:00 vystoupí farář a v 16:30 děti z MŠ. Strom se rozsvítí v 17:00, v 17:15 zazpívají jevanští pěvci.",
+      "notes": [
+        "Doplňující podklad: https://www.obecjevany.cz/aktuality-1/kalendar-akci/rozsviceni-stromecku-1925_209cs.html",
+        "Doplňující podklad: https://www.obecjevany.cz/evt_image.php?img=3737&v=1795692514"
+      ],
+      "audience": "všichni",
+      "status": "confirmed",
+      "verifiedAt": "2026-11-26T14:31:32.918919+01:00",
+      "sourceUrl": "https://www.obecjevany.cz/aktuality-1/kalendar-akci/slavnostni-rozsviceni-stromecku-1911_203cs.html",
+      "location": null,
+      "region": "Středočeský kraj"
+    },
+    {
       "id": "e-187d64112d2ed38a1435",
       "title": "SETKÁNÍ S MIKULÁŠEM",
       "town": "Postřelmov",
@@ -61095,28 +61170,6 @@
         "label": "Hlinsko — orientační střed obce či místní části, nikoli přesné místo akce",
         "sourceUrl": "https://www.openstreetmap.org/relation/439995"
       }
-    },
-    {
-      "id": "e-d57d4e11aa78826c",
-      "title": "Slavnostní rozsvícení vánočního stromečku",
-      "town": "Jevany",
-      "venue": "U zvoničky, Jevany",
-      "date": "2026-12-06",
-      "endDate": null,
-      "startTime": "17:00",
-      "endTime": null,
-      "category": "strom",
-      "price": null,
-      "registration": null,
-      "registrationUrl": null,
-      "description": "Obec Jevany zve na slavnostní rozsvícení vánočního stromečku u zvoničky. Podrobnější doprovodný program není zveřejněn.",
-      "notes": [],
-      "audience": "všichni",
-      "status": "confirmed",
-      "verifiedAt": "2026-11-14T10:12:22.455791+01:00",
-      "sourceUrl": "https://www.obecjevany.cz/aktuality-1/kalendar-akci/slavnostni-rozsviceni-stromecku-1911_203cs.html",
-      "location": null,
-      "region": "Středočeský kraj"
     },
     {
       "id": "e-aecd60d116c6e1af508c",
