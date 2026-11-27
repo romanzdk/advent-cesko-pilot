@@ -28,9 +28,9 @@
   <meta name="twitter:image:alt" content="Kam na advent 2026: sezonní mapa veřejných akcí, 20. listopadu až 24. prosince.">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./vendor/leaflet.css">
-  <link rel="stylesheet" href="./styles.css?v=tipy-1">
-  <script type="module" src="./app.js?v=tipy-1"></script>
-  <script type="module" src="./feedback.js?v=tipy-1"></script>
+  <link rel="stylesheet" href="./styles.css?v=panely-1">
+  <script type="module" src="./app.js?v=panely-1"></script>
+  <script type="module" src="./feedback.js?v=panely-1"></script>
   <script data-goatcounter="https://kamnaadvent.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -57,6 +57,25 @@
         <p id="date-range-error" role="alert" hidden></p>
       </fieldset>
     </form>
+    <div class="results-toolbar"><div><h2 id="results-heading">Kam vyrazit</h2><p id="result-count" role="status" aria-live="polite">Načítáme přehled…</p></div><div class="view-switch" aria-label="Zobrazení"><button id="show-list" type="button" aria-pressed="true" aria-controls="results"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>Seznam</button><button id="show-map" type="button" aria-pressed="false" aria-controls="map-panel"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg>Mapa</button></div></div>
+    <div class="geo-controls" aria-label="Akce v okolí">
+      <button id="locate-user" type="button" aria-describedby="location-hint" disabled>Akce v mém okolí</button>
+      <label id="nearby-options" hidden>Okruh <select id="nearby-radius"><option value="25">25 km</option><option value="50" selected>50 km</option><option value="100">100 km</option></select></label>
+      <button id="clear-location" type="button" hidden>Zrušit okolí</button>
+      <p id="location-status" role="status"></p>
+      <details id="location-help" hidden>
+        <summary>Podrobnosti o poloze</summary>
+        <p>Povolovací dialog řídí prohlížeč a systém. Samotné zamítnutí neříká, kde blokace vznikla. Při otevření webu uvnitř jiné aplikace zkuste samostatný prohlížeč.</p>
+        <p>Tyto údaje zůstávají jen na stránce a neobsahují souřadnice. Pokud problém trvá, můžete poslat jejich snímek.</p>
+        <pre id="location-diagnostic"></pre>
+      </details>
+      <p id="location-hint">Orientační okruh vzdušnou čarou; některé akce mají jen střed obce. Poloha se neukládá. OpenStreetMap při načítání mapy získá informaci o prohlížené oblasti.</p>
+    </div>
+    <div class="explore-layout" id="explore" data-view="list">
+      <section class="results" id="results" aria-labelledby="results-heading" tabindex="-1" aria-busy="true"><p class="state-message">Načítáme adventní akce…</p></section>
+      <aside class="map-panel" id="map-panel" aria-label="Mapa akcí"><div class="map-heading"><h2>Mapa výběru</h2><span id="map-count"></span><button id="map-expand" class="map-expand" type="button"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path class="icon-grow" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/><path class="icon-shrink" d="M4 14h6v6M20 10h-6V4M14 10l7-7M3 21l7-7"/></svg><span>Zvětšit mapu</span></button></div><ul id="map-legend" class="map-legend" aria-label="Barvy podle typu akce"></ul><div id="map" aria-label="Interaktivní mapa míst konání"></div><p id="map-notice" class="map-notice" role="status">Mapa se načítá. Všechny akce najdete i v seznamu.</p><p class="map-caption">Body ve středu obce jsou pouze orientační. Přesné místo ověřte u pořadatele.</p></aside>
+    </div>
+    <button id="view-fab" class="view-fab" type="button" aria-controls="explore" hidden><span class="fab-map"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg>Zobrazit mapu</span><span class="fab-list"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>Zobrazit seznam</span></button>
     <details id="coverage" class="coverage">
       <summary>Zdroje a pokrytí</summary>
       <div class="coverage-content" id="coverage-content" role="status" aria-live="polite"><p>Načítáme pokrytí zdrojů…</p></div>
@@ -128,25 +147,6 @@
         <p>Pak stránku obnovte a klepněte znovu na „Akce v mém okolí“. Mapa a seznam fungují i bez polohy; obec můžete vybrat ve filtru.</p>
       </div>
     </details>
-    <div class="results-toolbar"><div><h2 id="results-heading">Kam vyrazit</h2><p id="result-count" role="status" aria-live="polite">Načítáme přehled…</p></div><div class="view-switch" aria-label="Zobrazení"><button id="show-list" type="button" aria-pressed="true" aria-controls="results"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>Seznam</button><button id="show-map" type="button" aria-pressed="false" aria-controls="map-panel"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg>Mapa</button></div></div>
-    <div class="geo-controls" aria-label="Akce v okolí">
-      <button id="locate-user" type="button" aria-describedby="location-hint" disabled>Akce v mém okolí</button>
-      <label id="nearby-options" hidden>Okruh <select id="nearby-radius"><option value="25">25 km</option><option value="50" selected>50 km</option><option value="100">100 km</option></select></label>
-      <button id="clear-location" type="button" hidden>Zrušit okolí</button>
-      <p id="location-status" role="status"></p>
-      <details id="location-help" hidden>
-        <summary>Podrobnosti o poloze</summary>
-        <p>Povolovací dialog řídí prohlížeč a systém. Samotné zamítnutí neříká, kde blokace vznikla. Při otevření webu uvnitř jiné aplikace zkuste samostatný prohlížeč.</p>
-        <p>Tyto údaje zůstávají jen na stránce a neobsahují souřadnice. Pokud problém trvá, můžete poslat jejich snímek.</p>
-        <pre id="location-diagnostic"></pre>
-      </details>
-      <p id="location-hint">Orientační okruh vzdušnou čarou; některé akce mají jen střed obce. Poloha se neukládá. OpenStreetMap při načítání mapy získá informaci o prohlížené oblasti.</p>
-    </div>
-    <div class="explore-layout" id="explore" data-view="list">
-      <section class="results" id="results" aria-labelledby="results-heading" tabindex="-1" aria-busy="true"><p class="state-message">Načítáme adventní akce…</p></section>
-      <aside class="map-panel" id="map-panel" aria-label="Mapa akcí"><div class="map-heading"><h2>Mapa výběru</h2><span id="map-count"></span><button id="map-expand" class="map-expand" type="button"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path class="icon-grow" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/><path class="icon-shrink" d="M4 14h6v6M20 10h-6V4M14 10l7-7M3 21l7-7"/></svg><span>Zvětšit mapu</span></button></div><ul id="map-legend" class="map-legend" aria-label="Barvy podle typu akce"></ul><div id="map" aria-label="Interaktivní mapa míst konání"></div><p id="map-notice" class="map-notice" role="status">Mapa se načítá. Všechny akce najdete i v seznamu.</p><p class="map-caption">Body ve středu obce jsou pouze orientační. Přesné místo ověřte u pořadatele.</p></aside>
-    </div>
-    <button id="view-fab" class="view-fab" type="button" aria-controls="explore" hidden><span class="fab-map"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg>Zobrazit mapu</span><span class="fab-list"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>Zobrazit seznam</span></button>
     <section class="about" aria-label="O přehledu"><h2>Než vyrazíte</h2><p>Program se může změnit. Aktuální čas, podmínky vstupu a volná místa si ověřte v odkazu na pořadatele. Neuvedený čas neznamená celodenní program. Časy jsou místní, pro Česko.</p><p id="data-updated"></p></section>
   </main>
   <dialog id="report-dialog" aria-labelledby="report-heading" aria-describedby="report-context">
