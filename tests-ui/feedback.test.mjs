@@ -5,7 +5,9 @@ test('Czech public tip template owns optional maintainer metadata, not URL param
   const template = await readFile(new URL('../.github/ISSUE_TEMPLATE/tip.md', import.meta.url), 'utf8').catch(() => '');
   assert.match(template, /labels:.*enhancement/);
   assert.match(template, /assignees:.*romanzdk/);
-  for (const text of ['name:', 'about:', "title: '[Tip] '", 'Obec', 'zdroj', 'Podrobnosti', '20. 11.', '24. 12. 2026', 'osobní údaje', 'existující']) assert(template.includes(text), text);
+  for (const text of ['name:', 'about:', "title: '[Tip] '", 'Obec', 'zdroj', 'Podrobnosti', '20. 11.', '24. 12. 2026', 'osobní údaje', 'neveřejného repozitáře']) assert(template.includes(text), text);
+  assert(!template.includes('prohledejte'));
+  assert(!template.includes('advent-cesko-pilot'));
 });
 let feedback = {};
 try { feedback = await import('../site/feedback-helpers.js'); } catch (error) { if (error.code !== 'ERR_MODULE_NOT_FOUND') throw error; }

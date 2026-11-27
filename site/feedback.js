@@ -79,7 +79,7 @@ function sender(prefix, build, manual) {
     if (data.status === 'submitted') {
       if (!/^https:\/\/github\.com\/romanzdk\/kam-na-advent\/issues\/[1-9]\d*$/.test(data.issueURL || '')) throw new Error('Zveřejnění nelze potvrdit.');
       state.result = data.issueURL;
-      state.message = 'Zveřejněno na GitHubu. Po vyřízení hlášení z veřejného seznamu zmizí. Zařazení do mapy není automatické.';
+      state.message = 'Zveřejněno na GitHubu. Po zpracování hlášení přesuneme do neveřejného repozitáře a odkaz přestane fungovat. Zařazení do mapy není automatické.';
     } else if (data.status === 'pending') state.message = 'Přijato do fronty. Zveřejnění na GitHubu zatím není potvrzeno.';
     else if (data.status === 'uncertain') state.message = 'Zveřejnění není jisté. Nevytvářejte další hlášení; ověřte stav znovu.';
     else state.message = 'Zveřejnění se nezdařilo. Návrh zůstává vyplněný; ověřte stav znovu, nevytvářejte další kopii.';
@@ -198,4 +198,3 @@ document.dispatchEvent(new CustomEvent('advent:feedback-ready'));
 const feedback = sender('feedback', fields => proposalPayload({ ...fields, consent: byId('feedback-consent').checked, dateUnknown: byId('feedback-date-unknown').checked }), proposal => draftURL({ ...proposal, mode: proposal.mode === 'event' ? 'full' : 'quick' }));
 byId('feedback').addEventListener('toggle', () => { if (byId('feedback').open) feedback.prepare(); });
 form.hidden = false;
-

@@ -309,7 +309,7 @@ before(async () => {
       const data = await readFile(new URL(`../site${path}`, import.meta.url));
       res.setHeader('Content-Type', path.endsWith('.js') ? 'text/javascript' : path.endsWith('.css') ? 'text/css' : path.endsWith('.svg') ? 'image/svg+xml' : 'text/html; charset=utf-8');
       res.setHeader('X-Content-Type-Options', 'nosniff');
-      res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://api.github.com https://hermes.dory-geological.ts.net:10000; object-src 'none'; base-uri 'self'");
+      res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://hermes.dory-geological.ts.net:10000; object-src 'none'; base-uri 'self'");
       res.end(data);
     } catch { res.setHeader('Content-Type', 'text/html'); res.end('<!doctype html><html lang="cs"><title>Missing frontend</title><body>Frontend not implemented</body></html>'); }
   });
@@ -330,7 +330,6 @@ async function app(run, { data = fixture, base = '/kam-na-advent/', mobile = fal
     if (coverageDeferred) await page.exposeFunction('releaseCoverage', releaseCoverage);
     // Credential-free receiver is ALWAYS mocked: no real submissions in this suite.
     await context.route('https://hermes.dory-geological.ts.net:10000/**', route => route.fulfill({ status: 503, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: '{"error":"unavailable"}' }));
-    await context.route('https://api.github.com/**', route => route.fulfill({ status: 200, contentType: 'application/json', body: '[]', headers: { 'access-control-allow-origin': '*' } }));
     await context.route('https://github.com/**', route => route.fulfill({ status: 200, contentType: 'text/html', body: '<title>Draft interception fixture</title>' }));
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
@@ -1495,8 +1494,9 @@ test('feedback panel lists no GitHub tips, never calls the GitHub API and says t
     await page.waitForTimeout(300);
     assert.equal(calls, 0);
     for (const id of ['feedback-issues', 'feedback-list-status', 'feedback-search', 'feedback-search-link', 'report-search']) assert.equal(await page.locator(`#${id}`).count(), 0, id);
-    assert.match(await page.locator('#feedback').innerText(), /po vyřízení/);
-    assert.match(await page.locator('#report-dialog').textContent(), /do vyřízení/);
+    assert.match(await page.locator('#feedback').innerText(), /po zpracování ho přesuneme do neveřejného repozitáře/);
+    assert.match(await page.locator('#feedback').innerText(), /stejný tip klidně pošlete znovu/);
+    assert.match(await page.locator('#report-dialog').textContent(), /dokud ho nezpracujeme/);
     assert.deepEqual(errors, []);
   }, { mobile });
 });
