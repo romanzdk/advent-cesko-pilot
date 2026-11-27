@@ -19,7 +19,7 @@ Pro odeslání přes web **nepotřebujete účet na GitHubu**. Před odesláním
 3. Oddělený neveřejný odesílatel vytvoří hlášení v pevném repozitáři. Potvrzený odkaz formulář zobrazí až po zpětném ověření konkrétního hlášení a jeho obsahu.
 4. Podnět zůstává neověřeným návrhem. Před zařazením nebo opravou se kontroluje pořadatel, rok, datum, skutečné místo a případné duplicity. **Podání samo nemění mapu, zdroje sběrače, kalendáře ani pozvánky.**
 
-[Veřejná hlášení](https://github.com/romanzdk/kam-na-advent/issues?q=is%3Aissue) pomáhají předcházet duplicitám. Panel na webu ukazuje jen omezený nedávný výběr otevřených i uzavřených podnětů; není to úplná kontrola celé historie. U podání není slíbená konkrétní doba vyřízení.
+Po vyřízení se hlášení přesouvají z veřejného repozitáře mezi neveřejné úkoly. Web proto neukazuje seznam předchozích hlášení ani hledání v nich; formulář jen upozorní na podobné akce, které už jsou v mapě. U podání není slíbená konkrétní doba vyřízení.
 
 ## Přijetí, chyba a opakování
 
