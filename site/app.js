@@ -353,13 +353,13 @@ function render() {
   $('date-range').hidden = !customDates;
   for (const id of ['date-from', 'date-to']) $(id).disabled = !customDates;
   const filters = Object.fromEntries(new FormData($('filters')));
-  updateWeekendCta(filters);
   let visible = [], bounds = null, rangeError = '';
   try {
     if (customDates && ['date-from', 'date-to'].some(id => $(id).validity.badInput)) throw new RangeError('Zadejte platné datum.');
     const now = new Date();
     bounds = filterBounds(filters, now);
     visible = filterEvents(events, filters, now);
+    updateWeekendCta(filters.period === 'all' ? weekendEvents(visible, {}, now) : weekendEvents(events, filters, now));
     if (userPosition) visible = nearbyEvents(visible, userPosition, Number($('nearby-radius').value));
   } catch (error) {
     if (!(error instanceof RangeError)) throw error;
@@ -410,10 +410,9 @@ addEventListener('keydown', event => {
   if (document.querySelector('#map .leaflet-popup')) map.closePopup();
   else expandMap(false);
 }, true);
-function updateWeekendCta(filters) {
+function updateWeekendCta(weekend) {
   const cta = $('weekend-cta');
   if (!cta) return;
-  let weekend = weekendEvents(events, filters);
   if (userPosition) weekend = nearbyEvents(weekend, userPosition, Number($('nearby-radius').value));
   cta.textContent = `Tento víkend: ${eventCount(weekend.length)}`;
   cta.hidden = !weekend.length;
