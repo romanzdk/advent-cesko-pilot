@@ -176,6 +176,25 @@ Vlastní náhled **repozitáře** se na GitHubu nastavuje zvlášť v *Settings 
 
 ICS export používá `PRODID:-//Advent v Cesku//CZ` a stabilní UID ve tvaru `eventId@advent-cesko-2026`. Při opakovaném importu starších souborů s jiným jmenným prostorem mohou vzniknout duplicity. Před novým importem zkontrolujte dříve ručně přidané položky; žádné cizí ani osobní kalendáře se tímto projektem automaticky nemění.
 
+## Měření kliků (GoatCounter)
+
+Web posílá do GoatCounteru vedle návštěv i pojmenované události (`site/helpers.js` → `track`). Neobsahují ID akce, hledaný text, polohu ani obsah tipu.
+
+| Událost | Kdy |
+| --- | --- |
+| `klik-poradatel` | odkaz Zdroj a podrobnosti (i prostředním tlačítkem) |
+| `klik-rezervace` | odkaz Rezervace u pořadatele |
+| `klik-navigace` | odkaz Navigovat / Do obce |
+| `klik-kalendar` | Do kalendáře (.ics) |
+| `klik-sdilet-akci` | Sdílet u akce |
+| `klik-sdilet-web` | Sdílet mapu |
+| `klik-vikend` | tlačítko Tento víkend |
+| `tip-prijat` / `hlaseni-prijato` | služba přijala tip / hlášení chyby (ne při selhání) |
+
+Kliky před načtením `count.js` nebo s blokovačem reklam se nezapočítají.
+
+Při změně `app.js`, `feedback.js`, `helpers.js`, `feedback-helpers.js` nebo `styles.css` zvyšte token `?v=` ve všech odkazech i řádek `Verze:` v `app.js`; test v `tests-ui/helpers.test.mjs` hlídá, že se shodují.
+
 ## Dokumentační obrázky
 
 `docs/assets/desktop.png` a `mobile.png` jsou skutečné screenshoty veřejného webu z 12. listopadu 2026. Desktop ukazuje výchozí přehled, mobil filtr rozsvícení stromů. Nejde o fixture server ani upravená ukázková data.
