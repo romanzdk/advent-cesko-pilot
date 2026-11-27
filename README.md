@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="site/social-preview.png" alt="Advent v Česku 2026 — sezonní mapa veřejných akcí" width="100%">
+  <img src="site/social-preview.png" alt="Kam na advent 2026 — sezonní mapa veřejných akcí" width="100%">
 </p>
 
 # Kam na advent

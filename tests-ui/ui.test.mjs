@@ -1783,7 +1783,8 @@ test('map names its bounded Christmas 2026 scope and excludes out-of-window even
       await page.setViewportSize({ width, height: 900 });
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
     }
-    assert.match(await page.locator('.intro').innerText(), /Sezonní výběr veřejných akcí 2026/);
+    assert.doesNotMatch(await page.locator('.intro').innerText(), /Sezonní výběr veřejných akcí/);
+    assert.match(await page.locator('.footer-credit').innerText(), /Kam na advent · 2026/);
     assert.match(await page.locator('.intro').innerText(), /Výběr veřejných zdrojů, nikoli úplný přehled krajů ani celé ČR\./);
     assert.doesNotMatch(await page.locator('.footer').innerText(), /pilot/i);
     assert.equal(await page.locator('.edition').count(), 0);
