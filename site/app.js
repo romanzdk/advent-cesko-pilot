@@ -1,4 +1,4 @@
-import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs, distanceKm, nearbyEvents, MAP_COLORS, markerCategory, track } from './helpers.js?v=vikend-1';
+import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs, distanceKm, nearbyEvents, MAP_COLORS, markerCategory, track, weekendEvents, eventCount } from './helpers.js?v=vikend-1';
 import { dayHighlight, eventPermalink, eventIdFromHash } from './helpers.js?v=vikend-1';
 
 const $ = id => document.getElementById(id);
@@ -195,10 +195,11 @@ function el(tag, text, className) {
   if (className) node.className = className;
   return node;
 }
-function publicLink(text, value, className) {
+function publicLink(text, value, className, eventName) {
   const href = safeHttps(value);
   if (!href) return null;
   const link = el('a', text, className);
+  if (eventName) for (const type of ['click', 'auxclick']) link.addEventListener(type, () => track(eventName));
   link.href = href;
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
@@ -245,8 +246,8 @@ function card(event) {
   if (event.description) body.append(el('p', event.description, 'event-description'));
   const facts = el('p', event.price || 'Vstupné neuvedeno', 'event-facts');
   if (event.registration) facts.append(document.createTextNode(` · ${event.registration}`));
-  const booking = publicLink('Rezervace u pořadatele ↗', event.registrationUrl, 'booking-link');
-  if (booking) { booking.addEventListener('click', () => track('klik-rezervace')); facts.append(document.createTextNode(' · '), booking); }
+  const booking = publicLink('Rezervace u pořadatele ↗', event.registrationUrl, 'booking-link', 'klik-rezervace');
+  if (booking) { facts.append(document.createTextNode(' · '), booking); }
   body.append(facts);
   if (event.notes?.length) {
     const notes = el('ul', null, 'event-notes');
@@ -255,16 +256,15 @@ function card(event) {
   }
   if (event.location?.precision === 'town') body.append(el('p', 'Poloha na mapě: pouze střed obce.', 'location-note'));
   const actions = el('div', null, 'event-actions');
-  const source = publicLink('Zdroj a podrobnosti ↗', event.sourceUrl, 'source-link');
-  if (source) { source.addEventListener('click', () => track('klik-poradatel')); actions.append(source); }
+  const source = publicLink('Zdroj a podrobnosti ↗', event.sourceUrl, 'source-link', 'klik-poradatel');
+  if (source) actions.append(source);
   else actions.append(el('span', 'Zdroj není dostupný', 'muted'));
   if (groupLocations([event]).length) {
     const url = new URL('https://www.google.com/maps/dir/');
     url.searchParams.set('api', '1');
     url.searchParams.set('destination', `${event.location.lat},${event.location.lon}`);
-    const navigation = publicLink(event.location.precision === 'town' ? 'Do obce ↗' : 'Navigovat ↗', url.href, 'navigation-link');
+    const navigation = publicLink(event.location.precision === 'town' ? 'Do obce ↗' : 'Navigovat ↗', url.href, 'navigation-link', 'klik-navigace');
     navigation.title = event.location.precision === 'town' ? 'Google Maps: navigace do středu obce; přesné místo ověřte u pořadatele' : 'Google Maps: navigace na místo konání';
-    navigation.addEventListener('click', () => track('klik-navigace'));
     actions.append(navigation);
   }
   const calendar = el('button', 'Do kalendáře (.ics)', 'calendar-button');
@@ -353,6 +353,7 @@ function render() {
   $('date-range').hidden = !customDates;
   for (const id of ['date-from', 'date-to']) $(id).disabled = !customDates;
   const filters = Object.fromEntries(new FormData($('filters')));
+  updateWeekendCta(filters);
   let visible = [], bounds = null, rangeError = '';
   try {
     if (customDates && ['date-from', 'date-to'].some(id => $(id).validity.badInput)) throw new RangeError('Zadejte platné datum.');
@@ -409,13 +410,13 @@ addEventListener('keydown', event => {
   if (document.querySelector('#map .leaflet-popup')) map.closePopup();
   else expandMap(false);
 }, true);
-function eventCount(count) { return `${count} ${count < 5 ? 'akce' : 'akcí'}`; }
-function updateWeekendCta() {
+function updateWeekendCta(filters) {
   const cta = $('weekend-cta');
   if (!cta) return;
-  const count = filterEvents(events, { period: 'weekend' }).length;
-  cta.textContent = `Tento víkend: ${eventCount(count)}`;
-  cta.hidden = !count;
+  let weekend = weekendEvents(events, filters);
+  if (userPosition) weekend = nearbyEvents(weekend, userPosition, Number($('nearby-radius').value));
+  cta.textContent = `Tento víkend: ${eventCount(weekend.length)}`;
+  cta.hidden = !weekend.length;
 }
 function setView(view) {
   if (view === 'list') expandMap(false);
@@ -534,24 +535,27 @@ $('weekend-cta')?.addEventListener('click', () => {
   track('klik-vikend');
   $('period').value = 'weekend';
   $('period').dispatchEvent(new Event('change', { bubbles: true }));
+  setView('list');
   document.querySelector('.results-toolbar').scrollIntoView({ block: 'start' });
 });
+let siteSharing = false;
 $('share-site')?.addEventListener('click', async () => {
+  if (siteSharing) return;
+  siteSharing = true;
   track('klik-sdilet-web');
   const status = $('site-share-status'), url = new URL('./', import.meta.url).href, nativeShare = typeof navigator.share === 'function';
   status.replaceChildren();
-  status.hidden = true;
   try {
     if (nativeShare) await navigator.share({ title: document.title, url });
     else await navigator.clipboard.writeText(url);
     status.textContent = nativeShare ? 'Odkaz předán ke sdílení.' : 'Odkaz zkopírován.';
   } catch (error) {
-    if (nativeShare && error?.name === 'AbortError') return;
-    const manual = el('a', url);
-    manual.href = url;
-    status.append(document.createTextNode('Sdílení není dostupné. Zkopírujte odkaz ručně: '), manual);
-  }
-  status.hidden = false;
+    if (!(nativeShare && error?.name === 'AbortError')) {
+      const manual = el('a', url);
+      manual.href = url;
+      status.append(document.createTextNode('Sdílení není dostupné. Zkopírujte odkaz ručně: '), manual);
+    }
+  } finally { siteSharing = false; }
 });
 $('filters').addEventListener('reset', event => {
   event.preventDefault();
@@ -598,7 +602,6 @@ async function load() {
     $('data-updated').textContent = `Přehled aktualizován ${dateFormat.format(dateValue(data.generatedAt))}.`;
     for (const control of $('filters').elements) control.disabled = false;
     render();
-    updateWeekendCta();
     openPermalink();
     if (desktop.matches || $('explore').dataset.view === 'map') ensureMap();
   } catch {

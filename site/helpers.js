@@ -142,6 +142,14 @@ export function eventIcs(event, now = new Date()) {
   return lines.map(foldLine).join('\r\n') + '\r\n';
 }
 
+export function weekendEvents(events, filters = {}, now = new Date()) {
+  return pragueDate(now) > SEASON_END ? [] : filterEvents(events, { ...filters, period: 'weekend' }, now);
+}
+
+export function eventCount(count) {
+  return `${count} ${count >= 1 && count <= 4 ? 'akce' : 'akcí'}`;
+}
+
 export function filterEvents(events, filters = {}, now = new Date()) {
   const bounds = filterBounds(filters, now);
   const query = normalize(filters.query).trim();

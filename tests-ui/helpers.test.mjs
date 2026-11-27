@@ -192,3 +192,26 @@ test('track sends a named GoatCounter event and never breaks the page', () => {
     assert.doesNotThrow(() => helpers.track('klik-vikend'));
   } finally { delete globalThis.goatcounter; }
 });
+
+test('weekend shortcut counts this weekend under the active filters and goes quiet after the season', () => {
+  assert.equal(typeof helpers.weekendEvents, 'function');
+  const events = [event('a', '2026-11-28', null, { region: 'Jihomoravský kraj' }), event('b', '2026-11-29', null, { region: 'Středočeský kraj' }), event('c', '2026-12-05')];
+  const friday = new Date('2026-11-27T12:00:00Z');
+  assert.deepEqual(helpers.weekendEvents(events, {}, friday).map(e => e.id), ['a', 'b']);
+  assert.deepEqual(helpers.weekendEvents(events, { region: 'Jihomoravský kraj', period: 'today' }, friday).map(e => e.id), ['a']);
+  assert.deepEqual(helpers.weekendEvents(events, { query: 'c' }, friday).map(e => e.id), []);
+  assert.deepEqual(helpers.weekendEvents([event('x', '2026-12-20', null, { endDate: '2026-12-31' })], {}, new Date('2026-12-26T12:00:00Z')), []);
+});
+
+test('Czech event counts say akce only for one to four', () => {
+  for (const [count, text] of [[0, '0 akcí'], [1, '1 akce'], [4, '4 akce'], [5, '5 akcí'], [989, '989 akcí']]) assert.equal(helpers.eventCount(count), text);
+});
+
+test('every cache-busting token and the diagnostic version agree, and local modules import versioned', async () => {
+  const read = name => readFile(new URL(`../site/${name}`, import.meta.url), 'utf8');
+  const files = await Promise.all(['index.html', 'soukromi.html', 'app.js', 'feedback.js'].map(read));
+  const tokens = files.flatMap(text => [...text.matchAll(/\.(?:js|css)\?v=([\w-]+)/g), ...text.matchAll(/Verze: ([\w-]+)/g)].map(match => match[1]));
+  assert(tokens.length >= 8, String(tokens.length));
+  assert.equal(new Set(tokens).size, 1, tokens.join(' '));
+  for (const text of files.slice(2)) assert.doesNotMatch(text, /from '\.\/[\w-]+\.js'/);
+});
