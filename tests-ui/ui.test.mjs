@@ -1821,6 +1821,9 @@ test('coverage discloses real bounded collection safely without blocking events 
     const summary = page.locator('#coverage summary');
     assert.equal(await summary.innerText(), 'Zdroje a pokrytí');
     assert((await summary.boundingBox()).height >= 44);
+    await page.waitForFunction(() => document.getElementById('scope-summary').textContent !== '');
+    assert.equal(await page.locator('.coverage-source').count(), 0);
+    assert.equal(await page.locator('.coverage-sources').getAttribute('aria-live'), 'off');
     await summary.click();
     await page.waitForSelector('.coverage-source', { timeout: 3000 });
     assert.equal(await page.locator('.coverage-source').count(), 3);

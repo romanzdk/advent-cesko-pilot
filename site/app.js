@@ -651,20 +651,26 @@ async function loadCoverage() {
     fragment.append(el('p', `Poslední sběr: ${checkedLabel(data.generatedAt)} (Česko) · Doba sběru: ${duration} · HTTP požadavky: ${data.metrics.requestCount}.`, 'coverage-metrics'));
     fragment.append(el('p', `AI volání při posledním automatickém sběru: ${data.metrics.aiCalls}`, 'coverage-metrics'));
     const sources = el('ul', null, 'coverage-sources');
-    const statuses = { ok: 'ověřeno', partial: 'částečně', error: 'nedostupné' };
-    for (const source of data.sources) {
-      const item = el('li', null, 'coverage-source');
-      const heading = el('div', null, 'coverage-source-heading');
-      const title = el('h3');
-      title.append(publicLink(source.town, source.url) || el('span', source.town));
-      heading.append(title, el('span', statuses[source.status], `source-status source-${source.status}`));
-      item.append(heading, el('p', source.region), el('p', `Poslední kontrola: ${checkedLabel(source.lastChecked)} (Česko)`));
-      if (source.lastSuccess) item.append(el('p', `Poslední úspěch: ${checkedLabel(source.lastSuccess)} (Česko)`));
-      item.append(el('p', `Publikované akce: ${source.eventCount} · K ověření: ${source.reviewCount}${countValue(source.excludedCount) ? ` · Mimo rozsah: ${source.excludedCount}` : ''}`));
-      if (typeof source.coverageNote === 'string' && source.coverageNote) item.append(el('p', source.coverageNote));
-      if (typeof source.lastError === 'string' && source.lastError) item.append(el('p', source.lastError, 'coverage-error'));
-      sources.append(item);
-    }
+    sources.setAttribute('aria-live', 'off');
+    const renderSources = () => {
+      const statuses = { ok: 'ověřeno', partial: 'částečně', error: 'nedostupné' };
+      for (const source of data.sources) {
+        const item = el('li', null, 'coverage-source');
+        const heading = el('div', null, 'coverage-source-heading');
+        const title = el('h3');
+        title.append(publicLink(source.town, source.url) || el('span', source.town));
+        heading.append(title, el('span', statuses[source.status], `source-status source-${source.status}`));
+        item.append(heading, el('p', source.region), el('p', `Poslední kontrola: ${checkedLabel(source.lastChecked)} (Česko)`));
+        if (source.lastSuccess) item.append(el('p', `Poslední úspěch: ${checkedLabel(source.lastSuccess)} (Česko)`));
+        item.append(el('p', `Publikované akce: ${source.eventCount} · K ověření: ${source.reviewCount}${countValue(source.excludedCount) ? ` · Mimo rozsah: ${source.excludedCount}` : ''}`));
+        if (typeof source.coverageNote === 'string' && source.coverageNote) item.append(el('p', source.coverageNote));
+        if (typeof source.lastError === 'string' && source.lastError) item.append(el('p', source.lastError, 'coverage-error'));
+        sources.append(item);
+      }
+    };
+    const details = $('coverage');
+    if (details.open) renderSources();
+    else details.addEventListener('toggle', renderSources, { once: true });
     fragment.append(sources);
     $('coverage-content').replaceChildren(fragment);
   } catch {
