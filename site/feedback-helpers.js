@@ -1,9 +1,4 @@
 export const ISSUES = 'https://github.com/romanzdk/kam-na-advent/issues';
-export const ISSUES_API = 'https://api.github.com/repos/romanzdk/kam-na-advent/issues?state=all&sort=updated&direction=desc&per_page=10';
-export function issueViews(data) {
-  if (!Array.isArray(data)) throw new Error('Invalid issue response');
-  return data.filter(i => i && !i.pull_request && Number.isSafeInteger(i.number) && i.number > 0 && typeof i.title === 'string' && ['open', 'closed'].includes(i.state) && i.html_url === `${ISSUES}/${i.number}`).slice(0, 10).map(i => ({ title: i.title, state: i.state, url: i.html_url }));
-}
 const labels = { title: 'Název', region: 'Kraj', town: 'Obec', venue: 'Místo / adresa', date: 'Datum', endDate: 'Konec – datum', startTime: 'Začátek – čas', endTime: 'Konec – čas', category: 'Kategorie', price: 'Cena', registration: 'Registrace – podmínky', registrationURL: 'Registrace – veřejný odkaz', audience: 'Vhodnost / publikum', description: 'Popis', notes: 'Poznámky', sourceURL: 'Veřejný zdroj' };
 export const REGIONS = ['Hlavní město Praha', 'Jihočeský kraj', 'Jihomoravský kraj', 'Karlovarský kraj', 'Kraj Vysočina', 'Královéhradecký kraj', 'Liberecký kraj', 'Moravskoslezský kraj', 'Olomoucký kraj', 'Pardubický kraj', 'Plzeňský kraj', 'Středočeský kraj', 'Ústecký kraj', 'Zlínský kraj'];
 export const CATEGORIES = { strom: 'Rozsvícení stromu', mikulas: 'Mikuláš', trhy: 'Trhy a jarmarky', tvoreni: 'Tvoření', setkani: 'Setkání', betlem: 'Betlémy' };

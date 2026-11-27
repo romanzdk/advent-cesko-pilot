@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org https://kamnaadvent.goatcounter.com; connect-src 'self' https://api.github.com https://hermes.dory-geological.ts.net:10000 https://kamnaadvent.goatcounter.com; object-src 'none'; base-uri 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org https://kamnaadvent.goatcounter.com; connect-src 'self' https://hermes.dory-geological.ts.net:10000 https://kamnaadvent.goatcounter.com; object-src 'none'; base-uri 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#244b3c">
   <meta name="description" content="Kam na advent: adventní akce v Česku 2026. Akce od 20. listopadu do 24. prosince, mapa a veřejné zdroje; nikoli úplný přehled celé ČR.">
@@ -28,9 +28,9 @@
   <meta name="twitter:image:alt" content="Advent v Česku 2026: sezonní mapa veřejných akcí, 20. listopadu až 24. prosince.">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./vendor/leaflet.css">
-  <link rel="stylesheet" href="./styles.css?v=vikend-1">
-  <script type="module" src="./app.js?v=vikend-1"></script>
-  <script type="module" src="./feedback.js?v=vikend-1"></script>
+  <link rel="stylesheet" href="./styles.css?v=tipy-1">
+  <script type="module" src="./app.js?v=tipy-1"></script>
+  <script type="module" src="./feedback.js?v=tipy-1"></script>
   <script data-goatcounter="https://kamnaadvent.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -66,14 +66,7 @@
       <div class="feedback-content">
         <p>Přidat akci: připravte údaje o veřejné akci od 20. 11. do 24. 12. 2026. Neznáte podrobnosti? Zvolte rychlý tip – stačí obec, odkaz nebo krátký popis.</p>
         <p>Vyplněné údaje se automaticky nezveřejňují v mapě. Geodata, interní identifikátor, stav a datum ověření doplní správce až po kontrole zdroje. Nežádejte o zveřejnění osobních údajů.</p>
-        <p>Odeslání bez účtu: návrh po přijetí čeká na zveřejnění na veřejném GitHubu. Neuvádějte osobní údaje. Zařazení do mapy není automatické. Pouze ruční záloha vyžaduje účet GitHub.</p>
-        <h3>Poslední tipy a hlášení</h3>
-        <p>Nejvýše 10 nedávno aktualizovaných hlášení, ne úplný seznam. Najdete-li podobný tip, doplňte raději komentář k němu.</p>
-        <p id="feedback-list-status" role="status">Seznam se načte po otevření panelu.</p>
-        <ul id="feedback-issues"></ul>
-        <a href="https://github.com/romanzdk/kam-na-advent/issues?q=is%3Aissue">Všechny tipy a hlášení na GitHubu</a>
-        <label>Hledat existující tip (obec nebo konkrétní fráze)<input id="feedback-search" type="search" maxlength="100" placeholder="Např. Říčany nebo vánoční dílna"></label>
-        <a id="feedback-search-link" href="https://github.com/romanzdk/kam-na-advent/issues?q=is%3Aissue">Hledat na GitHubu</a>
+        <p>Odeslání bez účtu: návrh se po přijetí zveřejní na GitHubu a po vyřízení ho přesuneme mezi neveřejné úkoly. Neuvádějte osobní údaje. Zařazení do mapy není automatické. Pouze ruční záloha vyžaduje účet GitHub.</p>
         <form id="feedback-form" hidden>
           <div id="feedback-matches" role="status" hidden></div>
           <label>Způsob návrhu<select id="feedback-mode" name="mode"><option value="full">Přidat akci</option><option value="quick">Rychlý tip</option></select></label>
@@ -159,8 +152,7 @@
   <dialog id="report-dialog" aria-labelledby="report-heading" aria-describedby="report-context">
     <h2 id="report-heading">Nahlásit chybu</h2>
     <div id="report-context"></div>
-    <p>Hlášení bude veřejné na GitHubu, bez osobních údajů. Oprava v mapě není automatická.</p>
-    <a id="report-search" target="_blank" rel="noopener noreferrer">Zkontrolovat existující hlášení na GitHubu</a>
+    <p>Hlášení bude do vyřízení veřejné na GitHubu, bez osobních údajů. Oprava v mapě není automatická.</p>
     <form id="report-form">
       <label>Druh chyby<select id="report-kind" name="errorKind"><option value="date">Datum</option><option value="time">Čas</option><option value="venue">Místo</option><option value="cancelled">Zrušení</option><option value="other">Jiné</option></select></label>
       <label>Co je chybně a jaká je oprava? (max. 1000 znaků)<textarea id="report-description" name="description" required maxlength="1000" rows="4"></textarea></label>

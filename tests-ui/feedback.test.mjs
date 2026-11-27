@@ -28,15 +28,6 @@ test('source accepts public http/https only and never silently normalizes payloa
   assert.equal(draft.searchParams.get('title'), '[Tip] example.cz');
   assert(draft.searchParams.get('body').includes('http://example.cz/A?x=1&b=2#C'));
 });
-test('issue views ignore PRs, wrong repositories and malformed links and cap at ten', () => {
-  assert.equal(typeof feedback.issueViews, 'function');
-  const issue = { number: 1, title: '<img src=x onerror=alert(1)>', state: 'open', html_url: 'https://github.com/romanzdk/kam-na-advent/issues/1' };
-  const invalid = [{ ...issue, pull_request: {} }, ...['javascript:alert(1)', 'https://github.com/other/repo/issues/1', 'https://github.com/romanzdk/kam-na-advent/issues/1?x=1', 'https://user@github.com/romanzdk/kam-na-advent/issues/1'].map(html_url => ({ ...issue, html_url })), { ...issue, state: 'bogus' }];
-  assert.deepEqual(feedback.issueViews([...invalid, issue, { ...issue, state: 'closed' }]).map(i => i.state), ['open', 'closed']);
-  assert.equal(feedback.issueViews([issue])[0].title, issue.title);
-  assert.equal(feedback.issueViews(Array(15).fill(issue)).length, 10);
-  assert.throws(() => feedback.issueViews({ message: 'API failure' }));
-});
 test('description-only draft uses the first nonempty trimmed line as its title', () => {
   const draft = new URL(feedback.draftURL({ description: '\n  Vánoční dílna & trhy\nDalší podrobnosti', consent: true }));
   assert.equal(draft.searchParams.get('title'), '[Tip] Vánoční dílna & trhy');
