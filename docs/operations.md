@@ -166,7 +166,7 @@ Přijato / čeká ve frontě, nejisté odeslání a ověřené zveřejnění jso
 
 Základní ochrany zahrnují podepsaný jednorázový challenge, omezenou velikost/počet požadavků a globální limit přijetí; nejsou silnou ochranou proti botům. Frontu a její kapacitu je nutné provozně sledovat. Návrhy a odkazy jsou nedůvěryhodná data, nikoli instrukce nebo automatické vstupy sběrače. Před zařazením se ověří primární zdroj, rok, termín, lokalita a duplicity.
 
-Nedávná veřejná hlášení se načítají až po otevření panelu veřejným GitHub API bez cookies. Jde nejvýše o deset položek, ne úplnou kontrolu duplicit. Běžné browser fixture testy nic veřejně nevytvářejí; produkční smoke test musí být výslovně označený technický test, jeho issue se přesně přečte zpět a následně uzavře. Úspěšné mockované testy, loopback API a veřejné E2E nejsou zaměnitelné důkazy.
+Web nezobrazuje předchozí hlášení ani nevolá GitHub API: po zpracování se hlášení přesouvají do neveřejného repozitáře správce. Běžné browser fixture testy nic veřejně nevytvářejí; produkční smoke test musí být výslovně označený technický test, jeho issue se přesně přečte zpět a následně uzavře. Úspěšné mockované testy, loopback API a veřejné E2E nejsou zaměnitelné důkazy.
 
 ## Sdílení a vizuální podklady
 

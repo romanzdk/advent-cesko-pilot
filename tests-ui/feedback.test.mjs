@@ -5,7 +5,9 @@ test('Czech public tip template owns optional maintainer metadata, not URL param
   const template = await readFile(new URL('../.github/ISSUE_TEMPLATE/tip.md', import.meta.url), 'utf8').catch(() => '');
   assert.match(template, /labels:.*enhancement/);
   assert.match(template, /assignees:.*romanzdk/);
-  for (const text of ['name:', 'about:', "title: '[Tip] '", 'Obec', 'zdroj', 'Podrobnosti', '20. 11.', '24. 12. 2026', 'osobní údaje', 'existující']) assert(template.includes(text), text);
+  for (const text of ['name:', 'about:', "title: '[Tip] '", 'Obec', 'zdroj', 'Podrobnosti', '20. 11.', '24. 12. 2026', 'osobní údaje', 'neveřejného repozitáře']) assert(template.includes(text), text);
+  assert(!template.includes('prohledejte'));
+  assert(!template.includes('advent-cesko-pilot'));
 });
 let feedback = {};
 try { feedback = await import('../site/feedback-helpers.js'); } catch (error) { if (error.code !== 'ERR_MODULE_NOT_FOUND') throw error; }
@@ -27,15 +29,6 @@ test('source accepts public http/https only and never silently normalizes payloa
   const draft = new URL(feedback.draftURL({ sourceURL: 'http://example.cz/A?x=1&b=2#C', consent: true }));
   assert.equal(draft.searchParams.get('title'), '[Tip] example.cz');
   assert(draft.searchParams.get('body').includes('http://example.cz/A?x=1&b=2#C'));
-});
-test('issue views ignore PRs, wrong repositories and malformed links and cap at ten', () => {
-  assert.equal(typeof feedback.issueViews, 'function');
-  const issue = { number: 1, title: '<img src=x onerror=alert(1)>', state: 'open', html_url: 'https://github.com/romanzdk/kam-na-advent/issues/1' };
-  const invalid = [{ ...issue, pull_request: {} }, ...['javascript:alert(1)', 'https://github.com/other/repo/issues/1', 'https://github.com/romanzdk/kam-na-advent/issues/1?x=1', 'https://user@github.com/romanzdk/kam-na-advent/issues/1'].map(html_url => ({ ...issue, html_url })), { ...issue, state: 'bogus' }];
-  assert.deepEqual(feedback.issueViews([...invalid, issue, { ...issue, state: 'closed' }]).map(i => i.state), ['open', 'closed']);
-  assert.equal(feedback.issueViews([issue])[0].title, issue.title);
-  assert.equal(feedback.issueViews(Array(15).fill(issue)).length, 10);
-  assert.throws(() => feedback.issueViews({ message: 'API failure' }));
 });
 test('description-only draft uses the first nonempty trimmed line as its title', () => {
   const draft = new URL(feedback.draftURL({ description: '\n  Vánoční dílna & trhy\nDalší podrobnosti', consent: true }));

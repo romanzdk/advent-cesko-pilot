@@ -309,7 +309,7 @@ before(async () => {
       const data = await readFile(new URL(`../site${path}`, import.meta.url));
       res.setHeader('Content-Type', path.endsWith('.js') ? 'text/javascript' : path.endsWith('.css') ? 'text/css' : path.endsWith('.svg') ? 'image/svg+xml' : 'text/html; charset=utf-8');
       res.setHeader('X-Content-Type-Options', 'nosniff');
-      res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://api.github.com https://hermes.dory-geological.ts.net:10000; object-src 'none'; base-uri 'self'");
+      res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://hermes.dory-geological.ts.net:10000; object-src 'none'; base-uri 'self'");
       res.end(data);
     } catch { res.setHeader('Content-Type', 'text/html'); res.end('<!doctype html><html lang="cs"><title>Missing frontend</title><body>Frontend not implemented</body></html>'); }
   });
@@ -330,7 +330,6 @@ async function app(run, { data = fixture, base = '/kam-na-advent/', mobile = fal
     if (coverageDeferred) await page.exposeFunction('releaseCoverage', releaseCoverage);
     // Credential-free receiver is ALWAYS mocked: no real submissions in this suite.
     await context.route('https://hermes.dory-geological.ts.net:10000/**', route => route.fulfill({ status: 503, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: '{"error":"unavailable"}' }));
-    await context.route('https://api.github.com/**', route => route.fulfill({ status: 200, contentType: 'application/json', body: '[]', headers: { 'access-control-allow-origin': '*' } }));
     await context.route('https://github.com/**', route => route.fulfill({ status: 200, contentType: 'text/html', body: '<title>Draft interception fixture</title>' }));
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
@@ -1441,12 +1440,9 @@ test('origin story is a normal collapsible section like the other info sections,
   }, { javaScriptEnabled: false });
 });
 
-test('feedback API failures are not empty results and never block drafts or map', async () => {
-  for (const failure of ['429', 'network', 'timeout']) await app(async (page, errors) => {
-    await page.route('https://api.github.com/**', route => failure === '429' ? route.fulfill({ status: 429, body: '{}', headers: { 'access-control-allow-origin': '*' } }) : failure === 'network' ? route.abort() : undefined);
+test('feedback drafts and map work while the receiver is down', async () => {
+  await app(async (page, errors) => {
     await page.locator('#feedback > summary').click();
-    await page.waitForFunction(() => document.getElementById('feedback-list-status').textContent.includes('nepodařilo'), { timeout: 8000 });
-    assert.doesNotMatch(await page.locator('#feedback-list-status').innerText(), /žádná hlášení/);
     assert.equal(await page.locator('#feedback-form').isVisible(), true);
     await page.locator('#feedback-mode').selectOption('quick');
     await page.locator('#feedback-town').fill('Brno');
@@ -1489,44 +1485,18 @@ test('feedback module failure retains a direct template link and working event f
   }, { mobile: true });
 });
 
-test('feedback lazily fetches once, renders safe open/closed fixture issues and searches existing phrases', async () => {
+test('feedback panel lists no GitHub tips, never calls the GitHub API and says tips are public only until processed', async () => {
   for (const mobile of [false, true]) await app(async (page, errors) => {
     let calls = 0;
-    await page.route('https://api.github.com/**', async route => {
-      calls++;
-      assert.equal(route.request().url(), 'https://api.github.com/repos/romanzdk/kam-na-advent/issues?state=all&sort=updated&direction=desc&per_page=10');
-      assert.equal(route.request().method(), 'GET');
-      await route.fulfill({ contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify([
-        { number: 42, title: '<img src=x onerror="window.injected=true"> Říčany', state: 'open', html_url: 'https://github.com/romanzdk/kam-na-advent/issues/42' },
-        { number: 43, title: 'Vyřešený testovací tip', state: 'closed', html_url: 'https://github.com/romanzdk/kam-na-advent/issues/43' },
-        { number: 44, title: 'Unsafe', state: 'open', html_url: 'javascript:alert(1)' }
-      ]) });
-    });
+    await page.route('https://api.github.com/**', route => { calls++; return route.abort(); });
     await page.waitForSelector('.event-card');
+    await page.locator('#feedback > summary').click();
+    await page.waitForTimeout(300);
     assert.equal(calls, 0);
-    await page.evaluate(() => {
-      const nativeFetch = window.fetch;
-      window.fetch = (url, options) => {
-        if (String(url).startsWith('https://api.github.com/')) window.feedbackFetch = { credentials: options.credentials, signal: options.signal instanceof AbortSignal };
-        return nativeFetch(url, options);
-      };
-    });
-    await page.locator('#feedback > summary').click();
-    await page.waitForSelector('#feedback-issues li');
-    assert.deepEqual(await page.evaluate(() => window.feedbackFetch), { credentials: 'omit', signal: true });
-    assert.equal(await page.locator('#feedback-issues li').count(), 2);
-    assert.match(await page.locator('#feedback-issues').innerText(), /Otevřeno/);
-    assert.match(await page.locator('#feedback-issues').innerText(), /Uzavřeno/);
-    assert.equal(await page.locator('#feedback-issues img').count(), 0);
-    assert.equal(await page.evaluate(() => window.injected), undefined);
-    await page.locator('#feedback > summary').click();
-    await page.locator('#feedback > summary').click();
-    assert.equal(calls, 1);
-    await page.locator('#feedback-search').fill('Říčany & dílna? #1');
-    const search = new URL(await page.locator('#feedback-search-link').getAttribute('href'));
-    assert.equal(search.origin, 'https://github.com');
-    assert.equal(search.searchParams.get('q'), 'is:issue Říčany & dílna? #1');
-    assert.equal(await page.getByRole('link', { name: 'Všechny tipy a hlášení na GitHubu' }).getAttribute('href'), 'https://github.com/romanzdk/kam-na-advent/issues?q=is%3Aissue');
+    for (const id of ['feedback-issues', 'feedback-list-status', 'feedback-search', 'feedback-search-link', 'report-search']) assert.equal(await page.locator(`#${id}`).count(), 0, id);
+    assert.match(await page.locator('#feedback').innerText(), /po zpracování ho přesuneme do neveřejného repozitáře/);
+    assert.match(await page.locator('#feedback').innerText(), /stejný tip klidně pošlete znovu/);
+    assert.match(await page.locator('#report-dialog').textContent(), /dokud ho nezpracujeme/);
     assert.deepEqual(errors, []);
   }, { mobile });
 });

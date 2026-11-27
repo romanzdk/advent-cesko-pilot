@@ -1,5 +1,5 @@
-import { draftURL, proposalPayload, feedbackRequest, ISSUES, ISSUES_API, issueViews, REGIONS, CATEGORIES } from './feedback-helpers.js?v=vikend-1';
-import { eventPermalink, track } from './helpers.js?v=vikend-1';
+import { draftURL, proposalPayload, feedbackRequest, ISSUES, REGIONS, CATEGORIES } from './feedback-helpers.js?v=tipy-1';
+import { eventPermalink, track } from './helpers.js?v=tipy-1';
 
 const byId = id => document.getElementById(id);
 const form = byId('feedback-form');
@@ -79,7 +79,7 @@ function sender(prefix, build, manual) {
     if (data.status === 'submitted') {
       if (!/^https:\/\/github\.com\/romanzdk\/kam-na-advent\/issues\/[1-9]\d*$/.test(data.issueURL || '')) throw new Error('Zveřejnění nelze potvrdit.');
       state.result = data.issueURL;
-      state.message = 'Zveřejněno na GitHubu. Zařazení do mapy není automatické.';
+      state.message = 'Zveřejněno na GitHubu. Po zpracování hlášení přesuneme do neveřejného repozitáře a odkaz přestane fungovat. Zařazení do mapy není automatické.';
     } else if (data.status === 'pending') state.message = 'Přijato do fronty. Zveřejnění na GitHubu zatím není potvrzeno.';
     else if (data.status === 'uncertain') state.message = 'Zveřejnění není jisté. Nevytvářejte další hlášení; ověřte stav znovu.';
     else state.message = 'Zveřejnění se nezdařilo. Návrh zůstává vyplněný; ověřte stav znovu, nevytvářejte další kopii.';
@@ -188,7 +188,6 @@ document.addEventListener('advent:report', ({ detail }) => {
   if (reportedEvent?.id !== event.id) report.select(event.id);
   reportedEvent = event; reportTrigger = detail.trigger;
   byId('report-context').textContent = `${event.title} · ${event.town} · ${event.venue || ''} · ${event.date}`;
-  byId('report-search').href = `${ISSUES}?${new URLSearchParams({ q: `is:issue "${event.id}"` })}`;
   dialog.showModal(); byId('report-kind').focus();
   // Readiness never writes a status: a late rejection for A cannot overwrite B.
   report.prepare();
@@ -199,25 +198,3 @@ document.dispatchEvent(new CustomEvent('advent:feedback-ready'));
 const feedback = sender('feedback', fields => proposalPayload({ ...fields, consent: byId('feedback-consent').checked, dateUnknown: byId('feedback-date-unknown').checked }), proposal => draftURL({ ...proposal, mode: proposal.mode === 'event' ? 'full' : 'quick' }));
 byId('feedback').addEventListener('toggle', () => { if (byId('feedback').open) feedback.prepare(); });
 form.hidden = false;
-byId('feedback-search').addEventListener('input', event => {
-  byId('feedback-search-link').href = `${ISSUES}?${new URLSearchParams({ q: `is:issue ${event.target.value.trim()}` })}`;
-});
-let requested = false;
-byId('feedback').addEventListener('toggle', async () => {
-  if (!byId('feedback').open || requested) return;
-  requested = true;
-  const status = byId('feedback-list-status');
-  status.textContent = 'Načítáme poslední hlášení…';
-  try {
-    const response = await fetch(ISSUES_API, { credentials: 'omit', signal: AbortSignal.timeout(5000) });
-    if (!response.ok) throw new Error('Issue list unavailable');
-    const issues = issueViews(await response.json());
-    for (const issue of issues) {
-      const row = document.createElement('li'), link = document.createElement('a');
-      link.href = issue.url;
-      link.textContent = `${issue.state === 'open' ? 'Otevřeno' : 'Uzavřeno'} · ${issue.title}`;
-      row.append(link); byId('feedback-issues').append(row);
-    }
-    status.textContent = issues.length ? 'Nedávno aktualizovaná hlášení:' : 'V tomto výběru nejsou žádná hlášení. Ověřte také celý seznam na GitHubu.';
-  } catch { status.textContent = 'Seznam se nepodařilo načíst. Prohlédněte tipy přímo na GitHubu; formulář můžete použít i tak.'; }
-});
