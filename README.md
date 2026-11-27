@@ -53,26 +53,26 @@ Při nejisté odpovědi použijte ověření stavu původního podání, ne dal�
 
 ## Pokrytí a rozsah
 
-**Ověřený sezonní výběr: 3118 akcí ve 14 krajích.** Nejde o úplné pokrytí jednotlivých krajů.
+**Ověřený sezonní výběr: 3172 akcí ve 14 krajích (stav 27. 11. 2026).** Nejde o úplné pokrytí jednotlivých krajů.
 
 | Kraj | Publikované akce |
 | --- | ---: |
-| Plzeňský kraj | 295 |
-| Liberecký kraj | 201 |
-| Jihomoravský kraj | 290 |
-| Středočeský kraj | 599 |
-| Jihočeský kraj | 243 |
+| Plzeňský kraj | 302 |
+| Liberecký kraj | 205 |
+| Jihomoravský kraj | 299 |
+| Středočeský kraj | 612 |
+| Jihočeský kraj | 244 |
 | Kraj Vysočina | 129 |
 | Karlovarský kraj | 114 |
-| Královéhradecký kraj | 175 |
-| Olomoucký kraj | 153 |
-| Ústecký kraj | 272 |
-| Zlínský kraj | 149 |
-| Hlavní město Praha | 72 |
-| Moravskoslezský kraj | 248 |
-| Pardubický kraj | 178 |
+| Královéhradecký kraj | 174 |
+| Olomoucký kraj | 156 |
+| Ústecký kraj | 280 |
+| Zlínský kraj | 156 |
+| Hlavní město Praha | 71 |
+| Moravskoslezský kraj | 250 |
+| Pardubický kraj | 180 |
 
-Registr obsahuje **1115 zdrojových skupin**: 1013 automaticky čtených kalendářů a 102 redakčních zdrojových skupin. Redakční výběr obsahuje 307 schválených záznamů s původním datem ověření; kontrola jeho přenosu není novým ověřením každé pořadatelské stránky. [Pravidla redakčního přenosu](docs/reviewed-publication.md) vysvětlují zachování kanonických ID a jednoznačného přiřazení zdrojů.
+Registr obsahuje **1117 zdrojových skupin**: 1013 automaticky čtených kalendářů a 104 redakčních zdrojových skupin. Redakční výběr obsahuje 309 schválených záznamů s původním datem ověření; kontrola jeho přenosu není novým ověřením každé pořadatelské stránky. [Pravidla redakčního přenosu](docs/reviewed-publication.md) vysvětlují zachování kanonických ID a jednoznačného přiřazení zdrojů.
 
 Jde o **výběr zdrojů, ne úplný kalendář krajů nebo celé ČR**. Aktuální čas aktualizace, rozsah a chyby načítání najdete na webu v panelu *Zdroje a pokrytí*. Nejasné kandidáty sběrač nepublikuje; [postup kontroly](docs/operations.md#ruční-kontrola-kandidátů) a [pravidla trvalého redakčního přenosu](docs/content-repair.md).
 

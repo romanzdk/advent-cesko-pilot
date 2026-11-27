@@ -4,7 +4,7 @@ Run from the repository root (Node 22+ recommended):
 
 ```sh
 npm install --prefix tests-ui --no-save --package-lock=false
-node --test tests-ui/helpers.test.mjs tests-ui/ui.test.mjs
+node --test tests-ui/helpers.test.mjs tests-ui/pilot.test.mjs tests-ui/feedback.test.mjs tests-ui/ui.test.mjs
 ```
 
 `npm test --prefix tests-ui` is equivalent. Playwright is pinned to 1.58.2 in this directory, not the parent package. A compatible Chromium must be installed. On supported Linux environments, `tests-ui/node_modules/.bin/playwright install chromium` installs one. Alternatively set `PLAYWRIGHT_CHROMIUM_EXECUTABLE` to an existing Chromium/headless-shell binary. Tests also discover existing cached Playwright headless shells if the pinned revision is missing.
