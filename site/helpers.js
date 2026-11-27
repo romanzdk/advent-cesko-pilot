@@ -21,6 +21,10 @@ export function periodBounds(period, now = new Date()) {
   return null;
 }
 
+export function track(name) {
+  try { globalThis.goatcounter?.count?.({ path: name, title: name, event: true }); } catch { /* Blocked analytics never break the page. */ }
+}
+
 export const SEASON_START = '2026-11-20';
 export const SEASON_END = '2026-12-24';
 
@@ -136,6 +140,14 @@ export function eventIcs(event, now = new Date()) {
   if (event.status === 'cancelled') lines.push('STATUS:CANCELLED');
   lines.push('END:VEVENT', 'END:VCALENDAR');
   return lines.map(foldLine).join('\r\n') + '\r\n';
+}
+
+export function weekendEvents(events, filters = {}, now = new Date()) {
+  return pragueDate(now) > SEASON_END ? [] : filterEvents(events, { ...filters, period: 'weekend' }, now);
+}
+
+export function eventCount(count) {
+  return `${count} ${count >= 1 && count <= 4 ? 'akce' : 'akcí'}`;
 }
 
 export function filterEvents(events, filters = {}, now = new Date()) {

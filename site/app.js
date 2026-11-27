@@ -1,5 +1,5 @@
-import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs, distanceKm, nearbyEvents, MAP_COLORS, markerCategory } from './helpers.js';
-import { dayHighlight, eventPermalink, eventIdFromHash } from './helpers.js';
+import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs, distanceKm, nearbyEvents, MAP_COLORS, markerCategory, track, weekendEvents, eventCount } from './helpers.js?v=vikend-1';
+import { dayHighlight, eventPermalink, eventIdFromHash } from './helpers.js?v=vikend-1';
 
 const $ = id => document.getElementById(id);
 const categories = { strom: 'Rozsvícení stromu', mikulas: 'Mikuláš', trhy: 'Trhy a jarmarky', tvoreni: 'Tvoření', setkani: 'Setkání', betlem: 'Betlémy' };
@@ -195,10 +195,11 @@ function el(tag, text, className) {
   if (className) node.className = className;
   return node;
 }
-function publicLink(text, value, className) {
+function publicLink(text, value, className, eventName) {
   const href = safeHttps(value);
   if (!href) return null;
   const link = el('a', text, className);
+  if (eventName) for (const type of ['click', 'auxclick']) link.addEventListener(type, () => track(eventName));
   link.href = href;
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
@@ -245,7 +246,7 @@ function card(event) {
   if (event.description) body.append(el('p', event.description, 'event-description'));
   const facts = el('p', event.price || 'Vstupné neuvedeno', 'event-facts');
   if (event.registration) facts.append(document.createTextNode(` · ${event.registration}`));
-  const booking = publicLink('Rezervace u pořadatele ↗', event.registrationUrl, 'booking-link');
+  const booking = publicLink('Rezervace u pořadatele ↗', event.registrationUrl, 'booking-link', 'klik-rezervace');
   if (booking) { facts.append(document.createTextNode(' · '), booking); }
   body.append(facts);
   if (event.notes?.length) {
@@ -255,20 +256,21 @@ function card(event) {
   }
   if (event.location?.precision === 'town') body.append(el('p', 'Poloha na mapě: pouze střed obce.', 'location-note'));
   const actions = el('div', null, 'event-actions');
-  const source = publicLink('Zdroj a podrobnosti ↗', event.sourceUrl, 'source-link');
+  const source = publicLink('Zdroj a podrobnosti ↗', event.sourceUrl, 'source-link', 'klik-poradatel');
   if (source) actions.append(source);
   else actions.append(el('span', 'Zdroj není dostupný', 'muted'));
   if (groupLocations([event]).length) {
     const url = new URL('https://www.google.com/maps/dir/');
     url.searchParams.set('api', '1');
     url.searchParams.set('destination', `${event.location.lat},${event.location.lon}`);
-    const navigation = publicLink(event.location.precision === 'town' ? 'Do obce ↗' : 'Navigovat ↗', url.href, 'navigation-link');
+    const navigation = publicLink(event.location.precision === 'town' ? 'Do obce ↗' : 'Navigovat ↗', url.href, 'navigation-link', 'klik-navigace');
     navigation.title = event.location.precision === 'town' ? 'Google Maps: navigace do středu obce; přesné místo ověřte u pořadatele' : 'Google Maps: navigace na místo konání';
     actions.append(navigation);
   }
   const calendar = el('button', 'Do kalendáře (.ics)', 'calendar-button');
   calendar.type = 'button';
   calendar.addEventListener('click', () => {
+    track('klik-kalendar');
     const url = URL.createObjectURL(new Blob([eventIcs(event)], { type: 'text/calendar;charset=utf-8' }));
     const download = el('a');
     download.href = url;
@@ -288,6 +290,7 @@ function card(event) {
   shareStatus.hidden = true;
   share.addEventListener('click', async click => {
     if (!click.isTrusted) return;
+    track('klik-sdilet-akci');
     const generation = ++shareGeneration;
     if (activeShareStatus) { activeShareStatus.replaceChildren(); activeShareStatus.hidden = true; }
     activeShareStatus = shareStatus;
@@ -356,6 +359,7 @@ function render() {
     const now = new Date();
     bounds = filterBounds(filters, now);
     visible = filterEvents(events, filters, now);
+    updateWeekendCta(filters.period === 'all' ? weekendEvents(visible, {}, now) : weekendEvents(events, filters, now));
     if (userPosition) visible = nearbyEvents(visible, userPosition, Number($('nearby-radius').value));
   } catch (error) {
     if (!(error instanceof RangeError)) throw error;
@@ -382,7 +386,7 @@ function render() {
   $('results').setAttribute('aria-busy', 'false');
   const period = bounds ? `${dateFormat.format(dateValue(bounds[0]))}–${dateFormat.format(dateValue(bounds[1]))}` : 'všechny termíny';
   const scope = [filters.region].filter(Boolean);
-  $('result-count').textContent = rangeError ? 'Opravte rozsah dat.' : `${visible.length} ${visible.length === 1 ? 'akce' : visible.length < 5 ? 'akce' : 'akcí'} · ${[...scope, period].join(' · ')}`;
+  $('result-count').textContent = rangeError ? 'Opravte rozsah dat.' : `${eventCount(visible.length)} · ${[...scope, period].join(' · ')}`;
   updateMap();
 }
 let scrollBeforeExpand = 0;
@@ -406,6 +410,13 @@ addEventListener('keydown', event => {
   if (document.querySelector('#map .leaflet-popup')) map.closePopup();
   else expandMap(false);
 }, true);
+function updateWeekendCta(weekend) {
+  const cta = $('weekend-cta');
+  if (!cta) return;
+  if (userPosition) weekend = nearbyEvents(weekend, userPosition, Number($('nearby-radius').value));
+  cta.textContent = `Tento víkend: ${eventCount(weekend.length)}`;
+  cta.hidden = !weekend.length;
+}
 function setView(view) {
   if (view === 'list') expandMap(false);
   $('explore').dataset.view = view;
@@ -438,7 +449,7 @@ function locationFailureDetails(started, outcome, error) {
   } catch { /* Unsupported policy introspection must not decide permission. */ }
   const message = typeof error?.message === 'string' ? error.message.replace(/[\u0000-\u001f\u007f]/g, ' ').slice(0, 300) : '';
   return [
-    'Verze: hledat-2', `Výsledek: ${outcome}`,
+    'Verze: vikend-1', `Výsledek: ${outcome}`,
     `Kód prohlížeče: ${Number.isFinite(error?.code) ? error.code : 'neuveden'}`,
     `Zpráva prohlížeče: ${message || 'neuvedena'}`,
     `Čekání: ${Math.round((performance.now() - started) / 1000)} s`,
@@ -519,6 +530,32 @@ $('clear-search').addEventListener('click', () => {
 });
 $('filters').addEventListener('input', render);
 $('filters').addEventListener('change', render);
+$('weekend-cta')?.addEventListener('click', () => {
+  track('klik-vikend');
+  $('period').value = 'weekend';
+  $('period').dispatchEvent(new Event('change', { bubbles: true }));
+  setView('list');
+  document.querySelector('.results-toolbar').scrollIntoView({ block: 'start' });
+});
+let siteSharing = false;
+$('share-site')?.addEventListener('click', async () => {
+  if (siteSharing) return;
+  siteSharing = true;
+  track('klik-sdilet-web');
+  const status = $('site-share-status'), url = new URL('./', import.meta.url).href, nativeShare = typeof navigator.share === 'function';
+  status.replaceChildren();
+  try {
+    if (nativeShare) await navigator.share({ title: document.title, url });
+    else await navigator.clipboard.writeText(url);
+    status.textContent = nativeShare ? 'Odkaz předán ke sdílení.' : 'Odkaz zkopírován.';
+  } catch (error) {
+    if (!(nativeShare && error?.name === 'AbortError')) {
+      const manual = el('a', url);
+      manual.href = url;
+      status.append(document.createTextNode('Sdílení není dostupné. Zkopírujte odkaz ručně: '), manual);
+    }
+  } finally { siteSharing = false; }
+});
 $('filters').addEventListener('reset', event => {
   event.preventDefault();
   $('search').value = '';

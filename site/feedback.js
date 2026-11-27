@@ -1,5 +1,5 @@
-import { draftURL, proposalPayload, feedbackRequest, ISSUES, ISSUES_API, issueViews, REGIONS, CATEGORIES } from './feedback-helpers.js';
-import { eventPermalink } from './helpers.js';
+import { draftURL, proposalPayload, feedbackRequest, ISSUES, ISSUES_API, issueViews, REGIONS, CATEGORIES } from './feedback-helpers.js?v=vikend-1';
+import { eventPermalink, track } from './helpers.js?v=vikend-1';
 
 const byId = id => document.getElementById(id);
 const form = byId('feedback-form');
@@ -72,6 +72,7 @@ function sender(prefix, build, manual) {
   }
   function display(state, data) {
     if (!uuid(data.requestId) || !['pending', 'uncertain', 'submitted', 'failed'].includes(data.status)) throw new Error('Neplatná odpověď služby.');
+    if (!state.acceptedId && data.status !== 'failed') track(prefix === 'report' ? 'hlaseni-prijato' : 'tip-prijat');
     state.acceptedId = data.requestId;
     state.status = data.status;
     state.result = '';
