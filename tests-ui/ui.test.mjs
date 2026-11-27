@@ -1703,22 +1703,22 @@ test('one search field: no separate town filter, region combines with other filt
   }, { data: regionalFixture, mobile: true });
 });
 
-test('footer credits Roman and links his website, GitHub and project', async () => {
+test('footer credits Roman and links his website, GitHub, project and privacy page', async () => {
   for (const mobile of [false, true]) {
     await app(async page => {
       await page.waitForSelector('.event-card');
       const footer = page.locator('footer');
       await footer.scrollIntoViewIfNeeded();
       assert.match(await footer.innerText(), /Autor: Roman Žydyk/);
-      for (const [name, href] of [['romanzdk.com', 'https://romanzdk.com/'], ['GitHub autora', 'https://github.com/romanzdk'], ['Kód projektu', 'https://github.com/romanzdk/kam-na-advent']]) {
+      for (const [name, href] of [['romanzdk.com', 'https://romanzdk.com/'], ['GitHub autora', 'https://github.com/romanzdk'], ['Kód projektu', 'https://github.com/romanzdk/kam-na-advent'], ['Ochrana soukromí', './soukromi.html']]) {
         const link = footer.getByRole('link', {name, exact: true});
         assert.equal(await link.getAttribute('href'), href);
         assert.equal(await link.isVisible(), true);
         const box = await link.boundingBox();
         assert(box && box.height >= 44);
       }
-      assert.equal(await footer.getByRole('link').count(), 3);
-      assert.deepEqual(await footer.getByRole('link').evaluateAll(links => links.map(link => link.href)), ['https://romanzdk.com/', 'https://github.com/romanzdk', 'https://github.com/romanzdk/kam-na-advent']);
+      assert.equal(await footer.getByRole('link').count(), 4);
+      assert.deepEqual(await footer.getByRole('link').evaluateAll(links => links.map(link => link.getAttribute('href'))), ['https://romanzdk.com/', 'https://github.com/romanzdk', 'https://github.com/romanzdk/kam-na-advent', './soukromi.html']);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     }, {mobile});
   }
@@ -1754,7 +1754,7 @@ test('map names its bounded Christmas 2026 scope and excludes out-of-window even
     assert.doesNotMatch(await page.locator('.footer').innerText(), /pilot/i);
     assert.equal(await page.locator('.edition').count(), 0);
     assert.match(await page.locator('.intro').innerText(), /20\. 11\. – 24\. 12\. 2026/);
-    assert.equal(await page.locator('.footer-links a').count(), 3);
+    assert.equal(await page.locator('.footer-links a').count(), 4);
     assert.deepEqual(await page.locator('.event-card').evaluateAll(cards => cards.map(card => card.dataset.id)), ['fixture-a', 'fixture-b', 'fixture-c', 'boundary-2']);
     await page.locator('#search').fill('dílna');
     await page.getByRole('button', { name: 'Zrušit filtry', exact: true }).click();
