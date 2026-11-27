@@ -170,7 +170,7 @@ Nedávná veřejná hlášení se načítají až po otevření panelu veřejný
 
 ## Sdílení a vizuální podklady
 
-`site/social-preview.png` je značková ilustrace 1280 × 640 px, nikoli screenshot aplikace. Zdroj je v `docs/social-preview.html`; obrys ČR vychází z Natural Earth (public domain) a orientační body z registrovaných obcí v `data/locations.json`. Obrázek je použitý v README a v metadatech Open Graph / Twitter Card. Absolutní image URL míří na veřejný soubor v repozitáři, aby byla dostupnost obrázku nezávislá na DNS webové domény. Samotná stránka pro náhled sdíleného webu stále musí být dostupná.
+`site/social-preview.png` je značková ilustrace 1280 × 640 px, nikoli screenshot aplikace. Zdroj je v `docs/social-preview.html`; obrys ČR vychází z Natural Earth (public domain) a orientační body z registrovaných obcí v `data/locations.json`. Obrázek je použitý v README a v metadatech Open Graph / Twitter Card. Absolutní image URL míří na `https://kamnaadvent.cz/social-preview.png`, tedy na stejnou doménu jako sdílená stránka; bez dostupné stránky by náhled stejně nevznikl.
 
 Vlastní náhled **repozitáře** se na GitHubu nastavuje zvlášť v *Settings → General → Social preview*. Nestačí pouze commitnout obrázek nebo přidat metadata webu. Pro upload použijte tentýž PNG, který je hluboko pod limitem GitHubu 1 MB; poté ověřte `usesCustomOpenGraphImage` a výsledný `openGraphImageUrl` přes GraphQL. Bez tohoto ověření neslibujte nastavený vlastní obrázek repozitáře.
 

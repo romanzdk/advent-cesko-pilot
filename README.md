@@ -22,6 +22,7 @@ Sezonní mapa adventních a vánočních akcí pro **20. listopadu – 24. prosi
 - **Údaje se zdrojem.** Datum, zveřejněný čas, místo, známé vstupné, rezervace a přímý odkaz na pořadatele.
 - **Víkendy a svátky.** Datum začátku je u víkendů zvýrazněné teplou barvou, u svátků červeně. Textové štítky zůstávají srozumitelné i bez rozlišování barev. V aktuálním sezonním období je svátkem Štědrý den.
 - **Kalendář a navigace.** Samostatný ICS export každé akce a trasa v Google Maps; orientační polohy jsou výslovně označené. Mapový podklad na webu zůstává OpenStreetMap.
+- **Tento víkend jedním klikem.** Tlačítko v úvodu ukáže počet akcí o nejbližším víkendu v celém Česku a přepne filtr Termín. Vedle je Sdílet mapu: systémové sdílení nebo kopírování odkazu na celý web bez filtrů.
 - **Sdílení konkrétní akce.** Klikací název má trvalý odkaz podle ID (`#akce=…`). Otevřený odkaz najde a zvýrazní kartu i po načtení dat; neexistující akce zobrazí vysvětlení. Tlačítko Sdílet použije systémové sdílení, nebo kopírování odkazu s ruční zálohou. URL neobsahuje polohu ani aktuální filtry. Náhled při sdílení zůstává společný pro celý web.
 - **Viditelné pokrytí.** Sledované zdroje, poslední kontroly a položky čekající na ověření nejsou skryté.
 - **Veřejné tipy, návrhy a opravy.** Plný formulář nové akce, rychlý tip i Nahlásit chybu u každé karty. Odeslání přes web nevyžaduje GitHub účet; podněty se zveřejňují se souhlasem návštěvníka a před změnou mapy procházejí kontrolou.
@@ -101,7 +102,7 @@ Projekt neobchází blokované kalendáře a neslibuje obecné zpracování vše
 
 ## Kvalita a orientace v kódu
 
-**318 Python testů a 131 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, trvalý redakční přenos, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřenou sadu tohoto snapshotu. Testy dat běží v CI offline; kontrola každého PR spouští i testy v Chromiu.
+**318 Python testů a 134 JavaScriptových/prohlížečových testů** pokrývá adaptéry, validaci, geografii, bezpečnou publikaci, trvalý redakční přenos, filtry včetně vlastního rozsahu dat, kalendář, mobilní rozhraní, tipy, přístupnou patičku i sdílecí metadata. Počty popisují ověřenou sadu tohoto snapshotu. Testy dat běží v CI offline; kontrola každého PR spouští i testy v Chromiu.
 
 ```text
 scripts/     sběr, adaptéry, validace a publisher
