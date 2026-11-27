@@ -1478,7 +1478,7 @@ test('feedback lazily fetches once, renders safe open/closed fixture issues and 
     let calls = 0;
     await page.route('https://api.github.com/**', async route => {
       calls++;
-      assert.equal(route.request().url(), 'https://api.github.com/repos/romanzdk/kam-na-advent/issues?state=all&sort=updated&direction=desc&per_page=50');
+      assert.equal(route.request().url(), 'https://api.github.com/repos/romanzdk/kam-na-advent/issues?state=all&sort=updated&direction=desc&per_page=10');
       assert.equal(route.request().method(), 'GET');
       await route.fulfill({ contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify([
         { number: 42, title: '<img src=x onerror="window.injected=true"> Říčany', state: 'open', html_url: 'https://github.com/romanzdk/kam-na-advent/issues/42' },
