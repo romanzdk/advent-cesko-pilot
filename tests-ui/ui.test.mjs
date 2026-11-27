@@ -1460,7 +1460,7 @@ test('feedback fallback template anchor works without JavaScript', async () => {
 
 test('feedback module failure retains a direct template link and working event filters', async () => {
   await app(async page => {
-    await page.route('**/feedback.js', route => route.abort());
+    await page.route('**/feedback.js*', route => route.abort());
     await page.reload();
     await page.waitForSelector('.event-card');
     await page.locator('#feedback > summary').click();
@@ -1478,7 +1478,7 @@ test('feedback lazily fetches once, renders safe open/closed fixture issues and 
     let calls = 0;
     await page.route('https://api.github.com/**', async route => {
       calls++;
-      assert.equal(route.request().url(), 'https://api.github.com/repos/romanzdk/kam-na-advent/issues?state=all&sort=updated&direction=desc&per_page=10');
+      assert.equal(route.request().url(), 'https://api.github.com/repos/romanzdk/kam-na-advent/issues?state=all&sort=updated&direction=desc&per_page=50');
       assert.equal(route.request().method(), 'GET');
       await route.fulfill({ contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify([
         { number: 42, title: '<img src=x onerror="window.injected=true"> Říčany', state: 'open', html_url: 'https://github.com/romanzdk/kam-na-advent/issues/42' },
@@ -1722,6 +1722,41 @@ test('footer credits Roman and links his website, GitHub, project and privacy pa
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     }, {mobile});
   }
+});
+
+test('weekend CTA filters this weekend, site share copies the map link and both clicks are tracked', async () => {
+  const data = { ...fixture, events: [...fixture.events, { ...fixture.events[1], id: 'weekend-a', title: 'Víkendový jarmark', date: '2026-11-14', endDate: '2026-11-22' }] };
+  for (const mobile of [false, true]) await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await page.evaluate(() => {
+      window.tracked = []; window.copies = [];
+      window.goatcounter = { count: value => window.tracked.push(value.path) };
+      Object.defineProperty(navigator, 'share', { configurable: true, value: undefined });
+      Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async text => window.copies.push(text) } });
+    });
+    const cta = page.locator('#weekend-cta');
+    assert.equal(await cta.innerText(), 'Tento víkend: 1 akce');
+    assert((await cta.boundingBox()).height >= 44);
+    await cta.click();
+    assert.equal(await page.locator('#period').inputValue(), 'weekend');
+    assert.deepEqual(await page.locator('.event-card').evaluateAll(cards => cards.map(card => card.dataset.id)), ['weekend-a']);
+    await page.getByRole('button', { name: 'Sdílet mapu', exact: true }).click();
+    await page.waitForFunction(() => window.copies.length === 1);
+    assert.deepEqual(await page.evaluate(() => window.copies), [origin + '/kam-na-advent/']);
+    assert.match(await page.locator('#site-share-status').innerText(), /Odkaz zkopírován/);
+    await page.locator('[data-id="weekend-a"] .calendar-button').click();
+    assert.deepEqual(await page.evaluate(() => window.tracked), ['klik-vikend', 'klik-sdilet-web', 'klik-kalendar']);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    assert.deepEqual(errors, []);
+  }, { data, mobile });
+});
+
+test('weekend CTA stays hidden when nothing is on this weekend', async () => {
+  await app(async page => {
+    await page.waitForSelector('.event-card');
+    assert.equal(await page.locator('#weekend-cta').isVisible(), false);
+    assert.equal(await page.getByRole('button', { name: 'Sdílet mapu', exact: true }).isVisible(), true);
+  });
 });
 
 test('restricted audience is not labelled as seniors', async () => {

@@ -21,6 +21,10 @@ export function periodBounds(period, now = new Date()) {
   return null;
 }
 
+export function track(name) {
+  try { globalThis.goatcounter?.count?.({ path: name, title: name, event: true }); } catch { /* Blocked analytics never break the page. */ }
+}
+
 export const SEASON_START = '2026-11-20';
 export const SEASON_END = '2026-12-24';
 

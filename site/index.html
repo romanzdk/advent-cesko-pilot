@@ -16,7 +16,7 @@
   <meta property="og:title" content="Kam na advent — adventní akce v Česku 2026">
   <meta property="og:description" content="Najděte svůj adventní program. Sezonní mapa veřejných akcí s odkazem přímo na pořadatele. 20. listopadu – 24. prosince 2026.">
   <meta property="og:url" content="https://kamnaadvent.cz/">
-  <meta property="og:image" content="https://raw.githubusercontent.com/romanzdk/kam-na-advent/main/site/social-preview.png">
+  <meta property="og:image" content="https://kamnaadvent.cz/social-preview.png">
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="640">
   <meta property="og:image:type" content="image/png">
@@ -24,13 +24,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kam na advent — adventní akce v Česku 2026">
   <meta name="twitter:description" content="Najděte svůj adventní program s odkazem přímo na pořadatele.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/romanzdk/kam-na-advent/main/site/social-preview.png">
+  <meta name="twitter:image" content="https://kamnaadvent.cz/social-preview.png">
   <meta name="twitter:image:alt" content="Advent v Česku 2026: sezonní mapa veřejných akcí, 20. listopadu až 24. prosince.">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./vendor/leaflet.css">
-  <link rel="stylesheet" href="./styles.css?v=hledat-2">
-  <script type="module" src="./app.js?v=hledat-2"></script>
-  <script type="module" src="./feedback.js"></script>
+  <link rel="stylesheet" href="./styles.css?v=vikend-1">
+  <script type="module" src="./app.js?v=vikend-1"></script>
+  <script type="module" src="./feedback.js?v=vikend-1"></script>
   <script data-goatcounter="https://kamnaadvent.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -40,7 +40,7 @@
   </header>
   <main class="wrap">
     <section class="intro" aria-labelledby="page-title">
-      <div><p class="eyebrow">20. 11. – 24. 12. 2026</p><h1 id="page-title">Adventní akce v Česku 2026</h1><p class="intro-text">Sezonní výběr veřejných akcí 2026</p><p class="scope-note" id="update-note">Seznam akcí denně kontrolujeme a průběžně aktualizujeme.</p><p id="scope-summary" class="scope-note" role="status" aria-live="polite"></p><p class="scope-note">Výběr veřejných zdrojů, nikoli úplný přehled krajů ani celé ČR.</p></div>
+      <div><p class="eyebrow">20. 11. – 24. 12. 2026</p><h1 id="page-title">Adventní akce v Česku 2026</h1><p class="intro-text">Sezonní výběr veřejných akcí 2026</p><p class="scope-note" id="update-note">Seznam akcí denně kontrolujeme a průběžně aktualizujeme.</p><p id="scope-summary" class="scope-note" role="status" aria-live="polite"></p><p class="scope-note">Výběr veřejných zdrojů, nikoli úplný přehled krajů ani celé ČR.</p><div class="intro-actions"><button type="button" id="weekend-cta" class="weekend-cta" hidden></button><button type="button" id="share-site" class="share-site">Sdílet mapu</button><p id="site-share-status" class="share-status" role="status" hidden></p></div></div>
       <p class="editor-note">U každé akce najdete veřejný zdroj i to, co ještě není jisté.</p>
     </section>
     <form class="filters" id="filters" aria-label="Filtrovat akce">

@@ -60,7 +60,8 @@ test('social metadata describes the current project with a full-size local PNG p
     'og:site_name': 'Kam na advent',
     'og:locale': 'cs_CZ',
     'og:type': 'website',
-    'og:image': 'https://raw.githubusercontent.com/romanzdk/kam-na-advent/main/site/social-preview.png',
+    'og:image': 'https://kamnaadvent.cz/social-preview.png',
+    'twitter:image': 'https://kamnaadvent.cz/social-preview.png',
     'og:image:width': '1280',
     'og:image:height': '640',
     'twitter:card': 'summary_large_image'
@@ -176,4 +177,18 @@ test('Prague calendar and weekend boundaries survive UTC midnight and DST', () =
   assert.equal(helpers.pragueDate(new Date('2026-11-27T23:30:00Z')), '2026-11-28');
   assert.deepEqual(helpers.periodBounds('weekend', new Date('2026-11-29T15:00:00Z')), ['2026-11-28', '2026-11-29']);
   assert.deepEqual(helpers.periodBounds('weekend', new Date('2026-10-24T22:30:00Z')), ['2026-10-24', '2026-10-25']);
+});
+
+test('track sends a named GoatCounter event and never breaks the page', () => {
+  assert.equal(typeof helpers.track, 'function');
+  const calls = [];
+  globalThis.goatcounter = { count: value => calls.push(value) };
+  try {
+    helpers.track('klik-vikend');
+    assert.deepEqual(calls, [{ path: 'klik-vikend', title: 'klik-vikend', event: true }]);
+    globalThis.goatcounter = { count: () => { throw new Error('blocked'); } };
+    assert.doesNotThrow(() => helpers.track('klik-vikend'));
+    delete globalThis.goatcounter;
+    assert.doesNotThrow(() => helpers.track('klik-vikend'));
+  } finally { delete globalThis.goatcounter; }
 });

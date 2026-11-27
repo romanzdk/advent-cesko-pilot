@@ -103,3 +103,10 @@ test('draft preserves trimmed Unicode and special characters with only official 
   for (const text of [valid.town.trim(), valid.sourceURL.trim(), valid.description.trim()]) assert(body.includes(text));
   assert(draft.href.length <= 7000);
 });
+
+test('recent tips list survives a run of newer pull requests', () => {
+  assert.match(feedback.ISSUES_API, /[?&]per_page=50(&|$)/);
+  const issue = n => ({ number: n, title: `Tip ${n}`, state: 'open', html_url: `https://github.com/romanzdk/kam-na-advent/issues/${n}` });
+  const pulls = Array.from({ length: 40 }, (_, i) => ({ ...issue(100 + i), pull_request: {} }));
+  assert.deepEqual(feedback.issueViews([...pulls, issue(1), issue(2), issue(3)]).map(i => i.title), ['Tip 1', 'Tip 2', 'Tip 3']);
+});

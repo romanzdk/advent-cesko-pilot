@@ -1,5 +1,5 @@
 export const ISSUES = 'https://github.com/romanzdk/kam-na-advent/issues';
-export const ISSUES_API = 'https://api.github.com/repos/romanzdk/kam-na-advent/issues?state=all&sort=updated&direction=desc&per_page=10';
+export const ISSUES_API = 'https://api.github.com/repos/romanzdk/kam-na-advent/issues?state=all&sort=updated&direction=desc&per_page=50';
 export function issueViews(data) {
   if (!Array.isArray(data)) throw new Error('Invalid issue response');
   return data.filter(i => i && !i.pull_request && Number.isSafeInteger(i.number) && i.number > 0 && typeof i.title === 'string' && ['open', 'closed'].includes(i.state) && i.html_url === `${ISSUES}/${i.number}`).slice(0, 10).map(i => ({ title: i.title, state: i.state, url: i.html_url }));
