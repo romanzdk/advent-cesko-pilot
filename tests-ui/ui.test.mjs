@@ -309,7 +309,7 @@ before(async () => {
       const data = await readFile(new URL(`../site${path}`, import.meta.url));
       res.setHeader('Content-Type', path.endsWith('.js') ? 'text/javascript' : path.endsWith('.css') ? 'text/css' : path.endsWith('.svg') ? 'image/svg+xml' : 'text/html; charset=utf-8');
       res.setHeader('X-Content-Type-Options', 'nosniff');
-      res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://hermes.dory-geological.ts.net:10000; object-src 'none'; base-uri 'self'");
+      res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://aplikace.dory-geological.ts.net:10000; object-src 'none'; base-uri 'self'");
       res.end(data);
     } catch { res.setHeader('Content-Type', 'text/html'); res.end('<!doctype html><html lang="cs"><title>Missing frontend</title><body>Frontend not implemented</body></html>'); }
   });
@@ -329,7 +329,7 @@ async function app(run, { data = fixture, base = '/kam-na-advent/', mobile = fal
     const coverageReady = new Promise(resolve => { releaseCoverage = resolve; });
     if (coverageDeferred) await page.exposeFunction('releaseCoverage', releaseCoverage);
     // Credential-free receiver is ALWAYS mocked: no real submissions in this suite.
-    await context.route('https://hermes.dory-geological.ts.net:10000/**', route => route.fulfill({ status: 503, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: '{"error":"unavailable"}' }));
+    await context.route('https://aplikace.dory-geological.ts.net:10000/**', route => route.fulfill({ status: 503, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: '{"error":"unavailable"}' }));
     await context.route('https://github.com/**', route => route.fulfill({ status: 200, contentType: 'text/html', body: '<title>Draft interception fixture</title>' }));
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
@@ -361,7 +361,7 @@ async function mockLocation(page) { await page.evaluate(installGeoMock); }
 async function geoSuccess(page, index = 0) {
   await page.evaluate(index => window.geoCalls[index].success({ coords: { latitude: 49.964, longitude: 14.073, accuracy: 30 } }), index);
 }
-const API = 'https://hermes.dory-geological.ts.net:10000';
+const API = 'https://aplikace.dory-geological.ts.net:10000';
 const acceptedID = '10000000-0000-4000-8000-000000000001';
 async function receiver(page, handle) {
   await page.route(`${API}/**`, async route => {
