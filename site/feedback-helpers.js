@@ -54,7 +54,7 @@ function quickDraft({ town = '', sourceURL = '', description = '', consent }, fi
   if (url.length > 7000) throw new Error('Odkaz je příliš dlouhý. Zkraťte prosím návrh.');
   return url;
 }
-export const API_BASE = 'https://hermes.dory-geological.ts.net:10000';
+export const API_BASE = 'https://aplikace.dory-geological.ts.net:10000';
 export async function feedbackRequest(path, payload, timeout = 8000) {
   const response = await fetch(`${API_BASE}${path}`, { method: payload ? 'POST' : 'GET', credentials: 'omit', signal: AbortSignal.timeout(timeout), ...(payload ? { headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) } : {}) });
   const data = await response.json();
