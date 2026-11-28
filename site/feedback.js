@@ -1,5 +1,5 @@
-import { draftURL, proposalPayload, feedbackRequest, ISSUES, REGIONS, CATEGORIES } from './feedback-helpers.js?v=panely-1';
-import { eventPermalink, track } from './helpers.js?v=panely-1';
+import { draftURL, proposalPayload, feedbackRequest, ISSUES, REGIONS, CATEGORIES } from './feedback-helpers.js?v=tyden-1';
+import { eventPermalink, track } from './helpers.js?v=tyden-1';
 
 const byId = id => document.getElementById(id);
 const form = byId('feedback-form');

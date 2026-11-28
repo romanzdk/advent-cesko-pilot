@@ -1,5 +1,5 @@
-import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs, distanceKm, nearbyEvents, MAP_COLORS, markerCategory, track, weekendEvents, eventCount } from './helpers.js?v=panely-1';
-import { dayHighlight, eventPermalink, eventIdFromHash } from './helpers.js?v=panely-1';
+import { filterEvents, filterBounds, SEASON_START, SEASON_END, timeLabel, safeHttps, groupLocations, eventIcs, distanceKm, nearbyEvents, MAP_COLORS, markerCategory, track, weekendEvents, eventCount } from './helpers.js?v=tyden-1';
+import { dayHighlight, eventPermalink, eventIdFromHash } from './helpers.js?v=tyden-1';
 
 const $ = id => document.getElementById(id);
 const categories = { strom: 'Rozsvícení stromu', mikulas: 'Mikuláš', trhy: 'Trhy a jarmarky', tvoreni: 'Tvoření', setkani: 'Setkání', betlem: 'Betlémy' };
@@ -449,7 +449,7 @@ function locationFailureDetails(started, outcome, error) {
   } catch { /* Unsupported policy introspection must not decide permission. */ }
   const message = typeof error?.message === 'string' ? error.message.replace(/[\u0000-\u001f\u007f]/g, ' ').slice(0, 300) : '';
   return [
-    'Verze: panely-1', `Výsledek: ${outcome}`,
+    'Verze: tyden-1', `Výsledek: ${outcome}`,
     `Kód prohlížeče: ${Number.isFinite(error?.code) ? error.code : 'neuveden'}`,
     `Zpráva prohlížeče: ${message || 'neuvedena'}`,
     `Čekání: ${Math.round((performance.now() - started) / 1000)} s`,
