@@ -1710,6 +1710,21 @@ test('footer credits Roman and links his website, GitHub, project and privacy pa
   }
 });
 
+test('Termín offers the next 7 days including events that reach into the week', async () => {
+  const data = { ...fixture, events: [...fixture.events,
+    { ...fixture.events[1], id: 'week-last', title: 'Poslední den týdne', date: '2026-12-02', endDate: null },
+    { ...fixture.events[1], id: 'week-after', title: 'Po týdnu', date: '2026-12-03', endDate: null },
+    { ...fixture.events[1], id: 'week-long', title: 'Dlouhý jarmark', date: '2026-11-15', endDate: '2026-11-26' }] };
+  await app(async (page, errors) => {
+    await page.waitForSelector('.event-card');
+    await page.clock.setFixedTime(new Date('2026-11-26T12:00:00Z'));
+    await page.locator('#period').selectOption({ label: 'Příštích 7 dní' });
+    assert.deepEqual((await page.locator('.event-card').evaluateAll(cards => cards.map(card => card.dataset.id))).sort(), ['fixture-b', 'week-last', 'week-long']);
+    assert.equal(await page.locator('#date-range').isHidden(), true);
+    assert.deepEqual(errors, []);
+  }, { data });
+});
+
 test('weekend CTA filters this weekend, site share copies the map link and both clicks are tracked', async () => {
   const data = { ...fixture, events: [...fixture.events, { ...fixture.events[1], id: 'weekend-a', title: 'Víkendový jarmark', date: '2026-11-14', endDate: '2026-11-22' }] };
   for (const mobile of [false, true]) await app(async (page, errors) => {

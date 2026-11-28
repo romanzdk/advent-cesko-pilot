@@ -179,6 +179,13 @@ test('Prague calendar and weekend boundaries survive UTC midnight and DST', () =
   assert.deepEqual(helpers.periodBounds('weekend', new Date('2026-10-24T22:30:00Z')), ['2026-10-24', '2026-10-25']);
 });
 
+test('next 7 days covers today plus six Prague days across UTC midnight and month end', () => {
+  assert.deepEqual(helpers.periodBounds('next7', new Date('2026-11-27T23:30:00Z')), ['2026-11-28', '2026-12-04']);
+  assert.deepEqual(helpers.periodBounds('next7', new Date('2026-12-20T12:00:00Z')), ['2026-12-20', '2026-12-26']);
+  const events = [event('in', '2026-12-04', null), event('out', '2026-12-05', null), event('long', '2026-11-20', null, { endDate: '2026-11-28' }), event('past', '2026-11-27', null)];
+  assert.deepEqual(helpers.filterEvents(events, { period: 'next7' }, new Date('2026-11-28T09:00:00Z')).map(e => e.id).sort(), ['in', 'long']);
+});
+
 test('track sends a named GoatCounter event and never breaks the page', () => {
   assert.equal(typeof helpers.track, 'function');
   const calls = [];

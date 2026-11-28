@@ -13,6 +13,7 @@ function addDays(date, count) {
 export function periodBounds(period, now = new Date()) {
   const today = pragueDate(now);
   if (period === 'today') return [today, today];
+  if (period === 'next7') return [today, addDays(today, 6)];
   if (period === 'weekend') {
     const weekday = new Date(`${today}T12:00:00Z`).getUTCDay();
     const saturday = addDays(today, weekday === 0 ? -1 : 6 - weekday);
